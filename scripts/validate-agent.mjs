@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const root=process.cwd();
 const required=[
+  '.github/agents/design-agent.agent.md',
   'agent/SYSTEM.md',
   'agent/runtime.json',
   'agent/product-router.json',
@@ -82,6 +83,25 @@ if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFE
 if(runtime?.invariants && !runtime.invariants.includes('reference_before_layout')){
   console.error('MISSING reference_before_layout INVARIANT');
   failed=true;
+}
+
+
+const githubAgentPath=path.join(root,'.github/agents/design-agent.agent.md');
+const githubAgent=fs.readFileSync(githubAgentPath,'utf8');
+for(const requiredText of [
+  'name: design-agent',
+  'description:',
+  'target: github-copilot',
+  'agent/SYSTEM.md',
+  'agent/reference-router.json',
+  'Reference Fidelity Gate',
+  'BLOCKED_REFERENCE_AMBIGUOUS',
+  'Master before invention'
+]){
+  if(!githubAgent.includes(requiredText)){
+    console.error('INVALID GITHUB DESIGN AGENT PROFILE: missing',requiredText);
+    failed=true;
+  }
 }
 
 if(failed) process.exit(1);

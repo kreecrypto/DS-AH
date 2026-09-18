@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.3.0",
+  "schemaVersion": "2.4.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -84,7 +84,10 @@
     "productRouter": "agent/product-router.json",
     "intentRouter": "agent/router/intent.json",
     "defaultWriteMode": "read-only",
-    "referenceRouter": "agent/reference-router.json"
+    "referenceRouter": "agent/reference-router.json",
+    "githubProfile": ".github/agents/design-agent.agent.md",
+    "githubAgentId": "design-agent",
+    "githubTarget": "github-copilot"
   },
   "outputSchemas": {
     "execution": "agent/output/execution.schema.json",

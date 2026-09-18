@@ -1,15 +1,9 @@
 # Domain Patterns
 
-Planned pattern domains:
+The authoritative machine-readable inventory is:
 
-- Customer
-- Case
-- Campaign
-- Performance
-- Health
-- Compensation
-- Agent Statement
-- Memo
-- Competition
+`registry/domain-patterns.json`
 
-A Domain Pattern may encode business structure, but it must compose approved Core Components rather than recreating them.
+Domain patterns encode business structure and may have legacy Figma APIs. The registry preserves exact current APIs for lookup and canonical APIs for new work.
+
+Do not treat a domain pattern as Core merely because it is reused within one feature.

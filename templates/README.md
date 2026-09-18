@@ -1,13 +1,9 @@
 # Templates
 
-Planned reusable templates:
+Composition candidates are recorded in:
 
-- List
-- List + Filter
-- Detail
-- Create / Edit Form
-- Search Result
-- Dashboard
-- Multi-step Flow
+`registry/templates.json`
 
-Templates define page composition and responsive behavior without feature-specific content.
+Templates are not assumed to be Figma components. They describe stable page composition patterns derived from repeated screen evidence.
+
+Every use requires live inspection of the current source screen.

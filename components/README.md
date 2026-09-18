@@ -1,18 +1,13 @@
 # Core Components
 
-Component specs are added here after the component inventory and Keep / Merge / Rename / Rebuild / Deprecate decisions are complete.
+The authoritative machine-readable inventory is:
 
-## Priority families
-
-1. Button / Icon Button
-2. Input / Textarea / Select
-3. Checkbox / Radio / Switch
-4. Badge / Tab / Chip
-5. Header / Sidebar / Menu / Breadcrumb
-6. Drawer / Modal / Toast / Overlay
-7. Table / Row / Pagination / Search / Filter / List
-8. Empty / Loading / Error states
+`registry/core-components.json`
 
 ## Rule
 
-A Core Component must be reusable across multiple domains and must not encode feature-specific business content.
+Do not create local replacements for common UI until the primary remote Core DS has been searched.
+
+Confirmed audited families include Button, Icon Button, Input, Menu, icons, Badge, Divider, Tab/Chip, Checkbox, Radio and Breadcrumb.
+
+This folder is reserved for future human-readable per-component specifications when needed.

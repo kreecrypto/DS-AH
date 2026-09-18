@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "composition_candidates",
+  "rule": "Templates are composition guidance, not confirmed Figma component sets. Inspect current source before reuse.",
+  "templates": [
+    {
+      "canonicalName": "List",
+      "evidencePages": [
+        "304:19623",
+        "263:19623",
+        "1278:3296"
+      ],
+      "typicalLayers": [
+        "Header",
+        "Search/Filter",
+        "Tabs",
+        "Data list/table",
+        "Pagination/scroll",
+        "Feedback states"
+      ]
+    },
+    {
+      "canonicalName": "Detail",
+      "evidencePages": [
+        "304:19623",
+        "263:19623"
+      ],
+      "typicalLayers": [
+        "Header/Breadcrumb",
+        "Summary",
+        "Section cards",
+        "Actions",
+        "History/secondary information"
+      ]
+    },
+    {
+      "canonicalName": "CreateEditForm",
+      "evidencePages": [
+        "304:19623",
+        "636:2743"
+      ],
+      "typicalLayers": [
+        "Header",
+        "Form sections",
+        "Inputs",
+        "Validation",
+        "Fixed/Bottom actions"
+      ]
+    },
+    {
+      "canonicalName": "Dashboard",
+      "evidencePages": [
+        "909:40988",
+        "909:40989",
+        "636:417",
+        "636:2741"
+      ],
+      "typicalLayers": [
+        "Header/Profile",
+        "Filters",
+        "Summary/KPI",
+        "Expandable sections",
+        "Charts/Tables",
+        "Share/export where applicable"
+      ]
+    },
+    {
+      "canonicalName": "SearchFilter",
+      "evidencePages": [
+        "304:19623",
+        "263:19623",
+        "38:2"
+      ],
+      "typicalLayers": [
+        "Basic search",
+        "Criteria builder",
+        "Saved/customized filters",
+        "Summary",
+        "Empty/retry states"
+      ]
+    },
+    {
+      "canonicalName": "OverlayDrawer",
+      "evidencePages": [
+        "304:19623",
+        "2844:19623"
+      ],
+      "typicalLayers": [
+        "Overlay",
+        "Drawer/Sheet",
+        "Content",
+        "Fixed action area",
+        "Confirmation where needed"
+      ]
+    }
+  ]
+}

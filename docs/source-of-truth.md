@@ -1,60 +1,51 @@
-# Source of Truth Map
+# Source of Truth
 
-Initial classification from the first Master Screens audit. Update this document whenever a page or component is promoted, deprecated, or replaced.
+This file is a human-readable companion to `registry/figma-sources.json`.
 
-## High-value DS sources
+## Important
 
-- Live Chat & Chatbot — responsive sections + Master Screen + Components
-- Case Management — responsive sections + Master Screen + extensive reusable component set
-- Campaign — responsive sections + Master Screen + Components
-- Team Performance Dashboard — responsive screens + Master Screens + Components
-- My Performance Dashboard — responsive screens + Components
-- Health Portfolio Monitoring — responsive screens + Master Screen + Components
-- Compensation & Taxation — responsive states, permutations, edge cases, Components
-- Agent Statement — responsive screens + Master Component
-- Memo (NEW) — current Desktop/Mobile drawer-based patterns
+The classifications below are audit-derived candidates, not a substitute for explicit product approval.
 
-## Pattern/reference sources
+Always inspect the live target node before a write action.
 
+## Priority candidates
+
+Strong reusable evidence:
+- Case Management
+- Team Performance Dashboard
+- My Performance Dashboard
+- Health Portfolio Monitoring
+- Compensation & Taxation
+
+Current-feature evidence:
+- Live Chat & Chatbot
+- Campaign
+- Agent Statement
+- Memo (NEW)
+
+Pattern/reference evidence:
 - Customer List + Prospect List
 - Customer List (Filter)
-- Campaign & Competition Tracking Dashboard
+- Campaign and Competition Tracking Dashboard
 - Persistency Dashboard
 
-## Reference / legacy candidates
+Reference/legacy/ignore:
+- Cover
+- old Performance Dashboard
+- GA Owner Dashboard
+- PDF-heavy Service Memo
+- empty/separator pages
 
-- Performance Dashboard old page
-- GA Owner Dashboard reference page
-- My Service Memo PDF/reference-heavy page
+## Authority rule
 
-## Empty/archive candidates
+Presence in the file is not authority.
 
-- Sprint X
-- Preset Customer Filter
-- Sprint X (Improvement from UT)
-- separator pages
+Use:
+1. explicit approval
+2. Core DS ownership
+3. Master Screen designation
+4. current component/pattern maturity
+5. recency
+6. responsive/state completeness
 
-## Authority Rule
-
-The presence of a screen in Figma does not make it a Source of Truth.
-
-Authority is determined by:
-
-1. Explicit approval
-2. Master Screen designation
-3. Recency
-4. Reuse maturity
-5. Component/state completeness
-6. Whether the area is marked Archived, legacy, reference, or exploration
-
-## Machine-readable status vocabulary
-
-Use only:
-
-- Approved
-- Current
-- Draft
-- Reference Only
-- Legacy
-- Deprecated
-- Archived
+Archived, screenshot-only, PDF-only, legacy, and exploration areas are blocked by default for implementation.

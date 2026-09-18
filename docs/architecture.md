@@ -1,65 +1,56 @@
-# DS Architecture
+# Design System Architecture
 
-## Layer 1 — Foundations
+## Operating model
 
-- Color primitives
-- Semantic color
-- Typography
-- Spacing
-- Radius
-- Elevation
-- Iconography
-- Sizing
-- Responsive rules
+`Remote Core DS → Approved Domain Pattern → Template/Screen`
 
-## Layer 2 — Core Components
+The repo supplies a normalization and routing layer around that system.
 
-### Actions
-Button, Icon Button
+## Foundation
 
-### Inputs
-Input, Textarea, Select, Checkbox, Radio, Switch, Search
+Use remote DS variables first:
+- color
+- spacing
+- shape/radius
+- text/typography
 
-### Navigation
-Header, Sidebar, Menu Item, Breadcrumb, Tab, Chip, Pagination
+See `registry/foundations.json`.
 
-### Feedback
-Badge, Toast, Tooltip, Empty State, Loading, Error State
+## Core
 
-### Overlay
-Drawer, Modal, Overlay
+Cross-domain components from the remote DS.
 
-### Data Display
-Table, Table Header, Table Row, List Item, Card, Divider
+See `registry/core-components.json`.
 
-## Layer 3 — Domain Patterns
+## Domain Pattern
 
-- Customer
-- Case
-- Campaign
-- Performance
-- Health
-- Compensation
-- Agent Statement
-- Memo
-- Competition
+Business-aware local patterns from approved/current Master Screen evidence.
 
-## Layer 4 — Templates
+See `registry/domain-patterns.json`.
 
-- List
-- List + Filter
-- Detail
-- Form
-- Dashboard
-- Search Result
-- Multi-step
+## Template
 
-## Layer 5 — Feature Screens
+Composition guidance such as List, Detail, Form, Dashboard, Search/Filter, Overlay/Drawer.
 
-Feature screens compose approved foundations, components, patterns, and templates. They are not promoted to reusable assets automatically.
+See `registry/templates.json`.
 
-## Dependency Rule
+## Screen
 
-Feature Screen → Template → Domain Pattern → Core Component → Foundation
+Feature-specific composition. Do not promote automatically.
 
-Higher layers may depend on lower layers. Lower layers must not depend on feature-specific content.
+## Agent support layer
+
+- `AGENTS.md` entrypoint
+- `agent/COMMANDS.md` routing
+- `agent/workflows/` procedures
+- `registry/aliases.json` legacy lookup
+- `policies/` guardrails
+- `schemas/` machine contracts
+
+## Dependency rule
+
+Higher layers may depend on lower layers.
+
+Core must not depend on feature-specific patterns.  
+Domain patterns should reuse Core.  
+Screens should compose rather than duplicate.

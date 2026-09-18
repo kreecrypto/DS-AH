@@ -1,0 +1,454 @@
+{
+  "group": "text-interaction-feedback",
+  "count": 28,
+  "variables": [
+    {
+      "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+      "name": "text/interaction/primary/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00008F",
+        "rgba": [
+          0,
+          0,
+          0.560784,
+          1
+        ]
+      }
+    },
+    {
+      "key": "2ac9da70022eca2251091a11da0f7fc5913176df",
+      "name": "text/interaction/primary/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000F7",
+        "rgba": [
+          0,
+          0,
+          0.968627,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a5a2e78cbd9bb9d3384345089fbd5d8623092bae",
+      "name": "text/interaction/primary/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000D2",
+        "rgba": [
+          0,
+          0,
+          0.823529,
+          1
+        ]
+      }
+    },
+    {
+      "key": "79f30f8f369a605323ccae2908fa61238819f22d",
+      "name": "text/interaction/primary/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "0848ddda1993438b1b46076760eb4de223fe7d03",
+      "name": "text/interaction/primary/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "d12fa6be4b25bd1f5c0b4b2c5868582f59605aea",
+      "name": "text/interaction/primary/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#D4D7DD",
+        "rgba": [
+          0.831373,
+          0.843137,
+          0.866667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "5df7af6278c1fd6d68fc6d0e48f7de4e2ec2d874",
+      "name": "text/interaction/secondary/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#606776",
+        "rgba": [
+          0.376471,
+          0.403922,
+          0.462745,
+          1
+        ]
+      }
+    },
+    {
+      "key": "d4186ad362552b3122a4b5de5aa7144e8374cdd6",
+      "name": "text/interaction/secondary/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "555fc0ab81d62d0b687a2f886b1a2076f47a042f",
+      "name": "text/interaction/secondary/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#1A1D21",
+        "rgba": [
+          0.101961,
+          0.113725,
+          0.129412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a2909f52f2c5c5f8e38befd5807c8fef8cf1b0ff",
+      "name": "text/interaction/secondary/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFFCC",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.8
+        ]
+      }
+    },
+    {
+      "key": "8e530d3872ae414027c21867446d25bce0ae09a0",
+      "name": "text/interaction/secondary/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6d4d72281f88a91e547acb34afceab8914a89546",
+      "name": "text/interaction/secondary/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "95afda09edf82a08dae9dcce9d1cef7c49752440",
+      "name": "text/interaction/strong/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E3000A",
+        "rgba": [
+          0.890196,
+          0,
+          0.039216,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4f8ea75e7e95ca94724d9f966ae7377fc13af7ee",
+      "name": "text/interaction/strong/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#C7050D",
+        "rgba": [
+          0.780392,
+          0.019608,
+          0.05098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4ac03ba962a9895adc75d6d863c2b332207a0f96",
+      "name": "text/interaction/strong/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#A80007",
+        "rgba": [
+          0.658824,
+          0,
+          0.027451,
+          1
+        ]
+      }
+    },
+    {
+      "key": "235796c875e5537aa7aafbc58e2f9a8fe1009865",
+      "name": "text/interaction/strong/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "28cdf3bb180a08a1ed22a5649571d6cf554820f7",
+      "name": "text/interaction/strong/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "05d001f174e4f20d1c43739563e7d11783e59670",
+      "name": "text/interaction/strong/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "1638f71fac2a25b1dd392b0b396823f97b2330f3",
+      "name": "text/feedback/neutral/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "df59ea71ba8029a0f5d837dfc322aabd2aba9785",
+      "name": "text/feedback/neutral/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4c2caf4d92df01e3f9206e355cb9d11fb92b9bbf",
+      "name": "text/feedback/info/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#152E54",
+        "rgba": [
+          0.082353,
+          0.180392,
+          0.329412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4cb35c6c406ee2cce8a70c512a18823253ced6c0",
+      "name": "text/feedback/info/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#99C2FF",
+        "rgba": [
+          0.6,
+          0.760784,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "c8188836d6765670eec75bbeeb0e1a422e78d1ec",
+      "name": "text/feedback/warning/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#5C4200",
+        "rgba": [
+          0.360784,
+          0.258824,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "key": "1e8ea2d31d356452ca9ecd3b5240be8806ebdaf6",
+      "name": "text/feedback/warning/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFD467",
+        "rgba": [
+          1,
+          0.831373,
+          0.403922,
+          1
+        ]
+      }
+    },
+    {
+      "key": "f83f498e9742284733082cee2e78e425a0814f09",
+      "name": "text/feedback/success/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0F4527",
+        "rgba": [
+          0.058824,
+          0.270588,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "34ce4b66c6970b3104cf05b958e0d1ab4210f096",
+      "name": "text/feedback/success/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#84E4AE",
+        "rgba": [
+          0.517647,
+          0.894118,
+          0.682353,
+          1
+        ]
+      }
+    },
+    {
+      "key": "adab4c29ceafa674c78203d85035b90f6f14bef8",
+      "name": "text/feedback/error/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#880727",
+        "rgba": [
+          0.533333,
+          0.027451,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a982a88a1c0fe21c63769aee845b6ad3a0288bee",
+      "name": "text/feedback/error/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FCC0CE",
+        "rgba": [
+          0.988235,
+          0.752941,
+          0.807843,
+          1
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "rule": "Only encode states/stages evidenced by existing registries. An edge is omitted when transition order is not proven.",
+  "agency": [
+    {
+      "domain": "case",
+      "stateGroups": [
+        {
+          "pattern": "case dashboard",
+          "states": [
+            "Default",
+            "Collapsed",
+            "Empty",
+            "Retry"
+          ],
+          "devices": [
+            "Desktop",
+            "Tablet",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "chat history",
+          "states": [
+            "Default",
+            "Active",
+            "Empty",
+            "AfterComment",
+            "OneComment",
+            "ActiveFilled",
+            "Filled"
+          ],
+          "devices": [
+            "Desktop",
+            "Tablet",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "filter",
+          "steps": [
+            "Default",
+            "Empty",
+            "Retry",
+            "SelectType",
+            "SelectCondition",
+            "Summary",
+            "MultiSelect",
+            "DateInput",
+            "View",
+            "Edit"
+          ],
+          "transitionEvidence": "step labels; exact edges require scenario inspection"
+        }
+      ]
+    },
+    {
+      "domain": "campaign",
+      "stateGroups": [
+        {
+          "pattern": "status",
+          "states": [
+            "Incoming",
+            "InProgress",
+            "Closed"
+          ],
+          "devices": [
+            "Desktop",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "detail-card",
+          "states": [
+            "Collapsed",
+            "Expanded"
+          ],
+          "sections": [
+            "BasicInformation",
+            "OtherInformation"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "team-performance",
+      "stateGroups": [
+        {
+          "pattern": "team performance section",
+          "states": [
+            "Expanded",
+            "Collapsed"
+          ],
+          "devices": [
+            "Desktop",
+            "Tablet",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "year graph",
+          "states": [
+            "Default",
+            "Hover"
+          ],
+          "metrics": [
+            "APE",
+            "Case",
+            "CaseSize",
+            "NBC",
+            "NewAgent"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "my-performance",
+      "stateGroups": [
+        {
+          "pattern": "performance gauge",
+          "states": [
+            "Default",
+            "Disabled"
+          ],
+          "periods": [
+            "Month",
+            "Quarter",
+            "Year"
+          ]
+        },
+        {
+          "pattern": "competition overview",
+          "status": "REVIEW_REQUIRED_MIXED_AXIS"
+        }
+      ]
+    },
+    {
+      "domain": "health",
+      "stateGroups": [
+        {
+          "pattern": "policy chart",
+          "states": [
+            "Default",
+            "Collapsed"
+          ],
+          "devices": [
+            "Desktop",
+            "Tablet",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "icon-health",
+          "states": [
+            "Normal",
+            "Warning",
+            "Fax",
+            "Watch",
+            "ContractDeleted",
+            null
+          ],
+          "notes": "One source variant remains unresolved."
+        }
+      ]
+    },
+    {
+      "domain": "compensation",
+      "stateGroups": [
+        {
+          "pattern": "summary",
+          "states": [
+            "Default",
+            "Loading"
+          ],
+          "devices": [
+            "Desktop",
+            "Tablet",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "table",
+          "states": [
+            "Default",
+            "Loading",
+            "Error"
+          ],
+          "dataModes": [
+            "Default",
+            "FullYear",
+            "CurrentYear",
+            "NoData"
+          ],
+          "devices": [
+            "Desktop",
+            "Mobile"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "agent-statement",
+      "stateGroups": [
+        {
+          "pattern": "result",
+          "states": [
+            "Default",
+            "Scroll",
+            null,
+            "Empty",
+            "Retry"
+          ],
+          "notes": "Numeric source state 1 remains unresolved."
+        }
+      ]
+    },
+    {
+      "domain": "live-chat",
+      "stateGroups": [
+        {
+          "pattern": "top/min",
+          "modes": [
+            "AI",
+            "AgentOnline",
+            "AgentOffline",
+            "History",
+            "HistoryDetailAgent",
+            "HistoryDetailAI"
+          ],
+          "layouts": [
+            "Default",
+            "Expanded",
+            "Mobile"
+          ]
+        },
+        {
+          "pattern": "chat/type",
+          "steps": [
+            "Start",
+            "TalkWithAgent",
+            "SelectTopic",
+            "PolicyNumber",
+            "Queue",
+            "AgentConnected",
+            "NonBusinessHour",
+            "EndChat",
+            "ChatHistory",
+            "ContinueChat"
+          ],
+          "transitionEvidence": "semantic labels only; exact connector graph not yet proven"
+        }
+      ]
+    },
+    {
+      "domain": "memo",
+      "stateGroups": [
+        {
+          "pattern": "drawer",
+          "states": [
+            "Default",
+            "Typing",
+            "AddPicture"
+          ],
+          "devices": [
+            "Desktop",
+            "Mobile"
+          ]
+        }
+      ]
+    }
+  ],
+  "admin": [
+    {
+      "domain": "unique-link",
+      "observedScenarioStages": [
+        "Create",
+        "ViewDelete",
+        "Edit",
+        "Preview"
+      ],
+      "pageId": "2:20"
+    },
+    {
+      "domain": "external-links-tools",
+      "observedScenarioStages": [
+        "Create",
+        "SearchFilter",
+        "ViewDelete",
+        "Edit",
+        "Preview"
+      ],
+      "pageId": "44:157"
+    },
+    {
+      "domain": "preset-tools",
+      "observedScenarioStages": [
+        "Create",
+        "SearchFilter",
+        "ViewDelete",
+        "Edit"
+      ],
+      "pageId": "44:157"
+    },
+    {
+      "domain": "terms-and-condition",
+      "observedScenarioStages": [
+        "Create",
+        "ViewDelete",
+        "Edit",
+        "Preview"
+      ],
+      "pageId": "764:139013",
+      "branches": [
+        "IncompleteInput",
+        "CompleteInput",
+        "DuplicateNameOrDateError"
+      ]
+    },
+    {
+      "domain": "template-notification",
+      "observedScenarioStages": [
+        "Create",
+        "ViewDelete",
+        "Edit",
+        "Preview"
+      ],
+      "pageId": "3993:108710",
+      "note": "Exploration option sections are not Source of Truth."
+    }
+  ]
+}

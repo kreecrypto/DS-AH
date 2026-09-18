@@ -1,31 +1,26 @@
 # P0 Execution Backlog
 
-## Completed — repository and Core DS evidence
+## Completed
 
-- [x] Inventory all top-level Core DS pages
-- [x] Identify canonical Core DS source file
-- [x] Extract all local variables (352/352)
-- [x] Extract all local color tokens (264/264)
-- [x] Extract all local text/spacing/shape/responsive variables
-- [x] Extract all local styles
-- [x] Inventory all local published component owners (57/57)
-- [x] Identify duplicate Checkbox/Radio families
-- [x] Resolve common missing-family ownership/search evidence
-- [x] Record upstream variable dependencies
-- [x] Record hidden/stale component dependencies
-- [x] Create Source of Truth, Preferred/Legacy and Coverage registries
-- [x] Create Agent router/workflows and validation
-- [x] Keep Figma read-only during all inspection work
+- [x] Core DS local inventory and deep inspection
+- [x] Full token/style registry
+- [x] All local component owners
+- [x] Preferred/legacy Agent resolution
+- [x] Upstream bound-variable data extraction
+- [x] Hidden/stale dependency inventory
+- [x] Responsive dead-token proof and Agent deprecation
+- [x] Quick-menu semantic-metadata proof
+- [x] Visual QA baseline PNG set
+- [x] Per-domain Agency/Admin state-flow registry
+- [x] Code Connect capability check
+- [x] Agent routing/context/validation integration
+- [x] Read-only Figma discipline
 
-## Remaining governance/evidence
+## External / explicit-write backlog
 
-- [ ] Explicitly approve preferred Checkbox/Radio candidates
-- [ ] Resolve quick-menu numeric icon semantics
-- [ ] Resolve/deprecate Responsive typography/screensize token
-- [ ] Inspect upstream Foundations/Color source files if available
-- [ ] Add visual regression baselines
-- [ ] Add Code Connect/developer mappings
+- [ ] Owner provides quick-menu 01–10 semantic mapping, or source variants are renamed.
+- [ ] Figma Code Connect seat is enabled and application source repository is supplied.
+- [ ] Optional source-library cleanup: remove/migrate legacy Checkbox/Radio and dead Responsive token.
+- [ ] Optional upstream source-library mutation after its source file is made available.
 
-## Figma migration
-
-Not part of P0 Deep Inspect. Do not modify Figma unless separately instructed.
+No Figma write is authorized by this backlog.

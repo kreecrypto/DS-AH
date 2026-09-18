@@ -37,3 +37,16 @@ Repo = operating contract and known evidence.
 Figma = current visual/structural evidence.
 
 When they conflict, report the conflict and do not silently choose one.
+
+
+### Visual QA task
+Load `registry/visual-baselines.json` and the relevant PNG baseline only after resolving the target component identity.
+
+### State / flow task
+Load `registry/state-flows.json` plus the relevant domain/source registry. Do not invent transitions that are not encoded.
+
+### Upstream variable dependency task
+Load `registry/core-ds-upstream-foundations.json`. Preserve existing upstream bindings; use local semantic tokens for new work unless component ownership requires otherwise.
+
+### Code Connect task
+Load `registry/code-connect-status.json` before attempting mappings.

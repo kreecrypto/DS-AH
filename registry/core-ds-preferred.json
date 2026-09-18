@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "auditDate": "2026-09-18",
   "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
   "authority": "audit recommendation; explicit design-system governance can override",
@@ -16,7 +16,9 @@
         "nodeId": "189:238",
         "reason": "2-variant simple checkbox still used by existing List examples."
       },
-      "migrationRule": "Use preferred candidate for new work after live identity check. Preserve legacy instances until an explicit migration."
+      "migrationRule": "Use preferred candidate for new work after live identity check. Preserve legacy instances until an explicit migration.",
+      "agentDefaultForNewWork": true,
+      "agentDefaultRule": "Use preferredCandidate for new Core compositions after live target-product identity check; never auto-migrate existing instances."
     },
     {
       "family": "Radio",
@@ -35,7 +37,9 @@
         "nodeId": "304:2197",
         "name": "radio-list"
       },
-      "migrationRule": "Do not replace legacy instances automatically; preserve existing identity unless migration is requested."
+      "migrationRule": "Do not replace legacy instances automatically; preserve existing identity unless migration is requested.",
+      "agentDefaultForNewWork": true,
+      "agentDefaultRule": "Use preferredCandidate for new Core compositions after live target-product identity check; never auto-migrate existing instances."
     }
   ],
   "decisions": [
@@ -67,13 +71,13 @@
       "family": "Quick Menu Icon",
       "name": "icon/quick-menu",
       "componentKey": "575aafd94b3fd4c8062f983a61e55910568c752c",
-      "decision": "REVIEW_REQUIRED_NUMERIC_SEMANTICS"
+      "decision": "BLOCKED_NO_SEMANTIC_METADATA"
     },
     {
       "family": "Quick Menu Icon",
       "name": "icon/quick-menu2",
       "componentKey": "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
-      "decision": "REVIEW_REQUIRED_NUMERIC_SEMANTICS"
+      "decision": "BLOCKED_NO_SEMANTIC_METADATA"
     },
     {
       "family": "Performance Icon",
@@ -135,8 +139,7 @@
     }
   ],
   "unresolved": [
-    "Explicit owner approval for preferred Checkbox/Radio candidate is not encoded in Figma metadata.",
-    "Semantic meaning for quick-menu numeric icon variants 01-10.",
-    "Whether legacy duplicate families should be formally deprecated in the source library."
+    "Formal source-library deprecation/removal of legacy Checkbox/Radio variants requires explicit governance; Agent usage is resolved for new work.",
+    "Quick-menu numeric semantics require owner-supplied mapping; Agent must preserve exact numeric identity."
   ]
 }

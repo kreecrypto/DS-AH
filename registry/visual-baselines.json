@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "capturedAt": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "purpose": "Core component visual QA/regression reference. These are read-only captures, not a replacement for live Figma inspection.",
+  "baselines": [
+    {
+      "id": "core-button",
+      "nodeId": "107:161",
+      "path": "baselines/core/button.png",
+      "blobSha": "d604b9c58fecdd9e97a184309b1faa2c1ce7f77e",
+      "originalSize": [
+        724,
+        780
+      ]
+    },
+    {
+      "id": "core-input",
+      "nodeId": "167:1772",
+      "path": "baselines/core/input.png",
+      "blobSha": "4977bc5b5fcb2cbdae87bb4bbd7872fb4a9fa22e",
+      "originalSize": [
+        1104,
+        964
+      ]
+    },
+    {
+      "id": "core-checkbox-preferred",
+      "nodeId": "198:4638",
+      "path": "baselines/core/checkbox.png",
+      "blobSha": "312f45a8f7335093053910e9533bd1b276aa1882",
+      "originalSize": [
+        262,
+        448
+      ]
+    },
+    {
+      "id": "core-radio-preferred",
+      "nodeId": "304:2149",
+      "path": "baselines/core/radio.png",
+      "blobSha": "f9d49d0f0a7ff8546912687211c8c5ffc0080a9c",
+      "originalSize": [
+        242,
+        128
+      ]
+    },
+    {
+      "id": "core-badge",
+      "nodeId": "86:788",
+      "path": "baselines/core/badge.png",
+      "blobSha": "16263601be07fbec2b6340e085031dbb0870001c",
+      "originalSize": [
+        293,
+        288
+      ]
+    },
+    {
+      "id": "core-navbar",
+      "nodeId": "105:1113",
+      "path": "baselines/core/navbar.png",
+      "blobSha": "a47cb064b029ea5a520249845b02ed5d14c88d1f",
+      "originalSize": [
+        1020,
+        861
+      ]
+    },
+    {
+      "id": "core-list-page",
+      "nodeId": "306:757",
+      "path": "baselines/core/list.png",
+      "blobSha": "cdf3a27d49c6e0f2653cae44982482e2c4c43491",
+      "originalSize": [
+        1160,
+        2390
+      ]
+    },
+    {
+      "id": "core-tab-page",
+      "nodeId": "165:616",
+      "path": "baselines/core/tab.png",
+      "blobSha": "be38f8116241170f30e1003d94b9aa7c9b4dc857",
+      "originalSize": [
+        1160,
+        1315
+      ]
+    }
+  ],
+  "qaRule": "Use baseline as a regression hint. Live target and current approved source remain authoritative."
+}

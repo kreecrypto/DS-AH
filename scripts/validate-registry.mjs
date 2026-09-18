@@ -10,6 +10,12 @@ const requiredJson = [
   'registry/domain-patterns.json',
   'registry/foundations.json',
   'registry/aliases.json',
+  'registry/code-connect-status.json',
+  'registry/state-flows.json',
+  'registry/visual-baselines.json',
+  'registry/core-ds-quick-menu-status.json',
+  'registry/core-ds-responsive-decision.json',
+  'registry/core-ds-upstream-foundations.json',
   'registry/core-ds-tokens/styles.json',
   'registry/core-ds-tokens/responsive.json',
   'registry/core-ds-tokens/shape.json',
@@ -134,6 +140,17 @@ if (colorCount !== 264) { console.error('CORE DS COLOR TOKEN COUNT MISMATCH', co
 if (colorCount + nonColorCount !== 352) { console.error('CORE DS VARIABLE COUNT MISMATCH', colorCount + nonColorCount); failed = true; }
 if (tokenIndex?.totals?.variables !== 352) { console.error('CORE DS TOKEN INDEX TOTAL MUST BE 352'); failed = true; }
 if ((parsed['registry/core-ds-components.json']?.components || []).length !== 57) { console.error('CORE DS COMPONENT OWNER COUNT MUST BE 57'); failed = true; }
+
+
+const upstream = parsed['registry/core-ds-upstream-foundations.json'];
+if ((upstream?.collections || []).reduce((n,c)=>n+(c.count||0),0) !== 35) { console.error('UPSTREAM VARIABLE OCCURRENCE COUNT MUST BE 35'); failed = true; }
+const responsiveDecision = parsed['registry/core-ds-responsive-decision.json'];
+if (responsiveDecision?.scan?.bindingHits !== 0 || responsiveDecision?.decision !== 'AGENT_DEPRECATED_UNUSED') { console.error('RESPONSIVE DEAD-TOKEN EVIDENCE INVALID'); failed = true; }
+const baselines = parsed['registry/visual-baselines.json'];
+for (const b of baselines?.baselines || []) {
+  if (!fs.existsSync(path.join(root,b.path))) { console.error('MISSING VISUAL BASELINE', b.path); failed = true; }
+}
+if ((baselines?.baselines || []).length !== 8) { console.error('VISUAL BASELINE COUNT MUST BE 8'); failed = true; }
 
 if (failed) process.exit(1);
 console.log('Registry validation PASS');

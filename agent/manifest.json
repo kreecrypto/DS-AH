@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.1.0",
+  "schemaVersion": "2.2.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -40,7 +40,13 @@
     "coreTokenIndex": "registry/core-ds-tokens/index.json",
     "corePreferred": "registry/core-ds-preferred.json",
     "coreCoverage": "registry/core-ds-coverage.json",
-    "coreComponentDependencies": "registry/core-ds-component-dependencies.json"
+    "coreComponentDependencies": "registry/core-ds-component-dependencies.json",
+    "coreUpstreamFoundations": "registry/core-ds-upstream-foundations.json",
+    "coreResponsiveDecision": "registry/core-ds-responsive-decision.json",
+    "coreQuickMenuStatus": "registry/core-ds-quick-menu-status.json",
+    "visualBaselines": "registry/visual-baselines.json",
+    "stateFlows": "registry/state-flows.json",
+    "codeConnectStatus": "registry/code-connect-status.json"
   },
   "routing": "agent/COMMANDS.md",
   "workflows": {

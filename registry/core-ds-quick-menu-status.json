@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "status": "BLOCKED_NO_SEMANTIC_METADATA",
+  "finding": "Every numeric quick-menu variant contains only a vector layer named vector; no text, component metadata, or semantic descendant name identifies its meaning.",
+  "sets": [
+    {
+      "name": "icon/quick-menu2",
+      "nodeId": "138:4029",
+      "componentKey": "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
+      "variants": [
+        [
+          "default",
+          "138:4030"
+        ],
+        [
+          "01",
+          "986:467"
+        ],
+        [
+          "02",
+          "986:462"
+        ],
+        [
+          "03",
+          "986:466"
+        ],
+        [
+          "04",
+          "986:465"
+        ],
+        [
+          "05",
+          "986:464"
+        ],
+        [
+          "06",
+          "986:463"
+        ],
+        [
+          "07",
+          "986:461"
+        ],
+        [
+          "08",
+          "986:459"
+        ],
+        [
+          "09",
+          "986:458"
+        ],
+        [
+          "10",
+          "986:460"
+        ]
+      ]
+    },
+    {
+      "name": "icon/quick-menu",
+      "nodeId": "986:468",
+      "componentKey": "575aafd94b3fd4c8062f983a61e55910568c752c",
+      "variants": [
+        [
+          "default",
+          "986:469"
+        ],
+        [
+          "01",
+          "986:471"
+        ],
+        [
+          "02",
+          "986:473"
+        ],
+        [
+          "03",
+          "986:475"
+        ],
+        [
+          "04",
+          "986:477"
+        ],
+        [
+          "05",
+          "986:479"
+        ],
+        [
+          "06",
+          "986:481"
+        ],
+        [
+          "07",
+          "986:483"
+        ],
+        [
+          "08",
+          "986:485"
+        ],
+        [
+          "09",
+          "986:487"
+        ]
+      ]
+    }
+  ],
+  "tupleFormat": [
+    "variant",
+    "nodeId"
+  ],
+  "agentRule": "Preserve exact numeric variant from an approved reference. Never invent a semantic name or select a numeric variant by guessed meaning.",
+  "unblockRequires": "owner-supplied semantic mapping or renamed source variants"
+}

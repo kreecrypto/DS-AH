@@ -1,27 +1,24 @@
-# Next Work — Repository Only
+# Next Work — External blockers only
 
-The Core DS deep inspection baseline is now complete for the local source file.
+Repository evidence work for Design Agent v1 is complete to the extent currently provable.
 
-## Completed in Deep Inspect
+## Completed
 
-- [x] Reconcile all local variables: 352/352.
-- [x] Reconcile all color tokens: 264/264.
-- [x] Extract full local text, spacing, shape and responsive variables.
-- [x] Extract all 41 text styles and 7 paint styles.
-- [x] Inventory all 57 local published component owners.
-- [x] Add missing `bg` owner to Core registry.
-- [x] Resolve common-family coverage: Search / Select / Textarea / Modal / Toast / Pagination / Table.
-- [x] Create Preferred/Legacy candidate matrix for duplicate Checkbox and Radio families.
-- [x] Record hidden remote/stale component dependencies.
+- [x] Local Core DS inventory: 352 variables / 264 colors / 57 component owners.
+- [x] Full upstream bound-variable extraction: Foundations 24-variable occurrence + 9-variable occurrence + legacy Color 2 variables.
+- [x] Preferred Agent defaults for duplicate Checkbox/Radio families without migrating existing Figma instances.
+- [x] Responsive `typography/screensize` scanned across all non-empty pages: 0 bindings; marked `AGENT_DEPRECATED_UNUSED`.
+- [x] Quick-menu numeric variants inspected to vector level; no semantic metadata exists; Agent policy blocks guessed semantics.
+- [x] Visual Baseline v1: 8 Core references stored as PNG in repo.
+- [x] Agency/Admin state-flow registry created from observed states/scenario stages.
+- [x] Code Connect checked and blocker recorded.
+- [x] Figma remains read-only.
 
-## Remaining evidence work
+## External blockers
 
-1. Inspect the upstream remote `Foundations` and legacy `Color` source libraries directly if their source Figma files become available.
-2. Resolve semantic names for quick-menu numeric icon variants.
-3. Resolve the `Responsive/typography/screensize = 0` variable or formally deprecate it.
-4. Get explicit design governance approval for Checkbox/Radio preferred candidates and missing-family ownership decisions.
-5. Add visual baseline screenshots/regression references.
-6. Add developer component mapping / Code Connect when code ownership is available.
-7. Add per-domain state diagrams for product Master Screens.
+1. **Quick-menu semantic names** — source variants contain only unlabeled vectors. Requires owner-provided mapping or source rename.
+2. **Code Connect** — current Figma seat requires Dev/Full on Organization/Enterprise, and no application source repo is identified.
+3. **Upstream source-file mutation** — upstream variable values are fully readable from bindings, but the source Figma file URL is not exposed by the current library inventory.
+4. **Source cleanup/migration** — deleting/deprecating legacy Figma components or dead token requires a separate explicit write/governance request.
 
-No Figma migration is implied by this backlog.
+These blockers do not prevent Design Agent v1 from read/review/reuse/QA operation.

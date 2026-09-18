@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "variable": {
+    "collection": "Responsive",
+    "name": "typography/screensize",
+    "key": "3bf6bc4d744438a3ec508f263e0cf94e5f41b724",
+    "value": 0,
+    "scope": "ALL_SCOPES"
+  },
+  "scan": {
+    "nonEmptyPagesScanned": 20,
+    "componentPagesScanned": 18,
+    "coverScanned": true,
+    "colorDocumentationScanned": true,
+    "bindingHits": 0
+  },
+  "decision": "AGENT_DEPRECATED_UNUSED",
+  "agentRule": "Do not use this variable for new work. Use explicit Device variants and the text collection Desktop/Mobile modes instead.",
+  "figmaAction": "none",
+  "removalRequires": "explicit source-library governance/migration request"
+}

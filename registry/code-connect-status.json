@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "checkedAt": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "status": "BLOCKED_EXTERNAL",
+  "figma": {
+    "attemptedNodes": [
+      "107:161",
+      "167:1772",
+      "198:4638",
+      "304:2149",
+      "105:1223",
+      "70:76"
+    ],
+    "result": "Code Connect requires a Dev or Full seat on an Organization or Enterprise plan for the current Figma account/seat."
+  },
+  "github": {
+    "accessibleOwnerRepoCountChecked": 7,
+    "matchingApplicationRepo": null,
+    "note": "No Agency/Admin/Portal application source repository was identifiable by repository name or description in the accessible owner repositories."
+  },
+  "scaffoldPolicy": "Do not invent source paths or framework labels.",
+  "unblockRequires": [
+    "Figma Dev or Full seat on Organization/Enterprise",
+    "explicit application source repository or codebase"
+  ]
+}

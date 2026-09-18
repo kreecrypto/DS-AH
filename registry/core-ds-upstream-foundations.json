@@ -1,0 +1,411 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceConsumerFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "sourceFileUrlStatus": "not_exposed_by_current_figma_library_inventory",
+  "resolutionMethod": "Resolved remote variable collections directly from bound variable IDs in the Core DS consumer file.",
+  "collections": [
+    {
+      "name": "Foundations",
+      "key": "ffd6d9e97145fa5e62a6eaa10c92078a73083530",
+      "remote": true,
+      "occurrenceId": "VariableCollectionId:ffd6d9e97145fa5e62a6eaa10c92078a73083530/907:1180",
+      "mode": "light",
+      "count": 24,
+      "variables": [
+        [
+          "color/neutral/50",
+          "74ee2c1babdd9d45bdfba4087a64bda87da82f34",
+          "COLOR",
+          [
+            0.9725490212,
+            0.9725490212,
+            0.9764705896,
+            1
+          ],
+          [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        ],
+        [
+          "color/neutral/300",
+          "7f5b42fd9165452073824e134a5e2a094d871b57",
+          "COLOR",
+          [
+            0.7686274648,
+            0.78039217,
+            0.8,
+            1
+          ],
+          [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        ],
+        [
+          "color/neutral/600",
+          "6353412bad8054482ea6023d03ead358b8468b66",
+          "COLOR",
+          [
+            0.3568627536,
+            0.380392164,
+            0.4274509847,
+            1
+          ],
+          [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        ],
+        [
+          "color/neutral/900",
+          "79371501f1ddef2b80cacf2c06cbc1538bc8d9dd",
+          "COLOR",
+          [
+            0.1686274558,
+            0.180392161,
+            0.2,
+            1
+          ],
+          [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        ],
+        [
+          "spacing/0",
+          "7e70c28cc7a169849fd434502b137b3aa9d57271",
+          "FLOAT",
+          0,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "spacing/1",
+          "03e120408c8e592e9d2dab0f33f50dec87bec262",
+          "FLOAT",
+          4,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "spacing/2",
+          "84b8e6f07e3420ba673b7f317a6c2c307e5b72b7",
+          "FLOAT",
+          8,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "spacing/3",
+          "6a8e762d3768b2e1a91f64e48fd21f0429d6b44a",
+          "FLOAT",
+          12,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "spacing/4",
+          "d462a89bece790ab2e26b074187f088c88bcdeee",
+          "FLOAT",
+          16,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "spacing/6",
+          "c5f4bb3bada484211f8f219e741d8122d05d5eac",
+          "FLOAT",
+          24,
+          [
+            "GAP"
+          ]
+        ],
+        [
+          "radius/2",
+          "5b9aa18bb0058343bb149c1751a5a72824f7b3b5",
+          "FLOAT",
+          4,
+          [
+            "CORNER_RADIUS"
+          ]
+        ],
+        [
+          "radius/4",
+          "cd9c157e8bb61dba00bb78c662ca3f80031881fe",
+          "FLOAT",
+          8,
+          [
+            "CORNER_RADIUS"
+          ]
+        ],
+        [
+          "radius/7",
+          "ceda313bebef8d769079d5374b474df8f049fe27",
+          "FLOAT",
+          16,
+          [
+            "CORNER_RADIUS"
+          ]
+        ],
+        [
+          "radius/full",
+          "5723c5b69154d67ccea762a446607bb3e0ca123e",
+          "FLOAT",
+          999,
+          [
+            "CORNER_RADIUS"
+          ]
+        ],
+        [
+          "typography/font-family/default",
+          "914fc18c1890d9a00868d0e809ddbc77a4b66467",
+          "STRING",
+          "Inter",
+          [
+            "TEXT_CONTENT",
+            "FONT_FAMILY"
+          ]
+        ],
+        [
+          "typography/weight/regular",
+          "8fbf640eb30135dd08dab674d787120761a739fa",
+          "STRING",
+          "Regular",
+          [
+            "FONT_STYLE"
+          ]
+        ],
+        [
+          "typography/weight/medium",
+          "6c084f84cf854954b8cd65bb67458c53ad6b90ed",
+          "STRING",
+          "Medium",
+          [
+            "FONT_STYLE"
+          ]
+        ],
+        [
+          "typography/weight/bold",
+          "ff290506703849bc93bf13bf76230182a8c80011",
+          "STRING",
+          "Bold",
+          [
+            "FONT_STYLE"
+          ]
+        ],
+        [
+          "stroke/1",
+          "908c1d52b9d39033afe1f172d5b1001e1de3e731",
+          "FLOAT",
+          1,
+          [
+            "STROKE_FLOAT"
+          ]
+        ],
+        [
+          "stroke/2",
+          "0eb8e94e06df285b7259a7a7d5c6f42222d9ea83",
+          "FLOAT",
+          2,
+          [
+            "STROKE_FLOAT"
+          ]
+        ],
+        [
+          "typography/line-height/md",
+          "ddd3fdc9bd764ef33d0b5ec6203c83967232a211",
+          "FLOAT",
+          20,
+          [
+            "LINE_HEIGHT"
+          ]
+        ],
+        [
+          "typography/size/sท",
+          "3b65f01f286e6958e2e759aaf6f4e4ead2203dde",
+          "FLOAT",
+          14,
+          [
+            "FONT_SIZE"
+          ]
+        ],
+        [
+          "typography/size/md",
+          "19e605c0ebbf608fb436573c30d75899f8e6d645",
+          "FLOAT",
+          16,
+          [
+            "FONT_SIZE"
+          ]
+        ],
+        [
+          "color/white/100",
+          "fd00de1d5efcd18748baa21b287c995d10111ae4",
+          "COLOR",
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        ]
+      ],
+      "tupleFormat": [
+        "name",
+        "variableKey",
+        "type",
+        "value",
+        "scopes"
+      ],
+      "debt": [
+        "typography/size/sท contains a mixed-script naming anomaly."
+      ]
+    },
+    {
+      "name": "Foundations",
+      "key": "ffd6d9e97145fa5e62a6eaa10c92078a73083530",
+      "remote": true,
+      "occurrenceId": "VariableCollectionId:ffd6d9e97145fa5e62a6eaa10c92078a73083530/32:167",
+      "mode": "light",
+      "count": 9,
+      "note": "Second imported occurrence of the same published collection key; values overlap the larger occurrence.",
+      "variables": [
+        [
+          "color/neutral/50",
+          "74ee2c1babdd9d45bdfba4087a64bda87da82f34",
+          "COLOR",
+          [
+            0.9725490212,
+            0.9725490212,
+            0.9764705896,
+            1
+          ]
+        ],
+        [
+          "color/neutral/300",
+          "7f5b42fd9165452073824e134a5e2a094d871b57",
+          "COLOR",
+          [
+            0.7686274648,
+            0.78039217,
+            0.8,
+            1
+          ]
+        ],
+        [
+          "color/neutral/600",
+          "6353412bad8054482ea6023d03ead358b8468b66",
+          "COLOR",
+          [
+            0.3568627536,
+            0.380392164,
+            0.4274509847,
+            1
+          ]
+        ],
+        [
+          "color/neutral/900",
+          "79371501f1ddef2b80cacf2c06cbc1538bc8d9dd",
+          "COLOR",
+          [
+            0.1686274558,
+            0.180392161,
+            0.2,
+            1
+          ]
+        ],
+        [
+          "radius/4",
+          "cd9c157e8bb61dba00bb78c662ca3f80031881fe",
+          "FLOAT",
+          8
+        ],
+        [
+          "typography/font-family/default",
+          "914fc18c1890d9a00868d0e809ddbc77a4b66467",
+          "STRING",
+          "Inter"
+        ],
+        [
+          "typography/weight/bold",
+          "ff290506703849bc93bf13bf76230182a8c80011",
+          "STRING",
+          "Bold"
+        ],
+        [
+          "typography/size/xs",
+          "5fedb91ec6d7cd17888d52584fe6d7e01ba10575",
+          "FLOAT",
+          12
+        ],
+        [
+          "typography/line-height/s",
+          "d0eba91b6388b300a96932d56e006c38c29e967a",
+          "FLOAT",
+          16
+        ]
+      ],
+      "tupleFormat": [
+        "name",
+        "variableKey",
+        "type",
+        "value"
+      ]
+    },
+    {
+      "name": "Color",
+      "key": "ae4c1afe23d1011830a99f80e890afa5da07cd99",
+      "remote": true,
+      "occurrenceId": "VariableCollectionId:ae4c1afe23d1011830a99f80e890afa5da07cd99/2:1",
+      "mode": "Mode 1",
+      "count": 2,
+      "variables": [
+        [
+          "Background/Static background/color-bg-base",
+          "b06419a887597e3e778ac9b6c48082c4977e1fcf",
+          "COLOR",
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        [
+          "Text/Static text colors/color-text-primary",
+          "ce1b1b6f9b62a88a4cd431a213aea475abbe41b2",
+          "COLOR",
+          [
+            0.1019607857,
+            0.1137254909,
+            0.1294117719,
+            1
+          ]
+        ]
+      ],
+      "tupleFormat": [
+        "name",
+        "variableKey",
+        "type",
+        "value"
+      ],
+      "status": "legacy_remote_dependency"
+    }
+  ],
+  "agentPolicy": [
+    "Preserve existing remote bindings when reusing an existing component.",
+    "For new Core work, prefer the local semantic token registry unless component ownership explicitly requires an upstream binding.",
+    "The missing source-file URL does not block read/reuse; it blocks source-library mutation only."
+  ]
+}

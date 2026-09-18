@@ -1,0 +1,838 @@
+{
+  "group": "bg-interaction",
+  "count": 52,
+  "variables": [
+    {
+      "key": "90b28880e6631b305862eb35e2435a614a47be50",
+      "name": "bg/interaction/primary/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "5583a01c840d63e4ae1407717fe44061366fde20",
+      "name": "bg/interaction/primary/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00008F",
+        "rgba": [
+          0,
+          0,
+          0.560784,
+          1
+        ]
+      }
+    },
+    {
+      "key": "f7ebe066235e9b84697c73279f32b373a21e8e92",
+      "name": "bg/interaction/primary/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000F7",
+        "rgba": [
+          0,
+          0,
+          0.968627,
+          1
+        ]
+      }
+    },
+    {
+      "key": "3cc92f11e5a27eae47f2757b72bad17c3cfdb292",
+      "name": "bg/interaction/primary/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000D2",
+        "rgba": [
+          0,
+          0,
+          0.823529,
+          1
+        ]
+      }
+    },
+    {
+      "key": "97165f5fb7e87e585fd33fce9a752bd0a6188b1e",
+      "name": "bg/interaction/primary/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "670721c66dfb1278a992348df5454511536e37c3",
+      "name": "bg/interaction/primary/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "3032407396b145638b5d3146b17be62eab7211d3",
+      "name": "bg/interaction/primary/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ab20310f94c47d236dc1545dbd4a7e4ffedc13e3",
+      "name": "bg/interaction/primary/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#D4D7DD",
+        "rgba": [
+          0.831373,
+          0.843137,
+          0.866667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9114152da7a17282be543dec4cb02fb7c6c0cff9",
+      "name": "bg/interaction/primary/soft/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "02676cf6055404363b3d0fbe583be3e341bff2dd",
+      "name": "bg/interaction/primary/soft/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F8FAFF",
+        "rgba": [
+          0.972549,
+          0.980392,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "1cce4292a04d3fe4ad78c54fd4d268c145383242",
+      "name": "bg/interaction/primary/soft/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F0F6FF",
+        "rgba": [
+          0.941176,
+          0.964706,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "997b61b04fcd73a24f05d6365f6056755073c01a",
+      "name": "bg/interaction/primary/soft/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F0F6FF",
+        "rgba": [
+          0.941176,
+          0.964706,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a5468ac3c1108b549e9699f977f13620ccd07cc6",
+      "name": "bg/interaction/primary/soft/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "c6453241b6f37934dbc0b57fa0b980e95cf9bf2e",
+      "name": "bg/interaction/primary/soft/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "67d4531719748a7fa66cc2eaa8856f6b6c611d79",
+      "name": "bg/interaction/primary/soft/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF99",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.6
+        ]
+      }
+    },
+    {
+      "key": "120239f325101329a512f0b376f6c5921f0f68b2",
+      "name": "bg/interaction/primary/soft/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "dab24c1d7979260b6b1f7810e6edee5a83f3f498",
+      "name": "bg/interaction/primary/subtle/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000000",
+        "rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "86de408d1636225d45e653b29cae5a48b033b4fe",
+      "name": "bg/interaction/primary/subtle/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FAFAFA",
+        "rgba": [
+          0.980392,
+          0.980392,
+          0.980392,
+          1
+        ]
+      }
+    },
+    {
+      "key": "08d9bd8874a07e14d690a9740d5f094a0a73370f",
+      "name": "bg/interaction/primary/subtle/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F7F7F8",
+        "rgba": [
+          0.968627,
+          0.968627,
+          0.972549,
+          1
+        ]
+      }
+    },
+    {
+      "key": "85fc403a4d5949f7878df101650259be74b7513b",
+      "name": "bg/interaction/primary/subtle/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "97102c114f5d402d1f5a806b4a1fb5f3d07f7c39",
+      "name": "bg/interaction/primary/subtle/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "52468174570947c8e9d2f74217d03281153d66e4",
+      "name": "bg/interaction/primary/subtle/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF0D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.05
+        ]
+      }
+    },
+    {
+      "key": "2034ccaa901d3471bcfe001b55fc34ace7d7ae20",
+      "name": "bg/interaction/primary/subtle/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF1A",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.1
+        ]
+      }
+    },
+    {
+      "key": "fcab36aec52533d53c4c01b1182a36a24d7ffddb",
+      "name": "bg/interaction/primary/subtle/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF26",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.15
+        ]
+      }
+    },
+    {
+      "key": "50cc7549fb1b97e00d2420b45de360ac4af83ec8",
+      "name": "bg/interaction/secondary/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000000",
+        "rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "f2a74e7949f7bc7767794dc63bc3b7f103069bc8",
+      "name": "bg/interaction/secondary/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#434956",
+        "rgba": [
+          0.262745,
+          0.286275,
+          0.337255,
+          1
+        ]
+      }
+    },
+    {
+      "key": "65ac4994936e751b27c7aa1f020a9967f624631a",
+      "name": "bg/interaction/secondary/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "f923f946f14937ccc10c11b6702a9d581e353cbe",
+      "name": "bg/interaction/secondary/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#1A1D21",
+        "rgba": [
+          0.101961,
+          0.113725,
+          0.129412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "7406ffe3659df5f58884fde1a83de78180a0c421",
+      "name": "bg/interaction/secondary/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "88331e720490b74fca5335809d838671f983a637",
+      "name": "bg/interaction/secondary/soft/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF33",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.2
+        ]
+      }
+    },
+    {
+      "key": "4df8d9b31e507b4e9950b05723f0e522c63dabd3",
+      "name": "bg/interaction/secondary/soft/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "2bc4d29e58b0bf5f7774051fa7d7a48d9cee2670",
+      "name": "bg/interaction/secondary/soft/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF99",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.6
+        ]
+      }
+    },
+    {
+      "key": "50ad80740a3cbc0b5aceb23e4235b36539901dce",
+      "name": "bg/interaction/secondary/subtle/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000000",
+        "rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "db2fd6f7a25bc395c6197ec835c223b92adbf9a3",
+      "name": "bg/interaction/secondary/subtle/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FAFAFA",
+        "rgba": [
+          0.980392,
+          0.980392,
+          0.980392,
+          1
+        ]
+      }
+    },
+    {
+      "key": "49d33858c1914bd4700ba0cb4838faed2ef3d16b",
+      "name": "bg/interaction/secondary/subtle/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F7F7F8",
+        "rgba": [
+          0.968627,
+          0.968627,
+          0.972549,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ca77ebf4ef941159a0b033a6575fa88d19aad803",
+      "name": "bg/interaction/secondary/subtle/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "0746c1b6fa2132754c62b4f821ffd9024a9134a0",
+      "name": "bg/interaction/secondary/subtle/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "f68c088d437f218809cdaa858bf3a5e097503f0b",
+      "name": "bg/interaction/secondary/subtle/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF0D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.05
+        ]
+      }
+    },
+    {
+      "key": "55d4cacb9552d50e79d6dccb6de4172043f48cd0",
+      "name": "bg/interaction/secondary/subtle/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF1A",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.1
+        ]
+      }
+    },
+    {
+      "key": "76b5c5eb6b29d3fb9927bbff01c18095d820cd35",
+      "name": "bg/interaction/secondary/subtle/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF26",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.15
+        ]
+      }
+    },
+    {
+      "key": "2a62c24a42b3baaa2229c2da328d837a6442cbc5",
+      "name": "bg/interaction/blur/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "7a94fea42c3703ea1820a7b87b05d6e15b3082ac",
+      "name": "bg/interaction/blur/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF0D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.05
+        ]
+      }
+    },
+    {
+      "key": "4524555fbb5341f2028cab13994cd1e62140f6cd",
+      "name": "bg/interaction/blur/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF26",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.15
+        ]
+      }
+    },
+    {
+      "key": "1ca5fd5b474dd5f9559890c09f819bb8ec63c1dc",
+      "name": "bg/interaction/blur/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "09fb36174797aeda89e89408ebb25ee546653b21",
+      "name": "bg/interaction/strong/ghost",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "7385773e0e7846970635bbb5df4bf078aab34456",
+      "name": "bg/interaction/strong/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E3000A",
+        "rgba": [
+          0.890196,
+          0,
+          0.039216,
+          1
+        ]
+      }
+    },
+    {
+      "key": "0702f51aeac3a15ef2ae722df8c0c2db0fa1bbf0",
+      "name": "bg/interaction/strong/hover",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#C7050D",
+        "rgba": [
+          0.780392,
+          0.019608,
+          0.05098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "66e8a6803e8072796bc16452640b39f7698b6f8b",
+      "name": "bg/interaction/strong/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#A80007",
+        "rgba": [
+          0.658824,
+          0,
+          0.027451,
+          1
+        ]
+      }
+    },
+    {
+      "key": "051256d79af3034c93543af9e03b51fdf5d5e40f",
+      "name": "bg/interaction/strong/ghost/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF00",
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "key": "b3e1e21882907febcfe518379972bbfc49e91799",
+      "name": "bg/interaction/strong/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E3000A",
+        "rgba": [
+          0.890196,
+          0,
+          0.039216,
+          1
+        ]
+      }
+    },
+    {
+      "key": "e841f0535c4f7bdb02282e6ecf1c64b0db78b2f4",
+      "name": "bg/interaction/strong/hover/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9241a1aea868ca67d7a53d9f4d959391f7f7b6ab",
+      "name": "bg/interaction/strong/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

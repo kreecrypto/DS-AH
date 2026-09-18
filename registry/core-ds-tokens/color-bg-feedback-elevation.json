@@ -1,0 +1,598 @@
+{
+  "group": "bg-feedback-elevation",
+  "count": 37,
+  "variables": [
+    {
+      "key": "5f49e2105b6b3a9d5f6516d58208a3c3a3960a97",
+      "name": "bg/feedback/neutral/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#434956",
+        "rgba": [
+          0.262745,
+          0.286275,
+          0.337255,
+          1
+        ]
+      }
+    },
+    {
+      "key": "b969e7c33522c19e8ac1fc88d398b25ada08d5fc",
+      "name": "bg/feedback/neutral/subtle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FAFAFA",
+        "rgba": [
+          0.980392,
+          0.980392,
+          0.980392,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6a399b7a08545d677640cb5ffaa586a6be28d809",
+      "name": "bg/feedback/neutral/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F7F7F8",
+        "rgba": [
+          0.968627,
+          0.968627,
+          0.972549,
+          1
+        ]
+      }
+    },
+    {
+      "key": "8b17d1a815c9548c298cd54ed48e5493e70867b7",
+      "name": "bg/feedback/neutral/subtle/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "1d98023dded5f59b27d89e2a995c3a71f40b23fc",
+      "name": "bg/feedback/info/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#234476",
+        "rgba": [
+          0.137255,
+          0.266667,
+          0.462745,
+          1
+        ]
+      }
+    },
+    {
+      "key": "90b86c34db3479def54db7a3cda2e9036435cd2d",
+      "name": "bg/feedback/info/subtle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#D6E6FF",
+        "rgba": [
+          0.839216,
+          0.901961,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "71195fa429fcbde82a70f8b3c62db438c345683c",
+      "name": "bg/feedback/info/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#99C2FF",
+        "rgba": [
+          0.6,
+          0.760784,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6fd8cb39e349b78817a87828b614f26384794ae0",
+      "name": "bg/feedback/info/subtle/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#152E54",
+        "rgba": [
+          0.082353,
+          0.180392,
+          0.329412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "783ee6dda8b0a511c15e72b9d1541073c33da417",
+      "name": "bg/feedback/warning/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFBC11",
+        "rgba": [
+          1,
+          0.737255,
+          0.066667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "2e83fb255a6f418a737050c528cd0dd1fe96e899",
+      "name": "bg/feedback/warning/subtle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFF3D6",
+        "rgba": [
+          1,
+          0.952941,
+          0.839216,
+          1
+        ]
+      }
+    },
+    {
+      "key": "164d6aac2d5ff2f9695a5dc361d151e99dcf347e",
+      "name": "bg/feedback/warning/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFD467",
+        "rgba": [
+          1,
+          0.831373,
+          0.403922,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4aaa1387e41d0a0e042d94a4a0a50d2f999f719d",
+      "name": "bg/feedback/warning/subtle/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFBC11",
+        "rgba": [
+          1,
+          0.737255,
+          0.066667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "47d253f72efedfb036561cc3e7338003739bd97e",
+      "name": "bg/feedback/success/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#17663A",
+        "rgba": [
+          0.090196,
+          0.4,
+          0.227451,
+          1
+        ]
+      }
+    },
+    {
+      "key": "089dddc5bc946df8bd5bb8eab98d4b708f765daf",
+      "name": "bg/feedback/success/subtle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#DFF8EA",
+        "rgba": [
+          0.87451,
+          0.972549,
+          0.917647,
+          1
+        ]
+      }
+    },
+    {
+      "key": "d36507cd0b6e78cff86262d5cce9253a20f81ddb",
+      "name": "bg/feedback/success/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#84EEAE",
+        "rgba": [
+          0.517647,
+          0.933333,
+          0.682353,
+          1
+        ]
+      }
+    },
+    {
+      "key": "0e4b3bea29dcb1dabf0c93dde553800fcc0d8042",
+      "name": "bg/feedback/success/subtle/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0F4527",
+        "rgba": [
+          0.058824,
+          0.270588,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "b322ba1af17348fd3c2484a3cb66c7ffe059c48d",
+      "name": "bg/feedback/error/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#880727",
+        "rgba": [
+          0.533333,
+          0.027451,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "b9a519602e93b4683a8bf974f2e07a36f608764b",
+      "name": "bg/feedback/error/subtle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FDD8E1",
+        "rgba": [
+          0.992157,
+          0.847059,
+          0.882353,
+          1
+        ]
+      }
+    },
+    {
+      "key": "24f364bbf1cfdb62b60b762c554ccb5784a1e5ff",
+      "name": "bg/feedback/error/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F98BA6",
+        "rgba": [
+          0.976471,
+          0.545098,
+          0.65098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a089095511da924bff317f20874facb2f72eccf7",
+      "name": "bg/feedback/error/subtle/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#880727",
+        "rgba": [
+          0.533333,
+          0.027451,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "c18c050569b9aa6fbdf3888729e283455d45c4a3",
+      "name": "bg/elevation/blur/medium",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#5353534D",
+        "rgba": [
+          0.32549,
+          0.32549,
+          0.32549,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "de51ac10810aff1c31335fff9ec4b550660a5d93",
+      "name": "bg/elevation/blur/high",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#53535380",
+        "rgba": [
+          0.32549,
+          0.32549,
+          0.32549,
+          0.5
+        ]
+      }
+    },
+    {
+      "key": "b8448e957fc4e58eeb1baa9ea551f18f2d196da7",
+      "name": "bg/elevation/scrim/low",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000004D",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "0c96d695515f98e10be9cb30d25b5fd118319bb6",
+      "name": "bg/elevation/scrim/high",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000E5",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.9
+        ]
+      }
+    },
+    {
+      "key": "281477c94bb05fb5b205928ca7390cae1b9453df",
+      "name": "bg/elevation/overlay/solid/none",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000000",
+        "rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "e9a11bab9cd98c98c7953c17f3bd9a3dc57bd962",
+      "name": "bg/elevation/overlay/solid/low",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000004D",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "fe712adbca88926aec20fbb50de38bf543f4086b",
+      "name": "bg/elevation/overlay/solid/medium",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000B2",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.7
+        ]
+      }
+    },
+    {
+      "key": "3d626cd408fc9586a88d837de12e0f18e034e89e",
+      "name": "bg/elevation/overlay/solid/high",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000E5",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.9
+        ]
+      }
+    },
+    {
+      "key": "4fa5b661bde9a21fe70618fb84ae66e8d404f58e",
+      "name": "bg/elevation/overlay/gradient/low/start",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000080",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.5
+        ]
+      }
+    },
+    {
+      "key": "599bce9dd8be35af4e3b6a7939c01ef39d0b1571",
+      "name": "bg/elevation/overlay/gradient/low/middle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000033",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.2
+        ]
+      }
+    },
+    {
+      "key": "a9b6a23aa5f50ab73bb4f0f1f8645483ef66ad0e",
+      "name": "bg/elevation/overlay/gradient/low/end",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000000D",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.05
+        ]
+      }
+    },
+    {
+      "key": "30fbd5d7b7ac3ea09775f9c5ceb099ec521d0e48",
+      "name": "bg/elevation/overlay/gradient/medium/start",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000B2",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.7
+        ]
+      }
+    },
+    {
+      "key": "db6fa179b1191a65607796dab08261c63a1e5ceb",
+      "name": "bg/elevation/overlay/gradient/medium/middle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000080",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.5
+        ]
+      }
+    },
+    {
+      "key": "6324aaea71d33825fc75d0f841b0ffae29fe00f3",
+      "name": "bg/elevation/overlay/gradient/medium/end",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000026",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.15
+        ]
+      }
+    },
+    {
+      "key": "23a9ed012593c736177c9aceba8c96c8b4db2f91",
+      "name": "bg/elevation/overlay/gradient/high/start",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000E5",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.9
+        ]
+      }
+    },
+    {
+      "key": "38456fc47b3fd9341bc8e0dbf13943038011f897",
+      "name": "bg/elevation/overlay/gradient/high/middle",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#000000B2",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.7
+        ]
+      }
+    },
+    {
+      "key": "0b2b7844d90dcd97002d29d49978e2dc9aec80fe",
+      "name": "bg/elevation/overlay/gradient/high/end",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000004D",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.3
+        ]
+      }
+    }
+  ]
+}

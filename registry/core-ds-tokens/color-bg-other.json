@@ -1,0 +1,422 @@
+{
+  "group": "bg-other",
+  "count": 26,
+  "variables": [
+    {
+      "key": "a0c92e0ab08389f247bf4360a79e105c9752483c",
+      "name": "bg/base/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#04060C",
+        "rgba": [
+          0.015686,
+          0.023529,
+          0.047059,
+          1
+        ]
+      }
+    },
+    {
+      "key": "121121c0f94dee56156c7d4bc537f5aa3f9006ba",
+      "name": "bg/base/disabled/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "91a139923b90ba08e0da779257951585ab8da945",
+      "name": "bg/decorative/emphasis/function/low",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FAFAFA",
+        "rgba": [
+          0.980392,
+          0.980392,
+          0.980392,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9a1f43447a6dc0ad5e382ef4124995f98c1292a7",
+      "name": "bg/decorative/emphasis/function/medium",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#F7F7F8",
+        "rgba": [
+          0.968627,
+          0.968627,
+          0.972549,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9968c8b9f578ed94e02ddb013d57a328f0253bcc",
+      "name": "bg/decorative/emphasis/function/high",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#EFEFE1",
+        "rgba": [
+          0.937255,
+          0.937255,
+          0.882353,
+          1
+        ]
+      }
+    },
+    {
+      "key": "15688fde1e669ec3e5d2edba364211de8cc12b2a",
+      "name": "bg/decorative/emphasis/expressive/low",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#E2EFFF",
+        "rgba": [
+          0.886275,
+          0.937255,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "039c02b71142c02b4e5d6ecb2d9b3355b3426f55",
+      "name": "bg/decorative/emphasis/expressive/medium",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#4658FC",
+        "rgba": [
+          0.27451,
+          0.345098,
+          0.988235,
+          1
+        ]
+      }
+    },
+    {
+      "key": "42d23338096beb6ffacdd0b1ceb708a0713e5d8d",
+      "name": "bg/decorative/emphasis/expressive/high",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#070E40",
+        "rgba": [
+          0.027451,
+          0.054902,
+          0.25098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a5235da563ce17940ac4f8a59a3e8a8c318c1dcb",
+      "name": "bg/footer/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#030511",
+        "rgba": [
+          0.011765,
+          0.019608,
+          0.066667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6b645e89df6c23436184214458ccd7328aa79f23",
+      "name": "bg/footer/soft",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "907b08475fb29f64e26a4004b4ba02ec0b745b42",
+      "name": "bg/badge/coral",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FF9C62",
+        "rgba": [
+          1,
+          0.611765,
+          0.384314,
+          1
+        ]
+      }
+    },
+    {
+      "key": "7364af073658b9acda62a45b913cbe271c18445c",
+      "name": "bg/badge/teal",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0F717F",
+        "rgba": [
+          0.058824,
+          0.443137,
+          0.498039,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9ff92d64db0169ba3e139633923dbbee48657ccc",
+      "name": "bg/badge/leaf/green",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#58C645",
+        "rgba": [
+          0.345098,
+          0.776471,
+          0.270588,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6dc4bdda6ab479b51a0682b33a6a01466eee1876",
+      "name": "bg/badge/cotton/candy",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFB4CE",
+        "rgba": [
+          1,
+          0.705882,
+          0.807843,
+          1
+        ]
+      }
+    },
+    {
+      "key": "40fdced6fcdf95625b8c7269cf63e250e2f30288",
+      "name": "bg/badge/sky/blue",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#74BDE8",
+        "rgba": [
+          0.454902,
+          0.741176,
+          0.909804,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ddedc5c2ef272dbc4fe82856abe8250e33acb0b9",
+      "name": "bg/badge/grape",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#614FE8",
+        "rgba": [
+          0.380392,
+          0.309804,
+          0.909804,
+          1
+        ]
+      }
+    },
+    {
+      "key": "5a03d788e0638c58eef4ce680431c08340b7f05f",
+      "name": "bg/badge/mint/green",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#81EEBB",
+        "rgba": [
+          0.505882,
+          0.933333,
+          0.733333,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ce1f7722caa69d3f6158f2f147206bd481b6a739",
+      "name": "bg/badge/sunshine",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFF00",
+        "rgba": [
+          1,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "key": "62836af3e416121e60aada896011d001c241e2d5",
+      "name": "bg/field/default",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "4d286103a88a8f8e5e11080544128e695d6c51aa",
+      "name": "bg/field/active",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "40132290976817c3d7b3ea36056817fde8347a32",
+      "name": "bg/field/disabled",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#0000001A",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.1
+        ]
+      }
+    },
+    {
+      "key": "75fc6d6bb679fb6ec786257ebf26c82d75278765",
+      "name": "bg/field/default/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF0D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.05
+        ]
+      }
+    },
+    {
+      "key": "24913cb14bf245ec2f00ad624a02c7feff6f4a29",
+      "name": "bg/field/active/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF1A",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.1
+        ]
+      }
+    },
+    {
+      "key": "0671101324d55b73eb40c22f69e41a3e0cd2ba4f",
+      "name": "bg/field/disabled/inverse",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "e13ff1c705e6c0be1c5ad2db999ac04ac8f09019",
+      "name": "bg/base/base",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+      "name": "bg/base/disable",
+      "scopes": [
+        "ALL_FILLS"
+      ],
+      "value": {
+        "hex": "#00000026",
+        "rgba": [
+          0,
+          0,
+          0,
+          0.15
+        ]
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.4.0",
+  "schemaVersion": "2.5.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -84,10 +84,7 @@
     "productRouter": "agent/product-router.json",
     "intentRouter": "agent/router/intent.json",
     "defaultWriteMode": "read-only",
-    "referenceRouter": "agent/reference-router.json",
-    "githubProfile": ".github/agents/design-agent.agent.md",
-    "githubAgentId": "design-agent",
-    "githubTarget": "github-copilot"
+    "referenceRouter": "agent/reference-router.json"
   },
   "outputSchemas": {
     "execution": "agent/output/execution.schema.json",
@@ -97,5 +94,13 @@
   "evals": {
     "routing": "agent/evals/cases.json",
     "referenceFidelity": "agent/evals/reference-cases.json"
+  },
+  "architecture": {
+    "repositoryRole": "knowledge_base_and_operating_contract",
+    "runtimeHost": "chatgpt",
+    "figmaExecution": "mcp_via_chatgpt",
+    "githubAgentExecution": false,
+    "githubMcpConfiguration": false,
+    "rule": "GitHub stores evidence, policies, registries, workflows, tests, and audit history. ChatGPT reads this KB and performs live Figma MCP execution."
   }
 }

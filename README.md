@@ -132,3 +132,20 @@ For CREATE/MODIFY:
 Generic screen types with multiple approved Masters, such as an unspecified Agency "Dashboard", are blocked from Figma write until the reference/domain is resolved.
 
 Run `npm run test:fidelity` for regression coverage.
+
+
+## Runtime Architecture — GitHub KB + ChatGPT MCP
+
+This repository is intentionally **knowledge-only** from an execution perspective.
+
+- **GitHub** stores the Design Agent knowledge base: source registries, policies, workflows, reference routing, token/component evidence, visual baselines, tests, audits, and decision history.
+- **ChatGPT** is the runtime that interprets this knowledge.
+- **Figma MCP through ChatGPT** is the only live Figma execution path for this project.
+
+There is no required GitHub Custom Agent and no Figma MCP configuration should be stored here merely to make GitHub execute design work.
+
+Runtime flow:
+
+**User → ChatGPT → read DS-AH KB → resolve Master/reference → Figma MCP → visual QA → evidence/update KB when needed**
+
+This separation keeps GitHub deterministic and auditable while keeping live external actions inside the ChatGPT session.

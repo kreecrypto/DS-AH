@@ -3,7 +3,6 @@ import path from 'node:path';
 
 const root=process.cwd();
 const required=[
-  '.github/agents/design-agent.agent.md',
   'agent/SYSTEM.md',
   'agent/runtime.json',
   'agent/product-router.json',
@@ -80,29 +79,25 @@ if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFE
   console.error('GENERIC DASHBOARD MUST BE REFERENCE-AMBIGUOUS');
   failed=true;
 }
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'agent/manifest.json'),'utf8'));
+if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract'){
+  console.error('GITHUB MUST REMAIN KB/OPERATING CONTRACT ONLY');
+  failed=true;
+}
+if(manifest?.architecture?.runtimeHost!=='chatgpt' || manifest?.architecture?.figmaExecution!=='mcp_via_chatgpt'){
+  console.error('RUNTIME MUST BE CHATGPT WITH FIGMA MCP EXECUTION');
+  failed=true;
+}
+if(manifest?.architecture?.githubAgentExecution!==false){
+  console.error('GITHUB AGENT EXECUTION MUST BE DISABLED');
+  failed=true;
+}
+
 if(runtime?.invariants && !runtime.invariants.includes('reference_before_layout')){
   console.error('MISSING reference_before_layout INVARIANT');
   failed=true;
 }
 
-
-const githubAgentPath=path.join(root,'.github/agents/design-agent.agent.md');
-const githubAgent=fs.readFileSync(githubAgentPath,'utf8');
-for(const requiredText of [
-  'name: design-agent',
-  'description:',
-  'target: github-copilot',
-  'agent/SYSTEM.md',
-  'agent/reference-router.json',
-  'Reference Fidelity Gate',
-  'BLOCKED_REFERENCE_AMBIGUOUS',
-  'Master before invention'
-]){
-  if(!githubAgent.includes(requiredText)){
-    console.error('INVALID GITHUB DESIGN AGENT PROFILE: missing',requiredText);
-    failed=true;
-  }
-}
 
 if(failed) process.exit(1);
 console.log('Design Agent v1 validation PASS');

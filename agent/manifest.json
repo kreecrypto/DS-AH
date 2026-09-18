@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "systemId": "DS-AH",
+  "entrypoint": "AGENTS.md",
+  "designContract": "design.md",
+  "figma": {
+    "fileKey": "cipkv7yTxyE29VCfMphE0W",
+    "auditEntryNode": "1:12191",
+    "defaultMode": "read-only",
+    "writeRequires": "explicit user request in current task"
+  },
+  "registries": {
+    "sources": "registry/figma-sources.json",
+    "libraries": "registry/libraries.json",
+    "foundations": "registry/foundations.json",
+    "coreComponents": "registry/core-components.json",
+    "domainPatterns": "registry/domain-patterns.json",
+    "aliases": "registry/aliases.json"
+  },
+  "routing": "agent/COMMANDS.md",
+  "workflows": {
+    "inspect": "agent/workflows/inspect.md",
+    "createScreen": "agent/workflows/create-screen.md",
+    "modifyScreen": "agent/workflows/modify-screen.md",
+    "review": "agent/workflows/review.md",
+    "component": "agent/workflows/component.md",
+    "qa": "agent/workflows/qa.md",
+    "handoff": "agent/workflows/handoff.md"
+  },
+  "policies": [
+    "policies/source-priority.md",
+    "policies/naming.md",
+    "policies/responsive.md",
+    "policies/component-ownership.md"
+  ],
+  "requiredFinalEvidence": [
+    "source_of_truth",
+    "reuse_decision",
+    "responsive_coverage",
+    "qa_result",
+    "open_gaps"
+  ]
+}

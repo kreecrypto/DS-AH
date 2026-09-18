@@ -1,0 +1,534 @@
+{
+  "group": "icon-focus-misc",
+  "count": 33,
+  "variables": [
+    {
+      "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
+      "name": "icon/primary/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ba9e3a63d8505a4b1cdf181556ca8bbba52b8591",
+      "name": "icon/secondary/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF99",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.6
+        ]
+      }
+    },
+    {
+      "key": "2624dbd4f67ab8a6747ae4aa2e0329230050ca0e",
+      "name": "icon/tertiary/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF66",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.4
+        ]
+      }
+    },
+    {
+      "key": "35e00538862b091fc1895d01dc3e285182d89a12",
+      "name": "icon/disabled/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF4D",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.3
+        ]
+      }
+    },
+    {
+      "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+      "name": "icon/interaction/primary/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#00008F",
+        "rgba": [
+          0,
+          0,
+          0.560784,
+          1
+        ]
+      }
+    },
+    {
+      "key": "41a8dd400e9fdb12efc301792231f766cf27fe0f",
+      "name": "icon/interaction/primary/hover",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#00007F",
+        "rgba": [
+          0,
+          0,
+          0.498039,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9cd0dbda330bc8ed80709ec88c3de5749cb6a9d4",
+      "name": "icon/interaction/primary/active",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#0000D2",
+        "rgba": [
+          0,
+          0,
+          0.823529,
+          1
+        ]
+      }
+    },
+    {
+      "key": "c3c6518ca246c20e93885a73ea8d0b08849ef5b1",
+      "name": "icon/interaction/primary/default/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "99b08e68509a7db1dc5d0e2ec9a6f1db6712d658",
+      "name": "icon/interaction/primary/hover/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#E8EAED",
+        "rgba": [
+          0.909804,
+          0.917647,
+          0.929412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "490c22ab51dbb0d4db63c40808d3352fa1559917",
+      "name": "icon/interaction/primary/active/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#D7D7DD",
+        "rgba": [
+          0.843137,
+          0.843137,
+          0.866667,
+          1
+        ]
+      }
+    },
+    {
+      "key": "d1416185ca38b2aa9b0c2990f680e18f7a0eba5b",
+      "name": "icon/interaction/secondary/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#606776",
+        "rgba": [
+          0.376471,
+          0.403922,
+          0.462745,
+          1
+        ]
+      }
+    },
+    {
+      "key": "7ab755bd01483afd5bab41e895308d2446a9838b",
+      "name": "icon/interaction/secondary/hover",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "32bd7d422a1cd35e09dae4c4aa906cd06b871e0c",
+      "name": "icon/interaction/secondary/active",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#1A1D21",
+        "rgba": [
+          0.101961,
+          0.113725,
+          0.129412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "a3c02761d194180d22de5be4aa558478d19084ee",
+      "name": "icon/interaction/secondary/default/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFFCC",
+        "rgba": [
+          1,
+          1,
+          1,
+          0.8
+        ]
+      }
+    },
+    {
+      "key": "6e8272f03167f2a8455264f2b80751307cc4aecc",
+      "name": "icon/interaction/secondary/hover/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "6ca2b2294b058ee44c20982bdba3823eecc0f509",
+      "name": "icon/interaction/secondary/active/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "988106e7760741617f96a5a535419149ca4fca5c",
+      "name": "icon/interaction/strong/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#E3000A",
+        "rgba": [
+          0.890196,
+          0,
+          0.039216,
+          1
+        ]
+      }
+    },
+    {
+      "key": "2c16c47bc88b825e9255af71ff61f7494dca8ba8",
+      "name": "icon/interaction/strong/hover",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#C7050D",
+        "rgba": [
+          0.780392,
+          0.019608,
+          0.05098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "35dfdc5688af47078fb965e9ac4a36fa72ca366a",
+      "name": "icon/interaction/strong/active",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#A80007",
+        "rgba": [
+          0.658824,
+          0,
+          0.027451,
+          1
+        ]
+      }
+    },
+    {
+      "key": "ad2e799680d9b947af3425d64d0d83e7d2bd6a4c",
+      "name": "icon/interaction/strong/default/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "637228efac67b2a4399193e9e955707bcdf230ac",
+      "name": "icon/interaction/strong/hover/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "e9d3cbb11bace5a1d3e21ebe6270b6014956afd7",
+      "name": "icon/interaction/strong/active/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "f6fbdc37c4d1764d229e45bc04138211e4c09919",
+      "name": "icon/feedback/neutral/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#2B303B",
+        "rgba": [
+          0.168627,
+          0.188235,
+          0.231373,
+          1
+        ]
+      }
+    },
+    {
+      "key": "88bc7fa0c34364f3a442742453fe996014ddb586",
+      "name": "icon/feedback/neutral/default/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "b931dc2f948f3053879c6b6443fdd57c1c54d55a",
+      "name": "icon/feedback/info/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#152E54",
+        "rgba": [
+          0.082353,
+          0.180392,
+          0.329412,
+          1
+        ]
+      }
+    },
+    {
+      "key": "5d4aa0618d8a6837a0de61dff6c84d7752bb7e43",
+      "name": "icon/feedback/info/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#99C2FF",
+        "rgba": [
+          0.6,
+          0.760784,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "2916293257a612d852bfae7da35af6d223b368c5",
+      "name": "icon/feedback/warning/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#5C4200",
+        "rgba": [
+          0.360784,
+          0.258824,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "key": "01f0442df2dfd036395b8b4ec18f8148678f1bfb",
+      "name": "icon/feedback/warning/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFD467",
+        "rgba": [
+          1,
+          0.831373,
+          0.403922,
+          1
+        ]
+      }
+    },
+    {
+      "key": "c97e05290c057bd8169620cc4ef3492b5d781eca",
+      "name": "icon/feedback/success/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#0F4527",
+        "rgba": [
+          0.058824,
+          0.270588,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "5c39660c607dcd7707db392536e4eb1fcaa375b1",
+      "name": "icon/feedback/success/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#84E4AE",
+        "rgba": [
+          0.517647,
+          0.894118,
+          0.682353,
+          1
+        ]
+      }
+    },
+    {
+      "key": "031e4c21f5f5c85e61faebc2d3e06b24258e6d56",
+      "name": "icon/feedback/error/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#880727",
+        "rgba": [
+          0.533333,
+          0.027451,
+          0.152941,
+          1
+        ]
+      }
+    },
+    {
+      "key": "133eafc7bdcea3b1c044465728d3469a02fef1e9",
+      "name": "icon/feedback/error/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#F98BA6",
+        "rgba": [
+          0.976471,
+          0.545098,
+          0.65098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "509ad810cf4009d17da29f0a6ea937cdae2c63d8",
+      "name": "Color",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

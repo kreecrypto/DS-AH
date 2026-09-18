@@ -1,0 +1,605 @@
+{
+  "collection": {
+    "key": "307d7da4179cc9ca976c1d390ab1df27565a46ca",
+    "name": "text",
+    "modes": [
+      {
+        "id": "9:0",
+        "name": "Desktop"
+      },
+      {
+        "id": "9:1",
+        "name": "Mobile"
+      }
+    ],
+    "defaultModeId": "9:0"
+  },
+  "count": 45,
+  "variables": [
+    {
+      "key": "e6b48d9074030e06aaeb93c83c8a1a96ca00c0af",
+      "name": "font/family/hero",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "caa9add11534c424160c65c1d9957414c7c39611",
+      "name": "font/family/display",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "3e03fd3bad5d30edec2aefd9fe07ac48bc99a429",
+      "name": "font/family/heading",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "854299c7b4217aa9ba022a9b39afae091e19830c",
+      "name": "font/family/title",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "6741f81e1cc73634c65681e5be5e063bb811b9de",
+      "name": "font/family/subtitle",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+      "name": "font/family/body",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "625c1640b02321212f5790d561cad1f35f146c60",
+      "name": "font/family/links",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "bac75af560badeb08abde0bd077bba7e88d300e3",
+      "name": "font/family/tag",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "e289154a4f8ac41544faaacd472bd744aebcc708",
+      "name": "font/family/quote",
+      "type": "STRING",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "DB Helvethaica X",
+        "Mobile": "DB Helvethaica X"
+      }
+    },
+    {
+      "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+      "name": "font/weight/regular",
+      "type": "STRING",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "55 Regular",
+        "Mobile": "55 Regular"
+      }
+    },
+    {
+      "key": "c4a01ccf6b509c663d1f97d8a8baa66c002db757",
+      "name": "font/weight/thin",
+      "type": "STRING",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "35 Thin",
+        "Mobile": "35 Thin"
+      }
+    },
+    {
+      "key": "bc7730b2b41fd8a6b99eb35d75ac920f87bb366e",
+      "name": "font/weight/light",
+      "type": "STRING",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "45 Li",
+        "Mobile": "45 Li"
+      }
+    },
+    {
+      "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+      "name": "font/weight/bold",
+      "type": "STRING",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "75 Bd",
+        "Mobile": "75 Bd"
+      }
+    },
+    {
+      "key": "c78b4ae28de467ad7dd230648abe791ce7c27eef",
+      "name": "font/weight/black",
+      "type": "STRING",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": "85 Blk",
+        "Mobile": "85 Blk"
+      }
+    },
+    {
+      "key": "e4a72e44ff5e13e0243cbca420f9230eab53c6b6",
+      "name": "font/size/xs",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 12,
+        "Mobile": 12
+      }
+    },
+    {
+      "key": "f6939bc399e19ff1662c32e6c9ed44e4c78e086e",
+      "name": "font/size/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 14,
+        "Mobile": 14
+      }
+    },
+    {
+      "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+      "name": "font/size/md",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 16,
+        "Mobile": 16
+      }
+    },
+    {
+      "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+      "name": "font/size/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 20,
+        "Mobile": 20
+      }
+    },
+    {
+      "key": "c0d72e76d71d8b9c1f9f9f6834e3fb4068a6dbb2",
+      "name": "font/size/7xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 64,
+        "Mobile": 32
+      }
+    },
+    {
+      "key": "630df01fab0cab686c406acc3aadfdbd6985efa4",
+      "name": "font/size/8xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 72,
+        "Mobile": 40
+      }
+    },
+    {
+      "key": "ca7c057702f3e3d6fc4f95ab70a7b79e4e19274c",
+      "name": "font/size/9xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 92,
+        "Mobile": 48
+      }
+    },
+    {
+      "key": "cc2ce11c84c74adb9c6673a0ddc8d93b1fe42f97",
+      "name": "font/size/10xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 128,
+        "Mobile": 64
+      }
+    },
+    {
+      "key": "b1d1733179a2eb7d7fee770e01dff0cfc2ff7483",
+      "name": "font/size/xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 24,
+        "Mobile": 28
+      }
+    },
+    {
+      "key": "422a8d0c0d3406e3963a9b8f82f9137580268554",
+      "name": "font/size/3xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 32,
+        "Mobile": 24
+      }
+    },
+    {
+      "key": "5cc49c167f911c2b5410de0ac357e36f6682a10b",
+      "name": "font/size/4xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 40,
+        "Mobile": 32
+      }
+    },
+    {
+      "key": "362fb70d855949784191f938e09a3d9d934ce123",
+      "name": "font/size/6xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 56,
+        "Mobile": 40
+      }
+    },
+    {
+      "key": "038c0fb7be615a595d85640d13fd8144c3edf0cf",
+      "name": "font/size/5xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 48,
+        "Mobile": 32
+      }
+    },
+    {
+      "key": "628edc01101bdde5ac4ee6889339b8f684798bb1",
+      "name": "font/line-height/xs",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 14,
+        "Mobile": 14
+      }
+    },
+    {
+      "key": "b4ae1aad38627cd7e1f8705695bcef3ae4ea9292",
+      "name": "font/line-height/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 18,
+        "Mobile": 18
+      }
+    },
+    {
+      "key": "f659a1db048486cf1c6fe0a96d70585634cf8019",
+      "name": "font/line-height/md",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 20,
+        "Mobile": 20
+      }
+    },
+    {
+      "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+      "name": "font/line-height/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 24,
+        "Mobile": 24
+      }
+    },
+    {
+      "key": "92728990934fb86c17f9d09bf9f659f691864b4a",
+      "name": "font/line-height/2xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 30,
+        "Mobile": 36
+      }
+    },
+    {
+      "key": "e88ac30ce608cd67fcb2bc522994009a90b04ef3",
+      "name": "font/line-height/3xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 42,
+        "Mobile": 30
+      }
+    },
+    {
+      "key": "957bd287d66630f04be19bd1216b76bd76851e5d",
+      "name": "font/line-height/4xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 42,
+        "Mobile": 42
+      }
+    },
+    {
+      "key": "e53c915ab3e5e2e1aa218dffb9f8faaf938b0a6b",
+      "name": "font/line-height/5xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 46,
+        "Mobile": 36
+      }
+    },
+    {
+      "key": "b010e404380b434e370d4d48bef4ff3376fc83a0",
+      "name": "font/line-height/6xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 46,
+        "Mobile": 32
+      }
+    },
+    {
+      "key": "c3d2bbb2420b410ec45dd44c3603205cacc88a85",
+      "name": "font/line-height/7xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 54,
+        "Mobile": 42
+      }
+    },
+    {
+      "key": "7560d860f7bfdc44ca2eea241766081ed9e46084",
+      "name": "font/line-height/8xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 64,
+        "Mobile": 42
+      }
+    },
+    {
+      "key": "79fdcb8f1661b6c302a0011d71ff9e81f4e151da",
+      "name": "font/line-height/9xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 64,
+        "Mobile": 48
+      }
+    },
+    {
+      "key": "cebd971901f6c71b1f43dfe41283a8d8c971b260",
+      "name": "font/line-height/xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 24,
+        "Mobile": 30
+      }
+    },
+    {
+      "key": "a15970301949bd19e8fdf97431c39bce6afd0f0f",
+      "name": "font/line-height/10xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 72,
+        "Mobile": 54
+      }
+    },
+    {
+      "key": "256d9269f44eeb450333a1565ea1bcd800a60022",
+      "name": "font/line-height/11xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 72,
+        "Mobile": 46
+      }
+    },
+    {
+      "key": "820517e6de3157c78b4bef00705da5dcaca1330a",
+      "name": "font/line-height/12xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 102,
+        "Mobile": 48
+      }
+    },
+    {
+      "key": "fd21b9fe9a380c1fc53754e0b33fee1baa482f55",
+      "name": "font/line-height/13xl",
+      "type": "FLOAT",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 144,
+        "Mobile": 64
+      }
+    },
+    {
+      "key": "3f0eb96cc2edaa3d575b20c2a4b5e7bf618a6e36",
+      "name": "font/size/2xl",
+      "type": "FLOAT",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "description": "",
+      "values": {
+        "Desktop": 28,
+        "Mobile": 28
+      }
+    }
+  ]
+}

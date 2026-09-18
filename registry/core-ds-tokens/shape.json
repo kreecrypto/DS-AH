@@ -1,0 +1,184 @@
+{
+  "collection": {
+    "key": "7799562fcf5143f16e786e0bbd77ad8e6d2e33c7",
+    "name": "shape",
+    "modes": [
+      {
+        "id": "70:1",
+        "name": "Mode 1"
+      }
+    ],
+    "defaultModeId": "70:1"
+  },
+  "count": 14,
+  "variables": [
+    {
+      "key": "97097ae19a62d676db97e429c03ef1769e5b4dea",
+      "name": "radius/button/default",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 64
+      }
+    },
+    {
+      "key": "a9694bc7852f691c30ab37a828609eae58d7eade",
+      "name": "radius/image/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 8
+      }
+    },
+    {
+      "key": "b2efd815a5d35e0550d6ce1457b83ca864c9ffa4",
+      "name": "radius/image/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 12
+      }
+    },
+    {
+      "key": "48ba5e095ec418b598c1cd60fee495010bc4f1fd",
+      "name": "radius/forms/input",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 8
+      }
+    },
+    {
+      "key": "fd2da5df8ec9cbb7e8eec3a66b1e97e74878940c",
+      "name": "radius/popover/container",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 4
+      }
+    },
+    {
+      "key": "90be349c5a7aa6a3f19199ce54fa7a957cf401bd",
+      "name": "radius/none",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 0
+      }
+    },
+    {
+      "key": "e634b731682826128278485486d85768d858fe7e",
+      "name": "radius/xs",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 2
+      }
+    },
+    {
+      "key": "fa9574ee8be4252488726a1c407a6952e148127c",
+      "name": "radius/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 4
+      }
+    },
+    {
+      "key": "d4a0fadd71244c9169eedd88d9403a6fea073f0d",
+      "name": "radius/md",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 8
+      }
+    },
+    {
+      "key": "b0fd714c04d96a293d38ec1f5bcd0e44aaec940c",
+      "name": "radius/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 12
+      }
+    },
+    {
+      "key": "753edf11160dfb7d1d70d06945bd5455d35c5038",
+      "name": "radius/xl",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 16
+      }
+    },
+    {
+      "key": "f68cc3cb7b2bc174ed9b05f9c21184fde875ff01",
+      "name": "radius/full",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 9999
+      }
+    },
+    {
+      "key": "e4736790cf914d2840359cc860de8c090a6b6301",
+      "name": "stroke/width/default",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 1
+      }
+    },
+    {
+      "key": "ff311791355b32f6a16b7ebefe598d78bd0d965b",
+      "name": "stroke/width/subtle",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 0.5
+      }
+    }
+  ]
+}

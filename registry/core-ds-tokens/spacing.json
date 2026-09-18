@@ -1,0 +1,352 @@
+{
+  "collection": {
+    "key": "9d0303ad048f42518dc85e98ee1a817d7fc75ac8",
+    "name": "spacing",
+    "modes": [
+      {
+        "id": "54:0",
+        "name": "Mode 1"
+      }
+    ],
+    "defaultModeId": "54:0"
+  },
+  "count": 28,
+  "variables": [
+    {
+      "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+      "name": "padding/none",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 0
+      }
+    },
+    {
+      "key": "9dc5ffd7ace69ae28e819ac5245d2da08eb812df",
+      "name": "padding/xs",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 2
+      }
+    },
+    {
+      "key": "c191a22f075f7473b7c86340332176656622d05f",
+      "name": "padding/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 12
+      }
+    },
+    {
+      "key": "d088854dff72e30fdd6ace730e14ecaad87f6534",
+      "name": "padding/xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 16
+      }
+    },
+    {
+      "key": "a59c0076bf5221cd99df6d620865e0b9184b9bb8",
+      "name": "padding/2xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 20
+      }
+    },
+    {
+      "key": "092d06d76330a0f26f8013a818e6f50c233b60c8",
+      "name": "padding/3xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 24
+      }
+    },
+    {
+      "key": "1b7e2c0a4e20d908fb443879daad5e45969df49d",
+      "name": "padding/4xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 32
+      }
+    },
+    {
+      "key": "45fb3963fb054904594e92e6e31f99f7b39ba9e4",
+      "name": "padding/5xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 40
+      }
+    },
+    {
+      "key": "7da9f506db89c950abfd73e3c737dacd458d1a92",
+      "name": "padding/6xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 48
+      }
+    },
+    {
+      "key": "d7653caf568eff394359f6f390fb4bbd995bd7d4",
+      "name": "padding/7xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 56
+      }
+    },
+    {
+      "key": "931bb0b4bf0085fe1b4bc512fb526684368172b0",
+      "name": "padding/8xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 64
+      }
+    },
+    {
+      "key": "74cc134b852de1c7f09cfa9702864d43214714e2",
+      "name": "padding/9xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 80
+      }
+    },
+    {
+      "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+      "name": "padding/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 4
+      }
+    },
+    {
+      "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+      "name": "padding/md",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 8
+      }
+    },
+    {
+      "key": "e5a37f78d732dcb34a9ba181190648b3c97da3d5",
+      "name": "gap/none",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 0
+      }
+    },
+    {
+      "key": "16d91cfedc2db990a544ef2e51b067c84a88a613",
+      "name": "gap/xs",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 2
+      }
+    },
+    {
+      "key": "1511a94c0e824fea3299ae982e468372cec6661e",
+      "name": "gap/sm",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 4
+      }
+    },
+    {
+      "key": "5f5d52d1aaa4fe56823f9a03f36f92591a75407f",
+      "name": "gap/md",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 8
+      }
+    },
+    {
+      "key": "b92eb44e0bef20560a78c68e162019991096492e",
+      "name": "gap/xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 16
+      }
+    },
+    {
+      "key": "83663ea18a0c19a6e3fe7d6601110bfc269f3f58",
+      "name": "gap/2xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 20
+      }
+    },
+    {
+      "key": "34395f20396525ee56c2bb89b6283f7bc7184df5",
+      "name": "gap/3xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 24
+      }
+    },
+    {
+      "key": "2ec271944a25390c6bdafec2f47fcbd8e3e0908f",
+      "name": "gap/4xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 32
+      }
+    },
+    {
+      "key": "7116394e7cde227aad69b1cc7af45966c59741d2",
+      "name": "gap/5xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 40
+      }
+    },
+    {
+      "key": "b3cae11e925c2e08a41662b4031c1d50733739fb",
+      "name": "gap/6xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 48
+      }
+    },
+    {
+      "key": "4a6137121529ec7b6c8f99dcdcbc124562aadc60",
+      "name": "gap/7xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 56
+      }
+    },
+    {
+      "key": "e2c150f6c1afa23dd25f02318642913835577222",
+      "name": "gap/8xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 64
+      }
+    },
+    {
+      "key": "2a48d7c09b09150dd97f78acc765379930d727b6",
+      "name": "gap/9xl",
+      "type": "FLOAT",
+      "scopes": [
+        "GAP"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 80
+      }
+    },
+    {
+      "key": "e96266248db0953197e94e65affa87ab5c362e28",
+      "name": "gap/lg",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "description": "",
+      "values": {
+        "Mode 1": 12
+      }
+    }
+  ]
+}

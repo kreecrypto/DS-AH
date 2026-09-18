@@ -10,6 +10,10 @@ const requiredJson = [
   'registry/domain-patterns.json',
   'registry/foundations.json',
   'registry/aliases.json',
+  'registry/core-ds-dependencies.json',
+  'registry/core-ds-components.json',
+  'registry/core-ds-foundations.json',
+  'registry/core-ds-source.json',
   'schemas/agent-task.schema.json',
   'schemas/registry-entry.schema.json'
 ];
@@ -67,6 +71,17 @@ function scanCanonical(value, trail = '') {
 
 for (const c of core?.components || []) scanCanonical(c.canonicalApi, 'core.' + c.canonicalName);
 for (const p of parsed['registry/domain-patterns.json']?.patterns || []) scanCanonical(p.canonicalApi, 'pattern.' + p.domain + '.' + p.figmaName);
+
+
+const coreDs = parsed['registry/core-ds-components.json'];
+if (coreDs?.components) {
+  const keys = coreDs.components.map(c => c.componentKey).filter(Boolean);
+  const dupes = keys.filter((k, i) => keys.indexOf(k) !== i);
+  if (dupes.length) {
+    console.error('DUPLICATE CORE DS COMPONENT KEYS', [...new Set(dupes)]);
+    failed = true;
+  }
+}
 
 if (failed) process.exit(1);
 console.log('Registry validation PASS');

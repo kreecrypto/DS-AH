@@ -1,0 +1,358 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "collections": {
+    "color": {
+      "id": "VariableCollectionId:2:55762",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 264,
+      "aliases": 0,
+      "missingValues": 0,
+      "taxonomy": {
+        "bg/interaction": 52,
+        "stroke/Interaction": 30,
+        "bg/feedback": 20,
+        "text/interaction": 18,
+        "icon/interaction": 18,
+        "bg/elevation": 17,
+        "text/feedback": 10,
+        "stroke/feedback": 10,
+        "icon/feedback": 10,
+        "bg/badge": 8,
+        "text/badge": 8,
+        "text/field": 8,
+        "stroke/field": 8,
+        "bg/decorative": 6,
+        "bg/field": 6
+      },
+      "keyTokens": {
+        "bg/base/base": "#FFFFFF",
+        "bg/base/inverse": "#04060C",
+        "bg/base/disable": "#00000026",
+        "bg/interaction/primary/default": "#00008F",
+        "bg/interaction/primary/hover": "#0000F7",
+        "bg/interaction/primary/active": "#0000D2",
+        "bg/interaction/strong/default": "#E3000A",
+        "bg/interaction/strong/hover": "#C7050D",
+        "bg/interaction/strong/active": "#A80007",
+        "bg/feedback/info/subtle": "#D6E6FF",
+        "bg/feedback/warning/subtle": "#FFF3D6",
+        "bg/feedback/success/subtle": "#DFF8EA",
+        "bg/feedback/error/subtle": "#FDD8E1",
+        "bg/field/default": "#FFFFFF",
+        "bg/field/disabled": "#0000001A",
+        "text/primary": "#1A1D21",
+        "text/secondary": "#434956",
+        "text/tertiary": "#606776",
+        "text/quaternary": "#848A95",
+        "text/disabled": "#B2B2B2",
+        "stroke/regular": "#E5E5E5",
+        "stroke/strong": "#CCCCCC",
+        "stroke/field/default": "#8C93A1",
+        "stroke/field/active": "#00008F",
+        "icon/primary": "#1A1D21",
+        "icon/secondary": "#434956",
+        "icon/tertiary": "#606776",
+        "icon/disabled": "#B2B2B2",
+        "focus/default": "#00008F"
+      },
+      "notes": [
+        "264 direct local values; no aliases detected.",
+        "Current lookup contains stroke/Interaction capitalization inconsistency."
+      ]
+    },
+    "text": {
+      "id": "VariableCollectionId:9:55789",
+      "modes": [
+        "Desktop",
+        "Mobile"
+      ],
+      "count": 45,
+      "family": {
+        "hero": "DB Helvethaica X",
+        "display": "DB Helvethaica X",
+        "heading": "DB Helvethaica X",
+        "title": "DB Helvethaica X",
+        "subtitle": "DB Helvethaica X",
+        "body": "DB Helvethaica X",
+        "links": "DB Helvethaica X",
+        "tag": "DB Helvethaica X",
+        "quote": "DB Helvethaica X"
+      },
+      "weight": {
+        "regular": "55 Regular",
+        "thin": "35 Thin",
+        "light": "45 Li",
+        "bold": "75 Bd",
+        "black": "85 Blk"
+      },
+      "size": {
+        "xs": [
+          12,
+          12
+        ],
+        "sm": [
+          14,
+          14
+        ],
+        "md": [
+          16,
+          16
+        ],
+        "lg": [
+          20,
+          20
+        ],
+        "xl": [
+          24,
+          28
+        ],
+        "2xl": [
+          28,
+          28
+        ],
+        "3xl": [
+          32,
+          24
+        ],
+        "4xl": [
+          40,
+          32
+        ],
+        "5xl": [
+          48,
+          32
+        ],
+        "6xl": [
+          56,
+          40
+        ],
+        "7xl": [
+          64,
+          32
+        ],
+        "8xl": [
+          72,
+          40
+        ],
+        "9xl": [
+          92,
+          48
+        ],
+        "10xl": [
+          128,
+          64
+        ]
+      },
+      "lineHeight": {
+        "xs": [
+          14,
+          14
+        ],
+        "sm": [
+          18,
+          18
+        ],
+        "md": [
+          20,
+          20
+        ],
+        "lg": [
+          24,
+          24
+        ],
+        "xl": [
+          28,
+          28
+        ],
+        "2xl": [
+          30,
+          36
+        ],
+        "3xl": [
+          42,
+          30
+        ],
+        "4xl": [
+          42,
+          42
+        ],
+        "5xl": [
+          46,
+          36
+        ],
+        "6xl": [
+          46,
+          32
+        ],
+        "7xl": [
+          54,
+          42
+        ],
+        "8xl": [
+          64,
+          42
+        ],
+        "9xl": [
+          64,
+          48
+        ],
+        "10xl": [
+          72,
+          54
+        ],
+        "11xl": [
+          72,
+          46
+        ],
+        "12xl": [
+          102,
+          48
+        ],
+        "13xl": [
+          144,
+          64
+        ]
+      },
+      "tupleOrder": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "spacing": {
+      "id": "VariableCollectionId:54:2",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 28,
+      "padding": {
+        "none": 0,
+        "xs": 2,
+        "sm": 4,
+        "md": 8,
+        "lg": 12,
+        "xl": 16,
+        "2xl": 20,
+        "3xl": 24,
+        "4xl": 32,
+        "5xl": 40,
+        "6xl": 48,
+        "7xl": 56,
+        "8xl": 64,
+        "9xl": 80
+      },
+      "gap": {
+        "none": 0,
+        "xs": 2,
+        "sm": 4,
+        "md": 8,
+        "lg": 12,
+        "xl": 16,
+        "2xl": 20,
+        "3xl": 24,
+        "4xl": 32,
+        "5xl": 40,
+        "6xl": 48,
+        "7xl": 56,
+        "8xl": 64,
+        "9xl": 80
+      },
+      "debt": [
+        "gap/lg is ALL_SCOPES while sibling gap tokens are GAP-scoped."
+      ]
+    },
+    "shape": {
+      "id": "VariableCollectionId:70:23",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 14,
+      "radius": {
+        "none": 0,
+        "xs": 2,
+        "sm": 4,
+        "md": 8,
+        "lg": 12,
+        "xl": 16,
+        "full": 9999,
+        "image/sm": 8,
+        "image/lg": 12,
+        "forms/input": 8,
+        "popover/container": 4,
+        "button/default": 64
+      },
+      "strokeWidth": {
+        "default": 1,
+        "subtle": 0.5
+      },
+      "debt": [
+        "Most shape variables are ALL_SCOPES rather than narrowly scoped."
+      ]
+    },
+    "Responsive": {
+      "id": "VariableCollectionId:70:21",
+      "count": 1,
+      "values": {
+        "typography/screensize": 0
+      },
+      "status": "review_required"
+    }
+  },
+  "styles": {
+    "text": {
+      "count": 41,
+      "duplicateNames": [
+        {
+          "name": "Title/lg",
+          "definitions": [
+            "32/42 Bold",
+            "28/30 Bold"
+          ]
+        },
+        {
+          "name": "Body/xlg/xlg",
+          "definitions": [
+            "24/18 Bold",
+            "24/18 Regular"
+          ]
+        }
+      ],
+      "families": [
+        "Hero",
+        "Display",
+        "Heading",
+        "Title",
+        "Subtitle",
+        "Body",
+        "Links",
+        "Tags",
+        "Quote"
+      ],
+      "anomalies": [
+        "Body/xlg/xlg uses 24px font with 18px line-height."
+      ]
+    },
+    "paint": {
+      "count": 7,
+      "names": [
+        "purple",
+        "green",
+        "grey",
+        "red",
+        "premium",
+        "gold",
+        "silver"
+      ],
+      "status": "review_special_or_legacy"
+    },
+    "effect": {
+      "count": 0
+    },
+    "grid": {
+      "count": 0
+    }
+  }
+}

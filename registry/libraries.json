@@ -1,74 +1,45 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "auditDate": "2026-09-18",
   "primaryCoreLibrary": {
     "name": "[DS] Agency Portal - Design System (Copy)",
+    "figmaSourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "figmaSourceNodeId": "0:1",
+    "figmaSourceUrl": "https://www.figma.com/design/5ZFIRJWtmEIvuq95Rhyo6I/-DS--Agency-Portal---Design-System--Copy-?node-id=0-1",
     "libraryKey": "lk-13698ed1ef2d31fde7d6869d23e6994680926ddd9f3d659f1ef1674e79305b78c7e6fc1294a426b3df93f97c66a9399c97c56c758714cdc1c3c785c9ff241776",
-    "role": "core_components_and_foundations",
-    "discovery": "search_design_system",
-    "usePolicy": "search_and_reuse_first",
-    "confirmedAssets": [
-      "button",
-      "button icon",
-      "input-text",
-      "menu",
-      "mobile/menu",
-      "side-bar",
-      "icon/general",
-      "icon/navbar",
-      "icon/arrow",
-      "base-icon",
-      "badge",
-      "badge-filter",
-      "badge-tier",
-      "divider",
-      "tab/chip",
-      "tab with divider",
-      "checkbox",
-      "radio",
-      "breadcrumb",
-      "list"
-    ],
+    "role": "canonical_core_components_and_foundations",
+    "usePolicy": "inspect_source_and_reuse_first",
+    "registry": {
+      "source": "registry/core-ds-source.json",
+      "foundations": "registry/core-ds-foundations.json",
+      "components": "registry/core-ds-components.json",
+      "dependencies": "registry/core-ds-dependencies.json"
+    },
     "confirmedVariableCollections": [
       "color",
+      "text",
       "spacing",
-      "shape",
-      "text"
+      "Responsive",
+      "shape"
     ]
   },
   "masterScreensLibrary": {
     "name": "[P2/S1] Agency Portal - Master Screens",
+    "figmaFileKey": "cipkv7yTxyE29VCfMphE0W",
     "libraryKey": "lk-6686dcdaee03ae7bb5244509709fe10000767cf4b0456a96655eedda365ab4ae09b042be80f929cd93298afffa3f75c164b907e869472e056232d6055d4a503b",
-    "role": "master_screen_patterns",
-    "usePolicy": "domain_reference_after_live_inspection"
+    "role": "domain_patterns_and_screen_composition",
+    "usePolicy": "inspect_live_node_after_core_lookup"
   },
-  "otherDiscoverableLibraries": [
+  "upstreamDependencies": [
     {
-      "name": "AXA - UI Kit - Design System [V1.1.0]",
-      "libraryKey": "lk-beb90bf8a3115b5374d007b3d1febfa831a0a40b845b31ed1d315d867109ffc69d43cf62c2cfb4aed82764cda16074989e6f8b6b6dafaab53d4493225fecd7ca",
-      "policy": "not_default; use only with explicit evidence/approval"
+      "name": "Foundations",
+      "role": "remote_variable_dependency_inside_core_ds",
+      "policy": "preserve_existing_bindings"
     },
     {
-      "name": "KTB Component",
-      "libraryKey": "lk-66919bfe72779a3e2ebfcfadaf9b5c8513dd7e85eb1232b380190cf79e704c804f333240047bd3b3d66c99863a5d9f8c5dd0c323bf2a2a53045f53c44149d6df",
-      "policy": "not_default"
-    },
-    {
-      "name": "Emma Application Design",
-      "libraryKey": "lk-eec4b260cc1bbe92dcd9180edce15ef2e8d978941ac50c765efe958e246d15af45a54ba7277fee7d1219c35d0a4b85612c7ecb02d540031685c5a2bd53458a61",
-      "policy": "not_default"
-    },
-    {
-      "name": "Material 3 Design Kit",
-      "policy": "subscribed community; not product source"
-    },
-    {
-      "name": "Simple Design System",
-      "policy": "subscribed community; not product source"
-    },
-    {
-      "name": "iOS platform kits",
-      "policy": "platform reference only"
+      "name": "Color",
+      "role": "legacy_remote_variable_dependency_inside_core_ds",
+      "policy": "preserve_existing_bindings"
     }
   ]
 }

@@ -69,3 +69,16 @@ The audit confirmed remote Core components and variables for common UI. Agents m
 **Inspect → search existing DS → resolve Source of Truth → reuse → normalize only where needed → QA → handoff.**
 
 Do not create a new component, pattern, or token merely because the existing Figma naming is messy. The normalization layer exists so agents can find legacy assets while producing clean new work.
+
+
+## Canonical Core DS source
+
+Direct Core DS inspection is registered from Figma file `5ZFIRJWtmEIvuq95Rhyo6I`.
+
+- `registry/core-ds-source.json`
+- `registry/core-ds-foundations.json`
+- `registry/core-ds-components.json`
+- `registry/core-ds-dependencies.json`
+- `docs/audit/core-ds-inspection-2026-09-18.md`
+
+Agent source order: **Core DS source → approved domain pattern → template/screen**.

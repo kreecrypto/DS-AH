@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "finding": "Some Core DS nodes bind to upstream remote collections as well as local semantic variables.",
+  "upstreamCollections": [
+    {
+      "name": "Foundations",
+      "remote": true,
+      "variableCollectionId": "VariableCollectionId:ffd6d9e97145fa5e62a6eaa10c92078a73083530/907:1180",
+      "observedVariables": [
+        {
+          "name": "spacing/0",
+          "value": 0,
+          "scope": "GAP"
+        },
+        {
+          "name": "spacing/1",
+          "value": 4,
+          "scope": "GAP"
+        },
+        {
+          "name": "spacing/2",
+          "value": 8,
+          "scope": "GAP"
+        },
+        {
+          "name": "spacing/3",
+          "value": 12,
+          "scope": "GAP"
+        },
+        {
+          "name": "spacing/4",
+          "value": 16,
+          "scope": "GAP"
+        },
+        {
+          "name": "radius/4",
+          "value": 8,
+          "scope": "CORNER_RADIUS"
+        },
+        {
+          "name": "radius/full",
+          "value": 999,
+          "scope": "CORNER_RADIUS"
+        },
+        {
+          "name": "stroke/1",
+          "value": 1,
+          "scope": "STROKE_FLOAT"
+        },
+        {
+          "name": "typography/font-family/default",
+          "value": "Inter",
+          "scope": "FONT_FAMILY"
+        },
+        {
+          "name": "typography/weight/bold",
+          "value": "Bold",
+          "scope": "FONT_STYLE"
+        },
+        {
+          "name": "color/neutral/50",
+          "value": "#F8F8F9",
+          "scope": "ALL_FILLS/STROKE_COLOR"
+        }
+      ],
+      "policy": "preserve bindings when reusing; do not flatten without migration decision"
+    },
+    {
+      "name": "Color",
+      "remote": true,
+      "variableCollectionId": "VariableCollectionId:ae4c1afe23d1011830a99f80e890afa5da07cd99/2:1",
+      "observedVariables": [
+        {
+          "name": "Background/Static background/color-bg-base",
+          "value": "#FFFFFF"
+        }
+      ],
+      "policy": "legacy/upstream dependency; prefer local semantics for new work unless ownership requires otherwise"
+    }
+  ],
+  "sampledBindingCoverage": [
+    {
+      "page": "Button",
+      "boundNodes": 366,
+      "totalNodes": 580,
+      "coveragePercent": 63.1
+    },
+    {
+      "page": "Input",
+      "boundNodes": 439,
+      "totalNodes": 743,
+      "coveragePercent": 59.1
+    },
+    {
+      "page": "Navbar",
+      "boundNodes": 449,
+      "totalNodes": 943,
+      "coveragePercent": 47.6
+    },
+    {
+      "page": "Icon",
+      "boundNodes": 480,
+      "totalNodes": 960,
+      "coveragePercent": 50
+    },
+    {
+      "page": "Badge",
+      "boundNodes": 65,
+      "totalNodes": 2701,
+      "coveragePercent": 2.4,
+      "notes": "Page-wide ratio is distorted by artwork/reference nodes; badge variants themselves are token-bound."
+    }
+  ]
+}

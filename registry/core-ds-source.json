@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "role": "canonical_core_design_system_source",
+  "figma": {
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "nodeId": "0:1",
+    "url": "https://www.figma.com/design/5ZFIRJWtmEIvuq95Rhyo6I/-DS--Agency-Portal---Design-System--Copy-?node-id=0-1",
+    "defaultAgentMode": "read-only"
+  },
+  "summary": {
+    "pageCount": 32,
+    "localVariableCollections": 5,
+    "localVariables": 352,
+    "localVariableTypes": {
+      "COLOR": 264,
+      "STRING": 14,
+      "FLOAT": 74
+    },
+    "localTextStyles": 41,
+    "localPaintStyles": 7,
+    "localEffectStyles": 0,
+    "localGridStyles": 0
+  },
+  "pages": {
+    "fundamentals": [
+      {
+        "id": "1:5",
+        "name": "Typography"
+      },
+      {
+        "id": "300:3",
+        "name": "Color"
+      },
+      {
+        "id": "1416:10422",
+        "name": "Shape (Radius / Stroke)"
+      },
+      {
+        "id": "1416:10653",
+        "name": "Spacing"
+      }
+    ],
+    "assets": [
+      {
+        "id": "1096:30",
+        "name": "AXA Badge",
+        "status": "frames_only_not_published_components"
+      },
+      {
+        "id": "69:2",
+        "name": "Icon"
+      }
+    ],
+    "components": [
+      {
+        "id": "144:439",
+        "name": "Avatar",
+        "status": "audited"
+      },
+      {
+        "id": "70:20",
+        "name": "Button",
+        "status": "audited"
+      },
+      {
+        "id": "86:767",
+        "name": "Badge",
+        "status": "audited"
+      },
+      {
+        "id": "129:396",
+        "name": "Background",
+        "status": "audited"
+      },
+      {
+        "id": "182:642",
+        "name": "Bottom sheet",
+        "status": "audited"
+      },
+      {
+        "id": "337:1149",
+        "name": "Breadcrumb",
+        "status": "audited"
+      },
+      {
+        "id": "129:420",
+        "name": "Container",
+        "status": "audited"
+      },
+      {
+        "id": "188:37",
+        "name": "Check box",
+        "status": "audited"
+      },
+      {
+        "id": "747:1355",
+        "name": "Date picker",
+        "status": "audited"
+      },
+      {
+        "id": "134:4004",
+        "name": "Divider",
+        "status": "audited"
+      },
+      {
+        "id": "167:1541",
+        "name": "Input",
+        "status": "audited"
+      },
+      {
+        "id": "305:10284",
+        "name": "Evalution",
+        "status": "empty"
+      },
+      {
+        "id": "306:756",
+        "name": "List",
+        "status": "audited"
+      },
+      {
+        "id": "165:489",
+        "name": "Tab",
+        "status": "audited"
+      },
+      {
+        "id": "1201:63",
+        "name": "Toggle",
+        "status": "audited"
+      },
+      {
+        "id": "82:608",
+        "name": "Tooltips",
+        "status": "audited"
+      },
+      {
+        "id": "218:125",
+        "name": "Radio",
+        "status": "audited"
+      },
+      {
+        "id": "105:910",
+        "name": "Navbar",
+        "status": "audited"
+      },
+      {
+        "id": "145:4817",
+        "name": "Scrollbar",
+        "status": "audited"
+      }
+    ]
+  },
+  "sourcePriority": [
+    "this core DS file for foundations and core component API",
+    "published component key from this file",
+    "approved master-screen domain patterns",
+    "feature screens"
+  ]
+}

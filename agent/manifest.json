@@ -1,19 +1,29 @@
 {
-  "schemaVersion": "1.0.1",
+  "schemaVersion": "1.1.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
   "figma": {
-    "fileKey": "cipkv7yTxyE29VCfMphE0W",
-    "auditEntryNode": "1:12191",
-    "defaultMode": "read-only",
+    "coreDesignSystem": {
+      "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+      "entryNode": "0:1",
+      "defaultMode": "read-only"
+    },
+    "masterScreens": {
+      "fileKey": "cipkv7yTxyE29VCfMphE0W",
+      "auditEntryNode": "1:12191",
+      "defaultMode": "read-only"
+    },
     "writeRequires": "explicit user request in current task"
   },
   "registries": {
+    "coreSource": "registry/core-ds-source.json",
+    "coreFoundations": "registry/core-ds-foundations.json",
+    "coreComponents": "registry/core-ds-components.json",
+    "coreDependencies": "registry/core-ds-dependencies.json",
     "sources": "registry/figma-sources.json",
     "libraries": "registry/libraries.json",
     "foundations": "registry/foundations.json",
-    "coreComponents": "registry/core-components.json",
     "domainPatterns": "registry/domain-patterns.json",
     "templates": "registry/templates.json",
     "aliases": "registry/aliases.json"

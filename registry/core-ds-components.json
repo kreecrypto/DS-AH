@@ -1,0 +1,1214 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "rule": "componentKey is preferred import identity. Keep exact Figma API for lookup; use canonical API for new work.",
+  "components": [
+    {
+      "page": "Button",
+      "nodeId": "107:161",
+      "componentKey": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+      "figmaName": "button",
+      "variantCount": 75,
+      "figmaCurrentApi": {
+        "type": [
+          "primary",
+          "outline",
+          "ghost"
+        ],
+        "state": [
+          "default",
+          "active",
+          "hover",
+          "disabled",
+          "error"
+        ],
+        "size": [
+          "xss",
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "booleans": [
+          "left-icon",
+          "right-icon"
+        ]
+      },
+      "canonicalApi": {
+        "Style": [
+          "Primary",
+          "Outline",
+          "Ghost"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Active",
+          "Disabled",
+          "Error"
+        ],
+        "Size": [
+          "XXS",
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Button",
+      "nodeId": "131:229",
+      "componentKey": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+      "figmaName": "button icon",
+      "variantCount": 32,
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "hover",
+          "disabled",
+          "active"
+        ],
+        "size": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "type": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Disabled",
+          "Active"
+        ],
+        "Size": [
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Style": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "status": "canonical_with_case_debt"
+    },
+    {
+      "page": "Badge",
+      "nodeId": "86:788",
+      "componentKey": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+      "figmaName": "badge",
+      "variantCount": 28,
+      "figmaCurrentApi": {
+        "color": [
+          "feedback",
+          "badge"
+        ],
+        "stage": [
+          "success",
+          "warning",
+          "error",
+          "error-solid",
+          "info",
+          "neutral",
+          "coral",
+          "teal",
+          "grape",
+          "sunshine",
+          "leaf",
+          "candy",
+          "blue",
+          "mint"
+        ],
+        "size": [
+          "sm",
+          "md"
+        ]
+      },
+      "canonicalApi": {
+        "Family": [
+          "Feedback",
+          "Badge"
+        ],
+        "State": "semantic mapping of stage",
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Badge",
+      "nodeId": "336:584",
+      "componentKey": "8383a48397d12f9f5c77334d4cfbbeec0e759849",
+      "figmaName": "badge-tier",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "level": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "canonicalApi": {
+        "Tier": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Background",
+      "nodeId": "332:810",
+      "componentKey": "ad602fda1c480e7532bf3661bf9208430c52e23b",
+      "figmaName": "overlay",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        ".device": [
+          "mobile",
+          "desktop"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Bottom sheet",
+      "nodeId": "182:872",
+      "componentKey": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "figmaName": "bottom-shet",
+      "variantCount": 1,
+      "canonicalApi": {
+        "Name": "Bottom Sheet"
+      },
+      "status": "rename_candidate"
+    },
+    {
+      "page": "Bottom sheet",
+      "nodeId": "183:325",
+      "componentKey": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+      "figmaName": "button",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "stack": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "canonicalApi": {
+        "ActionCount": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "status": "contextual_not_core_button"
+    },
+    {
+      "page": "Breadcrumb",
+      "nodeId": "337:1157",
+      "componentKey": "cf65b4e2b72b9b580e442b011225a9fcc8485787",
+      "figmaName": "breadcrumb",
+      "variantCount": 1,
+      "status": "canonical"
+    },
+    {
+      "page": "Container",
+      "nodeId": "129:413",
+      "componentKey": "878930169cd08b4b65acd09970260f1d3bf89e57",
+      "figmaName": "container",
+      "variantCount": 1,
+      "status": "canonical"
+    },
+    {
+      "page": "Container",
+      "nodeId": "129:415",
+      "componentKey": "c08f699d2a2320780d6f9623f875940bed392fcf",
+      "figmaName": "swap-content",
+      "variantCount": 1,
+      "status": "canonical"
+    },
+    {
+      "page": "Check box",
+      "nodeId": "189:238",
+      "componentKey": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+      "figmaName": "checkbox",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "legacy_simple_duplicate"
+    },
+    {
+      "page": "Check box",
+      "nodeId": "198:4638",
+      "componentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+      "figmaName": "checkbox",
+      "variantCount": 14,
+      "figmaCurrentApi": {
+        "check": [
+          "true",
+          "false"
+        ],
+        "state": [
+          "default",
+          "disabled",
+          "error"
+        ],
+        "indeterminate": [
+          "true",
+          "false"
+        ],
+        "on-dark": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ],
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Indeterminate": [
+          "True",
+          "False"
+        ],
+        "OnDark": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "preferred_checkbox_candidate"
+    },
+    {
+      "page": "Date picker",
+      "nodeId": "1057:359",
+      "componentKey": "8c1fa657cb66280263b5184bce07cc1b4ccefe35",
+      "figmaName": "Calendar",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "today",
+          "others day",
+          "today selected"
+        ],
+        "boolean": [
+          "time"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Today",
+          "OtherDay",
+          "TodaySelected"
+        ],
+        "Boolean": [
+          "ShowTime"
+        ]
+      },
+      "status": "canonical_with_wording_debt"
+    },
+    {
+      "page": "Divider",
+      "nodeId": "134:4008",
+      "componentKey": "80aa0c0b116de48fd29f990e1ca2ba18386e8628",
+      "figmaName": "divider",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "style": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "canonicalApi": {
+        "Orientation": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Input",
+      "nodeId": "167:1772",
+      "componentKey": "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+      "figmaName": "input-text",
+      "variantCount": 17,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "focused",
+          "error",
+          "disabled",
+          "read-only",
+          "warning",
+          "chip input",
+          "chip typing",
+          "chip input max",
+          "chip typing max",
+          "view"
+        ],
+        "filled": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Focused",
+          "Error",
+          "Disabled",
+          "ReadOnly",
+          "Warning",
+          "ChipInput",
+          "ChipTyping",
+          "ChipInputMax",
+          "ChipTypingMax",
+          "View"
+        ],
+        "Filled": [
+          "False",
+          "True"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Input",
+      "nodeId": "198:4244",
+      "componentKey": "a6db9d0482c6446fd483f71f6a517f2cf3984345",
+      "figmaName": "dropdown",
+      "variantCount": 9,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "focused",
+          "error",
+          "disable",
+          "read-only"
+        ],
+        "filled": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Focused",
+          "Error",
+          "Disabled",
+          "ReadOnly"
+        ],
+        "Filled": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "canonical_with_disable_debt"
+    },
+    {
+      "page": "List",
+      "nodeId": "306:759",
+      "componentKey": "5e3d148737311590c7e0cd60c033aacf76fe298d",
+      "figmaName": "list",
+      "variantCount": 1,
+      "status": "canonical"
+    },
+    {
+      "page": "List",
+      "nodeId": "306:785",
+      "componentKey": "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+      "figmaName": "base-list-item",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "type": [
+          "basic",
+          "checkbok",
+          "no-result"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Basic",
+          "Checkbox",
+          "NoResult"
+        ]
+      },
+      "status": "canonical_with_typo_debt"
+    },
+    {
+      "page": "List",
+      "nodeId": "306:829",
+      "componentKey": "fc742e1df5ac448c447807b9e3b2de047462666e",
+      "figmaName": "base-list-basic",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "hover",
+          "selected",
+          "disabled",
+          "alert"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Disabled",
+          "Alert"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "List",
+      "nodeId": "306:876",
+      "componentKey": "2408a8085bd3e19bdd43f56b076f189eddf6defe",
+      "figmaName": "base-list-checkbox",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "hover",
+          "selected",
+          "disabled"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Disabled"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Tab",
+      "nodeId": "165:618",
+      "componentKey": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+      "figmaName": "tab/chip",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "active": [
+          "yes",
+          "no"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Active": [
+          "True",
+          "False"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Tab",
+      "nodeId": "307:73",
+      "componentKey": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+      "figmaName": "Switch tab",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disabled"
+        ],
+        "active": [
+          "left",
+          "right"
+        ],
+        "size": [
+          "md",
+          "lg"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "ActiveSide": [
+          "Left",
+          "Right"
+        ],
+        "Size": [
+          "MD",
+          "LG"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Tab",
+      "nodeId": "1257:1429",
+      "componentKey": "527e1da72069d565082f4c4df0e043462e9e0109",
+      "figmaName": "tab with divider",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Tab",
+      "nodeId": "165:704",
+      "componentKey": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+      "figmaName": "tab",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Toggle",
+      "nodeId": "1201:193",
+      "componentKey": "effb8465ac23bf00aad5538adf7d83fa3a359032",
+      "figmaName": "toggle",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "off",
+          "on"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Off",
+          "On"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Tooltips",
+      "nodeId": "82:633",
+      "componentKey": "5a32687740711c43db34cefeb943e63aa6cfb34e",
+      "figmaName": "tooltips/basic",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "position": [
+          "right-top",
+          "left-top",
+          "buttom-right",
+          "bottom-left",
+          "top-left"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "RightTop",
+          "LeftTop",
+          "BottomRight",
+          "BottomLeft",
+          "TopLeft"
+        ]
+      },
+      "status": "canonical_with_typo_debt"
+    },
+    {
+      "page": "Radio",
+      "nodeId": "218:233",
+      "componentKey": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+      "figmaName": "radio",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "status": "legacy_simple_duplicate"
+    },
+    {
+      "page": "Radio",
+      "nodeId": "304:2149",
+      "componentKey": "f90d2487d05573910316e182ac17e5bece4c856a",
+      "figmaName": "radio",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disable",
+          "error"
+        ],
+        "check": [
+          "fasle",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "status": "preferred_radio_candidate_with_typos"
+    },
+    {
+      "page": "Radio",
+      "nodeId": "304:2197",
+      "componentKey": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+      "figmaName": "radio-list",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "type": [
+          "default",
+          "only-title"
+        ],
+        "state": [
+          "default",
+          "disable"
+        ],
+        "check": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Default",
+          "OnlyTitle"
+        ],
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "status": "canonical_with_disable_debt"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "105:1113",
+      "componentKey": "27cffe58afdec2bef93250b55cfa11835276b823",
+      "figmaName": "side-bar",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "size": [
+          "lg",
+          "md"
+        ],
+        "state": [
+          "default",
+          "sub-expand"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Size": [
+          "LG",
+          "MD"
+        ],
+        "State": [
+          "Default",
+          "SubExpanded"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "105:1223",
+      "componentKey": "c27fb78aa960961f5557379b41e0cb5356842c92",
+      "figmaName": "menu",
+      "variantCount": 16,
+      "figmaCurrentApi": {
+        ".device": [
+          "desktop",
+          "tablet"
+        ],
+        "status": [
+          "default",
+          "selected",
+          "sub",
+          "sub-selected"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet"
+        ],
+        "State": [
+          "Default",
+          "Selected",
+          "Sub",
+          "SubSelected"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "139:573",
+      "componentKey": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+      "figmaName": "mobile/menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "isFocus": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Focused": [
+          "True",
+          "False"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "167:1485",
+      "componentKey": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+      "figmaName": "header",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "page": [
+          "home",
+          "web page",
+          "header",
+          "header with action"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Home",
+          "WebPage",
+          "Header",
+          "HeaderWithAction"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "285:995",
+      "componentKey": "640a0f70dae56e7abfc431e894673d240c15619b",
+      "figmaName": "primary-menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "stage": [
+          "default",
+          "selected"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected"
+        ]
+      },
+      "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "302:9576",
+      "componentKey": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+      "figmaName": "badge-filter",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ],
+        "device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "1294:1197",
+      "componentKey": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+      "figmaName": "tab/search",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "stage": [
+          "Default",
+          "selected",
+          "hover",
+          "disable"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected",
+          "Hover",
+          "Disabled"
+        ]
+      },
+      "status": "canonical_with_case_disable_debt"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "139:562",
+      "componentKey": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+      "figmaName": "mobile/bottom-nav-bar",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "144:406",
+      "componentKey": "558b8d869443d0719a184f552bb0503b567f1203",
+      "figmaName": "mobile/top-nav-bar",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "209:521",
+      "componentKey": "8c565095086ab54369ac9016287135b196141358",
+      "figmaName": "desktop/search",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "302:1391",
+      "componentKey": "99c9834309df6aa9f48301581c2bfe295610373e",
+      "figmaName": "search-filter",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Navbar",
+      "nodeId": "409:1192",
+      "componentKey": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+      "figmaName": "notification",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Scrollbar",
+      "nodeId": "145:4844",
+      "componentKey": "bfe31419935d2a234c5dc377ae4535d5033f50be",
+      "figmaName": "scroll-bar vertical",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "position": [
+          "top",
+          "middle",
+          "bottom"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Top",
+          "Middle",
+          "Bottom"
+        ]
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Scrollbar",
+      "nodeId": "542:15",
+      "componentKey": "5813c2ec8dff7020997a974b70bd81079c681ec9",
+      "figmaName": "scroll-bar horizontal",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "left",
+          "center",
+          "right"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Left",
+          "Center",
+          "Right"
+        ]
+      },
+      "status": "canonical_with_property_debt"
+    },
+    {
+      "page": "Avatar",
+      "nodeId": "144:435",
+      "componentKey": "78149762034307de859d934c10970de208ef2cee",
+      "figmaName": "avatar",
+      "variantCount": 1,
+      "status": "standalone"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "70:63",
+      "componentKey": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+      "figmaName": "base-icon",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "size": [
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl",
+          "3xl"
+        ],
+        "property": "INSTANCE_SWAP Icon"
+      },
+      "canonicalApi": {
+        "Size": [
+          "SM",
+          "MD",
+          "LG",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "Icon": "InstanceSwap"
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "70:76",
+      "componentKey": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+      "figmaName": "icon/general",
+      "variantCount": 178,
+      "figmaCurrentApi": {
+        "style": [
+          "outline",
+          "solid",
+          "general"
+        ],
+        "iconCount": 178
+      },
+      "canonicalApi": {
+        "Style": [
+          "Outline",
+          "Solid",
+          "General"
+        ],
+        "Icon": "use published variant"
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "74:398",
+      "componentKey": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+      "figmaName": "icon/navbar",
+      "variantCount": 30,
+      "figmaCurrentApi": {
+        "style": [
+          "outline",
+          "solid"
+        ],
+        "iconCount": 16
+      },
+      "status": "canonical"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "138:4029",
+      "componentKey": "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
+      "figmaName": "icon/quick-menu2",
+      "variantCount": 11,
+      "figmaCurrentApi": {
+        "icon": [
+          "default",
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10"
+        ]
+      },
+      "status": "review_required_numeric_semantics"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "990:1864",
+      "componentKey": "6d811b22e9cd1a3e8daa1862dada754ff8c1cf5d",
+      "figmaName": "icon/menu home",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "icon": [
+          "default",
+          "qualtification",
+          "quick action",
+          "owner",
+          "team",
+          "overall",
+          "port",
+          "tool"
+        ]
+      },
+      "status": "canonical_with_typo_debt"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "986:468",
+      "componentKey": "575aafd94b3fd4c8062f983a61e55910568c752c",
+      "figmaName": "icon/quick-menu",
+      "variantCount": 10,
+      "figmaCurrentApi": {
+        "icon": [
+          "default",
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ]
+      },
+      "status": "review_required_numeric_semantics"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "70:173",
+      "componentKey": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+      "figmaName": "icon/arrow",
+      "variantCount": 17,
+      "status": "canonical"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "70:211",
+      "componentKey": "5d7f3fd76abacb5753c63bfcd3e71bed89b1b76e",
+      "figmaName": "icon/system",
+      "variantCount": 10,
+      "status": "domain_specific_review"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "331:358",
+      "componentKey": "8b17f77d874f51d2886c7b74309c9c5291531230",
+      "figmaName": "icon/event type",
+      "variantCount": 6,
+      "status": "domain_specific"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "334:180",
+      "componentKey": "eca89b8278cd5bb7c5dfb06c5f023966fb20a84a",
+      "figmaName": "icon/insure category",
+      "variantCount": 14,
+      "status": "domain_specific"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "371:1628",
+      "componentKey": "9fdb719938cfd76964487506fa74bcfbf07d3334",
+      "figmaName": "icon/perfomance",
+      "variantCount": 14,
+      "status": "domain_specific_with_typo_debt"
+    },
+    {
+      "page": "Icon",
+      "nodeId": "504:372",
+      "componentKey": "d8d7dc1282787faf3899158237d5f498230e1cee",
+      "figmaName": "icon/saleskit",
+      "variantCount": 11,
+      "status": "domain_specific"
+    }
+  ]
+}

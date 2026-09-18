@@ -1,137 +1,32 @@
 {
-  "schemaVersion": "1.0.0",
-  "sourceLibrary": "[DS] Agency Portal - Design System (Copy)",
-  "rule": "Search and reuse remote DS variables before proposing new foundations.",
-  "localTargetFileState": {
-    "localVariableCollections": 0,
-    "localVariables": 0,
-    "localPaintStyles": 0,
-    "localTextStyles": 0,
-    "localEffectStyles": [
-      "Drop shadow"
-    ]
+  "schemaVersion": "1.1.0",
+  "rule": "Core foundation authority comes from the Core DS source file; Master Screens is a consumer.",
+  "coreSource": {
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "registry": "registry/core-ds-foundations.json",
+    "localVariableCollections": 5,
+    "localVariables": 352,
+    "localTextStyles": 41,
+    "localPaintStyles": 7
   },
-  "remoteCollections": {
-    "color": {
-      "confirmed": true,
-      "examples": [
-        "text/primary",
-        "text/secondary",
-        "text/tertiary",
-        "text/quaternary",
-        "text/disabled",
-        "text/primary/inverse",
-        "icon/primary",
-        "icon/primary/inverse",
-        "bg/interaction/primary/default",
-        "bg/interaction/primary/hover",
-        "bg/interaction/primary/active",
-        "bg/interaction/primary/ghost",
-        "stroke/Interaction/primary/hover"
-      ],
-      "note": "Search exposes names/scopes; values were not exhaustively extracted in this audit."
-    },
-    "spacing": {
-      "confirmed": true,
-      "gap": [
-        "gap/none",
-        "gap/xs",
-        "gap/sm",
-        "gap/md",
-        "gap/lg",
-        "gap/xl",
-        "gap/2xl",
-        "gap/3xl",
-        "gap/4xl",
-        "gap/5xl",
-        "gap/6xl",
-        "gap/7xl",
-        "gap/8xl",
-        "gap/9xl"
-      ],
-      "padding": [
-        "padding/none",
-        "padding/xs",
-        "padding/sm",
-        "padding/md",
-        "padding/lg",
-        "padding/xl",
-        "padding/2xl",
-        "padding/3xl",
-        "padding/4xl",
-        "padding/5xl",
-        "padding/6xl",
-        "padding/7xl",
-        "padding/8xl",
-        "padding/9xl"
-      ]
-    },
-    "shape": {
-      "confirmed": true,
-      "radius": [
-        "radius/none",
-        "radius/xs",
-        "radius/sm",
-        "radius/md",
-        "radius/lg",
-        "radius/xl",
-        "radius/full",
-        "radius/image/sm",
-        "radius/image/lg",
-        "radius/forms/input",
-        "radius/button/default",
-        "radius/popover/container"
-      ]
-    },
-    "text": {
-      "confirmed": true,
-      "fontSize": [
-        "font/size/xs",
-        "font/size/sm",
-        "font/size/md",
-        "font/size/lg",
-        "font/size/xl",
-        "font/size/2xl",
-        "font/size/3xl",
-        "font/size/4xl",
-        "font/size/5xl",
-        "font/size/6xl",
-        "font/size/7xl",
-        "font/size/8xl",
-        "font/size/9xl"
-      ],
-      "fontFamilyEvidence": [
-        "font/family/tag"
-      ]
-    }
+  "masterScreensConsumer": {
+    "fileKey": "cipkv7yTxyE29VCfMphE0W",
+    "localVariableCollectionsAtAudit": 0
   },
-  "screenObservations": {
-    "dominantAppFont": [
-      "DB Helvethaica X/55 Regular",
-      "DB Helvethaica X/75 Bd"
-    ],
-    "commonFontSizes": [
-      12,
-      14,
-      16,
-      20,
-      24,
-      28,
-      32
-    ],
-    "commonRawColors": [
-      "#FFFFFF",
-      "#00008F",
-      "#FAFAFA",
-      "#F7F7F8",
-      "#E2EFFF",
-      "#E3000A"
-    ],
-    "note": "Observed raw values are evidence only, not authority over remote semantic variables."
-  },
+  "canonicalCollections": [
+    "color",
+    "text",
+    "spacing",
+    "shape"
+  ],
+  "reviewRequiredCollections": [
+    "Responsive"
+  ],
+  "typographyAuthority": "DB Helvethaica X local semantic variables/styles. Preserve upstream Inter bindings only where existing Core component ownership requires them.",
   "unresolved": [
-    "Complete remote color value map",
-    "Approved font-family/weight matrix",
-    "Elevation/shadow system"
+    "Decide whether upstream Foundations variables should be migrated or retained.",
+    "Resolve duplicate text-style names.",
+    "Resolve duplicate Checkbox/Radio component sets.",
+    "Document semantic names for numeric icon variants."
   ]
 }

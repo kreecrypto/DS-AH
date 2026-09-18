@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "rule": "Use legacyAlias for lookup only; use canonical for new documentation/work. Null canonical means REVIEW_REQUIRED.",
   "aliases": [
     {
@@ -158,6 +158,56 @@
       "canonical": null,
       "confidence": "none",
       "notes": "Numeric state in result/QVB-like components requires semantic review."
+    },
+    {
+      "legacy": "bottom-shet",
+      "canonical": "bottom-sheet",
+      "confidence": "high",
+      "scope": "Core DS component name"
+    },
+    {
+      "legacy": "buttom-right",
+      "canonical": "bottom-right",
+      "confidence": "high",
+      "scope": "tooltip position"
+    },
+    {
+      "legacy": "fasle",
+      "canonical": "false",
+      "confidence": "high"
+    },
+    {
+      "legacy": "checkbok",
+      "canonical": "checkbox",
+      "confidence": "high"
+    },
+    {
+      "legacy": "qualtification",
+      "canonical": "qualification",
+      "confidence": "high"
+    },
+    {
+      "legacy": "perfomance",
+      "canonical": "performance",
+      "confidence": "high"
+    },
+    {
+      "legacy": "disable",
+      "canonical": "Disabled",
+      "confidence": "high",
+      "scope": "state value only"
+    },
+    {
+      "legacy": "ischeck",
+      "canonical": "Checked",
+      "confidence": "high",
+      "scope": "variant axis"
+    },
+    {
+      "legacy": "on-dark",
+      "canonical": "OnDark",
+      "confidence": "high",
+      "scope": "variant axis"
     }
   ]
 }

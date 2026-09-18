@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "buildModes": {
+    "REPRODUCE": {
+      "defaultWhen": "a matching approved/current Master Screen exists",
+      "inventionAllowed": false
+    },
+    "ADAPT": {
+      "defaultWhen": "the user requests changes to an existing design/reference",
+      "inventionAllowed": "only inside explicitly requested scope"
+    },
+    "EXPLORE": {
+      "defaultWhen": "the user explicitly requests a new concept/direction/from-scratch design",
+      "inventionAllowed": true,
+      "explicitSignals": [
+        "from scratch",
+        "new concept",
+        "new direction",
+        "solution ใหม่",
+        "concept ใหม่",
+        "ไม่ใช้ design เดิม",
+        "ออกแบบใหม่ทั้งหมด"
+      ]
+    }
+  },
+  "gates": {
+    "PASS": "exact or uniquely resolved approved/current reference",
+    "BLOCKED_REFERENCE_AMBIGUOUS": "multiple plausible approved/current references and no resolving domain/reference evidence",
+    "BLOCKED_REFERENCE_MISSING": "no approved reference found and EXPLORE was not explicitly requested",
+    "EXPLORE_EXPLICIT": "user explicitly requested exploration"
+  },
+  "families": {
+    "agencyDashboard": {
+      "product": "agency",
+      "genericSignals": [
+        "dashboard",
+        "แดชบอร์ด"
+      ],
+      "genericResolution": "BLOCKED_REFERENCE_AMBIGUOUS",
+      "reason": "Multiple approved/current Agency dashboard families exist.",
+      "candidates": [
+        {
+          "name": "Team Performance Dashboard",
+          "pageId": "909:40988",
+          "classification": "primary_candidate",
+          "implementation": "inspect_then_use",
+          "aliases": [
+            "team performance dashboard",
+            "team performance"
+          ]
+        },
+        {
+          "name": "My Performance Dashboard",
+          "pageId": "909:40989",
+          "classification": "primary_candidate",
+          "implementation": "inspect_then_use",
+          "aliases": [
+            "my performance dashboard",
+            "my performance"
+          ]
+        },
+        {
+          "name": "Campaign and Competition Tracking Dashboard",
+          "pageId": "909:40990",
+          "classification": "pattern_reference",
+          "implementation": "conditional",
+          "aliases": [
+            "campaign and competition tracking dashboard",
+            "competition tracking dashboard"
+          ]
+        },
+        {
+          "name": "Persistency Dashboard",
+          "pageId": "2333:12276",
+          "classification": "mixed_maturity",
+          "implementation": "conditional",
+          "aliases": [
+            "persistency dashboard"
+          ]
+        },
+        {
+          "name": "Performance Dashboard",
+          "pageId": "265:19632",
+          "classification": "legacy_candidate",
+          "implementation": "reference_only",
+          "aliases": [
+            "performance dashboard legacy"
+          ],
+          "blockedAsDefault": true
+        }
+      ]
+    }
+  },
+  "resolutionOrder": [
+    "explicit_user_reference_node",
+    "exact_named_approved_master",
+    "explicit_domain_plus_single_approved_master",
+    "single_approved_current_candidate",
+    "explicit_explore_signal",
+    "block"
+  ],
+  "writeRule": "CREATE_SCREEN and MODIFY_SCREEN require PASS or EXPLORE_EXPLICIT before Figma mutation."
+}

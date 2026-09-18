@@ -1,24 +1,31 @@
 {
-  "schemaVersion": "1.0.0",
-  "agentVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
+  "agentVersion": "1.1.0",
   "name": "Design Agent v1",
   "defaultWriteMode": "read-only",
+  "defaultBuildMode": "REPRODUCE_WHEN_REFERENCE_EXISTS",
   "sequence": [
     "ROUTE_INTENT",
     "RESOLVE_PRODUCT",
+    "RESOLVE_BUILD_MODE",
+    "RESOLVE_REFERENCE",
+    "REFERENCE_FIDELITY_GATE",
     "LOAD_CONTEXT",
-    "INSPECT_LIVE_FIGMA",
+    "INSPECT_REFERENCE_LIVE_FIGMA",
+    "INSPECT_TARGET_LIVE_FIGMA",
     "RESOLVE_SOURCE_OF_TRUTH",
     "RESOLVE_CORE_COMPONENTS",
     "RESOLVE_DOMAIN_PATTERNS",
     "DECIDE_REUSE_EXTEND_CREATE",
-    "EXECUTE_IF_AUTHORIZED",
+    "EXECUTE_IF_AUTHORIZED_AND_REFERENCE_GATE_PASSES",
+    "VISUAL_COMPARE_REFERENCE_TO_RESULT",
     "QA",
     "EMIT_EVIDENCE"
   ],
   "entrypoint": "agent/SYSTEM.md",
   "productRouter": "agent/product-router.json",
   "intentRouter": "agent/router/intent.json",
+  "referenceRouter": "agent/reference-router.json",
   "schemas": {
     "execution": "agent/output/execution.schema.json",
     "decisionLog": "agent/output/decision-log.schema.json",
@@ -27,9 +34,14 @@
   "invariants": [
     "figma_read_only_by_default",
     "inspect_before_write",
-    "core_before_domain",
+    "reference_before_layout",
+    "master_first_when_available",
+    "new_file_is_not_explore_permission",
+    "no_write_when_reference_ambiguous",
+    "core_before_new_primitive",
     "reuse_before_create",
     "exact_key_before_same_name_assumption",
+    "visual_compare_before_pass",
     "qa_before_complete"
   ]
 }

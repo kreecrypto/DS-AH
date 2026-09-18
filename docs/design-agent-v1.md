@@ -1,42 +1,38 @@
-# Design Agent v1
+# Design Agent v1.1
 
-Version: 1.0.0
+Design Agent v1.1 is a repository-driven design execution contract focused on **Master-first reproduction and controlled adaptation**.
 
-Design Agent v1 is a repository-driven design execution contract.
+## Main behavior change from v1.0
 
-It is not a separate autonomous background service. It defines how an AI agent should route, inspect, decide, execute, QA, and hand off design work using Figma and Git evidence.
+A CREATE request no longer means "compose a reasonable screen from the Design System."
 
-## Capabilities
+It means:
 
-- classify design task intent
-- resolve Core / Agency / Admin product context
-- load only relevant registries
-- enforce read-only default
-- resolve Source of Truth
-- resolve component identity and reuse
-- separate exact Figma API from canonical API
-- produce structured execution/decision/QA outputs
-- run deterministic routing smoke tests in CI
+`Resolve approved reference → reproduce/adapt it → reuse DS → visually compare → QA`
 
-## Runtime sequence
+A blank/new Figma file is only the destination.
 
-`ROUTE → PRODUCT → CONTEXT → INSPECT → SOURCE → CORE → DOMAIN → DECIDE → EXECUTE → QA → EVIDENCE`
+## Build modes
 
-## Invocation
+- **REPRODUCE** — default when approved/current Master exists.
+- **ADAPT** — bounded change to an existing design.
+- **EXPLORE** — only when explicitly requested.
 
-Natural language is supported.
+## Reference Fidelity Gate
 
-Explicit commands are also supported:
+CREATE/MODIFY writes require:
+- exact user reference, or
+- one uniquely resolved approved/current Master, or
+- explicit EXPLORE request.
 
-- `DS:INSPECT`
-- `DS:REVIEW`
-- `DS:CREATE`
-- `DS:MODIFY`
-- `DS:FIX`
-- `DS:COMPONENT`
-- `DS:QA`
-- `DS:HANDOFF`
+If multiple Masters are plausible, write is blocked.
 
-## Important
+Example: generic Agency "Dashboard" is ambiguous because Team Performance Dashboard and My Performance Dashboard are both primary candidates. The agent must not invent a generic dashboard.
 
-A create/modify route does not automatically permit a Figma mutation. The current task still needs explicit Figma write authorization.
+## Runtime
+
+`ROUTE → PRODUCT → BUILD MODE → REFERENCE → FIDELITY GATE → INSPECT → SOURCE → REUSE → WRITE → VISUAL COMPARE → QA → EVIDENCE`
+
+## Regression tests
+
+`npm run test:fidelity` protects the reference-resolution behavior that failed in the first New File Dashboard test.

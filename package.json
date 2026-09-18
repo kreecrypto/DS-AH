@@ -1,13 +1,14 @@
 {
   "name": "ds-ah-operating-repo",
   "private": true,
-  "version": "1.1.0",
-  "description": "Design Agent v1 operating contract, Figma source registries, and deterministic validation.",
+  "version": "1.2.0",
+  "description": "Design Agent v1.1 operating contract with master-first reference fidelity gates, Figma registries, and deterministic validation.",
   "type": "module",
   "scripts": {
     "validate:registry": "node scripts/validate-registry.mjs",
     "validate:agent": "node scripts/validate-agent.mjs",
     "test:agent": "node scripts/run-agent-evals.mjs",
-    "validate": "npm run validate:registry && npm run validate:agent && npm run test:agent"
+    "validate": "npm run validate:registry && npm run validate:agent && npm run test:agent && npm run test:fidelity",
+    "test:fidelity": "node scripts/run-fidelity-evals.mjs"
   }
 }

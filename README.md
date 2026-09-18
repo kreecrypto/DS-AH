@@ -120,3 +120,15 @@ Validation:
 - `npm run test:agent`
 
 See `docs/design-agent-v1.md`.
+
+
+## Master-first Fidelity Gate
+
+Design Agent v1.1 does not treat a new file as a blank-canvas brief.
+
+For CREATE/MODIFY:
+**resolve approved Master → pass reference gate → inspect → reproduce/adapt → visual compare → QA**.
+
+Generic screen types with multiple approved Masters, such as an unspecified Agency "Dashboard", are blocked from Figma write until the reference/domain is resolved.
+
+Run `npm run test:fidelity` for regression coverage.

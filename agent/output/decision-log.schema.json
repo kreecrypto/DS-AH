@@ -17,6 +17,27 @@
     "product": {
       "type": "string"
     },
+    "buildMode": {
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE"
+      ]
+    },
+    "referenceGate": {
+      "enum": [
+        "PASS",
+        "BLOCKED_REFERENCE_AMBIGUOUS",
+        "BLOCKED_REFERENCE_MISSING",
+        "EXPLORE_EXPLICIT"
+      ]
+    },
+    "referenceSource": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "sourceOfTruth": {
       "type": "array",
       "items": {
@@ -50,6 +71,14 @@
       "enum": [
         "read-only",
         "explicit-write"
+      ]
+    },
+    "visualFidelity": {
+      "enum": [
+        "PASS",
+        "PASS_WITH_GAPS",
+        "FAIL",
+        "NOT_APPLICABLE"
       ]
     },
     "rationale": {

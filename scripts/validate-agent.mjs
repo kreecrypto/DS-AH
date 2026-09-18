@@ -12,10 +12,13 @@ const required=[
   'agent/decisions/component-resolution.md',
   'agent/decisions/source-of-truth.md',
   'agent/decisions/create-vs-reuse.md',
+  'agent/decisions/reference-resolution.md',
+  'agent/reference-router.json',
   'agent/output/execution.schema.json',
   'agent/output/decision-log.schema.json',
   'agent/output/qa-result.schema.json',
-  'agent/evals/cases.json'
+  'agent/evals/cases.json',
+  'agent/evals/reference-cases.json'
 ];
 
 let failed=false;
@@ -64,6 +67,21 @@ for(const name of ['INSPECT','REVIEW','QA','HANDOFF','COMPONENT','CREATE_SCREEN'
     console.error('MISSING INTENT',name);
     failed=true;
   }
+}
+
+
+const referenceRouter=parsed['agent/reference-router.json'];
+if(!referenceRouter?.families?.agencyDashboard){
+  console.error('MISSING AGENCY DASHBOARD REFERENCE FAMILY');
+  failed=true;
+}
+if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFERENCE_AMBIGUOUS'){
+  console.error('GENERIC DASHBOARD MUST BE REFERENCE-AMBIGUOUS');
+  failed=true;
+}
+if(runtime?.invariants && !runtime.invariants.includes('reference_before_layout')){
+  console.error('MISSING reference_before_layout INVARIANT');
+  failed=true;
 }
 
 if(failed) process.exit(1);

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Regression tests for reference resolution and fidelity behavior after the generic Dashboard blank-canvas failure.",
+  "cases": [
+    {
+      "id": "F01",
+      "prompt": "Test Agent New File @Figma สร้างหน้า Dashboard",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "BLOCKED_REFERENCE_AMBIGUOUS",
+        "writeAllowed": false
+      }
+    },
+    {
+      "id": "F02",
+      "prompt": "สร้าง Team Performance Dashboard ใน New File @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40988",
+        "writeAllowed": true
+      }
+    },
+    {
+      "id": "F03",
+      "prompt": "สร้าง My Performance Dashboard ใน New File @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40989",
+        "writeAllowed": true
+      }
+    },
+    {
+      "id": "F04",
+      "prompt": "สร้าง Persistency Dashboard ตามของเดิม @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "2333:12276",
+        "writeAllowed": true
+      }
+    },
+    {
+      "id": "F05",
+      "prompt": "สร้าง Dashboard concept ใหม่ from scratch ไม่ใช้ design เดิม @Figma ทำเลย",
+      "expected": {
+        "buildMode": "EXPLORE",
+        "referenceGate": "EXPLORE_EXPLICIT",
+        "writeAllowed": true
+      }
+    },
+    {
+      "id": "F06",
+      "prompt": "สร้างหน้า Performance Dashboard",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "BLOCKED_REFERENCE_AMBIGUOUS",
+        "writeAllowed": false
+      }
+    },
+    {
+      "id": "F07",
+      "prompt": "ปรับ Team Performance Dashboard ให้ card compact ขึ้น @Figma แก้เลย",
+      "expected": {
+        "buildMode": "ADAPT",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40988",
+        "writeAllowed": true
+      }
+    }
+  ]
+}

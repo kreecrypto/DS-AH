@@ -36,6 +36,56 @@
         "explicit-write"
       ]
     },
+    "buildMode": {
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE",
+        null
+      ]
+    },
+    "referenceGate": {
+      "enum": [
+        "PASS",
+        "BLOCKED_REFERENCE_AMBIGUOUS",
+        "BLOCKED_REFERENCE_MISSING",
+        "EXPLORE_EXPLICIT",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "reference": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "fileKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nodeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "classification": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
     "fileKey": {
       "type": [
         "string",

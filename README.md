@@ -17,6 +17,9 @@ This repository keeps Figma, UX/UI decisions, and AI-assisted design work consis
 - `design.md` — primary design-system contract for designers and agents
 - `docs/source-of-truth.md` — screen/page authority and maturity rules
 - `docs/architecture.md` — DS layers and naming architecture
+- `docs/P0-gap-matrix.md` — Keep / Merge / Rename / Rebuild / Deprecate decisions
+- `docs/component-inventory.md` — audited cross-domain component evidence
+- `plan/P0-backlog.md` — execution checklist and P0 exit gate
 - `agent/AGENT_RULES.md` — mandatory AI/agent behavior
 - `tokens/` — token definitions and migration scaffold
 - `components/` — core component specs

@@ -1,0 +1,10 @@
+{
+  "name": "ds-ah-operating-repo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Agent-readable operating contract and Figma design-system registry.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-registry.mjs"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/agent-task.schema.json",
+  "title": "DS Agent Task",
+  "type": "object",
+  "required": [
+    "command",
+    "writeMode"
+  ],
+  "properties": {
+    "command": {
+      "enum": [
+        "INSPECT",
+        "CREATE_SCREEN",
+        "MODIFY_SCREEN",
+        "REVIEW",
+        "COMPONENT",
+        "QA",
+        "HANDOFF"
+      ]
+    },
+    "writeMode": {
+      "enum": [
+        "read-only",
+        "explicit-write"
+      ]
+    },
+    "figmaFileKey": {
+      "type": "string"
+    },
+    "nodeId": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expectedEvidence": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "source_of_truth",
+          "reuse_decision",
+          "responsive_coverage",
+          "qa_result",
+          "open_gaps"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

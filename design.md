@@ -1,135 +1,182 @@
 # Product Design System Contract
 
-Status: Draft v0.1  
-Scope: Master Screens and future agent-assisted UX/UI work
+Status: Operational baseline v1.0  
+Audit baseline: 2026-09-18
 
-## 1. Source of Truth
+## 1. System objective
 
-1. Approved Master Screens and approved component sets are the primary visual source of truth.
-2. Archived, deprecated, exploratory, PDF reference, screenshot reference, and UT exploration areas are never implementation sources unless explicitly promoted.
-3. Existing approved components must be reused before creating new components.
-4. Existing visual language must be preserved unless the task explicitly requests a redesign.
+Provide a stable contract so human designers and agents can work on Master Screens without:
+- inventing duplicate components
+- copying legacy naming debt
+- using Archived/reference screens as implementation source
+- creating new tokens when the existing DS already provides them
+- assuming responsive/state behavior
 
-## 2. Design System Layers
+## 2. Source hierarchy
 
-### Foundations
-Color, typography, spacing, radius, elevation, iconography, sizing, and responsive breakpoints.
+Use in this order:
 
-### Core Components
-Buttons, inputs, selects, checkboxes, radio buttons, switches, badges, tabs, dividers, navigation, drawers, modals, toast, tables, pagination, search, filter, list rows, loading, empty, and error states.
+1. Existing Core Design System library
+2. Approved / current Master Screen evidence
+3. Approved local domain pattern
+4. Current feature screen composition
+5. Draft/reference material for research only
 
-### Domain Patterns
-Customer, Case, Campaign, Performance, Health, Compensation, Agent Statement, Memo, and Competition patterns.
+The primary Core library discovered in the audit is recorded in `registry/libraries.json`.
 
-### Templates
-List, List + Filter, Detail, Create/Edit Form, Search Result, Dashboard, and multi-step flows.
+## 3. Layer model
 
-### Screens
-Feature-specific compositions. Screens are not automatically reusable components.
+### Foundation
+Remote DS variables/styles for color, spacing, shape/radius, typography and other primitives/semantics.
 
-## 3. Responsive Contract
+### Core
+Cross-domain UI such as Button, Input, Menu, Icons, Badge, Divider, Tab/Chip, Checkbox, Radio, Breadcrumb.
 
-Use exactly these device values where a responsive variant is required:
+### Domain Pattern
+Business-aware reusable patterns such as case status, campaign card, performance section, compensation table, live-chat flow, memo drawer.
 
-- `Device=Desktop`
-- `Device=Tablet`
-- `Device=Mobile`
+### Template
+Reusable page composition such as List, Detail, Form, Dashboard, Search/Filter.
 
-Avoid generic variant names such as `Property 1`, `Property 2`, `Variant4`, or numeric stage names.
+### Screen
+Feature-specific composition. A screen is not automatically a component.
 
-## 4. State Contract
+Dependency direction:
 
-Prefer semantic state names:
+`Screen → Template/Domain Pattern → Core → Foundation`
 
-- `State=Default`
-- `State=Hover`
-- `State=Focus`
-- `State=Pressed`
-- `State=Disabled`
-- `State=Loading`
-- `State=Empty`
-- `State=Error`
-- `State=Success`
+## 4. Figma operating mode
 
-Use domain-specific state names only when they represent genuine business states.
+Read-only is the default for agents.
 
-## 5. Candidate Foundations from Existing Screens
+Inspection, review, audit, planning, documentation, and repo-maintenance requests do not authorize Figma writes.
 
-These values were observed repeatedly during the first audit and remain provisional until formally approved and tokenized.
+A Figma write requires an explicit create/edit/fix instruction in the current task.
 
-### Color candidates
-- Brand blue: `#00008F`
-- Surface: `#FFFFFF`
-- Subtle surfaces: `#FAFAFA`, `#F7F7F8`
-- Light brand surface: `#E2EFFF`
-- Critical: `#E3000A`
+## 5. Foundation rule
 
-### Spacing candidates
-- `4, 8, 10, 12, 16, 20, 24`
+The target Master Screens file had no local variable collections during the audit, but the remote Core DS exposes variables.
 
-### Radius candidates
-- `4, 8, 12, 16, full`
+Therefore:
+- always search remote variables first
+- do not create a local token layer merely because the target file has no local variables
+- raw values observed in screens are evidence, not canonical tokens
+- unresolved foundation areas must be documented rather than guessed
 
-### Typography observations
-Application screens predominantly use `DB Helvethaica X` Regular and Bold. Other families found in the source file must not be treated as approved system typography without an explicit source-of-truth decision.
+Known remote collections/evidence are recorded in `registry/foundations.json`.
 
-## 6. Component Selection Rules
+## 6. Core component rule
 
-Before creating a component:
+Search the remote Core library before creating a common component.
 
-1. Inspect the approved Master Screen for the relevant feature.
-2. Search for an existing local component or component set.
-3. Check whether the requirement can be satisfied through an existing variant/property.
-4. Reuse the existing component when its visual and behavioral contract matches.
-5. Extend an existing component only when the new behavior belongs to the same semantic component family.
-6. Create a new component only when no approved reusable equivalent exists.
+Confirmed reusable families include:
+- Button / Icon Button
+- Input
+- Menu / Sidebar-related navigation
+- General/Navbar/Arrow/Base icons
+- Badge
+- Divider
+- Tab/Chip
+- Checkbox
+- Radio
+- Breadcrumb
+- List-related primitives
 
-## 7. Naming Rules
+Exact current APIs and canonicalized APIs are recorded in `registry/core-components.json`.
 
-### Component
-Use semantic names, e.g. `Button`, `Input`, `Customer Card`, `Case Status Badge`.
+## 7. Local pattern rule
 
-### Variants
-Use `Axis=Value`, e.g.:
+Local components may represent valid domain behavior even when naming is inconsistent.
 
-`Device=Desktop, State=Default, Style=Primary`
+Do not rebuild them solely because their API is messy.
 
-### Screens
-Use:
+For local patterns:
+1. preserve exact Figma names in `figmaCurrentApi` for lookup
+2. define semantic `canonicalApi` for new work
+3. mark ambiguous states `REVIEW_REQUIRED`
+4. merge duplicates only with sufficient evidence
 
-`screen/<domain>/<purpose>/<device>`
+See `registry/domain-patterns.json`.
 
-Example:
+## 8. Naming contract
 
-`screen/case-management/list/desktop`
+For new reusable assets use semantic axes:
 
-## 8. Source Status
+- `Device`
+- `State`
+- `Style`
+- `Size`
+- `Role`
+- `Type`
+- `Expand`
+- explicit domain axes
 
-Every reusable source should be classifiable as:
+Do not create placeholder axes/values such as `Property 1`, `Variant6`, `Stage7`, or raw frame names.
 
-- `Approved`
-- `Current`
-- `Draft`
-- `Reference Only`
-- `Legacy`
-- `Deprecated`
-- `Archived`
+Use `registry/aliases.json` to find legacy assets.
 
-Agents must not use `Reference Only`, `Legacy`, `Deprecated`, or `Archived` as implementation source without explicit instruction.
+## 9. Responsive contract
 
-## 9. Agent Rules
+Canonical device values:
 
-See `agent/AGENT_RULES.md`. Those rules are mandatory for agent-assisted design work.
+- `Desktop`
+- `Tablet`
+- `Mobile`
 
-## 10. QA Gate
+Legacy axes such as `responsive`, `Responsive`, `.device`, `device`, and some uses of `Size` are lookup aliases, not the desired API for new work.
 
-A design is not complete until it passes:
+## 10. State contract
 
-- Design-system reuse check
-- Naming check
-- Responsive check
-- Component/state coverage check
-- Layout and spacing check
-- Content check
-- Accessibility review
-- Visual regression review against the approved reference
+Use semantic states where applicable:
+
+- Default
+- Hover
+- Focus
+- Active
+- Disabled
+- Loading
+- Empty
+- Error
+- Retry
+- Success
+- Warning
+- Expanded
+- Collapsed
+
+Domain-specific states are allowed when they represent genuine business states.
+
+## 11. New component gate
+
+Before creating a reusable asset, prove:
+
+1. no suitable Core DS asset exists
+2. no approved local pattern already serves the same semantic purpose
+3. the need is reusable/stable rather than one-screen composition
+4. ownership layer is clear: Core or Domain
+5. canonical API uses semantic naming
+6. responsive/state requirements are known
+
+If evidence is incomplete, do not create; mark the gap.
+
+## 12. Agent task protocol
+
+Every task routes through `agent/COMMANDS.md`.
+
+Default sequence:
+
+`INSPECT → resolve source → search/reuse → CREATE/MODIFY if explicitly requested → QA → HANDOFF`
+
+## 13. QA gate
+
+A task is not complete until the agent can report:
+
+- Source of Truth used
+- Core/library reuse decision
+- domain pattern reuse decision
+- responsive coverage
+- state coverage
+- naming/API compliance
+- visual/content/accessibility checks
+- unresolved gaps
+
+QA result must be `PASS`, `PASS_WITH_GAPS`, or `FAIL`.

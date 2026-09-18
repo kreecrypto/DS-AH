@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/registry-entry.schema.json",
+  "title": "Generic DS Registry Entry",
+  "type": "object",
+  "properties": {
+    "canonicalName": {
+      "type": "string"
+    },
+    "figmaName": {
+      "type": "string"
+    },
+    "nodeId": {
+      "type": "string"
+    },
+    "nodeIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "figmaCurrentApi": {
+      "type": "object"
+    },
+    "canonicalApi": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

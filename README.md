@@ -1,33 +1,71 @@
-# Product Design System (DS-AH)
+# Product Design System Operating Repository (DS-AH)
 
-Central source of truth for UI foundations, reusable components, domain patterns, templates, and agent-facing design rules.
+This repository is the operational Source of Truth for agents and designers working with the product Master Screens.
 
-## Purpose
+It does **not** replace the existing Figma Core Design System library. It tells agents how to discover, reuse, normalize, review, QA, and document that system safely.
 
-This repository keeps Figma, UX/UI decisions, and AI-assisted design work consistent across the product.
+## Start here
 
-## Source Figma
+1. `AGENTS.md` — mandatory agent entrypoint
+2. `design.md` — design-system contract
+3. `agent/manifest.json` — machine-readable map
+4. `agent/COMMANDS.md` — workflow router
+5. `registry/` — Figma/library/component/pattern evidence
+6. `policies/` — system rules
+7. `agent/workflows/` — execution procedures
+
+## Figma target
 
 - File key: `cipkv7yTxyE29VCfMphE0W`
 - Audit entry node: `1:12191`
-- Reference: https://www.figma.com/design/cipkv7yTxyE29VCfMphE0W/?node-id=1-12191
+- Figma is read-only by default for agents unless the user explicitly requests a write action.
 
-## Repository structure
+## Core source discovered by audit
 
-- `design.md` — primary design-system contract for designers and agents
-- `docs/source-of-truth.md` — screen/page authority and maturity rules
-- `docs/architecture.md` — DS layers and naming architecture
-- `docs/P0-gap-matrix.md` — Keep / Merge / Rename / Rebuild / Deprecate decisions
-- `docs/component-inventory.md` — audited cross-domain component evidence
-- `plan/P0-backlog.md` — execution checklist and P0 exit gate
-- `agent/AGENT_RULES.md` — mandatory AI/agent behavior
-- `tokens/` — token definitions and migration scaffold
-- `components/` — core component specs
-- `patterns/` — domain patterns
-- `templates/` — reusable page templates
+Primary reusable Core source:
+
+`[DS] Agency Portal - Design System (Copy)`
+
+The audit confirmed remote Core components and variables for common UI. Agents must search/reuse this library before proposing new Core assets or foundation tokens.
+
+## Repository map
+
+### Agent system
+- `AGENTS.md`
+- `agent/manifest.json`
+- `agent/COMMANDS.md`
+- `agent/context-loading.md`
+- `agent/AGENT_RULES.md`
+- `agent/workflows/`
+
+### Machine-readable registry
+- `registry/figma-sources.json`
+- `registry/libraries.json`
+- `registry/core-components.json`
+- `registry/domain-patterns.json`
+- `registry/foundations.json`
+- `registry/aliases.json`
+
+### Policies
+- `policies/source-priority.md`
+- `policies/naming.md`
+- `policies/responsive.md`
+- `policies/component-ownership.md`
+
+### Audit / planning
+- `docs/audit/figma-inspection-2026-09-18.md`
+- `docs/P0-gap-matrix.md`
+- `docs/component-inventory.md`
+- `plan/P0-backlog.md`
+
+### Validation
+- `schemas/agent-task.schema.json`
+- `schemas/registry-entry.schema.json`
+- `scripts/validate-registry.mjs`
+- `npm run validate`
 
 ## Working principle
 
-**Extract existing patterns first → normalize second → document the contract → migrate incrementally.**
+**Inspect → search existing DS → resolve Source of Truth → reuse → normalize only where needed → QA → handoff.**
 
-Do not create a new pattern when an approved equivalent already exists.
+Do not create a new component, pattern, or token merely because the existing Figma naming is messy. The normalization layer exists so agents can find legacy assets while producing clean new work.

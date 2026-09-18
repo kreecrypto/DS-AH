@@ -1,7 +1,55 @@
 {
   "group": "icon-focus-misc",
-  "count": 33,
+  "count": 39,
   "variables": [
+    {
+      "key": "ed4ab01f9b8ee0e2fadc7225a11794b0b2c1eb7d",
+      "name": "icon/secondary",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#434956",
+        "rgba": [
+          0.262745,
+          0.286275,
+          0.337255,
+          1
+        ]
+      }
+    },
+    {
+      "key": "39f8826ebe9c564c28bf499beb6eff191d2ef328",
+      "name": "icon/tertiary",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#606776",
+        "rgba": [
+          0.376471,
+          0.403922,
+          0.462745,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9de105cddf8fb7e742713981e7174dcec16adaae",
+      "name": "icon/disabled",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#B2B2B2",
+        "rgba": [
+          0.698039,
+          0.698039,
+          0.698039,
+          1
+        ]
+      }
+    },
     {
       "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
       "name": "icon/primary/inverse",
@@ -510,6 +558,54 @@
           0.976471,
           0.545098,
           0.65098,
+          1
+        ]
+      }
+    },
+    {
+      "key": "87a70b3e77ed5f94ac151b54de7bc91c5d9eb22b",
+      "name": "focus/default",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#00008F",
+        "rgba": [
+          0,
+          0,
+          0.560784,
+          1
+        ]
+      }
+    },
+    {
+      "key": "bbac87fa338ddfbbd57a367491bc646f16f86cc6",
+      "name": "focus/inverse",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#FFFFFF",
+        "rgba": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "key": "83021536acf28a835411f4d24a8783751fd608d1",
+      "name": "icon/primary",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "value": {
+        "hex": "#1A1D21",
+        "rgba": [
+          0.101961,
+          0.113725,
+          0.129412,
           1
         ]
       }

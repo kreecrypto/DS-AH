@@ -1,6 +1,6 @@
 {
   "group": "stroke-other",
-  "count": 23,
+  "count": 27,
   "variables": [
     {
       "key": "88d0fb4c7607ea8afd7e40cf0cacf938bff89ce9",
@@ -14,6 +14,38 @@
           0.898039,
           0.898039,
           0.898039,
+          1
+        ]
+      }
+    },
+    {
+      "key": "5f17cb9b69925d7e6e269ec699e9914c2b8d03eb",
+      "name": "stroke/strong",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "value": {
+        "hex": "#CCCCCC",
+        "rgba": [
+          0.8,
+          0.8,
+          0.8,
+          1
+        ]
+      }
+    },
+    {
+      "key": "fc2285006094be97cbf4d040c8183ae507099548",
+      "name": "stroke/disabled",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "value": {
+        "hex": "#D9D9D9",
+        "rgba": [
+          0.85098,
+          0.85098,
+          0.85098,
           1
         ]
       }
@@ -367,6 +399,38 @@
           1,
           1,
           0.3
+        ]
+      }
+    },
+    {
+      "key": "c394ff8c693e27f609adcd3cfcdfdcf97fd7172c",
+      "name": "stroke/subtle",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "value": {
+        "hex": "#F2F2F2",
+        "rgba": [
+          0.94902,
+          0.94902,
+          0.94902,
+          1
+        ]
+      }
+    },
+    {
+      "key": "9bcc8b1bb2b476689ca2436f52e3c390e57ba62f",
+      "name": "stroke/regular",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "value": {
+        "hex": "#E5E5E5",
+        "rgba": [
+          0.898039,
+          0.898039,
+          0.898039,
+          1
         ]
       }
     }

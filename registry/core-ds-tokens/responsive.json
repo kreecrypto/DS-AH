@@ -1,0 +1,26 @@
+{
+  "collection": {
+    "name": "Responsive",
+    "key": "689b02fd5977852ac547775ec1c717ae85461ac7",
+    "modes": [
+      {
+        "id": "70:0",
+        "name": "Mode 1"
+      }
+    ]
+  },
+  "count": 1,
+  "variables": [
+    {
+      "name": "typography/screensize",
+      "key": "3bf6bc4d744438a3ec508f263e0cf94e5f41b724",
+      "type": "FLOAT",
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "values": {
+        "Mode 1": 0
+      }
+    }
+  ]
+}

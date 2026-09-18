@@ -1,0 +1,1109 @@
+{
+  "textStyles": [
+    {
+      "key": "5ce9b509f0d05906d0c9c76c21b164cfe4d80502",
+      "name": "Hero/Hero-md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 72
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "8e4e3ed002993f614c82944221d404c8888aa78b",
+      "name": "Display/xl/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 128,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 144
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "098ac41b80d6f5aa7b24d08ecac2b4fb071a8395",
+      "name": "Display/xl/Light",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 128,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 144
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "0765d4d7022a2bc71686f783ab22d6d9f93bbf53",
+      "name": "Display/lg/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 92,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 102
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "1dedc53c1744b196ffdfcb2cae969f231c0543ca",
+      "name": "Display/lg/Light",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 92,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 102
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "4f1853dcb45532fe71888404ea5f855b147d8c0b",
+      "name": "Display/md/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 72
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "b6f1c618f49d80828ed414bac75af578590765b5",
+      "name": "Display/md/Light",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 72
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "90e97c5da938a3a8088088e9a0aa4633c1a124dc",
+      "name": "Display/sm/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "108c2600e93eb631512239ca62378d89029c204d",
+      "name": "Display/sm/Light",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "64d881888352b59f67e280ec4145dbe9bfdd7233",
+      "name": "Heading/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 56,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "c6ec02edcb5c7fa1237ce60a3cf2aa4d6180bca9",
+      "name": "Heading/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 54
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "d7f023a32bb1ce59dbd4310421888ec8b4a68350",
+      "name": "Heading/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 46
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "9d5c13a83a73e1cab300f5c6df0544a61dca753c",
+      "name": "Title/xl",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 46
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "1c84ec407f5b19d3590c3b29f2cb9cc0790a920c",
+      "name": "Title/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 42
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "22812dc78593c0f5e7f4486492a7aa60772dcdde",
+      "name": "Title/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 28,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "ccb35812350009c4a19330cf065473f5727645dd",
+      "name": "Title/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "423fb00d11734b7dfe616b2ddc3992afd7a2e54e",
+      "name": "Title/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "5d94868cb92ce8dc5299d7a8322e6f743e44495e",
+      "name": "Subtitle/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "47e10f50b5a4ab5f18d8a3e7758c05421ea0b7f7",
+      "name": "Subtitle/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "ccb785b0453afd3ac23b0a07b889252a56a66fe2",
+      "name": "Body/xlg/xlg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "ccf6e1266daecf29ddd615191798e48996775879",
+      "name": "Body/xlg/xlg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "55 Regular"
+      },
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "9f0a794b552427cd419689e3ce1bce27984577c2",
+      "name": "Body/lg/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "2f93dfb0c202c038479fa813eacfc15a02595c51",
+      "name": "Body/lg/Regular",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "55 Regular"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "89091f6e1d13ee0f978fb776ecf217ea5073e39d",
+      "name": "Body/md/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "fe8cbf2e2b8c8f91ea24620c56e32dd0a0785c5c",
+      "name": "Body/md/Regular",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "55 Regular"
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "4f44876cd69089190cc0a75a0d47ee294f592eaa",
+      "name": "Body/sm/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "fb6705da4c7f5dc5406eaf34e5ed4df7e8019a17",
+      "name": "Body/sm/Regular",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "55 Regular"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "9343f2548278cd4dc6f5a6e40efa49deadf89ed7",
+      "name": "Body/xs/Bold",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "f87dfa92c524e6d88c548ddca5636ab19b704036",
+      "name": "Body/xs/Regular",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "55 Regular"
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "630c8c5e1326c2c4b32982aadb914f344af9e1dd",
+      "name": "Links/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "0ea2c1d73cf1c67ef8cb186dc4b47afe9bd44141",
+      "name": "Links/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "6948e190059b0dca4f5ad8825aef8c6a5d8ef68e",
+      "name": "Links/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "254577953c9ba3e5cc9727a5abc7a1f1466cb0c6",
+      "name": "Links/xs",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "a11d2f4d8479ea1a8837ee2ba7d8eaadced8a4f3",
+      "name": "Tags/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "6d65f0c8e4a0289d7eb521008d30ecec1a85c04a",
+      "name": "Tags/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "4d8b5c8de23e6ce91f33cd447ef6f22ea045849a",
+      "name": "Tags/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "73dec1ae66e1547d1e83b350458aa5c298d2d67c",
+      "name": "Tags/xs",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "75 Bd"
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "248e3a1722b5734f3f30561bccaa77980ac1f56b",
+      "name": "Quote/xl",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 72
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "c71ef8f99b4bc113a396baba2f0132fc62828fa1",
+      "name": "Quote/lg",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 46
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "3b053cee51e6e87d8a32bbf908fa111ab458afcb",
+      "name": "Quote/md",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 42
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.5
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    },
+    {
+      "key": "381eca2dae0360a383b42364ec4d4cdddf2cc427",
+      "name": "Quote/sm",
+      "fontName": {
+        "family": "DB Helvethaica X",
+        "style": "45 Li"
+      },
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE"
+    }
+  ],
+  "paintStyles": [
+    {
+      "key": "d0085cd06a6e69af9c9cc67933f4aaeacafe017c",
+      "name": "purple",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.6313725709915161,
+                "g": 0.7254902124404907,
+                "b": 0.9176470637321472,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.3176470696926117,
+                "g": 0.3490196168422699,
+                "b": 0.8627451062202454,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.1706666648387909,
+              0.9386666417121887,
+              -0.06933332979679108
+            ],
+            [
+              -0.9386666417121887,
+              0.1706666648387909,
+              0.8813333511352539
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ffeec7baec4ad0abb25d83077e513fe1238f2720",
+      "name": "green",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.5529412031173706,
+                "g": 0.8313725590705872,
+                "b": 0.7137255072593689,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.13333334028720856,
+                "g": 0.7176470756530762,
+                "b": 0.7607843279838562,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.1706666648387909,
+              0.9386666417121887,
+              -0.06933332979679108
+            ],
+            [
+              -0.9386666417121887,
+              0.1706666648387909,
+              0.8813333511352539
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "7811254a326d186ada41677d1a774a1ae79a1b01",
+      "name": "grey",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.9137254953384399,
+                "g": 0.8039215803146362,
+                "b": 0.8549019694328308,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.3764705955982208,
+                "g": 0.5098039507865906,
+                "b": 0.7450980544090271,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.1706666648387909,
+              0.9386666417121887,
+              -0.06933332979679108
+            ],
+            [
+              -0.9386666417121887,
+              0.1706666648387909,
+              0.8813333511352539
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "674b93a05a0ca804b6ed56994bd2e91d4be97813",
+      "name": "red",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.8901960849761963,
+                "g": 0.572549045085907,
+                "b": 0.6313725709915161,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.9333333373069763,
+                "g": 0.47843137383461,
+                "b": 0.41960784792900085,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              0.1706666648387909,
+              0.9386666417121887,
+              -0.06933332979679108
+            ],
+            [
+              -0.9386666417121887,
+              0.1706666648387909,
+              0.8813333511352539
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "1672a45f64800c232484b6bb765a79672684f823",
+      "name": "premium",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.0313725508749485,
+                "g": 0.03529411926865578,
+                "b": 0.5843137502670288,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.34117648005485535,
+                "g": 0.3803921639919281,
+                "b": 0.9098039269447327,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              -1,
+              6.123234262925839e-17,
+              1
+            ],
+            [
+              -1.3560103303299179e-17,
+              -0.22145329415798187,
+              0.6107266545295715
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "2bb020bea09199ef2d5f05a60a4ecca600b625e6",
+      "name": "gold",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.9254902005195618,
+                "g": 0.6980392336845398,
+                "b": 0.3607843220233917,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 1,
+                "g": 0.8666666746139526,
+                "b": 0.4000000059604645,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              -1,
+              6.123234262925839e-17,
+              1
+            ],
+            [
+              -1.3560103303299179e-17,
+              -0.22145329415798187,
+              0.6107266545295715
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "de2df9665397edffd41e4599ba2d6a36999fa0da",
+      "name": "silver",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.615686297416687,
+                "g": 0.658823549747467,
+                "b": 0.7372549176216125,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.8313725590705872,
+                "g": 0.8941176533699036,
+                "b": 0.9490196108818054,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              -1,
+              6.123234262925839e-17,
+              1
+            ],
+            [
+              -1.3560103303299179e-17,
+              -0.22145329415798187,
+              0.6107266545295715
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "effectStyles": [],
+  "gridStyles": []
+}

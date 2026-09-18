@@ -99,3 +99,24 @@ Admin Portal agent order:
 **foundation/Core authority → verify remote primitive identity → Admin domain component → scenario flow → one-off screen**.
 
 Important: the Admin file has no local foundations, and some same-name remote component keys differ from the currently audited Agency Core DS identities.
+
+
+## Design Agent v1
+
+The repo now contains an executable **agent contract** rather than only design-system documentation.
+
+Start with:
+- `agent/SYSTEM.md`
+- `agent/runtime.json`
+- `agent/product-router.json`
+- `agent/router/intent.json`
+
+Runtime:
+
+**Route → Product → Context → Inspect → Source → Reuse → Execute if authorized → QA → Evidence**
+
+Validation:
+- `npm run validate`
+- `npm run test:agent`
+
+See `docs/design-agent-v1.md`.

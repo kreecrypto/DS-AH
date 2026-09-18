@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2.0",
+  "schemaVersion": "2.0.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -60,5 +60,20 @@
     "responsive_coverage",
     "qa_result",
     "open_gaps"
-  ]
+  ],
+  "agent": {
+    "name": "Design Agent v1",
+    "version": "1.0.0",
+    "system": "agent/SYSTEM.md",
+    "runtime": "agent/runtime.json",
+    "productRouter": "agent/product-router.json",
+    "intentRouter": "agent/router/intent.json",
+    "defaultWriteMode": "read-only"
+  },
+  "outputSchemas": {
+    "execution": "agent/output/execution.schema.json",
+    "decisionLog": "agent/output/decision-log.schema.json",
+    "qaResult": "agent/output/qa-result.schema.json"
+  },
+  "evals": "agent/evals/cases.json"
 }

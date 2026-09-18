@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "agentVersion": "1.0.0",
+  "name": "Design Agent v1",
+  "defaultWriteMode": "read-only",
+  "sequence": [
+    "ROUTE_INTENT",
+    "RESOLVE_PRODUCT",
+    "LOAD_CONTEXT",
+    "INSPECT_LIVE_FIGMA",
+    "RESOLVE_SOURCE_OF_TRUTH",
+    "RESOLVE_CORE_COMPONENTS",
+    "RESOLVE_DOMAIN_PATTERNS",
+    "DECIDE_REUSE_EXTEND_CREATE",
+    "EXECUTE_IF_AUTHORIZED",
+    "QA",
+    "EMIT_EVIDENCE"
+  ],
+  "entrypoint": "agent/SYSTEM.md",
+  "productRouter": "agent/product-router.json",
+  "intentRouter": "agent/router/intent.json",
+  "schemas": {
+    "execution": "agent/output/execution.schema.json",
+    "decisionLog": "agent/output/decision-log.schema.json",
+    "qaResult": "agent/output/qa-result.schema.json"
+  },
+  "invariants": [
+    "figma_read_only_by_default",
+    "inspect_before_write",
+    "core_before_domain",
+    "reuse_before_create",
+    "exact_key_before_same_name_assumption",
+    "qa_before_complete"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/execution.schema.json",
+  "title": "Design Agent v1 Execution Envelope",
+  "type": "object",
+  "required": [
+    "command",
+    "product",
+    "writeMode",
+    "workflow",
+    "sources"
+  ],
+  "properties": {
+    "command": {
+      "enum": [
+        "INSPECT",
+        "REVIEW",
+        "QA",
+        "HANDOFF",
+        "COMPONENT",
+        "CREATE_SCREEN",
+        "MODIFY_SCREEN"
+      ]
+    },
+    "product": {
+      "enum": [
+        "core",
+        "agency",
+        "admin",
+        "unknown"
+      ]
+    },
+    "writeMode": {
+      "enum": [
+        "read-only",
+        "explicit-write"
+      ]
+    },
+    "fileKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nodeId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workflow": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "goal": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

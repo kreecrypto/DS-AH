@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Deterministic smoke tests for Design Agent v1 routing and product resolution.",
+  "cases": [
+    {
+      "id": "E01",
+      "prompt": "DS:INSPECT https://www.figma.com/design/rEJCvUGUfzzQ3jegheRhnr/x?node-id=0-1",
+      "expected": {
+        "command": "INSPECT",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E02",
+      "prompt": "Review UX/UI หน้า Unique Link",
+      "expected": {
+        "command": "REVIEW",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E03",
+      "prompt": "สร้างหน้า Unique Link ใหม่",
+      "expected": {
+        "command": "CREATE_SCREEN",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E04",
+      "prompt": "แก้หน้า Template Notification",
+      "expected": {
+        "command": "MODIFY_SCREEN",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E05",
+      "prompt": "QA Terms and Condition เทียบ master",
+      "expected": {
+        "command": "QA",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E06",
+      "prompt": "ทำ developer handoff สำหรับ Preset Tools",
+      "expected": {
+        "command": "HANDOFF",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E07",
+      "prompt": "Inspect Case Management",
+      "expected": {
+        "command": "INSPECT",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E08",
+      "prompt": "Review Team Performance Dashboard",
+      "expected": {
+        "command": "REVIEW",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E09",
+      "prompt": "สร้างหน้า Campaign ใหม่",
+      "expected": {
+        "command": "CREATE_SCREEN",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E10",
+      "prompt": "แก้หน้า Health Portfolio Monitoring",
+      "expected": {
+        "command": "MODIFY_SCREEN",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E11",
+      "prompt": "QA Compensation dashboard",
+      "expected": {
+        "command": "QA",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E12",
+      "prompt": "Normalize component badge-status-type",
+      "expected": {
+        "command": "COMPONENT",
+        "product": "core"
+      }
+    },
+    {
+      "id": "E13",
+      "prompt": "Inspect Design System button",
+      "expected": {
+        "command": "INSPECT",
+        "product": "core"
+      }
+    },
+    {
+      "id": "E14",
+      "prompt": "Review input component variants",
+      "expected": {
+        "command": "REVIEW",
+        "product": "core"
+      }
+    },
+    {
+      "id": "E15",
+      "prompt": "DS:COMPONENT name=checkbox action=normalize",
+      "expected": {
+        "command": "COMPONENT",
+        "product": "core"
+      }
+    },
+    {
+      "id": "E16",
+      "prompt": "DS:QA https://www.figma.com/design/cipkv7yTxyE29VCfMphE0W/x?node-id=304-19623",
+      "expected": {
+        "command": "QA",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E17",
+      "prompt": "DS:REVIEW https://www.figma.com/design/5ZFIRJWtmEIvuq95Rhyo6I/x?node-id=70-20",
+      "expected": {
+        "command": "REVIEW",
+        "product": "core"
+      }
+    },
+    {
+      "id": "E18",
+      "prompt": "DS:FIX https://www.figma.com/design/rEJCvUGUfzzQ3jegheRhnr/x?node-id=80-71254",
+      "expected": {
+        "command": "MODIFY_SCREEN",
+        "product": "admin"
+      }
+    },
+    {
+      "id": "E19",
+      "prompt": "ทำ handoff หน้า Agent Statement",
+      "expected": {
+        "command": "HANDOFF",
+        "product": "agency"
+      }
+    },
+    {
+      "id": "E20",
+      "prompt": "ตรวจโครงสร้าง Template Notification",
+      "expected": {
+        "command": "INSPECT",
+        "product": "admin"
+      }
+    }
+  ]
+}

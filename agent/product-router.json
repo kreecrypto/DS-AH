@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "products": {
+    "core": {
+      "role": "core_design_system",
+      "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+      "entryNode": "0:1",
+      "registries": [
+        "registry/core-ds-source.json",
+        "registry/core-ds-foundations.json",
+        "registry/core-ds-components.json",
+        "registry/core-ds-dependencies.json"
+      ],
+      "signals": [
+        "core ds",
+        "design system",
+        "button",
+        "input",
+        "dropdown",
+        "checkbox",
+        "radio",
+        "badge",
+        "tab",
+        "token",
+        "spacing",
+        "color",
+        "typography",
+        "icon"
+      ]
+    },
+    "agency": {
+      "role": "product_master_screens",
+      "fileKey": "cipkv7yTxyE29VCfMphE0W",
+      "registries": [
+        "registry/figma-sources.json",
+        "registry/domain-patterns.json",
+        "registry/templates.json"
+      ],
+      "domains": [
+        "case-management",
+        "campaign",
+        "team-performance",
+        "my-performance",
+        "health",
+        "compensation",
+        "agent-statement",
+        "live-chat",
+        "memo",
+        "customer-list"
+      ],
+      "signals": [
+        "case management",
+        "campaign",
+        "team performance",
+        "my performance",
+        "health portfolio",
+        "compensation",
+        "agent statement",
+        "live chat",
+        "memo",
+        "customer list",
+        "prospect list"
+      ]
+    },
+    "admin": {
+      "role": "admin_master_screens_and_scenarios",
+      "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+      "registries": [
+        "registry/admin-portal-source.json",
+        "registry/admin-portal-scenarios.json",
+        "registry/admin-portal-components.json",
+        "registry/admin-portal-dependencies.json"
+      ],
+      "domains": [
+        "unique-link",
+        "external-links-tools",
+        "preset-tools",
+        "terms-and-condition",
+        "template-notification"
+      ],
+      "signals": [
+        "admin portal",
+        "unique link",
+        "external links",
+        "tools management",
+        "preset tools",
+        "terms and condition",
+        "template notification",
+        "config template"
+      ]
+    }
+  },
+  "resolutionOrder": [
+    "exact_figma_file_key",
+    "explicit_product_name",
+    "domain_signal",
+    "current_task_context",
+    "unknown"
+  ],
+  "unknownPolicy": "Do not guess product. Inspect provided Figma URL or report unresolved product."
+}

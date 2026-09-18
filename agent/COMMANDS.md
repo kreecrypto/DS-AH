@@ -1,32 +1,22 @@
-# Agent Command Router
+# Design Agent v1 Command Router
 
-Human prompts do not need to use exact command syntax. Route natural-language requests to the closest workflow.
+Natural-language requests are supported. Explicit commands are optional.
 
-| Command | Typical trigger | Workflow |
+| Command | Purpose | Workflow |
 |---|---|---|
-| `DS:INSPECT` | inspect, ดูโครงสร้าง, ตรวจ Figma, inventory | `workflows/inspect.md` |
-| `DS:CREATE-SCREEN` | create screen, ออกแบบหน้าใหม่, build screen | `workflows/create-screen.md` |
-| `DS:MODIFY-SCREEN` | แก้หน้า, ปรับ screen, extend existing flow | `workflows/modify-screen.md` |
-| `DS:REVIEW` | UX/UI review, audit, critique, review states | `workflows/review.md` |
-| `DS:COMPONENT` | create/normalize/merge component, variant audit | `workflows/component.md` |
-| `DS:QA` | QA, check design, compare, responsive check | `workflows/qa.md` |
-| `DS:HANDOFF` | developer handoff, spec, implementation notes | `workflows/handoff.md` |
+| `DS:INSPECT` | structure/source/component inspection | `workflows/inspect.md` |
+| `DS:REVIEW` | UX/UI and DS review | `workflows/review.md` |
+| `DS:CREATE` / `DS:CREATE-SCREEN` | new screen composition | `workflows/create-screen.md` |
+| `DS:MODIFY` / `DS:MODIFY-SCREEN` | modify existing screen | `workflows/modify-screen.md` |
+| `DS:FIX` | alias of MODIFY + QA | `workflows/modify-screen.md` |
+| `DS:COMPONENT` | component resolution/normalization | `workflows/component.md` |
+| `DS:QA` | source/reuse/state/responsive/visual QA | `workflows/qa.md` |
+| `DS:HANDOFF` | developer handoff/spec | `workflows/handoff.md` |
 
-## Router rules
+## Routing order
 
-1. If a request contains a Figma URL, parse file key and node ID first.
-2. If the request asks only to inspect/review, stay read-only.
-3. If the request asks to create/edit in Figma, inspect first, then follow the relevant write workflow.
-4. If the request asks for a new component, run `DS:COMPONENT` before creating it.
-5. If the request asks for a new screen, first run the component/library lookup steps from `DS:CREATE-SCREEN`.
-6. If multiple workflows apply, order them:
-   `INSPECT → COMPONENT (if needed) → CREATE/MODIFY → QA → HANDOFF`.
+`ROUTE → RESOLVE PRODUCT → INSPECT → RESOLVE SOURCE → RESOLVE REUSE → EXECUTE IF AUTHORIZED → QA → EVIDENCE`
 
-## Short invocation examples
-
-- `DS:INSPECT <figma-url>`
-- `DS:REVIEW <figma-url> focus=responsive,states`
-- `DS:CREATE-SCREEN feature=case-history device=all`
-- `DS:MODIFY-SCREEN <figma-url> change=filter interaction`
-- `DS:COMPONENT name=badge-status-type action=normalize`
-- `DS:QA <figma-url> compare=approved-master`
+Machine-readable routing lives in:
+- `agent/router/intent.json`
+- `agent/product-router.json`

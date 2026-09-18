@@ -1,62 +1,53 @@
-# Agent Entry Point
+# Design Agent Entry Point
 
-This repository is the operating contract for design work against the product Master Screens.
+This repository powers **Design Agent v1**.
 
-## Non-negotiable start sequence
+## Start sequence
 
 Before any design task:
 
-1. Read `design.md`.
-2. Read `agent/manifest.json`.
-3. Read `registry/figma-sources.json`.
-4. Read `registry/libraries.json`.
-5. Route the request using `agent/COMMANDS.md`.
-6. Load the matching workflow in `agent/workflows/`.
-7. Inspect Figma read-only before proposing or making a change.
-8. Search the existing Design System library before creating any component, variable, or pattern.
-9. Use approved local domain patterns only after checking the Core library.
-10. Run the QA workflow before declaring completion.
+1. Read `agent/SYSTEM.md`.
+2. Read `agent/runtime.json`.
+3. Route intent with `agent/router/intent.json`.
+4. Resolve product with `agent/product-router.json`.
+5. Load the matching workflow and only the registries required for that product.
+6. Inspect the live Figma target read-only.
+7. Resolve Source of Truth.
+8. Resolve Core component identity.
+9. Resolve product/domain pattern identity.
+10. Decide reuse / extend / wrap / create / screen-only.
+11. Execute only with explicit current-task write authorization.
+12. Run QA.
+13. Emit evidence using the output schemas.
 
-## Default safety mode
+## Figma safety
 
 Figma is **read-only by default**.
 
-Do not create, edit, rename, delete, detach, move, bind, publish, or reorganize Figma nodes unless the user explicitly asks for a Figma write action in the current task.
+Do not create, edit, rename, delete, detach, move, bind, publish, or reorganize Figma nodes during inspect/review/planning/repo tasks.
 
-Repository documentation may be updated when the task asks to maintain the design-system knowledge base.
+## Source model
 
-## Source priority
+- Core DS: `5ZFIRJWtmEIvuq95Rhyo6I`
+- Agency Master Screens: `cipkv7yTxyE29VCfMphE0W`
+- Admin Master Screens: `rEJCvUGUfzzQ3jegheRhnr`
 
-Use sources in this order:
+See `agent/product-router.json` for registry routing.
 
-1. Existing Core Design System library
-2. Approved Master Screen / approved local component set
-3. Current domain pattern
-4. Current feature screen
-5. Draft/reference material only for research
+## Critical identity rule
 
-Never implement from Archived, Deprecated, Legacy, screenshot-only, PDF-only, or exploratory material unless the user explicitly promotes it.
+Same component name does **not** prove same published identity.
 
-## Canonical vs legacy API
+Verify component keys and live ownership before substitution.
 
-The Figma file contains legacy names and inconsistent variant axes. Never copy those names blindly.
+## Completion contract
 
-Use:
-- `registry/aliases.json` to resolve legacy names
-- `registry/core-components.json` for remote Core APIs
-- `registry/domain-patterns.json` for local pattern APIs
-- `policies/naming.md` for new work
-
-The registry records both current Figma API and canonical API so an agent can find existing nodes without perpetuating naming debt.
-
-## Agent completion contract
-
-A task is complete only when the response can state:
-- which Source of Truth was used
-- which existing component/library was reused
-- what was changed or proposed
-- which responsive states were considered
-- which QA checks passed
-- any unresolved evidence gaps
-
-If any of those are unknown, report the gap instead of guessing.
+Return:
+- routed command
+- product
+- Source of Truth
+- reuse decision
+- write mode
+- responsive/state coverage
+- QA result
+- open gaps

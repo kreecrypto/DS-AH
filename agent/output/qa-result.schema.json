@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/qa-result.schema.json",
+  "title": "Design Agent v1 QA Result",
+  "type": "object",
+  "required": [
+    "result",
+    "checks",
+    "gaps"
+  ],
+  "properties": {
+    "result": {
+      "enum": [
+        "PASS",
+        "PASS_WITH_GAPS",
+        "FAIL"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "boolean"
+        },
+        "reuse": {
+          "type": "boolean"
+        },
+        "naming": {
+          "type": "boolean"
+        },
+        "responsive": {
+          "type": "boolean"
+        },
+        "states": {
+          "type": "boolean"
+        },
+        "visual": {
+          "type": "boolean"
+        },
+        "content": {
+          "type": "boolean"
+        },
+        "accessibility": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

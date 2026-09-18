@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/decision-log.schema.json",
+  "title": "Design Agent v1 Decision Log",
+  "type": "object",
+  "required": [
+    "task",
+    "sourceOfTruth",
+    "reuseDecision",
+    "writeMode",
+    "openGaps"
+  ],
+  "properties": {
+    "task": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "sourceOfTruth": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coreComponents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "domainComponents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reuseDecision": {
+      "enum": [
+        "REUSE",
+        "EXTEND",
+        "WRAP",
+        "CREATE_DOMAIN",
+        "CREATE_CORE",
+        "SCREEN_ONLY",
+        "REVIEW_REQUIRED"
+      ]
+    },
+    "writeMode": {
+      "enum": [
+        "read-only",
+        "explicit-write"
+      ]
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "openGaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "localOwnerCount": 57,
+  "componentPageCount": 19,
+  "nonEmptyComponentPages": 18,
+  "emptyOrPlaceholderPages": [
+    "AXA Badge",
+    "Evalution"
+  ],
+  "families": [
+    {
+      "family": "Button",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+        "e3848fc5f2f88f4c117dad1d078f8188df529621"
+      ]
+    },
+    {
+      "family": "Badge",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "f2187fca79d95e1669dd417689535f0f83e9f1df",
+        "8383a48397d12f9f5c77334d4cfbbeec0e759849"
+      ]
+    },
+    {
+      "family": "Input",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+        "a6db9d0482c6446fd483f71f6a517f2cf3984345"
+      ],
+      "notes": "Dropdown is the Core selection-input primitive; no separately named generic Select exists."
+    },
+    {
+      "family": "Search",
+      "coreStatus": "PRESENT_COMPOSITION",
+      "keys": [
+        "8c565095086ab54369ac9016287135b196141358",
+        "99c9834309df6aa9f48301581c2bfe295610373e",
+        "01afd7cbdf324fb90cddcaf30327919310d773a1"
+      ]
+    },
+    {
+      "family": "Checkbox",
+      "coreStatus": "PRESENT_DUPLICATE",
+      "preferredCandidate": "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+    },
+    {
+      "family": "Radio",
+      "coreStatus": "PRESENT_DUPLICATE",
+      "preferredCandidate": "f90d2487d05573910316e182ac17e5bece4c856a"
+    },
+    {
+      "family": "Date Picker",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "8c1fa657cb66280263b5184bce07cc1b4ccefe35"
+      ]
+    },
+    {
+      "family": "List",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "5e3d148737311590c7e0cd60c033aacf76fe298d",
+        "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+        "fc742e1df5ac448c447807b9e3b2de047462666e",
+        "2408a8085bd3e19bdd43f56b076f189eddf6defe"
+      ]
+    },
+    {
+      "family": "Tab",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+        "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+        "527e1da72069d565082f4c4df0e043462e9e0109",
+        "8240f9b4f5278a2e2ce7b7191535b718c9574127"
+      ]
+    },
+    {
+      "family": "Navigation",
+      "coreStatus": "PRESENT",
+      "notes": "Sidebar, menu, mobile navigation, header, primary menu, filter/search and notification assets are local Core owners."
+    },
+    {
+      "family": "Icons",
+      "coreStatus": "PRESENT",
+      "notes": "12 local published owners including base/general/navbar/arrow and domain-specific icon families."
+    },
+    {
+      "family": "Tooltip",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "5a32687740711c43db34cefeb943e63aa6cfb34e"
+      ]
+    },
+    {
+      "family": "Scrollbar",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "bfe31419935d2a234c5dc377ae4535d5033f50be",
+        "5813c2ec8dff7020997a974b70bd81079c681ec9"
+      ]
+    },
+    {
+      "family": "Bottom Sheet",
+      "coreStatus": "PRESENT",
+      "keys": [
+        "e9b5920c33dda114cfefad490d854d6a5bce8635"
+      ]
+    },
+    {
+      "family": "Modal/Dialog",
+      "coreStatus": "ABSENT_AS_CORE_OWNER",
+      "externalEvidence": [
+        {
+          "library": "[P2/S1] Agency Portal - Master Screens",
+          "name": "modal",
+          "componentKey": "574057f3c6a6a381078587c5a4c4bb4969d0dcdc"
+        },
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Dialog",
+          "componentKey": "291f51e7a303d7e740a7b65f27248a3f978135b7"
+        }
+      ],
+      "policy": "Do not promote external candidate into Core without governance decision."
+    },
+    {
+      "family": "Toast",
+      "coreStatus": "ABSENT_AS_CORE_OWNER",
+      "externalEvidence": [
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Toast2",
+          "componentKey": "ab7707ce320df7e9e315013520e20c1037a532b1"
+        }
+      ]
+    },
+    {
+      "family": "Pagination",
+      "coreStatus": "ABSENT_AS_CORE_OWNER",
+      "externalEvidence": [
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Pagination",
+          "componentKey": "448d25f7e5cbd983d5935ffc94898702a9ce5ecc"
+        }
+      ]
+    },
+    {
+      "family": "Table",
+      "coreStatus": "ABSENT_AS_CORE_OWNER",
+      "externalEvidence": [
+        {
+          "library": "[P2/S1] Agency Portal - Master Screens",
+          "name": "table-roll",
+          "componentKey": "50504344365a792a1d50e8a0d292cd9bd2c4c655"
+        },
+        {
+          "library": "[P2/S1] Agency Portal - Master Screens",
+          "name": "table-roll/desktop",
+          "componentKey": "54c64cce144391a0ad4849a30f8d0912e0545009"
+        },
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Tables",
+          "componentKey": "5507de7c30f9a5d7f7be33d1f79859f800f7d89f"
+        }
+      ],
+      "policy": "Treat current tables as domain/template ownership, not Core primitive, until formalized."
+    },
+    {
+      "family": "Textarea",
+      "coreStatus": "ABSENT_AS_CORE_OWNER",
+      "externalEvidence": [
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Textarea",
+          "componentKey": "a6c740fb341f6baee1a09965aa435a67632a0d9f"
+        },
+        {
+          "library": "[P2/S1] Agency Portal - Master Screens",
+          "name": "master-copyable-component",
+          "componentKey": "0df46ef4fa56cb41870a44717ee5adbaa34a5e3e"
+        }
+      ]
+    },
+    {
+      "family": "Select",
+      "coreStatus": "PARTIAL_VIA_DROPDOWN",
+      "coreKey": "a6db9d0482c6446fd483f71f6a517f2cf3984345",
+      "externalEvidence": [
+        {
+          "library": "AXA - UI Kit - Design System [V1.1.0]",
+          "name": "Select",
+          "componentKey": "c916d06e89e97fb5b3b66bff5b4e1ad03d3cb12b"
+        }
+      ]
+    }
+  ]
+}

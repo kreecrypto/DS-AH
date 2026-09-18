@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "finding": "Most Core component examples compose local Core owners, but several pages still contain remote/stale component identities.",
+  "localCompositionEvidence": [
+    {
+      "page": "Button",
+      "dependencies": [
+        {
+          "name": "icon/general",
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "count": 182
+        }
+      ]
+    },
+    {
+      "page": "Badge",
+      "dependencies": [
+        {
+          "name": "base-icon",
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "count": 28
+        }
+      ]
+    },
+    {
+      "page": "Date picker",
+      "dependencies": [
+        {
+          "name": "icon/arrow",
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "count": 6
+        },
+        {
+          "name": "button",
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "count": 3
+        },
+        {
+          "name": "input-text",
+          "key": "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "page": "Input",
+      "dependencies": [
+        {
+          "name": "icon/general",
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "count": 101
+        },
+        {
+          "name": "base-icon",
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "count": 77
+        },
+        {
+          "name": "badge-filter",
+          "key": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+          "count": 30
+        },
+        {
+          "name": "button",
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "page": "Navbar",
+      "dependencies": [
+        {
+          "name": "menu",
+          "key": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "count": 128
+        },
+        {
+          "name": "icon/navbar",
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "count": 111
+        },
+        {
+          "name": "base-icon",
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "count": 29
+        },
+        {
+          "name": "icon/arrow",
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "count": 22
+        },
+        {
+          "name": "icon/general",
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "count": 22
+        }
+      ]
+    }
+  ],
+  "remoteOrStaleDependencies": [
+    {
+      "name": "base-icon",
+      "key": "fd2d7b7d5f1984dbabed7acfd0c6f0f0730148f7",
+      "observedOn": [
+        "Bottom sheet",
+        "Navbar"
+      ],
+      "status": "REMOTE_DIFFERENT_IDENTITY"
+    },
+    {
+      "name": "icon/general",
+      "key": "29fc20450fd5baa93950ce9bf927f97e9a1597af",
+      "observedOn": [
+        "Bottom sheet",
+        "Check box",
+        "List",
+        "Navbar"
+      ],
+      "status": "REMOTE_DIFFERENT_IDENTITY"
+    },
+    {
+      "name": "radio",
+      "key": "a34c47f4f91cb9c55ffdb07d30ffdcc5d738250d",
+      "observedOn": [
+        "Radio"
+      ],
+      "status": "REMOTE_DIFFERENT_IDENTITY"
+    },
+    {
+      "name": "cursor",
+      "key": "f7fed04cbb16ec26e519e8d0f8babe8cd8f1e10f",
+      "observedOn": [
+        "List"
+      ],
+      "status": "REMOTE_DEPENDENCY"
+    },
+    {
+      "name": "scroll-bar",
+      "key": "84bc346464e5a8033b7687e4124c36490d0c1fe1",
+      "observedOn": [
+        "List"
+      ],
+      "status": "REMOTE_DEPENDENCY"
+    },
+    {
+      "name": "menu",
+      "key": "1a776106d50e2f57c5dd78ea8d57af8e3f19a1cd",
+      "observedOn": [
+        "Navbar"
+      ],
+      "status": "REMOTE_DIFFERENT_IDENTITY"
+    },
+    {
+      "name": "material-symbols:ads-click-rounded",
+      "key": "4f2bfda6d7dd21b97aba4e0690d222a97a559972",
+      "observedOn": [
+        "Navbar"
+      ],
+      "status": "REMOTE_EXTERNAL_ICON"
+    },
+    {
+      "name": "Group 4",
+      "key": "6423d27f1b83a9660b7e75b3df7a91800df44558",
+      "observedOn": [
+        "Icon"
+      ],
+      "status": "REMOTE_UNRESOLVED"
+    },
+    {
+      "name": "icon/tootip",
+      "key": "429a65af88f910fda678a9afc6394a16736b6b18",
+      "observedOn": [
+        "Icon"
+      ],
+      "status": "LOCAL_OR_UNPUBLISHED_OWNER_LOCATION_UNRESOLVED"
+    }
+  ],
+  "policy": [
+    "Preserve existing instance identity during normal reuse.",
+    "Do not substitute a same-name current Core component solely by name.",
+    "Treat remote/stale identities as migration evidence, not as preferred sources."
+  ]
+}

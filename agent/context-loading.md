@@ -13,7 +13,9 @@ Load the minimum context needed, in this order.
 ## Then load by task
 
 ### Core UI task
-Load `registry/core-components.json` and `registry/foundations.json`.
+Load `registry/core-ds-components.json`, `registry/core-ds-tokens/index.json`, `registry/core-ds-preferred.json`, and `registry/core-ds-coverage.json`.
+Load only the semantic token chunk needed for the task.
+If component identity/dependency is relevant, also load `registry/core-ds-component-dependencies.json` and `registry/core-ds-dependencies.json`.
 
 ### Domain feature task
 Load `registry/domain-patterns.json`, `registry/figma-sources.json`, and relevant Core component entries.

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "authority": "audit recommendation; explicit design-system governance can override",
+  "duplicateFamilies": [
+    {
+      "family": "Checkbox",
+      "preferredCandidate": {
+        "componentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+        "nodeId": "198:4638",
+        "reason": "14 variants; supports Default/Disabled/Error, checked, indeterminate and on-dark."
+      },
+      "legacySupported": {
+        "componentKey": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+        "nodeId": "189:238",
+        "reason": "2-variant simple checkbox still used by existing List examples."
+      },
+      "migrationRule": "Use preferred candidate for new work after live identity check. Preserve legacy instances until an explicit migration."
+    },
+    {
+      "family": "Radio",
+      "preferredCandidate": {
+        "componentKey": "f90d2487d05573910316e182ac17e5bece4c856a",
+        "nodeId": "304:2149",
+        "reason": "5 variants; adds Default/Disabled/Error coverage."
+      },
+      "legacySupported": {
+        "componentKey": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+        "nodeId": "218:233",
+        "reason": "2-variant simple radio remains published."
+      },
+      "separatePattern": {
+        "componentKey": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+        "nodeId": "304:2197",
+        "name": "radio-list"
+      },
+      "migrationRule": "Do not replace legacy instances automatically; preserve existing identity unless migration is requested."
+    }
+  ],
+  "decisions": [
+    {
+      "family": "Background",
+      "name": "bg",
+      "componentKey": "5b8283247625acb9dfefe63ce4327d0e928c9906",
+      "decision": "KEEP_CORE_PRIMITIVE"
+    },
+    {
+      "family": "Background",
+      "name": "overlay",
+      "componentKey": "ad602fda1c480e7532bf3661bf9208430c52e23b",
+      "decision": "KEEP_NORMALIZE_DEVICE_AXIS"
+    },
+    {
+      "family": "Bottom Sheet",
+      "name": "bottom-shet",
+      "componentKey": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "decision": "KEEP_LOOKUP_RENAME_CANONICALLY"
+    },
+    {
+      "family": "Bottom Sheet Action Stack",
+      "name": "button",
+      "componentKey": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+      "decision": "CONTEXTUAL_NOT_CORE_BUTTON"
+    },
+    {
+      "family": "Quick Menu Icon",
+      "name": "icon/quick-menu",
+      "componentKey": "575aafd94b3fd4c8062f983a61e55910568c752c",
+      "decision": "REVIEW_REQUIRED_NUMERIC_SEMANTICS"
+    },
+    {
+      "family": "Quick Menu Icon",
+      "name": "icon/quick-menu2",
+      "componentKey": "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
+      "decision": "REVIEW_REQUIRED_NUMERIC_SEMANTICS"
+    },
+    {
+      "family": "Performance Icon",
+      "name": "icon/perfomance",
+      "componentKey": "9fdb719938cfd76964487506fa74bcfbf07d3334",
+      "decision": "KEEP_LOOKUP_FIX_CANONICAL_SPELLING"
+    }
+  ],
+  "canonicalNormalization": [
+    {
+      "legacy": ".device",
+      "canonical": "Device"
+    },
+    {
+      "legacy": "ischeck",
+      "canonical": "Checked"
+    },
+    {
+      "legacy": "check",
+      "canonical": "Checked"
+    },
+    {
+      "legacy": "stage",
+      "canonical": "State",
+      "condition": "when axis represents interaction/status state"
+    },
+    {
+      "legacy": "disable",
+      "canonical": "Disabled"
+    },
+    {
+      "legacy": "fasle",
+      "canonical": "False"
+    },
+    {
+      "legacy": "checkbok",
+      "canonical": "Checkbox"
+    },
+    {
+      "legacy": "buttom-right",
+      "canonical": "BottomRight"
+    },
+    {
+      "legacy": "bottom-shet",
+      "canonical": "Bottom Sheet"
+    },
+    {
+      "legacy": "qualtification",
+      "canonical": "Qualification"
+    },
+    {
+      "legacy": "perfomance",
+      "canonical": "Performance"
+    },
+    {
+      "legacy": "Property 1",
+      "canonical": null,
+      "condition": "resolve semantics per component before new work"
+    }
+  ],
+  "unresolved": [
+    "Explicit owner approval for preferred Checkbox/Radio candidate is not encoded in Figma metadata.",
+    "Semantic meaning for quick-menu numeric icon variants 01-10.",
+    "Whether legacy duplicate families should be formally deprecated in the source library."
+  ]
+}

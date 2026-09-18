@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "2.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "status": "complete_local_foundation_registry",
+  "totals": {
+    "variables": 352,
+    "color": 264,
+    "text": 45,
+    "spacing": 28,
+    "shape": 14,
+    "responsive": 1,
+    "textStyles": 41,
+    "paintStyles": 7,
+    "effectStyles": 0,
+    "gridStyles": 0
+  },
+  "colorChunks": [
+    {
+      "file": "registry/core-ds-tokens/color-bg-interaction.json",
+      "count": 52
+    },
+    {
+      "file": "registry/core-ds-tokens/color-bg-feedback-elevation.json",
+      "count": 37
+    },
+    {
+      "file": "registry/core-ds-tokens/color-bg-other.json",
+      "count": 26
+    },
+    {
+      "file": "registry/core-ds-tokens/color-stroke-interaction.json",
+      "count": 30
+    },
+    {
+      "file": "registry/core-ds-tokens/color-stroke-other.json",
+      "count": 27
+    },
+    {
+      "file": "registry/core-ds-tokens/color-text-interaction-feedback.json",
+      "count": 28
+    },
+    {
+      "file": "registry/core-ds-tokens/color-text-other.json",
+      "count": 25
+    },
+    {
+      "file": "registry/core-ds-tokens/color-icon-focus-misc.json",
+      "count": 39
+    }
+  ],
+  "collectionFiles": {
+    "text": {
+      "file": "registry/core-ds-tokens/text.json",
+      "count": 45
+    },
+    "spacing": {
+      "file": "registry/core-ds-tokens/spacing.json",
+      "count": 28
+    },
+    "shape": {
+      "file": "registry/core-ds-tokens/shape.json",
+      "count": 14
+    },
+    "Responsive": {
+      "file": "registry/core-ds-tokens/responsive.json",
+      "count": 1
+    }
+  },
+  "stylesFile": "registry/core-ds-tokens/styles.json",
+  "reconciliation": {
+    "color": "115 bg + 57 stroke + 53 text + 36 icon + 2 focus + 1 Color = 264",
+    "allVariables": "264 + 45 + 28 + 14 + 1 = 352"
+  },
+  "agentRule": "Load only the semantic token chunk required by the task. Do not load all color chunks by default."
+}

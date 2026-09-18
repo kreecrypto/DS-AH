@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "auditDate": "2026-09-18",
   "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
   "rule": "componentKey is preferred import identity. Keep exact Figma API for lookup; use canonical API for new work.",
@@ -188,6 +188,14 @@
         ]
       },
       "status": "canonical_with_axis_debt"
+    },
+    {
+      "page": "Background",
+      "nodeId": "129:417",
+      "componentKey": "5b8283247625acb9dfefe63ce4327d0e928c9906",
+      "figmaName": "bg",
+      "variantCount": 1,
+      "status": "canonical_background_primitive"
     },
     {
       "page": "Bottom sheet",
@@ -1210,5 +1218,14 @@
       "variantCount": 11,
       "status": "domain_specific"
     }
-  ]
+  ],
+  "deepInspection": {
+    "auditDate": "2026-09-18",
+    "sourceFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "ownerCount": 57,
+    "registryCoverage": "57/57 after adding bg",
+    "tokenIndex": "registry/core-ds-tokens/index.json",
+    "preferredMatrix": "registry/core-ds-preferred.json",
+    "coverageMatrix": "registry/core-ds-coverage.json"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.0.0",
+  "schemaVersion": "2.1.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -36,7 +36,11 @@
     "adminPortalSource": "registry/admin-portal-source.json",
     "adminPortalScenarios": "registry/admin-portal-scenarios.json",
     "adminPortalComponents": "registry/admin-portal-components.json",
-    "adminPortalDependencies": "registry/admin-portal-dependencies.json"
+    "adminPortalDependencies": "registry/admin-portal-dependencies.json",
+    "coreTokenIndex": "registry/core-ds-tokens/index.json",
+    "corePreferred": "registry/core-ds-preferred.json",
+    "coreCoverage": "registry/core-ds-coverage.json",
+    "coreComponentDependencies": "registry/core-ds-component-dependencies.json"
   },
   "routing": "agent/COMMANDS.md",
   "workflows": {

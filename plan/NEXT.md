@@ -1,18 +1,27 @@
 # Next Work — Repository Only
 
-The operating repository is usable now. Future repo-only refinement can continue without changing Figma.
+The Core DS deep inspection baseline is now complete for the local source file.
 
-## High-value follow-ups
+## Completed in Deep Inspect
 
-1. Extract exact remote variable values/modes for the Core DS color, spacing, radius and typography collections.
-2. Expand Core registry to Search, Select, Textarea, Toast, Modal, Pagination and table primitives after exact library lookup.
-3. Resolve ambiguous local values marked null / REVIEW_REQUIRED.
-4. Add per-domain state diagrams for:
-   - Case filter
-   - Live Chat
-   - Compensation
-   - Performance dashboards
-5. Add screen-template registry after validating repeated List/Detail/Form/Dashboard compositions.
-6. Add developer mapping / Code Connect evidence when codebase ownership is available.
+- [x] Reconcile all local variables: 352/352.
+- [x] Reconcile all color tokens: 264/264.
+- [x] Extract full local text, spacing, shape and responsive variables.
+- [x] Extract all 41 text styles and 7 paint styles.
+- [x] Inventory all 57 local published component owners.
+- [x] Add missing `bg` owner to Core registry.
+- [x] Resolve common-family coverage: Search / Select / Textarea / Modal / Toast / Pagination / Table.
+- [x] Create Preferred/Legacy candidate matrix for duplicate Checkbox and Radio families.
+- [x] Record hidden remote/stale component dependencies.
 
-Do not modify Figma as part of these repo-only follow-ups unless separately instructed.
+## Remaining evidence work
+
+1. Inspect the upstream remote `Foundations` and legacy `Color` source libraries directly if their source Figma files become available.
+2. Resolve semantic names for quick-menu numeric icon variants.
+3. Resolve the `Responsive/typography/screensize = 0` variable or formally deprecate it.
+4. Get explicit design governance approval for Checkbox/Radio preferred candidates and missing-family ownership decisions.
+5. Add visual baseline screenshots/regression references.
+6. Add developer component mapping / Code Connect when code ownership is available.
+7. Add per-domain state diagrams for product Master Screens.
+
+No Figma migration is implied by this backlog.

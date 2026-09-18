@@ -10,6 +10,23 @@ const requiredJson = [
   'registry/domain-patterns.json',
   'registry/foundations.json',
   'registry/aliases.json',
+  'registry/core-ds-tokens/styles.json',
+  'registry/core-ds-tokens/responsive.json',
+  'registry/core-ds-tokens/shape.json',
+  'registry/core-ds-tokens/spacing.json',
+  'registry/core-ds-tokens/text.json',
+  'registry/core-ds-tokens/color-icon-focus-misc.json',
+  'registry/core-ds-tokens/color-text-other.json',
+  'registry/core-ds-tokens/color-text-interaction-feedback.json',
+  'registry/core-ds-tokens/color-stroke-other.json',
+  'registry/core-ds-tokens/color-stroke-interaction.json',
+  'registry/core-ds-tokens/color-bg-other.json',
+  'registry/core-ds-tokens/color-bg-feedback-elevation.json',
+  'registry/core-ds-tokens/color-bg-interaction.json',
+  'registry/core-ds-component-dependencies.json',
+  'registry/core-ds-coverage.json',
+  'registry/core-ds-preferred.json',
+  'registry/core-ds-tokens/index.json',
   'registry/admin-portal-dependencies.json',
   'registry/admin-portal-components.json',
   'registry/admin-portal-scenarios.json',
@@ -98,6 +115,25 @@ if (adminDs?.components) {
   }
   for (const c of adminDs.components) scanCanonical(c.canonicalApi, 'admin.' + c.domain + '.' + c.figmaName);
 }
+
+
+const tokenIndex = parsed['registry/core-ds-tokens/index.json'];
+const colorTokenFiles = [
+  'registry/core-ds-tokens/color-bg-interaction.json',
+  'registry/core-ds-tokens/color-bg-feedback-elevation.json',
+  'registry/core-ds-tokens/color-bg-other.json',
+  'registry/core-ds-tokens/color-stroke-interaction.json',
+  'registry/core-ds-tokens/color-stroke-other.json',
+  'registry/core-ds-tokens/color-text-interaction-feedback.json',
+  'registry/core-ds-tokens/color-text-other.json',
+  'registry/core-ds-tokens/color-icon-focus-misc.json'
+];
+const colorCount = colorTokenFiles.reduce((n, rel) => n + (parsed[rel]?.count || 0), 0);
+const nonColorCount = ['registry/core-ds-tokens/text.json','registry/core-ds-tokens/spacing.json','registry/core-ds-tokens/shape.json','registry/core-ds-tokens/responsive.json'].reduce((n, rel) => n + (parsed[rel]?.count || 0), 0);
+if (colorCount !== 264) { console.error('CORE DS COLOR TOKEN COUNT MISMATCH', colorCount); failed = true; }
+if (colorCount + nonColorCount !== 352) { console.error('CORE DS VARIABLE COUNT MISMATCH', colorCount + nonColorCount); failed = true; }
+if (tokenIndex?.totals?.variables !== 352) { console.error('CORE DS TOKEN INDEX TOTAL MUST BE 352'); failed = true; }
+if ((parsed['registry/core-ds-components.json']?.components || []).length !== 57) { console.error('CORE DS COMPONENT OWNER COUNT MUST BE 57'); failed = true; }
 
 if (failed) process.exit(1);
 console.log('Registry validation PASS');

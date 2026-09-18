@@ -10,6 +10,10 @@ const requiredJson = [
   'registry/domain-patterns.json',
   'registry/foundations.json',
   'registry/aliases.json',
+  'registry/admin-portal-dependencies.json',
+  'registry/admin-portal-components.json',
+  'registry/admin-portal-scenarios.json',
+  'registry/admin-portal-source.json',
   'registry/core-ds-dependencies.json',
   'registry/core-ds-components.json',
   'registry/core-ds-foundations.json',
@@ -81,6 +85,18 @@ if (coreDs?.components) {
     console.error('DUPLICATE CORE DS COMPONENT KEYS', [...new Set(dupes)]);
     failed = true;
   }
+}
+
+
+const adminDs = parsed['registry/admin-portal-components.json'];
+if (adminDs?.components) {
+  const keys = adminDs.components.map(c => c.componentKey).filter(Boolean);
+  const dupes = keys.filter((k, i) => keys.indexOf(k) !== i);
+  if (dupes.length) {
+    console.error('DUPLICATE ADMIN COMPONENT KEYS', [...new Set(dupes)]);
+    failed = true;
+  }
+  for (const c of adminDs.components) scanCanonical(c.canonicalApi, 'admin.' + c.domain + '.' + c.figmaName);
 }
 
 if (failed) process.exit(1);

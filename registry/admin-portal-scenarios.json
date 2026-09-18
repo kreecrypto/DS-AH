@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "rEJCvUGUfzzQ3jegheRhnr",
+  "rules": [
+    "Scenario sections describe flow evidence, not reusable primitive ownership.",
+    "Use local published master-screen components before recreating a domain screen.",
+    "Most executable admin screens are 1280px wide; observed scenario frames commonly use 720/768px viewport heights, while long form masters extend vertically."
+  ],
+  "domains": [
+    {
+      "domain": "unique-link",
+      "pageId": "2:20",
+      "sections": [
+        {
+          "id": "151:40594",
+          "name": "Unique Link (Personal + Event & Campaign) - Create",
+          "childCount": 74
+        },
+        {
+          "id": "210:73794",
+          "name": "Unique Link (Personal + Event & Campaign) - View & Delete",
+          "childCount": 60
+        },
+        {
+          "id": "192:89241",
+          "name": "Unique Link (Personal + Event & Campaign) - Edit",
+          "childCount": 100
+        },
+        {
+          "id": "193:109388",
+          "name": "Unique Link (Personal + Event & Campaign) - Preview",
+          "childCount": 25
+        }
+      ],
+      "reusableMasters": [
+        "Unique Link - create",
+        "Unique Link - view",
+        "Unique Link - table",
+        "Unique Link - search table",
+        "Unique Link - drawer filter",
+        "Unique Link - edit"
+      ],
+      "flowEvidence": [
+        "header-flow-name",
+        "header-flow-section",
+        "Connector line",
+        "note-general",
+        "Pass all validations"
+      ],
+      "namingDebt": [
+        "sceen -> screen"
+      ]
+    },
+    {
+      "domain": "external-links-tools",
+      "pageId": "44:157",
+      "sections": [
+        {
+          "id": "44:1719",
+          "name": "External Links & Tools Management - Create",
+          "childCount": 97
+        },
+        {
+          "id": "946:175690",
+          "name": "External Links & Tools Management - Search and Filter",
+          "childCount": 43
+        },
+        {
+          "id": "44:1828",
+          "name": "External Links & Tools Management - View & Delete",
+          "childCount": 55
+        },
+        {
+          "id": "44:1836",
+          "name": "External Links & Tools Management - Edit",
+          "childCount": 81
+        },
+        {
+          "id": "75:48072",
+          "name": "External Links & Tools Management - Preview",
+          "childCount": 40
+        }
+      ],
+      "reusableMasters": [
+        "External Links & Tools Management - create",
+        "External Links & Tools Management- view",
+        "External Links & Tools Management- edit",
+        "External Links & Tools Management - table",
+        "External Links & Tools Management - filter",
+        "preview external link"
+      ]
+    },
+    {
+      "domain": "preset-tools",
+      "pageId": "44:157",
+      "sections": [
+        {
+          "id": "710:93955",
+          "name": "Preset Tools Management - Create",
+          "childCount": 48
+        },
+        {
+          "id": "946:210326",
+          "name": "Preset Tools Management - Search and Filter",
+          "childCount": 25
+        },
+        {
+          "id": "713:190014",
+          "name": "Preset Tools Management - View & Delete",
+          "childCount": 48
+        },
+        {
+          "id": "44:2112",
+          "name": "Preset Tools Management - Edit",
+          "childCount": 87
+        },
+        {
+          "id": "4253:121113",
+          "name": "Q&A",
+          "childCount": 1
+        }
+      ],
+      "reusableMasters": [
+        "Preset Tools Management",
+        "Preset Tools Management - filter"
+      ]
+    },
+    {
+      "domain": "terms-and-condition",
+      "pageId": "764:139013",
+      "sections": [
+        {
+          "id": "1537:273711",
+          "name": "Terms and condition - Create",
+          "childCount": 45
+        },
+        {
+          "id": "1537:336997",
+          "name": "Terms and condition - View & Delete",
+          "childCount": 49
+        },
+        {
+          "id": "10314:295854",
+          "name": "Terms and condition - View & Delete",
+          "childCount": 26,
+          "notes": "Duplicate section name; likely alternate/exception flow."
+        },
+        {
+          "id": "1537:381958",
+          "name": "Terms and condition - Edit",
+          "childCount": 82
+        },
+        {
+          "id": "1537:417672",
+          "name": "Terms and condition - Preview",
+          "childCount": 23
+        }
+      ],
+      "explicitExceptionEvidence": [
+        "ถ้ากรอกข้อมูลไม่ครบ",
+        "ถ้ากรอกข้อมูลครบ",
+        "มีข้อมูลแล้ว แต่มี Error เช่น ชื่อ วันเวลาซ้ำ"
+      ],
+      "reusableMasters": [
+        "Terms and condition - Landing",
+        "Terms and condition - filter",
+        "terms and condition - create",
+        "terms and condition - edit",
+        "terms and condition - view"
+      ],
+      "reusableDomainComponents": [
+        "preview terms and condition",
+        "Text area",
+        "terms and condition - table",
+        "terms and condition - row"
+      ]
+    },
+    {
+      "domain": "template-notification",
+      "pageId": "3993:108710",
+      "sections": [
+        {
+          "id": "5141:344464",
+          "name": "Config Template Notification - Create",
+          "childCount": 38
+        },
+        {
+          "id": "5333:315853",
+          "name": "Config Template Notification - View and Delete",
+          "childCount": 44
+        },
+        {
+          "id": "5378:651981",
+          "name": "Config Template Notification - Edit",
+          "childCount": 77
+        },
+        {
+          "id": "5994:503872",
+          "name": "Config Template Notification - Preview",
+          "childCount": 16
+        }
+      ],
+      "explorationSections": [
+        {
+          "id": "10815:50104",
+          "name": "option1"
+        },
+        {
+          "id": "10928:298092",
+          "name": "option2"
+        },
+        {
+          "id": "11601:86300",
+          "name": "Config noti"
+        },
+        {
+          "id": "10917:298088",
+          "name": "Config Notification"
+        },
+        {
+          "id": "11600:84683",
+          "name": "Section 1"
+        },
+        {
+          "id": "11611:132916",
+          "name": "Section 3"
+        }
+      ],
+      "sourceSections": [
+        {
+          "id": "11697:150978",
+          "name": "Config Template Notification - Master screen"
+        },
+        {
+          "id": "11697:150980",
+          "name": "Config Template Notification - Component"
+        }
+      ],
+      "reusableMasters": [
+        "config template - create",
+        "config template - edit",
+        "config template - view",
+        "config template - table",
+        "notification template - preview"
+      ]
+    }
+  ]
+}

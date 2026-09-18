@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "auditDate": "2026-09-18",
   "primaryCoreLibrary": {
     "name": "[DS] Agency Portal - Design System (Copy)",
@@ -41,5 +41,19 @@
       "role": "legacy_remote_variable_dependency_inside_core_ds",
       "policy": "preserve_existing_bindings"
     }
-  ]
+  ],
+  "adminPortalMasterScreens": {
+    "name": "[P2/S1] Admin Portal - Master Screens - Case Scenarios (Copy)",
+    "figmaFileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "figmaEntryNode": "0:1",
+    "role": "admin_domain_master_screens_and_case_scenarios",
+    "usePolicy": "reuse_local_published_domain_components_after_remote_primitive_identity_check",
+    "registries": {
+      "source": "registry/admin-portal-source.json",
+      "scenarios": "registry/admin-portal-scenarios.json",
+      "components": "registry/admin-portal-components.json",
+      "dependencies": "registry/admin-portal-dependencies.json"
+    }
+  },
+  "adminPortalDependencyWarning": "Resolved remote primitive keys in the Admin file can differ from the currently audited canonical Agency Core DS keys. Same-name assets require live identity verification."
 }

@@ -82,3 +82,20 @@ Direct Core DS inspection is registered from Figma file `5ZFIRJWtmEIvuq95Rhyo6I`
 - `docs/audit/core-ds-inspection-2026-09-18.md`
 
 Agent source order: **Core DS source → approved domain pattern → template/screen**.
+
+
+## Admin Portal Master Screens source
+
+Direct Admin Portal inspection is registered from Figma file `rEJCvUGUfzzQ3jegheRhnr`.
+
+- `registry/admin-portal-source.json`
+- `registry/admin-portal-scenarios.json`
+- `registry/admin-portal-components.json`
+- `registry/admin-portal-dependencies.json`
+- `docs/audit/admin-portal-inspection-2026-09-18.md`
+
+Admin Portal agent order:
+
+**foundation/Core authority → verify remote primitive identity → Admin domain component → scenario flow → one-off screen**.
+
+Important: the Admin file has no local foundations, and some same-name remote component keys differ from the currently audited Agency Core DS identities.

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "systemId": "DS-AH",
   "entrypoint": "AGENTS.md",
   "designContract": "design.md",
@@ -14,7 +14,13 @@
       "auditEntryNode": "1:12191",
       "defaultMode": "read-only"
     },
-    "writeRequires": "explicit user request in current task"
+    "writeRequires": "explicit user request in current task",
+    "adminPortalMasterScreens": {
+      "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+      "entryNode": "0:1",
+      "defaultMode": "read-only",
+      "role": "admin_domain_master_screens_and_scenarios"
+    }
   },
   "registries": {
     "coreSource": "registry/core-ds-source.json",
@@ -26,7 +32,11 @@
     "foundations": "registry/foundations.json",
     "domainPatterns": "registry/domain-patterns.json",
     "templates": "registry/templates.json",
-    "aliases": "registry/aliases.json"
+    "aliases": "registry/aliases.json",
+    "adminPortalSource": "registry/admin-portal-source.json",
+    "adminPortalScenarios": "registry/admin-portal-scenarios.json",
+    "adminPortalComponents": "registry/admin-portal-components.json",
+    "adminPortalDependencies": "registry/admin-portal-dependencies.json"
   },
   "routing": "agent/COMMANDS.md",
   "workflows": {

@@ -1,0 +1,1293 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "rEJCvUGUfzzQ3jegheRhnr",
+  "canonicalSourceSections": {
+    "masterScreenPage": "80:71254",
+    "templateNotificationMaster": "11697:150978",
+    "templateNotificationComponents": "11697:150980"
+  },
+  "rule": "Prefer Admin Portal local published component keys for Admin domain patterns. Exact Figma API is lookup evidence; canonicalApi is the clean agent-facing contract.",
+  "components": [
+    {
+      "domain": "external-links",
+      "nodeId": "71:37310",
+      "componentKey": "f94cfccc2ccc497999c67f1a03149fd2afe2f6ca",
+      "figmaName": "External Links & Tools Management- edit",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "figmaCurrentApi": {
+        "booleans": [
+          "Show Toast",
+          "Show scroll-bar vertical"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "68:31002",
+      "componentKey": "f5760d4a5d02efe68d80d1ec9549bf30faa250d9",
+      "figmaName": "image-tool-upload",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "uploaded",
+          "custom"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Uploaded",
+          "Custom"
+        ]
+      },
+      "decision": "reuse_normalize_case"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "68:31019",
+      "componentKey": "6351709ec1233bf70db5cee371f1a60dfe267a04",
+      "figmaName": "tool-preview-upload",
+      "type": "COMPONENT_SET",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "empty"
+        ],
+        "device": [
+          "mobile",
+          "desktop"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Empty"
+        ],
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "68:31204",
+      "componentKey": "6e5ade03a137aaa2825c6f0a868a3df0c2c8f548",
+      "figmaName": "upload image external link",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "type": [
+          "full image",
+          "custom",
+          "error case"
+        ]
+      },
+      "canonicalApi": {
+        "Mode": [
+          "FullImage",
+          "Custom",
+          "Error"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "71:40165",
+      "componentKey": "e6f2a23150ecc5e2ee03673f707195bdb85c20b2",
+      "figmaName": "External Links & Tools Management - table",
+      "type": "COMPONENT_SET",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "scroll",
+          "search found",
+          "search not found",
+          "reload",
+          "empty"
+        ],
+        "booleans": [
+          "Show scroll-bar vertical",
+          "Show scroll-bar horizontal",
+          "Show pagination",
+          "Show Toast",
+          "show filter"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Scroll",
+          "SearchFound",
+          "SearchNotFound",
+          "Reload",
+          "Empty"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "75:51266",
+      "componentKey": "085715ca88cdcb36f6781aa5c3009f71887f21e4",
+      "figmaName": "preview external link",
+      "type": "COMPONENT_SET",
+      "variantCount": 10,
+      "figmaCurrentApi": {
+        "device": [
+          "desktop",
+          "mobile"
+        ],
+        "language": [
+          "th",
+          "en",
+          "th - default"
+        ],
+        "size": [
+          "long",
+          "short"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Language": [
+          "TH",
+          "EN"
+        ],
+        "ContentLength": [
+          "Long",
+          "Short"
+        ]
+      },
+      "decision": "reuse_normalize_language"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "80:33116",
+      "componentKey": "9b390da04259d86de9fee633929ce2ed8f8c4163",
+      "figmaName": "External Links & Tools Management - filter",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "figmaCurrentApi": {
+        "booleans": [
+          "Show role Input field"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "80:55205",
+      "componentKey": "7d73dec66c0193f7db78870e57219241a7baa15b",
+      "figmaName": "Preset Tools Management - filter",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "44:1753",
+      "componentKey": "c23770379063a2d885926de45977d85e2f8400e0",
+      "figmaName": "External Links & Tools Management - create",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "figmaCurrentApi": {
+        "booleans": [
+          "select bg",
+          "Show Toast",
+          "Show scroll-bar vertical"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "946:171719",
+      "componentKey": "ae7bb90d0210eed6c3df14e00f60ccd983bf5639",
+      "figmaName": "Preset Tools Management",
+      "type": "COMPONENT_SET",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "search",
+          "search not found",
+          "reload",
+          "empty"
+        ],
+        "booleans": [
+          "Show Toast",
+          "Show filter"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Search",
+          "SearchNotFound",
+          "Reload",
+          "Empty"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "external-links",
+      "nodeId": "4213:138568",
+      "componentKey": "04af499a03c864d0cc0c70238a4aea796fd5446d",
+      "figmaName": "External Links & Tools Management- view",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "reload"
+        ],
+        "booleans": [
+          "Show Toast",
+          "Show scroll-bar vertical"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Reload"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "152:40756",
+      "componentKey": "b0e2b256c5a9b9c39ae5e8e25777dc01070ec337",
+      "figmaName": "Unique Link - create",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "162:10938",
+      "componentKey": "6b02a1cdd87bf906975a86efd2f830b2a8fd8581",
+      "figmaName": "Unique Link - view",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "184:48875",
+      "componentKey": "b4df0c503405bb685d1b8808d16cab9d38b96984",
+      "figmaName": "Unique Link - table",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "left",
+          "right"
+        ]
+      },
+      "canonicalApi": {
+        "Side": [
+          "Left",
+          "Right"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "652:244553",
+      "componentKey": "b2565a5662c60cde129b728d8bd9b0988f8d67ce",
+      "figmaName": "Unique Link - search table",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "184:75335",
+      "componentKey": "60f669a44b2cadbadc4e868b9afe424a6eb5efcf",
+      "figmaName": "Unique Link - drawer filter",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "154:42853",
+      "componentKey": "2eb702f2d8a5bff7e2e9d086091bfe149174abb3",
+      "figmaName": "Unique Link - edit",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:308113",
+      "componentKey": "0583a192ee2763ff221334867bf462cc3a310d55",
+      "figmaName": "Terms and condition - Landing",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "search"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Search"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:315486",
+      "componentKey": "4ce542053e159e28fec784c8b713f1a3e525e14c",
+      "figmaName": "Terms and condition - filter",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:297272",
+      "componentKey": "10c97e6cd3a422548ba5be9db97d496bc2e09e6f",
+      "figmaName": "terms and condition - create",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:298589",
+      "componentKey": "af19bf920aa9c42c348d13e3f4132b55dd9614ad",
+      "figmaName": "terms and condition - edit",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:300165",
+      "componentKey": "4dc1b26c261f1462fb29fcaf7513afd4be70373e",
+      "figmaName": "terms and condition - view",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1582:52030",
+      "componentKey": "fe6ea4da44cad1ee5d361da92afb32eed281701f",
+      "figmaName": "preview terms and condition",
+      "type": "COMPONENT_SET",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "device": [
+          "mobile",
+          "desktop",
+          "desktop empty",
+          "mobile empty"
+        ],
+        "language": [
+          "th",
+          "en"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ],
+        "State": [
+          "Default",
+          "Empty"
+        ],
+        "Language": [
+          "TH",
+          "EN"
+        ]
+      },
+      "decision": "reuse_split_axes"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "1537:251071",
+      "componentKey": "da28ef68a5fc209016bb8bde992d0d9cc1cd1dad",
+      "figmaName": "Text area",
+      "type": "COMPONENT_SET",
+      "variantCount": 10,
+      "figmaCurrentApi": {
+        "language": [
+          "en",
+          "th"
+        ],
+        "state": [
+          "default",
+          "error",
+          "filled",
+          "view",
+          "view empty"
+        ]
+      },
+      "canonicalApi": {
+        "Language": [
+          "EN",
+          "TH"
+        ],
+        "State": [
+          "Default",
+          "Error",
+          "Filled",
+          "View",
+          "ViewEmpty"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "813:171285",
+      "componentKey": "f42272dc8a438bb8df90492af1f7869b3ddaa6ea",
+      "figmaName": "terms and condition - table",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "terms",
+      "nodeId": "813:171287",
+      "componentKey": "f0987e527a5c757e5485490755cbeb9211e9529e",
+      "figmaName": "terms and condition - row",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "background": [
+          "white",
+          "grey"
+        ]
+      },
+      "canonicalApi": {
+        "Tone": [
+          "White",
+          "Grey"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "144:43484",
+      "componentKey": "178f76a6eac903437c2fdeaeb08b5923ef6521fd",
+      "figmaName": "image upload",
+      "type": "COMPONENT_SET",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "personal",
+          "event",
+          "empty",
+          "error",
+          "default"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Personal",
+          "Event",
+          "Empty",
+          "Error",
+          "Default"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "149:39220",
+      "componentKey": "d1cb41a1daf0f75bdecf1a2f00687260ead2b605",
+      "figmaName": "type",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "personal",
+          "event",
+          "personal product"
+        ],
+        "booleans": [
+          "view mode"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Personal",
+          "Event",
+          "PersonalProduct"
+        ],
+        "Boolean": [
+          "ViewMode"
+        ]
+      },
+      "decision": "reuse_normalize_name"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "161:8103",
+      "componentKey": "39b6225bcf9e92969e943696ab3000aeb3c31703",
+      "figmaName": "Unique Link",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "empty",
+          "filled"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Empty",
+          "Filled"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "161:8543",
+      "componentKey": "0199b427c9e220a68977f30b002f5c1fa8f8c6c3",
+      "figmaName": "access",
+      "type": "COMPONENT_SET",
+      "variantCount": 9,
+      "figmaCurrentApi": {
+        "type": [
+          "role",
+          "person",
+          "file",
+          "tab select"
+        ],
+        "state": [
+          "filled",
+          "typing",
+          "default",
+          "view list",
+          "edit table",
+          "view table"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Role",
+          "Person",
+          "File",
+          "TabSelect"
+        ],
+        "State": [
+          "Filled",
+          "Typing",
+          "Default",
+          "ViewList",
+          "EditTable",
+          "ViewTable"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "206:119700",
+      "componentKey": "aeb3a0d7ece9f09c1c050b53781dc83a14ca5964",
+      "figmaName": "attach file",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "uploaded",
+          "default",
+          "no file"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Uploaded",
+          "Default",
+          "NoFile"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "224:78096",
+      "componentKey": "ee770fecac5309771e6f166b9dc24419664189b3",
+      "figmaName": "preview unique link",
+      "type": "COMPONENT_SET",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "device": [
+          "mobile",
+          "desktop"
+        ],
+        "language": [
+          "th",
+          "en"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ],
+        "Language": [
+          "TH",
+          "EN"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "384:146846",
+      "componentKey": "0497a6e8dc08ac86e0e52f2164d2508897906078",
+      "figmaName": "example link",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "expand",
+          "default"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Expanded",
+          "Default"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "568:180201",
+      "componentKey": "aef3b56f3e8a6f1cddefdec65ceb596ea136eaa7",
+      "figmaName": "table  joiner",
+      "type": "COMPONENT_SET",
+      "variantCount": 10,
+      "figmaCurrentApi": {
+        "state": [
+          "empty",
+          "search",
+          "selected",
+          "filled",
+          "search not found",
+          "unable to load"
+        ],
+        "mode": [
+          "create",
+          "view"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Empty",
+          "Search",
+          "Selected",
+          "Filled",
+          "SearchNotFound",
+          "UnableToLoad"
+        ],
+        "Mode": [
+          "Create",
+          "View"
+        ]
+      },
+      "decision": "reuse_normalize_name"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "644:234783",
+      "componentKey": "25a0effeec46fcf6e1861144cf1b6b668509c1bc",
+      "figmaName": "modal joiner",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "632:182893",
+      "componentKey": "bc97bf0e2138bfebcde71de8972fba24004583c3",
+      "figmaName": "content on modal",
+      "type": "COMPONENT_SET",
+      "variantCount": 9,
+      "figmaCurrentApi": {
+        "type": [
+          "person",
+          "file"
+        ],
+        "state": [
+          "default",
+          "filled",
+          "filled max",
+          "typing",
+          "no file",
+          "format error",
+          "incorrect data"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Person",
+          "File"
+        ],
+        "State": [
+          "Default",
+          "Filled",
+          "FilledMax",
+          "Typing",
+          "NoFile",
+          "FormatError",
+          "IncorrectData"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "590:182649",
+      "componentKey": "9630a24aaf50495148dffeb1da3b55244e50db89",
+      "figmaName": "result",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "unique-link",
+      "nodeId": "652:245604",
+      "componentKey": "cc7bf4e4c2c88a6dc737350a4b3e5db15f2b80f2",
+      "figmaName": "search not found",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "865:96789",
+      "componentKey": "4d0eee5077cff6a638370c0e8d03a827d100964a",
+      "figmaName": "preview external link - edit",
+      "type": "COMPONENT_SET",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "select-01",
+          "select-05",
+          "select-10",
+          "select-13",
+          "view",
+          "select-all",
+          "reload"
+        ],
+        "booleans": [
+          "Show Toast"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Select1",
+          "Select5",
+          "Select10",
+          "Select13",
+          "View",
+          "SelectAll",
+          "Reload"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "865:90938",
+      "componentKey": "43dcdb630ec40b93b95d44252d8bb05be0a179db",
+      "figmaName": "icon-name-new",
+      "type": "COMPONENT_SET",
+      "variantCount": 11,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "iLearn",
+          "AdvisorZone",
+          "eCBR",
+          "MyWealth+",
+          "iReward",
+          "iRecruit",
+          "iAssist",
+          "iEvent",
+          "iAdvisor",
+          "Group Benefit",
+          "default"
+        ]
+      },
+      "canonicalApi": {
+        "Tool": [
+          "iLearn",
+          "AdvisorZone",
+          "eCBR",
+          "MyWealth+",
+          "iReward",
+          "iRecruit",
+          "iAssist",
+          "iEvent",
+          "iAdvisor",
+          "GroupBenefit",
+          "Default"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "864:88376",
+      "componentKey": "a7412816c2289b7de3dd61e06fb5084f612487ad",
+      "figmaName": "preset management-new",
+      "type": "COMPONENT_SET",
+      "variantCount": 7,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "select-01",
+          "selected-05",
+          "selected-10",
+          "select more than 12",
+          "select all",
+          "view"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Select1",
+          "Selected5",
+          "Selected10",
+          "Over12",
+          "SelectAll",
+          "View"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "865:91359",
+      "componentKey": "c3a9d00214d04febfd177317a2d88a2da8e009e6",
+      "figmaName": "Box",
+      "type": "COMPONENT_SET",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "blank",
+          "add",
+          "selected",
+          "error"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Blank",
+          "Add",
+          "Selected",
+          "Error"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "preset-tools",
+      "nodeId": "79:20711",
+      "componentKey": "beb3c84b5380cd0a582d85a0b6b497a41936b3d9",
+      "figmaName": "Box_Button",
+      "type": "COMPONENT_SET",
+      "variantCount": 7,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Icon_Add_Large",
+          "Icon_Delete_Large",
+          "Icon_Add_Medium",
+          "Icon_Delete_Medium",
+          "Icon_Delete_Small",
+          "Icon_Add_Small",
+          "Icon_ReOrder"
+        ]
+      },
+      "canonicalApi": {
+        "ActionSize": [
+          "AddLarge",
+          "DeleteLarge",
+          "AddMedium",
+          "DeleteMedium",
+          "DeleteSmall",
+          "AddSmall",
+          "Reorder"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "shared-admin",
+      "nodeId": "1817:116600",
+      "componentKey": "d6ab034a33d3a795d74fc00a5c873f069f9639d3",
+      "figmaName": "drawer/filter",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "filled"
+        ],
+        "booleans": [
+          "role",
+          "status dropdown"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Filled"
+        ],
+        "Boolean": [
+          "ShowRole",
+          "ShowStatusDropdown"
+        ]
+      },
+      "decision": "reuse_normalize_property"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5221:458854",
+      "componentKey": "a06137de672aaeedd095ac7b8cbafb8221be63a9",
+      "figmaName": "config template - create",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "filled"
+        ],
+        "booleans": [
+          "email body"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Filled"
+        ],
+        "Boolean": [
+          "ShowEmailBody"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "6018:96008",
+      "componentKey": "787beed5ce13a205bc1e31c44b1c3aa155bc7811",
+      "figmaName": "notification template - preview",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5221:461331",
+      "componentKey": "db97b5326c6cf373daddfadfda5f54c6202419bb",
+      "figmaName": "config template - edit",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "from create",
+          "from edit"
+        ],
+        "booleans": [
+          "email body"
+        ]
+      },
+      "canonicalApi": {
+        "Origin": [
+          "Create",
+          "Edit"
+        ],
+        "Boolean": [
+          "ShowEmailBody"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5270:31366",
+      "componentKey": "a43eab888e32c9ea85568c6e24fd834b0cc4dfd8",
+      "figmaName": "config template - view",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "from create",
+          "from edit"
+        ]
+      },
+      "canonicalApi": {
+        "Origin": [
+          "Create",
+          "Edit"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5270:32015",
+      "componentKey": "8efc9fd89a08edde78595419287708fe7291b34c",
+      "figmaName": "config template - table",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "search",
+          "with drawer"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Search",
+          "WithDrawer"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "4823:6918",
+      "componentKey": "c179adff9c1d721597c7d335f07aed4a181a99a2",
+      "figmaName": "header config step",
+      "type": "COMPONENT",
+      "variantCount": 1,
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "2863:238812",
+      "componentKey": "9ff317880c3fdf33472602b0d17027027447c184",
+      "figmaName": "table config step",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "background": [
+          "white",
+          "grey"
+        ]
+      },
+      "canonicalApi": {
+        "Tone": [
+          "White",
+          "Grey"
+        ]
+      },
+      "decision": "reuse_normalize_axis"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "4858:80253",
+      "componentKey": "4497021c506aa40580fa64e0bd7cef4fb806ac7d",
+      "figmaName": "Text area content",
+      "type": "COMPONENT_SET",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "state": [
+          "typing",
+          "default",
+          "error",
+          "filled",
+          "view",
+          "unable to load"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Typing",
+          "Default",
+          "Error",
+          "Filled",
+          "View",
+          "UnableToLoad"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "8840:138467",
+      "componentKey": "f9b88a361da3767c7111066c4f4b6b99eff606af",
+      "figmaName": "Text area email content",
+      "type": "COMPONENT_SET",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "state": [
+          "typing",
+          "default",
+          "error",
+          "filled",
+          "view",
+          "unable to load"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Typing",
+          "Default",
+          "Error",
+          "Filled",
+          "View",
+          "UnableToLoad"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "4867:80324",
+      "componentKey": "374804576517c134b2313243fc516ba68786d7aa",
+      "figmaName": "badge with icon",
+      "type": "COMPONENT_SET",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "size": [
+          "md",
+          "sm"
+        ],
+        "booleans": [
+          "right icon"
+        ]
+      },
+      "canonicalApi": {
+        "Size": [
+          "MD",
+          "SM"
+        ],
+        "Boolean": [
+          "TrailingIcon"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5221:458182",
+      "componentKey": "f3e7031b032438f47eab55d5dc6c56b3795a5eb2",
+      "figmaName": "sent to",
+      "type": "COMPONENT_SET",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "select all",
+          "sms",
+          "error",
+          "view"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "SelectAll",
+          "SMS",
+          "Error",
+          "View"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5221:459257",
+      "componentKey": "4b17b66ec4dd8a99a1a0c569c64117cf05167949",
+      "figmaName": "sent setting",
+      "type": "COMPONENT_SET",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "error",
+          "view"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Error",
+          "View"
+        ]
+      },
+      "decision": "reuse"
+    },
+    {
+      "domain": "template-notification",
+      "nodeId": "5994:514006",
+      "componentKey": "e8ed4c930a6905eda6cd51537c0b29cabbc6bd9e",
+      "figmaName": "preview template notification",
+      "type": "COMPONENT_SET",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "device": [
+          "desktop",
+          "mobile"
+        ],
+        "language": [
+          "th"
+        ],
+        "channel": [
+          "notification",
+          "sms",
+          "email",
+          "line"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Language": [
+          "TH"
+        ],
+        "Channel": [
+          "Notification",
+          "SMS",
+          "Email",
+          "LINE"
+        ]
+      },
+      "decision": "reuse_language_gap"
+    }
+  ]
+}

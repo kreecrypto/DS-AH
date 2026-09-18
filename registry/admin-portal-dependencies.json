@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "sourceFileKey": "rEJCvUGUfzzQ3jegheRhnr",
+  "localFoundationState": {
+    "variableCollections": 0,
+    "variables": 0,
+    "styles": 0
+  },
+  "finding": "Admin Portal domain components heavily consume remote UI components. Several remote owner keys do not match the currently audited canonical Agency Core DS keys, so automated import must not assume same-name means same published identity.",
+  "remoteOwnerSamples": [
+    {
+      "name": "menu",
+      "key": "ac0bdae2baea6fcf7407cc9b360d0ee9ab498f04",
+      "status": "remote_key_mismatch_vs_current_core_ds"
+    },
+    {
+      "name": "icon/navbar-admin",
+      "key": "c53e3355fbe0b28d6935403d5bfa80bff3abb2f0",
+      "status": "admin_specific"
+    },
+    {
+      "name": "icon/general",
+      "key": "09511944898e16be5ac95591501b87821848095e",
+      "status": "remote_key_mismatch_vs_current_core_ds"
+    },
+    {
+      "name": "icon/arrow",
+      "key": "00ed6828f8379dc514e06164399efc84be99a0cf",
+      "status": "remote_key_mismatch_vs_current_core_ds"
+    },
+    {
+      "name": "Label",
+      "key": "1bc4865f81707c29f27488333c7e9a97a484477d",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "Input field",
+      "key": "012f7f6002854be9d0cf5d6eef8397fac2bd4c7e",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "button",
+      "key": "16fa4824fe9115953294a3c22a57839fd3facc6f",
+      "status": "remote_dependency_family_A"
+    },
+    {
+      "name": "button",
+      "key": "cccf5490197b01856716193c2e4fd7bb2cfea548",
+      "status": "remote_dependency_family_B"
+    },
+    {
+      "name": "checkbox",
+      "key": "ee3c7c1412a612689ea7e19eb68b4e53bdfa36c7",
+      "status": "legacy_simple_checkbox"
+    },
+    {
+      "name": "checkbox",
+      "key": "2c42eb5cfae7cb80c32008ef35ec91a46c32797e",
+      "status": "advanced_checkbox"
+    },
+    {
+      "name": "radio",
+      "key": "19dfa0c5ff14b122607a5013c73f219e47805a0e",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "tab/chip",
+      "key": "8ea427cf2d3b22ec4941315ca9530158825dba8c",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "base-icon",
+      "key": "b43dd4111c123abcf4932a1ac2e996c8faa02164",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "header",
+      "key": "2fa3cbb6829731ac8c89f2dbea35cf03b72c681f",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "avatar",
+      "key": "62377edaeeccb19d4edd2b8bc8675b8868c74ec5",
+      "status": "remote_dependency"
+    },
+    {
+      "name": "breadcrumb",
+      "key": "fe30643c6e479b7b75120fa9279c81f001c3a1f9",
+      "status": "remote_dependency"
+    }
+  ],
+  "richTextEditorDependency": {
+    "evidenceDomains": [
+      "terms-and-condition",
+      "template-notification"
+    ],
+    "owners": [
+      {
+        "name": "menu-bar__button--base",
+        "key": "ed3539b3383261feac085856c87c601ba50d3e64"
+      },
+      {
+        "name": "menu-bar__button",
+        "key": "44682ae0b054adb3b9d33ec8251936ba5ec6c3dd"
+      },
+      {
+        "name": "menu-bar__text-style-dropdown",
+        "key": "6665d78c588d8210b68d880345ca83d0e51ac993"
+      },
+      {
+        "name": "menu-bar__text-align-dropdown",
+        "key": "09ab291f9dd49c9baa6de5f16b89dbf604caa513"
+      },
+      {
+        "name": "menu-bar__color-picker-dropdown",
+        "key": "393a4afb0a03fda378f41cfa8c719a670cc04619"
+      },
+      {
+        "name": "color-picker__list-item",
+        "key": "f60b7acf83bf8473931ab9ae9dd5fc416535b0c5"
+      }
+    ],
+    "iconEvidence": [
+      "ic_undo",
+      "ic_redo",
+      "ic_text-align-left",
+      "ic_text-bold",
+      "ic_text-italic",
+      "ic_text-underline",
+      "ic_text-strikethrough",
+      "ic_inline-code",
+      "ic_text-clear-format",
+      "ic_list-bulleted",
+      "ic_list-numbered"
+    ],
+    "policy": "Treat as separate upstream subsystem. Reuse existing dependency; do not redraw or replace with Core DS icons without explicit migration."
+  },
+  "searchDesignSystemEvidence": {
+    "query": "menu",
+    "result": "Current design-system search finds Agency Core DS menu key c27fb78aa960961f5557379b41e0cb5356842c92, while this Admin file resolves remote menu owner key ac0bdae2baea6fcf7407cc9b360d0ee9ab498f04.",
+    "conclusion": "Same-name asset lineage is unresolved/versioned. Resolve live before import."
+  },
+  "representativeComposition": [
+    {
+      "master": "Unique Link - create",
+      "instanceCount": 136,
+      "heavyDependencies": [
+        "menu",
+        "Input field",
+        "Label",
+        "icon/arrow",
+        "button",
+        "radio",
+        "breadcrumb",
+        "avatar"
+      ]
+    },
+    {
+      "master": "External Links & Tools Management - create",
+      "instanceCount": 98,
+      "heavyDependencies": [
+        "menu",
+        "Input field",
+        "Label",
+        "button",
+        "breadcrumb",
+        "avatar"
+      ]
+    },
+    {
+      "master": "terms and condition - create",
+      "instanceCount": 163,
+      "heavyDependencies": [
+        "menu",
+        "Rich Text Editor",
+        "Input field",
+        "Label",
+        "button",
+        "breadcrumb"
+      ]
+    },
+    {
+      "master": "config template - create",
+      "instanceCount": 293,
+      "heavyDependencies": [
+        "menu",
+        "checkbox",
+        "tab/chip",
+        "Rich Text Editor",
+        "Input field",
+        "Label",
+        "button",
+        "breadcrumb"
+      ]
+    }
+  ]
+}

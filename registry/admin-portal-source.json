@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "role": "admin_portal_master_screens_and_case_scenarios",
+  "figma": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "entryNode": "0:1",
+    "url": "https://www.figma.com/design/rEJCvUGUfzzQ3jegheRhnr/-P2-S1--Admin-Portal---Master-Screens---Case-Scenarios--Copy-?node-id=0-1",
+    "defaultAgentMode": "read-only"
+  },
+  "summary": {
+    "pageCount": 9,
+    "localVariableCollections": 0,
+    "localVariables": 0,
+    "localPaintStyles": 0,
+    "localTextStyles": 0,
+    "localEffectStyles": 0,
+    "localGridStyles": 0,
+    "interpretation": "Consumer/domain-pattern file. Do not create foundation tokens locally."
+  },
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Cover",
+      "classification": "reference_only"
+    },
+    {
+      "id": "2:19",
+      "name": "-----------",
+      "classification": "separator"
+    },
+    {
+      "id": "2:20",
+      "name": "Unique Link (Personal + Event & Campaign)",
+      "classification": "primary_domain_scenarios"
+    },
+    {
+      "id": "44:157",
+      "name": "External Links & Tools Management + Preset Setup",
+      "classification": "primary_domain_scenarios"
+    },
+    {
+      "id": "7342:406580",
+      "name": "Terms and Conditon management",
+      "classification": "empty_or_separator",
+      "debt": [
+        "Conditon -> Condition"
+      ]
+    },
+    {
+      "id": "764:139013",
+      "name": "Terms and Condition",
+      "classification": "primary_domain_scenarios"
+    },
+    {
+      "id": "3993:108710",
+      "name": "Template Notification",
+      "classification": "primary_domain_scenarios_and_local_master_components"
+    },
+    {
+      "id": "80:79563",
+      "name": "---------",
+      "classification": "separator"
+    },
+    {
+      "id": "80:71254",
+      "name": "Master screen",
+      "classification": "canonical_admin_domain_component_source"
+    }
+  ],
+  "sourcePriority": [
+    "Core DS primitives/foundations",
+    "Admin Portal local Master Screen components from this file",
+    "Admin Portal scenario sections from this file",
+    "one-off screen/frame only after live inspection"
+  ]
+}

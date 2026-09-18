@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-18",
+  "figmaFileKey": "cipkv7yTxyE29VCfMphE0W",
+  "approvalNote": "Classifications are audit-derived. Explicit product approval overrides this registry.",
+  "pages": [
+    {
+      "id": "1:12191",
+      "figmaName": "Cover",
+      "classification": "reference_only",
+      "implementation": "blocked"
+    },
+    {
+      "id": "1:12190",
+      "figmaName": "----",
+      "classification": "separator",
+      "implementation": "ignore"
+    },
+    {
+      "id": "130:21560",
+      "figmaName": "Sprint X",
+      "classification": "empty",
+      "implementation": "ignore"
+    },
+    {
+      "id": "703:17260",
+      "figmaName": "  -> Live Chat & Chatbot",
+      "classification": "current_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile sections",
+        "Component section",
+        "Master Screen"
+      ],
+      "keySections": {
+        "component": "1956:3945",
+        "master": "2111:9115"
+      }
+    },
+    {
+      "id": "304:19623",
+      "figmaName": " -> Case Management",
+      "classification": "primary_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile Create/View/List",
+        "Component section",
+        "Master screen",
+        "large local pattern inventory"
+      ],
+      "keySections": {
+        "master": "2343:87106"
+      }
+    },
+    {
+      "id": "263:19623",
+      "figmaName": " -> Campaign",
+      "classification": "current_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile",
+        "Master Screen",
+        "Component section"
+      ]
+    },
+    {
+      "id": "265:19632",
+      "figmaName": "  -> Performance Dashboard",
+      "classification": "legacy_candidate",
+      "implementation": "reference_only"
+    },
+    {
+      "id": "909:40988",
+      "figmaName": "    -> Team Performance Dashboard",
+      "classification": "primary_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile",
+        "Master Screens",
+        "component sections"
+      ],
+      "keySections": {
+        "master": "3565:15132",
+        "componentsAllTeams": "3292:6143",
+        "componentsIndividualUnit": "3696:509758"
+      }
+    },
+    {
+      "id": "909:40989",
+      "figmaName": "    -> My Performance Dashboard",
+      "classification": "primary_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile sections",
+        "component-heavy responsive patterns"
+      ]
+    },
+    {
+      "id": "909:40990",
+      "figmaName": "    -> Campaign and Competition Tracking Dashboard",
+      "classification": "pattern_reference",
+      "implementation": "conditional"
+    },
+    {
+      "id": "2333:12276",
+      "figmaName": " -> Persistency Dashboard",
+      "classification": "mixed_maturity",
+      "implementation": "conditional",
+      "notes": "Contains screenshots/references mixed with screen work."
+    },
+    {
+      "id": "2338:14566",
+      "figmaName": "    -> GA Owner Dashboard",
+      "classification": "reference_only",
+      "implementation": "blocked"
+    },
+    {
+      "id": "636:417",
+      "figmaName": " -> Health Portfolio Monitoring",
+      "classification": "primary_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile",
+        "Master Screen",
+        "Component section"
+      ]
+    },
+    {
+      "id": "636:419",
+      "figmaName": " -> Compensation, Taxation and Agent Statement",
+      "classification": "separator_or_empty",
+      "implementation": "ignore"
+    },
+    {
+      "id": "636:2741",
+      "figmaName": "    -> Compensation & Taxation",
+      "classification": "primary_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "responsive permutations",
+        "edge cases",
+        "component sections"
+      ]
+    },
+    {
+      "id": "636:2743",
+      "figmaName": "    -> Agent Statement",
+      "classification": "current_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Tablet/Mobile",
+        "Master Component"
+      ]
+    },
+    {
+      "id": "845:2",
+      "figmaName": "-> My Service Memo (POS / Claim)",
+      "classification": "reference_heavy",
+      "implementation": "reference_only",
+      "notes": "Large PDF/reference presence."
+    },
+    {
+      "id": "1278:3296",
+      "figmaName": "-> Customer List + Prospect List",
+      "classification": "pattern_source",
+      "implementation": "conditional"
+    },
+    {
+      "id": "128:16582",
+      "figmaName": "-> Preset Customer Filter",
+      "classification": "empty",
+      "implementation": "ignore"
+    },
+    {
+      "id": "130:21559",
+      "figmaName": "Sprint X (Improvement from UT)",
+      "classification": "empty",
+      "implementation": "ignore"
+    },
+    {
+      "id": "38:2",
+      "figmaName": " -> Customer List (Filter)",
+      "classification": "ut_pattern_reference",
+      "implementation": "conditional"
+    },
+    {
+      "id": "2844:19623",
+      "figmaName": " -> Memo (NEW)",
+      "classification": "current_candidate",
+      "implementation": "inspect_then_use",
+      "evidence": [
+        "Desktop/Mobile sections",
+        "drawer component set"
+      ]
+    }
+  ]
+}

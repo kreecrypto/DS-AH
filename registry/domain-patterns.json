@@ -1,0 +1,788 @@
+{
+  "schemaVersion": "1.0.0",
+  "rule": "Local patterns are second priority after Core DS. canonicalApi is a normalization proposal; live-inspect before write.",
+  "patterns": [
+    {
+      "domain": "case",
+      "figmaName": "attrachment file card",
+      "nodeIds": [
+        "2445:152864",
+        "1972:56291"
+      ],
+      "decision": "merge_and_normalize",
+      "figmaCurrentApi": {
+        "Stage": [
+          "empty",
+          "uploaded",
+          "uploading",
+          "fail",
+          "Invalid file type",
+          "Stage6",
+          "Stage7"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Empty",
+          "Uploaded",
+          "Uploading",
+          "Failed",
+          "InvalidFileType",
+          null,
+          null
+        ]
+      },
+      "notes": "Duplicate component sets observed; Stage6/7 unresolved."
+    },
+    {
+      "domain": "case",
+      "figmaName": "badge-status-type",
+      "nodeId": "421:26778",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "stage": [
+          "new",
+          "closed",
+          "process"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "New",
+          "Closed",
+          "InProgress"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    },
+    {
+      "domain": "case",
+      "figmaName": "case dashboard",
+      "nodeId": "612:20663",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "responsive": [
+          "desktop",
+          "tablet",
+          "mobile"
+        ],
+        "stage": [
+          "default",
+          "collapse",
+          "none",
+          "retry"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Collapsed",
+          "Empty",
+          "Retry"
+        ]
+      }
+    },
+    {
+      "domain": "case",
+      "figmaName": "chat history",
+      "nodeId": "1968:51475",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "stage": [
+          "default",
+          "active",
+          "empty",
+          "after comment",
+          "one comment",
+          "active filled",
+          "filled"
+        ],
+        "responsive": [
+          "desktop",
+          "tablet",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Active",
+          "Empty",
+          "AfterComment",
+          "OneComment",
+          "ActiveFilled",
+          "Filled"
+        ]
+      }
+    },
+    {
+      "domain": "case",
+      "figmaName": "desktop-filter",
+      "nodeId": "2194:53441",
+      "decision": "merge_with_shared_filter",
+      "figmaCurrentApi": {
+        "type": [
+          "basic",
+          "Criteria filter",
+          "save filter",
+          "customize filter",
+          "edit filter"
+        ],
+        "stage": [
+          "Default",
+          "none",
+          "retry",
+          "select type",
+          "select condition",
+          "summary",
+          "multiple select",
+          "default",
+          "date input",
+          "view"
+        ]
+      },
+      "canonicalApi": {
+        "Mode": [
+          "Basic",
+          "Criteria",
+          "Saved",
+          "Customize",
+          "Edit"
+        ],
+        "Step": [
+          "Default",
+          "Empty",
+          "Retry",
+          "SelectType",
+          "SelectCondition",
+          "Summary",
+          "MultiSelect",
+          "DateInput",
+          "View"
+        ]
+      }
+    },
+    {
+      "domain": "case",
+      "figmaName": "mobile-filter",
+      "nodeId": "2452:104993",
+      "decision": "merge_with_shared_filter",
+      "canonicalApi": {
+        "Device": [
+          "Mobile"
+        ],
+        "Mode": [
+          "Basic",
+          "Criteria",
+          "Saved",
+          "Customize"
+        ],
+        "Step": [
+          "Default",
+          "Empty",
+          "Retry",
+          "SelectType",
+          "SelectCondition",
+          "Summary",
+          "MultiSelect",
+          "DateInput",
+          "View",
+          "Edit"
+        ]
+      }
+    },
+    {
+      "domain": "campaign",
+      "figmaName": "filter desktop",
+      "nodeId": "3372:150975",
+      "decision": "merge_with_case_filter",
+      "notes": "Current API is effectively the same as Case desktop-filter."
+    },
+    {
+      "domain": "campaign",
+      "figmaName": "badge-status-type",
+      "nodeId": "3450:172834",
+      "decision": "domain_pattern",
+      "figmaCurrentApi": {
+        "stage": [
+          "In Coming",
+          "process",
+          "Closed"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Incoming",
+          "InProgress",
+          "Closed"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    },
+    {
+      "domain": "campaign",
+      "figmaName": "Detail-card",
+      "nodeId": "3557:231656",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "Size": [
+          "Default",
+          "Desktop",
+          "Mobile"
+        ],
+        "Property 1": [
+          "Basic Infomation",
+          "Other Information"
+        ],
+        "State": [
+          "Collapse",
+          "Expand"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Section": [
+          "BasicInformation",
+          "OtherInformation"
+        ],
+        "State": [
+          "Collapsed",
+          "Expanded"
+        ]
+      }
+    },
+    {
+      "domain": "team-performance",
+      "figmaName": "All Units/All Team Perf Section",
+      "nodeId": "3565:17666",
+      "decision": "keep",
+      "figmaCurrentApi": {
+        "Expand": [
+          "True",
+          "False"
+        ],
+        "Responsive": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Expanded": [
+          "True",
+          "False"
+        ],
+        "Device": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ]
+      }
+    },
+    {
+      "domain": "team-performance",
+      "figmaName": ".year graph",
+      "nodeId": "3303:4882",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "State": [
+          "Default",
+          "Hover"
+        ],
+        "Select": [
+          "APE",
+          "Case",
+          "Case Size",
+          "NBC",
+          "New Agent"
+        ],
+        "Overlap": [
+          "False",
+          "True"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover"
+        ],
+        "Metric": [
+          "APE",
+          "Case",
+          "CaseSize",
+          "NBC",
+          "NewAgent"
+        ],
+        "Overlap": [
+          "False",
+          "True"
+        ]
+      }
+    },
+    {
+      "domain": "team-performance",
+      "figmaName": ".Leaderboard Row Item",
+      "nodeId": "3389:368152",
+      "decision": "keep",
+      "figmaCurrentApi": {
+        "Type": [
+          "Unit",
+          "Agent"
+        ],
+        "booleans": [
+          "Show rank"
+        ],
+        "text": [
+          "Name",
+          "Code",
+          "Value"
+        ]
+      }
+    },
+    {
+      "domain": "team-performance",
+      "figmaName": "View All Team & Agent",
+      "nodeId": "4064:784973",
+      "decision": "review_required",
+      "notes": "Component set currently reports Figma property-definition errors and duplicate variant names."
+    },
+    {
+      "domain": "my-performance",
+      "figmaName": ".Card-Competition-overview",
+      "nodeId": "3306:147311",
+      "decision": "restructure_api",
+      "notes": "Property 1 mixes competition identity and state; split canonical API into Competition/State/Device."
+    },
+    {
+      "domain": "my-performance",
+      "figmaName": "Performance Gauge Card",
+      "nodeId": "3915:88462",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "type": [
+          "month",
+          "quarter",
+          "year"
+        ],
+        "stage": [
+          "Default",
+          "disable"
+        ]
+      },
+      "canonicalApi": {
+        "Period": [
+          "Month",
+          "Quarter",
+          "Year"
+        ],
+        "State": [
+          "Default",
+          "Disabled"
+        ]
+      }
+    },
+    {
+      "domain": "health",
+      "figmaName": "policy chart",
+      "nodeId": "721:20325",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "device": [
+          "mobile",
+          "desktop",
+          "tablet"
+        ],
+        "state": [
+          "Default",
+          "collapse"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Collapsed"
+        ]
+      }
+    },
+    {
+      "domain": "health",
+      "figmaName": "icon-health",
+      "nodeIds": [
+        "4543:121796",
+        "720:20977"
+      ],
+      "decision": "merge_and_normalize",
+      "figmaCurrentApi": {
+        "Property 1": [
+          "normal",
+          "warning",
+          "fax",
+          "watch",
+          "contract delete",
+          "Variant6"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Normal",
+          "Warning",
+          "Fax",
+          "Watch",
+          "ContractDeleted",
+          null
+        ]
+      },
+      "notes": "Duplicate sets; Variant6 unresolved."
+    },
+    {
+      "domain": "health",
+      "figmaName": "table-roll-health/desktop",
+      "nodeIds": [
+        "4543:121816",
+        "761:21127"
+      ],
+      "decision": "merge",
+      "figmaCurrentApi": {
+        "Type": [
+          "Header",
+          "even-roll",
+          "odd-roll"
+        ]
+      },
+      "canonicalApi": {
+        "RowType": [
+          "Header",
+          "Even",
+          "Odd"
+        ]
+      }
+    },
+    {
+      "domain": "health",
+      "figmaName": "Dashboard",
+      "nodeId": "4673:728604",
+      "decision": "review_and_split_axes",
+      "notes": "Current Size axis mixes viewport and non-size values such as follow policy."
+    },
+    {
+      "domain": "compensation",
+      "figmaName": "Summary",
+      "nodeId": "2063:94655",
+      "decision": "keep",
+      "figmaCurrentApi": {
+        "State": [
+          "Default",
+          "Loading"
+        ],
+        "Responsive": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Loading"
+        ],
+        "Device": [
+          "Desktop",
+          "Tablet",
+          "Mobile"
+        ]
+      }
+    },
+    {
+      "domain": "compensation",
+      "figmaName": "Rows",
+      "nodeId": "2130:6149",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "Responsive": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Loading"
+        ],
+        "Style": [
+          "Summary",
+          "Header",
+          "Title",
+          "Row"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Loading"
+        ],
+        "RowType": [
+          "Summary",
+          "Header",
+          "Title",
+          "Row"
+        ]
+      }
+    },
+    {
+      "domain": "compensation",
+      "figmaName": "Table",
+      "nodeId": "2132:8188",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "Responsive": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Loading",
+          "Error"
+        ],
+        "Style": [
+          "Default",
+          "Full year",
+          "Current year",
+          "No data"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Loading",
+          "Error"
+        ],
+        "DataMode": [
+          "Default",
+          "FullYear",
+          "CurrentYear",
+          "NoData"
+        ]
+      }
+    },
+    {
+      "domain": "compensation",
+      "figmaName": "Monthly Compensation Comparison",
+      "nodeId": "2228:125226",
+      "decision": "review_required",
+      "notes": "Component set reports Figma property-definition errors and generic VariantN values."
+    },
+    {
+      "domain": "agent-statement",
+      "figmaName": "Form",
+      "nodeId": "2200:12165",
+      "decision": "keep",
+      "figmaCurrentApi": {
+        "Type": [
+          "Management",
+          "compensation"
+        ],
+        "Role": [
+          "MA",
+          "agent"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Management",
+          "Compensation"
+        ],
+        "Role": [
+          "MA",
+          "Agent"
+        ]
+      }
+    },
+    {
+      "domain": "agent-statement",
+      "figmaName": "result",
+      "nodeId": "2871:135542",
+      "decision": "normalize",
+      "figmaCurrentApi": {
+        "Property 1": [
+          "Default",
+          "scroll",
+          "1",
+          "none",
+          "retry"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Scroll",
+          null,
+          "Empty",
+          "Retry"
+        ]
+      },
+      "notes": "Numeric state '1' unresolved."
+    },
+    {
+      "domain": "live-chat",
+      "figmaName": "Livechat/Chat",
+      "nodeId": "1960:9533",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "Property 1": [
+          "AI",
+          "Advisor",
+          "Agent"
+        ],
+        "booleans": [
+          "Show Time",
+          "Show Avatar"
+        ],
+        "text": [
+          "Text"
+        ]
+      },
+      "canonicalApi": {
+        "Actor": [
+          "AI",
+          "Advisor",
+          "Agent"
+        ]
+      }
+    },
+    {
+      "domain": "live-chat",
+      "figmaName": "Livechat/TOP/Min",
+      "nodeId": "2111:4791",
+      "decision": "keep_normalize",
+      "figmaCurrentApi": {
+        "Type": [
+          "AI",
+          "Agent - Online",
+          "Agent - Offine",
+          "History",
+          "History detail - Agent",
+          "History detail - AI"
+        ],
+        "Layout": [
+          "Default",
+          "Expand",
+          "Mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Mode": [
+          "AI",
+          "AgentOnline",
+          "AgentOffline",
+          "History",
+          "HistoryDetailAgent",
+          "HistoryDetailAI"
+        ],
+        "Layout": [
+          "Default",
+          "Expanded",
+          "Mobile"
+        ]
+      }
+    },
+    {
+      "domain": "live-chat",
+      "figmaName": "Chat/Type",
+      "nodeId": "2767:31898",
+      "decision": "keep_but_document_flow",
+      "figmaCurrentApi": {
+        "Talk With": [
+          "AI",
+          "Agent"
+        ],
+        "Property 1": [
+          "Start",
+          "Talk with agent",
+          "Select Topic",
+          "Policy Number",
+          "Queue",
+          "Agent Connected",
+          "Non-Business Hour",
+          "End Chat",
+          "Chat History",
+          "Continue Chat",
+          "other message/card states"
+        ]
+      },
+      "canonicalApi": {
+        "Actor": [
+          "AI",
+          "Agent"
+        ],
+        "Step": "semantic flow-state registry required"
+      }
+    },
+    {
+      "domain": "memo",
+      "figmaName": "drawer",
+      "nodeId": "2851:44715",
+      "decision": "review_required",
+      "figmaCurrentApi": {
+        ".device": [
+          "desktop",
+          "mobile"
+        ],
+        "stage": [
+          "default",
+          "typing",
+          "add pic"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Typing",
+          "AddPicture"
+        ]
+      },
+      "notes": "Component set reports Figma property-definition errors and duplicate desktop variants."
+    }
+  ]
+}

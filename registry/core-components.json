@@ -1,0 +1,564 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceLibrary": "[DS] Agency Portal - Design System (Copy)",
+  "lookupRule": "Prefer library name search; IDs below are audit evidence and may change across files.",
+  "components": [
+    {
+      "canonicalName": "Button",
+      "figmaName": "button",
+      "remote": true,
+      "auditOwnerId": "313:27197",
+      "usageEvidence": {
+        "caseManagement": 2023
+      },
+      "figmaCurrentApi": {
+        "type": [
+          "primary",
+          "outline",
+          "ghost"
+        ],
+        "state": [
+          "default",
+          "active",
+          "disabled",
+          "error",
+          "hover"
+        ],
+        "size": [
+          "xss",
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "booleans": [
+          "left-icon",
+          "right-icon"
+        ]
+      },
+      "canonicalApi": {
+        "Style": [
+          "Primary",
+          "Outline",
+          "Ghost"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Active",
+          "Disabled",
+          "Error"
+        ],
+        "Size": [
+          "XXS",
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Boolean": [
+          "LeadingIcon",
+          "TrailingIcon"
+        ]
+      },
+      "searchComponentKeys": [
+        "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+        "9391284ee3e2618096ea34f89adfbc10500a3a96"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Icon Button",
+      "figmaName": "button icon",
+      "remote": true,
+      "auditOwnerId": "313:23809",
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "hover",
+          "disabled",
+          "active"
+        ],
+        "size": [
+          "xs",
+          "sm",
+          "md"
+        ],
+        "type": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Disabled",
+          "Active"
+        ],
+        "Size": [
+          "XS",
+          "SM",
+          "MD"
+        ],
+        "Style": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Input",
+      "figmaName": "input-text",
+      "remote": true,
+      "auditOwnerId": "3187:17137",
+      "usageEvidence": {
+        "caseManagement": 2669
+      },
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "focused",
+          "error",
+          "disabled",
+          "read-only",
+          "warning",
+          "chip input",
+          "chip typing",
+          "chip input max",
+          "chip typing max",
+          "view"
+        ],
+        "filled": [
+          "false",
+          "true"
+        ],
+        "booleans": [
+          "leading-icon",
+          "trailing-icon",
+          "text count",
+          "bottom",
+          "info",
+          "badges",
+          "delete field",
+          "scroll",
+          "clear field",
+          "required",
+          "label",
+          "help-text"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Focused",
+          "Error",
+          "Disabled",
+          "ReadOnly",
+          "Warning",
+          "ChipInput",
+          "ChipTyping",
+          "ChipInputMax",
+          "ChipTypingMax",
+          "View"
+        ],
+        "Filled": [
+          "False",
+          "True"
+        ]
+      },
+      "searchComponentKeys": [
+        "87427036c09f6d4a3283ae068bc36e4d6351a7e7"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Menu Item",
+      "figmaName": "menu",
+      "remote": true,
+      "auditOwnerId": "265:30822",
+      "figmaCurrentApi": {
+        ".device": [
+          "desktop",
+          "tablet"
+        ],
+        "status": [
+          "selected",
+          "default",
+          "sub",
+          "sub-selected"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet"
+        ],
+        "State": [
+          "Selected",
+          "Default",
+          "Sub",
+          "SubSelected"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "searchComponentKeys": [
+        "c27fb78aa960961f5557379b41e0cb5356842c92"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Icon General",
+      "figmaName": "icon/general",
+      "remote": true,
+      "auditOwnerId": "313:25898",
+      "usageEvidence": {
+        "caseManagement": 6320
+      },
+      "figmaCurrentApi": {
+        "style": [
+          "outline",
+          "solid",
+          "general"
+        ],
+        "icon": "large enumerated icon set"
+      },
+      "canonicalApi": {
+        "Style": [
+          "Outline",
+          "Solid",
+          "General"
+        ],
+        "Icon": "use existing option/instance-swap; do not draw duplicate icon"
+      },
+      "searchComponentKeys": [
+        "7e81e1a051342ff12482ec11c087688a5ed9fe62"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Navbar Icon",
+      "figmaName": "icon/navbar",
+      "remote": true,
+      "auditOwnerId": "265:30817",
+      "figmaCurrentApi": {
+        "style": [
+          "solid",
+          "outline"
+        ],
+        "icon": [
+          "home",
+          "groups",
+          "analytics",
+          "article_person",
+          "automation",
+          "campaign",
+          "cards_stack",
+          "edit_note",
+          "flag",
+          "flowsheet",
+          "pie_chart",
+          "query_stats",
+          "strategy",
+          "target-group"
+        ]
+      },
+      "canonicalApi": {
+        "Style": [
+          "Solid",
+          "Outline"
+        ]
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Arrow Icon",
+      "figmaName": "icon/arrow",
+      "remote": true,
+      "auditOwnerId": "38:811",
+      "figmaCurrentApi": {
+        "icon": [
+          "arrow-down",
+          "arrow-left",
+          "arrow-outward",
+          "arrow-right",
+          "arrow-up",
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up",
+          "last_page",
+          "first_page",
+          "sub-menu",
+          "drop-down",
+          "drop-up",
+          "left-slidebar-open",
+          "left-slidebar-close",
+          "expand"
+        ]
+      },
+      "canonicalApi": {
+        "Icon": "reuse existing variant"
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Base Icon",
+      "figmaName": "base-icon",
+      "remote": true,
+      "auditOwnerId": "313:26268",
+      "figmaCurrentApi": {
+        "size": [
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl",
+          "3xl"
+        ],
+        "property": "INSTANCE_SWAP Icon"
+      },
+      "canonicalApi": {
+        "Size": [
+          "SM",
+          "MD",
+          "LG",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "Icon": "InstanceSwap"
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Badge",
+      "figmaName": "badge",
+      "remote": true,
+      "auditOwnerId": "313:26281",
+      "figmaCurrentApi": {
+        "color": [
+          "feedback",
+          "badge"
+        ],
+        "stage": [
+          "success",
+          "warning",
+          "error",
+          "info",
+          "coral",
+          "mint",
+          "blue",
+          "candy",
+          "leaf",
+          "sunshine",
+          "grape",
+          "teal",
+          "error-solid",
+          "neutral"
+        ],
+        "size": [
+          "sm",
+          "md"
+        ],
+        "boolean": [
+          "Show icon"
+        ]
+      },
+      "canonicalApi": {
+        "Family": [
+          "Feedback",
+          "Badge"
+        ],
+        "State": [
+          "Success",
+          "Warning",
+          "Error",
+          "Info",
+          "Coral",
+          "Mint",
+          "Blue",
+          "Candy",
+          "Leaf",
+          "Sunshine",
+          "Grape",
+          "Teal",
+          "ErrorSolid",
+          "Neutral"
+        ],
+        "Size": [
+          "SM",
+          "MD"
+        ],
+        "Boolean": [
+          "ShowIcon"
+        ]
+      },
+      "searchComponentKeys": [
+        "f2187fca79d95e1669dd417689535f0f83e9f1df"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Divider",
+      "figmaName": "divider",
+      "remote": true,
+      "auditOwnerId": "38:2279",
+      "figmaCurrentApi": {
+        "style": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "canonicalApi": {
+        "Orientation": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "searchComponentKeys": [
+        "80aa0c0b116de48fd29f990e1ca2ba18386e8628"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Tab Chip",
+      "figmaName": "tab/chip",
+      "remote": true,
+      "auditOwnerId": "421:24403",
+      "figmaCurrentApi": {
+        "active": [
+          "yes",
+          "no"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ],
+        "booleans": [
+          "left-icon",
+          "right-icon"
+        ]
+      },
+      "canonicalApi": {
+        "Active": [
+          "True",
+          "False"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Boolean": [
+          "LeadingIcon",
+          "TrailingIcon"
+        ]
+      },
+      "searchComponentKeys": [
+        "a5b3b9493a4813b83ac2acaa3753db830d26eacb"
+      ],
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Table Header",
+      "figmaName": "header table",
+      "instanceNameSeen": "Header",
+      "remote": true,
+      "auditOwnerId": "203:16949",
+      "figmaCurrentApi": {
+        "Property 1": [
+          "sm",
+          "md"
+        ],
+        "boolean": [
+          "Show sorting"
+        ]
+      },
+      "canonicalApi": {
+        "Size": [
+          "SM",
+          "MD"
+        ],
+        "Boolean": [
+          "ShowSorting"
+        ]
+      },
+      "policy": "reuse_but_normalize_reference"
+    },
+    {
+      "canonicalName": "Breadcrumb",
+      "figmaName": "breadcrumb",
+      "remote": true,
+      "auditOwnerId": "149:16581",
+      "figmaCurrentApi": {
+        "booleans": [
+          "page02",
+          "page03"
+        ]
+      },
+      "canonicalApi": {
+        "Boolean": [
+          "ShowPage2",
+          "ShowPage3"
+        ]
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Radio",
+      "figmaName": "radio",
+      "remote": true,
+      "auditOwnerId": "459:21681",
+      "figmaCurrentApi": {
+        "ischeck": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "policy": "reuse"
+    },
+    {
+      "canonicalName": "Checkbox",
+      "figmaName": "checkbox",
+      "remote": true,
+      "auditOwnerId": "459:21685",
+      "figmaCurrentApi": {
+        "ischeck": [
+          "true",
+          "false"
+        ],
+        "boolean": [
+          "Show icon"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ],
+        "Boolean": [
+          "ShowIcon"
+        ]
+      },
+      "searchComponentKeys": [
+        "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+        "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+      ],
+      "policy": "reuse"
+    }
+  ]
+}

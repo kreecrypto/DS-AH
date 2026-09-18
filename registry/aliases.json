@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "1.0.0",
+  "rule": "Use legacyAlias for lookup only; use canonical for new documentation/work. Null canonical means REVIEW_REQUIRED.",
+  "aliases": [
+    {
+      "legacy": "managemment",
+      "canonical": "management",
+      "confidence": "high"
+    },
+    {
+      "legacy": "serach",
+      "canonical": "search",
+      "confidence": "high"
+    },
+    {
+      "legacy": "attrachment",
+      "canonical": "attachment",
+      "confidence": "high"
+    },
+    {
+      "legacy": "attrach",
+      "canonical": "attachment",
+      "confidence": "high"
+    },
+    {
+      "legacy": "collaps",
+      "canonical": "Collapsed",
+      "confidence": "high"
+    },
+    {
+      "legacy": "colla",
+      "canonical": "Collapsed",
+      "confidence": "medium",
+      "notes": "Observed as abbreviated collapse state."
+    },
+    {
+      "legacy": "Callapsed",
+      "canonical": "Collapsed",
+      "confidence": "high"
+    },
+    {
+      "legacy": "Uplaod",
+      "canonical": "Upload",
+      "confidence": "high"
+    },
+    {
+      "legacy": "Offine",
+      "canonical": "Offline",
+      "confidence": "high"
+    },
+    {
+      "legacy": "Infomation",
+      "canonical": "Information",
+      "confidence": "high"
+    },
+    {
+      "legacy": "decending",
+      "canonical": "descending",
+      "confidence": "high"
+    },
+    {
+      "legacy": "successd",
+      "canonical": "success",
+      "confidence": "high"
+    },
+    {
+      "legacy": "responsive",
+      "canonical": "Device",
+      "confidence": "high",
+      "scope": "variant-axis when values are desktop/tablet/mobile"
+    },
+    {
+      "legacy": "Responsive",
+      "canonical": "Device",
+      "confidence": "high",
+      "scope": "variant-axis when values are desktop/tablet/mobile"
+    },
+    {
+      "legacy": ".device",
+      "canonical": "Device",
+      "confidence": "high"
+    },
+    {
+      "legacy": "device",
+      "canonical": "Device",
+      "confidence": "high",
+      "scope": "viewport axis"
+    },
+    {
+      "legacy": "Property 1",
+      "canonical": null,
+      "confidence": "none",
+      "notes": "Meaning is component-specific; inspect before mapping."
+    },
+    {
+      "legacy": "Property 2",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Variant4",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Variant6",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Stage6",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Stage7",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Style5",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Style6",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Style7",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Style8",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Frame 1984080591",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "Frame 1984080853",
+      "canonical": null,
+      "confidence": "none"
+    },
+    {
+      "legacy": "labtop",
+      "canonical": null,
+      "confidence": "low",
+      "notes": "Likely viewport terminology error but do not map without inspecting dimensions/context."
+    },
+    {
+      "legacy": "1",
+      "canonical": null,
+      "confidence": "none",
+      "notes": "Numeric state in result/QVB-like components requires semantic review."
+    }
+  ]
+}

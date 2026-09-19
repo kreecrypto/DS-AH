@@ -75,3 +75,7 @@ Every production skill must be detailed enough to produce repeatable decisions a
 `agent/workflows/` defines orchestration sequence.  
 `agent/gates/quality-gates.json` defines QA gates.  
 `agent/output/evidence-matrix.schema.json` defines auditable evidence.
+
+## Figma operating SOP
+
+Live Figma work follows `docs/figma-sop.md`. Agent Skills make design decisions; the Figma capability layer performs read/write/verify operations under Change Scope and Write Permission.

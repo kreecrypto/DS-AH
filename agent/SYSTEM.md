@@ -200,3 +200,7 @@ Do not complete a safely fixable authorized write task with unresolved P0/P1 fai
 ## Production Skill Contract
 
 The 13 primary production skills must satisfy `skills/SKILL-CONTRACT.md` and the depth checks in `agent/evals/skill-depth-cases.json`. Skills are executable professional contracts with explicit inputs, procedures, failure/block rules, evidence, and downstream handoff.
+
+## Figma SOP
+
+For any live Figma work, follow `docs/figma-sop.md`. Agent Skills own design decisions; the Figma capability layer owns inspect, controlled mutation, and verification. Every material write must be inspected before execution, return affected node IDs, and be verified afterward.

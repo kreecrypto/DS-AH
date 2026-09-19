@@ -61,3 +61,7 @@ See `agent/manifest.json` for the complete machine-readable map.
 ## Skill loading quality
 
 Before relying on a production skill, load its full `SKILL.md`. The 13 primary skills are governed by `skills/SKILL-CONTRACT.md`; do not substitute a short summary for the full contract when the skill is active.
+
+## Figma SOP loading
+
+Before live Figma inspection/write/verification, read `docs/figma-sop.md`. Figma execution must remain subordinate to the active Agent Skills, Change Scope, and Write Permission.

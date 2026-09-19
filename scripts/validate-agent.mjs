@@ -45,6 +45,7 @@ const required=[
   'scripts/run-skill-depth-evals.mjs',
   'skills/SKILL-CONTRACT.md',
   'skills/README.md',
+  'docs/figma-sop.md',
   'policies/write-permission.md',
   'policies/scope-control.md'
 ];
@@ -190,6 +191,15 @@ for(const p of ['agent/SYSTEM.md','AGENTS.md','agent/COMMANDS.md','agent/workflo
 
 if(!read('agent/SYSTEM.md').includes('Production Skill Contract')) fail('SYSTEM MUST DECLARE PRODUCTION SKILL CONTRACT');
 if(!read('AGENTS.md').includes('Skill loading quality')) fail('AGENTS ENTRYPOINT MUST DECLARE FULL SKILL LOADING');
+
+
+if(manifest?.figma?.sop!=='docs/figma-sop.md') fail('MANIFEST MUST DECLARE FIGMA SOP');
+const figmaSop=read('docs/figma-sop.md');
+for(const marker of ['## 3. Mandatory operating flow','## 5. SOP-01 — Inspect first','## 8. SOP-04 — Work incrementally','## 14. SOP-10 — Return affected node IDs','## 15. SOP-11 — Verify every material mutation','## 23. Hard prohibitions']){
+  if(!figmaSop.includes(marker)) fail('FIGMA SOP MISSING REQUIRED SECTION',marker);
+}
+if(!read('agent/SYSTEM.md').includes('docs/figma-sop.md')) fail('SYSTEM MUST REFERENCE FIGMA SOP');
+if(!read('AGENTS.md').includes('docs/figma-sop.md')) fail('AGENTS ENTRYPOINT MUST REFERENCE FIGMA SOP');
 
 if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract') fail('GITHUB ROLE MUST REMAIN KB/CONTRACT');
 if(manifest?.architecture?.runtimeHost!=='chatgpt' || manifest?.architecture?.figmaExecution!=='mcp_via_chatgpt') fail('RUNTIME ARCHITECTURE MISMATCH');

@@ -28,7 +28,8 @@
       "defaultMode": "read-only",
       "role": "admin_domain_master_screens_and_scenarios"
     },
-    "writeRequires": "explicit current-task instruction plus target, scope, valid reference gate and live write capability"
+    "writeRequires": "explicit current-task instruction plus target, scope, valid reference gate and live write capability",
+    "sop": "docs/figma-sop.md"
   },
   "registries": {
     "coreSource": "registry/core-ds-source.json",

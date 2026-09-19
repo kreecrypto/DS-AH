@@ -645,3 +645,69 @@ Before PASS:
 - [ ] Final QA Aggregation PASS
 - [ ] every Fix Loop iteration re-entered full required QA
 - [ ] Evidence complete
+
+
+## 33. SOP-25 — Exact user reference priority
+
+When the current task contains an exact image/visual/Figma reference and the user asks to match/follow/use it, that reference is Primary Visual Authority.
+
+Do not replace it with Product Master because target content appears to match a known screen family.
+
+If a prior reference is explicitly requested but cannot be recovered with evidence:
+- BLOCKED_REFERENCE_MISSING
+- no Product Master fallback
+
+## 34. SOP-26 — Reference Lock
+
+Before Design Decision on reference-based work, create a Reference Lock:
+- Primary Visual Authority
+- Build Mode
+- Visual/System/Content/Preservation authority lanes
+- supporting sources
+- forbidden substitutions
+- evidence
+
+A locked reference may change only after explicit user change or re-resolution caused by stale/invalid evidence.
+
+## 35. SOP-27 — Visual Grammar Extraction
+
+Before Figma planning, extract:
+- canvas/aspect ratio
+- grid/rows/columns/gaps
+- hierarchy
+- repeated card/row anatomy
+- typography roles
+- radius/stroke/surface
+- color roles
+- icon/chart grammar
+- state/responsive grammar
+- fidelity anchors
+- unknowns
+
+Do not silently invent material geometry in REPRODUCE.
+
+## 36. SOP-28 — Design System Mapping
+
+Map each visual role to approved DS assets. Preserve the visual role.
+
+DS components/tokens do not authorize changing the locked grid, composition, card count/order, hierarchy, density or chart geometry.
+
+## 37. SOP-29 — REPRODUCE skeleton checkpoint
+
+For locked REPRODUCE:
+1. build canvas and major skeleton only
+2. capture screenshot/render
+3. compare side-by-side with locked reference
+4. fix material mismatch
+5. only then build detail batches
+
+Do not continue detailed build while skeleton has P0/P1 fidelity mismatch.
+
+## 38. SOP-30 — Reference QA split
+
+QA-01A = Reference Authority.  
+QA-01B = Visual Fidelity.
+
+Wrong reference/master is P0 even if visual quality is otherwise high.
+
+QA-01B requires comparable visual evidence. Metadata-only evidence cannot PASS.

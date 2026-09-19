@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "2.0.0",
-  "agentVersion": "2.3.0",
+  "schemaVersion": "2.1.0",
+  "agentVersion": "2.4.0",
   "name": "Design Control Agent State Machine",
   "initialState": "RECEIVED",
   "terminalStates": [
@@ -14,6 +14,9 @@
     "INSPECTING",
     "BASELINED",
     "REFERENCE_RESOLVED",
+    "REFERENCE_LOCKED",
+    "GRAMMAR_EXTRACTED",
+    "SYSTEM_MAPPED",
     "PLANNED",
     "READY_TO_EXECUTE",
     "REVALIDATING",
@@ -42,57 +45,6 @@
       "requires": [
         "intent_resolved",
         "product_resolved_or_explicit_unknown"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "INSPECTING",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_FIGMA_INSPECT"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "REFERENCE_RESOLVED",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_RESOLVE_REFERENCE",
-        "previous_inspection_reusable"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "PLANNED",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_DESIGN_DECISION_or_CHANGE_SCOPE",
-        "upstream_context_revalidated"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "READY_TO_EXECUTE",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_WRITE_PERMISSION_or_PRE_WRITE_REVALIDATION",
-        "upstream_context_revalidated"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "RECOVERING",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_MUTATION_RECOVERY"
-      ]
-    },
-    {
-      "from": "RESUMING",
-      "to": "VERIFYING",
-      "requires": [
-        "resume_checkpoint_valid",
-        "resume_stage_VERIFICATION"
       ]
     },
     {
@@ -129,18 +81,42 @@
     },
     {
       "from": "REFERENCE_RESOLVED",
+      "to": "REFERENCE_LOCKED",
+      "requires": [
+        "reference_gate_PASS_or_EXPLORE_EXPLICIT",
+        "reference_lock_resolved"
+      ]
+    },
+    {
+      "from": "REFERENCE_LOCKED",
+      "to": "GRAMMAR_EXTRACTED",
+      "requires": [
+        "reference_lock_LOCKED_or_NOT_APPLICABLE",
+        "visual_grammar_resolved"
+      ]
+    },
+    {
+      "from": "GRAMMAR_EXTRACTED",
+      "to": "SYSTEM_MAPPED",
+      "requires": [
+        "visual_grammar_COMPLETE_or_NOT_APPLICABLE",
+        "system_mapping_resolved"
+      ]
+    },
+    {
+      "from": "SYSTEM_MAPPED",
       "to": "PLANNED",
       "requires": [
-        "source_of_truth_resolved",
+        "system_mapping_COMPLETE_PARTIAL_or_NOT_APPLICABLE",
         "design_decision_required"
       ]
     },
     {
-      "from": "REFERENCE_RESOLVED",
+      "from": "SYSTEM_MAPPED",
       "to": "VERIFYING",
       "requires": [
         "verification_only_workflow",
-        "source_of_truth_resolved"
+        "upstream_authority_context_valid"
       ]
     },
     {
@@ -164,7 +140,8 @@
       "to": "REVALIDATING",
       "requires": [
         "write_permission_WRITE_ALLOWED",
-        "baseline_fingerprint_available"
+        "baseline_fingerprint_available",
+        "reference_lock_valid"
       ]
     },
     {
@@ -179,6 +156,13 @@
       "to": "INSPECTING",
       "requires": [
         "revalidation_STALE_BASELINE"
+      ]
+    },
+    {
+      "from": "REVALIDATING",
+      "to": "REFERENCE_RESOLVED",
+      "requires": [
+        "revalidation_STALE_REFERENCE"
       ]
     },
     {
@@ -253,7 +237,7 @@
       "from": "QA_PRE_REGRESSION",
       "to": "REGRESSION",
       "requires": [
-        "qa_01_09_resolved",
+        "qa_01a_01b_02_09_resolved",
         "qa_10_applicable"
       ]
     },
@@ -261,7 +245,7 @@
       "from": "QA_PRE_REGRESSION",
       "to": "QA_FINAL",
       "requires": [
-        "qa_01_09_resolved",
+        "qa_01a_01b_02_09_resolved",
         "qa_10_NOT_APPLICABLE"
       ]
     },
@@ -311,14 +295,97 @@
         "final_result_BLOCKED",
         "resume_checkpoint_emitted_when_resumable"
       ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "INSPECTING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_FIGMA_INSPECT"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "REFERENCE_RESOLVED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_RESOLVE_REFERENCE",
+        "previous_inspection_reusable"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "REFERENCE_LOCKED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_REFERENCE_LOCK",
+        "reference_resolution_reusable"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "GRAMMAR_EXTRACTED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_VISUAL_GRAMMAR_EXTRACTION",
+        "reference_lock_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "SYSTEM_MAPPED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_DESIGN_SYSTEM_MAPPING",
+        "visual_grammar_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "PLANNED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_DESIGN_DECISION_or_CHANGE_SCOPE",
+        "upstream_context_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "READY_TO_EXECUTE",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_WRITE_PERMISSION_or_PRE_WRITE_REVALIDATION",
+        "upstream_context_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "RECOVERING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_MUTATION_RECOVERY"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "VERIFYING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_VERIFICATION"
+      ]
     }
   ],
   "invariants": [
+    "locked_user_reference_cannot_be_silently_substituted",
+    "reference_lock_precedes_visual_grammar",
+    "visual_grammar_precedes_design_decision",
+    "system_mapping_preserves_locked_visual_role",
     "no_execute_without_write_permission",
     "no_write_before_pre_write_revalidation",
     "stale_baseline_returns_to_inspection",
+    "stale_reference_returns_to_reference_resolution",
     "mutation_error_cannot_skip_recovery_classification",
-    "qa_01_09_must_resolve_before_qa_10",
+    "qa_01a_01b_02_09_must_resolve_before_qa_10",
     "qa_10_must_resolve_or_be_not_applicable_before_final_qa",
     "fix_loop_returns_to_verification_not_directly_to_qa_or_complete",
     "blocked_resumable_run_emits_resume_checkpoint",

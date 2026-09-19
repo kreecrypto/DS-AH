@@ -1,67 +1,44 @@
-# Workflow — QA v2.3
+# Workflow — QA v2.4
 
 ## Canonical order
 
-**Verification → QA-01..QA-09 → QA-10 Visual Regression → Final QA Aggregation → Fix Loop when authorized → Evidence**
+Verification  
+→ QA-01A Reference Authority  
+→ QA-01B Visual Fidelity  
+→ QA-02..QA-09  
+→ QA-10 Visual Regression  
+→ Final QA Aggregation  
+→ Fix Loop when authorized  
+→ Evidence.
 
-The old model where "Design QA" could include QA-10 before Visual Regression is invalid.
+## QA-01A
+Verify Reference Lock, authority lanes, Build Mode and forbidden substitutions.
 
-## Phase 1 — Pre-regression QA
+Wrong source/master is a P0 fidelity failure.
 
-Resolve exactly:
-- QA-01 Reference Fidelity
-- QA-02 Design System Compliance
-- QA-03 Information Architecture
-- QA-04 Interaction / States
-- QA-05 Responsive & Accessibility
-- QA-06 Content QA
-- QA-07 Visual Quality
-- QA-08 Structural QA
-- QA-09 Scope Integrity
+## QA-01B
+Compare result with Visual Grammar at equivalent viewport/state.
 
-Each gate returns PASS | FAIL | BLOCKED | NOT_APPLICABLE with evidence.
+For REPRODUCE:
+- side-by-side visual evidence required
+- skeleton and final comparisons should exist when the nested reproduce flow applies
+- metadata-only evidence cannot PASS
 
-Do not compute final QA yet.
+## QA-02..09
+Design System, IA, Interaction/States, Responsive/A11y, Content, Visual Quality, Structural, Scope.
 
-## Phase 2 — QA-10 Visual Regression
+## QA-10
+Final regression against original locked authority baseline and preservation baseline when applicable.
 
-Run after QA-01..QA-09 have statuses.
-
-Required for REPRODUCE, ADAPT/MODIFY/FIX, and comparison-based QA.
-
-Compare authority baseline and, for MODIFY/FIX, preservation baseline. If comparable evidence is impossible, QA-10 is BLOCKED rather than silently skipped.
-
-## Phase 3 — Final QA Aggregation
-
-Only now compute final QA:
-- BLOCKED if any required gate is BLOCKED.
-- FAIL if no gate is BLOCKED and any required gate FAILs.
-- PASS only if every applicable required gate PASSes and every N/A has rationale.
-
-P2 polish is recorded separately.
+## Final aggregation
+Any required BLOCKED → BLOCKED.  
+Else any required FAIL → FAIL.  
+Else PASS.
 
 ## Fix Loop
-
-For an authorized write task with fixable P0/P1:
 Final QA FAIL
-→ Fix Loop
-→ Mutation
+→ Fix
 → Verification
-→ affected QA-01..09
+→ affected QA-01A/QA-01B/QA-02..09
 → QA-10
-→ Final QA Aggregation
-
-Never return from Fix Loop directly to PASS.
-
-Standalone QA remains read-only. Applying a fix requires reroute to MODIFY/FIX with scope and permission.
-
-## Evidence
-
-Evidence Matrix must distinguish:
-- preRegressionResult
-- qa10Result
-- finalQaResult
-- affected gates after each fix
-- post-fix verification
-
-No PASS without the full applicable sequence.
+→ Final QA.

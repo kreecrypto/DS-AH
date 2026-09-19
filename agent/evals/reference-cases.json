@@ -1,46 +1,173 @@
 {
-  "schemaVersion":"2.0.0",
-  "description":"Regression tests for reference resolution plus explicit write authorization.",
-  "cases":[
+  "schemaVersion": "2.1.0",
+  "description": "Regression tests for reference resolution, exact-user-ref priority, Reference Lock, and explicit write authorization.",
+  "cases": [
     {
-      "id":"F01",
-      "prompt":"Test Agent New File @Figma สร้างหน้า Dashboard",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"BLOCKED_REFERENCE_AMBIGUOUS","writeAllowed":false,"permission":"WRITE_BLOCKED"}
+      "id": "F01",
+      "prompt": "Test Agent New File @Figma สร้างหน้า Dashboard",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "BLOCKED_REFERENCE_AMBIGUOUS",
+        "writeAllowed": false,
+        "permission": "WRITE_BLOCKED"
+      }
     },
     {
-      "id":"F02",
-      "prompt":"สร้าง Team Performance Dashboard ใน New File @Figma ทำเลย",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"PASS","referenceNodeId":"909:40988","writeAllowed":true,"permission":"WRITE_ALLOWED"}
+      "id": "F02",
+      "prompt": "สร้าง Team Performance Dashboard ใน New File @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40988",
+        "authorityClass": "CURRENT_PRODUCT_MASTER",
+        "lockStatus": "LOCKED",
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     },
     {
-      "id":"F03",
-      "prompt":"สร้าง My Performance Dashboard ใน New File @Figma ทำเลย",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"PASS","referenceNodeId":"909:40989","writeAllowed":true,"permission":"WRITE_ALLOWED"}
+      "id": "F03",
+      "prompt": "สร้าง My Performance Dashboard ใน New File @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40989",
+        "authorityClass": "CURRENT_PRODUCT_MASTER",
+        "lockStatus": "LOCKED",
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     },
     {
-      "id":"F04",
-      "prompt":"สร้าง Persistency Dashboard ตามของเดิม @Figma ทำเลย",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"PASS","referenceNodeId":"2333:12276","writeAllowed":true,"permission":"WRITE_ALLOWED"}
+      "id": "F04",
+      "prompt": "สร้าง Persistency Dashboard ตามของเดิม @Figma ทำเลย",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "2333:12276",
+        "authorityClass": "CURRENT_PRODUCT_MASTER",
+        "lockStatus": "LOCKED",
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     },
     {
-      "id":"F05",
-      "prompt":"สร้าง Dashboard concept ใหม่ from scratch ไม่ใช้ design เดิม @Figma ทำเลย",
-      "expected":{"buildMode":"EXPLORE","referenceGate":"EXPLORE_EXPLICIT","writeAllowed":true,"permission":"WRITE_ALLOWED"}
+      "id": "F05",
+      "prompt": "สร้าง Dashboard concept ใหม่ from scratch ไม่ใช้ design เดิม @Figma ทำเลย",
+      "expected": {
+        "buildMode": "EXPLORE",
+        "referenceGate": "EXPLORE_EXPLICIT",
+        "lockStatus": "NOT_APPLICABLE",
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     },
     {
-      "id":"F06",
-      "prompt":"สร้างหน้า Performance Dashboard",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"BLOCKED_REFERENCE_AMBIGUOUS","writeAllowed":false,"permission":"WRITE_BLOCKED"}
+      "id": "F06",
+      "prompt": "สร้างหน้า Performance Dashboard",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "BLOCKED_REFERENCE_AMBIGUOUS",
+        "writeAllowed": false,
+        "permission": "WRITE_BLOCKED"
+      }
     },
     {
-      "id":"F07",
-      "prompt":"ปรับ Team Performance Dashboard ให้ card compact ขึ้น @Figma แก้เลย",
-      "expected":{"buildMode":"ADAPT","referenceGate":"PASS","referenceNodeId":"909:40988","writeAllowed":true,"permission":"WRITE_ALLOWED"}
+      "id": "F07",
+      "prompt": "ปรับ Team Performance Dashboard ให้ card compact ขึ้น @Figma แก้เลย",
+      "expected": {
+        "buildMode": "ADAPT",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40988",
+        "authorityClass": "CURRENT_PRODUCT_MASTER",
+        "lockStatus": "LOCKED",
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     },
     {
-      "id":"F08",
-      "prompt":"สร้าง Team Performance Dashboard",
-      "expected":{"buildMode":"REPRODUCE","referenceGate":"PASS","referenceNodeId":"909:40988","writeAllowed":false,"permission":"WRITE_PENDING"}
+      "id": "F08",
+      "prompt": "สร้าง Team Performance Dashboard",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceNodeId": "909:40988",
+        "authorityClass": "CURRENT_PRODUCT_MASTER",
+        "lockStatus": "LOCKED",
+        "writeAllowed": false,
+        "permission": "WRITE_PENDING"
+      }
+    },
+    {
+      "id": "F09-user-visual-ref-priority",
+      "prompt": "@Figma ทำเลย ทำ dashboard ให้เหมือน Ref นี้",
+      "context": {
+        "currentUserVisualReference": {
+          "id": "user-ref-001",
+          "type": "IMAGE"
+        }
+      },
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceId": "user-ref-001",
+        "authorityClass": "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+        "lockStatus": "LOCKED",
+        "masterSubstitutionAllowed": false,
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
+    },
+    {
+      "id": "F10-prior-ref-missing-blocks",
+      "prompt": "@Figma ทำเลย ทำ dashboard ให้เหมือน Ref ที่เคยให้ไว้",
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "BLOCKED_REFERENCE_MISSING",
+        "lockStatus": "BLOCKED",
+        "writeAllowed": false,
+        "permission": "WRITE_BLOCKED"
+      }
+    },
+    {
+      "id": "F11-user-ref-beats-named-master",
+      "prompt": "@Figma ทำเลย ทำ Team Performance Dashboard แต่ให้เหมือน Ref นี้",
+      "context": {
+        "currentUserVisualReference": {
+          "id": "user-ref-002",
+          "type": "IMAGE"
+        }
+      },
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceId": "user-ref-002",
+        "authorityClass": "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+        "lockStatus": "LOCKED",
+        "masterSubstitutionAllowed": false,
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
+    },
+    {
+      "id": "F12-prior-ref-recovered",
+      "prompt": "@Figma ทำเลย ทำ dashboard ให้เหมือน Ref ที่เคยให้ไว้",
+      "context": {
+        "priorUserReference": {
+          "id": "user-ref-prior",
+          "type": "IMAGE"
+        }
+      },
+      "expected": {
+        "buildMode": "REPRODUCE",
+        "referenceGate": "PASS",
+        "referenceId": "user-ref-prior",
+        "authorityClass": "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+        "lockStatus": "LOCKED",
+        "masterSubstitutionAllowed": false,
+        "writeAllowed": true,
+        "permission": "WRITE_ALLOWED"
+      }
     }
   ]
 }

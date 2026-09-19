@@ -1,7 +1,8 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
+  "agentVersion": "2.4.0",
   "name": "Design Agent Resume / Re-entry Policy",
-  "rule": "A BLOCKED run completes with a resume checkpoint. A later user/tool resolution starts a new run that rehydrates verified context and resumes from the earliest invalidated stage, not automatically from USER_REQUEST.",
+  "rule": "A BLOCKED run completes with a resume checkpoint. A later resolution resumes from the earliest invalidated stage after revalidating upstream evidence.",
   "checkpointRequired": [
     "blockedReason",
     "resumeStage",
@@ -11,6 +12,9 @@
     "target",
     "loadedSkills",
     "referenceState",
+    "referenceLockState",
+    "visualGrammarState",
+    "designSystemMappingState",
     "designDecisionState",
     "scopeState",
     "permissionState",
@@ -23,6 +27,9 @@
       "resumeStage": "RESOLVE_REFERENCE",
       "invalidate": [
         "RESOLVE_REFERENCE",
+        "REFERENCE_LOCK",
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
         "DESIGN_DECISION",
         "CHANGE_SCOPE",
         "WRITE_PERMISSION",
@@ -34,6 +41,45 @@
       "resumeStage": "RESOLVE_REFERENCE",
       "invalidate": [
         "RESOLVE_REFERENCE",
+        "REFERENCE_LOCK",
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "REFERENCE_LOCK_INVALID": {
+      "resumeStage": "REFERENCE_LOCK",
+      "invalidate": [
+        "REFERENCE_LOCK",
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "VISUAL_GRAMMAR_INCOMPLETE": {
+      "resumeStage": "VISUAL_GRAMMAR_EXTRACTION",
+      "invalidate": [
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "DESIGN_SYSTEM_MAPPING_CONFLICT": {
+      "resumeStage": "DESIGN_SYSTEM_MAPPING",
+      "invalidate": [
+        "DESIGN_SYSTEM_MAPPING",
         "DESIGN_DECISION",
         "CHANGE_SCOPE",
         "WRITE_PERMISSION",
@@ -74,6 +120,23 @@
         "FIGMA_INSPECT",
         "CAPTURE_BASELINE",
         "RESOLVE_REFERENCE",
+        "REFERENCE_LOCK",
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "STALE_REFERENCE": {
+      "resumeStage": "RESOLVE_REFERENCE",
+      "invalidate": [
+        "RESOLVE_REFERENCE",
+        "REFERENCE_LOCK",
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "DESIGN_SYSTEM_MAPPING",
         "DESIGN_DECISION",
         "CHANGE_SCOPE",
         "WRITE_PERMISSION",
@@ -110,10 +173,10 @@
   },
   "resumeValidation": [
     "Confirm target still exists.",
-    "Confirm source authority has not changed.",
-    "Revalidate any baseline older than the blocking interaction or known canvas edit.",
-    "Re-evaluate write permission for the current task/run.",
-    "Reload any skill whose relevant evidence was invalidated.",
-    "Record which previous outputs were reused vs invalidated."
+    "Confirm Primary Visual Authority is still the same locked source.",
+    "Confirm authority lanes have not changed.",
+    "Revalidate any baseline older than a known canvas edit.",
+    "Re-evaluate write permission for the current run.",
+    "Record which outputs were reused vs invalidated."
   ]
 }

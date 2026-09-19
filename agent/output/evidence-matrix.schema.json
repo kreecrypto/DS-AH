@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/evidence-matrix.schema.json",
-  "title": "Design Agent Evidence Matrix v2.3",
+  "title": "Design Agent Evidence Matrix v2.4",
   "type": "object",
   "required": [
     "finalResult",
@@ -50,6 +50,30 @@
       },
       "additionalProperties": false
     },
+    "referenceLockEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "visualGrammarEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "designSystemMappingEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skeletonComparisonEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "baselineEvidence": {
       "type": "array",
       "items": {
@@ -85,7 +109,8 @@
         "properties": {
           "gateId": {
             "enum": [
-              "QA-01",
+              "QA-01A",
+              "QA-01B",
               "QA-02",
               "QA-03",
               "QA-04",

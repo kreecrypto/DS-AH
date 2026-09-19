@@ -1,92 +1,81 @@
-# DS-AH Production Skill System v2.2
+# DS-AH Production Skill System v2.4
 
-The `skills/` directory is the professional capability layer for **Design Control Agent v2.3**.
+The `skills/` directory is the professional capability layer for **Design Control Agent v2.4**.
 
-Skills define **how** a professional design decision/check is performed.  
-Registries, approved references and live Figma define **what is true**.  
+Skills define **how** professional design decisions/checks are performed.  
+Registries, locked references, and live Figma define **what is true**.  
 The Control Agent defines **when** a skill runs and whether execution is authorized.
 
 ## Production contract
-
-All primary skills follow:
-- `skills/SKILL-CONTRACT.md`
-
+All primary skills follow `skills/SKILL-CONTRACT.md`.
 Depth is machine-checked by:
 - `agent/evals/skill-depth-cases.json`
 - `scripts/run-skill-depth-evals.mjs`
 
 ## 13 primary production skills
+1. figma-inspect
+2. reference-source-resolution
+3. information-architecture
+4. interaction-design
+5. ux-writing-content
+6. design-system-compliance
+7. visual-quality
+8. responsive-accessibility
+9. figma-execution
+10. design-qa
+11. visual-regression
+12. fix-loop
+13. evidence
 
-### Evidence and authority
-1. `figma-inspect`
-2. `reference-source-resolution`
+Supporting:
+- reference-fidelity
+- ux-review
+- developer-handoff
 
-### UX structure and behavior
-3. `information-architecture`
-4. `interaction-design`
-5. `ux-writing-content`
+## v2.4 authority model
 
-### System and visual quality
-6. `design-system-compliance`
-7. `visual-quality`
-8. `responsive-accessibility`
+Visual Authority and System Authority are separate.
 
-### Controlled execution and verification
-9. `figma-execution`
-10. `design-qa`
-11. `visual-regression`
-12. `fix-loop`
-13. `evidence`
+Visual Authority controls:
+- composition
+- grid
+- hierarchy
+- density
+- repeated anatomy
+- chart geometry
 
-## Supporting skills
+System Authority controls:
+- component identity/API
+- semantic variables/tokens
+- typography foundations
+- icons
+- accessibility primitives
 
-- `reference-fidelity`
-- `ux-review`
-- `developer-handoff`
+Exact current-task user reference has highest Visual Authority when explicitly used as the reference.
 
-## Required skill anatomy
+## v2.4 reference fidelity hardening
 
-Every production skill must be detailed enough to produce repeatable decisions and must define:
-- Mission
-- activation conditions
-- required inputs
-- procedure/model
-- decision rules
-- gate/result or stop semantics where applicable
-- block conditions
-- anti-patterns
-- required evidence
-- downstream handoff
+Reference-based flow adds:
+- Reference Lock
+- Visual Grammar Extraction
+- Design System Mapping
+- REPRODUCE Skeleton Checkpoint
+- QA-01A Reference Authority
+- QA-01B Visual Fidelity
+
+A Product Master may support content/domain behavior but cannot silently replace a locked user visual reference.
 
 ## Global invariants
-
-- Skills never grant Figma write permission.
-- Product/reference evidence overrides generic convention.
-- UNKNOWN is not PASS.
+- Skills never grant write permission.
+- Missing requested prior ref blocks; no Master fallback.
+- Reference Lock precedes Design Decision.
+- Visual Grammar precedes execution planning.
+- DS mapping preserves locked visual roles.
 - REPRODUCE/ADAPT fidelity outranks personal taste.
-- No skill silently expands Change Scope.
-- Tool-call success is not design verification.
-- P0/P1 is blocking; P2 is polish.
-- Final QA state is PASS / FAIL / BLOCKED.
+- UNKNOWN is not PASS.
+- Tool success is not verification.
+- P0/P1 blocks; P2 is polish.
+- Final result is PASS / FAIL / BLOCKED.
 
-## Flow ownership
-
-`agent/skill-router.json` maps commands to skills.  
-`agent/workflows/` defines orchestration sequence.  
-`agent/gates/quality-gates.json` defines QA gates.  
-`agent/output/evidence-matrix.schema.json` defines auditable evidence.
-
-## Figma operating SOP
-
-Live Figma work follows `docs/figma-sop.md`. Agent Skills make design decisions; the Figma capability layer performs read/write/verify operations under Change Scope and Write Permission.
-
-## Flow hardening v2.3
-
-Skill versions remain independently versioned. Agent v2.3 adds orchestration controls around the skills:
-- Baseline + Pre-write Revalidation
-- Mutation Recovery
-- Resume/Re-entry
-- QA-01..09 → QA-10 → Final QA Aggregation
-- Component/Prototype/Multi-page/Responsive specialized subflows
-
-These controls do not grant new authority to individual skills.
+## Figma SOP
+Live Figma work follows `docs/figma-sop.md`.

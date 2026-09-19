@@ -8,17 +8,57 @@ const norm=s=>s.toLowerCase();
 function hasAny(p,arr){return (arr||[]).some(x=>p.includes(x.toLowerCase()));}
 function hasExplicitWrite(p){return hasAny(p,intent.explicitWriteSignals||[]);}
 
-function resolve(prompt){
+function userRefResult(ref, explicitWrite){
+  return {
+    buildMode:'REPRODUCE',
+    referenceGate:'PASS',
+    referenceId:ref.id,
+    referenceNodeId:null,
+    authorityClass:'EXACT_CURRENT_USER_VISUAL_REFERENCE',
+    lockStatus:'LOCKED',
+    masterSubstitutionAllowed:false,
+    writeAllowed:explicitWrite,
+    permission:explicitWrite?'WRITE_ALLOWED':'WRITE_PENDING'
+  };
+}
+
+function resolve(prompt,context={}){
   const p=norm(prompt);
   const explicitWrite=hasExplicitWrite(p);
   const explicitExplore=hasAny(p,router.buildModes.EXPLORE.explicitSignals);
+  const visualMatch=hasAny(p,router.currentTaskUserReference.visualMatchSignals);
+  const priorRefIntent=hasAny(p,router.currentTaskUserReference.priorReferenceSignals);
+
   if(explicitExplore){
     return {
       buildMode:'EXPLORE',
       referenceGate:'EXPLORE_EXPLICIT',
       referenceNodeId:null,
+      referenceId:null,
+      authorityClass:null,
+      lockStatus:'NOT_APPLICABLE',
+      masterSubstitutionAllowed:true,
       writeAllowed:explicitWrite,
       permission:explicitWrite?'WRITE_ALLOWED':'WRITE_PENDING'
+    };
+  }
+
+  if(visualMatch && context.currentUserVisualReference){
+    return userRefResult(context.currentUserVisualReference,explicitWrite);
+  }
+
+  if(priorRefIntent){
+    if(context.priorUserReference) return userRefResult(context.priorUserReference,explicitWrite);
+    return {
+      buildMode:'REPRODUCE',
+      referenceGate:'BLOCKED_REFERENCE_MISSING',
+      referenceNodeId:null,
+      referenceId:null,
+      authorityClass:null,
+      lockStatus:'BLOCKED',
+      masterSubstitutionAllowed:false,
+      writeAllowed:false,
+      permission:'WRITE_BLOCKED'
     };
   }
 
@@ -37,6 +77,10 @@ function resolve(prompt){
         buildMode:adapt?'ADAPT':'REPRODUCE',
         referenceGate:'PASS',
         referenceNodeId:top.pageId,
+        referenceId:top.pageId,
+        authorityClass:'CURRENT_PRODUCT_MASTER',
+        lockStatus:'LOCKED',
+        masterSubstitutionAllowed:true,
         writeAllowed:explicitWrite,
         permission:explicitWrite?'WRITE_ALLOWED':'WRITE_PENDING'
       };
@@ -48,14 +92,23 @@ function resolve(prompt){
       buildMode:'REPRODUCE',
       referenceGate:'BLOCKED_REFERENCE_AMBIGUOUS',
       referenceNodeId:null,
+      referenceId:null,
+      authorityClass:null,
+      lockStatus:'BLOCKED',
+      masterSubstitutionAllowed:false,
       writeAllowed:false,
       permission:'WRITE_BLOCKED'
     };
   }
+
   return {
     buildMode:'REPRODUCE',
     referenceGate:'BLOCKED_REFERENCE_MISSING',
     referenceNodeId:null,
+    referenceId:null,
+    authorityClass:null,
+    lockStatus:'BLOCKED',
+    masterSubstitutionAllowed:false,
     writeAllowed:false,
     permission:'WRITE_BLOCKED'
   };
@@ -63,14 +116,10 @@ function resolve(prompt){
 
 let failed=0;
 for(const t of tests){
-  const a=resolve(t.prompt);
+  const a=resolve(t.prompt,t.context||{});
   const e=t.expected;
-  const ok=
-    a.buildMode===e.buildMode &&
-    a.referenceGate===e.referenceGate &&
-    a.writeAllowed===e.writeAllowed &&
-    (e.permission===undefined || a.permission===e.permission) &&
-    (e.referenceNodeId===undefined || a.referenceNodeId===e.referenceNodeId);
+  const fields=['buildMode','referenceGate','referenceNodeId','referenceId','authorityClass','lockStatus','masterSubstitutionAllowed','writeAllowed','permission'];
+  const ok=fields.every(k=>e[k]===undefined || a[k]===e[k]);
   console.log(ok?'PASS':'FAIL',t.id,JSON.stringify(a),'-',t.prompt);
   if(!ok) failed++;
 }

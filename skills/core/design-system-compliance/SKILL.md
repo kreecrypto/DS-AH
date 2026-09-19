@@ -1,6 +1,6 @@
 ---
 id: design-system-compliance
-version: 2.2.0
+version: 2.4.0
 scope: core
 category: system-governance
 ---
@@ -8,195 +8,223 @@ category: system-governance
 # Design System Compliance Skill
 
 ## Mission
-Prevent design drift by ensuring every visual/interactive building block is sourced, composed, extended, or created at the correct ownership level.
-
-This skill protects identity, tokens, APIs, and ownership. It does not decide business behavior by itself.
+Prevent design-system drift while preserving the locked visual composition.
+This skill owns component identity, tokens, APIs, and ownership.
+It does not silently become composition authority.
 
 ## Activate when
-Mandatory for CREATE_SCREEN, MODIFY_SCREEN, COMPONENT, REVIEW, QA, and HANDOFF when reusable UI is involved.
+Mandatory for CREATE_SCREEN.
+Mandatory for MODIFY_SCREEN and FIX.
+Mandatory for COMPONENT.
+Use for REVIEW, QA, and HANDOFF whenever reusable UI/system assets are involved.
 
 ## Required inputs
-- approved reference/source
+- Reference Lock
+- Visual Grammar when reference-based
+- approved Product/Domain/Core registries
 - live Figma inspection
-- Core DS registry
-- domain pattern/component registry
 - component ownership policy
+- source-priority policy
 - Change Scope when mutating
+- supported states/viewports
 
-## Source order
-1. exact approved user reference
-2. approved/current Product Master
-3. approved domain component/pattern
-4. Core DS component
-5. Core foundations/tokens
-6. new domain asset only when justified
-7. screen-only composition when reuse is not appropriate
+## Authority boundary
+
+### Visual Authority
+Controls:
+- grid
+- hierarchy
+- composition
+- density
+- repeated anatomy
+- spatial relationships
+- chart geometry
+
+### System Authority
+Controls:
+- component identity/key
+- component API
+- variants/properties
+- variables/tokens
+- typography foundations
+- icons
+- accessibility primitives
+
+System Authority must preserve the locked visual role unless the user explicitly changes the visual scope.
+
+## Design System Mapping
+Before Design Decision on reference-based work:
+1. read Reference Lock
+2. read Visual Grammar
+3. enumerate material visual roles
+4. search Domain/Core assets
+5. map each visual role to an asset type
+6. set preserveVisualRole=true
+7. record allowed deviation
+8. record unmapped roles
+9. record conflicts
+10. emit design-system-mapping schema
+
+A mapping may use:
+- COMPONENT
+- VARIABLE
+- STYLE
+- ICON
+- TYPOGRAPHY
+- PRIMITIVE
+- NONE
+
+## Reuse decision tree
+For every material element:
+1. Is there an exact approved compatible instance?
+2. Is there an approved Domain pattern?
+3. Is there an approved Core primitive?
+4. Can existing properties/variants express the role?
+5. Can a wrapper/composition preserve the visual role?
+6. Is an extension semantically valid?
+7. Is a new Domain asset justified?
+8. Is a screen-only composition safer?
+9. Only then consider new component creation.
 
 ## Ownership levels
 
 ### Core
-Use when component semantics are product-agnostic and broadly reusable.
-Examples: button, input, checkbox, generic dropdown, badge primitive.
+Product-agnostic reusable semantics.
 
 ### Domain
-Use when reusable semantics are specific to one product/domain.
-Examples: policy status summary, advisor performance card, case-status pattern.
+Reusable semantics specific to one product/domain.
 
 ### Screen-only
-Use when structure is one-off composition without stable reusable semantics.
+One-off composition without stable reusable semantics.
 
-Do not promote a one-off grouping to a component solely because it appears twice in one screen.
-
-## Reuse decision tree
-For every material element:
-1. Is this already an approved instance?
-2. Is there an approved domain pattern?
-3. Is there an approved Core primitive?
-4. Can the need be satisfied through existing properties/variants?
-5. Can composition/wrapper solve it without new component API?
-6. Is extension semantically valid for the existing owner?
-7. Only then evaluate new component creation.
+Do not promote composition to reusable component solely because it appears twice on one screen.
 
 ## Component identity checks
 Verify:
-- published identity/key when available
+- published identity/key
 - owner file/library
 - local vs remote
 - component-set membership
-- variant/property axes
+- variants/properties
 - default values
-- nested component identity
-- whether visible name differs from canonical identity
+- nested identity
+- semantic purpose
+- visible name vs canonical identity
 
-Name similarity alone is insufficient.
+Same visible name is not identity.
 
 ## Variant/property rules
-Good variant/property axes describe stable semantic dimensions such as:
+Use stable semantic axes:
 - Size
 - State
 - Type
 - Intent
-- Device when the system genuinely models device variants
+- Device only when system explicitly models device
 
 Avoid:
 - Property 1
-- Variant2
-- one-off visual tweaks encoded as variants
-- content-specific variants that should be instance content
+- one-off visual variants
+- content combinations as variants
 - combinatorial explosion
 
-Before adding a variant:
-1. prove semantic reuse
-2. prove it belongs to the same component
-3. check existing property can represent it
-4. check downstream impact
-5. document owner
-
 ## Token/variable rules
-Prefer semantic bindings over raw values.
-
+Prefer approved semantic bindings.
 Verify:
 - color intent
-- typography style
-- spacing/radius/elevation tokens where defined
-- state token usage
-- alias relationship when relevant
-- mode/theme correctness where present
+- typography
+- spacing/radius/elevation where defined
+- state tokens
+- theme/mode correctness
 
 Do not:
-- replace bound token with raw value for convenience
-- create near-duplicate semantic token
-- invent token names not present in source
-- flatten variable usage without migration scope
+- replace token with raw value for convenience
+- invent near-duplicate token
+- flatten variable use without migration scope
+
+## Locked visual conflict procedure
+If DS assets cannot express a locked visual role without material change:
+1. verify exact asset/API first
+2. try valid property/variant
+3. try wrapper/composition
+4. record material conflict
+5. do not swap to a different Product Master composition
+6. block or request scoped decision if deviation is unavoidable
 
 ## Detach policy
-Detaching an approved instance is a compliance defect unless:
-- explicit migration/conversion is in scope
-- no compatible component API exists
-- the resulting ownership is documented
+Detach is a defect unless:
+- migration/conversion is explicitly in scope
+- no compatible API exists
+- resulting ownership is documented
 
-"Faster to edit" is not justification.
-
-## Extension policy
-EXTEND only when:
-- current component owns the semantics
-- extension is likely reusable
-- API remains understandable
-- existing instances remain valid or migration is planned
-- owner is authorized
-
-Otherwise choose wrapper/domain/screen-only composition.
+“Faster to edit” is not justification.
 
 ## Cross-domain reuse
 Visual similarity does not authorize cross-domain reuse.
-Use a component from another domain only when semantic ownership/policy explicitly permits it.
+Semantic ownership/policy must explicitly permit it.
 
 ## Structural checks
 Check:
-- Auto Layout remains intact
-- nested components remain instances
-- property names are semantic
-- no duplicate local copy of a remote component
-- component boundaries are meaningful
-- no accidental componentization of layout fragments
+- Auto Layout integrity
+- nested instances remain instances
+- property names semantic
+- no duplicate local copy of remote component
+- meaningful component boundaries
+- no accidental componentization
+- DS mapping preserves visual-role intent
 
 ## Compliance Gate
 
 ### PASS
-- approved assets reused where appropriate
-- new/extended assets are justified
-- ownership is correct
-- variables/tokens preserve semantic bindings
-- component APIs remain understandable
+- approved assets reused appropriately
+- ownership correct
+- semantic variables preserved
+- APIs valid
 - no unauthorized detach/duplication
+- locked visual roles preserved
 
 ### FAIL
 Examples:
+- DS compliance changed locked grid/composition without approval
 - parallel component created while approved one exists
-- raw color/spacing replaces approved semantic binding
+- raw value replaces semantic binding
 - wrong-domain component reused
-- detached instance used for minor visual change
-- new variant has unclear semantics
-- component owner level is wrong
-- repeated manual frames recreate a reusable approved pattern
+- detached instance for convenience
+- invalid property modeling
 
 ### BLOCKED
-Use when canonical identity, ownership, or source library cannot be resolved and the decision materially affects implementation.
-
-## Severity guidance
-P0:
-- wrong design-system family/source causing material mismatch
-- destructive Core mutation outside authorization
-
-P1:
-- duplicate component/pattern
-- detached instance
-- invalid property/variant modeling
-- semantic token drift
-
-P2:
-- naming hygiene that does not change semantics
-- minor layer organization issues
+Use when:
+- canonical identity/ownership unresolved
+- DS conflict materially affects locked visual role
+- required library cannot be inspected
 
 ## Anti-patterns
-- "looks the same" reuse
-- component creation by visual grouping alone
+- “looks the same” reuse
+- using Product Master as a shortcut around DS mapping
+- changing card count/order to fit available components
 - variants for every content combination
 - unnecessary nested wrappers
-- copying a component from another file to avoid library use
-- rebuilding a Core primitive in product file
-- using raw values to make screenshot matching easier
+- copying remote component locally
+- raw overrides to force screenshot match
+- treating DS as permission to redesign composition
 
 ## Required evidence
+- visual role → asset mapping
 - Core assets reused
-- domain assets reused
-- component identities
+- Domain assets reused
+- component identities/keys
 - variable/style bindings
-- extension decisions
-- new asset decisions + justification
 - ownership
-- exceptions/migration notes
-- compliance gate result
+- unmapped roles
+- conflicts
+- extension/new asset decisions
+- exceptions
+- Compliance Gate result
 
 ## Downstream handoff
-Pass reuse/ownership/API constraints to Execution, QA, Handoff, Regression, and Evidence.
+Pass:
+- DS Mapping
+- reuse decisions
+- ownership/API constraints
+- token constraints
+- unresolved conflicts
+to Design Decision, Execution, QA-02, Handoff, Regression, Fix Loop, and Evidence.

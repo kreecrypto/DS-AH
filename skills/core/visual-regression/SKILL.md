@@ -1,6 +1,6 @@
 ---
 id: visual-regression
-version: 2.2.0
+version: 2.4.0
 scope: core
 category: regression-control
 ---
@@ -8,93 +8,111 @@ category: regression-control
 # Visual Regression Skill
 
 ## Mission
-Detect unintended visual or structural drift by comparing equivalent baseline/reference and result states after design mutation.
+Detect unintended visual/structural drift against the locked Authority baseline and Preservation baseline.
 
-Regression is difference classification, not subjective screenshot judging.
+Regression is structured difference classification, not subjective screenshot judging.
 
 ## Activate when
-Mandatory after:
-- REPRODUCE CREATE
-- ADAPT CREATE
-- MODIFY/FIX
-
-Use for QA when comparable before/after or reference/result evidence exists.
+Mandatory after REPRODUCE CREATE.
+Mandatory after ADAPT CREATE.
+Mandatory after MODIFY/FIX.
+Use for QA whenever comparable reference/before/after evidence exists.
 
 ## Required inputs
-- approved reference
-- pre-change baseline for MODIFY when available
+- Reference Lock
+- locked Visual Authority
+- Visual Grammar
+- pre-change Preservation baseline when applicable
 - post-change result
 - Change Scope
 - Build Mode
 - viewport/state
 - expected delta
+- skeleton comparison when REPRODUCE nested flow applies
 
 ## Baseline types
 
 ### Authority baseline
-Approved Master/reference used to judge fidelity.
+The locked Visual Authority used to judge reference fidelity.
 
 ### Preservation baseline
-Pre-change target used to ensure unaffected areas remain unchanged.
+The pre-change target used to ensure unaffected regions remain unchanged.
 
-For ADAPT/MODIFY, both may be needed.
+For ADAPT/MODIFY, both may be required.
+
+Never replace Authority baseline with a convenient Product Master after Reference Lock.
 
 ## Comparison validity
-Before comparison verify:
-- same/sufficiently equivalent viewport
+Before comparing verify:
+- same/equivalent viewport
 - same state
-- same content or content differences understood
+- content differences understood
 - same relevant region
-- baseline/result both inspectable
-- expected requested change known
+- both sources inspectable
+- expected change known
+- locked reference still valid
 
 If not comparable, do not PASS.
+
+## REPRODUCE checkpoints
+
+### Skeleton comparison
+After skeleton mutation:
+- capture visual result
+- compare side-by-side to locked reference
+- evaluate frame/grid/card geometry/spacing/hierarchy
+- P0/P1 blocks detailed build
+
+### Final comparison
+After detail build:
+- compare full relevant result
+- use same locked reference
+- classify all material differences
+
+Metadata-only evidence cannot PASS either checkpoint.
 
 ## Comparison dimensions
 
 ### Geometry
-- frame bounds
+- frame/aspect ratio
 - region bounds
-- width/height
-- position
 - grid
-- column structure
-- card/row geometry
+- columns/rows
+- repeated-card bounds/order
+- chart geometry
 
 ### Spacing/alignment
+- margins
 - padding
-- gap
-- margins between sections
-- baseline alignment
+- gaps
+- baselines
 - repeated anchors
+- density
 
 ### Typography
-- style
-- size
-- weight
+- role
+- size/weight
 - line height
 - wrapping
-- truncation
-- numeric alignment
+- numeric emphasis
 
 ### Components
-- component family
+- family
 - instance identity
 - variant/state
-- control size
 - icon identity/position
 
 ### Color/surface
 - fill
 - stroke
-- semantic colors
 - radius
 - elevation
 - dividers
 - opacity
+- semantic roles
 
 ### Content
-When content should remain unchanged:
+When expected unchanged:
 - labels
 - values
 - order
@@ -120,93 +138,95 @@ When content should remain unchanged:
 
 ### Edge behavior
 - clipping
-- overflow
+- overlap
 - awkward wrap
 - uneven height
 - accidental scroll
 
 ## Difference classification
-Every material difference must be classified:
 
 ### EXPECTED_REQUESTED_CHANGE
 Directly required by Change Scope.
 
 ### EXPECTED_DEPENDENT_CHANGE
-Necessary consequence of an allowed change.
-Must be minimal and documented.
+Necessary minimal consequence of allowed change.
 
 ### APPROVED_EXCEPTION
 Known intentional difference approved by task/source policy.
 
 ### REGRESSION_P0
-Critical unintended change.
+Critical unintended change or wrong authority baseline.
 
 ### REGRESSION_P1
-Material unintended change.
+Material unintended visual/structural drift.
 
 ### POLISH_P2
 Non-blocking minor difference.
 
 ### UNKNOWN_DIFFERENCE
-Difference exists but cause/intent cannot be determined.
-Blocks PASS when material.
+Material difference whose cause/intent cannot be determined.
+Blocks PASS.
 
 ## Procedure
-1. Select valid baseline(s).
-2. Establish expected delta from Change Scope.
-3. Compare dimensions in fixed order.
-4. Classify each difference.
-5. Verify protected regions.
-6. Group repeated differences by root pattern where useful.
-7. Assign severity.
-8. Route P0/P1 to Fix Loop.
-9. After fix, compare again from original baseline, not only previous failed result.
-10. Record final result.
+1. Validate Reference Lock.
+2. Select original baseline(s).
+3. Verify comparison validity.
+4. Establish expected delta.
+5. Compare dimensions in fixed order.
+6. Classify each difference.
+7. Verify protected regions.
+8. Group repeated differences by root pattern.
+9. Assign severity.
+10. Route P0/P1 to Fix Loop.
+11. After fix compare again from original baseline.
+12. Record final QA-10 result.
 
 ## Result
 
 ### PASS
-- comparable evidence exists
+- comparable visual evidence exists
 - no unexplained P0/P1
-- all material changes are expected/approved
+- material changes expected/approved
 - protected areas stable
 
 ### FAIL
-One or more unexplained P0/P1 regressions.
+One or more unexplained P0/P1.
 
 ### BLOCKED
-- baseline/result not comparable
-- required viewport/state unavailable
+- reference/result not comparable
+- screenshot/render unavailable
 - source authority unresolved
-- evidence insufficient to classify material difference
+- evidence insufficient
+- locked reference invalid
 
 ## Scope rules
-A visible change outside Change Scope is not automatically acceptable because it improves consistency.
-It must be:
-- necessary dependency
-- explicitly approved
-- or treated as regression
+Visible change outside Change Scope is not acceptable merely because it looks better.
+It must be necessary dependency, explicitly approved, or treated as regression.
 
 ## Anti-patterns
-- eyeballing only the changed component
-- comparing different viewports
-- comparing different states without noting it
+- metadata-only visual PASS
+- eyeballing only changed component
+- comparing different viewports without normalization
 - treating all differences as defects
 - treating all differences as requested
-- accepting small repeated drift because each item is minor
-- re-baselining after failure to make result pass
+- accepting repeated drift because each item is small
+- re-baselining failed result
+- swapping authority baseline after mismatch
 
 ## Required evidence
-- authority baseline
-- preservation baseline
+- Reference Lock
+- Authority baseline
+- Preservation baseline
 - result source
 - viewport/state
 - expected delta
+- skeleton side-by-side when applicable
+- final side-by-side
 - dimension comparison
 - difference records
 - protected-area result
 - severity
-- final regression result
+- QA-10 result
 
 ## Downstream handoff
 Send P0/P1 to Fix Loop.

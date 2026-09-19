@@ -5,9 +5,17 @@ const tests=JSON.parse(fs.readFileSync('agent/evals/control-cases.json','utf8'))
 function permission(t){
   if(['REVIEW','QA','HANDOFF','COMPONENT'].includes(t.command)) return 'READ_ONLY';
   if(t.command==='INSPECT') return 'INSPECT_ALLOWED';
-  if(!['CREATE_SCREEN','MODIFY_SCREEN'].includes(t.command)) return 'READ_ONLY';
+  if(!['CREATE_SCREEN','MODIFY_SCREEN','FIX'].includes(t.command)) return 'READ_ONLY';
+
   const blockedGate=['BLOCKED_REFERENCE_AMBIGUOUS','BLOCKED_REFERENCE_MISSING'].includes(t.referenceGate);
-  if(blockedGate || !t.targetResolved || !t.scopeDefined || !t.figmaWriteCapability) return 'WRITE_BLOCKED';
+  if(
+    blockedGate ||
+    !t.targetResolved ||
+    !t.scopeDefined ||
+    !t.referenceLockEligible ||
+    !t.figmaWriteCapability
+  ) return 'WRITE_BLOCKED';
+
   if(!t.explicitWrite) return 'WRITE_PENDING';
   if(['PASS','EXPLORE_EXPLICIT'].includes(t.referenceGate)) return 'WRITE_ALLOWED';
   return 'WRITE_BLOCKED';

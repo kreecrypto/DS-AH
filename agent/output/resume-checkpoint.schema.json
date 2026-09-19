@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/resume-checkpoint.schema.json",
-  "title": "Design Agent Resume Checkpoint",
+  "title": "Design Agent Resume Checkpoint v2.4",
   "type": "object",
   "required": [
     "blockedReason",
@@ -44,6 +44,24 @@
       }
     },
     "referenceState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "referenceLockState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "visualGrammarState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "designSystemMappingState": {
       "type": [
         "object",
         "null"

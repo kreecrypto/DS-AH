@@ -1,41 +1,156 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "$id":"agent/planner/design-decision.schema.json",
-  "title":"Design Control Agent Design Decision",
-  "type":"object",
-  "required":["task","command","product","buildMode","referenceGate","scope","reusePlan","qualityPlan"],
-  "properties":{
-    "task":{"type":"string"},
-    "command":{"enum":["CREATE_SCREEN","MODIFY_SCREEN","REVIEW","QA","COMPONENT","HANDOFF","INSPECT"]},
-    "product":{"type":"string"},
-    "domain":{"type":["string","null"]},
-    "buildMode":{"enum":["REPRODUCE","ADAPT","EXPLORE",null]},
-    "referenceGate":{"enum":["PASS","EXPLORE_EXPLICIT","BLOCKED_REFERENCE_AMBIGUOUS","BLOCKED_REFERENCE_MISSING","NOT_APPLICABLE"]},
-    "reference":{
-      "type":["object","null"],
-      "properties":{
-        "fileKey":{"type":["string","null"]},
-        "nodeId":{"type":["string","null"]},
-        "name":{"type":["string","null"]}
-      },
-      "additionalProperties":true
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/planner/design-decision.schema.json",
+  "title": "Design Control Agent Design Decision v2.4",
+  "type": "object",
+  "required": [
+    "task",
+    "command",
+    "product",
+    "buildMode",
+    "referenceGate",
+    "referenceLock",
+    "visualGrammar",
+    "designSystemMapping",
+    "scope",
+    "reusePlan",
+    "qualityPlan"
+  ],
+  "properties": {
+    "task": {
+      "type": "string"
     },
-    "scope":{"$ref":"../controller/change-scope.schema.json"},
-    "reusePlan":{
-      "type":"object",
-      "required":["core","domain","newAssets"],
-      "properties":{
-        "core":{"type":"array","items":{"type":"string"}},
-        "domain":{"type":"array","items":{"type":"string"}},
-        "newAssets":{"type":"array","items":{"type":"string"}}
-      },
-      "additionalProperties":true
+    "command": {
+      "enum": [
+        "CREATE_SCREEN",
+        "MODIFY_SCREEN",
+        "FIX",
+        "REVIEW",
+        "QA",
+        "COMPONENT",
+        "HANDOFF",
+        "INSPECT"
+      ]
     },
-    "iaChange":{"enum":["NONE","PRESERVE","MODIFY","EXPLORE","NOT_APPLICABLE"]},
-    "interactionChange":{"enum":["NONE","PRESERVE","MODIFY","EXPLORE","NOT_APPLICABLE"]},
-    "contentChange":{"enum":["NONE","PRESERVE","MODIFY","EXPLORE","NOT_APPLICABLE"]},
-    "responsiveImpact":{"type":"array","items":{"type":"string"}},
-    "qualityPlan":{"type":"array","items":{"type":"string"}}
+    "product": {
+      "type": "string"
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buildMode": {
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE",
+        null
+      ]
+    },
+    "referenceGate": {
+      "enum": [
+        "PASS",
+        "EXPLORE_EXPLICIT",
+        "BLOCKED_REFERENCE_AMBIGUOUS",
+        "BLOCKED_REFERENCE_MISSING",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "reference": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "referenceLock": {
+      "$ref": "../reference/reference-lock.schema.json"
+    },
+    "visualGrammar": {
+      "$ref": "visual-grammar.schema.json"
+    },
+    "designSystemMapping": {
+      "$ref": "design-system-mapping.schema.json"
+    },
+    "scope": {
+      "$ref": "../controller/change-scope.schema.json"
+    },
+    "reusePlan": {
+      "type": "object",
+      "required": [
+        "core",
+        "domain",
+        "newAssets"
+      ],
+      "properties": {
+        "core": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "domain": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "newAssets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "iaChange": {
+      "enum": [
+        "NONE",
+        "PRESERVE",
+        "MODIFY",
+        "EXPLORE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "interactionChange": {
+      "enum": [
+        "NONE",
+        "PRESERVE",
+        "MODIFY",
+        "EXPLORE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "contentChange": {
+      "enum": [
+        "NONE",
+        "PRESERVE",
+        "MODIFY",
+        "EXPLORE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "responsiveImpact": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptanceCriteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qualityPlan": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   },
-  "additionalProperties":true
+  "additionalProperties": true
 }

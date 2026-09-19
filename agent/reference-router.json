@@ -1,12 +1,13 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
+  "agentVersion": "2.4.0",
   "buildModes": {
     "REPRODUCE": {
-      "defaultWhen": "a matching approved/current Master Screen exists",
+      "defaultWhen": "a matching locked visual reference or approved/current Master exists",
       "inventionAllowed": false
     },
     "ADAPT": {
-      "defaultWhen": "the user requests changes to an existing design/reference",
+      "defaultWhen": "the user requests bounded changes to a locked/approved baseline",
       "inventionAllowed": "only inside explicitly requested scope"
     },
     "EXPLORE": {
@@ -24,10 +25,60 @@
     }
   },
   "gates": {
-    "PASS": "exact or uniquely resolved approved/current reference",
-    "BLOCKED_REFERENCE_AMBIGUOUS": "multiple plausible approved/current references and no resolving domain/reference evidence",
-    "BLOCKED_REFERENCE_MISSING": "no approved reference found and EXPLORE was not explicitly requested",
+    "PASS": "exact or uniquely resolved approved/current reference with authority lanes assignable",
+    "BLOCKED_REFERENCE_AMBIGUOUS": "multiple plausible approved/current references and no resolving evidence",
+    "BLOCKED_REFERENCE_MISSING": "requested exact/current/prior reference cannot be verified or recovered and EXPLORE was not explicitly requested",
     "EXPLORE_EXPLICIT": "user explicitly requested exploration"
+  },
+  "currentTaskUserReference": {
+    "exactClasses": [
+      "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+      "EXACT_CURRENT_USER_FIGMA_REFERENCE"
+    ],
+    "visualMatchSignals": [
+      "เหมือน Ref นี้",
+      "ตาม Ref นี้",
+      "ใช้แบบนี้",
+      "เหมือนรูปนี้",
+      "ตามรูปนี้",
+      "เอาแบบนี้",
+      "match this reference",
+      "follow this ref",
+      "use this design",
+      "same as this reference"
+    ],
+    "priorReferenceSignals": [
+      "Ref ที่เคยให้ไว้",
+      "แบบที่เคยให้ไว้",
+      "รูปที่เคยส่ง",
+      "previous ref",
+      "reference I sent before"
+    ],
+    "rule": "When a current-task user reference is present and visual-match intent is explicit, it outranks Product Master for visual authority. If a prior reference is requested but cannot be recovered, block instead of falling back."
+  },
+  "authorityLanes": {
+    "visual": [
+      "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+      "EXACT_CURRENT_USER_FIGMA_REFERENCE",
+      "EXPLICIT_CURRENT_USER_NAMED_REFERENCE",
+      "CURRENT_PRODUCT_MASTER",
+      "APPROVED_DOMAIN_PATTERN",
+      "CURRENT_EXISTING_TARGET"
+    ],
+    "system": [
+      "CORE_DESIGN_SYSTEM",
+      "APPROVED_DOMAIN_COMPONENT_LIBRARY",
+      "CURRENT_PRODUCT_MASTER"
+    ],
+    "content": [
+      "EXACT_USER_PROVIDED_CONTENT",
+      "CURRENT_PRODUCT_MASTER",
+      "APPROVED_DOMAIN_PATTERN",
+      "CURRENT_EXISTING_TARGET"
+    ],
+    "preservation": [
+      "CURRENT_EXISTING_TARGET"
+    ]
   },
   "families": {
     "agencyDashboard": {
@@ -37,7 +88,7 @@
         "แดชบอร์ด"
       ],
       "genericResolution": "BLOCKED_REFERENCE_AMBIGUOUS",
-      "reason": "Multiple approved/current Agency dashboard families exist.",
+      "reason": "Multiple approved/current Agency dashboard families exist and generic dashboard intent cannot override an exact user visual reference.",
       "candidates": [
         {
           "name": "Team Performance Dashboard",
@@ -92,12 +143,17 @@
     }
   },
   "resolutionOrder": [
-    "explicit_user_reference_node",
+    "exact_current_user_visual_reference",
+    "exact_current_user_figma_reference",
+    "explicit_current_user_named_reference",
+    "recover_explicit_prior_user_reference_or_block",
     "exact_named_approved_master",
     "explicit_domain_plus_single_approved_master",
     "single_approved_current_candidate",
     "explicit_explore_signal",
     "block"
   ],
-  "writeRule": "CREATE_SCREEN and MODIFY_SCREEN require PASS or EXPLORE_EXPLICIT before Figma mutation."
+  "lockRule": "Reference-based CREATE/MODIFY/FIX requires Reference Lock before Visual Grammar Extraction and Design Decision.",
+  "substitutionRule": "A locked user visual reference cannot be replaced by Product Master, generic family, current target, or inferred content. Product Master and Core DS may only occupy supporting authority lanes.",
+  "writeRule": "CREATE_SCREEN and MODIFY_SCREEN require PASS or EXPLORE_EXPLICIT plus all write guards before Figma mutation."
 }

@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/planner/visual-grammar.schema.json",
+  "title": "Reference Visual Grammar",
+  "type": "object",
+  "required": [
+    "referenceId",
+    "status",
+    "canvas",
+    "layout",
+    "hierarchy",
+    "repeatedPattern",
+    "typography",
+    "surface",
+    "colorRoles",
+    "stateGrammar",
+    "fidelityAnchors",
+    "unknowns"
+  ],
+  "properties": {
+    "referenceId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "COMPLETE",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "aspectRatio": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "backgroundRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outerMargin": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "gridType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "columns": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rows": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "columnGap": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "rowGap": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "alignmentAnchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "hierarchy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repeatedPattern": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "anatomy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "invariantOrder": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "colorRoles": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "iconography": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "chartGrammar": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "stateGrammar": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "responsiveGrammar": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "fidelityAnchors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "allowedDifferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

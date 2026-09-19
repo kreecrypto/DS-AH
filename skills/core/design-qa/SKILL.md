@@ -1,6 +1,6 @@
 ---
 id: design-qa
-version: 2.2.0
+version: 2.4.0
 scope: core
 category: quality-control
 ---
@@ -8,126 +8,93 @@ category: quality-control
 # Design QA Skill
 
 ## Mission
-Make completion a gate decision backed by evidence rather than subjective confidence.
-
-Design QA orchestrates QA-01 through QA-10. It does not replace the specialist skills that provide evidence for each gate.
+Make completion an evidence-backed gate decision.
+Reference Authority and Visual Fidelity are independent gates.
 
 ## Activate when
-Mandatory:
-- after CREATE_SCREEN/MODIFY_SCREEN execution
-- for standalone QA requests
-- after Fix Loop iterations
-- before final PASS on reference-based design work
+Mandatory after CREATE_SCREEN.
+Mandatory after MODIFY_SCREEN/FIX.
+Mandatory for standalone QA.
+Mandatory after Fix Loop.
+Mandatory before final PASS on reference-based work.
 
-Standalone QA is read-only.
+Standalone QA remains read-only.
 
 ## Required inputs
 - task/command
 - target/result
+- Build Mode
+- Reference Gate
+- Reference Lock
+- Visual Grammar
+- Design System Mapping
 - Design Decision
 - Change Scope
-- Build Mode
-- Reference Gate/source
 - loaded skills
+- baseline evidence
+- visual comparison evidence
+- mutation/verification evidence
 - specialist outputs
-- baseline/reference evidence
-- mutation evidence when applicable
 
 ## Gate map
 
-### QA-01 Reference Fidelity
-Source: Reference Resolution + Reference Fidelity.
+### QA-01A Reference Authority
+Source: Reference Resolution + Reference Lock.
+
 Verify:
-- correct authority
+- correct Primary Visual Authority
+- authority lane assignment
 - Build Mode
-- reference/result comparability
-- no material unexplained drift
+- no forbidden substitution
+- prior-ref recovery correctness
+- exact user ref not replaced by Product Master
+
+Wrong source/master is P0.
+
+### QA-01B Visual Fidelity
+Source: Reference Fidelity + Visual Grammar.
+
+Verify:
+- comparable reference/result evidence
+- frame/aspect ratio
+- grid/major geometry
+- repeated anatomy/order
+- spacing/density
+- typography roles
+- surface/color roles
+- chart/badge geometry
+- relevant states/responsive behavior
+
+For REPRODUCE, side-by-side visual evidence is mandatory.
+Metadata-only evidence cannot PASS.
 
 ### QA-02 Design System Compliance
-Source: DS Compliance.
-Verify:
-- correct component identities
-- variables/styles
-- ownership
-- no unauthorized detach/duplication
-- valid component API
+Verify component identities, tokens, ownership, APIs and no unauthorized detach/duplication.
 
 ### QA-03 Information Architecture
-Source: IA.
-Verify:
-- task hierarchy
-- grouping/order
-- navigation/findability
-- disclosure
-- scope integrity of structural changes
+Verify hierarchy, grouping/order, navigation/findability and structural scope.
 
 ### QA-04 Interaction / States
-Source: Interaction Design.
-Verify:
-- state coverage
-- trigger/outcome
-- validation/recovery
-- destructive/async behavior
-- prototype evidence where required
+Verify state coverage, trigger/outcome, validation/recovery and prototype evidence.
 
 ### QA-05 Responsive & Accessibility
-Source: Responsive & Accessibility.
-Verify:
-- supported viewport behavior
-- no material clipping
-- content priority
-- focus/state distinction
-- non-color semantics
-- design-level accessibility expectations
+Verify supported viewports, clipping, priority, focus/state distinction and non-color semantics.
 
 ### QA-06 Content QA
-Source: UX Writing/Content.
-Verify:
-- terminology
-- labels/CTA
-- error/recovery
-- state content
-- wrapping/truncation
-- business meaning preservation
+Verify terminology, labels/CTA, state copy, wrapping/truncation and meaning preservation.
 
 ### QA-07 Visual Quality
-Source: Visual Quality.
-Verify:
-- hierarchy
-- composition
-- spacing
-- alignment
-- typography
-- color/surface
-- density
-- states
-- edge quality
+Verify hierarchy, composition, spacing, alignment, typography, color/surface, density and edge quality.
 
 ### QA-08 Structural QA
-Source: Inspect + Execution.
-Verify:
-- Auto Layout/constraints
-- clipping/overflow
-- repeated structural consistency
-- component/layer stability
-- no accidental absolute positioning
-- mutation verification
+Verify Auto Layout/constraints, clipping/overflow, repeated structure, instance stability and mutation verification.
 
 ### QA-09 Scope Integrity
-Compare actual changes with Change Scope.
-Verify:
-- every changed area is allowed/dependent
-- protected areas preserved
-- no unrelated redesign
-- affected states/viewports were intentionally handled
+Verify every change is allowed/dependent, protected areas remain stable, and no unrelated redesign occurred.
 
 ### QA-10 Visual Regression
-Source: Visual Regression.
-Required for:
-- REPRODUCE writes
-- ADAPT writes
-- MODIFY
-- any task where comparable before/after fidelity is a completion requirement
+Run after pre-regression gates.
+Required for REPRODUCE/ADAPT/MODIFY/FIX when comparison applies.
 
 ## Gate status rules
 
@@ -138,106 +105,95 @@ Required evidence exists and no blocking defect remains.
 Evidence proves a blocking defect.
 
 ### BLOCKED
-Required evidence cannot be obtained, authority is unresolved, or safe verification cannot complete.
+Required evidence/authority/comparison cannot be obtained.
 
 ### NOT_APPLICABLE
-Gate is genuinely irrelevant and reason is documented.
-Do not use N/A to avoid testing.
+Genuinely irrelevant with documented reason.
+Never use N/A to avoid testing.
 
 ## Final result calculation
-- BLOCKED if any required gate is BLOCKED
-- FAIL if no required gate is BLOCKED but at least one required gate FAILs
-- PASS only when every required gate PASSes and all N/A decisions are justified
+Order:
+1. QA-01A
+2. QA-01B
+3. QA-02..QA-09
+4. QA-10
+5. Final Aggregation
 
-P2 polish does not change PASS to another final state. Record it separately.
+Final:
+- any required BLOCKED → BLOCKED
+- else any required FAIL → FAIL
+- else PASS
+
+A visually polished result using the wrong reference cannot PASS.
 
 ## Severity
 
 ### P0
-Critical task/system/fidelity failure.
-Examples:
-- wrong source/master
+- wrong reference/master
+- locked user ref replaced
 - destructive out-of-scope mutation
 - critical task impossible
-- severe clipping/unreadability
-- critical action meaning wrong
+- severe unreadability/clipping
 
 ### P1
-Material quality/usability/system defect.
-Examples:
+- material visual fidelity drift
 - broken responsive layout
 - missing important state
 - duplicate/rebuilt DS component
-- repeated visual inconsistency
 - interaction recovery gap
 - material scope drift
 
 ### P2
-Non-blocking polish.
-Examples:
-- small optical alignment
-- minor wording/style consistency
+- minor optical alignment
+- wording/style polish
 - small rhythm refinement
 
 ## QA procedure
 1. Determine applicable gates.
-2. Collect specialist evidence.
-3. Evaluate each gate independently.
-4. Record defects with exact location.
-5. Assign severity.
-6. Determine fixability.
-7. For authorized CREATE/MODIFY:
-   - route fixable P0/P1 to Fix Loop
-8. For standalone QA:
-   - report required action without mutation
-9. Re-evaluate affected gates after fix.
-10. Recompute final result.
-11. Emit Evidence Matrix.
-
-## Defect record
-Every P0/P1 defect should include:
-- defectId
-- gateId
-- severity
-- location
-- observed result
-- expected result
-- evidence
-- likely root cause
-- required action
-- fixable within scope: yes/no/unknown
-- post-fix verification
+2. Validate Reference Lock.
+3. Validate Visual Grammar and DS Mapping.
+4. Evaluate QA-01A.
+5. Evaluate QA-01B.
+6. Evaluate QA-02..QA-09.
+7. Run QA-10 when applicable.
+8. Record defects with exact location.
+9. Assign severity.
+10. Determine fixability.
+11. Route authorized P0/P1 to Fix Loop.
+12. Re-test all affected gates.
+13. Recompute final result.
+14. Emit Evidence Matrix.
 
 ## Dependency re-test rules
-If a fix changes:
-- IA → re-test Interaction, Content, Responsive, Visual, Scope
-- component identity → re-test DS, Visual, Structural, Regression
-- content → re-test Responsive, Visual, Content
-- layout → re-test Responsive, Visual, Structural, Regression
-- interaction → re-test Interaction, Content, Accessibility
-- scope → re-test Scope Integrity and affected gates
+If reference changes → re-run QA-01A, QA-01B, QA-02..09 as affected, QA-10.
+If layout changes → re-run QA-01B, QA-05, QA-07, QA-08, QA-09, QA-10.
+If component identity changes → re-run QA-02, QA-07, QA-08, QA-10.
+If content changes → re-run QA-06, QA-05, QA-07.
+If interaction changes → re-run QA-04, QA-05, QA-06.
+If scope changes → re-run QA-09 and all affected gates.
 
 ## Anti-patterns
-- one global "looks good" QA
-- passing because tool operation succeeded
-- passing with missing baseline evidence
+- one global “looks good” QA
+- treating tool success as PASS
+- passing wrong reference because result is attractive
+- metadata-only visual fidelity PASS
 - hiding failure as P2
 - using NOT_APPLICABLE without reason
 - fixing standalone QA without write authorization
-- re-testing only the exact pixel changed when dependencies exist
+- re-testing only changed pixels when dependencies exist
 
 ## Required evidence
 - gate applicability
-- status per QA-01..QA-10
-- evidence per gate
+- QA-01A status/evidence
+- QA-01B status/evidence
+- QA-02..QA-10 status/evidence
 - defect records
 - severity
-- P2 notes
 - fixability
-- re-test results
+- post-fix re-tests
 - final result
 - open gaps
 
 ## Downstream handoff
-Send failures to Fix Loop when authorized.
-Send final matrix to Evidence and completion controller.
+Send fixable failures to Fix Loop when authorized.
+Send final gate matrix to Evidence and completion controller.

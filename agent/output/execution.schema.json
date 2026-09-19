@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/execution.schema.json",
-  "title": "Design Agent v2.3 Execution Envelope",
+  "title": "Design Agent v2.4 Execution Envelope",
   "type": "object",
   "required": [
     "command",
@@ -61,6 +61,15 @@
         "null"
       ],
       "additionalProperties": true
+    },
+    "referenceLock": {
+      "$ref": "../reference/reference-lock.schema.json"
+    },
+    "visualGrammar": {
+      "$ref": "../planner/visual-grammar.schema.json"
+    },
+    "designSystemMapping": {
+      "$ref": "../planner/design-system-mapping.schema.json"
     },
     "fileKey": {
       "type": [
@@ -124,10 +133,34 @@
           "enum": [
             "CURRENT",
             "STALE_BASELINE",
+            "STALE_REFERENCE",
             "BLOCKED"
           ]
         },
         "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "reproduceCheckpoint": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "skeletonStatus": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "sideBySideEvidence": {
           "type": "array",
           "items": {
             "type": "string"

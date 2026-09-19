@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/qa-result.schema.json",
-  "title": "Design Control QA Result v2.3",
+  "title": "Design Control QA Result v2.4",
   "type": "object",
   "required": [
     "result",
@@ -54,7 +54,8 @@
     "checks": {
       "type": "object",
       "required": [
-        "referenceFidelity",
+        "referenceAuthority",
+        "visualFidelity",
         "designSystem",
         "informationArchitecture",
         "interactionStates",
@@ -66,7 +67,15 @@
         "visualRegression"
       ],
       "properties": {
-        "referenceFidelity": {
+        "referenceAuthority": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "visualFidelity": {
           "enum": [
             "PASS",
             "FAIL",

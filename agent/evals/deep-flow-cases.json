@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "cases": [
     {
       "id": "DF01_QA_ORDER",
@@ -28,6 +28,26 @@
     {
       "id": "DF07_FINAL_QA_AFTER_FIX",
       "assert": "FIX_LOOP returns through VERIFICATION, QA_PRE_REGRESSION, VISUAL_REGRESSION, FINAL_QA_AGGREGATION before PASS."
+    },
+    {
+      "id": "DF08_USER_REF_PRIORITY",
+      "assert": "Exact current-task user visual/Figma references precede Product Master for visual authority; prior requested ref missing blocks instead of fallback."
+    },
+    {
+      "id": "DF09_REFERENCE_LOCK_ORDER",
+      "assert": "REFERENCE_LOCK exists after RESOLVE_REFERENCE and before VISUAL_GRAMMAR_EXTRACTION/DESIGN_DECISION."
+    },
+    {
+      "id": "DF10_VISUAL_GRAMMAR_DS_MAPPING",
+      "assert": "VISUAL_GRAMMAR_EXTRACTION and DESIGN_SYSTEM_MAPPING exist before DESIGN_DECISION and system mapping must preserve visual roles."
+    },
+    {
+      "id": "DF11_SPLIT_REFERENCE_QA",
+      "assert": "QA-01A Reference Authority and QA-01B Visual Fidelity are separate pre-regression blocking gates."
+    },
+    {
+      "id": "DF12_REPRODUCE_SKELETON",
+      "assert": "REPRODUCE uses skeleton-first side-by-side fidelity checkpoint before detail batches."
     }
   ]
 }

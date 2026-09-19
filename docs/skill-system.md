@@ -1,50 +1,74 @@
-# Design Control Agent Skill System v2.3
+# Design Control Agent Skill System v2.4
 
 Status: Active
 
-## Model
+## Architecture
+Chat = Agent  
+GitHub = Brain / Knowledge  
+Figma = Workspace
 
-Agent = orchestration and control.  
-Skill = professional design capability.  
+## Model
+Agent = orchestration and design decision owner.  
+Skills = professional capability contracts.  
+Reference Lock = authority freeze for current run.  
+Visual Grammar = extracted visual contract.  
+Design System Mapping = visual-role → system-asset mapping.  
 Figma capability = inspect/write/verify.  
-Registry/reference = truth.  
-Flow = sequencing/branching.  
 Evidence = auditability.
 
 ## CREATE / MODIFY / FIX
 
 Inspect
 → Baseline
-→ Reference
-→ Agent Skills (IA / Interaction / DS / Content / Visual / Responsive)
+→ Resolve Reference
+→ Reference Lock
+→ Visual Grammar
+→ DS Mapping
+→ Agent Skills
 → Design Decision
 → Scope
 → Permission
-→ Pre-write Revalidation
+→ Revalidation
+→ REPRODUCE Skeleton Checkpoint when applicable
 → Figma Execution
-→ Recovery when needed
 → Verification
-→ QA-01..09
+→ QA-01A
+→ QA-01B
+→ QA-02..09
 → QA-10
 → Final QA
 → Fix Loop
 → Evidence.
 
-## QA ownership
+## Authority ownership
 
-Design QA owns QA-01..09 evaluation and Final QA Aggregation.
-Visual Regression owns QA-10.
-This separation prevents QA-10 from passing before comparison is actually performed.
+Reference Source Resolution:
+- authority lanes
+- Reference Gate
+- Reference Lock inputs
 
-## Specialized subflows
+Visual Quality:
+- Visual Grammar
 
-Component, Prototype, Multi-page, and Responsive are nested flow contracts, not separate agents and not permission bypasses.
+Design System Compliance:
+- Design System Mapping
 
-## Recovery / Resume
+Reference Fidelity:
+- QA-01A and QA-01B evidence
 
-Mutation Recovery handles uncertain canvas write state.
-Resume/Re-entry handles a new run after a resolvable BLOCKED state.
+Design QA:
+- gate aggregation
+
+Visual Regression:
+- QA-10
+
+## Important rule
+A source may own one lane without owning another.
+Core DS can own System Authority while a user screenshot/Figma node owns Visual Authority.
+
+## REPRODUCE
+Use `agent/flow/reference-reproduce.json`.
+Skeleton must be compared side-by-side before detail batches.
 
 ## Skills
-
-The 13 primary skills continue to follow `skills/SKILL-CONTRACT.md`. Skill behavior remains professional-domain logic; flow hardening stays in the Agent/controller layer.
+The 13 primary skills continue to follow `skills/SKILL-CONTRACT.md`.

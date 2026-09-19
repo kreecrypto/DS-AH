@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/reference/reference-lock.schema.json",
+  "title": "Design Agent Reference Lock",
+  "type": "object",
+  "required": [
+    "status",
+    "buildMode",
+    "primaryVisualAuthority",
+    "visualAuthority",
+    "systemAuthority",
+    "allowedSupportingSources",
+    "forbiddenSubstitutions",
+    "lockEvidence"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "LOCKED",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "lockId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buildMode": {
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE",
+        null
+      ]
+    },
+    "primaryVisualAuthority": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "class": {
+          "enum": [
+            "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+            "EXACT_CURRENT_USER_FIGMA_REFERENCE",
+            "EXPLICIT_CURRENT_USER_NAMED_REFERENCE",
+            "CURRENT_PRODUCT_MASTER",
+            "APPROVED_DOMAIN_PATTERN",
+            "CURRENT_EXISTING_TARGET"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fileKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nodeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "visualAuthority": {
+      "type": "string"
+    },
+    "systemAuthority": {
+      "type": "string"
+    },
+    "contentAuthority": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preservationAuthority": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "allowedSupportingSources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbiddenSubstitutions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lockEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolvedGaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

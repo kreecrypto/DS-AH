@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "agentVersion": "2.4.0",
+  "name": "Reference Lock Policy",
+  "purpose": "Prevent a resolved current-task user reference from being silently replaced by a Product Master, Design System, existing target, memory, or inferred content pattern.",
+  "lockStatuses": [
+    "LOCKED",
+    "BLOCKED",
+    "NOT_APPLICABLE"
+  ],
+  "primaryVisualAuthorityPriority": [
+    "EXACT_CURRENT_USER_VISUAL_REFERENCE",
+    "EXACT_CURRENT_USER_FIGMA_REFERENCE",
+    "EXPLICIT_CURRENT_USER_NAMED_REFERENCE",
+    "CURRENT_PRODUCT_MASTER",
+    "APPROVED_DOMAIN_PATTERN",
+    "CURRENT_EXISTING_TARGET"
+  ],
+  "referenceSignals": [
+    "เหมือน Ref นี้",
+    "ตาม Ref นี้",
+    "ใช้แบบนี้",
+    "เหมือนรูปนี้",
+    "ตามรูปนี้",
+    "เอาแบบนี้",
+    "same as this reference",
+    "match this reference",
+    "follow this ref",
+    "use this design"
+  ],
+  "pastReferenceSignals": [
+    "Ref ที่เคยให้ไว้",
+    "แบบที่เคยให้ไว้",
+    "รูปที่เคยส่ง",
+    "previous ref",
+    "reference I sent before"
+  ],
+  "rules": [
+    "When an exact current-task user visual reference is present and the request asks to match/follow/use it, that reference becomes primary visual authority.",
+    "An exact current-task user Figma node explicitly identified as the reference is primary visual authority unless the user explicitly says it is only supporting material.",
+    "A Product Master may support domain behavior/content/system context but must not replace a locked user visual authority.",
+    "The Core/Domain Design System owns component identity, tokens, typography foundations, and primitive behavior; it does not override locked composition/layout unless the user explicitly authorizes that change.",
+    "Existing target content, labels, or product semantics must never be used to infer a different visual authority when a user reference is locked.",
+    "If the user refers to a prior reference and it cannot be retrieved with evidence, return BLOCKED_REFERENCE_MISSING. Do not fall back to a Product Master.",
+    "Reference Lock must be established before Visual Grammar Extraction and Design Decision for reference-based CREATE/MODIFY/FIX."
+  ],
+  "authorityLanes": {
+    "visualAuthority": "composition, grid, hierarchy, density, card anatomy, visual rhythm, chart geometry, surface treatment, spatial relationships",
+    "systemAuthority": "component identity, tokens, typography foundations, icon families, component APIs, accessibility primitives",
+    "contentAuthority": "verified product/domain content and business behavior",
+    "preservationAuthority": "pre-change target evidence for unaffected areas"
+  },
+  "forbiddenSubstitutions": [
+    "locked_user_visual_ref -> product_master",
+    "locked_user_visual_ref -> current_target",
+    "locked_user_visual_ref -> generic_dashboard_family",
+    "locked_user_visual_ref -> memory_without_evidence",
+    "locked_user_visual_ref -> visually_similar_unapproved_pattern"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/planner/design-system-mapping.schema.json",
+  "title": "Reference-to-Design-System Mapping",
+  "type": "object",
+  "required": [
+    "status",
+    "visualAuthority",
+    "systemAuthority",
+    "mappings",
+    "unmappedRoles",
+    "conflicts"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "COMPLETE",
+        "PARTIAL",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "visualAuthority": {
+      "type": "string"
+    },
+    "systemAuthority": {
+      "type": "string"
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "visualRole",
+          "systemAssetType",
+          "preserveVisualRole"
+        ],
+        "properties": {
+          "visualRole": {
+            "type": "string"
+          },
+          "systemAssetType": {
+            "enum": [
+              "COMPONENT",
+              "VARIABLE",
+              "STYLE",
+              "ICON",
+              "TYPOGRAPHY",
+              "PRIMITIVE",
+              "NONE"
+            ]
+          },
+          "assetId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "assetKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "assetName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "preserveVisualRole": {
+            "const": true
+          },
+          "allowedDeviation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "unmappedRoles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,6 +1,6 @@
 ---
 id: visual-quality
-version: 2.2.0
+version: 2.4.0
 scope: core
 category: visual-direction
 ---
@@ -8,251 +8,204 @@ category: visual-direction
 # Visual Quality Skill
 
 ## Mission
-Produce and verify UI that is visually coherent, intentional, polished, and faithful to the approved product language without introducing subjective redesign outside scope.
+Produce and verify UI that is visually coherent, intentional, polished, and faithful to the locked Visual Authority without subjective redesign outside scope.
 
-For REPRODUCE/ADAPT:
-**fidelity and system consistency outrank personal taste.**
+For REPRODUCE/ADAPT, fidelity outranks personal taste.
 
 ## Activate when
-Mandatory for CREATE_SCREEN, MODIFY_SCREEN, REVIEW, QA, and any task where visual quality is explicitly discussed.
+Mandatory for CREATE_SCREEN.
+Mandatory for MODIFY_SCREEN/FIX.
+Mandatory for REVIEW and QA where visual quality/fidelity matters.
+Use whenever a visual reference is supplied.
 
 ## Required inputs
-- approved reference/design grammar
-- live inspection evidence
-- DS foundations/components
+- Reference Lock
+- approved visual reference
+- live Figma inspection
+- baseline evidence
+- Design System foundations/components
 - IA/content hierarchy
 - interaction states
 - Change Scope
-- supported viewports when relevant
+- supported viewports
 
 ## Visual grammar extraction
-Before changing anything, identify:
-- page shell
-- grid/alignment axes
-- density
-- spacing scale/rhythm
-- typography hierarchy
-- surface style
-- border/radius/elevation
-- icon family
-- action hierarchy
-- color hierarchy
-- repeated component geometry
+Before Design Decision on reference-based work, extract a structured Visual Grammar.
 
-Record what must remain unchanged.
+### Canvas
+- aspect ratio
+- width/height when known
+- background role
+- outer margin
+
+### Layout
+- grid type
+- columns/rows
+- column/row gaps
+- alignment anchors
+- major region bounds
+
+### Hierarchy
+- primary focal area
+- secondary areas
+- action hierarchy
+- metric/value hierarchy
+- dominant visual anchors
+
+### Repeated pattern
+- pattern name
+- count
+- card/row anatomy
+- invariant order
+- repeated geometry
+- internal alignment
+
+### Typography
+- role hierarchy
+- family/style if known
+- size/weight/line height
+- numeric emphasis
+- wrapping behavior
+
+### Surface
+- radius
+- stroke
+- elevation
+- fill
+- divider
+- nesting
+
+### Color roles
+- background
+- primary/secondary text
+- accent
+- positive/negative/status
+- chart roles
+
+### Iconography
+- family
+- stroke/fill behavior
+- optical size
+- placement
+
+### Chart grammar
+- geometry
+- axes
+- labels
+- trend line/bar style
+- badges/markers
+- legend
+- baseline
+
+### State grammar
+- default
+- selected
+- hover/focus if visible
+- disabled/error/loading/empty as applicable
+
+### Responsive grammar
+- fixed/fluid behavior
+- wrapping
+- stack/collapse/hide
+- scroll
+- substitute pattern
+
+### Fidelity anchors
+List the most important visual properties that must match.
+
+### Unknowns
+Record material unknowns explicitly.
+Do not silently invent them in REPRODUCE.
+
+Write output against agent/planner/visual-grammar.schema.json.
 
 ## Quality dimensions
 
 ### 1. Hierarchy
-Check:
-- primary task/focus visible
-- headings/values/actions ranked correctly
-- primary CTA does not compete with secondary actions
-- important status is perceivable
-- decorative emphasis does not outrank task content
+Check task/focus, values/actions, status prominence and decorative restraint.
 
 ### 2. Composition
-Check:
-- balance of visual weight
-- intentional grouping
-- whitespace distribution
-- major block alignment
-- repeated geometry
-- no isolated/floating controls
-- no accidental dead zones
+Check balance, grouping, whitespace, major alignment and repeated geometry.
 
 ### 3. Spacing rhythm
-Check relationships, not individual gaps only:
-- icon ↔ label
-- label ↔ value
-- field ↔ helper/error
-- item ↔ item
-- group ↔ group
-- section ↔ section
-
-Prefer approved spacing tokens.
-Repeated relationships should repeat spacing.
+Check repeated relationships and approved spacing semantics.
 
 ### 4. Alignment
-Check:
-- left/right edges
-- text baselines
-- control baselines
-- icon optical alignment
-- column alignment
-- header/body alignment
-- repeated card anchors
-
-A visible 1–3 px inconsistency can be a defect in repeated structures.
+Check edges, baselines, columns, card anchors and optical alignment.
 
 ### 5. Proportion
-Check:
-- component size relative to importance
-- card padding vs content
-- icon/button size
-- line length
-- whitespace vs density
-- visual balance between label/value/action
-
-Avoid oversizing to appear "modern".
+Check component size, padding, whitespace, label/value/action balance.
 
 ### 6. Typography
-Verify:
-- approved family/style
-- semantic hierarchy
-- size/weight/line-height
-- line wrapping
-- numeric scanability
-- label/value contrast
-- no faux bold
-- no arbitrary tracking
+Check approved family, role, weight, line height, wrapping and numeric scanability.
 
 ### 7. Color
-Verify:
-- semantic token use
-- emphasis
-- state distinction
-- contrast sanity
-- no unnecessary accent proliferation
-- error/warning/success/selected/disabled differentiation
-
-Color must support meaning, not decorate randomly.
+Check semantic roles, state distinction, contrast and accent restraint.
 
 ### 8. Surface and shape
-Verify:
-- radius
-- stroke
-- divider
-- elevation
-- fill
-- container nesting
-
-Avoid mixing unrelated surface systems on one screen.
+Check radius, stroke, elevation, fill and nesting consistency.
 
 ### 9. Iconography
-Verify:
-- approved family
-- stroke/fill consistency
-- optical size
-- alignment
-- semantic meaning
-- no decorative competition
+Check approved family, meaning, consistency and alignment.
 
 ### 10. Density and scanability
-For enterprise UI:
-- preserve working density
-- reduce decoration before information
-- avoid excessive cardification
-- preserve table/list scan lines
-- maintain predictable row rhythm
+Preserve working density and avoid unnecessary cardification.
 
 ### 11. State polish
-Check relevant:
-- default
-- hover
-- focus
-- pressed
-- selected
-- disabled
-- loading
-- empty
-- error
-- success
-
-Prefer geometry stability across states.
+Check relevant visual states while preserving geometry stability.
 
 ### 12. Edge quality
-Inspect:
-- clipping
-- overflow
-- awkward wrapping
-- orphan labels
-- uneven card/row height
-- inconsistent divider
-- icon/text centering
-- inconsistent radius
-- one-off raw color
-- overlapping focus/error states
+Check clipping, overflow, awkward wrap, uneven heights and one-off raw values.
 
 ### 13. Data visualization sanity
-When charts/metrics exist, verify:
-- value hierarchy
-- label readability
-- legend clarity
-- color semantics
-- comparison baseline
-- no decorative distortion
-- no loss of important precision
-
-Do not invent chart meaning/data.
+Check readable labels, legends, baseline and no invented data meaning.
 
 ### 14. Visual accessibility
-Coordinate with Responsive & Accessibility for:
-- contrast
-- focus visibility
-- non-color state cues
-- text sizing
-- target clarity
+Coordinate contrast, focus, non-color state cues and text size.
 
-## Anti-drift protocol
-Before mutation:
-1. extract approved visual grammar
-2. list protected visual properties
-3. isolate requested change
-4. define expected visual delta
-5. implement smallest coherent delta
-6. compare reference/result
-7. revert unrelated beautification
+## REPRODUCE skeleton protocol
+Use agent/flow/reference-reproduce.json.
 
-## Severity
+Build first:
+1. canvas
+2. major regions
+3. grid
+4. repeated-card bounds/order
+5. major gaps/margins
+6. hierarchy blocks
 
-### P0
-- task hierarchy unusable
-- severe overlap/clipping
-- unreadable critical content
-- wrong component family/source
-- material out-of-scope reference drift
-- critical state visually indistinguishable
-
-### P1
-- repeated spacing/alignment inconsistency
-- wrong typography hierarchy
-- product density drift
-- broken responsive composition
-- ambiguous selected/disabled/error state
-- material icon/surface inconsistency
-
-### P2
-- minor optical correction
-- small rhythm inconsistency
-- non-blocking decorative polish
+Then capture comparable visual evidence.
+Side-by-side compare with locked reference.
+Do not continue detail work with unresolved P0/P1 skeleton mismatch.
 
 ## Visual Quality Gate
 
 ### PASS
 - no P0/P1
-- approved visual grammar preserved
-- requested visual delta is coherent
-- repeated patterns are consistent
-- relevant states/viewports are visually stable
+- Visual Grammar complete enough for task
+- locked visual roles preserved
+- repeated patterns consistent
+- relevant states/viewports stable
 
 ### FAIL
-Any unresolved P0/P1.
+Any unresolved material visual defect or unexplained reference drift.
 
 ### BLOCKED
-Use when comparable visual evidence or authoritative visual grammar cannot be established.
+Comparable visual evidence or authoritative grammar cannot be established.
 
 ## Anti-patterns
-- redesigning unrelated areas to make screen prettier
-- introducing new shadows/radii/colors without system evidence
-- adding cards around every section
-- increasing whitespace at cost of working density
-- changing typography hierarchy globally for one local issue
-- using visual polish to hide IA/interaction problems
-- screenshot matching via raw overrides that break DS
+- redesigning unrelated areas to make it prettier
+- substituting Product Master composition for user ref
+- adding new surface language without evidence
+- changing density to appear modern
+- hiding IA problems with visual polish
+- metadata-only visual PASS
+- raw screenshot matching that breaks DS semantics
+- continuing detail build after skeleton fidelity failure
 
 ## Required evidence
-- reference/visual grammar
+- Reference Lock
+- Visual Grammar
 - protected visual properties
 - hierarchy
 - composition
@@ -261,11 +214,16 @@ Use when comparable visual evidence or authoritative visual grammar cannot be es
 - color/surface
 - iconography
 - density
-- state polish
-- edge quality
-- visual accessibility observations
+- chart/state observations
+- skeleton side-by-side when REPRODUCE
 - P0/P1/P2 list
-- visual gate result
+- Visual Quality Gate result
 
 ## Downstream handoff
-Pass visual constraints/deltas to Execution, QA, Regression, Fix Loop, and Evidence.
+Pass:
+- Visual Grammar
+- fidelity anchors
+- protected visual properties
+- expected visual delta
+- skeleton checkpoint requirements
+to DS Mapping, Design Decision, Execution, QA-01B, QA-07, Regression, Fix Loop, and Evidence.

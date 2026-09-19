@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "2.0.0",
-  "agentVersion": "2.3.0",
+  "schemaVersion": "2.1.0",
+  "agentVersion": "2.4.0",
   "finalStates": [
     "PASS",
     "FAIL",
@@ -17,7 +17,8 @@
       "id": "PRE_REGRESSION",
       "order": 1,
       "gates": [
-        "QA-01",
+        "QA-01A",
+        "QA-01B",
         "QA-02",
         "QA-03",
         "QA-04",
@@ -39,17 +40,36 @@
       "id": "FINAL_AGGREGATION",
       "order": 3,
       "requires": [
-        "QA-01..QA-09 resolved",
+        "QA-01A/QA-01B/QA-02..QA-09 resolved",
         "QA-10 resolved or NOT_APPLICABLE"
       ]
     }
   ],
   "gates": [
     {
-      "id": "QA-01",
-      "name": "Reference Fidelity",
+      "id": "QA-01A",
+      "name": "Reference Authority",
       "phase": "PRE_REGRESSION",
-      "blocking": true
+      "blocking": true,
+      "p0Examples": [
+        "wrong source/master",
+        "locked user visual reference replaced by Product Master",
+        "unresolved reference lane"
+      ]
+    },
+    {
+      "id": "QA-01B",
+      "name": "Visual Fidelity",
+      "phase": "PRE_REGRESSION",
+      "blocking": true,
+      "requires": [
+        "Reference Lock",
+        "Visual Grammar",
+        "comparable visual evidence"
+      ],
+      "blockedWhen": [
+        "visual comparison unavailable for reference-based work"
+      ]
     },
     {
       "id": "QA-02",
@@ -110,8 +130,9 @@
         "MODIFY_SCREEN",
         "FIX",
         "COMPARISON_BASED_QA"
-      ]
+      ],
+      "reproduceRequirement": "Side-by-side reference/result evidence; metadata-only evidence cannot PASS."
     }
   ],
-  "completionRule": "Final QA is computed only in FINAL_AGGREGATION after QA-01..QA-09 and QA-10 are resolved or explicitly NOT_APPLICABLE. BLOCKED propagates to final BLOCKED. Any unresolved applicable FAIL propagates to FAIL unless an authorized Fix Loop is still active."
+  "completionRule": "Final QA is computed only after QA-01A, QA-01B, QA-02..QA-09 and QA-10 are resolved or explicitly NOT_APPLICABLE. Wrong reference authority is a blocking failure even if the resulting design is visually polished."
 }

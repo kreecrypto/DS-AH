@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "agentVersion": "2.4.0",
+  "name": "Reference Reproduce Nested Flow",
+  "appliesWhen": "BuildMode=REPRODUCE and ReferenceLock.status=LOCKED",
+  "purpose": "Prevent a full detailed build from drifting away from a locked visual reference before geometry/composition is verified.",
+  "steps": [
+    "LOCK_REFERENCE",
+    "EXTRACT_VISUAL_GRAMMAR",
+    "MAP_DESIGN_SYSTEM",
+    "PLAN_SKELETON_BATCH",
+    "MUTATE_SKELETON",
+    "VERIFY_SKELETON_STRUCTURE",
+    "COMPARE_SKELETON_SIDE_BY_SIDE",
+    "FIX_SKELETON_IF_P0_P1",
+    "PLAN_DETAIL_BATCHES",
+    "MUTATE_DETAIL_INCREMENTALLY",
+    "VERIFY_EACH_MATERIAL_BATCH",
+    "FINAL_SIDE_BY_SIDE_COMPARISON",
+    "QA_01A_REFERENCE_AUTHORITY",
+    "QA_01B_VISUAL_FIDELITY",
+    "QA_02_TO_QA_09",
+    "QA_10_VISUAL_REGRESSION",
+    "FINAL_QA"
+  ],
+  "skeletonIncludes": [
+    "canvas bounds/aspect ratio",
+    "major regions",
+    "grid columns/rows",
+    "primary repeated-card bounds",
+    "major gaps/margins",
+    "dominant hierarchy blocks"
+  ],
+  "skeletonExcludes": [
+    "microcopy polish",
+    "minor icon details",
+    "decorative micro-adjustments",
+    "unverified data values"
+  ],
+  "checkpointRule": "Do not proceed from skeleton to detailed content when a material geometry/composition mismatch remains.",
+  "sideBySideDimensions": [
+    "frame ratio",
+    "grid",
+    "major region bounds",
+    "card size",
+    "card order",
+    "whitespace",
+    "hierarchy",
+    "typography roles",
+    "radius/stroke/surface",
+    "chart geometry",
+    "badge position",
+    "density"
+  ],
+  "forbidden": [
+    "using Product Master layout to replace locked user-ref layout",
+    "continuing detailed build after skeleton P0/P1",
+    "using structural metadata alone as visual-fidelity PASS",
+    "re-baselining a failed result as the new reference"
+  ]
+}

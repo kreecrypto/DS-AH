@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "2.0.0",
-  "agentVersion": "2.3.0",
+  "schemaVersion": "2.1.0",
+  "agentVersion": "2.4.0",
   "name": "DS-AH Design Agent Production Flow",
   "canonicalOrder": [
     "USER_REQUEST",
@@ -9,6 +9,9 @@
     "FIGMA_INSPECT",
     "CAPTURE_BASELINE",
     "RESOLVE_REFERENCE",
+    "REFERENCE_LOCK",
+    "VISUAL_GRAMMAR_EXTRACTION",
+    "DESIGN_SYSTEM_MAPPING",
     "DESIGN_DECISION",
     "CHANGE_SCOPE",
     "WRITE_PERMISSION",
@@ -26,7 +29,8 @@
   ],
   "qaPhases": {
     "preRegression": [
-      "QA-01",
+      "QA-01A",
+      "QA-01B",
       "QA-02",
       "QA-03",
       "QA-04",
@@ -39,7 +43,7 @@
     "regression": [
       "QA-10"
     ],
-    "finalAggregationRule": "FINAL_QA_AGGREGATION may resolve only after QA-01..QA-09 and QA-10 are PASS/FAIL/BLOCKED/NOT_APPLICABLE with evidence."
+    "finalAggregationRule": "FINAL_QA_AGGREGATION resolves only after QA-01A, QA-01B, QA-02..QA-09, and QA-10 are resolved or explicitly NOT_APPLICABLE with evidence."
   },
   "stages": [
     {
@@ -130,16 +134,85 @@
         "buildMode",
         "referenceGate",
         "selectedReference",
+        "authorityLanes",
         "authorityRationale"
       ],
       "next": [
-        "DESIGN_DECISION",
+        "REFERENCE_LOCK",
         "EVIDENCE"
       ],
       "blockOn": [
         "BLOCKED_REFERENCE_AMBIGUOUS",
         "BLOCKED_REFERENCE_MISSING"
       ]
+    },
+    {
+      "id": "REFERENCE_LOCK",
+      "state": "REFERENCE_LOCKED",
+      "mode": "READ_ONLY",
+      "owner": "reference-source-resolution+controller",
+      "gate": "REFERENCE_LOCK_READY",
+      "requiredOutputs": [
+        "referenceLock"
+      ],
+      "next": [
+        "VISUAL_GRAMMAR_EXTRACTION",
+        "EVIDENCE"
+      ],
+      "results": [
+        "LOCKED",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ],
+      "rules": [
+        "exact current-task user visual/Figma reference owns visual authority when explicitly requested",
+        "Product Master cannot replace locked visual authority",
+        "locked source substitutions require explicit re-resolution"
+      ]
+    },
+    {
+      "id": "VISUAL_GRAMMAR_EXTRACTION",
+      "state": "GRAMMAR_EXTRACTED",
+      "mode": "READ_ONLY",
+      "owner": "visual-quality+reference-fidelity",
+      "gate": "VISUAL_GRAMMAR_READY",
+      "requiredOutputs": [
+        "visualGrammar"
+      ],
+      "next": [
+        "DESIGN_SYSTEM_MAPPING",
+        "EVIDENCE"
+      ],
+      "results": [
+        "COMPLETE",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ],
+      "requiredFor": [
+        "REPRODUCE",
+        "ADAPT_WHEN_VISUAL_REFERENCE_CONTROLS"
+      ]
+    },
+    {
+      "id": "DESIGN_SYSTEM_MAPPING",
+      "state": "SYSTEM_MAPPED",
+      "mode": "READ_ONLY",
+      "owner": "design-system-compliance",
+      "gate": "SYSTEM_MAPPING_READY",
+      "requiredOutputs": [
+        "designSystemMapping"
+      ],
+      "next": [
+        "DESIGN_DECISION",
+        "EVIDENCE"
+      ],
+      "results": [
+        "COMPLETE",
+        "PARTIAL",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ],
+      "rule": "System mapping preserves locked visual roles; conflicts are recorded instead of replacing composition."
     },
     {
       "id": "DESIGN_DECISION",
@@ -196,6 +269,7 @@
         "targetResolved",
         "scopeResolved",
         "referenceEligible",
+        "referenceLockEligible",
         "figmaWriteCapability"
       ]
     },
@@ -204,23 +278,27 @@
       "state": "REVALIDATING",
       "mode": "READ_ONLY",
       "owner": "figma-inspect+controller",
-      "gate": "BASELINE_CURRENT",
+      "gate": "BASELINE_AND_REFERENCE_CURRENT",
       "requiredOutputs": [
         "freshFingerprint",
         "baselineComparison",
+        "referenceLockComparison",
         "revalidationResult"
       ],
       "next": [
         "FIGMA_EXECUTION_PLAN",
         "FIGMA_INSPECT",
+        "RESOLVE_REFERENCE",
         "EVIDENCE"
       ],
       "results": [
         "CURRENT",
         "STALE_BASELINE",
+        "STALE_REFERENCE",
         "BLOCKED"
       ],
-      "staleRoute": "FIGMA_INSPECT"
+      "staleRoute": "FIGMA_INSPECT",
+      "staleReferenceRoute": "RESOLVE_REFERENCE"
     },
     {
       "id": "FIGMA_EXECUTION_PLAN",
@@ -236,7 +314,8 @@
       ],
       "next": [
         "MUTATION"
-      ]
+      ],
+      "reproduceRule": "When Reference Lock is LOCKED and Build Mode is REPRODUCE, apply agent/flow/reference-reproduce.json and separate skeleton from detail batches."
     },
     {
       "id": "MUTATION",
@@ -303,9 +382,11 @@
       "state": "QA_PRE_REGRESSION",
       "mode": "READ_ONLY",
       "owner": "design-qa+specialist-skills",
-      "gate": "QA_01_09_RESOLVED",
+      "gate": "QA_PRE_REGRESSION_RESOLVED",
       "requiredOutputs": [
-        "qa01to09Matrix",
+        "qa01A",
+        "qa01B",
+        "qa02to09Matrix",
         "defectRecords",
         "preRegressionResult"
       ],
@@ -323,6 +404,7 @@
       "gate": "QA_10_RESOLVED",
       "requiredOutputs": [
         "baselineEvidence",
+        "sideBySideEvidence",
         "differenceRecords",
         "qa10Result"
       ],
@@ -339,7 +421,7 @@
       "owner": "design-qa",
       "gate": "FINAL_QA_RESOLVED",
       "requiredOutputs": [
-        "gateMatrixQA01to10",
+        "gateMatrix",
         "finalQaResult",
         "p2Polish",
         "blockingDefects"
@@ -421,6 +503,9 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "VISUAL_GRAMMAR_EXTRACTION",
+      "DESIGN_SYSTEM_MAPPING",
       "DESIGN_DECISION",
       "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
@@ -435,6 +520,9 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "VISUAL_GRAMMAR_EXTRACTION",
+      "DESIGN_SYSTEM_MAPPING",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
@@ -457,6 +545,9 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "VISUAL_GRAMMAR_EXTRACTION",
+      "DESIGN_SYSTEM_MAPPING",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
@@ -479,6 +570,9 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "VISUAL_GRAMMAR_EXTRACTION",
+      "DESIGN_SYSTEM_MAPPING",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
@@ -501,6 +595,9 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "VISUAL_GRAMMAR_EXTRACTION",
+      "DESIGN_SYSTEM_MAPPING",
       "VERIFICATION",
       "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
@@ -515,6 +612,7 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
       "VERIFICATION",
       "EVIDENCE",
       "COMPLETE"
@@ -526,6 +624,8 @@
       "FIGMA_INSPECT",
       "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
+      "REFERENCE_LOCK",
+      "DESIGN_SYSTEM_MAPPING",
       "DESIGN_DECISION",
       "QA_PRE_REGRESSION",
       "FINAL_QA_AGGREGATION",
@@ -534,14 +634,14 @@
     ]
   },
   "invariants": [
-    "qa_01_09_before_qa_10",
-    "final_qa_after_qa_10",
-    "component_intent_has_machine_flow",
-    "mutation_error_requires_canvas_state_classification",
-    "blocked_runs_emit_resume_checkpoint",
-    "stale_baseline_forces_reinspection",
-    "specialized_subflows_must_not_bypass_parent_guards",
-    "fix_loop_returns_through_verification_and_all_affected_qa",
+    "exact_current_user_visual_ref_precedes_product_master_for_visual_authority",
+    "prior_user_ref_missing_blocks_instead_of_fallback",
+    "reference_lock_before_visual_grammar_and_design_decision",
+    "system_authority_cannot_replace_locked_visual_composition",
+    "visual_grammar_required_for_reference_reproduce",
+    "reproduce_uses_skeleton_fidelity_checkpoint",
+    "qa_01a_reference_authority_separate_from_qa_01b_visual_fidelity",
+    "side_by_side_visual_evidence_required_for_reproduce_fidelity_pass",
     "no_mutation_before_inspection",
     "no_mutation_before_design_decision",
     "no_mutation_before_scope",

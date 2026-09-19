@@ -1,44 +1,45 @@
-# DS-AH — Design Control Agent Entry Point v2.3
+# DS-AH — Design Control Agent Entry Point v2.4
 
-DS-AH is the Knowledge Base and operating contract for the Design Agent. ChatGPT is the runtime; Figma MCP is the live inspect/write/verify layer.
+## Architecture
+Chat = Agent  
+GitHub = Brain / Knowledge  
+Figma = Workspace
 
 ## Start sequence
 
 1. Read `agent/SYSTEM.md`.
 2. Read `agent/runtime.json`.
 3. Read `agent/flow/design-agent-flow.json`.
-4. Read `agent/state-machine.json`.
+4. Read `agent/reference/reference-lock.json`.
 5. Route intent/product.
-6. Load full required Skill contracts.
+6. Load required Skill contracts.
 7. Read `docs/figma-sop.md` before live Figma work.
-8. Inspect and capture baseline.
-9. Resolve source authority.
-10. Create Design Decision and Change Scope for write tasks.
-11. Evaluate write permission.
-12. Pre-write revalidate before every write.
-13. Execute incrementally; on error use mutation recovery.
-14. Verify result.
-15. Run QA-01..09.
-16. Run QA-10 Visual Regression.
-17. Aggregate Final QA.
-18. Fix P0/P1 only through the full return path.
-19. Emit Evidence and resume checkpoint if resumably blocked.
-20. Complete PASS / FAIL / BLOCKED.
+8. Inspect target/reference and capture baseline.
+9. Resolve authority lanes.
+10. Lock Reference.
+11. Extract Visual Grammar.
+12. Map DS assets to visual roles.
+13. Create Design Decision and Change Scope.
+14. Evaluate write permission.
+15. Pre-write revalidate target and locked reference.
+16. For REPRODUCE, run skeleton checkpoint before detail.
+17. Execute incrementally; recover uncertain mutation state.
+18. Verify.
+19. QA-01A Reference Authority.
+20. QA-01B Visual Fidelity.
+21. QA-02..09.
+22. QA-10 Visual Regression.
+23. Final QA.
+24. Fix P0/P1 through the full return path.
+25. Evidence.
+26. Complete PASS / FAIL / BLOCKED.
 
 ## Hard rules
 
-- Figma READ_ONLY by default.
-- Component intent is read-only by default.
-- No baseline/revalidation = no write.
-- STALE_BASELINE = re-inspect, never silently accept.
-- Tool error does not prove zero write.
-- Fix Loop cannot skip Verification/QA/Regression.
+- Exact current-task user visual/Figma ref outranks Product Master for Visual Authority.
+- Missing requested prior ref = BLOCKED_REFERENCE_MISSING; no Master fallback.
+- Reference Lock before Design Decision.
+- DS mapping cannot replace locked composition.
+- REPRODUCE skeleton must pass side-by-side comparison before detailed build.
+- Metadata-only evidence cannot PASS visual fidelity.
 - No PASS without evidence.
-
-## Sources
-
-Core DS: `5ZFIRJWtmEIvuq95Rhyo6I`  
-Agency Master: `cipkv7yTxyE29VCfMphE0W`  
-Admin Master: `rEJCvUGUfzzQ3jegheRhnr`
-
-See `agent/manifest.json` for the machine-readable map.

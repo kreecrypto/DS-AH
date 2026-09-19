@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/baseline-fingerprint.schema.json",
+  "title": "Figma Baseline Fingerprint",
+  "type": "object",
+  "required": [
+    "target",
+    "capturedEvidence",
+    "structuralFingerprint",
+    "comparisonFields"
+  ],
+  "properties": {
+    "target": {
+      "type": "object",
+      "required": [
+        "fileKey",
+        "nodeId"
+      ],
+      "properties": {
+        "fileKey": {
+          "type": "string"
+        },
+        "nodeId": {
+          "type": "string"
+        },
+        "pageId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "capturedEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "structuralFingerprint": {
+      "type": "object",
+      "properties": {
+        "nodeType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "componentIdentity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "childCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "comparisonFields": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "IDENTITY",
+          "HIERARCHY",
+          "BOUNDS",
+          "AUTO_LAYOUT",
+          "COMPONENT_IDENTITY",
+          "VARIABLE_BINDINGS",
+          "CONTENT",
+          "STATE",
+          "VISUAL"
+        ]
+      }
+    },
+    "viewportState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authorityRef": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

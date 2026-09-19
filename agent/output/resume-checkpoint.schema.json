@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/resume-checkpoint.schema.json",
+  "title": "Design Agent Resume Checkpoint",
+  "type": "object",
+  "required": [
+    "blockedReason",
+    "resumeStage",
+    "taskEnvelope",
+    "command",
+    "target",
+    "invalidatedStages",
+    "evidenceRefs"
+  ],
+  "properties": {
+    "blockedReason": {
+      "type": "string"
+    },
+    "resumeStage": {
+      "type": "string"
+    },
+    "taskEnvelope": {
+      "type": "object"
+    },
+    "command": {
+      "type": "string"
+    },
+    "productDomain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "loadedSkills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "referenceState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "designDecisionState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "scopeState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "permissionState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "baselineState": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "invalidatedStages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

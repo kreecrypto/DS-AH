@@ -1,6 +1,6 @@
 # DS-AH Production Skill System v2.2
 
-The `skills/` directory is the professional capability layer for **Design Control Agent v2.2**.
+The `skills/` directory is the professional capability layer for **Design Control Agent v2.3**.
 
 Skills define **how** a professional design decision/check is performed.  
 Registries, approved references and live Figma define **what is true**.  
@@ -79,3 +79,14 @@ Every production skill must be detailed enough to produce repeatable decisions a
 ## Figma operating SOP
 
 Live Figma work follows `docs/figma-sop.md`. Agent Skills make design decisions; the Figma capability layer performs read/write/verify operations under Change Scope and Write Permission.
+
+## Flow hardening v2.3
+
+Skill versions remain independently versioned. Agent v2.3 adds orchestration controls around the skills:
+- Baseline + Pre-write Revalidation
+- Mutation Recovery
+- Resume/Re-entry
+- QA-01..09 → QA-10 → Final QA Aggregation
+- Component/Prototype/Multi-page/Responsive specialized subflows
+
+These controls do not grant new authority to individual skills.

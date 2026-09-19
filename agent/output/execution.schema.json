@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/execution.schema.json",
-  "title": "Design Agent v2 Execution Envelope",
+  "title": "Design Agent v2.3 Execution Envelope",
   "type": "object",
   "required": [
     "command",
@@ -20,17 +20,31 @@
         "HANDOFF",
         "COMPONENT",
         "CREATE_SCREEN",
-        "MODIFY_SCREEN"
+        "MODIFY_SCREEN",
+        "FIX"
       ]
     },
     "product": {
-      "enum": ["core", "agency", "admin", "unknown"]
+      "enum": [
+        "core",
+        "agency",
+        "admin",
+        "unknown"
+      ]
     },
     "writeMode": {
-      "enum": ["read-only", "explicit-write"]
+      "enum": [
+        "read-only",
+        "explicit-write"
+      ]
     },
     "buildMode": {
-      "enum": ["REPRODUCE", "ADAPT", "EXPLORE", null]
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE",
+        null
+      ]
     },
     "referenceGate": {
       "enum": [
@@ -42,42 +56,152 @@
       ]
     },
     "reference": {
-      "type": ["object", "null"],
-      "properties": {
-        "fileKey": {"type": ["string", "null"]},
-        "nodeId": {"type": ["string", "null"]},
-        "name": {"type": ["string", "null"]},
-        "classification": {"type": ["string", "null"]}
-      },
+      "type": [
+        "object",
+        "null"
+      ],
       "additionalProperties": true
     },
-    "fileKey": {"type": ["string", "null"]},
-    "nodeId": {"type": ["string", "null"]},
-    "workflow": {"type": "string"},
+    "fileKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nodeId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workflow": {
+      "type": "string"
+    },
     "sources": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {
+        "type": "string"
+      }
     },
     "loadedSkills": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "version"],
+        "required": [
+          "id",
+          "version"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "version": {"type": "string"}
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
         },
         "additionalProperties": false
       }
     },
-    "domain": {"type": ["string", "null"]},
-    "goal": {"type": "string"},
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "goal": {
+      "type": "string"
+    },
+    "baselineFingerprint": {
+      "$ref": "baseline-fingerprint.schema.json"
+    },
+    "preWriteRevalidation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "result": {
+          "enum": [
+            "CURRENT",
+            "STALE_BASELINE",
+            "BLOCKED"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "operationPlan": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "mutation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "mutationRecovery": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "canvasWriteState": {
+          "enum": [
+            "NO_WRITE",
+            "PARTIAL_WRITE",
+            "UNKNOWN_WRITE",
+            "RECOVERED"
+          ]
+        },
+        "result": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "qaPhases": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "resumeCheckpoint": {
+      "$ref": "resume-checkpoint.schema.json"
+    },
     "changedScope": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {
+        "type": "string"
+      }
     },
     "finalResult": {
-      "enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ]
     }
   },
   "additionalProperties": true

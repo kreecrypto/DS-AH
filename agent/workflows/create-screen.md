@@ -1,53 +1,33 @@
-# Workflow — CREATE SCREEN v2.1
+# Workflow — CREATE SCREEN v2.3
 
 ## Control flow
 
-**Inspect → Resolve Authority → Design Decision → Change Scope → Permission → Skill Pipeline → Execute → QA → Fidelity/Regression → Fix Loop → Evidence**
+Inspect → Capture Baseline → Resolve Authority → Design Decision → Change Scope → Permission → **Pre-write Revalidation** → Execution Plan → Mutation → Recovery if needed → Verification → QA-01..09 → QA-10 → Final QA → Fix Loop → Evidence.
 
 ## Preflight
 1. Resolve product/domain/target.
-2. Inspect exact approved reference candidates.
-3. Resolve Build Mode and Reference Gate.
-4. Create Design Decision.
-5. Define Change Scope:
-   - allowed changes
-   - protected areas
-   - out-of-scope
-   - affected states
-   - affected viewports
-6. Evaluate Write Permission.
+2. Inspect exact destination and reference candidates.
+3. Capture a baseline fingerprint for destination/reference evidence.
+4. Resolve Build Mode and Reference Gate.
+5. Create Design Decision and observable acceptance criteria.
+6. Define allowed/protected/out-of-scope areas, affected states/viewports.
+7. Evaluate Write Permission.
+8. Immediately before execution, re-read material target/reference evidence and compare with baseline.
+9. If STALE_BASELINE, return to Inspect and revalidate downstream decisions before writing.
 
-Do not mutate unless permission = WRITE_ALLOWED.
+## Execution
+Build a node-level plan. Prefer property/variant/token/Auto Layout changes before new raw nodes. Execute in small batches. Every batch returns all affected node IDs.
 
-## Design pipeline
-Figma Inspect
-→ Reference / Source Resolution
-→ Information Architecture
-→ Interaction Design
-→ Design System Compliance
-→ UX Writing / Content
-→ Visual Quality
-→ Responsive & Accessibility
-→ Figma Execution
-
-### REPRODUCE
-Preserve approved shell, IA, geometry, section order, components, spacing, states and responsive behavior.
-
-### ADAPT
-Preserve unaffected structure and modify only approved scope.
-
-### EXPLORE
-Only with explicit exploration intent. Reuse approved foundations/components unless brief changes the system.
+Any error/incomplete result enters Mutation Recovery. Do not continue another batch while canvas state is UNKNOWN_WRITE.
 
 ## Post-write
-1. Verify mutation.
-2. Run QA-01..QA-10 as applicable.
-3. Run Reference Fidelity.
-4. Run Visual Regression.
-5. If fixable P0/P1 fails and permission remains WRITE_ALLOWED, enter Fix Loop.
-6. Re-run failed/dependent gates until PASS or genuine BLOCKED.
-7. Emit Evidence Matrix.
+1. Verification: structural + visual + scope.
+2. QA-01..QA-09.
+3. QA-10 Visual Regression when applicable.
+4. Final QA Aggregation.
+5. Fixable P0/P1 → Fix Loop.
+6. After every fix: Verification → affected QA-01..09 → QA-10 → Final QA.
+7. Evidence.
 
 ## Completion
-Final result = PASS | FAIL | BLOCKED.
-No PASS without evidence. No execution without scope and permission.
+PASS | FAIL | BLOCKED only after final aggregation and evidence.

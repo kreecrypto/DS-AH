@@ -1,29 +1,49 @@
-# Workflow — COMPONENT v2.1
+# Workflow — COMPONENT v2.3
 
-Use for component resolution, API audit, normalization or controlled component change planning.
+## Purpose
+Resolve component identity, ownership, API, variants/properties, state coverage, dependencies, and normalization decisions.
 
-## Default control mode
-READ_ONLY. A component mutation must be rerouted/authorized as MODIFY with scope and permission.
+## Default mode
+READ_ONLY.
+
+COMPONENT now has an explicit machine flow:
+User Request → Intent → Skills → Inspect → Baseline → Reference → Component Decision → QA-01..09 as applicable → Final Aggregation → Evidence.
+
+QA-10 is normally NOT_APPLICABLE unless comparison/visual mutation evidence is part of the task.
 
 ## Decision tree
 1. Exact approved Core component exists → REUSE.
-2. Approved component supports required semantic variant/property → EXTEND only if ownership permits.
-3. Same semantic component duplicated locally → resolve canonical owner and aliases.
+2. Existing owner supports required semantic property/variant → EXTEND only if ownership permits.
+3. Duplicate local semantic component → identify canonical owner and migration/alias need.
 4. Visual similarity with different business semantics → keep distinct.
-5. One-off composition → SCREEN_ONLY, do not promote.
-6. Ambiguous state/variant meaning → REVIEW_REQUIRED.
+5. One-off composition → SCREEN_ONLY.
+6. Ambiguous semantic state/variant → REVIEW_REQUIRED.
 
 ## Required checks
-- exact published identity/key where available
-- owner: Core / Domain / Screen
-- semantic name
-- semantic properties/variants
+- exact identity/key where available
+- owner Core / Domain / Screen
+- semantic purpose
+- property/variant API
+- default values
 - state coverage
 - responsive behavior
-- interaction contract
 - content constraints
-- accessibility implications
-- dependency/token bindings
+- token dependencies
+- interaction/accessibility implications
+- consumer impact
 
-## Output
-Component decision + evidence. Do not mutate solely because COMPONENT intent was detected.
+## Mutation rule
+COMPONENT intent never mutates by itself.
+
+If component creation/edit/normalization must change Figma:
+COMPONENT decision
+→ reroute to MODIFY_SCREEN/FIX
+→ explicit Change Scope
+→ WRITE_ALLOWED
+→ Pre-write Revalidation
+→ execution
+→ verification
+→ QA-01..09
+→ QA-10 if visual comparison applies
+→ Final QA
+→ Evidence.

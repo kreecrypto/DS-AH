@@ -1,31 +1,172 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "$id":"agent/output/qa-result.schema.json",
-  "title":"Design Control QA Result",
-  "type":"object",
-  "required":["result","checks","evidenceMatrix","gaps"],
-  "properties":{
-    "result":{"enum":["PASS","FAIL","BLOCKED"]},
-    "checks":{
-      "type":"object",
-      "required":["referenceFidelity","designSystem","informationArchitecture","interactionStates","responsiveAccessibility","content","visualQuality","structural","scopeIntegrity","visualRegression"],
-      "properties":{
-        "referenceFidelity":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "designSystem":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "informationArchitecture":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "interactionStates":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "responsiveAccessibility":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "content":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "visualQuality":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "structural":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "scopeIntegrity":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
-        "visualRegression":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]}
-      },
-      "additionalProperties":false
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/output/qa-result.schema.json",
+  "title": "Design Control QA Result v2.3",
+  "type": "object",
+  "required": [
+    "result",
+    "phases",
+    "checks",
+    "evidenceMatrix",
+    "gaps"
+  ],
+  "properties": {
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
     },
-    "evidenceMatrix":{"$ref":"evidence-matrix.schema.json"},
-    "p2Polish":{"type":"array","items":{"type":"string"}},
-    "gaps":{"type":"array","items":{"type":"string"}}
+    "phases": {
+      "type": "object",
+      "required": [
+        "preRegression",
+        "visualRegression",
+        "finalAggregation"
+      ],
+      "properties": {
+        "preRegression": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED"
+          ]
+        },
+        "visualRegression": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "finalAggregation": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "referenceFidelity",
+        "designSystem",
+        "informationArchitecture",
+        "interactionStates",
+        "responsiveAccessibility",
+        "content",
+        "visualQuality",
+        "structural",
+        "scopeIntegrity",
+        "visualRegression"
+      ],
+      "properties": {
+        "referenceFidelity": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "designSystem": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "informationArchitecture": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "interactionStates": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "responsiveAccessibility": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "content": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "visualQuality": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "structural": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "scopeIntegrity": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "visualRegression": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_APPLICABLE"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "aggregationReady": {
+      "type": "boolean"
+    },
+    "evidenceMatrix": {
+      "$ref": "evidence-matrix.schema.json"
+    },
+    "p2Polish": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   },
-  "additionalProperties":true
+  "additionalProperties": true
 }

@@ -1,8 +1,8 @@
 {
   "name": "ds-ah-operating-repo",
   "private": true,
-  "version": "2.2.0",
-  "description": "Design Control Agent with production-depth Figma skills, governed execution, scope control, QA, regression and evidence.",
+  "version": "2.3.0",
+  "description": "Design Control Agent with production Figma flow hardening: baseline revalidation, mutation recovery, resumable blockers, phased QA and specialized subflows.",
   "type": "module",
   "scripts": {
     "validate:registry": "node scripts/validate-registry.mjs",
@@ -10,7 +10,8 @@
     "test:agent": "node scripts/run-agent-evals.mjs",
     "test:fidelity": "node scripts/run-fidelity-evals.mjs",
     "test:control": "node scripts/run-control-evals.mjs",
-    "validate": "npm run validate:registry && npm run validate:agent && npm run test:agent && npm run test:fidelity && npm run test:control && npm run test:skill-depth",
-    "test:skill-depth": "node scripts/run-skill-depth-evals.mjs"
+    "validate": "npm run validate:registry && npm run validate:agent && npm run test:agent && npm run test:fidelity && npm run test:control && npm run test:skill-depth && npm run test:deep-flow",
+    "test:skill-depth": "node scripts/run-skill-depth-evals.mjs",
+    "test:deep-flow": "node scripts/run-deep-flow-evals.mjs"
   }
 }

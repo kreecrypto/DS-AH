@@ -1,23 +1,327 @@
 {
-  "schemaVersion":"1.0.0",
-  "name":"Design Control Agent State Machine",
-  "initialState":"RECEIVED",
-  "terminalStates":["COMPLETE","BLOCKED"],
-  "states":["RECEIVED","ROUTED","INSPECTING","REFERENCE_RESOLVED","PLANNED","READY_TO_EXECUTE","EXECUTING","QA","FIXING","EVIDENCE","COMPLETE","BLOCKED"],
-  "transitions":[
-    {"from":"RECEIVED","to":"ROUTED","requires":["intent_resolved","product_resolved_or_explicit_unknown"]},
-    {"from":"ROUTED","to":"INSPECTING","requires":["workflow_selected","skills_loaded"]},
-    {"from":"INSPECTING","to":"REFERENCE_RESOLVED","requires":["inspection_evidence","reference_gate_resolved"]},
-    {"from":"REFERENCE_RESOLVED","to":"PLANNED","requires":["source_of_truth_resolved","scope_defined","design_decision_created"]},
-    {"from":"PLANNED","to":"READY_TO_EXECUTE","requires":["write_permission_evaluated","quality_preconditions_resolved"]},
-    {"from":"READY_TO_EXECUTE","to":"EXECUTING","requires":["write_permission_WRITE_ALLOWED"]},
-    {"from":"READY_TO_EXECUTE","to":"EVIDENCE","requires":["read_only_workflow"]},
-    {"from":"EXECUTING","to":"QA","requires":["mutation_verified"]},
-    {"from":"QA","to":"FIXING","requires":["blocking_failure_fixable","write_permission_WRITE_ALLOWED"]},
-    {"from":"FIXING","to":"QA","requires":["fix_verified"]},
-    {"from":"QA","to":"EVIDENCE","requires":["qa_resolved"]},
-    {"from":"EVIDENCE","to":"COMPLETE","requires":["evidence_complete","final_result_resolved"]},
-    {"from":"EVIDENCE","to":"BLOCKED","requires":["final_result_BLOCKED"]}
+  "schemaVersion": "2.0.0",
+  "agentVersion": "2.3.0",
+  "name": "Design Control Agent State Machine",
+  "initialState": "RECEIVED",
+  "terminalStates": [
+    "COMPLETE",
+    "BLOCKED"
   ],
-  "invariants":["no_execute_before_plan","no_execute_without_write_permission","no_write_before_reference_gate","no_complete_without_evidence","fixable_P0_P1_write_task_must_loop_before_complete"]
+  "states": [
+    "RECEIVED",
+    "RESUMING",
+    "ROUTED",
+    "INSPECTING",
+    "BASELINED",
+    "REFERENCE_RESOLVED",
+    "PLANNED",
+    "READY_TO_EXECUTE",
+    "REVALIDATING",
+    "EXECUTING",
+    "RECOVERING",
+    "VERIFYING",
+    "QA_PRE_REGRESSION",
+    "REGRESSION",
+    "QA_FINAL",
+    "FIXING",
+    "EVIDENCE",
+    "COMPLETE",
+    "BLOCKED"
+  ],
+  "transitions": [
+    {
+      "from": "RECEIVED",
+      "to": "RESUMING",
+      "requires": [
+        "valid_resume_checkpoint"
+      ]
+    },
+    {
+      "from": "RECEIVED",
+      "to": "ROUTED",
+      "requires": [
+        "intent_resolved",
+        "product_resolved_or_explicit_unknown"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "INSPECTING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_FIGMA_INSPECT"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "REFERENCE_RESOLVED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_RESOLVE_REFERENCE",
+        "previous_inspection_reusable"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "PLANNED",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_DESIGN_DECISION_or_CHANGE_SCOPE",
+        "upstream_context_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "READY_TO_EXECUTE",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_WRITE_PERMISSION_or_PRE_WRITE_REVALIDATION",
+        "upstream_context_revalidated"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "RECOVERING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_MUTATION_RECOVERY"
+      ]
+    },
+    {
+      "from": "RESUMING",
+      "to": "VERIFYING",
+      "requires": [
+        "resume_checkpoint_valid",
+        "resume_stage_VERIFICATION"
+      ]
+    },
+    {
+      "from": "ROUTED",
+      "to": "INSPECTING",
+      "requires": [
+        "workflow_selected",
+        "skills_loaded"
+      ]
+    },
+    {
+      "from": "INSPECTING",
+      "to": "BASELINED",
+      "requires": [
+        "inspection_evidence",
+        "baseline_required_or_comparison_required"
+      ]
+    },
+    {
+      "from": "INSPECTING",
+      "to": "EVIDENCE",
+      "requires": [
+        "pure_inspection_workflow",
+        "inspection_evidence"
+      ]
+    },
+    {
+      "from": "BASELINED",
+      "to": "REFERENCE_RESOLVED",
+      "requires": [
+        "baseline_fingerprint",
+        "reference_gate_resolved"
+      ]
+    },
+    {
+      "from": "REFERENCE_RESOLVED",
+      "to": "PLANNED",
+      "requires": [
+        "source_of_truth_resolved",
+        "design_decision_required"
+      ]
+    },
+    {
+      "from": "REFERENCE_RESOLVED",
+      "to": "VERIFYING",
+      "requires": [
+        "verification_only_workflow",
+        "source_of_truth_resolved"
+      ]
+    },
+    {
+      "from": "PLANNED",
+      "to": "READY_TO_EXECUTE",
+      "requires": [
+        "scope_defined_when_write_task",
+        "write_permission_evaluated"
+      ]
+    },
+    {
+      "from": "PLANNED",
+      "to": "QA_PRE_REGRESSION",
+      "requires": [
+        "read_only_review_workflow",
+        "review_analysis_complete"
+      ]
+    },
+    {
+      "from": "READY_TO_EXECUTE",
+      "to": "REVALIDATING",
+      "requires": [
+        "write_permission_WRITE_ALLOWED",
+        "baseline_fingerprint_available"
+      ]
+    },
+    {
+      "from": "READY_TO_EXECUTE",
+      "to": "EVIDENCE",
+      "requires": [
+        "read_only_or_write_not_authorized"
+      ]
+    },
+    {
+      "from": "REVALIDATING",
+      "to": "INSPECTING",
+      "requires": [
+        "revalidation_STALE_BASELINE"
+      ]
+    },
+    {
+      "from": "REVALIDATING",
+      "to": "EXECUTING",
+      "requires": [
+        "revalidation_CURRENT",
+        "execution_plan_ready",
+        "write_permission_WRITE_ALLOWED"
+      ]
+    },
+    {
+      "from": "REVALIDATING",
+      "to": "EVIDENCE",
+      "requires": [
+        "revalidation_BLOCKED"
+      ]
+    },
+    {
+      "from": "EXECUTING",
+      "to": "RECOVERING",
+      "requires": [
+        "mutation_error_or_incomplete_or_unknown_state"
+      ]
+    },
+    {
+      "from": "EXECUTING",
+      "to": "VERIFYING",
+      "requires": [
+        "mutation_recorded",
+        "affected_node_ids_recorded"
+      ]
+    },
+    {
+      "from": "RECOVERING",
+      "to": "EXECUTING",
+      "requires": [
+        "canvas_state_NO_WRITE",
+        "safe_retry",
+        "write_permission_WRITE_ALLOWED"
+      ]
+    },
+    {
+      "from": "RECOVERING",
+      "to": "VERIFYING",
+      "requires": [
+        "canvas_state_RECOVERED"
+      ]
+    },
+    {
+      "from": "RECOVERING",
+      "to": "EVIDENCE",
+      "requires": [
+        "recovery_BLOCKED"
+      ]
+    },
+    {
+      "from": "VERIFYING",
+      "to": "QA_PRE_REGRESSION",
+      "requires": [
+        "mutation_or_target_verified"
+      ]
+    },
+    {
+      "from": "VERIFYING",
+      "to": "EVIDENCE",
+      "requires": [
+        "verification_BLOCKED"
+      ]
+    },
+    {
+      "from": "QA_PRE_REGRESSION",
+      "to": "REGRESSION",
+      "requires": [
+        "qa_01_09_resolved",
+        "qa_10_applicable"
+      ]
+    },
+    {
+      "from": "QA_PRE_REGRESSION",
+      "to": "QA_FINAL",
+      "requires": [
+        "qa_01_09_resolved",
+        "qa_10_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "from": "REGRESSION",
+      "to": "QA_FINAL",
+      "requires": [
+        "qa_10_resolved"
+      ]
+    },
+    {
+      "from": "QA_FINAL",
+      "to": "FIXING",
+      "requires": [
+        "final_qa_has_fixable_P0_P1",
+        "write_permission_WRITE_ALLOWED"
+      ]
+    },
+    {
+      "from": "QA_FINAL",
+      "to": "EVIDENCE",
+      "requires": [
+        "final_qa_resolved_no_fix_iteration_pending"
+      ]
+    },
+    {
+      "from": "FIXING",
+      "to": "VERIFYING",
+      "requires": [
+        "fix_mutation_recorded",
+        "affected_node_ids_recorded"
+      ]
+    },
+    {
+      "from": "EVIDENCE",
+      "to": "COMPLETE",
+      "requires": [
+        "evidence_complete",
+        "final_result_PASS_or_FAIL"
+      ]
+    },
+    {
+      "from": "EVIDENCE",
+      "to": "BLOCKED",
+      "requires": [
+        "evidence_complete",
+        "final_result_BLOCKED",
+        "resume_checkpoint_emitted_when_resumable"
+      ]
+    }
+  ],
+  "invariants": [
+    "no_execute_without_write_permission",
+    "no_write_before_pre_write_revalidation",
+    "stale_baseline_returns_to_inspection",
+    "mutation_error_cannot_skip_recovery_classification",
+    "qa_01_09_must_resolve_before_qa_10",
+    "qa_10_must_resolve_or_be_not_applicable_before_final_qa",
+    "fix_loop_returns_to_verification_not_directly_to_qa_or_complete",
+    "blocked_resumable_run_emits_resume_checkpoint",
+    "no_complete_without_evidence"
+  ]
 }

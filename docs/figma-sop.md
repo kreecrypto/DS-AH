@@ -530,3 +530,118 @@ This SOP governs the Figma capability layer.
 - Figma Verify
 
 The Design Agent remains responsible for the final decision and QA result.
+
+
+## 26. SOP-19 — Capture baseline before write
+
+For CREATE/MODIFY/FIX, capture a material Baseline Fingerprint after inspection and before planning a write.
+
+Baseline evidence should cover the target/reference properties that can invalidate the Design Decision or execution plan, such as identity, hierarchy, bounds, Auto Layout, component identity, variable bindings, viewport/state, and visual evidence.
+
+The baseline is evidence, not a lock or Figma transaction version.
+
+## 27. SOP-20 — Pre-write revalidation
+
+Immediately before every write:
+
+1. re-read material target/reference evidence
+2. create fresh fingerprint
+3. compare with baseline
+4. classify CURRENT / STALE_BASELINE / BLOCKED
+
+CURRENT → continue.  
+STALE_BASELINE → stop write and return to Inspect.  
+BLOCKED → no write; Evidence/Blocked.
+
+Never silently refresh a stale baseline and continue with an old Design Decision.
+
+## 28. SOP-21 — Mutation recovery
+
+A tool error does not prove zero write.
+
+On error/incomplete return/unexpected result:
+- freeze later batches
+- obey safe retry metadata when available
+- inspect canvas when write state is uncertain
+- classify NO_WRITE / PARTIAL_WRITE / UNKNOWN_WRITE / RECOVERED
+- recover the smallest affected scope
+- verify before continuing
+
+Never assume transaction rollback exists.
+
+Canonical machine policy: `agent/flow/mutation-recovery.json`.
+
+## 29. SOP-22 — Resume / re-entry
+
+When a run is BLOCKED but can later continue, Evidence must emit a resume checkpoint.
+
+Resume at the earliest invalidated stage:
+- Reference issue → Resolve Reference
+- business decision → Design Decision
+- scope update → Change Scope
+- write authorization → Write Permission
+- stale canvas → Figma Inspect
+- tool restored → Pre-write Revalidation
+- unknown mutation → Mutation Recovery
+- missing QA evidence → Verification
+
+Revalidate target/reference/baseline before reusing old context.
+
+Canonical policy: `agent/flow/reentry-resume.json`.
+
+## 30. SOP-23 — Specialized subflows
+
+Use `docs/figma-specialized-subflows.md` and `agent/flow/specialized-subflows.json`.
+
+Mandatory nested patterns exist for:
+- COMPONENT
+- PROTOTYPE
+- MULTI_PAGE
+- RESPONSIVE
+
+They never bypass Reference, Scope, Permission, Pre-write Revalidation, Verification, QA, or Evidence.
+
+## 31. SOP-24 — Phased QA and final aggregation
+
+Post-write order is fixed:
+
+Verification  
+→ QA-01..QA-09  
+→ QA-10 Visual Regression  
+→ Final QA Aggregation.
+
+QA-10 must not be marked PASS before Visual Regression actually runs.
+
+After Fix Loop:
+Fix  
+→ Verification  
+→ affected QA-01..QA-09  
+→ QA-10  
+→ Final QA Aggregation.
+
+Fix Loop may never return directly to Complete/PASS.
+
+## 32. Production write checklist
+
+Before mutation:
+- [ ] inspection evidence current
+- [ ] baseline fingerprint captured
+- [ ] Reference Gate eligible
+- [ ] Design Decision ready
+- [ ] Change Scope ready
+- [ ] WRITE_ALLOWED
+- [ ] Pre-write Revalidation = CURRENT
+- [ ] operation plan ready
+
+On mutation error:
+- [ ] later batches frozen
+- [ ] canvas state classified
+- [ ] recovery verified before continuation
+
+Before PASS:
+- [ ] Verification PASS
+- [ ] QA-01..QA-09 resolved
+- [ ] QA-10 resolved or justified N/A
+- [ ] Final QA Aggregation PASS
+- [ ] every Fix Loop iteration re-entered full required QA
+- [ ] Evidence complete

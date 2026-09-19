@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Figma Mutation Recovery Policy",
+  "entryCondition": "Any write call errors, times out, returns incomplete affected-node evidence, or reports an unexpected result.",
+  "errorSignals": [
+    "TOOL_ERROR",
+    "TIMEOUT",
+    "INCOMPLETE_RETURN",
+    "UNEXPECTED_NODE_STATE",
+    "SAFE_RETRY_FALSE",
+    "UNKNOWN"
+  ],
+  "writeStateClassification": {
+    "NO_WRITE": "Direct evidence shows no planned mutation reached canvas.",
+    "PARTIAL_WRITE": "One or more planned operations reached canvas but the batch did not complete.",
+    "UNKNOWN_WRITE": "Canvas state cannot be proven from the failed call; mandatory read-only inspection before any retry.",
+    "RECOVERED": "Canvas is restored/corrected to a verified coherent state."
+  },
+  "procedure": [
+    "Freeze subsequent execution batches.",
+    "Read safeToRetryWithoutCanvasRead when provided by the Figma execution layer.",
+    "If safeToRetryWithoutCanvasRead is false or absent/uncertain, inspect affected target before retry.",
+    "Classify canvas as NO_WRITE, PARTIAL_WRITE, or UNKNOWN_WRITE.",
+    "For PARTIAL_WRITE/UNKNOWN_WRITE, compare affected nodes against pre-batch fingerprint and operation plan.",
+    "Create the smallest recovery plan; never assume transaction rollback exists.",
+    "Re-check target, scope, permission, and reference eligibility.",
+    "Apply recovery/corrected operation only when safe.",
+    "Verify canvas state before returning to normal flow."
+  ],
+  "routes": {
+    "NO_WRITE": "MUTATION",
+    "PARTIAL_WRITE": "RECOVERY_FIX_THEN_VERIFICATION",
+    "UNKNOWN_WRITE": "INSPECT_THEN_RECOVERY_OR_BLOCK",
+    "RECOVERED": "VERIFICATION"
+  },
+  "blockOn": [
+    "target_unresolvable",
+    "protected_area_state_unknown",
+    "permission_no_longer_valid",
+    "recovery_requires_scope_expansion",
+    "tool_capability_unavailable"
+  ],
+  "invariants": [
+    "never_continue_next_batch_with_unknown_canvas_state",
+    "never_claim_zero_write_from_tool_error_alone",
+    "never_rebuild_entire_screen_as_default_recovery"
+  ]
+}

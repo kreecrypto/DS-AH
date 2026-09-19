@@ -1,28 +1,51 @@
 {
-  "schemaVersion": "1.0.0",
-  "name": "DS-AH Design Agent Deep Flow",
+  "schemaVersion": "2.0.0",
+  "agentVersion": "2.3.0",
+  "name": "DS-AH Design Agent Production Flow",
   "canonicalOrder": [
     "USER_REQUEST",
     "RESOLVE_INTENT",
     "LOAD_AGENT_SKILLS",
     "FIGMA_INSPECT",
+    "CAPTURE_BASELINE",
     "RESOLVE_REFERENCE",
     "DESIGN_DECISION",
     "CHANGE_SCOPE",
     "WRITE_PERMISSION",
+    "PRE_WRITE_REVALIDATION",
     "FIGMA_EXECUTION_PLAN",
     "MUTATION",
+    "MUTATION_RECOVERY",
     "VERIFICATION",
-    "DESIGN_QA",
+    "QA_PRE_REGRESSION",
     "VISUAL_REGRESSION",
+    "FINAL_QA_AGGREGATION",
     "FIX_LOOP",
     "EVIDENCE",
     "COMPLETE"
   ],
+  "qaPhases": {
+    "preRegression": [
+      "QA-01",
+      "QA-02",
+      "QA-03",
+      "QA-04",
+      "QA-05",
+      "QA-06",
+      "QA-07",
+      "QA-08",
+      "QA-09"
+    ],
+    "regression": [
+      "QA-10"
+    ],
+    "finalAggregationRule": "FINAL_QA_AGGREGATION may resolve only after QA-01..QA-09 and QA-10 are PASS/FAIL/BLOCKED/NOT_APPLICABLE with evidence."
+  },
   "stages": [
     {
       "id": "USER_REQUEST",
       "state": "RECEIVED",
+      "mode": "READ_ONLY",
       "owner": "controller",
       "gate": "TASK_PARSED",
       "requiredOutputs": [
@@ -35,12 +58,14 @@
     {
       "id": "RESOLVE_INTENT",
       "state": "ROUTED",
-      "owner": "intent-router",
+      "mode": "READ_ONLY",
+      "owner": "intent-router+product-router",
       "gate": "INTENT_RESOLVED",
       "requiredOutputs": [
         "command",
         "workflow",
         "productDomain",
+        "targetCandidate",
         "defaultPermission"
       ],
       "next": [
@@ -50,11 +75,13 @@
     {
       "id": "LOAD_AGENT_SKILLS",
       "state": "ROUTED",
+      "mode": "READ_ONLY",
       "owner": "skill-router",
       "gate": "SKILLS_READY",
       "requiredOutputs": [
         "loadedSkills",
-        "versions"
+        "versions",
+        "conditionalSkills"
       ],
       "next": [
         "FIGMA_INSPECT"
@@ -63,31 +90,51 @@
     {
       "id": "FIGMA_INSPECT",
       "state": "INSPECTING",
-      "owner": "figma-inspect",
       "mode": "READ_ONLY",
+      "owner": "figma-inspect",
       "gate": "INSPECTION_READY",
       "requiredOutputs": [
         "inspectionEvidence",
         "exactNodeIds",
+        "componentIdentity",
         "unknowns"
       ],
       "next": [
-        "RESOLVE_REFERENCE"
+        "CAPTURE_BASELINE",
+        "EVIDENCE"
       ]
+    },
+    {
+      "id": "CAPTURE_BASELINE",
+      "state": "BASELINED",
+      "mode": "READ_ONLY",
+      "owner": "figma-inspect+controller",
+      "gate": "BASELINE_CAPTURED",
+      "requiredOutputs": [
+        "baselineFingerprint",
+        "authorityBaseline",
+        "preservationBaseline"
+      ],
+      "next": [
+        "RESOLVE_REFERENCE"
+      ],
+      "conditional": "required for write workflows and comparison-based QA; may be NOT_APPLICABLE for pure inspection"
     },
     {
       "id": "RESOLVE_REFERENCE",
       "state": "REFERENCE_RESOLVED",
+      "mode": "READ_ONLY",
       "owner": "reference-source-resolution",
       "gate": "REFERENCE_RESOLVED",
       "requiredOutputs": [
         "buildMode",
         "referenceGate",
         "selectedReference",
-        "preservationBaseline"
+        "authorityRationale"
       ],
       "next": [
-        "DESIGN_DECISION"
+        "DESIGN_DECISION",
+        "EVIDENCE"
       ],
       "blockOn": [
         "BLOCKED_REFERENCE_AMBIGUOUS",
@@ -97,19 +144,23 @@
     {
       "id": "DESIGN_DECISION",
       "state": "PLANNED",
+      "mode": "READ_ONLY",
       "owner": "design-agent+skills",
       "gate": "DESIGN_DECISION_READY",
       "requiredOutputs": [
         "designDecision",
-        "acceptanceCriteria"
+        "acceptanceCriteria",
+        "knownUnknowns"
       ],
       "next": [
-        "CHANGE_SCOPE"
+        "CHANGE_SCOPE",
+        "EVIDENCE"
       ]
     },
     {
       "id": "CHANGE_SCOPE",
       "state": "PLANNED",
+      "mode": "READ_ONLY",
       "owner": "controller",
       "gate": "SCOPE_RESOLVED",
       "requiredOutputs": [
@@ -117,7 +168,8 @@
         "protectedAreas",
         "outOfScope",
         "affectedStates",
-        "affectedViewports"
+        "affectedViewports",
+        "dependentChangeRules"
       ],
       "next": [
         "WRITE_PERMISSION"
@@ -126,14 +178,17 @@
     {
       "id": "WRITE_PERMISSION",
       "state": "READY_TO_EXECUTE",
+      "mode": "READ_ONLY",
       "owner": "permission-controller",
       "gate": "WRITE_ALLOWED_OR_READ_ONLY_ROUTE",
       "requiredOutputs": [
         "permissionState",
-        "permissionEvidence"
+        "permissionEvidence",
+        "authorizedTarget",
+        "authorizedScope"
       ],
       "next": [
-        "FIGMA_EXECUTION_PLAN",
+        "PRE_WRITE_REVALIDATION",
         "EVIDENCE"
       ],
       "writeAllowedRequires": [
@@ -145,14 +200,39 @@
       ]
     },
     {
+      "id": "PRE_WRITE_REVALIDATION",
+      "state": "REVALIDATING",
+      "mode": "READ_ONLY",
+      "owner": "figma-inspect+controller",
+      "gate": "BASELINE_CURRENT",
+      "requiredOutputs": [
+        "freshFingerprint",
+        "baselineComparison",
+        "revalidationResult"
+      ],
+      "next": [
+        "FIGMA_EXECUTION_PLAN",
+        "FIGMA_INSPECT",
+        "EVIDENCE"
+      ],
+      "results": [
+        "CURRENT",
+        "STALE_BASELINE",
+        "BLOCKED"
+      ],
+      "staleRoute": "FIGMA_INSPECT"
+    },
+    {
       "id": "FIGMA_EXECUTION_PLAN",
       "state": "READY_TO_EXECUTE",
-      "owner": "figma-execution",
+      "mode": "READ_ONLY",
+      "owner": "figma-execution+design-agent",
       "gate": "EXECUTION_PLAN_READY",
       "requiredOutputs": [
         "operationPlan",
         "executionBatches",
-        "verificationPlan"
+        "verificationPlan",
+        "recoveryHints"
       ],
       "next": [
         "MUTATION"
@@ -161,42 +241,73 @@
     {
       "id": "MUTATION",
       "state": "EXECUTING",
+      "mode": "WRITE_ALLOWED",
       "owner": "figma-capability",
-      "gate": "MUTATION_RECORDED",
+      "gate": "MUTATION_RECORDED_OR_ERROR_CLASSIFIED",
       "requiredOutputs": [
         "createdNodeIds",
         "mutatedNodeIds",
-        "executedOperations"
+        "executedOperations",
+        "mutationOutcome"
       ],
       "next": [
-        "VERIFICATION"
+        "VERIFICATION",
+        "MUTATION_RECOVERY"
+      ]
+    },
+    {
+      "id": "MUTATION_RECOVERY",
+      "state": "RECOVERING",
+      "mode": "WRITE_ALLOWED_OR_READ_ONLY_INSPECT",
+      "owner": "figma-execution+controller",
+      "gate": "CANVAS_STATE_KNOWN",
+      "requiredOutputs": [
+        "errorClassification",
+        "canvasWriteState",
+        "recoveryPlan",
+        "recoveryResult"
+      ],
+      "next": [
+        "MUTATION",
+        "VERIFICATION",
+        "EVIDENCE"
+      ],
+      "canvasWriteStates": [
+        "NO_WRITE",
+        "PARTIAL_WRITE",
+        "UNKNOWN_WRITE",
+        "RECOVERED"
       ]
     },
     {
       "id": "VERIFICATION",
-      "state": "EXECUTING",
-      "owner": "figma-inspect+execution",
+      "state": "VERIFYING",
+      "mode": "READ_ONLY",
+      "owner": "figma-inspect+figma-execution",
       "gate": "VERIFIED",
       "requiredOutputs": [
         "structuralEvidence",
         "visualEvidence",
         "scopeEvidence",
-        "verificationStatus"
+        "verificationStatus",
+        "mismatchRecords"
       ],
       "next": [
-        "DESIGN_QA",
-        "FIX_LOOP"
+        "QA_PRE_REGRESSION",
+        "FIX_LOOP",
+        "EVIDENCE"
       ]
     },
     {
-      "id": "DESIGN_QA",
-      "state": "QA",
-      "owner": "design-qa",
-      "gate": "QA_RESOLVED",
+      "id": "QA_PRE_REGRESSION",
+      "state": "QA_PRE_REGRESSION",
+      "mode": "READ_ONLY",
+      "owner": "design-qa+specialist-skills",
+      "gate": "QA_01_09_RESOLVED",
       "requiredOutputs": [
-        "gateMatrix",
+        "qa01to09Matrix",
         "defectRecords",
-        "qaResult"
+        "preRegressionResult"
       ],
       "next": [
         "VISUAL_REGRESSION",
@@ -206,13 +317,32 @@
     },
     {
       "id": "VISUAL_REGRESSION",
-      "state": "QA",
+      "state": "REGRESSION",
+      "mode": "READ_ONLY",
       "owner": "visual-regression",
-      "gate": "REGRESSION_RESOLVED",
+      "gate": "QA_10_RESOLVED",
       "requiredOutputs": [
         "baselineEvidence",
         "differenceRecords",
-        "regressionResult"
+        "qa10Result"
+      ],
+      "next": [
+        "FINAL_QA_AGGREGATION",
+        "FIX_LOOP",
+        "EVIDENCE"
+      ]
+    },
+    {
+      "id": "FINAL_QA_AGGREGATION",
+      "state": "QA_FINAL",
+      "mode": "READ_ONLY",
+      "owner": "design-qa",
+      "gate": "FINAL_QA_RESOLVED",
+      "requiredOutputs": [
+        "gateMatrixQA01to10",
+        "finalQaResult",
+        "p2Polish",
+        "blockingDefects"
       ],
       "next": [
         "FIX_LOOP",
@@ -222,27 +352,36 @@
     {
       "id": "FIX_LOOP",
       "state": "FIXING",
+      "mode": "WRITE_ALLOWED",
       "owner": "fix-loop+root-cause-skill+figma-execution",
       "gate": "FIXED_OR_BLOCKED",
       "requiredOutputs": [
         "fixIterations",
         "resolvedDefects",
-        "remainingDefects"
+        "remainingDefects",
+        "affectedGates"
       ],
       "next": [
         "VERIFICATION",
-        "DESIGN_QA",
         "EVIDENCE"
+      ],
+      "mandatoryReturnPath": [
+        "VERIFICATION",
+        "QA_PRE_REGRESSION",
+        "VISUAL_REGRESSION",
+        "FINAL_QA_AGGREGATION"
       ]
     },
     {
       "id": "EVIDENCE",
       "state": "EVIDENCE",
+      "mode": "READ_ONLY",
       "owner": "evidence",
       "gate": "EVIDENCE_COMPLETE",
       "requiredOutputs": [
         "evidenceMatrix",
         "provenance",
+        "resumeCheckpointIfBlocked",
         "finalAuditEnvelope"
       ],
       "next": [
@@ -252,10 +391,12 @@
     {
       "id": "COMPLETE",
       "state": "COMPLETE",
+      "mode": "READ_ONLY",
       "owner": "controller",
       "gate": "FINAL_RESULT_RESOLVED",
       "requiredOutputs": [
-        "finalResult"
+        "finalResult",
+        "completionSummary"
       ],
       "finalStates": [
         "PASS",
@@ -278,9 +419,12 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "DESIGN_DECISION",
-      "DESIGN_QA",
+      "QA_PRE_REGRESSION",
+      "VISUAL_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "EVIDENCE",
       "COMPLETE"
     ],
@@ -289,15 +433,19 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
+      "PRE_WRITE_REVALIDATION",
       "FIGMA_EXECUTION_PLAN",
       "MUTATION",
+      "MUTATION_RECOVERY",
       "VERIFICATION",
-      "DESIGN_QA",
+      "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "FIX_LOOP",
       "EVIDENCE",
       "COMPLETE"
@@ -307,15 +455,19 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
+      "PRE_WRITE_REVALIDATION",
       "FIGMA_EXECUTION_PLAN",
       "MUTATION",
+      "MUTATION_RECOVERY",
       "VERIFICATION",
-      "DESIGN_QA",
+      "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "FIX_LOOP",
       "EVIDENCE",
       "COMPLETE"
@@ -325,15 +477,19 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "DESIGN_DECISION",
       "CHANGE_SCOPE",
       "WRITE_PERMISSION",
+      "PRE_WRITE_REVALIDATION",
       "FIGMA_EXECUTION_PLAN",
       "MUTATION",
+      "MUTATION_RECOVERY",
       "VERIFICATION",
-      "DESIGN_QA",
+      "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "FIX_LOOP",
       "EVIDENCE",
       "COMPLETE"
@@ -343,10 +499,12 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "VERIFICATION",
-      "DESIGN_QA",
+      "QA_PRE_REGRESSION",
       "VISUAL_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "EVIDENCE",
       "COMPLETE"
     ],
@@ -355,19 +513,41 @@
       "RESOLVE_INTENT",
       "LOAD_AGENT_SKILLS",
       "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
       "RESOLVE_REFERENCE",
       "VERIFICATION",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "COMPONENT": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "CAPTURE_BASELINE",
+      "RESOLVE_REFERENCE",
+      "DESIGN_DECISION",
+      "QA_PRE_REGRESSION",
+      "FINAL_QA_AGGREGATION",
       "EVIDENCE",
       "COMPLETE"
     ]
   },
   "invariants": [
+    "qa_01_09_before_qa_10",
+    "final_qa_after_qa_10",
+    "component_intent_has_machine_flow",
+    "mutation_error_requires_canvas_state_classification",
+    "blocked_runs_emit_resume_checkpoint",
+    "stale_baseline_forces_reinspection",
+    "specialized_subflows_must_not_bypass_parent_guards",
+    "fix_loop_returns_through_verification_and_all_affected_qa",
     "no_mutation_before_inspection",
     "no_mutation_before_design_decision",
     "no_mutation_before_scope",
     "no_mutation_without_write_allowed",
+    "pre_write_revalidation_required_for_writes",
     "tool_success_is_not_verification",
-    "p0_p1_write_failures_enter_fix_loop_when_fixable",
     "no_pass_without_evidence"
   ]
 }

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Figma Specialized Subflows",
+  "globalRule": "Specialized subflows are nested inside the canonical parent flow and may never bypass Reference, Scope, Permission, Pre-write Revalidation, Verification, QA, or Evidence requirements.",
+  "subflows": {
+    "COMPONENT": {
+      "trigger": "COMPONENT intent or component identity/API/ownership decision",
+      "defaultMode": "READ_ONLY",
+      "readOnlyPath": [
+        "FIGMA_INSPECT",
+        "CAPTURE_BASELINE",
+        "RESOLVE_REFERENCE",
+        "COMPONENT_IDENTITY",
+        "OWNERSHIP_DECISION",
+        "PROPERTY_VARIANT_AUDIT",
+        "STATE_COVERAGE",
+        "QA_PRE_REGRESSION",
+        "FINAL_QA_AGGREGATION",
+        "EVIDENCE"
+      ],
+      "mutationRule": "Any component mutation reroutes to MODIFY_SCREEN/FIX with explicit scope and WRITE_ALLOWED.",
+      "checks": [
+        "published identity/key",
+        "owner Core/Domain/Screen",
+        "semantic API",
+        "variant/property model",
+        "state coverage",
+        "responsive behavior",
+        "token dependencies",
+        "consumer impact"
+      ]
+    },
+    "PROTOTYPE": {
+      "trigger": "prototype links, navigation, overlay, state transition, modal/drawer interaction",
+      "parentCommands": [
+        "CREATE_SCREEN",
+        "MODIFY_SCREEN",
+        "FIX"
+      ],
+      "preconditions": [
+        "interaction decision exists",
+        "source node resolved",
+        "destination/overlay resolved",
+        "prototype mutation in scope",
+        "WRITE_ALLOWED",
+        "PRE_WRITE_REVALIDATION PASS"
+      ],
+      "execution": [
+        "inspect existing reactions",
+        "resolve source and destination IDs",
+        "apply only approved interaction",
+        "verify trigger/action/destination",
+        "verify back/close/dismiss path where applicable"
+      ],
+      "qa": [
+        "QA-04 mandatory",
+        "QA-05 when keyboard/focus/accessibility implications exist",
+        "QA-09 mandatory",
+        "QA-10 only if visual state changed"
+      ]
+    },
+    "MULTI_PAGE": {
+      "trigger": "task spans two or more Figma pages",
+      "rules": [
+        "discover page IDs read-only first",
+        "one page switch maximum per Figma execution call",
+        "split work into page-scoped operations",
+        "each page gets target/scope/baseline/verification evidence",
+        "cross-page work is not assumed atomic",
+        "a failed page blocks global PASS until resolved"
+      ],
+      "aggregation": "Aggregate page results only after every required page is VERIFIED and applicable QA is resolved."
+    },
+    "RESPONSIVE": {
+      "trigger": "multiple supported viewports or responsive behavior is in scope",
+      "preconditions": [
+        "supported viewports resolved from evidence",
+        "content priority resolved",
+        "responsive pattern/source resolved"
+      ],
+      "matrixFields": [
+        "viewport",
+        "node/reference",
+        "fixedFluidRule",
+        "reflow",
+        "stack",
+        "wrap",
+        "collapse",
+        "hide",
+        "scroll",
+        "substitutePattern",
+        "unknowns"
+      ],
+      "execution": [
+        "capture baseline per viewport/state",
+        "execute viewport-specific deltas only when needed",
+        "do not invent breakpoints",
+        "verify no clipping/overlap/lost primary action"
+      ],
+      "qa": [
+        "QA-05 mandatory",
+        "QA-07 visual hierarchy/density",
+        "QA-08 structural",
+        "QA-09 scope",
+        "QA-10 regression per comparable viewport"
+      ]
+    }
+  }
+}

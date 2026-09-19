@@ -1,1199 +1,588 @@
-# Design Agent Deep Flow
+# Design Agent Production Flow v2.3
 
 Status: Active  
 Applies to: DS-AH Design Agent  
-Canonical full-write path: CREATE_SCREEN / MODIFY_SCREEN / FIX
+Purpose: Canonical production workflow for Figma design work
 
-## 0. Core rule
+## Core principle
 
-The Design Agent must not jump from a user request directly to Figma mutation.
+**Resolve → Inspect → Baseline → Decide → Scope → Authorize → Revalidate → Plan → Mutate → Recover if needed → Verify → QA-01..09 → QA-10 → Final QA → Fix Loop → Evidence → Complete**
 
-Canonical full flow:
+A tool call is never a substitute for a design decision, verification, or QA result.
+
+---
+
+# Canonical write flow
 
 User Request  
 → Resolve Intent  
 → Load Agent Skills  
 → Figma Inspect  
+→ Capture Baseline  
 → Resolve Reference  
 → Design Decision  
 → Change Scope  
 → Write Permission  
+→ **Pre-write Revalidation**  
 → Figma Execution Plan  
 → Mutation  
+→ **Mutation Recovery if needed**  
 → Verification  
-→ Design QA  
-→ Visual Regression  
-→ Fix Loop  
+→ **QA-01..QA-09**  
+→ **QA-10 Visual Regression**  
+→ **Final QA Aggregation**  
+→ Fix Loop when needed  
 → Evidence  
 → Complete
 
-Not every command executes every stage. Read-only commands skip write-only stages, but they must never skip required evidence or authority checks.
+Conditional stages may be skipped only when their machine contract explicitly says NOT_APPLICABLE.
 
 ---
 
 # Stage 01 — User Request
 
 ## Objective
-Convert the raw user message into an explicit task envelope without prematurely deciding the design solution.
-
-## Inputs
-- user message
-- supplied Figma URL/file/node
-- supplied screenshots/files
-- explicit constraints
-- explicit references
-- current task context only
+Create a task envelope without solving the design prematurely.
 
 ## Extract
 - requested action
-- target artifact
-- target file/node if supplied
-- product/domain clues
-- requested change
-- preservation constraints
-- explicit write language
-- explicit exploration language
-- requested output
+- target artifact/file/node
+- constraints
+- preservation requirements
+- explicit reference
+- explicit write signal
+- explicit exploration signal
+- requested deliverable
 - acceptance cues
 
-## Do not infer
-- business rules
-- write permission
+## Never infer here
 - source authority
-- exact component identity
-- Build Mode solely from "new screen/file"
+- write permission
+- component identity
+- business rules
 - design solution
 
-## Output — Task Envelope
-- rawRequest
-- requestedAction
-- target
-- constraints
-- explicitReference
-- explicitWriteSignal
-- explicitExploreSignal
-- requestedDeliverable
+## Output
+Task Envelope.
 
 ## Gate
-TASK_PARSED
-
-PASS when the task can be routed safely.  
-BLOCKED only when the target/request is too incomplete to perform even safe inspection.
-
-## Owner
-Design Agent controller.
-
-## Next
-Resolve Intent.
+TASK_PARSED.
 
 ---
 
 # Stage 02 — Resolve Intent
 
-## Objective
-Classify what kind of design work is being requested and select the workflow.
+## Intents
+INSPECT / REVIEW / QA / HANDOFF / COMPONENT / CREATE_SCREEN / MODIFY_SCREEN / FIX(alias of modify).
 
-## Supported intents
-- INSPECT
-- CREATE_SCREEN
-- MODIFY_SCREEN
-- REVIEW
-- QA
-- FIX
-- COMPONENT
-- HANDOFF
+Resolve command, workflow, product/domain, target candidate, and default permission.
 
-## Resolution order
-1. explicit command/alias
-2. explicit action language
-3. target/action relationship
-4. current-task context
-5. unresolved
-
-## Distinguish carefully
-
-### CREATE
-A new design composition is requested.
-
-### MODIFY
-An existing design must change while preserving unaffected areas.
-
-### FIX
-A known defect/finding is to be corrected. Route operationally through MODIFY + QA.
-
-### REVIEW
-Analyze and report. No mutation.
-
-### QA
-Verify against gates/evidence. No mutation unless separately rerouted to FIX.
-
-### INSPECT
-Read structure/evidence only.
-
-## Also resolve
-- product
-- domain
-- target candidate
-- workflow
-- default permission state
-
-## Output
-- command
-- product/domain
-- workflow
-- targetCandidate
-- defaultPermission
-- unresolved routing facts
-
-## Gate
-INTENT_RESOLVED
-
-BLOCKED if a wrong workflow choice could cause unsafe mutation and cannot be resolved.
-
-## Owner
-Intent Router + Product Router.
-
-## Next
-Load Agent Skills.
+Wrong workflow selection is blocking when it could cause unsafe mutation.
 
 ---
 
 # Stage 03 — Load Agent Skills
 
-## Objective
-Load only the professional capabilities required by the resolved command and task conditions.
+Load only required professional skill contracts and record versions.
 
-## Inputs
-- command
-- product/domain
-- task characteristics
-- skill router
+Skills never grant write permission.
 
-## Base routing examples
-
-### CREATE / MODIFY / FIX
-Load:
-- Figma Inspect
-- Reference Resolution
-- Information Architecture
-- Interaction Design
-- Design System Compliance
-- UX Writing
-- Visual Quality
-- Responsive & Accessibility
-- Figma Execution
-- Design QA
-- Reference Fidelity
-- Visual Regression
-- Fix Loop
-- Evidence
-
-### REVIEW
-Load read-only review skills.
-
-### QA
-Load verification skills; do not load write permission from a skill.
-
-## Conditional loading
-Examples:
-- complex prototype → Interaction Design
-- component ownership issue → Design System Compliance
-- responsive target → Responsive & Accessibility
-- developer handoff requested → Developer Handoff
-
-## Rules
-- Skill loading never grants write permission.
-- Load full production skill contract, not a summary.
-- Record skill ID + version.
-- Do not run irrelevant skills merely because they exist.
-
-## Output
-- loadedSkills[]
-- versions
-- conditionalReason
-- skillDependencies
-
-## Gate
-SKILLS_READY
-
-## Owner
-Skill Router.
-
-## Next
-Figma Inspect.
+CREATE/MODIFY/FIX load full design + execution + QA pipeline.
+COMPONENT uses the explicit component subflow.
+Prototype/responsive complexity activates the corresponding specialist path.
 
 ---
 
 # Stage 04 — Figma Inspect
 
-## Objective
-Build a verified model of the live target/reference before making design decisions.
+Mode: READ_ONLY.
 
-## Mode
-READ_ONLY
-
-## Inspect in order
-
-### A. Target identity
-- file
-- page
-- node
-- type
-- dimensions
-- role
-
-### B. Structure
+Inspect exact target/reference first:
+- file/page/node identity
 - hierarchy
-- frames/sections
-- Auto Layout
-- constraints
-- clipping
-- hidden nodes
-- repeated structures
-
-### C. Design System identity
-- instances
-- components
-- component sets
-- variants/properties
-- local vs remote
+- Auto Layout/constraints
+- components/instances/variants
 - variables/styles
+- content/typography
+- state/prototype evidence
+- responsive evidence
 
-### D. Content
-- text hierarchy
-- labels
-- realistic wrapping pressure
+Facts must be tagged VERIFIED / CONFLICT / UNKNOWN.
 
-### E. Interaction
-- states
-- prototype links
-- overlays
-- destinations
-
-### F. Responsive evidence
-- viewport variants
-- reflow
-- stack/wrap/hide/collapse
-
-## Fact status
-Every material observation is:
-- VERIFIED_LIVE_FIGMA
-- VERIFIED_REGISTRY
-- VERIFIED_REFERENCE
-- CONFLICT
-- UNKNOWN
-
-## Output
-- inspectionEvidence
-- exactNodeIds
-- componentIdentity
-- variableBindings
-- layoutEvidence
-- stateEvidence
-- responsiveEvidence
-- conflicts
-- unknowns
-
-## Gate
-INSPECTION_READY
-
-BLOCKED when a later decision requires evidence that cannot be safely obtained.
-
-## Owner
-Figma Inspect Skill + Figma capability.
-
-## Next
-Resolve Reference.
+Unknown is not PASS.
 
 ---
 
-# Stage 05 — Resolve Reference
+# Stage 05 — Capture Baseline
 
-## Objective
-Determine which source has authority and what Build Mode applies.
+## Why
+A later write must prove that the canvas it plans to edit is still the canvas that was inspected.
 
-## Inputs
-- Task Envelope
-- product/domain
-- inspection evidence
-- explicit user reference
-- Master/domain/Core registries
-- source-priority policy
+## Capture
+Create a Baseline Fingerprint containing enough material evidence to detect decision-invalidating change:
+- fileKey/nodeId/pageId
+- node type
+- parent identity
+- bounds/dimensions
+- child count when meaningful
+- Auto Layout/material structure
+- component identity
+- important variable bindings
+- viewport/state
+- screenshot/metadata evidence refs
 
-## Candidate classes
-- exact user-approved reference
-- current Product Master
-- approved domain pattern
-- Core DS
-- existing target preservation baseline
-- legacy
-- archive
-- reference-only
-- experimental
-- unknown
+## Baseline types
+- Authority baseline: approved Master/reference.
+- Preservation baseline: pre-change target/protected area.
+- Responsive baseline: one per supported viewport/state where required.
 
-## Authority order
-Default:
+## Rule
+Do not claim transaction/version semantics that Figma does not expose. This fingerprint is an evidence comparison contract, not a database lock.
+
+---
+
+# Stage 06 — Resolve Reference
+
+Resolve candidate authority and Build Mode.
+
+Authority default:
 1. exact user-approved reference
 2. current Product Master
 3. approved domain pattern
 4. Core DS
 5. existing target as preservation evidence
-6. legacy/archive/reference-only for context only
+6. legacy/archive/reference-only as context
 
-## Resolve Build Mode
+Reference Gate:
+PASS / EXPLORE_EXPLICIT / BLOCKED_REFERENCE_AMBIGUOUS / BLOCKED_REFERENCE_MISSING.
 
-### REPRODUCE
-Approved matching design exists and no bounded change is requested.
-
-### ADAPT
-Approved baseline exists and the request is a bounded change.
-
-### EXPLORE
-Only when explicitly requested/authorized.
-
-## Reference Gate
-- PASS
-- EXPLORE_EXPLICIT
-- BLOCKED_REFERENCE_AMBIGUOUS
-- BLOCKED_REFERENCE_MISSING
-
-## Rules
-- Blank/new target is not a reference.
-- Visual similarity is not authority.
-- Do not mix equal candidate Masters to bypass ambiguity.
-- Reference PASS does not grant write permission.
-
-## Output
-- buildMode
-- referenceGate
-- selectedReference
-- preservationBaseline
-- rejectedCandidates
-- authorityRationale
-
-## Gate
-REFERENCE_RESOLVED
-
-## Owner
-Reference Resolution Skill.
-
-## Next
-Design Decision.
+Reference PASS never grants write permission.
 
 ---
 
-# Stage 06 — Design Decision
+# Stage 07 — Design Decision
 
-## Objective
-Convert verified task/reference evidence into one explicit design solution before touching the canvas.
+Synthesize:
+- IA
+- interaction/states
+- DS reuse/ownership
+- content
+- visual hierarchy/composition/density
+- responsive/accessibility
+- acceptance criteria
 
-## Inputs
-- task
-- reference authority
-- Build Mode
-- inspection
-- applicable Agent Skills
+REPRODUCE = preserve.
+ADAPT = smallest coherent delta.
+EXPLORE = explicit new direction, still respecting approved foundations unless in scope.
 
-## Decision dimensions
-
-### Information Architecture
-- task hierarchy
-- grouping
-- section order
-- navigation
-- search/filter/disclosure
-
-### Interaction
-- controls
-- states
-- transitions
-- validation
-- recovery
-- destructive/async behavior
-
-### Design System
-- reused components
-- component ownership
-- variants/properties
-- variables/styles
-- new asset justification
-
-### Content
-- labels
-- CTA
-- status
-- error/empty/loading/success content
-- terminology
-
-### Visual
-- hierarchy
-- composition
-- density
-- spacing
-- typography
-- color/surface
-- iconography
-
-### Responsive / Accessibility
-- supported viewports
-- reflow rules
-- state/focus expectations
-- non-color meaning
-
-## Decision principle by Build Mode
-
-### REPRODUCE
-Decision is primarily preservation.
-
-### ADAPT
-Decision defines the smallest coherent delta.
-
-### EXPLORE
-Decision can create a new composition but still respects approved foundations/components unless explicitly changed.
-
-## Acceptance criteria
-Every material decision should translate into observable acceptance criteria.
-
-Examples:
-- Existing header remains unchanged.
-- Five plans use one consistent horizontal card pattern.
-- Selected state is visually distinct without relying on color alone.
-- Card content wraps without clipping at supported width.
-
-## Output — Design Decision
-- designIntent
-- iaDecision
-- interactionDecision
-- reusePlan
-- contentDecision
-- visualDecision
-- responsiveDecision
-- acceptanceCriteria
-- knownUnknowns
-
-## Gate
-DESIGN_DECISION_READY
-
-BLOCKED if the design would require inventing a material business rule.
-
-## Owner
-Design Agent + loaded Agent Skills.
-
-## Next
-Change Scope.
+If a material business rule must be invented, BLOCKED.
 
 ---
 
-# Stage 07 — Change Scope
+# Stage 08 — Change Scope
 
-## Objective
-Define exactly what may change and what must remain untouched.
-
-## Inputs
-- user request
-- Design Decision
-- target inspection
-- baseline/reference
-
-## Required scope fields
-
-### Allowed Changes
-Exact regions/properties/behaviors allowed to change.
-
-### Protected Areas
-Areas that must remain unchanged.
-
-### Out of Scope
-Related improvements that are intentionally excluded.
-
-### Affected States
-Default/selected/error/etc. included in the change.
-
-### Affected Viewports
-Desktop/mobile/tablet widths that are part of scope.
-
-## Dependency rule
-A dependent change is permitted only when necessary for the allowed change to remain structurally/systemically correct.
-
-It must be:
-- minimal
-- explained
-- verified
-
-## Example
-Request: "Make this card horizontal."
-
-Allowed:
-- target card internal layout
-- dependent card height
-- approved responsive behavior
-
-Protected:
-- page header
-- navigation
-- surrounding unrelated cards
-- global tokens
-
-Out of scope:
-- redesign filter bar
-- new visual style
-- unrelated typography cleanup
-
-## Output
-- allowedChanges[]
-- protectedAreas[]
-- outOfScope[]
-- affectedStates[]
-- affectedViewports[]
+Required:
+- allowedChanges
+- protectedAreas
+- outOfScope
+- affectedStates
+- affectedViewports
 - dependentChangeRules
 
-## Gate
-SCOPE_RESOLVED
+A dependent change is allowed only when necessary, minimal, documented, and verified.
 
-FAIL if the proposed design requires unrelated redesign.  
-BLOCKED if safe boundaries cannot be determined.
-
-## Owner
-Design Agent controller.
-
-## Next
-Write Permission.
+Visual polish never expands scope by itself.
 
 ---
 
-# Stage 08 — Write Permission
+# Stage 09 — Write Permission
 
-## Objective
-Decide whether the Agent may mutate Figma now.
-
-## Permission states
-- READ_ONLY
-- INSPECT_ALLOWED
-- WRITE_PENDING
-- WRITE_ALLOWED
-- WRITE_BLOCKED
-
-## WRITE_ALLOWED requires all
-1. explicit current-task Figma write signal
-2. exact target resolved
-3. Change Scope defined
-4. Reference Gate = PASS or EXPLORE_EXPLICIT
+WRITE_ALLOWED requires all:
+1. explicit current-task write signal
+2. target resolved
+3. scope resolved
+4. Reference Gate PASS or EXPLORE_EXPLICIT
 5. Figma write capability available
 
-## WRITE_BLOCKED examples
-- ambiguous reference
-- missing required reference
-- unresolved target
-- undefined scope
-- unavailable write capability
+Otherwise remain READ_ONLY / WRITE_PENDING / WRITE_BLOCKED.
 
-## Important
-These do NOT grant write:
-- CREATE intent by itself
-- prior approval from an old task
-- reference PASS by itself
-- GitHub contract state
-- skill availability
-- "this would be better"
-
-## Output
-- permissionState
-- permissionEvidence
-- missingGuards
-- authorizedTarget
-- authorizedScope
-
-## Gate
-WRITE_ALLOWED or READ_ONLY_ROUTE
-
-For a write task without WRITE_ALLOWED: stop mutation path.
-
-## Owner
-Write Permission controller.
-
-## Next
-Figma Execution Plan for authorized write work.
-Read-only flows route toward findings/QA/evidence.
+Previous-task authorization does not carry forward automatically.
 
 ---
 
-# Stage 09 — Figma Execution Plan
+# Stage 10 — Pre-write Revalidation
 
-## Objective
-Translate the Design Decision into small node-level Figma operations.
+## Purpose
+Protect against stale canvas/reference evidence between Inspect and Mutation.
 
-## Inputs
-- WRITE_ALLOWED
-- Design Decision
-- Change Scope
-- Figma inspection
-- DS reuse decisions
+Immediately before write:
+1. re-read material target/reference evidence
+2. produce fresh fingerprint
+3. compare with baseline
+4. determine whether any difference invalidates:
+   - reference authority
+   - Design Decision
+   - Change Scope
+   - component/token identity
+   - execution plan
 
-## For each operation define
+## Results
+
+### CURRENT
+No decision-invalidating change. Continue.
+
+### STALE_BASELINE
+Material change exists.
+
+Route:
+STALE_BASELINE
+→ no write
+→ Figma Inspect
+→ Capture Baseline
+→ revalidate Reference
+→ revalidate Design Decision
+→ revalidate Scope
+→ re-evaluate Permission
+→ Pre-write Revalidation again.
+
+Do not simply refresh the baseline and continue; that would hide concurrent change.
+
+### BLOCKED
+Fresh comparison cannot be established safely.
+
+Emit Evidence and Block.
+
+## Required for
+Every CREATE/MODIFY/FIX write.
+
+---
+
+# Stage 11 — Figma Execution Plan
+
+Translate design into node-level operations:
 - operationId
 - target node/area
 - operation type
-- reason
 - expected delta
-- component/variable identity
+- approved component/variable
 - protected neighbors
 - verification method
-- execution batch
+- batch
 
-## Preferred operation order
-1. set existing component property/variant
-2. edit approved content
-3. bind variable/style
-4. adjust Auto Layout/property
-5. swap approved component
-6. adjust wrapper/composition
-7. create justified new element
-8. rebuild only if necessary
+Preferred order:
+property/variant → content → variable/style → Auto Layout → component swap → composition → justified creation → rebuild only if necessary.
 
-## Common operation types
-- SET_PROPERTY
-- SET_VARIANT
-- SWAP_COMPONENT
-- EDIT_TEXT
-- BIND_VARIABLE
-- UPDATE_AUTO_LAYOUT
-- RESIZE
-- MOVE
-- CREATE_NODE
-- CREATE_COMPONENT
-- UPDATE_PROTOTYPE
-
-## Batch rules
-- incremental
-- roughly ≤10 logical operations per write call
-- structure before detail
-- verify after meaningful structural batches
-- do not build further on a known broken batch
-
-## Output
-- operationPlan[]
-- executionBatches[]
-- verificationPlan[]
-- rollback/recovery notes where relevant
-
-## Gate
-EXECUTION_PLAN_READY
-
-## Owner
-Figma Execution Skill + Design Agent.
-
-## Next
-Mutation.
+Execution is incremental; roughly ten logical operations or fewer per write call is the default safety target.
 
 ---
 
-# Stage 10 — Mutation
+# Stage 12 — Mutation
 
-## Objective
-Execute only the approved operation plan on the authorized target/scope.
+Preconditions:
+- WRITE_ALLOWED
+- Pre-write Revalidation CURRENT
+- operation plan exists
+- target/scope/reference still valid
+
+Rules:
+- preserve identity
+- Auto Layout for structural relationships
+- approved variable/style bindings
+- load fonts before text mutation
+- await async calls
+- return ALL created/mutated node IDs
+- stop on unexpected structure
+
+Tool success only means the call returned; it does not mean design correctness.
+
+---
+
+# Stage 13 — Mutation Recovery
+
+Enter when:
+- write tool errors
+- timeout
+- incomplete affected-node return
+- unexpected node state
+- write outcome cannot be proven
+
+## First rule
+Freeze later execution batches.
+
+## Canvas write-state classification
+
+### NO_WRITE
+Direct evidence proves no planned mutation reached canvas.
+
+A corrected retry may occur only after scope/permission/target are still valid.
+
+### PARTIAL_WRITE
+Some operations reached canvas.
+
+Required:
+- inspect actual target
+- compare with pre-batch baseline
+- identify exact applied vs unapplied operations
+- create smallest recovery plan
+- recover/correct
+- verify before continuing
+
+### UNKNOWN_WRITE
+Cannot prove whether mutation occurred.
+
+Mandatory read-only canvas inspection before any retry.
+
+### RECOVERED
+Canvas has been corrected into a verified coherent state.
+
+Route to Verification.
+
+## Never assume
+- tool error = zero canvas changes
+- automatic transaction rollback exists
+- rebuilding the whole frame is safer than targeted recovery
+
+## Block when
+- protected-area state cannot be proven
+- target is lost
+- recovery requires unauthorized scope expansion
+- write permission no longer valid
+- capability unavailable
+
+---
+
+# Stage 14 — Verification
+
+Three layers:
+
+## Structural
+node existence, hierarchy, component identity, Auto Layout, sizing, variable/style bindings, prototype destination, no accidental detach.
+
+## Visual
+screenshot, hierarchy, spacing, typography, wrapping, state appearance, overlap/clipping, expected visual delta.
+
+## Scope
+allowed areas changed; protected areas stable; dependent changes minimal/documented.
+
+Mismatch classification:
+EXECUTION_DEFECT / DESIGN_DECISION_GAP / SCOPE_VIOLATION / UNKNOWN.
+
+FAIL may enter Fix Loop or re-plan depending on root cause.
+BLOCKED routes to Evidence.
+
+---
+
+# Stage 15 — QA Pre-Regression
+
+This stage owns **QA-01 through QA-09 only**.
+
+1. QA-01 Reference Fidelity
+2. QA-02 Design System Compliance
+3. QA-03 Information Architecture
+4. QA-04 Interaction / States
+5. QA-05 Responsive & Accessibility
+6. QA-06 Content QA
+7. QA-07 Visual Quality
+8. QA-08 Structural QA
+9. QA-09 Scope Integrity
+
+Record statuses and evidence.
+
+**Do not compute final QA yet.**
+QA-10 has not happened.
+
+---
+
+# Stage 16 — QA-10 Visual Regression
+
+Run after QA-01..09 resolve.
+
+Compare:
+- authority baseline
+- preservation baseline for MODIFY/FIX
+- result
+
+Use equivalent viewport/state/content condition.
+
+Classify:
+EXPECTED_REQUESTED_CHANGE / EXPECTED_DEPENDENT_CHANGE / APPROVED_EXCEPTION / REGRESSION_P0 / REGRESSION_P1 / POLISH_P2 / UNKNOWN_DIFFERENCE.
+
+QA-10:
+PASS / FAIL / BLOCKED / NOT_APPLICABLE with rationale.
+
+---
+
+# Stage 17 — Final QA Aggregation
+
+Only this stage computes the final QA result.
 
 ## Preconditions
-- permission = WRITE_ALLOWED
-- reference still valid
-- target still valid
-- scope still valid
-- operation plan exists
+- QA-01..QA-09 all have statuses
+- QA-10 has status or justified NOT_APPLICABLE
+- required evidence exists
 
-## Execution rules
-- work incrementally
-- preserve component identity
-- use Auto Layout for structural relationships
-- preserve/bind approved variables/styles
-- load fonts before text mutation
-- return all created/mutated node IDs
-- await async Figma operations
-- stop when unexpected structural change is detected
+## Calculation
+- any required BLOCKED → BLOCKED
+- otherwise any required FAIL → FAIL
+- otherwise PASS
+- P2 remains separate
 
-## Minimum write result
-- createdNodeIds[]
-- mutatedNodeIds[]
-- operationsCompleted[]
-- warnings[]
+If FAIL contains safely fixable P0/P1 and WRITE_ALLOWED remains valid → Fix Loop.
 
-## Mid-write checkpoint
-After structural changes verify:
-- target exists
-- expected hierarchy
-- no accidental detach
-- Auto Layout intact
-- protected region not touched
-
-## Mutation failure
-If tool errors:
-- determine whether partial write occurred
-- inspect before retry when uncertain
-- target the smallest recovery change
-
-## Output
-- mutationResult
-- affectedNodeIds
-- executedOperations
-- warnings/errors
-
-## Gate
-MUTATION_RECORDED
-
-Tool success alone is not PASS.
-
-## Owner
-Figma capability under Figma Execution Skill.
-
-## Next
-Verification.
+This closes the ordering defect where QA could previously include QA-10 before regression had actually run.
 
 ---
 
-# Stage 11 — Verification
+# Stage 18 — Fix Loop
 
-## Objective
-Prove that the actual live Figma result matches the execution plan and did not cause unintended changes.
-
-## Three verification layers
-
-### Structural
-Verify:
-- expected nodes exist
-- hierarchy
-- component identity
-- Auto Layout
-- sizing
-- variables/styles
-- prototype destinations
-- no accidental detach
-
-### Visual
-Verify:
-- screenshot
-- hierarchy
-- spacing/alignment
-- typography
-- wrapping
-- clipping/overlap
-- states
-- requested visual delta
-
-### Scope
-Verify:
-- allowed areas changed
-- protected areas unchanged
-- dependent changes minimal
-- no unrelated redesign
-
-## Compare
-Expected delta vs observed delta.
-
-Classify mismatch:
-- EXECUTION_DEFECT
-- DESIGN_DECISION_GAP
-- SCOPE_VIOLATION
-- UNKNOWN
-
-## Output
-- verificationStatus
-- structuralEvidence
-- visualEvidence
-- scopeEvidence
-- mismatchRecords
-
-## Gate
-VERIFIED
-
-PASS → Design QA.  
-FAIL → Fix Loop or re-plan depending on root cause.  
-BLOCKED → evidence/blocker path.
-
-## Owner
-Figma Inspect + Figma Execution + Visual Quality/DS as needed.
-
-## Next
-Design QA.
-
----
-
-# Stage 12 — Design QA
-
-## Objective
-Evaluate the result against explicit quality gates.
-
-## QA gates
-- QA-01 Reference Fidelity
-- QA-02 Design System Compliance
-- QA-03 Information Architecture
-- QA-04 Interaction / States
-- QA-05 Responsive & Accessibility
-- QA-06 Content QA
-- QA-07 Visual Quality
-- QA-08 Structural QA
-- QA-09 Scope Integrity
-- QA-10 Visual Regression
-
-## Per-gate status
-- PASS
-- FAIL
-- BLOCKED
-- NOT_APPLICABLE
-
-## Severity
-- P0 critical
-- P1 material
-- P2 polish
-
-## Defect record
-- defectId
-- gate
-- severity
-- location
-- expected
-- observed
-- evidence
-- rootCause
-- requiredAction
-- fixability
-
-## Final QA rule
-- any required BLOCKED → final BLOCKED
-- otherwise any P0/P1 FAIL → FAIL / Fix Loop
-- all required gates PASS → QA PASS
-- P2 recorded separately
-
-## Output
-- gateMatrix
-- defectRecords
-- p2Polish
-- qaResult
-
-## Owner
-Design QA Skill + specialist skills.
-
-## Next
-Visual Regression when applicable, otherwise Fix Loop/Evidence depending on result.
-
----
-
-# Stage 13 — Visual Regression
-
-## Objective
-Detect unintended visual/structural changes against approved or preservation baselines.
-
-## Required for
-- REPRODUCE writes
-- ADAPT writes
-- MODIFY/FIX
-- any task where before/after fidelity is required
-
-## Baselines
-
-### Authority baseline
-Approved reference/Master.
-
-### Preservation baseline
-Pre-change target for unaffected areas.
-
-## Compare equivalent
-- viewport
-- state
-- content condition
-- region
-
-## Compare dimensions
-- geometry
-- spacing/alignment
-- typography
-- component identity/state
-- color/surface
-- content visibility
-- responsive behavior
-- clipping/overflow
-
-## Difference classification
-- EXPECTED_REQUESTED_CHANGE
-- EXPECTED_DEPENDENT_CHANGE
-- APPROVED_EXCEPTION
-- REGRESSION_P0
-- REGRESSION_P1
-- POLISH_P2
-- UNKNOWN_DIFFERENCE
-
-## Output
-- baselineEvidence
-- resultEvidence
-- differenceRecords
-- regressionResult
-
-## Gate
-REGRESSION_PASS / FAIL / BLOCKED
-
-## Owner
-Visual Regression Skill.
-
-## Next
-Fix Loop if P0/P1; otherwise Evidence.
-
----
-
-# Stage 14 — Fix Loop
-
-## Objective
-Correct fixable P0/P1 failures without expanding the original task.
-
-## Entry conditions
-- P0/P1 exists
+Entry:
+- final QA has P0/P1
+- issue is safely fixable
 - write permission remains valid
-- failure is safely fixable
 
-## Root-cause classes
-- REFERENCE
-- IA
-- INTERACTION
-- DESIGN_SYSTEM
-- CONTENT
-- VISUAL
-- RESPONSIVE_ACCESSIBILITY
-- STRUCTURE
-- EXECUTION
-- SCOPE
-- UNKNOWN
-
-## Fixability
-- SELF_FIXABLE
-- SCOPE_UPDATE_REQUIRED
-- BUSINESS_DECISION_REQUIRED
-- AUTHORITY_REQUIRED
-- TOOL_BLOCKED
-
-## Iteration
-1. collect blocking defects
-2. group by root cause
-3. prioritize P0 then P1
-4. choose smallest root-cause fix
-5. check scope
-6. re-check permission
+Loop:
+1. group defects by root cause
+2. prioritize P0 then P1
+3. define smallest fix
+4. check scope
+5. re-check permission
+6. Pre-write Revalidation when canvas/reference may have changed since last verified write
 7. execute fix
 8. verify mutation
-9. rerun failed gate
-10. rerun dependent gates
-11. rerun regression when needed
-12. repeat
 
-## Never
-- downgrade severity to finish
-- hide/delete failing content
+## Mandatory return path
+
+Fix Loop  
+→ Verification  
+→ affected QA-01..09  
+→ QA-10  
+→ Final QA Aggregation.
+
+Never:
+- return directly from Fix Loop to PASS
+- skip QA-10 because the original regression already ran
 - re-baseline against the failed result
-- fix unrelated P2 first
-- redesign protected areas
+- downgrade severity to exit
 
-## Exit
-PASS when no P0/P1 remains.  
-BLOCKED when a safe fix requires unavailable authority/business/tool/scope decision.
-
-## Output
-- fixIterations[]
-- resolvedDefects[]
-- remainingDefects[]
-- finalFixState
-
-## Owner
-Fix Loop Skill + root-cause specialist skill + Figma Execution.
-
-## Next
-Back to Design QA, then Regression as required.
+Repeat until PASS or genuine BLOCKED.
 
 ---
 
-# Stage 15 — Evidence
+# Stage 19 — Evidence
 
-## Objective
-Create the auditable record proving what the Agent did and why the final result is valid.
-
-## Required evidence envelope
-- command
-- product/domain
-- target
-- loaded skills + versions
-- inspection evidence
-- Build Mode
+Required envelope:
+- command/product/domain/target
+- loaded skills/versions
+- inspection
+- baseline fingerprint
 - Reference Gate/source
 - Design Decision
 - Change Scope
-- Write Permission
-- Execution Plan
-- affected node IDs
-- verification evidence
-- QA matrix
-- regression
-- fix iterations
-- final result
-- open gaps
+- permission
+- pre-write revalidation result
+- execution plan
+- mutation + affected node IDs
+- recovery record when used
+- verification
+- QA-01..09
+- QA-10
+- Final QA
+- Fix Loop iterations
+- resume checkpoint when blocked/resumable
+- final result/open gaps
 
-## Evidence quality
-- E0 claim only
-- E1 indirect
-- E2 direct inspection
-- E3 comparative baseline/result
-- E4 verified post-fix comparison
-
-Reference-based write PASS should normally have E3/E4 evidence where applicable.
-
-## Rules
-- no PASS without evidence
-- UNKNOWN is not PASS
-- record conflicts
-- record failed iterations
-- tool-call success is not design proof
-
-## Output
-- Evidence Matrix
-- provenance
-- final audit envelope
-
-## Gate
-EVIDENCE_COMPLETE
-
-## Owner
-Evidence Skill.
-
-## Next
-Complete.
+No PASS without evidence.
 
 ---
 
-# Stage 16 — Complete
+# Stage 20 — Complete
 
-## Objective
-Close the run with a precise final status and no hidden unresolved blocking issue.
+Final result:
+PASS / FAIL / BLOCKED.
 
-## Final statuses
-
-### PASS
-Use when:
-- requested work is complete
-- required gates pass
-- no unresolved P0/P1
-- evidence complete
-- regression passes when required
-
-### FAIL
-Use when:
-- blocking defect remains
-- work cannot be claimed correct
-- issue is not being further fixed in the current authorized flow
-
-### BLOCKED
-Use when:
-- missing authority
-- missing business rule
-- unavailable tool capability
-- unresolved scope
-- required evidence unavailable
-prevents safe completion.
-
-## Completion output
-- finalResult
-- concise change/result summary
-- exact target
-- important node IDs
-- QA/regression status
-- remaining P2
-- blockers/open gaps
-
-## Rule
-"Done" is not a valid result without PASS/FAIL/BLOCKED evidence.
+PASS requires complete applicable flow and evidence.
+BLOCKED should emit a resume checkpoint whenever the blocker can later be resolved.
 
 ---
 
-# Command-to-Stage Matrix
+# Resume / Re-entry
 
-| Stage | INSPECT | REVIEW | CREATE | MODIFY/FIX | QA | HANDOFF |
-|---|---:|---:|---:|---:|---:|---:|
-| User Request | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Resolve Intent | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Load Agent Skills | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Figma Inspect | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Resolve Reference | conditional | conditional | ✓ | ✓ | ✓ | conditional |
-| Design Decision | — | findings/solution | ✓ | ✓ | — | — |
-| Change Scope | — | — | ✓ | ✓ | — | — |
-| Write Permission | — | READ_ONLY | ✓ | ✓ | READ_ONLY | READ_ONLY |
-| Execution Plan | — | — | ✓ | ✓ | — | — |
-| Mutation | — | — | ✓ | ✓ | — | — |
-| Verification | — | — | ✓ | ✓ | verification-only | source verification |
-| Design QA | — | review checks | ✓ | ✓ | ✓ | conditional |
-| Visual Regression | — | conditional | ✓ when applicable | ✓ | conditional | — |
-| Fix Loop | — | — | if P0/P1 | if P0/P1 | — unless rerouted FIX | — |
-| Evidence | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Complete | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+A BLOCKED run is complete for audit purposes, but a later user/tool resolution can start a new run using the previous checkpoint.
 
----
+The new run must:
+1. validate checkpoint
+2. verify target still exists
+3. determine which previous evidence is still valid
+4. revalidate stale baseline if any canvas change may have occurred
+5. resume at the earliest invalidated stage
 
-# Failure / Return Paths
+## Resume mapping
 
-## Reference ambiguity
-Resolve Reference  
-→ BLOCKED_REFERENCE_AMBIGUOUS  
-→ no write  
-→ Evidence  
-→ BLOCKED
+- Reference ambiguous/missing → RESOLVE_REFERENCE
+- Business decision supplied → DESIGN_DECISION
+- Scope approval/update → CHANGE_SCOPE
+- Explicit write authorization supplied → WRITE_PERMISSION
+- Stale baseline → FIGMA_INSPECT
+- Restored tool capability → PRE_WRITE_REVALIDATION
+- Unknown partial mutation → MUTATION_RECOVERY
+- Missing QA evidence supplied/restored → VERIFICATION
 
-## Missing explicit write permission
-Write Permission  
-→ WRITE_PENDING  
-→ no mutation  
-→ report what is ready / missing authorization  
-→ Evidence
-
-## Mutation mismatch
-Mutation  
-→ Verification FAIL  
-→ classify root cause  
-→ Fix Loop or Execution Re-plan  
-→ Verification
-
-## QA P0/P1
-Design QA  
-→ Fix Loop  
-→ Verification  
-→ Design QA  
-→ Regression if applicable
-
-## Regression P0/P1
-Visual Regression  
-→ Fix Loop  
-→ Verification  
-→ affected QA gates  
-→ Visual Regression
-
-## Unknown business behavior
-Design Decision / QA / Fix Loop  
-→ BLOCKED  
-→ Evidence  
-→ Complete as BLOCKED
+Do not restart from User Request unless task intent/target itself changed materially.
 
 ---
 
-# Canonical full-write success path
+# Specialized Subflows
 
-CREATE / MODIFY / FIX
+Canonical definitions: `agent/flow/specialized-subflows.json` and `docs/figma-specialized-subflows.md`.
 
-1. TASK_PARSED  
-2. INTENT_RESOLVED  
-3. SKILLS_READY  
-4. INSPECTION_READY  
-5. REFERENCE_RESOLVED  
-6. DESIGN_DECISION_READY  
-7. SCOPE_RESOLVED  
-8. WRITE_ALLOWED  
-9. EXECUTION_PLAN_READY  
-10. MUTATION_RECORDED  
-11. VERIFIED  
-12. QA_PASS  
-13. REGRESSION_PASS  
-14. FIX_LOOP_SKIPPED_OR_PASS  
-15. EVIDENCE_COMPLETE  
-16. PASS
+Specialized subflows are nested paths, not permission bypasses.
 
-This is the canonical Design Agent execution contract.
+## COMPONENT
+Read-only resolution by default. Any mutation reroutes to MODIFY/FIX.
+
+## PROTOTYPE
+Requires source + destination + interaction decision + scope + permission. Verify trigger/action/destination and recovery/back/close behavior.
+
+## MULTI_PAGE
+Discover pages first. One page switch per execution call. Each page has page-scoped target/scope/baseline/verification. Global PASS only after all required page operations pass.
+
+## RESPONSIVE
+Resolve supported viewports from evidence. Baseline and regression are viewport/state specific. Never invent breakpoints.
+
+---
+
+# Command Stage Rules
+
+## INSPECT
+Request → Intent → Skills → Inspect → Evidence → Complete.
+
+## REVIEW
+Request → Intent → Skills → Inspect → Baseline as needed → Reference → Review/Decision → QA-01..09 → QA-10 when comparison applies → Final QA → Evidence → Complete.
+
+## CREATE / MODIFY / FIX
+Full 20-stage write flow.
+
+## QA
+Request → Intent → Skills → Inspect → Baseline → Reference → Verification → QA-01..09 → QA-10 → Final QA → Evidence → Complete.
+
+## HANDOFF
+Read-only verified source path.
+
+## COMPONENT
+Explicit read-only component machine path. Mutation is rerouted to MODIFY/FIX.
+
+---
+
+# Production invariants
+
+- No mutation before inspection.
+- No write without explicit permission.
+- Every write gets pre-write revalidation.
+- Stale baseline forces re-inspection.
+- Mutation error freezes later batches until canvas state is classified.
+- QA-01..09 always precede QA-10.
+- Final QA always follows QA-10 or justified N/A.
+- Fix Loop always returns through Verification and affected QA.
+- Resumable blocker emits checkpoint.
+- Specialized subflow cannot bypass parent guards.
+- No PASS without evidence.

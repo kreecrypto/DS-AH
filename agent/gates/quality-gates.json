@@ -1,18 +1,117 @@
 {
-  "schemaVersion":"1.0.0",
-  "finalStates":["PASS","FAIL","BLOCKED"],
-  "gateStates":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"],
-  "gates":[
-    {"id":"QA-01","name":"Reference Fidelity","blocking":true},
-    {"id":"QA-02","name":"Design System Compliance","blocking":true},
-    {"id":"QA-03","name":"Information Architecture","blocking":true},
-    {"id":"QA-04","name":"Interaction / States","blocking":true},
-    {"id":"QA-05","name":"Responsive & Accessibility","blocking":true},
-    {"id":"QA-06","name":"Content QA","blocking":true},
-    {"id":"QA-07","name":"Visual Quality","blocking":true},
-    {"id":"QA-08","name":"Structural QA","blocking":true},
-    {"id":"QA-09","name":"Scope Integrity","blocking":true},
-    {"id":"QA-10","name":"Visual Regression","blocking":true,"appliesTo":["CREATE_SCREEN_REPRODUCE","CREATE_SCREEN_ADAPT","MODIFY_SCREEN"]}
+  "schemaVersion": "2.0.0",
+  "agentVersion": "2.3.0",
+  "finalStates": [
+    "PASS",
+    "FAIL",
+    "BLOCKED"
   ],
-  "completionRule":"All applicable blocking gates must PASS. BLOCKED propagates to final BLOCKED. Any unresolved applicable FAIL propagates to final FAIL."
+  "gateStates": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_APPLICABLE"
+  ],
+  "phases": [
+    {
+      "id": "PRE_REGRESSION",
+      "order": 1,
+      "gates": [
+        "QA-01",
+        "QA-02",
+        "QA-03",
+        "QA-04",
+        "QA-05",
+        "QA-06",
+        "QA-07",
+        "QA-08",
+        "QA-09"
+      ]
+    },
+    {
+      "id": "REGRESSION",
+      "order": 2,
+      "gates": [
+        "QA-10"
+      ]
+    },
+    {
+      "id": "FINAL_AGGREGATION",
+      "order": 3,
+      "requires": [
+        "QA-01..QA-09 resolved",
+        "QA-10 resolved or NOT_APPLICABLE"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "QA-01",
+      "name": "Reference Fidelity",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-02",
+      "name": "Design System Compliance",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-03",
+      "name": "Information Architecture",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-04",
+      "name": "Interaction / States",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-05",
+      "name": "Responsive & Accessibility",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-06",
+      "name": "Content QA",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-07",
+      "name": "Visual Quality",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-08",
+      "name": "Structural QA",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-09",
+      "name": "Scope Integrity",
+      "phase": "PRE_REGRESSION",
+      "blocking": true
+    },
+    {
+      "id": "QA-10",
+      "name": "Visual Regression",
+      "phase": "REGRESSION",
+      "blocking": true,
+      "appliesTo": [
+        "CREATE_SCREEN_REPRODUCE",
+        "CREATE_SCREEN_ADAPT",
+        "MODIFY_SCREEN",
+        "FIX",
+        "COMPARISON_BASED_QA"
+      ]
+    }
+  ],
+  "completionRule": "Final QA is computed only in FINAL_AGGREGATION after QA-01..QA-09 and QA-10 are resolved or explicitly NOT_APPLICABLE. BLOCKED propagates to final BLOCKED. Any unresolved applicable FAIL propagates to FAIL unless an authorized Fix Loop is still active."
 }

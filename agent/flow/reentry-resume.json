@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Design Agent Resume / Re-entry Policy",
+  "rule": "A BLOCKED run completes with a resume checkpoint. A later user/tool resolution starts a new run that rehydrates verified context and resumes from the earliest invalidated stage, not automatically from USER_REQUEST.",
+  "checkpointRequired": [
+    "blockedReason",
+    "resumeStage",
+    "taskEnvelope",
+    "command",
+    "productDomain",
+    "target",
+    "loadedSkills",
+    "referenceState",
+    "designDecisionState",
+    "scopeState",
+    "permissionState",
+    "baselineState",
+    "evidenceRefs",
+    "invalidatedStages"
+  ],
+  "mappings": {
+    "BLOCKED_REFERENCE_AMBIGUOUS": {
+      "resumeStage": "RESOLVE_REFERENCE",
+      "invalidate": [
+        "RESOLVE_REFERENCE",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "BLOCKED_REFERENCE_MISSING": {
+      "resumeStage": "RESOLVE_REFERENCE",
+      "invalidate": [
+        "RESOLVE_REFERENCE",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "BUSINESS_DECISION_REQUIRED": {
+      "resumeStage": "DESIGN_DECISION",
+      "invalidate": [
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "SCOPE_UPDATE_REQUIRED": {
+      "resumeStage": "CHANGE_SCOPE",
+      "invalidate": [
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "WRITE_AUTHORIZATION_REQUIRED": {
+      "resumeStage": "WRITE_PERMISSION",
+      "invalidate": [
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "STALE_BASELINE": {
+      "resumeStage": "FIGMA_INSPECT",
+      "invalidate": [
+        "FIGMA_INSPECT",
+        "CAPTURE_BASELINE",
+        "RESOLVE_REFERENCE",
+        "DESIGN_DECISION",
+        "CHANGE_SCOPE",
+        "WRITE_PERMISSION",
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "TOOL_CAPABILITY_REQUIRED": {
+      "resumeStage": "PRE_WRITE_REVALIDATION",
+      "invalidate": [
+        "PRE_WRITE_REVALIDATION",
+        "FIGMA_EXECUTION_PLAN"
+      ]
+    },
+    "MUTATION_STATE_UNKNOWN": {
+      "resumeStage": "MUTATION_RECOVERY",
+      "invalidate": [
+        "MUTATION_RECOVERY",
+        "VERIFICATION",
+        "QA_PRE_REGRESSION",
+        "VISUAL_REGRESSION",
+        "FINAL_QA_AGGREGATION"
+      ]
+    },
+    "QA_EVIDENCE_REQUIRED": {
+      "resumeStage": "VERIFICATION",
+      "invalidate": [
+        "VERIFICATION",
+        "QA_PRE_REGRESSION",
+        "VISUAL_REGRESSION",
+        "FINAL_QA_AGGREGATION"
+      ]
+    }
+  },
+  "resumeValidation": [
+    "Confirm target still exists.",
+    "Confirm source authority has not changed.",
+    "Revalidate any baseline older than the blocking interaction or known canvas edit.",
+    "Re-evaluate write permission for the current task/run.",
+    "Reload any skill whose relevant evidence was invalidated.",
+    "Record which previous outputs were reused vs invalidated."
+  ]
+}

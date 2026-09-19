@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {
+      "id": "DF01_QA_ORDER",
+      "assert": "QA_PRE_REGRESSION precedes VISUAL_REGRESSION and FINAL_QA_AGGREGATION; QA-10 belongs only to regression phase."
+    },
+    {
+      "id": "DF02_COMPONENT_PATH",
+      "assert": "COMPONENT exists in commandStageRules and stays read-only unless rerouted to MODIFY/FIX."
+    },
+    {
+      "id": "DF03_MUTATION_RECOVERY",
+      "assert": "Mutation errors classify NO_WRITE/PARTIAL_WRITE/UNKNOWN_WRITE before retry/continue."
+    },
+    {
+      "id": "DF04_RESUME_REENTRY",
+      "assert": "Blocked reasons map to deterministic resume stages and emit resume checkpoint."
+    },
+    {
+      "id": "DF05_STALE_BASELINE",
+      "assert": "All write commands pass PRE_WRITE_REVALIDATION; STALE_BASELINE returns to FIGMA_INSPECT."
+    },
+    {
+      "id": "DF06_SPECIALIZED_SUBFLOWS",
+      "assert": "COMPONENT, PROTOTYPE, MULTI_PAGE, RESPONSIVE subflows exist and cannot bypass parent guards."
+    },
+    {
+      "id": "DF07_FINAL_QA_AFTER_FIX",
+      "assert": "FIX_LOOP returns through VERIFICATION, QA_PRE_REGRESSION, VISUAL_REGRESSION, FINAL_QA_AGGREGATION before PASS."
+    }
+  ]
+}

@@ -1,54 +1,39 @@
-# Workflow — MODIFY SCREEN v2.1
+# Workflow — MODIFY SCREEN / FIX v2.3
 
 ## Control flow
 
-**Inspect target/baseline → Resolve Authority → Design Decision → Change Scope → Permission → Adapt → QA → Regression → Fix Loop → Evidence**
+Inspect Target → Capture Preservation Baseline → Resolve Authority → Design Decision → Change Scope → Permission → **Pre-write Revalidation** → Execution Plan → Smallest Mutation → Recovery if needed → Verification → QA-01..09 → QA-10 → Final QA → Fix Loop → Evidence.
 
 ## Baseline
-Before mutation:
-1. inspect exact target
-2. capture/record pre-change state
-3. resolve approved source authority
-4. Build Mode defaults to ADAPT
-5. define explicit change boundary
-
-## Change Scope
-Must list:
-- allowed changes
+Capture pre-change fingerprint and visual evidence for:
+- target
 - protected areas
-- out-of-scope
-- affected states
-- affected viewports
+- affected states/viewports
+- approved authority
 
-Everything not explicitly changed is preserved by default.
+Build Mode defaults to ADAPT unless evidence says otherwise.
 
-## Permission
-MODIFY intent = WRITE_PENDING.
-WRITE_ALLOWED requires explicit current-task write language + resolved target + scope + valid reference gate + live write capability.
+## Stale protection
+Immediately before mutation compare a fresh fingerprint with the captured baseline.
+- CURRENT → continue.
+- STALE_BASELINE → no write; re-inspect and revalidate Reference, Decision, Scope, Permission, Plan.
+- BLOCKED → Evidence/Blocked.
 
-## Analysis
-- IA impact
-- interaction/state impact
-- DS/component ownership
-- UX writing/content impact
-- visual change
-- responsive/accessibility impact
+## Mutation
+Prefer property/variant/token/Auto Layout edits over detach/rebuild.
+Small change never authorizes surrounding redesign.
+All changed node IDs must be returned.
 
-## Execution
-Prefer property/variant changes over detach/rebuild.
-Make the smallest coherent in-scope change.
-Do not change protected areas.
+## Recovery
+Tool error does not prove zero write. Classify NO_WRITE / PARTIAL_WRITE / UNKNOWN_WRITE. Partial/unknown canvas state freezes further batches until inspected/recovered.
 
-## Post-write
-1. verify mutation
-2. Design QA
-3. Reference Fidelity
-4. compare protected/unaffected areas to pre-change baseline
-5. Visual Regression
-6. P0/P1 fix loop when safely fixable and authorized
-7. Evidence Matrix
+## QA
+Verification → QA-01..09 → QA-10 → Final QA Aggregation.
 
-A protected-area change outside approved scope is QA-09 FAIL.
+Protected-area drift is QA-09 FAIL. Unexplained visual drift is QA-10 FAIL.
+
+## Fix Loop
+Fix root cause only inside valid scope. Every fix returns to Verification, then all affected QA-01..09, QA-10, and Final QA.
 
 ## Completion
-PASS | FAIL | BLOCKED.
+PASS | FAIL | BLOCKED with evidence and comparison to original preservation baseline.

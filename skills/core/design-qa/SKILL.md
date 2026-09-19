@@ -1,102 +1,48 @@
 ---
 id: design-qa
-version: 2.0.0
+version: 2.1.0
 scope: core
 ---
 
 # Design QA Skill
 
 ## Purpose
-Verify that a design is structurally correct, interaction-complete, system-compliant, accessible, content-safe and visually faithful before completion.
+Verify a Figma design through explicit quality gates before completion.
 
-## Trigger
-Mandatory after CREATE/MODIFY and for QA requests.
-
-## Gate sequence
-
-### QA-01 Reference Fidelity
-- approved authority resolved
-- Build Mode correct
-- Reference Gate valid
-- comparable reference/result evidence available when required
-- no unexplained material divergence
-
-### QA-02 Design System Compliance
-- approved component identities
-- correct variable/style bindings
-- no unnecessary detached instances
-- no duplicate semantic components/tokens
-- ownership level justified for new assets
-
-### QA-03 Interaction / States
-- required states defined
-- action outcomes clear
-- validation/recovery defined where relevant
-- cancel/back/close behavior safe
-- loading/error/retry/empty/success handled when relevant
-
-### QA-04 Responsive & Accessibility
-- supported viewports/layout modes checked
-- reflow/collapse behavior valid
-- no clipping at supported sizes
-- contrast/focus/state distinction checked
-- essential meaning not encoded only by color/icon
-
-### QA-05 Content QA
-- terminology consistent
-- CTA/action labels clear
-- error/empty/loading/success content valid
-- no placeholder-only labels
-- realistic wrapping/truncation checked
-
-### QA-06 Visual Quality
-- hierarchy
-- composition
-- alignment
-- spacing rhythm
-- proportion
-- typography
-- color/surface
-- iconography
-- density
-- state polish
-- edge quality
-
-### QA-07 Structural QA
-- Auto Layout/constraints stable
-- no accidental absolute positioning
-- no overlap/clipping/overflow
-- repeated patterns remain structurally consistent
-- layer/component organization remains usable
-
-### QA-08 Scope Integrity
-- requested change complete
-- unrelated areas unchanged for ADAPT
-- no invented modules in REPRODUCE
-- no hidden scope expansion
+## Gates
+1. QA-01 Reference Fidelity
+2. QA-02 Design System Compliance
+3. QA-03 Information Architecture
+4. QA-04 Interaction / States
+5. QA-05 Responsive & Accessibility
+6. QA-06 Content QA
+7. QA-07 Visual Quality
+8. QA-08 Structural QA
+9. QA-09 Scope Integrity
+10. QA-10 Visual Regression when applicable
 
 ## Gate status
-Every gate is one of:
-- PASS
-- FAIL
-- BLOCKED
-- NOT_APPLICABLE
+PASS | FAIL | BLOCKED | NOT_APPLICABLE
 
-## Final result
-- PASS — every required blocking gate is PASS; NOT_APPLICABLE is justified.
-- FAIL — one or more required gates fail.
-- BLOCKED — required evidence, authority, tool capability or business rule prevents safe verification.
+## Final status
+PASS | FAIL | BLOCKED
 
-P2 polish may be recorded as a non-blocking note; it does not create a separate final result.
+PASS requires every applicable blocking gate to PASS.
+
+## Scope integrity
+Compare actual mutations against the approved Change Scope:
+- allowed changes
+- protected areas
+- out-of-scope areas
+- affected states
+- affected viewports
+
+Any unauthorized protected-area change is a blocking QA-09 failure.
 
 ## Fix behavior
-For CREATE/MODIFY with write authorization:
-- P0/P1 FAIL enters Fix Loop.
-- Re-run failed and dependent gates.
-- Do not complete while a safely fixable blocking failure remains.
+In an explicitly authorized CREATE/MODIFY run, fixable P0/P1 failures enter Fix Loop. Re-run failed and dependent gates and visual regression before completion.
 
-For QA-only/read-only tasks:
-- report FAIL with required action; do not mutate Figma without separate write authorization.
+Standalone QA remains read-only and reports required action.
 
-## Required evidence
-Use the Evidence Matrix schema. Never report PASS from visual impression alone.
+## Evidence
+Use the Evidence Matrix. Never infer PASS from visual impression alone.

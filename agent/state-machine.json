@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"1.0.0",
+  "name":"Design Control Agent State Machine",
+  "initialState":"RECEIVED",
+  "terminalStates":["COMPLETE","BLOCKED"],
+  "states":["RECEIVED","ROUTED","INSPECTING","REFERENCE_RESOLVED","PLANNED","READY_TO_EXECUTE","EXECUTING","QA","FIXING","EVIDENCE","COMPLETE","BLOCKED"],
+  "transitions":[
+    {"from":"RECEIVED","to":"ROUTED","requires":["intent_resolved","product_resolved_or_explicit_unknown"]},
+    {"from":"ROUTED","to":"INSPECTING","requires":["workflow_selected","skills_loaded"]},
+    {"from":"INSPECTING","to":"REFERENCE_RESOLVED","requires":["inspection_evidence","reference_gate_resolved"]},
+    {"from":"REFERENCE_RESOLVED","to":"PLANNED","requires":["source_of_truth_resolved","scope_defined","design_decision_created"]},
+    {"from":"PLANNED","to":"READY_TO_EXECUTE","requires":["write_permission_evaluated","quality_preconditions_resolved"]},
+    {"from":"READY_TO_EXECUTE","to":"EXECUTING","requires":["write_permission_WRITE_ALLOWED"]},
+    {"from":"READY_TO_EXECUTE","to":"EVIDENCE","requires":["read_only_workflow"]},
+    {"from":"EXECUTING","to":"QA","requires":["mutation_verified"]},
+    {"from":"QA","to":"FIXING","requires":["blocking_failure_fixable","write_permission_WRITE_ALLOWED"]},
+    {"from":"FIXING","to":"QA","requires":["fix_verified"]},
+    {"from":"QA","to":"EVIDENCE","requires":["qa_resolved"]},
+    {"from":"EVIDENCE","to":"COMPLETE","requires":["evidence_complete","final_result_resolved"]},
+    {"from":"EVIDENCE","to":"BLOCKED","requires":["final_result_BLOCKED"]}
+  ],
+  "invariants":["no_execute_before_plan","no_execute_without_write_permission","no_write_before_reference_gate","no_complete_without_evidence","fixable_P0_P1_write_task_must_loop_before_complete"]
+}

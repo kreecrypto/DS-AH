@@ -2,190 +2,149 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root=process.cwd();
+let failed=false;
+const fail=(...x)=>{console.error(...x);failed=true;};
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const json=p=>JSON.parse(read(p));
 
 const required=[
   'AGENTS.md',
   'agent/SYSTEM.md',
   'agent/runtime.json',
-  'agent/product-router.json',
+  'agent/manifest.json',
+  'agent/state-machine.json',
+  'agent/controller/control-contract.md',
+  'agent/controller/change-scope.schema.json',
+  'agent/planner/design-decision.schema.json',
+  'agent/permissions/write-permission.json',
+  'agent/gates/quality-gates.json',
   'agent/router/intent.json',
+  'agent/product-router.json',
   'agent/reference-router.json',
   'agent/skill-router.json',
+  'agent/workflows/inspect.md',
   'agent/workflows/create-screen.md',
   'agent/workflows/modify-screen.md',
   'agent/workflows/review.md',
   'agent/workflows/qa.md',
+  'agent/workflows/component.md',
+  'agent/workflows/handoff.md',
   'agent/output/execution.schema.json',
   'agent/output/decision-log.schema.json',
   'agent/output/qa-result.schema.json',
+  'agent/output/review-result.schema.json',
   'agent/output/evidence-matrix.schema.json',
   'agent/evals/cases.json',
   'agent/evals/reference-cases.json',
   'agent/evals/skill-cases.json',
-  'skills/README.md',
-  'skills/core/figma-inspect/SKILL.md',
-  'skills/core/reference-source-resolution/SKILL.md',
-  'skills/core/information-architecture/SKILL.md',
-  'skills/core/interaction-design/SKILL.md',
-  'skills/core/design-system-compliance/SKILL.md',
-  'skills/core/ux-writing-content/SKILL.md',
-  'skills/core/visual-quality/SKILL.md',
-  'skills/core/responsive-accessibility/SKILL.md',
-  'skills/core/figma-execution/SKILL.md',
-  'skills/core/design-qa/SKILL.md',
-  'skills/core/reference-fidelity/SKILL.md',
-  'skills/core/visual-regression/SKILL.md',
-  'skills/core/fix-loop/SKILL.md',
-  'skills/core/ux-review/SKILL.md',
-  'skills/core/developer-handoff/SKILL.md',
-  'skills/core/evidence/SKILL.md'
+  'agent/evals/control-cases.json',
+  'scripts/run-agent-evals.mjs',
+  'scripts/run-fidelity-evals.mjs',
+  'scripts/run-control-evals.mjs',
+  'policies/write-permission.md',
+  'policies/scope-control.md'
 ];
 
-let failed=false;
-const fail=(...args)=>{ console.error(...args); failed=true; };
-
-for(const rel of required){
-  if(!fs.existsSync(path.join(root,rel))) fail('MISSING REQUIRED FILE',rel);
+for(const p of required){
+  if(!fs.existsSync(path.join(root,p))) fail('MISSING REQUIRED FILE',p);
 }
 
-const jsonPaths=required.filter(x=>x.endsWith('.json'));
-const parsed={};
-for(const rel of jsonPaths){
-  try{
-    parsed[rel]=JSON.parse(fs.readFileSync(path.join(root,rel),'utf8'));
-    console.log('OK JSON',rel);
-  }catch(e){
-    fail('INVALID JSON',rel,e.message);
-  }
+for(const p of required.filter(x=>x.endsWith('.json'))){
+  try{json(p); console.log('OK JSON',p);}
+  catch(e){fail('INVALID JSON',p,e.message);}
 }
 
-const runtime=parsed['agent/runtime.json'];
-if(runtime?.defaultWriteMode!=='read-only') fail('DEFAULT WRITE MODE MUST BE read-only');
+const runtime=json('agent/runtime.json');
+const manifest=json('agent/manifest.json');
+const state=json('agent/state-machine.json');
+const permission=json('agent/permissions/write-permission.json');
+const gates=json('agent/gates/quality-gates.json');
+const skills=json('agent/skill-router.json');
+const intents=json('agent/router/intent.json');
+const qa=json('agent/output/qa-result.schema.json');
+const evidence=json('agent/output/evidence-matrix.schema.json');
+const review=json('agent/output/review-result.schema.json');
 
-const products=parsed['agent/product-router.json']?.products||{};
-for(const name of ['core','agency','admin']){
-  if(!products[name]?.fileKey) fail('MISSING PRODUCT FILE KEY',name);
-  for(const rel of products[name]?.registries||[]){
-    if(!fs.existsSync(path.join(root,rel))) fail('PRODUCT ROUTER REFERENCES MISSING FILE',name,rel);
-  }
+if(runtime.agentVersion!=='2.1.0' || runtime.name!=='Design Control Agent') fail('RUNTIME MUST BE DESIGN CONTROL AGENT 2.1.0');
+if(manifest?.agent?.version!=='2.1.0' || manifest?.agent?.name!=='Design Control Agent') fail('MANIFEST AGENT VERSION/NAME MISMATCH');
+if(manifest?.agent?.stateMachine!=='agent/state-machine.json') fail('MANIFEST MISSING STATE MACHINE');
+if(manifest?.agent?.writePermission!=='agent/permissions/write-permission.json') fail('MANIFEST MISSING WRITE PERMISSION');
+if(runtime.defaultWriteMode!=='read-only') fail('DEFAULT WRITE MODE MUST BE read-only');
+
+for(const inv of ['plan_before_execute','scope_before_execute','explicit_write_signal_required','reference_pass_does_not_equal_write_permission','no_pass_without_evidence']){
+  if(!(runtime.invariants||[]).includes(inv)) fail('MISSING RUNTIME INVARIANT',inv);
 }
 
-const intents=parsed['agent/router/intent.json']?.commands||{};
-for(const name of ['INSPECT','REVIEW','QA','HANDOFF','COMPONENT','CREATE_SCREEN','MODIFY_SCREEN']){
-  if(!intents[name]) fail('MISSING INTENT',name);
+for(const s of ['RECEIVED','ROUTED','INSPECTING','REFERENCE_RESOLVED','PLANNED','READY_TO_EXECUTE','EXECUTING','QA','FIXING','EVIDENCE','COMPLETE','BLOCKED']){
+  if(!(state.states||[]).includes(s)) fail('MISSING CONTROL STATE',s);
+}
+if(!(state.invariants||[]).includes('no_execute_without_write_permission')) fail('STATE MACHINE MUST BLOCK UNAUTHORIZED EXECUTION');
+
+const allowedPermission=['READ_ONLY','INSPECT_ALLOWED','WRITE_PENDING','WRITE_ALLOWED','WRITE_BLOCKED'];
+if(JSON.stringify(permission.states)!==JSON.stringify(allowedPermission)) fail('WRITE PERMISSION STATES MISMATCH');
+if(permission.default!=='READ_ONLY') fail('PERMISSION DEFAULT MUST BE READ_ONLY');
+for(const guard of ['explicit_current_task_write_signal','target_resolved','scope_defined','reference_gate_PASS_or_EXPLORE_EXPLICIT','figma_write_capability_available']){
+  if(!(permission.writeAllowedRequiresAll||[]).includes(guard)) fail('MISSING WRITE GUARD',guard);
 }
 
-const referenceRouter=parsed['agent/reference-router.json'];
-if(!referenceRouter?.families?.agencyDashboard) fail('MISSING AGENCY DASHBOARD REFERENCE FAMILY');
-if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFERENCE_AMBIGUOUS'){
-  fail('GENERIC DASHBOARD MUST BE REFERENCE-AMBIGUOUS');
-}
-
-const skillRouter=parsed['agent/skill-router.json'];
-for(const [skill,rel] of Object.entries(skillRouter?.skills||{})){
-  if(!fs.existsSync(path.join(root,rel))) fail('SKILL ROUTER REFERENCES MISSING FILE',skill,rel);
-}
+const requiredGateIds=['QA-01','QA-02','QA-03','QA-04','QA-05','QA-06','QA-07','QA-08','QA-09','QA-10'];
+const actualGateIds=(gates.gates||[]).map(x=>x.id);
+if(JSON.stringify(actualGateIds)!==JSON.stringify(requiredGateIds)) fail('QUALITY GATES MUST BE QA-01..QA-10 IN ORDER');
+if(JSON.stringify(gates.finalStates)!==JSON.stringify(['PASS','FAIL','BLOCKED'])) fail('FINAL GATE STATES INVALID');
 
 const expectedPipelines={
-  CREATE_SCREEN:[
-    'figma-inspect','reference-source-resolution','information-architecture','interaction-design',
-    'design-system-compliance','ux-writing-content','visual-quality','responsive-accessibility',
-    'figma-execution','design-qa','reference-fidelity','visual-regression','fix-loop','evidence'
-  ],
-  MODIFY_SCREEN:[
-    'figma-inspect','reference-source-resolution','information-architecture','interaction-design',
-    'design-system-compliance','ux-writing-content','visual-quality','responsive-accessibility',
-    'figma-execution','design-qa','reference-fidelity','visual-regression','fix-loop','evidence'
-  ],
-  REVIEW:[
-    'figma-inspect','ux-review','information-architecture','interaction-design','ux-writing-content',
-    'responsive-accessibility','visual-quality','design-system-compliance','evidence'
-  ],
-  QA:[
-    'figma-inspect','reference-source-resolution','reference-fidelity','design-system-compliance',
-    'interaction-design','responsive-accessibility','ux-writing-content','visual-quality','design-qa','evidence'
-  ]
+  CREATE_SCREEN:['figma-inspect','reference-source-resolution','information-architecture','interaction-design','design-system-compliance','ux-writing-content','visual-quality','responsive-accessibility','figma-execution','design-qa','reference-fidelity','visual-regression','fix-loop','evidence'],
+  MODIFY_SCREEN:['figma-inspect','reference-source-resolution','information-architecture','interaction-design','design-system-compliance','ux-writing-content','visual-quality','responsive-accessibility','figma-execution','design-qa','reference-fidelity','visual-regression','fix-loop','evidence'],
+  REVIEW:['figma-inspect','ux-review','information-architecture','interaction-design','ux-writing-content','responsive-accessibility','visual-quality','design-system-compliance','evidence'],
+  QA:['figma-inspect','reference-source-resolution','reference-fidelity','design-system-compliance','information-architecture','interaction-design','responsive-accessibility','ux-writing-content','visual-quality','design-qa','visual-regression','evidence']
 };
+for(const [cmd,expected] of Object.entries(expectedPipelines)){
+  const actual=skills.rules?.[cmd]||[];
+  for(const s of expected) if(!actual.includes(s)) fail('MISSING SKILL',cmd,s);
+}
+for(const [id,p] of Object.entries(skills.skills||{})){
+  if(!fs.existsSync(path.join(root,p))) fail('SKILL PATH MISSING',id,p);
+}
 
-for(const [command,expected] of Object.entries(expectedPipelines)){
-  const actual=skillRouter?.rules?.[command]||[];
-  for(const skill of expected){
-    if(!actual.includes(skill)) fail('MISSING REQUIRED SKILL ROUTE',command,skill);
+for(const cmd of ['INSPECT','REVIEW','QA','HANDOFF','COMPONENT','CREATE_SCREEN','MODIFY_SCREEN']){
+  if(!intents.commands?.[cmd]) fail('MISSING INTENT',cmd);
+}
+if(intents.commands.CREATE_SCREEN.defaultPermission!=='WRITE_PENDING') fail('CREATE MUST START WRITE_PENDING');
+if(intents.commands.MODIFY_SCREEN.defaultPermission!=='WRITE_PENDING') fail('MODIFY MUST START WRITE_PENDING');
+if(intents.commands.REVIEW.defaultPermission!=='READ_ONLY') fail('REVIEW MUST BE READ_ONLY');
+if(intents.commands.QA.defaultPermission!=='READ_ONLY') fail('QA MUST BE READ_ONLY');
+if(!(intents.explicitWriteSignals||[]).length) fail('EXPLICIT WRITE SIGNALS REQUIRED');
+
+if(JSON.stringify(qa.properties?.result?.enum)!==JSON.stringify(['PASS','FAIL','BLOCKED'])) fail('QA FINAL RESULTS INVALID');
+if(qa.properties?.evidenceMatrix?.$ref!=='evidence-matrix.schema.json') fail('QA MUST REFERENCE EVIDENCE MATRIX SCHEMA');
+const gateEnum=evidence.properties?.gates?.items?.properties?.gateId?.enum||[];
+if(JSON.stringify(gateEnum)!==JSON.stringify(requiredGateIds)) fail('EVIDENCE MATRIX GATE IDS INVALID');
+
+const findingReq=review.properties?.findings?.items?.required||[];
+for(const f of ['findingId','severity','location','observation','impact','evidence','proposedSolution','acceptanceCriteria']){
+  if(!findingReq.includes(f)) fail('REVIEW RESULT MISSING REQUIRED FIELD',f);
+}
+
+const products=json('agent/product-router.json').products||{};
+for(const name of ['core','agency','admin']){
+  if(!products[name]?.fileKey) fail('MISSING PRODUCT FILE KEY',name);
+  for(const p of products[name]?.registries||[]){
+    if(!fs.existsSync(path.join(root,p))) fail('PRODUCT REGISTRY PATH MISSING',name,p);
   }
 }
 
-const skillCases=parsed['agent/evals/skill-cases.json']?.cases||[];
-for(const c of skillCases){
-  const actual=skillRouter?.rules?.[c.command]||[];
-  for(const skill of c.mustInclude||[]){
-    if(!actual.includes(skill)) fail('SKILL EVAL FAILED',c.id,c.command,skill);
-  }
+const referenceRouter=json('agent/reference-router.json');
+if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFERENCE_AMBIGUOUS') fail('GENERIC DASHBOARD MUST REMAIN AMBIGUOUS');
+
+for(const p of ['agent/SYSTEM.md','AGENTS.md','agent/COMMANDS.md','agent/workflows/create-screen.md','agent/workflows/modify-screen.md','agent/workflows/qa.md']){
+  const body=read(p);
+  if(body.includes('PASS_WITH_GAPS')) fail('DEPRECATED FINAL STATE',p);
+  if(body.includes('Design Agent v1')) fail('STALE V1 CONTRACT',p);
 }
 
-const manifest=JSON.parse(fs.readFileSync(path.join(root,'agent/manifest.json'),'utf8'));
-if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract'){
-  fail('GITHUB MUST REMAIN KB/OPERATING CONTRACT ONLY');
-}
-if(manifest?.architecture?.runtimeHost!=='chatgpt' || manifest?.architecture?.figmaExecution!=='mcp_via_chatgpt'){
-  fail('RUNTIME MUST BE CHATGPT WITH FIGMA MCP EXECUTION');
-}
-if(manifest?.architecture?.githubAgentExecution!==false){
-  fail('GITHUB AGENT EXECUTION MUST BE DISABLED');
-}
-if(manifest?.agent?.skillRouter!=='agent/skill-router.json'){
-  fail('MANIFEST MUST DECLARE SKILL ROUTER');
-}
-
-const allowedFinal=['PASS','FAIL','BLOCKED'];
-const manifestStates=manifest?.agent?.finalQaStates||[];
-if(JSON.stringify(manifestStates)!==JSON.stringify(allowedFinal)){
-  fail('FINAL QA STATES MUST BE EXACTLY PASS/FAIL/BLOCKED');
-}
-
-const qaSchema=parsed['agent/output/qa-result.schema.json'];
-const qaEnums=qaSchema?.properties?.result?.enum||[];
-if(JSON.stringify(qaEnums)!==JSON.stringify(allowedFinal)){
-  fail('QA RESULT SCHEMA MUST USE PASS/FAIL/BLOCKED');
-}
-
-const evidenceSchema=parsed['agent/output/evidence-matrix.schema.json'];
-const evEnums=evidenceSchema?.properties?.finalResult?.enum||[];
-if(JSON.stringify(evEnums)!==JSON.stringify(allowedFinal)){
-  fail('EVIDENCE MATRIX MUST USE PASS/FAIL/BLOCKED');
-}
-
-for(const rel of [
-  'agent/SYSTEM.md',
-  'agent/workflows/create-screen.md',
-  'agent/workflows/modify-screen.md',
-  'agent/workflows/review.md',
-  'agent/workflows/qa.md',
-  'skills/README.md',
-  'skills/core/design-qa/SKILL.md',
-  'skills/core/evidence/SKILL.md'
-]){
-  const body=fs.readFileSync(path.join(root,rel),'utf8');
-  if(body.includes('PASS_WITH_GAPS')) fail('DEPRECATED QA STATE FOUND',rel,'PASS_WITH_GAPS');
-}
-
-const visual=fs.readFileSync(path.join(root,'skills/core/visual-quality/SKILL.md'),'utf8');
-for(const marker of ['Visual Quality Gate','Anti-drift protocol','Hierarchy','Spacing rhythm','Edge quality']){
-  if(!visual.includes(marker)) fail('VISUAL QUALITY SKILL MISSING',marker);
-}
-
-const evidence=fs.readFileSync(path.join(root,'skills/core/evidence/SKILL.md'),'utf8');
-for(const marker of ['Evidence Matrix','loadedSkills','No PASS without evidence']){
-  if(!evidence.includes(marker)) fail('EVIDENCE SKILL MISSING',marker);
-}
-
-const fix=fs.readFileSync(path.join(root,'skills/core/fix-loop/SKILL.md'),'utf8');
-for(const marker of ['Re-run the failed gate','Re-run dependent gates','BLOCKED']){
-  if(!fix.includes(marker)) fail('FIX LOOP SKILL MISSING',marker);
-}
-
-if(runtime?.invariants && !runtime.invariants.includes('reference_before_layout')){
-  fail('MISSING reference_before_layout INVARIANT');
-}
+if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract') fail('GITHUB ROLE MUST REMAIN KB/CONTRACT');
+if(manifest?.architecture?.runtimeHost!=='chatgpt' || manifest?.architecture?.figmaExecution!=='mcp_via_chatgpt') fail('RUNTIME ARCHITECTURE MISMATCH');
+if(manifest?.architecture?.githubAgentExecution!==false) fail('GITHUB AGENT EXECUTION MUST REMAIN DISABLED');
 
 if(failed) process.exit(1);
-console.log('Design Agent v2.0 validation PASS');
+console.log('Design Control Agent v2.1 validation PASS');

@@ -1,48 +1,31 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "agent/output/qa-result.schema.json",
-  "title": "Design Agent QA Result v2",
-  "type": "object",
-  "required": ["result", "checks", "evidenceMatrix", "gaps"],
-  "properties": {
-    "result": {
-      "enum": ["PASS", "FAIL", "BLOCKED"]
-    },
-    "checks": {
-      "type": "object",
-      "required": [
-        "referenceFidelity",
-        "designSystem",
-        "interactionStates",
-        "responsiveAccessibility",
-        "content",
-        "visualQuality",
-        "structural",
-        "scopeIntegrity"
-      ],
-      "properties": {
-        "referenceFidelity": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "designSystem": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "interactionStates": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "responsiveAccessibility": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "content": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "visualQuality": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "structural": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
-        "scopeIntegrity": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]}
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"agent/output/qa-result.schema.json",
+  "title":"Design Control QA Result",
+  "type":"object",
+  "required":["result","checks","evidenceMatrix","gaps"],
+  "properties":{
+    "result":{"enum":["PASS","FAIL","BLOCKED"]},
+    "checks":{
+      "type":"object",
+      "required":["referenceFidelity","designSystem","informationArchitecture","interactionStates","responsiveAccessibility","content","visualQuality","structural","scopeIntegrity","visualRegression"],
+      "properties":{
+        "referenceFidelity":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "designSystem":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "informationArchitecture":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "interactionStates":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "responsiveAccessibility":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "content":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "visualQuality":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "structural":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "scopeIntegrity":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+        "visualRegression":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]}
       },
-      "additionalProperties": false
+      "additionalProperties":false
     },
-    "evidenceMatrix": {
-      "type": "object"
-    },
-    "p2Polish": {
-      "type": "array",
-      "items": {"type": "string"}
-    },
-    "gaps": {
-      "type": "array",
-      "items": {"type": "string"}
-    }
+    "evidenceMatrix":{"$ref":"evidence-matrix.schema.json"},
+    "p2Polish":{"type":"array","items":{"type":"string"}},
+    "gaps":{"type":"array","items":{"type":"string"}}
   },
-  "additionalProperties": true
+  "additionalProperties":true
 }

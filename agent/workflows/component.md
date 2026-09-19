@@ -1,32 +1,29 @@
-# Workflow — COMPONENT
+# Workflow — COMPONENT v2.1
 
-Use for component creation, normalization, merge, or API audit.
+Use for component resolution, API audit, normalization or controlled component change planning.
+
+## Default control mode
+READ_ONLY. A component mutation must be rerouted/authorized as MODIFY with scope and permission.
 
 ## Decision tree
+1. Exact approved Core component exists → REUSE.
+2. Approved component supports required semantic variant/property → EXTEND only if ownership permits.
+3. Same semantic component duplicated locally → resolve canonical owner and aliases.
+4. Visual similarity with different business semantics → keep distinct.
+5. One-off composition → SCREEN_ONLY, do not promote.
+6. Ambiguous state/variant meaning → REVIEW_REQUIRED.
 
-1. Exact Core DS component exists → reuse.
-2. Core component exists but needs a supported variant/property → extend only if ownership allows and semantics fit.
-3. Same semantic component exists locally multiple times → choose canonical owner and mark aliases/duplicates.
-4. Visual similarity but different business semantics → keep separate patterns.
-5. One-off screen composition → do not promote to component.
-6. Ambiguous variant/state → REVIEW_REQUIRED, do not invent meaning.
-
-## API normalization
-
-Maintain two representations:
-- `figmaCurrentApi`: exact current names/values for lookup
-- `canonicalApi`: semantic names for new work/documentation
-
-Example:
-- current: `.device=desktop, stage=new`
-- canonical: `Device=Desktop, State=New`
-
-## Component acceptance
-
+## Required checks
+- exact published identity/key where available
+- owner: Core / Domain / Screen
 - semantic name
-- semantic variant axes
-- no placeholder variant names
-- documented owner layer: Core or Domain
-- responsive behavior documented
-- state coverage documented
-- source/aliases recorded in registry
+- semantic properties/variants
+- state coverage
+- responsive behavior
+- interaction contract
+- content constraints
+- accessibility implications
+- dependency/token bindings
+
+## Output
+Component decision + evidence. Do not mutate solely because COMPONENT intent was detected.

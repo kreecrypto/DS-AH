@@ -1,76 +1,25 @@
 {
-  "schemaVersion": "2.0.0",
-  "cases": [
+  "schemaVersion":"2.1.0",
+  "cases":[
     {
-      "id": "skill-create-full-pipeline",
-      "command": "CREATE_SCREEN",
-      "mustInclude": [
-        "figma-inspect",
-        "reference-source-resolution",
-        "information-architecture",
-        "interaction-design",
-        "design-system-compliance",
-        "ux-writing-content",
-        "visual-quality",
-        "responsive-accessibility",
-        "figma-execution",
-        "design-qa",
-        "reference-fidelity",
-        "visual-regression",
-        "fix-loop",
-        "evidence"
-      ]
+      "id":"skill-create-full-pipeline",
+      "command":"CREATE_SCREEN",
+      "mustInclude":["figma-inspect","reference-source-resolution","information-architecture","interaction-design","design-system-compliance","ux-writing-content","visual-quality","responsive-accessibility","figma-execution","design-qa","reference-fidelity","visual-regression","fix-loop","evidence"]
     },
     {
-      "id": "skill-modify-full-pipeline",
-      "command": "MODIFY_SCREEN",
-      "mustInclude": [
-        "figma-inspect",
-        "reference-source-resolution",
-        "information-architecture",
-        "interaction-design",
-        "design-system-compliance",
-        "ux-writing-content",
-        "visual-quality",
-        "responsive-accessibility",
-        "figma-execution",
-        "design-qa",
-        "reference-fidelity",
-        "visual-regression",
-        "fix-loop",
-        "evidence"
-      ]
+      "id":"skill-modify-full-pipeline",
+      "command":"MODIFY_SCREEN",
+      "mustInclude":["figma-inspect","reference-source-resolution","information-architecture","interaction-design","design-system-compliance","ux-writing-content","visual-quality","responsive-accessibility","figma-execution","design-qa","reference-fidelity","visual-regression","fix-loop","evidence"]
     },
     {
-      "id": "skill-review-full-pipeline",
-      "command": "REVIEW",
-      "mustInclude": [
-        "figma-inspect",
-        "ux-review",
-        "information-architecture",
-        "interaction-design",
-        "ux-writing-content",
-        "responsive-accessibility",
-        "visual-quality",
-        "design-system-compliance",
-        "evidence"
-      ]
+      "id":"skill-review-full-pipeline",
+      "command":"REVIEW",
+      "mustInclude":["figma-inspect","ux-review","information-architecture","interaction-design","ux-writing-content","responsive-accessibility","visual-quality","design-system-compliance","evidence"]
     },
     {
-      "id": "skill-qa-full-pipeline",
-      "command": "QA",
-      "mustInclude": [
-        "figma-inspect",
-        "reference-source-resolution",
-        "reference-fidelity",
-        "design-system-compliance",
-        "interaction-design",
-        "responsive-accessibility",
-        "ux-writing-content",
-        "visual-quality",
-        "design-qa",
-        "evidence"
-      ]
+      "id":"skill-qa-full-pipeline",
+      "command":"QA",
+      "mustInclude":["figma-inspect","reference-source-resolution","reference-fidelity","design-system-compliance","information-architecture","interaction-design","responsive-accessibility","ux-writing-content","visual-quality","design-qa","visual-regression","evidence"]
     }
   ]
 }

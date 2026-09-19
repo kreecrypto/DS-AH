@@ -1,65 +1,43 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "agent/output/evidence-matrix.schema.json",
-  "title": "Design Agent Evidence Matrix",
-  "type": "object",
-  "required": ["finalResult", "gates", "openGaps"],
-  "properties": {
-    "finalResult": {
-      "enum": ["PASS", "FAIL", "BLOCKED"]
-    },
-    "gates": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["gateId", "status", "evidence"],
-        "properties": {
-          "gateId": {"type": "string"},
-          "status": {
-            "enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]
-          },
-          "evidence": {
-            "type": "array",
-            "items": {"type": "string"}
-          },
-          "affectedArea": {
-            "type": ["string", "null"]
-          },
-          "severity": {
-            "enum": ["P0", "P1", "P2", "NONE", null]
-          },
-          "requiredAction": {
-            "type": ["string", "null"]
-          },
-          "postFixVerification": {
-            "enum": ["PASS", "FAIL", "BLOCKED", "NOT_RUN", null]
-          }
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"agent/output/evidence-matrix.schema.json",
+  "title":"Design Agent Evidence Matrix",
+  "type":"object",
+  "required":["finalResult","gates","openGaps"],
+  "properties":{
+    "finalResult":{"enum":["PASS","FAIL","BLOCKED"]},
+    "gates":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["gateId","status","evidence"],
+        "properties":{
+          "gateId":{"enum":["QA-01","QA-02","QA-03","QA-04","QA-05","QA-06","QA-07","QA-08","QA-09","QA-10"]},
+          "status":{"enum":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"]},
+          "evidence":{"type":"array","items":{"type":"string"}},
+          "affectedArea":{"type":["string","null"]},
+          "severity":{"enum":["P0","P1","P2","NONE",null]},
+          "requiredAction":{"type":["string","null"]},
+          "postFixVerification":{"enum":["PASS","FAIL","BLOCKED","NOT_RUN",null]}
         },
-        "additionalProperties": true
+        "additionalProperties":true
       }
     },
-    "openGaps": {
-      "type": "array",
-      "items": {"type": "string"}
-    },
-    "fixIterations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "iteration": {"type": "integer", "minimum": 1},
-          "failuresAddressed": {
-            "type": "array",
-            "items": {"type": "string"}
-          },
-          "change": {"type": "string"},
-          "result": {
-            "enum": ["PASS", "FAIL", "BLOCKED"]
-          }
+    "openGaps":{"type":"array","items":{"type":"string"}},
+    "fixIterations":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["iteration","failuresAddressed","result"],
+        "properties":{
+          "iteration":{"type":"integer","minimum":1},
+          "failuresAddressed":{"type":"array","items":{"type":"string"}},
+          "change":{"type":"string"},
+          "result":{"enum":["PASS","FAIL","BLOCKED"]}
         },
-        "additionalProperties": true
+        "additionalProperties":true
       }
     }
   },
-  "additionalProperties": true
+  "additionalProperties":true
 }

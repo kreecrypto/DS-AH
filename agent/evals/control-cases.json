@@ -1,0 +1,11 @@
+{
+  "schemaVersion":"1.0.0",
+  "cases":[
+    {"id":"C01-no-write-signal","command":"CREATE_SCREEN","explicitWrite":false,"targetResolved":true,"scopeDefined":true,"referenceGate":"PASS","figmaWriteCapability":true,"expected":"WRITE_PENDING"},
+    {"id":"C02-write-allowed","command":"CREATE_SCREEN","explicitWrite":true,"targetResolved":true,"scopeDefined":true,"referenceGate":"PASS","figmaWriteCapability":true,"expected":"WRITE_ALLOWED"},
+    {"id":"C03-ambiguous-reference","command":"MODIFY_SCREEN","explicitWrite":true,"targetResolved":true,"scopeDefined":true,"referenceGate":"BLOCKED_REFERENCE_AMBIGUOUS","figmaWriteCapability":true,"expected":"WRITE_BLOCKED"},
+    {"id":"C04-missing-scope","command":"MODIFY_SCREEN","explicitWrite":true,"targetResolved":true,"scopeDefined":false,"referenceGate":"PASS","figmaWriteCapability":true,"expected":"WRITE_BLOCKED"},
+    {"id":"C05-review-read-only","command":"REVIEW","explicitWrite":false,"targetResolved":true,"scopeDefined":true,"referenceGate":"PASS","figmaWriteCapability":true,"expected":"READ_ONLY"},
+    {"id":"C06-no-figma-capability","command":"CREATE_SCREEN","explicitWrite":true,"targetResolved":true,"scopeDefined":true,"referenceGate":"PASS","figmaWriteCapability":false,"expected":"WRITE_BLOCKED"}
+  ]
+}

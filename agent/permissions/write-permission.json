@@ -1,0 +1,17 @@
+{
+  "schemaVersion":"1.0.0",
+  "states":["READ_ONLY","INSPECT_ALLOWED","WRITE_PENDING","WRITE_ALLOWED","WRITE_BLOCKED"],
+  "default":"READ_ONLY",
+  "rules":{
+    "INSPECT":"INSPECT_ALLOWED",
+    "REVIEW":"READ_ONLY",
+    "QA":"READ_ONLY",
+    "HANDOFF":"READ_ONLY",
+    "COMPONENT":"READ_ONLY",
+    "CREATE_SCREEN":"WRITE_PENDING",
+    "MODIFY_SCREEN":"WRITE_PENDING"
+  },
+  "writeAllowedRequiresAll":["explicit_current_task_write_signal","target_resolved","scope_defined","reference_gate_PASS_or_EXPLORE_EXPLICIT","figma_write_capability_available"],
+  "writeBlockedWhenAny":["reference_gate_BLOCKED_REFERENCE_AMBIGUOUS","reference_gate_BLOCKED_REFERENCE_MISSING","target_unresolved","scope_unresolved","figma_write_capability_unavailable"],
+  "principles":["intent_alone_never_grants_write","repository_state_never_grants_write","review_and_qa_remain_read_only_until_rerouted_to_modify","permission_must_be_re_evaluated_after_scope_or_reference_changes"]
+}

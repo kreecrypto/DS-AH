@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0",
+  "finalStates":["PASS","FAIL","BLOCKED"],
+  "gateStates":["PASS","FAIL","BLOCKED","NOT_APPLICABLE"],
+  "gates":[
+    {"id":"QA-01","name":"Reference Fidelity","blocking":true},
+    {"id":"QA-02","name":"Design System Compliance","blocking":true},
+    {"id":"QA-03","name":"Information Architecture","blocking":true},
+    {"id":"QA-04","name":"Interaction / States","blocking":true},
+    {"id":"QA-05","name":"Responsive & Accessibility","blocking":true},
+    {"id":"QA-06","name":"Content QA","blocking":true},
+    {"id":"QA-07","name":"Visual Quality","blocking":true},
+    {"id":"QA-08","name":"Structural QA","blocking":true},
+    {"id":"QA-09","name":"Scope Integrity","blocking":true},
+    {"id":"QA-10","name":"Visual Regression","blocking":true,"appliesTo":["CREATE_SCREEN_REPRODUCE","CREATE_SCREEN_ADAPT","MODIFY_SCREEN"]}
+  ],
+  "completionRule":"All applicable blocking gates must PASS. BLOCKED propagates to final BLOCKED. Any unresolved applicable FAIL propagates to final FAIL."
+}

@@ -1,0 +1,32 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"agent/output/review-result.schema.json",
+  "title":"Design Review Result",
+  "type":"object",
+  "required":["findings","summary","evidence"],
+  "properties":{
+    "findings":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["findingId","severity","location","observation","impact","evidence","proposedSolution","acceptanceCriteria"],
+        "properties":{
+          "findingId":{"type":"string"},
+          "severity":{"enum":["High","Medium","Low"]},
+          "location":{"type":"string"},
+          "observation":{"type":"string"},
+          "impact":{"type":"string"},
+          "evidence":{"type":"array","items":{"type":"string"}},
+          "proposedSolution":{"type":"string"},
+          "acceptanceCriteria":{"type":"array","minItems":1,"items":{"type":"string"}},
+          "relatedGate":{"type":["string","null"]},
+          "requiresFigmaWrite":{"type":"boolean"}
+        },
+        "additionalProperties":true
+      }
+    },
+    "summary":{"type":"string"},
+    "evidence":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":true
+}

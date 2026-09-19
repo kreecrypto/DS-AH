@@ -1,28 +1,29 @@
-# Workflow — INSPECT
+# Workflow — INSPECT v2.1
 
-Purpose: understand Figma without changing it.
+Purpose: produce verified Figma/source evidence without mutation.
+
+## Control mode
+INSPECT_ALLOWED. Never mutate.
 
 ## Steps
+1. Resolve file key/node/target.
+2. Inspect exact target before broad search.
+3. Identify hierarchy, frames, sections and major dimensions.
+4. Inspect Auto Layout, constraints, grids, spacing, typography, fills, strokes, effects and visibility.
+5. Resolve instances/components and remote/local ownership.
+6. Resolve variables/styles and variant/property definitions.
+7. Identify states, responsive behavior and prototype links when present.
+8. Compare with product/Core registries.
+9. Identify source authority candidates, reuse candidates, naming debt, duplicates and gaps.
+10. Record unknowns instead of inferring them.
+11. Emit inspection evidence and no-change confirmation.
 
-1. Parse file key and node ID.
-2. Read the target node/page metadata.
-3. Identify sections: Master, Components, Desktop, Tablet, Mobile, Archived, reference.
-4. Count and classify component sets, components, instances, frames, and text.
-5. Extract component-set property definitions and variant names.
-6. For high-use instances, resolve the main component and whether it is remote.
-7. Search the DS library for matching component/variable names.
-8. Record naming debt, duplicates, component-set errors, and missing states.
-9. Compare findings with the repo registry.
-10. Produce:
-   - current structure
-   - Source of Truth recommendation
-   - reuse candidates
-   - conflicts/gaps
-   - no-change confirmation
-
-## Guardrails
-
-- Read-only only.
-- Do not rename or clean Figma during inspection.
-- Do not treat frequency as approval.
-- Do not treat a component-set error as a reason to rebuild without further evidence.
+## Output
+- exact nodes inspected
+- structural summary
+- component/variable identity findings
+- responsive/state findings
+- source candidates
+- reuse candidates
+- conflicts/gaps
+- no-change confirmation

@@ -1,47 +1,54 @@
-# Design Agent Knowledge Base Entry Point
+# DS-AH — Design Control Agent Entry Point
 
-This repository is the **Knowledge Base and operating contract** for Design Agent v2.0.
+DS-AH is the **Knowledge Base and operating contract** for Design Control Agent v2.1.
 
-It does not execute the agent.
-
-## Runtime architecture
-
-- **GitHub / DS-AH** = Source of Truth for skills, policies, registries, workflows, schemas, evals, audits and decision history.
-- **ChatGPT** = Design Agent runtime.
-- **Figma MCP through ChatGPT** = live Figma inspection/execution/verification layer.
+It does not independently execute Figma. ChatGPT is the runtime; Figma MCP through ChatGPT is the live inspect/write/verify layer.
 
 ## Start sequence
 
 1. Read `agent/SYSTEM.md`.
 2. Read `agent/runtime.json`.
-3. Route intent with `agent/router/intent.json`.
-4. Resolve product with `agent/product-router.json`.
+3. Read `agent/state-machine.json`.
+4. Route with `agent/router/intent.json` and `agent/product-router.json`.
 5. Load `agent/skill-router.json`.
-6. Load every skill required by that command.
-7. Load the routed workflow and only relevant product registries.
-8. Inspect live Figma/reference read-only.
-9. Resolve exact source authority.
-10. Execute only with current-task write authorization and a valid Reference Gate.
-11. Run QA and regression checks.
-12. Enter Fix Loop when a CREATE/MODIFY P0/P1 failure is safely fixable.
-13. Emit Evidence Matrix.
-14. Return PASS, FAIL, or BLOCKED.
+6. Inspect target/reference read-only.
+7. Resolve source authority with `agent/reference-router.json`.
+8. Create a Design Decision using `agent/planner/design-decision.schema.json`.
+9. Define Change Scope using `agent/controller/change-scope.schema.json`.
+10. Evaluate `agent/permissions/write-permission.json`.
+11. Execute only if WRITE_ALLOWED.
+12. Run gates from `agent/gates/quality-gates.json`.
+13. Enter Fix Loop when an authorized write has fixable P0/P1 failures.
+14. Emit Evidence Matrix.
+15. Complete with PASS, FAIL, or BLOCKED.
 
-## Production pipelines
+## Runtime architecture
 
-### CREATE / MODIFY
-Figma Inspect → Reference/Source Resolution → IA → Interaction Design → DS Compliance → UX Writing/Content → Visual Quality → Responsive & Accessibility → Figma Execution → Design QA → Reference Fidelity → Visual Regression → Fix Loop → Evidence
+User
+→ Design Control Agent
+→ Router
+→ Inspect
+→ Reference Authority
+→ Planner
+→ Scope Controller
+→ Permission Controller
+→ Skills
+→ Figma Execution
+→ Quality Gates
+→ Regression
+→ Fix Loop
+→ Evidence
 
-### REVIEW
-Figma Inspect → UX Review → IA → Interaction Review → UX Writing Review → Responsive & Accessibility → Visual Quality → DS Compliance → Findings + Acceptance Criteria → Evidence
+## Key rules
 
-### QA
-Figma Inspect → Reference Fidelity → DS Compliance → Interaction/States → Responsive & Accessibility → Content QA → Visual Quality → Structural QA → Scope Integrity → Evidence Matrix → PASS/FAIL/BLOCKED
-
-## Figma safety
-
-Figma is read-only by default.
-Repository state never grants Figma write permission.
+- Figma read-only by default.
+- Reference PASS does not equal write permission.
+- No plan/scope = no execution.
+- Product/reference evidence outranks generic skill guidance.
+- Reuse before create.
+- REVIEW and standalone QA are read-only.
+- No PASS without evidence.
+- No scope expansion for aesthetic preference.
 
 ## Figma sources
 
@@ -49,13 +56,4 @@ Repository state never grants Figma write permission.
 - Agency Master Screens: `cipkv7yTxyE29VCfMphE0W`
 - Admin Master Screens: `rEJCvUGUfzzQ3jegheRhnr`
 
-## Critical rules
-
-- Reference before layout.
-- Same visible component name does not prove same published identity.
-- Product/reference evidence outranks generic skill guidance.
-- Reuse before create.
-- No PASS without evidence.
-- Final QA state is only PASS, FAIL, or BLOCKED.
-
-See `skills/README.md`, `agent/skill-router.json`, and `docs/skill-system.md`.
+See `agent/manifest.json` for the complete machine-readable map.

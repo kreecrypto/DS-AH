@@ -1,128 +1,122 @@
 {
-  "schemaVersion": "3.0.0",
-  "systemId": "DS-AH",
-  "entrypoint": "AGENTS.md",
-  "designContract": "design.md",
-  "figma": {
-    "coreDesignSystem": {
-      "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
-      "entryNode": "0:1",
-      "defaultMode": "read-only"
-    },
-    "masterScreens": {
-      "fileKey": "cipkv7yTxyE29VCfMphE0W",
-      "auditEntryNode": "1:12191",
-      "defaultMode": "read-only"
-    },
-    "adminPortalMasterScreens": {
-      "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
-      "entryNode": "0:1",
-      "defaultMode": "read-only",
-      "role": "admin_domain_master_screens_and_scenarios"
-    },
-    "writeRequires": "explicit user request in current task"
+  "schemaVersion":"3.1.0",
+  "systemId":"DS-AH",
+  "entrypoint":"AGENTS.md",
+  "designContract":"design.md",
+  "controlSystem":{
+    "contract":"agent/controller/control-contract.md",
+    "stateMachine":"agent/state-machine.json",
+    "writePermission":"agent/permissions/write-permission.json",
+    "changeScopeSchema":"agent/controller/change-scope.schema.json",
+    "designDecisionSchema":"agent/planner/design-decision.schema.json",
+    "qualityGates":"agent/gates/quality-gates.json"
   },
-  "registries": {
-    "coreSource": "registry/core-ds-source.json",
-    "coreFoundations": "registry/core-ds-foundations.json",
-    "coreComponents": "registry/core-ds-components.json",
-    "coreDependencies": "registry/core-ds-dependencies.json",
-    "sources": "registry/figma-sources.json",
-    "libraries": "registry/libraries.json",
-    "foundations": "registry/foundations.json",
-    "domainPatterns": "registry/domain-patterns.json",
-    "templates": "registry/templates.json",
-    "aliases": "registry/aliases.json",
-    "adminPortalSource": "registry/admin-portal-source.json",
-    "adminPortalScenarios": "registry/admin-portal-scenarios.json",
-    "adminPortalComponents": "registry/admin-portal-components.json",
-    "adminPortalDependencies": "registry/admin-portal-dependencies.json",
-    "coreTokenIndex": "registry/core-ds-tokens/index.json",
-    "corePreferred": "registry/core-ds-preferred.json",
-    "coreCoverage": "registry/core-ds-coverage.json",
-    "coreComponentDependencies": "registry/core-ds-component-dependencies.json",
-    "coreUpstreamFoundations": "registry/core-ds-upstream-foundations.json",
-    "coreResponsiveDecision": "registry/core-ds-responsive-decision.json",
-    "coreQuickMenuStatus": "registry/core-ds-quick-menu-status.json",
-    "visualBaselines": "registry/visual-baselines.json",
-    "stateFlows": "registry/state-flows.json",
-    "codeConnectStatus": "registry/code-connect-status.json",
-    "referenceRouter": "agent/reference-router.json"
+  "figma":{
+    "coreDesignSystem":{"fileKey":"5ZFIRJWtmEIvuq95Rhyo6I","entryNode":"0:1","defaultMode":"read-only"},
+    "masterScreens":{"fileKey":"cipkv7yTxyE29VCfMphE0W","auditEntryNode":"1:12191","defaultMode":"read-only"},
+    "adminPortalMasterScreens":{"fileKey":"rEJCvUGUfzzQ3jegheRhnr","entryNode":"0:1","defaultMode":"read-only","role":"admin_domain_master_screens_and_scenarios"},
+    "writeRequires":"explicit current-task instruction plus target, scope, valid reference gate and live write capability"
   },
-  "routing": "agent/COMMANDS.md",
-  "skillSystem": {
-    "index": "skills/README.md",
-    "router": "agent/skill-router.json",
-    "documentation": "docs/skill-system.md",
-    "core": [
-      "skills/core/figma-inspect/SKILL.md",
-      "skills/core/reference-source-resolution/SKILL.md",
-      "skills/core/information-architecture/SKILL.md",
-      "skills/core/interaction-design/SKILL.md",
-      "skills/core/design-system-compliance/SKILL.md",
-      "skills/core/ux-writing-content/SKILL.md",
-      "skills/core/visual-quality/SKILL.md",
-      "skills/core/responsive-accessibility/SKILL.md",
-      "skills/core/figma-execution/SKILL.md",
-      "skills/core/design-qa/SKILL.md",
-      "skills/core/reference-fidelity/SKILL.md",
-      "skills/core/visual-regression/SKILL.md",
-      "skills/core/fix-loop/SKILL.md",
-      "skills/core/ux-review/SKILL.md",
-      "skills/core/developer-handoff/SKILL.md",
-      "skills/core/evidence/SKILL.md"
-    ]
+  "registries":{
+    "coreSource":"registry/core-ds-source.json",
+    "coreFoundations":"registry/core-ds-foundations.json",
+    "coreComponents":"registry/core-ds-components.json",
+    "coreDependencies":"registry/core-ds-dependencies.json",
+    "sources":"registry/figma-sources.json",
+    "libraries":"registry/libraries.json",
+    "foundations":"registry/foundations.json",
+    "domainPatterns":"registry/domain-patterns.json",
+    "templates":"registry/templates.json",
+    "aliases":"registry/aliases.json",
+    "adminPortalSource":"registry/admin-portal-source.json",
+    "adminPortalScenarios":"registry/admin-portal-scenarios.json",
+    "adminPortalComponents":"registry/admin-portal-components.json",
+    "adminPortalDependencies":"registry/admin-portal-dependencies.json",
+    "coreTokenIndex":"registry/core-ds-tokens/index.json",
+    "corePreferred":"registry/core-ds-preferred.json",
+    "coreCoverage":"registry/core-ds-coverage.json",
+    "coreComponentDependencies":"registry/core-ds-component-dependencies.json",
+    "coreUpstreamFoundations":"registry/core-ds-upstream-foundations.json",
+    "coreResponsiveDecision":"registry/core-ds-responsive-decision.json",
+    "coreQuickMenuStatus":"registry/core-ds-quick-menu-status.json",
+    "visualBaselines":"registry/visual-baselines.json",
+    "stateFlows":"registry/state-flows.json",
+    "codeConnectStatus":"registry/code-connect-status.json"
   },
-  "workflows": {
-    "inspect": "agent/workflows/inspect.md",
-    "createScreen": "agent/workflows/create-screen.md",
-    "modifyScreen": "agent/workflows/modify-screen.md",
-    "review": "agent/workflows/review.md",
-    "component": "agent/workflows/component.md",
-    "qa": "agent/workflows/qa.md",
-    "handoff": "agent/workflows/handoff.md"
+  "routing":"agent/COMMANDS.md",
+  "skillSystem":{
+    "index":"skills/README.md",
+    "router":"agent/skill-router.json",
+    "documentation":"docs/skill-system.md"
   },
-  "outputSchemas": {
-    "execution": "agent/output/execution.schema.json",
-    "decisionLog": "agent/output/decision-log.schema.json",
-    "qaResult": "agent/output/qa-result.schema.json",
-    "evidenceMatrix": "agent/output/evidence-matrix.schema.json"
+  "workflows":{
+    "inspect":"agent/workflows/inspect.md",
+    "createScreen":"agent/workflows/create-screen.md",
+    "modifyScreen":"agent/workflows/modify-screen.md",
+    "review":"agent/workflows/review.md",
+    "component":"agent/workflows/component.md",
+    "qa":"agent/workflows/qa.md",
+    "handoff":"agent/workflows/handoff.md"
   },
-  "evals": {
-    "routing": "agent/evals/cases.json",
-    "referenceFidelity": "agent/evals/reference-cases.json",
-    "skills": "agent/evals/skill-cases.json"
+  "policies":[
+    "policies/source-priority.md",
+    "policies/naming.md",
+    "policies/responsive.md",
+    "policies/component-ownership.md",
+    "policies/write-permission.md",
+    "policies/scope-control.md"
+  ],
+  "outputSchemas":{
+    "execution":"agent/output/execution.schema.json",
+    "decisionLog":"agent/output/decision-log.schema.json",
+    "designDecision":"agent/planner/design-decision.schema.json",
+    "changeScope":"agent/controller/change-scope.schema.json",
+    "qaResult":"agent/output/qa-result.schema.json",
+    "reviewResult":"agent/output/review-result.schema.json",
+    "evidenceMatrix":"agent/output/evidence-matrix.schema.json"
   },
-  "requiredFinalEvidence": [
+  "evals":{
+    "routing":"agent/evals/cases.json",
+    "referenceFidelity":"agent/evals/reference-cases.json",
+    "skills":"agent/evals/skill-cases.json",
+    "control":"agent/evals/control-cases.json"
+  },
+  "requiredFinalEvidence":[
+    "control_state",
     "source_of_truth",
     "build_mode",
     "reference_gate",
     "reference_source",
     "loaded_skills",
+    "design_decision",
+    "change_scope",
+    "permission_state",
     "reuse_decision",
     "responsive_state_coverage",
     "evidence_matrix",
     "final_result",
     "open_gaps"
   ],
-  "agent": {
-    "name": "Design Agent",
-    "version": "2.0.0",
-    "system": "agent/SYSTEM.md",
-    "runtime": "agent/runtime.json",
-    "productRouter": "agent/product-router.json",
-    "intentRouter": "agent/router/intent.json",
-    "skillRouter": "agent/skill-router.json",
-    "referenceRouter": "agent/reference-router.json",
-    "defaultWriteMode": "read-only",
-    "finalQaStates": ["PASS", "FAIL", "BLOCKED"]
+  "agent":{
+    "name":"Design Control Agent",
+    "version":"2.1.0",
+    "system":"agent/SYSTEM.md",
+    "runtime":"agent/runtime.json",
+    "stateMachine":"agent/state-machine.json",
+    "writePermission":"agent/permissions/write-permission.json",
+    "productRouter":"agent/product-router.json",
+    "intentRouter":"agent/router/intent.json",
+    "skillRouter":"agent/skill-router.json",
+    "referenceRouter":"agent/reference-router.json",
+    "defaultWriteMode":"read-only",
+    "finalQaStates":["PASS","FAIL","BLOCKED"]
   },
-  "architecture": {
-    "repositoryRole": "knowledge_base_and_operating_contract",
-    "runtimeHost": "chatgpt",
-    "figmaExecution": "mcp_via_chatgpt",
-    "githubAgentExecution": false,
-    "githubMcpConfiguration": false,
-    "rule": "GitHub stores evidence, skills, policies, registries, workflows, schemas, tests and audit history. ChatGPT reads this KB and performs live Figma MCP execution."
+  "architecture":{
+    "repositoryRole":"knowledge_base_and_operating_contract",
+    "runtimeHost":"chatgpt",
+    "figmaExecution":"mcp_via_chatgpt",
+    "githubAgentExecution":false,
+    "githubMcpConfiguration":false,
+    "rule":"GitHub stores control contracts, state, permissions, skills, policies, registries, workflows, schemas, tests and audit history. ChatGPT orchestrates and performs live Figma MCP execution."
   }
 }

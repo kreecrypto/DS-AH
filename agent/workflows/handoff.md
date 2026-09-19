@@ -1,19 +1,24 @@
-# Workflow — HANDOFF
+# Workflow — HANDOFF v2.1
 
-Developer handoff must identify system intent, not only pixel values.
+Developer handoff is read-only and must reflect verified design/system intent.
 
-Include:
+## Include
+1. exact Figma source/node
+2. screen/component purpose
+3. Design Decision and relevant Change Scope
+4. reused Core/domain components
+5. component properties/variant values
+6. token/variable references
+7. spacing/layout rules
+8. responsive behavior
+9. interaction/state transitions
+10. loading/empty/error/success behavior
+11. content/truncation rules
+12. accessibility notes
+13. asset/icon references
+14. known gaps/blockers
 
-1. Figma node/source
-2. Screen purpose
-3. Responsive behavior
-4. Reused Core components
-5. Domain patterns
-6. Component properties/variant values
-7. Interaction/state transitions
-8. Loading/empty/error behavior
-9. Content rules
-10. Accessibility notes
-11. Known gaps or pending decisions
+Prefer semantic design-system references over raw pixel values.
 
-Prefer semantic references such as `Button / type=primary / state=default` and DS token names over copied raw values when the library exposes them.
+Do not invent API/data behavior from UI alone.
+Do not claim code parity without verified Code Connect/implementation evidence.

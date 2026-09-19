@@ -72,6 +72,8 @@ User Request
 
 Never skip directly from request to Figma mutation.
 
+For the full stage-by-stage contract, use `docs/design-agent-flow.md`. The machine-readable equivalent is `agent/flow/design-agent-flow.json`.
+
 ## 4. Figma modes
 
 ### READ_ONLY

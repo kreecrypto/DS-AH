@@ -46,6 +46,8 @@ const required=[
   'skills/SKILL-CONTRACT.md',
   'skills/README.md',
   'docs/figma-sop.md',
+  'docs/design-agent-flow.md',
+  'agent/flow/design-agent-flow.json',
   'policies/write-permission.md',
   'policies/scope-control.md'
 ];
@@ -192,6 +194,24 @@ for(const p of ['agent/SYSTEM.md','AGENTS.md','agent/COMMANDS.md','agent/workflo
 if(!read('agent/SYSTEM.md').includes('Production Skill Contract')) fail('SYSTEM MUST DECLARE PRODUCTION SKILL CONTRACT');
 if(!read('AGENTS.md').includes('Skill loading quality')) fail('AGENTS ENTRYPOINT MUST DECLARE FULL SKILL LOADING');
 
+
+
+const deepFlow=json('agent/flow/design-agent-flow.json');
+const expectedDeepStages=['USER_REQUEST','RESOLVE_INTENT','LOAD_AGENT_SKILLS','FIGMA_INSPECT','RESOLVE_REFERENCE','DESIGN_DECISION','CHANGE_SCOPE','WRITE_PERMISSION','FIGMA_EXECUTION_PLAN','MUTATION','VERIFICATION','DESIGN_QA','VISUAL_REGRESSION','FIX_LOOP','EVIDENCE','COMPLETE'];
+if(JSON.stringify(deepFlow?.canonicalOrder)!==JSON.stringify(expectedDeepStages)) fail('DEEP FLOW STAGE ORDER INVALID');
+for(const stage of expectedDeepStages){
+  if(!(deepFlow?.stages||[]).some(x=>x.id===stage)) fail('DEEP FLOW MISSING STAGE',stage);
+}
+for(const cmd of ['INSPECT','REVIEW','CREATE_SCREEN','MODIFY_SCREEN','QA','HANDOFF']){
+  if(!deepFlow?.commandStageRules?.[cmd]) fail('DEEP FLOW MISSING COMMAND STAGE RULE',cmd);
+}
+for(const inv of ['no_mutation_before_inspection','no_mutation_before_design_decision','no_mutation_before_scope','no_mutation_without_write_allowed','tool_success_is_not_verification','no_pass_without_evidence']){
+  if(!(deepFlow?.invariants||[]).includes(inv)) fail('DEEP FLOW MISSING INVARIANT',inv);
+}
+if(manifest?.controlSystem?.deepFlow!=='agent/flow/design-agent-flow.json') fail('MANIFEST MUST DECLARE MACHINE-READABLE DEEP FLOW');
+if(manifest?.workflows?.deepFlow!=='docs/design-agent-flow.md') fail('MANIFEST MUST DECLARE DEEP FLOW DOC');
+if(!read('agent/SYSTEM.md').includes('docs/design-agent-flow.md')) fail('SYSTEM MUST REFERENCE DEEP FLOW');
+if(!read('docs/figma-sop.md').includes('docs/design-agent-flow.md')) fail('FIGMA SOP MUST REFERENCE DEEP FLOW');
 
 if(manifest?.figma?.sop!=='docs/figma-sop.md') fail('MANIFEST MUST DECLARE FIGMA SOP');
 const figmaSop=read('docs/figma-sop.md');

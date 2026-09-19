@@ -204,3 +204,7 @@ The 13 primary production skills must satisfy `skills/SKILL-CONTRACT.md` and the
 ## Figma SOP
 
 For any live Figma work, follow `docs/figma-sop.md`. Agent Skills own design decisions; the Figma capability layer owns inspect, controlled mutation, and verification. Every material write must be inspected before execution, return affected node IDs, and be verified afterward.
+
+## Canonical Deep Flow
+
+The canonical stage-by-stage execution contract is `docs/design-agent-flow.md`, with machine-readable stages in `agent/flow/design-agent-flow.json`. Use it to determine stage inputs, outputs, gates, block conditions, return paths, and command-specific stage coverage.

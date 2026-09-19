@@ -1,0 +1,373 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "DS-AH Design Agent Deep Flow",
+  "canonicalOrder": [
+    "USER_REQUEST",
+    "RESOLVE_INTENT",
+    "LOAD_AGENT_SKILLS",
+    "FIGMA_INSPECT",
+    "RESOLVE_REFERENCE",
+    "DESIGN_DECISION",
+    "CHANGE_SCOPE",
+    "WRITE_PERMISSION",
+    "FIGMA_EXECUTION_PLAN",
+    "MUTATION",
+    "VERIFICATION",
+    "DESIGN_QA",
+    "VISUAL_REGRESSION",
+    "FIX_LOOP",
+    "EVIDENCE",
+    "COMPLETE"
+  ],
+  "stages": [
+    {
+      "id": "USER_REQUEST",
+      "state": "RECEIVED",
+      "owner": "controller",
+      "gate": "TASK_PARSED",
+      "requiredOutputs": [
+        "taskEnvelope"
+      ],
+      "next": [
+        "RESOLVE_INTENT"
+      ]
+    },
+    {
+      "id": "RESOLVE_INTENT",
+      "state": "ROUTED",
+      "owner": "intent-router",
+      "gate": "INTENT_RESOLVED",
+      "requiredOutputs": [
+        "command",
+        "workflow",
+        "productDomain",
+        "defaultPermission"
+      ],
+      "next": [
+        "LOAD_AGENT_SKILLS"
+      ]
+    },
+    {
+      "id": "LOAD_AGENT_SKILLS",
+      "state": "ROUTED",
+      "owner": "skill-router",
+      "gate": "SKILLS_READY",
+      "requiredOutputs": [
+        "loadedSkills",
+        "versions"
+      ],
+      "next": [
+        "FIGMA_INSPECT"
+      ]
+    },
+    {
+      "id": "FIGMA_INSPECT",
+      "state": "INSPECTING",
+      "owner": "figma-inspect",
+      "mode": "READ_ONLY",
+      "gate": "INSPECTION_READY",
+      "requiredOutputs": [
+        "inspectionEvidence",
+        "exactNodeIds",
+        "unknowns"
+      ],
+      "next": [
+        "RESOLVE_REFERENCE"
+      ]
+    },
+    {
+      "id": "RESOLVE_REFERENCE",
+      "state": "REFERENCE_RESOLVED",
+      "owner": "reference-source-resolution",
+      "gate": "REFERENCE_RESOLVED",
+      "requiredOutputs": [
+        "buildMode",
+        "referenceGate",
+        "selectedReference",
+        "preservationBaseline"
+      ],
+      "next": [
+        "DESIGN_DECISION"
+      ],
+      "blockOn": [
+        "BLOCKED_REFERENCE_AMBIGUOUS",
+        "BLOCKED_REFERENCE_MISSING"
+      ]
+    },
+    {
+      "id": "DESIGN_DECISION",
+      "state": "PLANNED",
+      "owner": "design-agent+skills",
+      "gate": "DESIGN_DECISION_READY",
+      "requiredOutputs": [
+        "designDecision",
+        "acceptanceCriteria"
+      ],
+      "next": [
+        "CHANGE_SCOPE"
+      ]
+    },
+    {
+      "id": "CHANGE_SCOPE",
+      "state": "PLANNED",
+      "owner": "controller",
+      "gate": "SCOPE_RESOLVED",
+      "requiredOutputs": [
+        "allowedChanges",
+        "protectedAreas",
+        "outOfScope",
+        "affectedStates",
+        "affectedViewports"
+      ],
+      "next": [
+        "WRITE_PERMISSION"
+      ]
+    },
+    {
+      "id": "WRITE_PERMISSION",
+      "state": "READY_TO_EXECUTE",
+      "owner": "permission-controller",
+      "gate": "WRITE_ALLOWED_OR_READ_ONLY_ROUTE",
+      "requiredOutputs": [
+        "permissionState",
+        "permissionEvidence"
+      ],
+      "next": [
+        "FIGMA_EXECUTION_PLAN",
+        "EVIDENCE"
+      ],
+      "writeAllowedRequires": [
+        "explicitWriteSignal",
+        "targetResolved",
+        "scopeResolved",
+        "referenceEligible",
+        "figmaWriteCapability"
+      ]
+    },
+    {
+      "id": "FIGMA_EXECUTION_PLAN",
+      "state": "READY_TO_EXECUTE",
+      "owner": "figma-execution",
+      "gate": "EXECUTION_PLAN_READY",
+      "requiredOutputs": [
+        "operationPlan",
+        "executionBatches",
+        "verificationPlan"
+      ],
+      "next": [
+        "MUTATION"
+      ]
+    },
+    {
+      "id": "MUTATION",
+      "state": "EXECUTING",
+      "owner": "figma-capability",
+      "gate": "MUTATION_RECORDED",
+      "requiredOutputs": [
+        "createdNodeIds",
+        "mutatedNodeIds",
+        "executedOperations"
+      ],
+      "next": [
+        "VERIFICATION"
+      ]
+    },
+    {
+      "id": "VERIFICATION",
+      "state": "EXECUTING",
+      "owner": "figma-inspect+execution",
+      "gate": "VERIFIED",
+      "requiredOutputs": [
+        "structuralEvidence",
+        "visualEvidence",
+        "scopeEvidence",
+        "verificationStatus"
+      ],
+      "next": [
+        "DESIGN_QA",
+        "FIX_LOOP"
+      ]
+    },
+    {
+      "id": "DESIGN_QA",
+      "state": "QA",
+      "owner": "design-qa",
+      "gate": "QA_RESOLVED",
+      "requiredOutputs": [
+        "gateMatrix",
+        "defectRecords",
+        "qaResult"
+      ],
+      "next": [
+        "VISUAL_REGRESSION",
+        "FIX_LOOP",
+        "EVIDENCE"
+      ]
+    },
+    {
+      "id": "VISUAL_REGRESSION",
+      "state": "QA",
+      "owner": "visual-regression",
+      "gate": "REGRESSION_RESOLVED",
+      "requiredOutputs": [
+        "baselineEvidence",
+        "differenceRecords",
+        "regressionResult"
+      ],
+      "next": [
+        "FIX_LOOP",
+        "EVIDENCE"
+      ]
+    },
+    {
+      "id": "FIX_LOOP",
+      "state": "FIXING",
+      "owner": "fix-loop+root-cause-skill+figma-execution",
+      "gate": "FIXED_OR_BLOCKED",
+      "requiredOutputs": [
+        "fixIterations",
+        "resolvedDefects",
+        "remainingDefects"
+      ],
+      "next": [
+        "VERIFICATION",
+        "DESIGN_QA",
+        "EVIDENCE"
+      ]
+    },
+    {
+      "id": "EVIDENCE",
+      "state": "EVIDENCE",
+      "owner": "evidence",
+      "gate": "EVIDENCE_COMPLETE",
+      "requiredOutputs": [
+        "evidenceMatrix",
+        "provenance",
+        "finalAuditEnvelope"
+      ],
+      "next": [
+        "COMPLETE"
+      ]
+    },
+    {
+      "id": "COMPLETE",
+      "state": "COMPLETE",
+      "owner": "controller",
+      "gate": "FINAL_RESULT_RESOLVED",
+      "requiredOutputs": [
+        "finalResult"
+      ],
+      "finalStates": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    }
+  ],
+  "commandStageRules": {
+    "INSPECT": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "REVIEW": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "DESIGN_DECISION",
+      "DESIGN_QA",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "CREATE_SCREEN": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "DESIGN_DECISION",
+      "CHANGE_SCOPE",
+      "WRITE_PERMISSION",
+      "FIGMA_EXECUTION_PLAN",
+      "MUTATION",
+      "VERIFICATION",
+      "DESIGN_QA",
+      "VISUAL_REGRESSION",
+      "FIX_LOOP",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "MODIFY_SCREEN": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "DESIGN_DECISION",
+      "CHANGE_SCOPE",
+      "WRITE_PERMISSION",
+      "FIGMA_EXECUTION_PLAN",
+      "MUTATION",
+      "VERIFICATION",
+      "DESIGN_QA",
+      "VISUAL_REGRESSION",
+      "FIX_LOOP",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "FIX": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "DESIGN_DECISION",
+      "CHANGE_SCOPE",
+      "WRITE_PERMISSION",
+      "FIGMA_EXECUTION_PLAN",
+      "MUTATION",
+      "VERIFICATION",
+      "DESIGN_QA",
+      "VISUAL_REGRESSION",
+      "FIX_LOOP",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "QA": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "VERIFICATION",
+      "DESIGN_QA",
+      "VISUAL_REGRESSION",
+      "EVIDENCE",
+      "COMPLETE"
+    ],
+    "HANDOFF": [
+      "USER_REQUEST",
+      "RESOLVE_INTENT",
+      "LOAD_AGENT_SKILLS",
+      "FIGMA_INSPECT",
+      "RESOLVE_REFERENCE",
+      "VERIFICATION",
+      "EVIDENCE",
+      "COMPLETE"
+    ]
+  },
+  "invariants": [
+    "no_mutation_before_inspection",
+    "no_mutation_before_design_decision",
+    "no_mutation_before_scope",
+    "no_mutation_without_write_allowed",
+    "tool_success_is_not_verification",
+    "p0_p1_write_failures_enter_fix_loop_when_fixable",
+    "no_pass_without_evidence"
+  ]
+}

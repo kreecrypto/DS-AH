@@ -9,7 +9,8 @@
     "writePermission": "agent/permissions/write-permission.json",
     "changeScopeSchema": "agent/controller/change-scope.schema.json",
     "designDecisionSchema": "agent/planner/design-decision.schema.json",
-    "qualityGates": "agent/gates/quality-gates.json"
+    "qualityGates": "agent/gates/quality-gates.json",
+    "deepFlow": "agent/flow/design-agent-flow.json"
   },
   "figma": {
     "coreDesignSystem": {
@@ -71,7 +72,8 @@
     "review": "agent/workflows/review.md",
     "component": "agent/workflows/component.md",
     "qa": "agent/workflows/qa.md",
-    "handoff": "agent/workflows/handoff.md"
+    "handoff": "agent/workflows/handoff.md",
+    "deepFlow": "docs/design-agent-flow.md"
   },
   "policies": [
     "policies/source-priority.md",

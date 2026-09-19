@@ -1,9 +1,10 @@
 {
   "name": "ds-ah-operating-repo",
   "private": true,
-  "version": "2.4.0",
-  "description": "Design Control Agent with locked user-reference authority, visual grammar extraction, DS mapping, skeleton fidelity checkpoints, and split reference QA.",
+  "version": "2.5.0",
+  "description": "AH Design System operating repository: agent knowledge base plus the AHDS documentation portal.",
   "type": "module",
+  "workspaces": ["apps/docs"],
   "scripts": {
     "validate:registry": "node scripts/validate-registry.mjs",
     "validate:agent": "node scripts/validate-agent.mjs",
@@ -12,6 +13,10 @@
     "test:control": "node scripts/run-control-evals.mjs",
     "validate": "npm run validate:registry && npm run validate:agent && npm run test:agent && npm run test:fidelity && npm run test:control && npm run test:skill-depth && npm run test:deep-flow",
     "test:skill-depth": "node scripts/run-skill-depth-evals.mjs",
-    "test:deep-flow": "node scripts/run-deep-flow-evals.mjs"
+    "test:deep-flow": "node scripts/run-deep-flow-evals.mjs",
+    "docs:dev": "npm run dev --workspace=@ahds/docs",
+    "docs:build": "npm run build --workspace=@ahds/docs",
+    "docs:validate": "node apps/docs/scripts/validate-docs.mjs",
+    "validate:docs": "npm run docs:validate && npm run docs:build"
   }
 }

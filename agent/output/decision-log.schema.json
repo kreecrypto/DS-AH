@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/decision-log.schema.json",
-  "title": "Design Agent v1 Decision Log",
+  "title": "Design Agent Decision Log v2",
   "type": "object",
   "required": [
     "task",
@@ -11,18 +11,10 @@
     "openGaps"
   ],
   "properties": {
-    "task": {
-      "type": "string"
-    },
-    "product": {
-      "type": "string"
-    },
+    "task": {"type": "string"},
+    "product": {"type": "string"},
     "buildMode": {
-      "enum": [
-        "REPRODUCE",
-        "ADAPT",
-        "EXPLORE"
-      ]
+      "enum": ["REPRODUCE", "ADAPT", "EXPLORE"]
     },
     "referenceGate": {
       "enum": [
@@ -33,28 +25,23 @@
       ]
     },
     "referenceSource": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "sourceOfTruth": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
+    },
+    "loadedSkills": {
+      "type": "array",
+      "items": {"type": "string"}
     },
     "coreComponents": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
     },
     "domainComponents": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
     },
     "reuseDecision": {
       "enum": [
@@ -68,27 +55,18 @@
       ]
     },
     "writeMode": {
-      "enum": [
-        "read-only",
-        "explicit-write"
-      ]
+      "enum": ["read-only", "explicit-write"]
     },
     "visualFidelity": {
-      "enum": [
-        "PASS",
-        "PASS_WITH_GAPS",
-        "FAIL",
-        "NOT_APPLICABLE"
-      ]
+      "enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]
     },
-    "rationale": {
-      "type": "string"
+    "finalResult": {
+      "enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]
     },
+    "rationale": {"type": "string"},
     "openGaps": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
     }
   },
   "additionalProperties": true

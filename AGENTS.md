@@ -1,89 +1,61 @@
 # Design Agent Knowledge Base Entry Point
 
-This repository is the **Knowledge Base and operating contract** for Design Agent v1.2.
+This repository is the **Knowledge Base and operating contract** for Design Agent v2.0.
 
-It does **not** execute the agent.
+It does not execute the agent.
 
 ## Runtime architecture
 
-- **GitHub / DS-AH** = Knowledge Base, Source of Truth, skills, policies, registries, workflows, tests, audits, and history.
+- **GitHub / DS-AH** = Source of Truth for skills, policies, registries, workflows, schemas, evals, audits and decision history.
 - **ChatGPT** = Design Agent runtime.
-- **Figma MCP through ChatGPT** = live Figma inspect / create / modify / QA execution layer.
+- **Figma MCP through ChatGPT** = live Figma inspection/execution/verification layer.
 
-Do not configure or depend on a GitHub Custom Agent for Figma execution.
-
-## ChatGPT start sequence
-
-Before any design task, ChatGPT should:
+## Start sequence
 
 1. Read `agent/SYSTEM.md`.
 2. Read `agent/runtime.json`.
 3. Route intent with `agent/router/intent.json`.
 4. Resolve product with `agent/product-router.json`.
-5. Resolve build mode/reference with `agent/reference-router.json`.
-6. Read `agent/skill-router.json` and load only the skills required by the routed task.
-7. Load only the workflow and registries needed for the task.
-8. Use Figma MCP through ChatGPT to inspect the approved reference read-only.
-9. Resolve Source of Truth.
-10. Resolve Core component identity.
-11. Resolve product/domain pattern identity.
-12. Decide reuse / extend / wrap / create / screen-only.
-13. Execute through ChatGPT Figma MCP only when the current task explicitly authorizes a write and the Reference Fidelity Gate passes.
-14. Run Design QA + Visual Quality Gate.
-15. Emit evidence using the output schemas.
+5. Load `agent/skill-router.json`.
+6. Load every skill required by that command.
+7. Load the routed workflow and only relevant product registries.
+8. Inspect live Figma/reference read-only.
+9. Resolve exact source authority.
+10. Execute only with current-task write authorization and a valid Reference Gate.
+11. Run QA and regression checks.
+12. Enter Fix Loop when a CREATE/MODIFY P0/P1 failure is safely fixable.
+13. Emit Evidence Matrix.
+14. Return PASS, FAIL, or BLOCKED.
 
-## Skill system
+## Production pipelines
 
-Reusable professional capability lives under `skills/`.
+### CREATE / MODIFY
+Figma Inspect → Reference/Source Resolution → IA → Interaction Design → DS Compliance → UX Writing/Content → Visual Quality → Responsive & Accessibility → Figma Execution → Design QA → Reference Fidelity → Visual Regression → Fix Loop → Evidence
 
-The router is `agent/skill-router.json`.
+### REVIEW
+Figma Inspect → UX Review → IA → Interaction Review → UX Writing Review → Responsive & Accessibility → Visual Quality → DS Compliance → Findings + Acceptance Criteria → Evidence
 
-Core skills:
-- Figma Inspect
-- Design System Compliance
-- Visual Quality
-- UX Review
-- Figma Execution
-- Design QA
-- Responsive & Accessibility
-- Developer Handoff
-
-Skills define **how** to execute. Product registries and live Figma evidence define **what is true**.
-
-A skill cannot grant Figma write permission and cannot override approved product/reference evidence.
+### QA
+Figma Inspect → Reference Fidelity → DS Compliance → Interaction/States → Responsive & Accessibility → Content QA → Visual Quality → Structural QA → Scope Integrity → Evidence Matrix → PASS/FAIL/BLOCKED
 
 ## Figma safety
 
-Figma is **read-only by default**.
+Figma is read-only by default.
+Repository state never grants Figma write permission.
 
-GitHub content never grants Figma write permission by itself.
-
-## Source model
+## Figma sources
 
 - Core DS: `5ZFIRJWtmEIvuq95Rhyo6I`
 - Agency Master Screens: `cipkv7yTxyE29VCfMphE0W`
 - Admin Master Screens: `rEJCvUGUfzzQ3jegheRhnr`
 
-See `agent/product-router.json` for registry routing.
+## Critical rules
 
-## Critical identity rule
+- Reference before layout.
+- Same visible component name does not prove same published identity.
+- Product/reference evidence outranks generic skill guidance.
+- Reuse before create.
+- No PASS without evidence.
+- Final QA state is only PASS, FAIL, or BLOCKED.
 
-Same component name does **not** prove same published identity.
-
-Verify component keys and live ownership through Figma MCP before substitution.
-
-## Completion contract
-
-Return:
-- routed command
-- product/domain
-- Build Mode
-- Reference Gate
-- loaded skills
-- Source of Truth
-- reuse decision
-- write mode
-- responsive/state coverage
-- visual fidelity result
-- QA result
-- open gaps
+See `skills/README.md`, `agent/skill-router.json`, and `docs/skill-system.md`.

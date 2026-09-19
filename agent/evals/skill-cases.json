@@ -1,25 +1,76 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "cases": [
     {
-      "id": "skill-create",
+      "id": "skill-create-full-pipeline",
       "command": "CREATE_SCREEN",
-      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"]
+      "mustInclude": [
+        "figma-inspect",
+        "reference-source-resolution",
+        "information-architecture",
+        "interaction-design",
+        "design-system-compliance",
+        "ux-writing-content",
+        "visual-quality",
+        "responsive-accessibility",
+        "figma-execution",
+        "design-qa",
+        "reference-fidelity",
+        "visual-regression",
+        "fix-loop",
+        "evidence"
+      ]
     },
     {
-      "id": "skill-modify",
+      "id": "skill-modify-full-pipeline",
       "command": "MODIFY_SCREEN",
-      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"]
+      "mustInclude": [
+        "figma-inspect",
+        "reference-source-resolution",
+        "information-architecture",
+        "interaction-design",
+        "design-system-compliance",
+        "ux-writing-content",
+        "visual-quality",
+        "responsive-accessibility",
+        "figma-execution",
+        "design-qa",
+        "reference-fidelity",
+        "visual-regression",
+        "fix-loop",
+        "evidence"
+      ]
     },
     {
-      "id": "skill-review",
+      "id": "skill-review-full-pipeline",
       "command": "REVIEW",
-      "mustInclude": ["figma-inspect", "ux-review", "visual-quality", "design-system-compliance"]
+      "mustInclude": [
+        "figma-inspect",
+        "ux-review",
+        "information-architecture",
+        "interaction-design",
+        "ux-writing-content",
+        "responsive-accessibility",
+        "visual-quality",
+        "design-system-compliance",
+        "evidence"
+      ]
     },
     {
-      "id": "skill-qa",
+      "id": "skill-qa-full-pipeline",
       "command": "QA",
-      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "design-qa"]
+      "mustInclude": [
+        "figma-inspect",
+        "reference-source-resolution",
+        "reference-fidelity",
+        "design-system-compliance",
+        "interaction-design",
+        "responsive-accessibility",
+        "ux-writing-content",
+        "visual-quality",
+        "design-qa",
+        "evidence"
+      ]
     }
   ]
 }

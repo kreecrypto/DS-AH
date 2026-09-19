@@ -1,37 +1,74 @@
-# Workflow — REVIEW
+# Workflow — REVIEW v2
 
-Review is read-only unless the user separately asks for fixes.
+Review is read-only unless the user separately authorizes fixes.
+
+## Flow
+
+**Figma Inspect → UX Review → Information Architecture → Interaction Review → UX Writing Review → Responsive & Accessibility → Visual Quality → Design System Compliance → Findings + Acceptance Criteria → Evidence**
 
 ## Review dimensions
 
-1. Source authority
-2. Information architecture
-3. Task flow
-4. Component reuse
-5. State completeness
-6. Responsive behavior
-7. Hierarchy and spacing
-8. Content and terminology consistency
-9. Accessibility sanity
-10. Design-system compliance
+### UX Review
+- task clarity
+- discoverability
+- efficiency
+- error prevention/recovery
+- consistency
 
-## Severity
+### Information Architecture
+- hierarchy
+- grouping
+- ordering
+- navigation/findability
+- taxonomy
 
-Use:
-- High — blocks task, creates wrong action/data, or breaks system consistency
-- Medium — meaningful usability/consistency issue
-- Low — polish or low-risk cleanup
+### Interaction Review
+- state completeness
+- transitions/outcomes
+- validation/recovery
+- cancel/back/close
+- destructive/async behavior
 
-Do not use severity as a subjective aesthetic score.
+### UX Writing Review
+- terminology
+- labels/CTA
+- helper/error/empty/loading/success
+- truncation/wrapping
 
-## Output per issue
+### Responsive & Accessibility
+- supported viewport behavior
+- focus/state distinction
+- contrast sanity
+- meaning beyond color/icon
 
-- Node / screen
+### Visual Quality
+- hierarchy
+- composition
+- spacing/alignment
+- typography/color
+- density/polish
+
+### Design System Compliance
+- source authority
+- component reuse
+- token/variable use
+- pattern ownership
+
+## Finding contract
+Every finding must include:
+- findingId
+- Severity: High / Medium / Low
+- exact node/screen/region
+- Observation
+- Impact
 - Evidence
-- User/system impact
 - Proposed solution
-- Related Core component/pattern
-- Severity
-- Whether Figma write is needed
+- Acceptance criteria
+- related skill/gate
+- whether a Figma write is required
 
-Never modify Figma as part of REVIEW unless explicitly asked afterward.
+Separate observed fact from hypothesis.
+
+## Output
+Return findings grouped by severity/dependency plus Evidence record.
+Do not modify Figma as part of REVIEW without separate explicit write authorization.

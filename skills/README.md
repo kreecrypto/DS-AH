@@ -1,45 +1,75 @@
-# DS-AH Skill System
+# DS-AH Production Skill System
 
-The `skills/` directory is the reusable capability layer for Design Agent.
+The `skills/` directory is the reusable capability layer for Design Agent v2.0.
 
-## Operating model
+## Architecture
 
-**System contract → Skill Router → Task Skills → Product evidence → Workflow → Figma MCP → QA**
+System Contract
+→ Intent/Product/Reference Routing
+→ Skill Router
+→ Task Pipeline
+→ Product Evidence / Live Figma
+→ Execution
+→ QA / Regression
+→ Fix Loop
+→ Evidence
 
-Skills are not a substitute for product evidence. They define *how to reason and execute*; registries and live Figma define *what is true*.
-
-## Loading rule
-
-1. Always load `agent/skill-router.json`.
-2. Load only the skills required by the routed task.
-3. CREATE/MODIFY tasks must load `visual-quality`, `design-system-compliance`, `figma-execution`, and `design-qa`.
-4. REVIEW tasks must load `ux-review` and `visual-quality`.
-5. Figma inspection must load `figma-inspect`.
-6. Responsive/public-facing work loads `responsive-accessibility`.
-7. Handoff loads `developer-handoff`.
-
-Do not load every skill for every task. Context must remain task-scoped.
+Skills define **how** to work.
+Registries, approved references and live Figma define **what is true**.
 
 ## Core skills
 
-- `skills/core/figma-inspect/SKILL.md`
-- `skills/core/design-system-compliance/SKILL.md`
-- `skills/core/visual-quality/SKILL.md`
-- `skills/core/ux-review/SKILL.md`
-- `skills/core/figma-execution/SKILL.md`
-- `skills/core/design-qa/SKILL.md`
-- `skills/core/responsive-accessibility/SKILL.md`
-- `skills/core/developer-handoff/SKILL.md`
+### Inspection and authority
+- `figma-inspect`
+- `reference-source-resolution`
+- `reference-fidelity`
+
+### UX structure and behavior
+- `information-architecture`
+- `interaction-design`
+- `ux-writing-content`
+- `ux-review`
+
+### System and visual
+- `design-system-compliance`
+- `visual-quality`
+- `responsive-accessibility`
+
+### Execution and verification
+- `figma-execution`
+- `design-qa`
+- `visual-regression`
+- `fix-loop`
+- `evidence`
+- `developer-handoff`
 
 ## Skill contract
 
-Each skill must state:
+Every production skill must define:
 - purpose
-- triggers
+- trigger
 - required inputs
-- procedure
+- procedure/checks
 - hard rules
-- outputs/evidence
-- fail/block conditions
+- gate/result semantics
+- evidence
+- block/fail behavior where applicable
 
-A skill may not grant Figma write permission. Write permission still requires the current user instruction plus the Reference Fidelity Gate.
+A skill cannot grant Figma write permission.
+
+## Unified result semantics
+
+Final QA-oriented status:
+- PASS
+- FAIL
+- BLOCKED
+
+Gate-level status may also use NOT_APPLICABLE.
+
+Do not introduce PASS_WITH_GAPS/PASS_WITH_P2 as final states. Record non-blocking P2 polish separately.
+
+## Flow ownership
+
+`agent/skill-router.json` is the machine-readable mapping.
+`agent/workflows/` defines sequence.
+`agent/output/evidence-matrix.schema.json` defines auditable QA evidence.

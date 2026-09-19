@@ -1,14 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/execution.schema.json",
-  "title": "Design Agent v1 Execution Envelope",
+  "title": "Design Agent v2 Execution Envelope",
   "type": "object",
   "required": [
     "command",
     "product",
     "writeMode",
     "workflow",
-    "sources"
+    "sources",
+    "loadedSkills"
   ],
   "properties": {
     "command": {
@@ -23,26 +24,13 @@
       ]
     },
     "product": {
-      "enum": [
-        "core",
-        "agency",
-        "admin",
-        "unknown"
-      ]
+      "enum": ["core", "agency", "admin", "unknown"]
     },
     "writeMode": {
-      "enum": [
-        "read-only",
-        "explicit-write"
-      ]
+      "enum": ["read-only", "explicit-write"]
     },
     "buildMode": {
-      "enum": [
-        "REPRODUCE",
-        "ADAPT",
-        "EXPLORE",
-        null
-      ]
+      "enum": ["REPRODUCE", "ADAPT", "EXPLORE", null]
     },
     "referenceGate": {
       "enum": [
@@ -54,67 +42,42 @@
       ]
     },
     "reference": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": ["object", "null"],
       "properties": {
-        "fileKey": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "nodeId": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "classification": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
+        "fileKey": {"type": ["string", "null"]},
+        "nodeId": {"type": ["string", "null"]},
+        "name": {"type": ["string", "null"]},
+        "classification": {"type": ["string", "null"]}
       },
       "additionalProperties": true
     },
-    "fileKey": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "nodeId": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "workflow": {
-      "type": "string"
-    },
+    "fileKey": {"type": ["string", "null"]},
+    "nodeId": {"type": ["string", "null"]},
+    "workflow": {"type": "string"},
     "sources": {
       "type": "array",
+      "items": {"type": "string"}
+    },
+    "loadedSkills": {
+      "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "required": ["id", "version"],
+        "properties": {
+          "id": {"type": "string"},
+          "version": {"type": "string"}
+        },
+        "additionalProperties": false
       }
     },
-    "domain": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "domain": {"type": ["string", "null"]},
+    "goal": {"type": "string"},
+    "changedScope": {
+      "type": "array",
+      "items": {"type": "string"}
     },
-    "goal": {
-      "type": "string"
+    "finalResult": {
+      "enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]
     }
   },
   "additionalProperties": true

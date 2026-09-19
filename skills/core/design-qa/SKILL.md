@@ -1,66 +1,102 @@
 ---
 id: design-qa
-version: 1.0.0
+version: 2.0.0
 scope: core
 ---
 
 # Design QA Skill
 
 ## Purpose
-Verify that a design is structurally correct, system-compliant and visually faithful before completion.
+Verify that a design is structurally correct, interaction-complete, system-compliant, accessible, content-safe and visually faithful before completion.
 
 ## Trigger
-Mandatory after CREATE/MODIFY; use directly for QA requests.
+Mandatory after CREATE/MODIFY and for QA requests.
 
-## QA sequence
+## Gate sequence
 
-### Gate A — Reference
-- correct approved reference?
-- correct Build Mode?
-- no unresolved reference ambiguity?
+### QA-01 Reference Fidelity
+- approved authority resolved
+- Build Mode correct
+- Reference Gate valid
+- comparable reference/result evidence available when required
+- no unexplained material divergence
 
-### Gate B — Structure
-- expected shell/hierarchy?
-- Auto Layout/constraints stable?
-- no accidental absolute positioning?
-- no clipping/overflow/overlap?
+### QA-02 Design System Compliance
+- approved component identities
+- correct variable/style bindings
+- no unnecessary detached instances
+- no duplicate semantic components/tokens
+- ownership level justified for new assets
 
-### Gate C — System
-- approved component identities?
-- variables/styles bound correctly?
-- no unnecessary detached instances?
-- no duplicate tokens/components?
+### QA-03 Interaction / States
+- required states defined
+- action outcomes clear
+- validation/recovery defined where relevant
+- cancel/back/close behavior safe
+- loading/error/retry/empty/success handled when relevant
 
-### Gate D — States
-- required states present?
-- selected/disabled/error/loading states semantically correct?
-- interaction geometry stable?
+### QA-04 Responsive & Accessibility
+- supported viewports/layout modes checked
+- reflow/collapse behavior valid
+- no clipping at supported sizes
+- contrast/focus/state distinction checked
+- essential meaning not encoded only by color/icon
 
-### Gate E — Responsive
-- expected breakpoints/layout modes represented?
-- content reflows instead of merely shrinking?
-- no unsupported assumptions?
+### QA-05 Content QA
+- terminology consistent
+- CTA/action labels clear
+- error/empty/loading/success content valid
+- no placeholder-only labels
+- realistic wrapping/truncation checked
 
-### Gate F — Visual fidelity
+### QA-06 Visual Quality
 - hierarchy
-- geometry
-- section order
+- composition
+- alignment
 - spacing rhythm
+- proportion
 - typography
-- color
-- component family
+- color/surface
+- iconography
 - density
-- edge polish
+- state polish
+- edge quality
 
-### Gate G — Scope
-- requested change complete?
-- unrelated areas unchanged for ADAPT?
-- no extra invented modules in REPRODUCE?
+### QA-07 Structural QA
+- Auto Layout/constraints stable
+- no accidental absolute positioning
+- no overlap/clipping/overflow
+- repeated patterns remain structurally consistent
+- layer/component organization remains usable
 
-## Result
-- PASS: all required gates pass and evidence exists.
-- PASS_WITH_P2: only minor polish remains and does not affect fidelity/usability.
-- FAIL: P0/P1 defect or required evidence missing.
-- BLOCKED: cannot verify due to missing reference/tool/evidence.
+### QA-08 Scope Integrity
+- requested change complete
+- unrelated areas unchanged for ADAPT
+- no invented modules in REPRODUCE
+- no hidden scope expansion
 
-Never report PASS from visual impression alone.
+## Gate status
+Every gate is one of:
+- PASS
+- FAIL
+- BLOCKED
+- NOT_APPLICABLE
+
+## Final result
+- PASS — every required blocking gate is PASS; NOT_APPLICABLE is justified.
+- FAIL — one or more required gates fail.
+- BLOCKED — required evidence, authority, tool capability or business rule prevents safe verification.
+
+P2 polish may be recorded as a non-blocking note; it does not create a separate final result.
+
+## Fix behavior
+For CREATE/MODIFY with write authorization:
+- P0/P1 FAIL enters Fix Loop.
+- Re-run failed and dependent gates.
+- Do not complete while a safely fixable blocking failure remains.
+
+For QA-only/read-only tasks:
+- report FAIL with required action; do not mutate Figma without separate write authorization.
+
+## Required evidence
+Use the Evidence Matrix schema. Never report PASS from visual impression alone.

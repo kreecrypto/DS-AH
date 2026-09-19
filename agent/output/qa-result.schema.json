@@ -1,56 +1,47 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "agent/output/qa-result.schema.json",
-  "title": "Design Agent v1 QA Result",
+  "title": "Design Agent QA Result v2",
   "type": "object",
-  "required": [
-    "result",
-    "checks",
-    "gaps"
-  ],
+  "required": ["result", "checks", "evidenceMatrix", "gaps"],
   "properties": {
     "result": {
-      "enum": [
-        "PASS",
-        "PASS_WITH_GAPS",
-        "FAIL"
-      ]
+      "enum": ["PASS", "FAIL", "BLOCKED"]
     },
     "checks": {
       "type": "object",
+      "required": [
+        "referenceFidelity",
+        "designSystem",
+        "interactionStates",
+        "responsiveAccessibility",
+        "content",
+        "visualQuality",
+        "structural",
+        "scopeIntegrity"
+      ],
       "properties": {
-        "source": {
-          "type": "boolean"
-        },
-        "reuse": {
-          "type": "boolean"
-        },
-        "naming": {
-          "type": "boolean"
-        },
-        "responsive": {
-          "type": "boolean"
-        },
-        "states": {
-          "type": "boolean"
-        },
-        "visual": {
-          "type": "boolean"
-        },
-        "content": {
-          "type": "boolean"
-        },
-        "accessibility": {
-          "type": "boolean"
-        }
+        "referenceFidelity": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "designSystem": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "interactionStates": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "responsiveAccessibility": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "content": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "visualQuality": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "structural": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]},
+        "scopeIntegrity": {"enum": ["PASS", "FAIL", "BLOCKED", "NOT_APPLICABLE"]}
       },
       "additionalProperties": false
     },
+    "evidenceMatrix": {
+      "type": "object"
+    },
+    "p2Polish": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
     "gaps": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"}
     }
   },
   "additionalProperties": true

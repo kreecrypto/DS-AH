@@ -1,8 +1,8 @@
 {
   "name": "ds-ah-operating-repo",
   "private": true,
-  "version": "2.5.0",
-  "description": "AH Design System operating repository: agent knowledge base plus the AHDS documentation portal.",
+  "version": "2.4.0",
+  "description": "Design Control Agent with locked user-reference authority, visual grammar extraction, DS mapping, skeleton fidelity checkpoints, split reference QA, and AHDS documentation portal.",
   "type": "module",
   "workspaces": ["apps/docs"],
   "scripts": {

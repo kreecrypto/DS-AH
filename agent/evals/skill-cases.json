@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {
+      "id": "skill-create",
+      "command": "CREATE_SCREEN",
+      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"]
+    },
+    {
+      "id": "skill-modify",
+      "command": "MODIFY_SCREEN",
+      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"]
+    },
+    {
+      "id": "skill-review",
+      "command": "REVIEW",
+      "mustInclude": ["figma-inspect", "ux-review", "visual-quality", "design-system-compliance"]
+    },
+    {
+      "id": "skill-qa",
+      "command": "QA",
+      "mustInclude": ["figma-inspect", "design-system-compliance", "visual-quality", "design-qa"]
+    }
+  ]
+}

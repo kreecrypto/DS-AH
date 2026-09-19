@@ -14,11 +14,22 @@ const required=[
   'agent/decisions/create-vs-reuse.md',
   'agent/decisions/reference-resolution.md',
   'agent/reference-router.json',
+  'agent/skill-router.json',
   'agent/output/execution.schema.json',
   'agent/output/decision-log.schema.json',
   'agent/output/qa-result.schema.json',
   'agent/evals/cases.json',
-  'agent/evals/reference-cases.json'
+  'agent/evals/reference-cases.json',
+  'agent/evals/skill-cases.json',
+  'skills/README.md',
+  'skills/core/figma-inspect/SKILL.md',
+  'skills/core/design-system-compliance/SKILL.md',
+  'skills/core/visual-quality/SKILL.md',
+  'skills/core/ux-review/SKILL.md',
+  'skills/core/figma-execution/SKILL.md',
+  'skills/core/design-qa/SKILL.md',
+  'skills/core/responsive-accessibility/SKILL.md',
+  'skills/core/developer-handoff/SKILL.md'
 ];
 
 let failed=false;
@@ -69,7 +80,6 @@ for(const name of ['INSPECT','REVIEW','QA','HANDOFF','COMPONENT','CREATE_SCREEN'
   }
 }
 
-
 const referenceRouter=parsed['agent/reference-router.json'];
 if(!referenceRouter?.families?.agencyDashboard){
   console.error('MISSING AGENCY DASHBOARD REFERENCE FAMILY');
@@ -79,6 +89,25 @@ if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFE
   console.error('GENERIC DASHBOARD MUST BE REFERENCE-AMBIGUOUS');
   failed=true;
 }
+
+const skillRouter=parsed['agent/skill-router.json'];
+const requiredCreateSkills=['figma-inspect','design-system-compliance','visual-quality','figma-execution','design-qa'];
+for(const command of ['CREATE_SCREEN','MODIFY_SCREEN']){
+  const loaded=skillRouter?.rules?.[command]||[];
+  for(const skill of requiredCreateSkills){
+    if(!loaded.includes(skill)){
+      console.error('MISSING REQUIRED SKILL ROUTE',command,skill);
+      failed=true;
+    }
+  }
+}
+for(const [skill,rel] of Object.entries(skillRouter?.skills||{})){
+  if(!fs.existsSync(path.join(root,rel))){
+    console.error('SKILL ROUTER REFERENCES MISSING FILE',skill,rel);
+    failed=true;
+  }
+}
+
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'agent/manifest.json'),'utf8'));
 if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract'){
   console.error('GITHUB MUST REMAIN KB/OPERATING CONTRACT ONLY');
@@ -92,12 +121,23 @@ if(manifest?.architecture?.githubAgentExecution!==false){
   console.error('GITHUB AGENT EXECUTION MUST BE DISABLED');
   failed=true;
 }
+if(manifest?.agent?.skillRouter!=='agent/skill-router.json'){
+  console.error('MANIFEST MUST DECLARE SKILL ROUTER');
+  failed=true;
+}
 
 if(runtime?.invariants && !runtime.invariants.includes('reference_before_layout')){
   console.error('MISSING reference_before_layout INVARIANT');
   failed=true;
 }
 
+const visualQuality=fs.readFileSync(path.join(root,'skills/core/visual-quality/SKILL.md'),'utf8');
+for(const marker of ['Visual Quality Gate','Anti-drift protocol','Hierarchy','Spacing rhythm','Edge quality']){
+  if(!visualQuality.includes(marker)){
+    console.error('VISUAL QUALITY SKILL MISSING',marker);
+    failed=true;
+  }
+}
 
 if(failed) process.exit(1);
-console.log('Design Agent v1 validation PASS');
+console.log('Design Agent v1.2 validation PASS');

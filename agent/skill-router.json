@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "defaultPolicy": "load_minimum_required_skills",
+  "rules": {
+    "INSPECT": ["figma-inspect"],
+    "REVIEW": ["figma-inspect", "ux-review", "visual-quality", "design-system-compliance"],
+    "QA": ["figma-inspect", "design-system-compliance", "visual-quality", "design-qa"],
+    "HANDOFF": ["figma-inspect", "design-system-compliance", "developer-handoff"],
+    "COMPONENT": ["figma-inspect", "design-system-compliance", "visual-quality", "design-qa"],
+    "CREATE_SCREEN": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"],
+    "MODIFY_SCREEN": ["figma-inspect", "design-system-compliance", "visual-quality", "figma-execution", "design-qa"]
+  },
+  "conditional": {
+    "responsive_or_multi_viewport": ["responsive-accessibility"],
+    "form_or_interactive_state_work": ["responsive-accessibility"],
+    "explicit_ux_review": ["ux-review"],
+    "developer_handoff_requested": ["developer-handoff"]
+  },
+  "skills": {
+    "figma-inspect": "skills/core/figma-inspect/SKILL.md",
+    "design-system-compliance": "skills/core/design-system-compliance/SKILL.md",
+    "visual-quality": "skills/core/visual-quality/SKILL.md",
+    "ux-review": "skills/core/ux-review/SKILL.md",
+    "figma-execution": "skills/core/figma-execution/SKILL.md",
+    "design-qa": "skills/core/design-qa/SKILL.md",
+    "responsive-accessibility": "skills/core/responsive-accessibility/SKILL.md",
+    "developer-handoff": "skills/core/developer-handoff/SKILL.md"
+  },
+  "invariants": [
+    "skills_do_not_grant_figma_write_permission",
+    "product_evidence_overrides_generic_skill_assumptions",
+    "load_only_task_relevant_skills",
+    "create_modify_require_visual_quality_and_design_qa"
+  ]
+}

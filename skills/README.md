@@ -1,75 +1,77 @@
-# DS-AH Production Skill System
+# DS-AH Production Skill System v2.2
 
-The `skills/` directory is the reusable capability layer for Design Agent v2.0.
+The `skills/` directory is the professional capability layer for **Design Control Agent v2.2**.
 
-## Architecture
+Skills define **how** a professional design decision/check is performed.  
+Registries, approved references and live Figma define **what is true**.  
+The Control Agent defines **when** a skill runs and whether execution is authorized.
 
-System Contract
-→ Intent/Product/Reference Routing
-→ Skill Router
-→ Task Pipeline
-→ Product Evidence / Live Figma
-→ Execution
-→ QA / Regression
-→ Fix Loop
-→ Evidence
+## Production contract
 
-Skills define **how** to work.
-Registries, approved references and live Figma define **what is true**.
+All primary skills follow:
+- `skills/SKILL-CONTRACT.md`
 
-## Core skills
+Depth is machine-checked by:
+- `agent/evals/skill-depth-cases.json`
+- `scripts/run-skill-depth-evals.mjs`
 
-### Inspection and authority
-- `figma-inspect`
-- `reference-source-resolution`
-- `reference-fidelity`
+## 13 primary production skills
+
+### Evidence and authority
+1. `figma-inspect`
+2. `reference-source-resolution`
 
 ### UX structure and behavior
-- `information-architecture`
-- `interaction-design`
-- `ux-writing-content`
+3. `information-architecture`
+4. `interaction-design`
+5. `ux-writing-content`
+
+### System and visual quality
+6. `design-system-compliance`
+7. `visual-quality`
+8. `responsive-accessibility`
+
+### Controlled execution and verification
+9. `figma-execution`
+10. `design-qa`
+11. `visual-regression`
+12. `fix-loop`
+13. `evidence`
+
+## Supporting skills
+
+- `reference-fidelity`
 - `ux-review`
-
-### System and visual
-- `design-system-compliance`
-- `visual-quality`
-- `responsive-accessibility`
-
-### Execution and verification
-- `figma-execution`
-- `design-qa`
-- `visual-regression`
-- `fix-loop`
-- `evidence`
 - `developer-handoff`
 
-## Skill contract
+## Required skill anatomy
 
-Every production skill must define:
-- purpose
-- trigger
+Every production skill must be detailed enough to produce repeatable decisions and must define:
+- Mission
+- activation conditions
 - required inputs
-- procedure/checks
-- hard rules
-- gate/result semantics
-- evidence
-- block/fail behavior where applicable
+- procedure/model
+- decision rules
+- gate/result or stop semantics where applicable
+- block conditions
+- anti-patterns
+- required evidence
+- downstream handoff
 
-A skill cannot grant Figma write permission.
+## Global invariants
 
-## Unified result semantics
-
-Final QA-oriented status:
-- PASS
-- FAIL
-- BLOCKED
-
-Gate-level status may also use NOT_APPLICABLE.
-
-Do not introduce PASS_WITH_GAPS/PASS_WITH_P2 as final states. Record non-blocking P2 polish separately.
+- Skills never grant Figma write permission.
+- Product/reference evidence overrides generic convention.
+- UNKNOWN is not PASS.
+- REPRODUCE/ADAPT fidelity outranks personal taste.
+- No skill silently expands Change Scope.
+- Tool-call success is not design verification.
+- P0/P1 is blocking; P2 is polish.
+- Final QA state is PASS / FAIL / BLOCKED.
 
 ## Flow ownership
 
-`agent/skill-router.json` is the machine-readable mapping.
-`agent/workflows/` defines sequence.
-`agent/output/evidence-matrix.schema.json` defines auditable QA evidence.
+`agent/skill-router.json` maps commands to skills.  
+`agent/workflows/` defines orchestration sequence.  
+`agent/gates/quality-gates.json` defines QA gates.  
+`agent/output/evidence-matrix.schema.json` defines auditable evidence.

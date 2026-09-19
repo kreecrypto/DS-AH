@@ -1,0 +1,72 @@
+{
+  "schemaVersion":"1.0.0",
+  "minimumVersion":"2.2.0",
+  "minimumNonEmptyLines":75,
+  "skills":[
+    {
+      "id":"figma-inspect",
+      "path":"skills/core/figma-inspect/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Deterministic procedure","## Block conditions","## Anti-patterns","## Required output","## Downstream handoff"]
+    },
+    {
+      "id":"reference-source-resolution",
+      "path":"skills/core/reference-source-resolution/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Build Mode resolution","## Reference Gate","## Block conditions","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"information-architecture",
+      "path":"skills/core/information-architecture/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Procedure","## IA Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"interaction-design",
+      "path":"skills/core/interaction-design/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## State model","## Transition model","## Interaction Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"design-system-compliance",
+      "path":"skills/core/design-system-compliance/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Reuse decision tree","## Compliance Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"ux-writing-content",
+      "path":"skills/core/ux-writing-content/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Procedure","## Content QA Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"visual-quality",
+      "path":"skills/core/visual-quality/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Visual grammar extraction","## Visual Quality Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"responsive-accessibility",
+      "path":"skills/core/responsive-accessibility/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Responsive procedure","## Accessibility dimensions","## Gate","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"figma-execution",
+      "path":"skills/core/figma-execution/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required preconditions","## Execution planning","## Safety checkpoints","## Mutation verification","## Anti-patterns","## Required output evidence","## Downstream handoff"]
+    },
+    {
+      "id":"design-qa",
+      "path":"skills/core/design-qa/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Gate map","## Final result calculation","## QA procedure","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"visual-regression",
+      "path":"skills/core/visual-regression/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Comparison dimensions","## Difference classification","## Result","## Anti-patterns","## Required evidence","## Downstream handoff"]
+    },
+    {
+      "id":"fix-loop",
+      "path":"skills/core/fix-loop/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Required inputs","## Root-cause classification","## Fixability classification","## Iteration procedure","## Stop conditions","## Anti-patterns","## Required output","## Downstream handoff"]
+    },
+    {
+      "id":"evidence",
+      "path":"skills/core/evidence/SKILL.md",
+      "requiredMarkers":["## Mission","## Activate when","## Evidence quality levels","## Evidence provenance","## Required execution envelope","## Final result rules","## Anti-patterns","## Required output","## Downstream handoff"]
+    }
+  ]
+}

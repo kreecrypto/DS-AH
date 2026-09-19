@@ -1,11 +1,22 @@
-# Design Agent Skill System v2
+# Design Control Agent Skill System v2.2
 
 Status: Active
 
 ## Goal
-Make Design Agent execution deterministic, auditable and resistant to design drift.
+
+Make Figma design work deterministic, auditable, resistant to drift, and detailed enough that separate agent runs given the same evidence make materially consistent decisions.
+
+## Model
+
+**Agent = control/orchestration**  
+**Skill = professional capability**  
+**Workflow = sequence**  
+**Registry/Reference = truth**  
+**Gate = completion rule**  
+**Evidence = audit trail**
 
 ## CREATE / MODIFY
+
 Figma Inspect
 → Reference / Source Resolution
 → Information Architecture
@@ -18,10 +29,11 @@ Figma Inspect
 → Design QA
 → Reference Fidelity
 → Visual Regression
-→ Fix Loop when needed
+→ Fix Loop
 → Evidence
 
 ## REVIEW
+
 Figma Inspect
 → UX Review
 → Information Architecture
@@ -34,38 +46,42 @@ Figma Inspect
 → Evidence
 
 ## QA
+
 Figma Inspect
 → Reference Fidelity
 → Design System Compliance
+→ Information Architecture
 → Interaction / States
 → Responsive & Accessibility
 → Content QA
 → Visual Quality
 → Structural QA
 → Scope Integrity
+→ Visual Regression when applicable
 → Evidence Matrix
 → PASS / FAIL / BLOCKED
 
-## Why skills and workflows are separate
-- Skill = professional capability and gate rules.
-- Workflow = order and orchestration.
-- Registry = verified product evidence.
-- Schema = machine-checkable output contract.
-- Eval = regression coverage for agent behavior.
+## Skill depth contract
+
+The primary 13 skills follow `skills/SKILL-CONTRACT.md`.
+
+Each must contain observable professional checks rather than generic instructions. Minimum structure/depth is validated by `scripts/run-skill-depth-evals.mjs`.
 
 ## Evidence-first rule
-Every QA claim must map to evidence.
-Unknown is never PASS.
+
+Every material PASS claim maps to direct or comparative evidence appropriate to the task.
+UNKNOWN is never PASS.
 Missing authority/tool/evidence produces BLOCKED when safe verification cannot continue.
 
 ## Fix Loop
-For authorized CREATE/MODIFY work, fixable P0/P1 failures must loop back into correction and re-verification instead of ending the task prematurely.
+
+Authorized CREATE/MODIFY P0/P1 failures are corrected at root cause, verified, re-tested across dependent gates, and regression-checked before completion.
 
 ## Versioning
-A behavior change must update:
-1. affected Skill version
-2. skill router when routing changes
-3. workflow when sequence changes
-4. schema when output semantics change
-5. eval cases
-6. validator expectations
+
+Behavior changes update:
+1. Skill version
+2. Skill router/system version when orchestration expectations change
+3. workflow/schema where affected
+4. eval cases
+5. validator expectations

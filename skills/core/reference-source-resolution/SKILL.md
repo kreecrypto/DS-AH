@@ -1,55 +1,157 @@
 ---
 id: reference-source-resolution
-version: 1.0.0
+version: 2.2.0
 scope: core
+category: authority-resolution
 ---
 
 # Reference / Source Resolution Skill
 
-## Purpose
-Resolve the exact design authority before analysis, review, QA, or mutation.
+## Mission
+Resolve which design source has authority for the current task, what Build Mode applies, and whether design work may proceed without source ambiguity.
 
-## Trigger
-Mandatory for CREATE_SCREEN, MODIFY_SCREEN and QA. Use for REVIEW when source authority affects the finding.
+This skill controls design authority. It does not grant Figma write permission.
+
+## Activate when
+Mandatory for CREATE_SCREEN and MODIFY_SCREEN.
+Use for QA whenever fidelity/system correctness depends on a reference.
+Use for REVIEW when source authority is disputed or affects findings.
+Use for COMPONENT when ownership/canonical source is uncertain.
 
 ## Required inputs
 - user request
-- target Figma file/node when supplied
-- resolved product/domain
-- reference router and source-priority policy
-- available Master/domain/Core evidence
+- product/domain
+- target file/node
+- live Figma inspection evidence
+- reference router
+- source-priority policy
+- master/domain/Core registries
 
-## Procedure
-1. Parse whether the user supplied an exact approved reference.
-2. Resolve product/domain and candidate approved Masters.
-3. Classify candidates as current/approved, domain pattern, Core, legacy, archive, screenshot/reference-only, or exploratory.
-4. Resolve Build Mode: REPRODUCE, ADAPT, or EXPLORE.
-5. Select the highest-authority source according to repository policy.
-6. Record exact fileKey/nodeId/name/classification.
-7. Detect ambiguity before any Figma mutation.
-8. Verify that the live inspected node still matches the recorded authority.
-9. Produce a Reference Gate result.
+## Source classes
+Classify each candidate as exactly one primary class:
+1. EXACT_USER_APPROVED_REFERENCE
+2. CURRENT_PRODUCT_MASTER
+3. APPROVED_DOMAIN_PATTERN
+4. CORE_DESIGN_SYSTEM
+5. CURRENT_EXISTING_TARGET
+6. LEGACY
+7. ARCHIVE
+8. REFERENCE_ONLY
+9. EXPERIMENTAL
+10. UNKNOWN
+
+A source may be visually useful without having authority.
+
+## Authority order
+Unless a product policy explicitly overrides it:
+1. exact user-approved reference
+2. approved/current Product Master
+3. approved domain pattern
+4. Core DS component/foundation
+5. existing target for preservation evidence
+6. legacy/archive/reference-only for historical context only
+
+Visual similarity never overrides authority.
+
+## Build Mode resolution
+
+### REPRODUCE
+Use when:
+- a matching approved reference exists
+- user asks to build/create the known screen/pattern
+- no bounded change is requested
+
+### ADAPT
+Use when:
+- approved baseline exists
+- user requests a bounded change
+- surrounding design should remain stable
+
+### EXPLORE
+Use only when:
+- user explicitly requests concept/new direction/from scratch
+- or source policy explicitly permits exploration
+
+"New file", "new page", "test agent", "make dashboard" do not imply EXPLORE.
+
+## Candidate-resolution procedure
+1. Parse explicit reference mentions.
+2. Resolve target product/domain.
+3. Build a candidate list from exact references, Masters, domain registry, Core DS, and existing target.
+4. Inspect exact candidates live when needed.
+5. Classify each candidate.
+6. Eliminate candidates that are archive/legacy/reference-only from primary authority.
+7. Check whether multiple current/approved candidates satisfy the same task.
+8. Resolve Build Mode.
+9. Select authority or declare ambiguity.
+10. Record why rejected candidates were not chosen.
 
 ## Reference Gate
-- PASS — exact approved authority resolved.
-- EXPLORE_EXPLICIT — user explicitly authorized from-scratch/exploration.
-- BLOCKED_REFERENCE_AMBIGUOUS — multiple equally valid approved sources remain.
-- BLOCKED_REFERENCE_MISSING — no approved source can be proven and exploration was not authorized.
 
-## Hard rules
-- A blank/new target file is never a design reference.
-- Same screen name does not prove same authority.
-- Legacy/archive/reference-only material cannot outrank an approved/current Master.
-- Do not merge modules from different candidate Masters to bypass ambiguity.
-- Do not fabricate authority from visual similarity.
+### PASS
+Use when:
+- one authoritative source is resolved
+- file/node identity is known
+- source classification is acceptable
+- no equal-authority ambiguity remains
 
-## Evidence
-- buildMode
-- referenceGate
-- exact reference source
-- candidate sources considered
-- source authority rationale
-- unresolved ambiguity/gaps
+### EXPLORE_EXPLICIT
+Use when:
+- user explicitly authorizes exploration
+- exploration scope is understood
+- existing DS/foundation constraints remain known
+
+### BLOCKED_REFERENCE_AMBIGUOUS
+Use when:
+- two or more plausible approved/current references remain
+- choosing one would materially affect layout, behavior, or fidelity
+- user/source policy has not resolved the conflict
+
+### BLOCKED_REFERENCE_MISSING
+Use when:
+- reference-based work is requested
+- no approved source can be verified
+- exploration is not explicitly authorized
+
+## Conflict rules
+When sources disagree:
+- exact approved user reference beats generic Master only for the current task
+- current Master beats legacy
+- domain pattern beats a visually similar unrelated product pattern
+- Core DS defines primitives; Product Master defines composition/context
+- existing target is preservation evidence, not automatically canonical
+
+## Forbidden resolution shortcuts
+- mixing modules from different Masters to avoid ambiguity
+- using screenshot similarity as authority
+- using the newest-looking file without approval evidence
+- treating current target as source of truth because it already exists
+- treating component name as ownership proof
+- inventing a reference node from memory
 
 ## Block conditions
-Any CREATE/MODIFY mutation is blocked unless the gate is PASS or EXPLORE_EXPLICIT.
+Block mutation when:
+- gate is ambiguous/missing
+- target is unresolved
+- exact source cannot be inspected when inspection is necessary
+- reference classification conflicts with registry and cannot be reconciled
+
+## Required evidence
+- Build Mode
+- Reference Gate
+- selected source: fileKey/nodeId/name/classification
+- source authority reason
+- candidate list
+- rejected candidates + reason
+- conflicts
+- unresolved gaps
+
+## Downstream handoff
+Pass:
+- Build Mode
+- Reference Gate
+- exact authority
+- preservation baseline if ADAPT
+- approved design grammar constraints
+
+to Planner, Scope Control, IA, Interaction, DS Compliance, Execution, QA, and Regression.

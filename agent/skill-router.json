@@ -1,37 +1,123 @@
 {
-  "schemaVersion":"2.1.0",
-  "defaultPolicy":"load_flow_required_skills_then_conditionals",
-  "rules":{
-    "INSPECT":["figma-inspect"],
-    "CREATE_SCREEN":["figma-inspect","reference-source-resolution","information-architecture","interaction-design","design-system-compliance","ux-writing-content","visual-quality","responsive-accessibility","figma-execution","design-qa","reference-fidelity","visual-regression","fix-loop","evidence"],
-    "MODIFY_SCREEN":["figma-inspect","reference-source-resolution","information-architecture","interaction-design","design-system-compliance","ux-writing-content","visual-quality","responsive-accessibility","figma-execution","design-qa","reference-fidelity","visual-regression","fix-loop","evidence"],
-    "REVIEW":["figma-inspect","ux-review","information-architecture","interaction-design","ux-writing-content","responsive-accessibility","visual-quality","design-system-compliance","evidence"],
-    "QA":["figma-inspect","reference-source-resolution","reference-fidelity","design-system-compliance","information-architecture","interaction-design","responsive-accessibility","ux-writing-content","visual-quality","design-qa","visual-regression","evidence"],
-    "HANDOFF":["figma-inspect","design-system-compliance","responsive-accessibility","developer-handoff","evidence"],
-    "COMPONENT":["figma-inspect","reference-source-resolution","design-system-compliance","interaction-design","ux-writing-content","visual-quality","responsive-accessibility","design-qa","evidence"]
+  "schemaVersion": "2.2.0",
+  "defaultPolicy": "load_flow_required_skills_then_conditionals",
+  "rules": {
+    "INSPECT": [
+      "figma-inspect"
+    ],
+    "CREATE_SCREEN": [
+      "figma-inspect",
+      "reference-source-resolution",
+      "information-architecture",
+      "interaction-design",
+      "design-system-compliance",
+      "ux-writing-content",
+      "visual-quality",
+      "responsive-accessibility",
+      "figma-execution",
+      "design-qa",
+      "reference-fidelity",
+      "visual-regression",
+      "fix-loop",
+      "evidence"
+    ],
+    "MODIFY_SCREEN": [
+      "figma-inspect",
+      "reference-source-resolution",
+      "information-architecture",
+      "interaction-design",
+      "design-system-compliance",
+      "ux-writing-content",
+      "visual-quality",
+      "responsive-accessibility",
+      "figma-execution",
+      "design-qa",
+      "reference-fidelity",
+      "visual-regression",
+      "fix-loop",
+      "evidence"
+    ],
+    "REVIEW": [
+      "figma-inspect",
+      "ux-review",
+      "information-architecture",
+      "interaction-design",
+      "ux-writing-content",
+      "responsive-accessibility",
+      "visual-quality",
+      "design-system-compliance",
+      "evidence"
+    ],
+    "QA": [
+      "figma-inspect",
+      "reference-source-resolution",
+      "reference-fidelity",
+      "design-system-compliance",
+      "information-architecture",
+      "interaction-design",
+      "responsive-accessibility",
+      "ux-writing-content",
+      "visual-quality",
+      "design-qa",
+      "visual-regression",
+      "evidence"
+    ],
+    "HANDOFF": [
+      "figma-inspect",
+      "design-system-compliance",
+      "responsive-accessibility",
+      "developer-handoff",
+      "evidence"
+    ],
+    "COMPONENT": [
+      "figma-inspect",
+      "reference-source-resolution",
+      "design-system-compliance",
+      "interaction-design",
+      "ux-writing-content",
+      "visual-quality",
+      "responsive-accessibility",
+      "design-qa",
+      "evidence"
+    ]
   },
-  "conditional":{
-    "create_modify_if_qa_fails":["fix-loop"],
-    "prototype_or_complex_state_work":["interaction-design"],
-    "developer_handoff_requested":["developer-handoff"]
+  "conditional": {
+    "create_modify_if_qa_fails": [
+      "fix-loop"
+    ],
+    "prototype_or_complex_state_work": [
+      "interaction-design"
+    ],
+    "developer_handoff_requested": [
+      "developer-handoff"
+    ]
   },
-  "skills":{
-    "figma-inspect":"skills/core/figma-inspect/SKILL.md",
-    "reference-source-resolution":"skills/core/reference-source-resolution/SKILL.md",
-    "information-architecture":"skills/core/information-architecture/SKILL.md",
-    "interaction-design":"skills/core/interaction-design/SKILL.md",
-    "design-system-compliance":"skills/core/design-system-compliance/SKILL.md",
-    "ux-writing-content":"skills/core/ux-writing-content/SKILL.md",
-    "visual-quality":"skills/core/visual-quality/SKILL.md",
-    "responsive-accessibility":"skills/core/responsive-accessibility/SKILL.md",
-    "figma-execution":"skills/core/figma-execution/SKILL.md",
-    "design-qa":"skills/core/design-qa/SKILL.md",
-    "reference-fidelity":"skills/core/reference-fidelity/SKILL.md",
-    "visual-regression":"skills/core/visual-regression/SKILL.md",
-    "fix-loop":"skills/core/fix-loop/SKILL.md",
-    "ux-review":"skills/core/ux-review/SKILL.md",
-    "developer-handoff":"skills/core/developer-handoff/SKILL.md",
-    "evidence":"skills/core/evidence/SKILL.md"
+  "skills": {
+    "figma-inspect": "skills/core/figma-inspect/SKILL.md",
+    "reference-source-resolution": "skills/core/reference-source-resolution/SKILL.md",
+    "information-architecture": "skills/core/information-architecture/SKILL.md",
+    "interaction-design": "skills/core/interaction-design/SKILL.md",
+    "design-system-compliance": "skills/core/design-system-compliance/SKILL.md",
+    "ux-writing-content": "skills/core/ux-writing-content/SKILL.md",
+    "visual-quality": "skills/core/visual-quality/SKILL.md",
+    "responsive-accessibility": "skills/core/responsive-accessibility/SKILL.md",
+    "figma-execution": "skills/core/figma-execution/SKILL.md",
+    "design-qa": "skills/core/design-qa/SKILL.md",
+    "reference-fidelity": "skills/core/reference-fidelity/SKILL.md",
+    "visual-regression": "skills/core/visual-regression/SKILL.md",
+    "fix-loop": "skills/core/fix-loop/SKILL.md",
+    "ux-review": "skills/core/ux-review/SKILL.md",
+    "developer-handoff": "skills/core/developer-handoff/SKILL.md",
+    "evidence": "skills/core/evidence/SKILL.md"
   },
-  "invariants":["skills_do_not_grant_figma_write_permission","product_evidence_overrides_generic_skill_assumptions","create_modify_follow_full_quality_pipeline","review_is_read_only_unless_rerouted_to_modify","qa_is_read_only_unless_part_of_authorized_write_task","qa_result_is_pass_fail_or_blocked","no_pass_without_evidence","p0_p1_failures_enter_fix_loop_when_write_is_authorized"]
+  "invariants": [
+    "skills_do_not_grant_figma_write_permission",
+    "product_evidence_overrides_generic_skill_assumptions",
+    "create_modify_follow_full_quality_pipeline",
+    "review_is_read_only_unless_rerouted_to_modify",
+    "qa_is_read_only_unless_part_of_authorized_write_task",
+    "qa_result_is_pass_fail_or_blocked",
+    "no_pass_without_evidence",
+    "p0_p1_failures_enter_fix_loop_when_write_is_authorized"
+  ]
 }

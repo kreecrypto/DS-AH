@@ -1,56 +1,194 @@
 ---
 id: interaction-design
-version: 1.0.0
+version: 2.2.0
 scope: core
+category: ux-behavior
 ---
 
 # Interaction Design Skill
 
-## Purpose
-Define and review behavior, state transitions and user control before visual execution.
+## Mission
+Define and verify how controls, states, transitions, validation, recovery, and feedback behave so the user can predict the result of every material action.
 
-## Trigger
-Mandatory for CREATE/MODIFY/REVIEW/QA when the screen contains interactive controls, forms, modal/drawer, search/filter, navigation, tables, menus, destructive actions, asynchronous states, or prototypes.
+Interaction Design controls behavior, not visual decoration.
+
+## Activate when
+Use for CREATE/MODIFY/REVIEW/QA involving:
+- forms
+- buttons/actions
+- dropdown/menu
+- search/filter
+- table actions
+- selection
+- tabs/accordions
+- modal/drawer/popover
+- multi-step flow
+- navigation
+- async operations
+- destructive actions
+- prototype flows
 
 ## Required inputs
-- task/flow goal
-- approved interaction pattern/reference
-- visible controls and states
-- platform constraints when known
+- user/task goal
+- approved interaction/reference pattern
+- inspected controls/states
+- business rules known from evidence
+- Change Scope for MODIFY
+
+## Interaction inventory
+For every material interactive element record:
+- element
+- purpose
+- trigger
+- precondition
+- default state
+- possible states
+- outcome
+- failure/recovery
+- focus/keyboard implications when relevant
+
+## State model
+Consider as applicable:
+- default
+- hover
+- focus
+- pressed
+- selected
+- expanded/collapsed
+- disabled
+- read-only
+- loading
+- empty
+- error
+- warning
+- success
+- partial/indeterminate
+- dirty/unsaved
+
+Do not require states that are irrelevant to the control/platform.
+
+## Transition model
+For each action define:
+1. trigger
+2. guard/precondition
+3. immediate feedback
+4. transition
+5. destination/result
+6. recovery path
+7. persistence/unsaved implication when known
 
 ## Procedure
-1. Inventory interactive elements and their purpose.
-2. Define entry condition and expected outcome.
-3. Map states: default, hover, focus, pressed, selected, disabled, loading, empty, error, success as applicable.
-4. Map transitions and triggers.
-5. Check back/cancel/close behavior.
-6. Check destructive actions for confirmation/recovery.
-7. Check validation timing and error recovery.
-8. Check async loading/retry/timeout behavior when relevant.
-9. Check dropdown/modal/drawer dismissal and focus behavior.
-10. Check whether interaction causes unexpected layout shift or lost context.
-11. When prototype evidence exists, verify source-to-destination mapping.
+1. Inventory controls.
+2. Map entry condition and completion condition.
+3. Build state matrix.
+4. Build transition matrix.
+5. Check validation timing.
+6. Check destructive action safety.
+7. Check cancel/back/close semantics.
+8. Check async feedback and retry.
+9. Check overlays/dropdowns dismissal.
+10. Check focus continuity and context preservation.
+11. Check layout stability across state change.
+12. Compare with approved product/Core interaction patterns.
+13. Verify prototype links when live evidence exists.
+14. In ADAPT, keep changes inside scope.
+
+## Forms
+Verify:
+- persistent labels
+- required/optional meaning
+- validation timing appropriate to task
+- field error connected to field
+- summary/global error when needed
+- disabled vs enabled behavior explainable
+- submit prevents duplicate action
+- dirty state/cancel behavior when data loss matters
+- success confirmation is visible
+
+Do not invent validation/business constraints.
+
+## Modal / Drawer / Popover
+Verify:
+- entry trigger
+- title/purpose
+- primary/secondary actions
+- close/dismiss behavior
+- outside click / Esc only if supported by product pattern
+- destructive/data-loss warning where needed
+- return focus/context
+- overflow/scroll boundaries
+
+## Search / Filter
+Verify:
+- apply behavior (immediate vs explicit)
+- active-state visibility
+- clear/reset
+- empty results
+- loading
+- retry/error
+- persistence after navigation if evidenced
+- filter count/chips where approved
+
+## Tables / Lists
+Verify:
+- row selection vs navigation distinction
+- bulk-action eligibility
+- disabled bulk actions
+- pagination/sort/filter consequences
+- empty/loading/error states
+- action feedback
+- row-level destructive confirmation where needed
+
+## Destructive actions
+Require evidence for:
+- what is destroyed
+- whether reversible
+- confirmation need
+- consequence text
+- success/failure feedback
+
+Do not add confirmation to every destructive-looking action if approved policy says otherwise; flag uncertainty.
 
 ## Interaction Gate
-FAIL when:
-- a required state has no defined behavior
-- an action has no visible outcome
-- destructive behavior lacks required confirmation/recovery
-- cancel/back produces data loss without warning
-- interaction state is visually or semantically ambiguous
-- loading/error/retry path is missing for a relevant async action
 
-## Hard rules
-- Do not invent business rules from UI alone.
-- Do not infer unsupported transitions.
-- Prefer approved product/Core interaction patterns.
-- Preserve state geometry where possible.
-- Disabled is not a substitute for explaining unmet requirements when feedback is needed.
+### PASS
+Every material action has a clear trigger, valid state, visible outcome, and recovery path where failure is possible.
 
-## Evidence
+### FAIL
+Examples:
+- action has no observable result
+- required state missing
+- selected/disabled/error state ambiguous
+- cancel/back loses data unexpectedly
+- destructive action lacks required safeguard
+- async operation lacks loading/error/retry
+- overlay has no reliable dismissal
+- transition breaks user context
+
+### BLOCKED
+Use when behavior depends on unknown business rules and cannot be inferred from approved patterns.
+
+## Anti-patterns
+- using disabled controls as unexplained dead ends
+- relying only on color for selected/error state
+- changing geometry substantially between control states
+- adding animation to compensate for unclear behavior
+- inventing prototype destinations
+- assuming desktop hover behavior on touch interfaces
+- silently changing interaction semantics in a visual-only request
+
+## Required evidence
 - interaction inventory
 - state matrix
-- transition/trigger mapping
-- validation/recovery behavior
-- prototype/flow evidence when available
+- transition matrix
+- validation/recovery decisions
+- destructive-action handling
+- async-state coverage
+- overlay/navigation behavior
+- prototype evidence
+- scope impact
 - interaction gate result
+- unresolved rules
+
+## Downstream handoff
+Pass behavior/state requirements to UX Writing, Visual Quality, Responsive & Accessibility, Execution, QA, Handoff, and Evidence.

@@ -1,6 +1,6 @@
 # DS-AH — Design Control Agent Entry Point
 
-DS-AH is the **Knowledge Base and operating contract** for Design Control Agent v2.1.
+DS-AH is the **Knowledge Base and operating contract** for Design Control Agent v2.2.
 
 It does not independently execute Figma. ChatGPT is the runtime; Figma MCP through ChatGPT is the live inspect/write/verify layer.
 
@@ -57,3 +57,7 @@ User
 - Admin Master Screens: `rEJCvUGUfzzQ3jegheRhnr`
 
 See `agent/manifest.json` for the complete machine-readable map.
+
+## Skill loading quality
+
+Before relying on a production skill, load its full `SKILL.md`. The 13 primary skills are governed by `skills/SKILL-CONTRACT.md`; do not substitute a short summary for the full contract when the skill is active.

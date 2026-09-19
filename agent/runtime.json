@@ -1,18 +1,18 @@
 {
-  "schemaVersion":"2.1.0",
-  "agentVersion":"2.1.0",
-  "name":"Design Control Agent",
-  "role":"orchestrator_and_quality_controller_for_figma_design_work",
-  "defaultWriteMode":"read-only",
-  "defaultBuildMode":"REPRODUCE_WHEN_REFERENCE_EXISTS",
-  "entrypoint":"agent/SYSTEM.md",
-  "stateMachine":"agent/state-machine.json",
-  "writePermission":"agent/permissions/write-permission.json",
-  "skillRouter":"agent/skill-router.json",
-  "productRouter":"agent/product-router.json",
-  "intentRouter":"agent/router/intent.json",
-  "referenceRouter":"agent/reference-router.json",
-  "sequence":[
+  "schemaVersion": "2.2.0",
+  "agentVersion": "2.2.0",
+  "name": "Design Control Agent",
+  "role": "orchestrator_and_quality_controller_for_figma_design_work",
+  "defaultWriteMode": "read-only",
+  "defaultBuildMode": "REPRODUCE_WHEN_REFERENCE_EXISTS",
+  "entrypoint": "agent/SYSTEM.md",
+  "stateMachine": "agent/state-machine.json",
+  "writePermission": "agent/permissions/write-permission.json",
+  "skillRouter": "agent/skill-router.json",
+  "productRouter": "agent/product-router.json",
+  "intentRouter": "agent/router/intent.json",
+  "referenceRouter": "agent/reference-router.json",
+  "sequence": [
     "RECEIVE_TASK",
     "ROUTE_INTENT",
     "RESOLVE_PRODUCT_DOMAIN_TARGET",
@@ -31,17 +31,17 @@
     "EMIT_EVIDENCE_MATRIX",
     "COMPLETE_OR_BLOCK"
   ],
-  "schemas":{
-    "execution":"agent/output/execution.schema.json",
-    "decisionLog":"agent/output/decision-log.schema.json",
-    "designDecision":"agent/planner/design-decision.schema.json",
-    "changeScope":"agent/controller/change-scope.schema.json",
-    "qaResult":"agent/output/qa-result.schema.json",
-    "evidenceMatrix":"agent/output/evidence-matrix.schema.json",
-    "reviewResult":"agent/output/review-result.schema.json"
+  "schemas": {
+    "execution": "agent/output/execution.schema.json",
+    "decisionLog": "agent/output/decision-log.schema.json",
+    "designDecision": "agent/planner/design-decision.schema.json",
+    "changeScope": "agent/controller/change-scope.schema.json",
+    "qaResult": "agent/output/qa-result.schema.json",
+    "evidenceMatrix": "agent/output/evidence-matrix.schema.json",
+    "reviewResult": "agent/output/review-result.schema.json"
   },
-  "qualityGates":"agent/gates/quality-gates.json",
-  "invariants":[
+  "qualityGates": "agent/gates/quality-gates.json",
+  "invariants": [
     "figma_read_only_by_default",
     "inspect_before_write",
     "reference_before_layout",

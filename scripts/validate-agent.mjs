@@ -38,9 +38,13 @@ const required=[
   'agent/evals/reference-cases.json',
   'agent/evals/skill-cases.json',
   'agent/evals/control-cases.json',
+  'agent/evals/skill-depth-cases.json',
   'scripts/run-agent-evals.mjs',
   'scripts/run-fidelity-evals.mjs',
   'scripts/run-control-evals.mjs',
+  'scripts/run-skill-depth-evals.mjs',
+  'skills/SKILL-CONTRACT.md',
+  'skills/README.md',
   'policies/write-permission.md',
   'policies/scope-control.md'
 ];
@@ -64,9 +68,13 @@ const intents=json('agent/router/intent.json');
 const qa=json('agent/output/qa-result.schema.json');
 const evidence=json('agent/output/evidence-matrix.schema.json');
 const review=json('agent/output/review-result.schema.json');
+const depth=json('agent/evals/skill-depth-cases.json');
 
-if(runtime.agentVersion!=='2.1.0' || runtime.name!=='Design Control Agent') fail('RUNTIME MUST BE DESIGN CONTROL AGENT 2.1.0');
-if(manifest?.agent?.version!=='2.1.0' || manifest?.agent?.name!=='Design Control Agent') fail('MANIFEST AGENT VERSION/NAME MISMATCH');
+if(runtime.agentVersion!=='2.2.0' || runtime.name!=='Design Control Agent') fail('RUNTIME MUST BE DESIGN CONTROL AGENT 2.2.0');
+if(runtime.schemaVersion!=='2.2.0') fail('RUNTIME SCHEMA MUST BE 2.2.0');
+if(manifest?.agent?.version!=='2.2.0' || manifest?.agent?.name!=='Design Control Agent') fail('MANIFEST AGENT VERSION/NAME MISMATCH');
+if(manifest?.skillSystem?.contract!=='skills/SKILL-CONTRACT.md') fail('MANIFEST MUST DECLARE SKILL CONTRACT');
+if(manifest?.evals?.skillDepth!=='agent/evals/skill-depth-cases.json') fail('MANIFEST MUST DECLARE SKILL DEPTH EVAL');
 if(manifest?.agent?.stateMachine!=='agent/state-machine.json') fail('MANIFEST MISSING STATE MACHINE');
 if(manifest?.agent?.writePermission!=='agent/permissions/write-permission.json') fail('MANIFEST MISSING WRITE PERMISSION');
 if(runtime.defaultWriteMode!=='read-only') fail('DEFAULT WRITE MODE MUST BE read-only');
@@ -136,15 +144,56 @@ for(const name of ['core','agency','admin']){
 const referenceRouter=json('agent/reference-router.json');
 if(referenceRouter?.families?.agencyDashboard?.genericResolution!=='BLOCKED_REFERENCE_AMBIGUOUS') fail('GENERIC DASHBOARD MUST REMAIN AMBIGUOUS');
 
-for(const p of ['agent/SYSTEM.md','AGENTS.md','agent/COMMANDS.md','agent/workflows/create-screen.md','agent/workflows/modify-screen.md','agent/workflows/qa.md']){
+const parseVersion=body=>{
+  const m=body.match(/^version:\s*([0-9]+\.[0-9]+\.[0-9]+)/m);
+  return m?.[1] || null;
+};
+const gte=(a,b)=>{
+  const A=a.split('.').map(Number), B=b.split('.').map(Number);
+  for(let i=0;i<3;i++){
+    if(A[i]>B[i]) return true;
+    if(A[i]<B[i]) return false;
+  }
+  return true;
+};
+
+if((depth.skills||[]).length!==13) fail('SKILL DEPTH SPEC MUST COVER 13 PRIMARY SKILLS');
+
+for(const spec of depth.skills||[]){
+  if(!fs.existsSync(path.join(root,spec.path))){
+    fail('DEPTH SKILL FILE MISSING',spec.id,spec.path);
+    continue;
+  }
+  const body=read(spec.path);
+  const version=parseVersion(body);
+  if(!version || !gte(version,depth.minimumVersion)) fail('SKILL VERSION TOO OLD',spec.id,version,depth.minimumVersion);
+  const nonEmpty=body.split('\n').filter(x=>x.trim().length>0).length;
+  if(nonEmpty<depth.minimumNonEmptyLines) fail('SKILL TOO SHALLOW',spec.id,nonEmpty,depth.minimumNonEmptyLines);
+  for(const marker of spec.requiredMarkers||[]){
+    if(!body.includes(marker)) fail('SKILL CONTRACT MARKER MISSING',spec.id,marker);
+  }
+  for(const forbidden of ['PASS_WITH_GAPS','PASS_WITH_P2']){
+    if(body.includes(forbidden)) fail('DEPRECATED RESULT STATE IN SKILL',spec.id,forbidden);
+  }
+}
+
+const skillContract=read('skills/SKILL-CONTRACT.md');
+for(const marker of ['Mission','Activate when','Required inputs','Anti-patterns','Required evidence','Downstream handoff']){
+  if(!skillContract.includes(marker)) fail('SKILL CONTRACT MISSING PRINCIPLE',marker);
+}
+
+for(const p of ['agent/SYSTEM.md','AGENTS.md','agent/COMMANDS.md','agent/workflows/create-screen.md','agent/workflows/modify-screen.md','agent/workflows/qa.md','skills/README.md']){
   const body=read(p);
   if(body.includes('PASS_WITH_GAPS')) fail('DEPRECATED FINAL STATE',p);
   if(body.includes('Design Agent v1')) fail('STALE V1 CONTRACT',p);
 }
+
+if(!read('agent/SYSTEM.md').includes('Production Skill Contract')) fail('SYSTEM MUST DECLARE PRODUCTION SKILL CONTRACT');
+if(!read('AGENTS.md').includes('Skill loading quality')) fail('AGENTS ENTRYPOINT MUST DECLARE FULL SKILL LOADING');
 
 if(manifest?.architecture?.repositoryRole!=='knowledge_base_and_operating_contract') fail('GITHUB ROLE MUST REMAIN KB/CONTRACT');
 if(manifest?.architecture?.runtimeHost!=='chatgpt' || manifest?.architecture?.figmaExecution!=='mcp_via_chatgpt') fail('RUNTIME ARCHITECTURE MISMATCH');
 if(manifest?.architecture?.githubAgentExecution!==false) fail('GITHUB AGENT EXECUTION MUST REMAIN DISABLED');
 
 if(failed) process.exit(1);
-console.log('Design Control Agent v2.1 validation PASS');
+console.log('Design Control Agent v2.2 validation PASS');

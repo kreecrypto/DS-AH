@@ -1,142 +1,271 @@
 ---
 id: visual-quality
-version: 1.0.0
+version: 2.2.0
 scope: core
+category: visual-direction
 ---
 
 # Visual Quality Skill
 
-## Purpose
-Produce UI that is visually coherent, deliberate, polished and faithful to the approved design language. This skill controls aesthetic quality without inventing a new visual language.
+## Mission
+Produce and verify UI that is visually coherent, intentional, polished, and faithful to the approved product language without introducing subjective redesign outside scope.
 
-## Trigger
-Mandatory for CREATE, MODIFY, REVIEW and visual QA.
+For REPRODUCE/ADAPT:
+**fidelity and system consistency outrank personal taste.**
 
-## Core principle
-**Beauty is controlled visual hierarchy + proportion + rhythm + alignment + typography + restraint + consistency + detail quality.**
+## Activate when
+Mandatory for CREATE_SCREEN, MODIFY_SCREEN, REVIEW, QA, and any task where visual quality is explicitly discussed.
 
-For REPRODUCE/ADAPT, fidelity outranks personal taste. A "prettier" redesign that drifts from the approved Master is a failure.
+## Required inputs
+- approved reference/design grammar
+- live inspection evidence
+- DS foundations/components
+- IA/content hierarchy
+- interaction states
+- Change Scope
+- supported viewports when relevant
 
-## Visual quality dimensions
+## Visual grammar extraction
+Before changing anything, identify:
+- page shell
+- grid/alignment axes
+- density
+- spacing scale/rhythm
+- typography hierarchy
+- surface style
+- border/radius/elevation
+- icon family
+- action hierarchy
+- color hierarchy
+- repeated component geometry
+
+Record what must remain unchanged.
+
+## Quality dimensions
 
 ### 1. Hierarchy
-- One clear primary focus per section.
-- Heading, supporting text, values and actions must have distinguishable emphasis.
-- Primary CTA must not compete with secondary actions.
-- Information importance must map to visual emphasis.
+Check:
+- primary task/focus visible
+- headings/values/actions ranked correctly
+- primary CTA does not compete with secondary actions
+- important status is perceivable
+- decorative emphasis does not outrank task content
 
 ### 2. Composition
-- Use intentional grouping and whitespace.
-- Balance visual weight across the frame.
-- Avoid accidental empty zones, crowded islands and floating elements.
-- Major blocks must align to a shared grid or clear optical axis.
-- Repeated cards/rows must share geometry unless content requires an approved exception.
+Check:
+- balance of visual weight
+- intentional grouping
+- whitespace distribution
+- major block alignment
+- repeated geometry
+- no isolated/floating controls
+- no accidental dead zones
 
 ### 3. Spacing rhythm
-- Prefer system spacing tokens.
-- Repeated relationships must use repeated spacing.
-- Inner padding < gap between sibling groups < gap between major sections.
-- Avoid near-duplicate spacing values that create visual noise.
-- Check vertical rhythm from top to bottom, not component-by-component only.
+Check relationships, not individual gaps only:
+- icon ↔ label
+- label ↔ value
+- field ↔ helper/error
+- item ↔ item
+- group ↔ group
+- section ↔ section
+
+Prefer approved spacing tokens.
+Repeated relationships should repeat spacing.
 
 ### 4. Alignment
-- Text, controls, icons and content edges must align intentionally.
-- Baselines matter for compact horizontal UI.
-- Misalignment of 1–3 px is still a quality defect when visibly inconsistent.
-- Center alignment is not a substitute for hierarchy.
+Check:
+- left/right edges
+- text baselines
+- control baselines
+- icon optical alignment
+- column alignment
+- header/body alignment
+- repeated card anchors
+
+A visible 1–3 px inconsistency can be a defect in repeated structures.
 
 ### 5. Proportion
-- Component size should reflect importance and interaction needs.
-- Do not oversize cards, icons, pills or whitespace merely to look modern.
-- Maintain approved density of the product.
-- Control line length and content width.
+Check:
+- component size relative to importance
+- card padding vs content
+- icon/button size
+- line length
+- whitespace vs density
+- visual balance between label/value/action
+
+Avoid oversizing to appear "modern".
 
 ### 6. Typography
-- Use approved families/styles/tokens.
-- Limit unnecessary size/weight changes.
-- Distinguish hierarchy using a controlled combination of size, weight and color.
-- Avoid faux-bold, arbitrary letter spacing and inconsistent line-height.
-- Numeric data and labels must remain scannable.
+Verify:
+- approved family/style
+- semantic hierarchy
+- size/weight/line-height
+- line wrapping
+- numeric scanability
+- label/value contrast
+- no faux bold
+- no arbitrary tracking
 
 ### 7. Color
-- Use semantic/tokenized color where available.
-- Color must communicate hierarchy/state, not decorate randomly.
-- Maintain contrast and state distinction.
-- Avoid introducing extra accent colors not present in the system.
-- Disabled, hover, selected, warning, error and success states must remain semantically distinct.
+Verify:
+- semantic token use
+- emphasis
+- state distinction
+- contrast sanity
+- no unnecessary accent proliferation
+- error/warning/success/selected/disabled differentiation
 
-### 8. Shape and surface
-- Radius, border, elevation and dividers must follow system patterns.
-- Avoid mixing multiple visual surface styles in one screen.
-- Use elevation only when it communicates layering or interaction.
+Color must support meaning, not decorate randomly.
+
+### 8. Surface and shape
+Verify:
+- radius
+- stroke
+- divider
+- elevation
+- fill
+- container nesting
+
+Avoid mixing unrelated surface systems on one screen.
 
 ### 9. Iconography
-- Use one approved icon family/style per context.
-- Match stroke/fill, optical size and bounding box.
-- Icons must support meaning; decorative icons should not compete with content.
+Verify:
+- approved family
+- stroke/fill consistency
+- optical size
+- alignment
+- semantic meaning
+- no decorative competition
 
 ### 10. Density and scanability
-- Optimize for the product's working context.
-- Reduce decoration before reducing essential information.
-- Dense enterprise UI can still be beautiful when alignment and hierarchy are disciplined.
-- Avoid both over-compression and excessive cardification.
+For enterprise UI:
+- preserve working density
+- reduce decoration before information
+- avoid excessive cardification
+- preserve table/list scan lines
+- maintain predictable row rhythm
 
 ### 11. State polish
-Check default, hover, focus, pressed, selected, disabled, loading, empty, error and success states when relevant.
-State changes must preserve geometry where possible to avoid layout jump.
+Check relevant:
+- default
+- hover
+- focus
+- pressed
+- selected
+- disabled
+- loading
+- empty
+- error
+- success
+
+Prefer geometry stability across states.
 
 ### 12. Edge quality
-Check:
+Inspect:
 - clipping
 - overflow
-- truncation
 - awkward wrapping
 - orphan labels
-- uneven card heights
-- inconsistent dividers
+- uneven card/row height
+- inconsistent divider
 - icon/text centering
-- inconsistent corner radius
-- accidental one-off colors
-- raw values replacing variables
+- inconsistent radius
+- one-off raw color
+- overlapping focus/error states
+
+### 13. Data visualization sanity
+When charts/metrics exist, verify:
+- value hierarchy
+- label readability
+- legend clarity
+- color semantics
+- comparison baseline
+- no decorative distortion
+- no loss of important precision
+
+Do not invent chart meaning/data.
+
+### 14. Visual accessibility
+Coordinate with Responsive & Accessibility for:
+- contrast
+- focus visibility
+- non-color state cues
+- text sizing
+- target clarity
 
 ## Anti-drift protocol
-Before changing a design:
-1. identify the approved visual grammar
-2. list the elements that must remain unchanged
-3. isolate the requested change
-4. make the smallest coherent visual change
-5. compare before/after
-6. revert unrelated beautification
+Before mutation:
+1. extract approved visual grammar
+2. list protected visual properties
+3. isolate requested change
+4. define expected visual delta
+5. implement smallest coherent delta
+6. compare reference/result
+7. revert unrelated beautification
+
+## Severity
+
+### P0
+- task hierarchy unusable
+- severe overlap/clipping
+- unreadable critical content
+- wrong component family/source
+- material out-of-scope reference drift
+- critical state visually indistinguishable
+
+### P1
+- repeated spacing/alignment inconsistency
+- wrong typography hierarchy
+- product density drift
+- broken responsive composition
+- ambiguous selected/disabled/error state
+- material icon/surface inconsistency
+
+### P2
+- minor optical correction
+- small rhythm inconsistency
+- non-blocking decorative polish
 
 ## Visual Quality Gate
-A result cannot PASS when any P0/P1 defect exists.
 
-P0:
-- broken hierarchy that prevents task understanding
-- severe overlap/clipping
-- unreadable contrast
-- wrong component family/source
-- material deviation from approved reference outside requested scope
+### PASS
+- no P0/P1
+- approved visual grammar preserved
+- requested visual delta is coherent
+- repeated patterns are consistent
+- relevant states/viewports are visually stable
 
-P1:
-- inconsistent spacing/alignment across repeated patterns
-- wrong typography hierarchy
-- density materially inconsistent with product
-- broken responsive composition
-- selected/disabled/error states visually ambiguous
+### FAIL
+Any unresolved P0/P1.
 
-P2:
-- minor optical alignment
-- small rhythm inconsistencies
-- decorative polish
+### BLOCKED
+Use when comparable visual evidence or authoritative visual grammar cannot be established.
+
+## Anti-patterns
+- redesigning unrelated areas to make screen prettier
+- introducing new shadows/radii/colors without system evidence
+- adding cards around every section
+- increasing whitespace at cost of working density
+- changing typography hierarchy globally for one local issue
+- using visual polish to hide IA/interaction problems
+- screenshot matching via raw overrides that break DS
 
 ## Required evidence
-- reference used
-- visual grammar preserved
-- hierarchy result
-- spacing/alignment result
-- typography/color result
-- density result
-- state result
-- edge-quality result
-- remaining P2 polish, if any
+- reference/visual grammar
+- protected visual properties
+- hierarchy
+- composition
+- spacing/alignment
+- typography
+- color/surface
+- iconography
+- density
+- state polish
+- edge quality
+- visual accessibility observations
+- P0/P1/P2 list
+- visual gate result
+
+## Downstream handoff
+Pass visual constraints/deltas to Execution, QA, Regression, Fix Loop, and Evidence.

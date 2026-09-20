@@ -1,0 +1,363 @@
+{
+  "7733f8-button": {
+    "headings": [
+      {
+        "label": "Overview",
+        "level": 2
+      },
+      {
+        "label": "Usage",
+        "level": 2
+      },
+      {
+        "label": "Button vs. Link",
+        "level": 3
+      },
+      {
+        "label": "Best Practices",
+        "level": 3
+      },
+      {
+        "label": "When Not to Use",
+        "level": 3
+      },
+      {
+        "label": "Types",
+        "level": 2
+      },
+      {
+        "label": "Brand",
+        "level": 3
+      },
+      {
+        "label": "Neutral",
+        "level": 3
+      },
+      {
+        "label": "Base",
+        "level": 3
+      },
+      {
+        "label": "Brand Outline",
+        "level": 3
+      },
+      {
+        "label": "Destructive",
+        "level": 3
+      },
+      {
+        "label": "Destructive Text",
+        "level": 3
+      },
+      {
+        "label": "Success",
+        "level": 3
+      },
+      {
+        "label": "Stateful and Dual Stateful Buttons",
+        "level": 3
+      },
+      {
+        "label": "Inverse",
+        "level": 3
+      },
+      {
+        "label": "Appearance",
+        "level": 2
+      },
+      {
+        "label": "Anatomy",
+        "level": 3
+      },
+      {
+        "label": "Size",
+        "level": 3
+      },
+      {
+        "label": "Layout",
+        "level": 3
+      },
+      {
+        "label": "UI Content",
+        "level": 3
+      },
+      {
+        "label": "Behaviors",
+        "level": 2
+      },
+      {
+        "label": "States",
+        "level": 3
+      },
+      {
+        "label": "Loading",
+        "level": 3
+      },
+      {
+        "label": "Responsive",
+        "level": 3
+      },
+      {
+        "label": "Related Components",
+        "level": 2
+      }
+    ],
+    "tabs": [
+      {
+        "label": "Usage",
+        "source": "/2e1ef8501/p/7733f8-button/b/39205c"
+      },
+      {
+        "label": "Develop",
+        "source": "/2e1ef8501/p/7733f8-button/b/09e06c"
+      },
+      {
+        "label": "Specifications",
+        "source": "/2e1ef8501/p/7733f8-button/b/02ad1e"
+      },
+      {
+        "label": "Accessibility",
+        "source": "/2e1ef8501/p/7733f8-button/b/74d5d4"
+      }
+    ]
+  },
+  "7733f8-button/b/09e06c": {
+    "headings": [
+      {
+        "label": "Examples",
+        "level": 2
+      },
+      {
+        "label": "Base",
+        "level": 3
+      },
+      {
+        "label": "Neutral",
+        "level": 3
+      },
+      {
+        "label": "Brand",
+        "level": 3
+      },
+      {
+        "label": "Inverse",
+        "level": 3
+      },
+      {
+        "label": "Destructive",
+        "level": 3
+      },
+      {
+        "label": "Destructive Text",
+        "level": 3
+      },
+      {
+        "label": "Success",
+        "level": 3
+      },
+      {
+        "label": "Stretch",
+        "level": 3
+      },
+      {
+        "label": "Full Width",
+        "level": 3
+      },
+      {
+        "label": "Stateful",
+        "level": 2
+      },
+      {
+        "label": "Text Variant",
+        "level": 3
+      },
+      {
+        "label": "Brand",
+        "level": 3
+      },
+      {
+        "label": "Neutral",
+        "level": 3
+      },
+      {
+        "label": "Inverse",
+        "level": 3
+      },
+      {
+        "label": "Destructive",
+        "level": 3
+      },
+      {
+        "label": "Success",
+        "level": 3
+      },
+      {
+        "label": "Dual Stateful",
+        "level": 2
+      },
+      {
+        "label": "Not Pressed",
+        "level": 3
+      },
+      {
+        "label": "Pressed",
+        "level": 3
+      }
+    ],
+    "tabs": [
+      {
+        "label": "Usage",
+        "source": "/2e1ef8501/p/7733f8-button/b/39205c"
+      },
+      {
+        "label": "Develop",
+        "source": "/2e1ef8501/p/7733f8-button/b/09e06c"
+      },
+      {
+        "label": "Specifications",
+        "source": "/2e1ef8501/p/7733f8-button/b/02ad1e"
+      },
+      {
+        "label": "Accessibility",
+        "source": "/2e1ef8501/p/7733f8-button/b/74d5d4"
+      }
+    ]
+  },
+  "76969d-get-started": {
+    "headings": [],
+    "tabs": []
+  },
+  "67a7b2-visual-language": {
+    "headings": [
+      {
+        "label": "The Principles That Power SLDS 2",
+        "level": 2
+      },
+      {
+        "label": "Clarity",
+        "level": 2
+      },
+      {
+        "label": "Innovation",
+        "level": 2
+      },
+      {
+        "label": "Scalability",
+        "level": 2
+      },
+      {
+        "label": "Empowerment",
+        "level": 2
+      },
+      {
+        "label": "Inspiration",
+        "level": 2
+      },
+      {
+        "label": "What You'll Find Here",
+        "level": 2
+      }
+    ],
+    "tabs": []
+  },
+  "7708aa-styling-api": {
+    "headings": [
+      {
+        "label": "Design Tokens and Styling Hooks",
+        "level": 2
+      },
+      {
+        "label": "How Design Tokens Flow Through the System",
+        "level": 3
+      },
+      {
+        "label": "Understanding the Styling API and SLDS 2 Themes",
+        "level": 2
+      },
+      {
+        "label": "Current SLDS 2 Themes",
+        "level": 3
+      },
+      {
+        "label": "The Styling API and Themes",
+        "level": 3
+      },
+      {
+        "label": "Styling Hooks",
+        "level": 2
+      },
+      {
+        "label": "Global Styling Hooks",
+        "level": 3
+      },
+      {
+        "label": "Component-level Styling Hooks (Developer Preview)",
+        "level": 3
+      },
+      {
+        "label": "Key Differences",
+        "level": 3
+      },
+      {
+        "label": "See Also",
+        "level": 3
+      }
+    ],
+    "tabs": []
+  },
+  "355656-patterns": {
+    "headings": [
+      {
+        "label": "Guiding Principles",
+        "level": 2
+      },
+      {
+        "label": "Lightning Design Patterns",
+        "level": 2
+      }
+    ],
+    "tabs": []
+  },
+  "05b46d-tools": {
+    "headings": [],
+    "tabs": []
+  },
+  "755aff-components": {
+    "headings": [
+      {
+        "label": "Component Types",
+        "level": 2
+      },
+      {
+        "label": "Lightning Base Components",
+        "level": 3
+      },
+      {
+        "label": "Component Blueprints",
+        "level": 3
+      },
+      {
+        "label": "Programming Models",
+        "level": 2
+      }
+    ],
+    "tabs": [
+      {
+        "label": "Overview",
+        "source": "/2e1ef8501/p/755aff-components/b/2474ee"
+      },
+      {
+        "label": "Lightning Base Components",
+        "source": "/2e1ef8501/p/755aff-components/b/1930c8"
+      },
+      {
+        "label": "Component Blueprints",
+        "source": "/2e1ef8501/p/755aff-components/b/459d9d"
+      },
+      {
+        "label": "Component Architecture",
+        "source": "/2e1ef8501/p/755aff-components/b/31438b"
+      }
+    ]
+  }
+}

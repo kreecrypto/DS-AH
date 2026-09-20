@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-09-20",
+    "title": "SFDS2 navigation and structural skeleton",
+    "changes": ["Mirror 459 captured navigation entries, including 312 tab entries and three non-link groups.", "Support 460 reference-derived routes with explicit pending content slots.", "Match inspected top bar, sidebar, article actions and tab layout.", "Generate CSS hooks from all 352 recorded variables and add structural regression tests."],
+    "limitations": ["Detailed content, approved artwork, licensed fonts and feedback integration remain pending.", "Navigation parity is tested; visual fidelity and all page-specific body layouts are not verified."]
+  },
+  {
+    "date": "2026-09-19",
+    "title": "Documentation structure",
+    "changes": ["Add eight navigation groups and sixty documentation routes."],
+    "limitations": ["Initial route content was scaffolded; this release did not establish visual fidelity."]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "Core registry audit",
+    "changes": ["Record 352 variables and 57 component records from Agency Portal Core DS."],
+    "limitations": ["Audit snapshot, not a live Figma sync. Candidate, legacy and unresolved statuses are retained."]
+  }
+]

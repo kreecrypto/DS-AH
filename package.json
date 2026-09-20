@@ -5,6 +5,7 @@
   "description": "Design Control Agent with locked user-reference authority, visual grammar extraction, DS mapping, skeleton fidelity checkpoints, and split reference QA.",
   "type": "module",
   "scripts": {
+    "test:web": "node --test scripts/website.test.mjs",
     "build:web": "node scripts/build-website.mjs",
     "build": "npm run build:web",
     "validate:registry": "node scripts/validate-registry.mjs",

@@ -61,7 +61,8 @@
     "coreQuickMenuStatus": "registry/core-ds-quick-menu-status.json",
     "visualBaselines": "registry/visual-baselines.json",
     "stateFlows": "registry/state-flows.json",
-    "codeConnectStatus": "registry/code-connect-status.json"
+    "codeConnectStatus": "registry/code-connect-status.json",
+    "documentationSite": "registry/documentation-site.json"
   },
   "routing": "agent/COMMANDS.md",
   "skillSystem": {
@@ -167,6 +168,8 @@
     "figmaExecution": "mcp_via_chatgpt",
     "githubAgentExecution": false,
     "githubMcpConfiguration": false,
-    "rule": "GitHub stores control contracts, state, permissions, skills, policies, registries, workflows, schemas, tests and audit history. ChatGPT orchestrates and performs live Figma MCP execution."
+    "rule": "GitHub stores control contracts, state, permissions, skills, policies, registries, workflows, schemas, tests and audit history. ChatGPT orchestrates and performs live Figma MCP execution.",
+    "documentationSurface": "https://ah-design-system.kreetaphon-game.chatgpt.site",
+    "documentationRule": "Documentation website is a non-authoritative presentation layer consuming Figma Core DS through GitHub canonical mapping."
   }
-}
+}\n

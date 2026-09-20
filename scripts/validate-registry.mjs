@@ -6,6 +6,10 @@ const requiredJson = [
   'agent/manifest.json',
   'agent/gates/website-quality-gates.json',
   'agent/web/website-implementation-brief.schema.json',
+  'source/site/content-architecture.json',
+  'source/site/routes.json',
+  'source/site/content-package-contract.json',
+  'source/components/index.json',
   'registry/figma-sources.json',
   'registry/libraries.json',
   'registry/core-components.json',
@@ -153,6 +157,55 @@ for (const b of baselines?.baselines || []) {
   if (!fs.existsSync(path.join(root,b.path))) { console.error('MISSING VISUAL BASELINE', b.path); failed = true; }
 }
 if ((baselines?.baselines || []).length !== 8) { console.error('VISUAL BASELINE COUNT MUST BE 8'); failed = true; }
+
+
+const contentArchitecture = parsed['source/site/content-architecture.json'];
+const routeMap = parsed['source/site/routes.json'];
+const componentIndex = parsed['source/components/index.json'];
+
+if ((contentArchitecture?.contentGroups || []).length !== 12) {
+  console.error('WEBSITE CONTENT GROUP COUNT MUST BE 12');
+  failed = true;
+}
+
+if ((componentIndex?.packages || []).length !== 19) {
+  console.error('COMPONENT SOURCE PACKAGE INDEX COUNT MUST BE 19');
+  failed = true;
+}
+
+for (const pkg of componentIndex?.packages || []) {
+  const pkgFile = path.join(root, pkg.path);
+  if (!fs.existsSync(pkgFile)) {
+    console.error('MISSING COMPONENT SOURCE PACKAGE', pkg.path);
+    failed = true;
+    continue;
+  }
+  try {
+    const data = JSON.parse(fs.readFileSync(pkgFile, 'utf8'));
+    if (data.id !== pkg.id || data.website?.route !== pkg.route) {
+      console.error('COMPONENT PACKAGE INDEX DRIFT', pkg.id, pkg.path);
+      failed = true;
+    }
+  } catch (error) {
+    console.error('INVALID COMPONENT SOURCE PACKAGE', pkg.path, error.message);
+    failed = true;
+  }
+}
+
+const indexedRoutes = new Set((componentIndex?.packages || []).map(p => p.route));
+const mappedRoutes = new Set((routeMap?.componentRoutes || []).map(p => p.route));
+for (const route of indexedRoutes) {
+  if (!mappedRoutes.has(route)) {
+    console.error('COMPONENT ROUTE MISSING FROM SITE ROUTE MAP', route);
+    failed = true;
+  }
+}
+
+if (routeMap?.source !== 'source/site/content-architecture.json') {
+  console.error('SITE ROUTE MAP MUST POINT TO CONTENT ARCHITECTURE');
+  failed = true;
+}
+
 
 if (failed) process.exit(1);
 console.log('Registry validation PASS');

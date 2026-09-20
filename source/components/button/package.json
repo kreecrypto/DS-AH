@@ -1,0 +1,2132 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "button",
+  "name": "Button",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "70:20",
+    "pageName": "Button"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+      "e3848fc5f2f88f4c117dad1d078f8188df529621"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "107:161",
+      "componentKey": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+      "figmaName": "button",
+      "variantCount": 75,
+      "figmaCurrentApi": {
+        "type": [
+          "primary",
+          "outline",
+          "ghost"
+        ],
+        "state": [
+          "default",
+          "active",
+          "hover",
+          "disabled",
+          "error"
+        ],
+        "size": [
+          "xss",
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "booleans": [
+          "left-icon",
+          "right-icon"
+        ]
+      },
+      "canonicalApi": {
+        "Style": [
+          "Primary",
+          "Outline",
+          "Ghost"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Active",
+          "Disabled",
+          "Error"
+        ],
+        "Size": [
+          "XXS",
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "131:229",
+      "componentKey": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+      "figmaName": "button icon",
+      "variantCount": 32,
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "hover",
+          "disabled",
+          "active"
+        ],
+        "size": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "type": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Disabled",
+          "Active"
+        ],
+        "Size": [
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Style": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "registryStatus": "canonical_with_case_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/button",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#button"
+      ],
+      "owners": [
+        {
+          "nodeId": "107:161",
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "name": "button",
+          "representativeId": "107:619",
+          "layout": {
+            "width": 73,
+            "height": 28,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              8,
+              4,
+              8
+            ],
+            "gap": 4,
+            "radius": 100
+          },
+          "nodes": [
+            {
+              "id": "107:619",
+              "parentId": "107:161",
+              "name": "type=primary, state=default, size=xss",
+              "type": "COMPONENT",
+              "width": 73,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "128:3440",
+              "parentId": "107:619",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 14,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "I128:3440;70:78",
+              "parentId": "128:3440",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 11.958333015441895,
+              "height": 11.958333015441895,
+              "visible": true
+            },
+            {
+              "id": "107:620",
+              "parentId": "107:619",
+              "name": "Text",
+              "type": "TEXT",
+              "width": 21,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "128:3434",
+              "parentId": "107:619",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 14,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "I128:3434;70:78",
+              "parentId": "128:3434",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 11.958333015441895,
+              "height": 11.958333015441895,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "131:229",
+          "key": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+          "name": "button icon",
+          "representativeId": "131:213",
+          "layout": {
+            "width": 24,
+            "height": 24,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "gap": 0,
+            "radius": 9999
+          },
+          "nodes": [
+            {
+              "id": "131:213",
+              "parentId": "131:229",
+              "name": "state=Default, size=xs, type=Primary",
+              "type": "COMPONENT",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "131:68",
+              "parentId": "131:213",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I131:68;70:78",
+              "parentId": "131:68",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#button"
+      ],
+      "items": [
+        "Use a button for an action and a link for navigation.",
+        "Select only actual source variants; an API axis list does not guarantee every possible combination exists."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/button/"
+      ],
+      "items": [
+        "Test activation with both Enter and Space and provide an accessible name, including icon-only actions.",
+        "Verify disabled behavior and focus placement after the action. A Figma hover state is not keyboard evidence."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#button"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:58:20",
+          "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+          "name": "padding/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:7",
+          "key": "d088854dff72e30fdd6ace730e14ecaad87f6534",
+          "name": "padding/xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55952",
+          "key": "9ea8056b343b70a5235732188ed18eebbd6bc248",
+          "name": "stroke/field/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:26",
+          "key": "5f5d52d1aaa4fe56823f9a03f36f92591a75407f",
+          "name": "gap/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55894",
+          "key": "d5c30d8775594431828f6fa632c1db4252b592d0",
+          "name": "stroke/Interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55967",
+          "key": "41a8dd400e9fdb12efc301792231f766cf27fe0f",
+          "name": "icon/interaction/primary/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.49803921580314636,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55858",
+          "key": "2ac9da70022eca2251091a11da0f7fc5913176df",
+          "name": "text/interaction/primary/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.9686274528503418,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55896",
+          "key": "bf3c44fd2ef81462e05ca7ad202eaea1d62a9a1f",
+          "name": "stroke/Interaction/primary/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.8235294222831726,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5:55762",
+          "key": "1cce4292a04d3fe4ad78c54fd4d268c145383242",
+          "name": "bg/interaction/primary/soft/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.9411764740943909,
+              "g": 0.9647058844566345,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55902",
+          "key": "06c6b0321c204d879860d688f2387335dbe2fe13",
+          "name": "stroke/Interaction/primary/soft/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.9686274528503418,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55961",
+          "key": "9de105cddf8fb7e742713981e7174dcec16adaae",
+          "name": "icon/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55844",
+          "key": "097bb46feff3171601c0518fbc81ce7aca68be03",
+          "name": "text/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7:55769",
+          "key": "988106e7760741617f96a5a535419149ca4fca5c",
+          "name": "icon/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55870",
+          "key": "95afda09edf82a08dae9dcce9d1cef7c49752440",
+          "name": "text/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55889",
+          "key": "fc2285006094be97cbf4d040c8183ae507099548",
+          "name": "stroke/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8509804010391235,
+              "g": 0.8509804010391235,
+              "b": 0.8509804010391235,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55918",
+          "key": "13a1c536015f5af119d704dedaee1786b49b09f8",
+          "name": "stroke/Interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55785",
+          "key": "5583a01c840d63e4ae1407717fe44061366fde20",
+          "name": "bg/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55962",
+          "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
+          "name": "icon/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55845",
+          "key": "caaa48abcdfae9be2e3e49aa4b6131285a0cd8da",
+          "name": "text/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55787",
+          "key": "3cc92f11e5a27eae47f2757b72bad17c3cfdb292",
+          "name": "bg/interaction/primary/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.8235294222831726,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55786",
+          "key": "f7ebe066235e9b84697c73279f32b373a21e8e92",
+          "name": "bg/interaction/primary/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.9686274528503418,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55895",
+          "key": "7b4c59644a6336c1debf8477bae4927d2df68c63",
+          "name": "stroke/Interaction/primary/hover",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.9686274528503418,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:61:9",
+          "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+          "name": "bg/base/disable",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15000000596046448
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55960",
+          "key": "39f8826ebe9c564c28bf499beb6eff191d2ef328",
+          "name": "icon/tertiary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55843",
+          "key": "b14346c0a4e13818d3885090eafff37fe5ca3c76",
+          "name": "text/tertiary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5:55797",
+          "key": "7385773e0e7846970635bbb5df4bf078aab34456",
+          "name": "bg/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7:55772",
+          "key": "ad2e799680d9b947af3425d64d0d83e7d2bd6a4c",
+          "name": "icon/interaction/strong/default/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55873",
+          "key": "235796c875e5537aa7aafbc58e2f9a8fe1009865",
+          "name": "text/interaction/strong/default/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:35",
+          "key": "f68cc3cb7b2bc174ed9b05f9c21184fde875ff01",
+          "name": "radius/full",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 9999
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "107:161",
+          "bindings": {
+            "VariableID:58:20": {
+              "count": 75,
+              "nodeIds": [
+                "107:162",
+                "107:574",
+                "179:2341"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 12,
+              "nodeIds": [
+                "107:162",
+                "107:357",
+                "1628:937"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 14,
+              "nodeIds": [
+                "107:162",
+                "107:357",
+                "1628:937"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 50,
+              "nodeIds": [
+                "I128:3517;70:78",
+                "I128:3499;70:78",
+                "I128:3443;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 20,
+              "nodeIds": [
+                "107:163",
+                "107:575",
+                "179:2343"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 45,
+              "nodeIds": [
+                "107:163",
+                "107:575",
+                "179:2343"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 75,
+              "nodeIds": [
+                "107:163",
+                "107:575",
+                "179:2343"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 75,
+              "nodeIds": [
+                "107:163",
+                "107:575",
+                "179:2343"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 45,
+              "nodeIds": [
+                "107:163",
+                "107:575",
+                "179:2343"
+              ]
+            },
+            "VariableID:58:26": {
+              "count": 14,
+              "nodeIds": [
+                "107:574",
+                "179:2341",
+                "107:586"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 20,
+              "nodeIds": [
+                "107:574",
+                "179:2341",
+                "107:586"
+              ]
+            },
+            "VariableID:6:55894": {
+              "count": 2,
+              "nodeIds": [
+                "107:574",
+                "179:2341"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 30,
+              "nodeIds": [
+                "107:358",
+                "1628:939",
+                "107:362"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 30,
+              "nodeIds": [
+                "107:358",
+                "1628:939",
+                "107:362"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 25,
+              "nodeIds": [
+                "107:264",
+                "107:578",
+                "179:2345"
+              ]
+            },
+            "VariableID:6:55967": {
+              "count": 10,
+              "nodeIds": [
+                "I128:3678;70:78",
+                "I105:3429;70:78",
+                "I179:2354;70:78"
+              ]
+            },
+            "VariableID:6:55858": {
+              "count": 10,
+              "nodeIds": [
+                "105:3428",
+                "179:2355",
+                "128:3691"
+              ]
+            },
+            "VariableID:6:55896": {
+              "count": 4,
+              "nodeIds": [
+                "107:586",
+                "179:2357",
+                "107:616"
+              ]
+            },
+            "VariableID:5:55762": {
+              "count": 5,
+              "nodeIds": [
+                "105:3408",
+                "179:2361",
+                "128:3685"
+              ]
+            },
+            "VariableID:6:55902": {
+              "count": 5,
+              "nodeIds": [
+                "105:3408",
+                "179:2361",
+                "128:3685"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 20,
+              "nodeIds": [
+                "I128:3768;70:78",
+                "I107:274;70:78",
+                "I128:3759;70:78"
+              ]
+            },
+            "VariableID:6:55844": {
+              "count": 10,
+              "nodeIds": [
+                "107:273",
+                "107:599",
+                "179:2367"
+              ]
+            },
+            "VariableID:7:55769": {
+              "count": 20,
+              "nodeIds": [
+                "I376:2185;70:78",
+                "I376:2187;70:78",
+                "I376:2189;70:78"
+              ]
+            },
+            "VariableID:6:55870": {
+              "count": 10,
+              "nodeIds": [
+                "376:2186",
+                "376:2190",
+                "376:2194"
+              ]
+            },
+            "VariableID:6:55889": {
+              "count": 5,
+              "nodeIds": [
+                "107:192",
+                "107:610",
+                "179:2369"
+              ]
+            },
+            "VariableID:6:55918": {
+              "count": 5,
+              "nodeIds": [
+                "376:2200",
+                "376:2204",
+                "376:2208"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 8,
+              "nodeIds": [
+                "107:204",
+                "107:399",
+                "1628:981"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 30,
+              "nodeIds": [
+                "I128:3654;70:78",
+                "I107:206;70:78",
+                "I128:3639;70:78"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 15,
+              "nodeIds": [
+                "107:205",
+                "107:617",
+                "179:2375"
+              ]
+            },
+            "VariableID:4:55787": {
+              "count": 2,
+              "nodeIds": [
+                "107:616",
+                "179:2373"
+              ]
+            },
+            "VariableID:4:55786": {
+              "count": 5,
+              "nodeIds": [
+                "105:3404",
+                "179:2377",
+                "128:3681"
+              ]
+            },
+            "VariableID:6:55895": {
+              "count": 5,
+              "nodeIds": [
+                "105:3404",
+                "179:2377",
+                "128:3681"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 5,
+              "nodeIds": [
+                "107:212",
+                "107:624",
+                "179:2385"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 10,
+              "nodeIds": [
+                "I128:3762;70:78",
+                "I107:214;70:78",
+                "I128:3753;70:78"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 5,
+              "nodeIds": [
+                "107:213",
+                "107:625",
+                "179:2387"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 5,
+              "nodeIds": [
+                "376:2216",
+                "376:2220",
+                "376:2224"
+              ]
+            },
+            "VariableID:7:55772": {
+              "count": 10,
+              "nodeIds": [
+                "I376:2217;70:78",
+                "I376:2219;70:78",
+                "I376:2221;70:78"
+              ]
+            },
+            "VariableID:6:55873": {
+              "count": 5,
+              "nodeIds": [
+                "376:2218",
+                "376:2222",
+                "376:2226"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "131:229",
+          "bindings": {
+            "VariableID:54:3": {
+              "count": 32,
+              "nodeIds": [
+                "131:218",
+                "131:223",
+                "131:226"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 8,
+              "nodeIds": [
+                "131:218",
+                "131:221",
+                "131:219"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 32,
+              "nodeIds": [
+                "131:218",
+                "131:223",
+                "131:226"
+              ]
+            },
+            "VariableID:6:55889": {
+              "count": 4,
+              "nodeIds": [
+                "131:218",
+                "131:223",
+                "131:226"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 4,
+              "nodeIds": [
+                "I131:113;70:78",
+                "I131:137;70:78",
+                "I131:163;70:78"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 8,
+              "nodeIds": [
+                "131:223",
+                "131:228",
+                "131:217"
+              ]
+            },
+            "VariableID:5:55762": {
+              "count": 4,
+              "nodeIds": [
+                "131:221",
+                "131:228",
+                "131:220"
+              ]
+            },
+            "VariableID:6:55902": {
+              "count": 4,
+              "nodeIds": [
+                "131:221",
+                "131:228",
+                "131:220"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 12,
+              "nodeIds": [
+                "I131:105;70:78",
+                "I131:139;70:78",
+                "I131:165;70:78"
+              ]
+            },
+            "VariableID:6:55894": {
+              "count": 8,
+              "nodeIds": [
+                "131:219",
+                "131:813",
+                "131:217"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 8,
+              "nodeIds": [
+                "131:213",
+                "131:821",
+                "131:224"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 8,
+              "nodeIds": [
+                "131:213",
+                "131:821",
+                "131:224"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 16,
+              "nodeIds": [
+                "I131:68;70:78",
+                "I131:822;70:78",
+                "I131:143;70:78"
+              ]
+            },
+            "VariableID:4:55787": {
+              "count": 4,
+              "nodeIds": [
+                "131:210",
+                "131:209",
+                "131:212"
+              ]
+            },
+            "VariableID:6:55896": {
+              "count": 4,
+              "nodeIds": [
+                "131:210",
+                "131:209",
+                "131:212"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 4,
+              "nodeIds": [
+                "131:227",
+                "131:214",
+                "131:208"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#button"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "107:161",
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "name": "button",
+          "api": {
+            "left-icon#128:173": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "right-icon#128:210": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "type": {
+              "type": "VARIANT",
+              "defaultValue": "primary",
+              "variantOptions": [
+                "primary",
+                "outline",
+                "ghost"
+              ]
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "active",
+                "hover",
+                "disabled",
+                "error"
+              ]
+            },
+            "size": {
+              "type": "VARIANT",
+              "defaultValue": "xss",
+              "variantOptions": [
+                "xss",
+                "xs",
+                "sm",
+                "md",
+                "lg"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "107:162",
+              "name": "type=outline, state=default, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "107:574",
+              "name": "type=outline, state=default, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2341",
+              "name": "type=outline, state=default, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "107:357",
+              "name": "type=outline, state=default, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:937",
+              "name": "type=outline, state=default, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:264",
+              "name": "type=ghost, state=default, size=sm",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "107:578",
+              "name": "type=ghost, state=default, size=xss",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "179:2345",
+              "name": "type=ghost, state=default, size=xs",
+              "width": 61,
+              "height": 24
+            },
+            {
+              "id": "107:361",
+              "name": "type=ghost, state=default, size=md",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "1628:941",
+              "name": "type=ghost, state=default, size=lg",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "107:266",
+              "name": "type=ghost, state=active, size=sm",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "107:583",
+              "name": "type=ghost, state=active, size=xss",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "179:2349",
+              "name": "type=ghost, state=active, size=xs",
+              "width": 61,
+              "height": 24
+            },
+            {
+              "id": "105:3427",
+              "name": "type=ghost, state=hover, size=xss",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "179:2353",
+              "name": "type=ghost, state=hover, size=xs",
+              "width": 61,
+              "height": 24
+            },
+            {
+              "id": "128:3689",
+              "name": "type=ghost, state=hover, size=sm",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "128:3722",
+              "name": "type=ghost, state=hover, size=md",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "1628:945",
+              "name": "type=ghost, state=hover, size=lg",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "107:366",
+              "name": "type=ghost, state=active, size=md",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "1628:949",
+              "name": "type=ghost, state=active, size=lg",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "107:171",
+              "name": "type=outline, state=active, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "107:586",
+              "name": "type=outline, state=active, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2357",
+              "name": "type=outline, state=active, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "105:3408",
+              "name": "type=outline, state=hover, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2361",
+              "name": "type=outline, state=hover, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "128:3685",
+              "name": "type=outline, state=hover, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "128:3718",
+              "name": "type=outline, state=hover, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:953",
+              "name": "type=outline, state=hover, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:369",
+              "name": "type=outline, state=active, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:957",
+              "name": "type=outline, state=active, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:272",
+              "name": "type=ghost, state=disabled, size=sm",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "376:2184",
+              "name": "type=ghost, state=error, size=sm",
+              "width": 57,
+              "height": 20
+            },
+            {
+              "id": "107:598",
+              "name": "type=ghost, state=disabled, size=xss",
+              "width": 56,
+              "height": 20
+            },
+            {
+              "id": "376:2188",
+              "name": "type=ghost, state=error, size=xss",
+              "width": 56,
+              "height": 20
+            },
+            {
+              "id": "179:2365",
+              "name": "type=ghost, state=disabled, size=xs",
+              "width": 61,
+              "height": 24
+            },
+            {
+              "id": "376:2192",
+              "name": "type=ghost, state=error, size=xs",
+              "width": 61,
+              "height": 24
+            },
+            {
+              "id": "107:381",
+              "name": "type=ghost, state=disabled, size=md",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "1628:961",
+              "name": "type=ghost, state=disabled, size=lg",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "376:2196",
+              "name": "type=ghost, state=error, size=md",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "1628:965",
+              "name": "type=ghost, state=error, size=lg",
+              "width": 67,
+              "height": 24
+            },
+            {
+              "id": "107:192",
+              "name": "type=outline, state=disabled, size=sm",
+              "width": 88,
+              "height": 36
+            },
+            {
+              "id": "376:2200",
+              "name": "type=outline, state=error, size=sm",
+              "width": 88,
+              "height": 36
+            },
+            {
+              "id": "107:610",
+              "name": "type=outline, state=disabled, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "376:2204",
+              "name": "type=outline, state=error, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2369",
+              "name": "type=outline, state=disabled, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "376:2208",
+              "name": "type=outline, state=error, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "107:393",
+              "name": "type=outline, state=disabled, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:969",
+              "name": "type=outline, state=disabled, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "376:2212",
+              "name": "type=outline, state=error, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:973",
+              "name": "type=outline, state=error, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:204",
+              "name": "type=primary, state=active, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "107:616",
+              "name": "type=primary, state=active, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2373",
+              "name": "type=primary, state=active, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "105:3404",
+              "name": "type=primary, state=hover, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2377",
+              "name": "type=primary, state=hover, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "128:3681",
+              "name": "type=primary, state=hover, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "128:3714",
+              "name": "type=primary, state=hover, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:977",
+              "name": "type=primary, state=hover, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:399",
+              "name": "type=primary, state=active, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:981",
+              "name": "type=primary, state=active, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:207",
+              "name": "type=primary, state=default, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "107:619",
+              "name": "type=primary, state=default, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2381",
+              "name": "type=primary, state=default, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "107:402",
+              "name": "type=primary, state=default, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:985",
+              "name": "type=primary, state=default, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "107:212",
+              "name": "type=primary, state=disabled, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "376:2216",
+              "name": "type=primary, state=error, size=sm",
+              "width": 89,
+              "height": 36
+            },
+            {
+              "id": "107:624",
+              "name": "type=primary, state=disabled, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "376:2220",
+              "name": "type=primary, state=error, size=xss",
+              "width": 73,
+              "height": 28
+            },
+            {
+              "id": "179:2385",
+              "name": "type=primary, state=disabled, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "376:2224",
+              "name": "type=primary, state=error, size=xs",
+              "width": 77,
+              "height": 32
+            },
+            {
+              "id": "107:407",
+              "name": "type=primary, state=disabled, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:989",
+              "name": "type=primary, state=disabled, size=lg",
+              "width": 99,
+              "height": 44
+            },
+            {
+              "id": "376:2228",
+              "name": "type=primary, state=error, size=md",
+              "width": 99,
+              "height": 40
+            },
+            {
+              "id": "1628:993",
+              "name": "type=primary, state=error, size=lg",
+              "width": 99,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "nodeId": "131:229",
+          "key": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+          "name": "button icon",
+          "api": {
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "hover",
+                "disabled",
+                "active"
+              ]
+            },
+            "size": {
+              "type": "VARIANT",
+              "defaultValue": "xs",
+              "variantOptions": [
+                "xs",
+                "sm",
+                "md",
+                "lg"
+              ]
+            },
+            "type": {
+              "type": "VARIANT",
+              "defaultValue": "Primary",
+              "variantOptions": [
+                "Primary",
+                "Secondary"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "131:218",
+              "name": "state=disabled, size=xs, type=Secondary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:223",
+              "name": "state=disabled, size=sm, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:226",
+              "name": "state=disabled, size=md, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1052",
+              "name": "state=disabled, size=lg, type=Secondary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:221",
+              "name": "state=hover, size=xs, type=Secondary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:228",
+              "name": "state=hover, size=sm, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:220",
+              "name": "state=hover, size=md, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1054",
+              "name": "state=hover, size=lg, type=Secondary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:219",
+              "name": "state=Default, size=xs, type=Secondary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:813",
+              "name": "state=active, size=xs, type=Secondary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:217",
+              "name": "state=Default, size=sm, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:815",
+              "name": "state=active, size=sm, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:216",
+              "name": "state=Default, size=md, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1056",
+              "name": "state=Default, size=lg, type=Secondary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:817",
+              "name": "state=active, size=md, type=Secondary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1058",
+              "name": "state=active, size=lg, type=Secondary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:213",
+              "name": "state=Default, size=xs, type=Primary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:821",
+              "name": "state=active, size=xs, type=Primary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:224",
+              "name": "state=Default, size=sm, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:823",
+              "name": "state=active, size=sm, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:211",
+              "name": "state=Default, size=md, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1060",
+              "name": "state=Default, size=lg, type=Primary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:825",
+              "name": "state=active, size=md, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1062",
+              "name": "state=active, size=lg, type=Primary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:210",
+              "name": "state=hover, size=xs, type=Primary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:209",
+              "name": "state=hover, size=sm, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:212",
+              "name": "state=hover, size=md, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1064",
+              "name": "state=hover, size=lg, type=Primary",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "id": "131:227",
+              "name": "state=disabled, size=xs, type=Primary",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "131:214",
+              "name": "state=disabled, size=sm, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "131:208",
+              "name": "state=disabled, size=md, type=Primary",
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "1628:1066",
+              "name": "state=disabled, size=lg, type=Primary",
+              "width": 44,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "107:161",
+          "nodeId": "107:619",
+          "path": "assets/figma/button-107-161.svg",
+          "width": 73,
+          "height": 28,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "131:229",
+          "nodeId": "131:213",
+          "path": "assets/figma/button-131-229.svg",
+          "width": 24,
+          "height": 24,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#button"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 150,
+          "usedByOwner": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 32,
+          "usedByOwner": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

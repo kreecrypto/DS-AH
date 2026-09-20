@@ -1,0 +1,1564 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "badge",
+  "name": "Badge",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "86:767",
+    "pageName": "Badge"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "f2187fca79d95e1669dd417689535f0f83e9f1df",
+      "8383a48397d12f9f5c77334d4cfbbeec0e759849"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "86:788",
+      "componentKey": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+      "figmaName": "badge",
+      "variantCount": 28,
+      "figmaCurrentApi": {
+        "color": [
+          "feedback",
+          "badge"
+        ],
+        "stage": [
+          "success",
+          "warning",
+          "error",
+          "error-solid",
+          "info",
+          "neutral",
+          "coral",
+          "teal",
+          "grape",
+          "sunshine",
+          "leaf",
+          "candy",
+          "blue",
+          "mint"
+        ],
+        "size": [
+          "sm",
+          "md"
+        ]
+      },
+      "canonicalApi": {
+        "Family": [
+          "Feedback",
+          "Badge"
+        ],
+        "State": "semantic mapping of stage",
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "336:584",
+      "componentKey": "8383a48397d12f9f5c77334d4cfbbeec0e759849",
+      "figmaName": "badge-tier",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "level": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "canonicalApi": {
+        "Tier": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/badge",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#badge"
+      ],
+      "owners": [
+        {
+          "nodeId": "86:788",
+          "key": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+          "name": "badge",
+          "representativeId": "86:789",
+          "layout": {
+            "width": 44,
+            "height": 20,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "gap": 4,
+            "radius": 1000
+          },
+          "nodes": [
+            {
+              "id": "86:789",
+              "parentId": "86:788",
+              "name": "color=feedback, stage=success, size=sm",
+              "type": "COMPONENT",
+              "width": 44,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "181:158",
+              "parentId": "86:789",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 10.670000076293945,
+              "height": 10.670000076293945,
+              "visible": false
+            },
+            {
+              "id": "86:790",
+              "parentId": "86:789",
+              "name": "Frame 1984079236",
+              "type": "FRAME",
+              "width": 28,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "86:791",
+              "parentId": "86:790",
+              "name": "Badge",
+              "type": "TEXT",
+              "width": 28,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "336:584",
+          "key": "8383a48397d12f9f5c77334d4cfbbeec0e759849",
+          "name": "badge-tier",
+          "representativeId": "336:589",
+          "layout": {
+            "width": 54,
+            "height": 20,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "gap": 0,
+            "radius": 100
+          },
+          "nodes": [
+            {
+              "id": "336:589",
+              "parentId": "336:584",
+              "name": "level=Platinum",
+              "type": "COMPONENT",
+              "width": 54,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "336:590",
+              "parentId": "336:589",
+              "name": "text",
+              "type": "TEXT",
+              "width": 38,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#badge"
+      ],
+      "items": [
+        "Show concise status or classification; do not make every badge clickable.",
+        "Keep badge-tier level separate from feedback states; confirm business tier meanings with the owner."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+      ],
+      "items": [
+        "Express status in text, not color alone.",
+        "If status changes dynamically, decide whether a non-disruptive announcement is needed; test it in context."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#badge"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:54:7",
+          "key": "d088854dff72e30fdd6ace730e14ecaad87f6534",
+          "name": "padding/xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:20",
+          "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+          "name": "padding/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55817",
+          "key": "089dddc5bc946df8bd5bb8eab98d4b708f765daf",
+          "name": "bg/feedback/success/subtle",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8745098114013672,
+              "g": 0.9725490212440491,
+              "b": 0.9176470637321472,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55882",
+          "key": "f83f498e9742284733082cee2e78e425a0814f09",
+          "name": "text/feedback/success/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.05882352963089943,
+              "g": 0.2705882489681244,
+              "b": 0.15294118225574493,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55848",
+          "key": "f6939bc399e19ff1662c32e6c9ed44e4c78e086e",
+          "name": "font/size/sm",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 14,
+            "Mobile": 14
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:32",
+          "key": "f659a1db048486cf1c6fe0a96d70585634cf8019",
+          "name": "font/line-height/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55813",
+          "key": "2e83fb255a6f418a737050c528cd0dd1fe96e899",
+          "name": "bg/feedback/warning/subtle",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 0.9529411792755127,
+              "b": 0.8392156958580017,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55880",
+          "key": "c8188836d6765670eec75bbeeb0e1a422e78d1ec",
+          "name": "text/feedback/warning/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3607843220233917,
+              "g": 0.25882354378700256,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55821",
+          "key": "b9a519602e93b4683a8bf974f2e07a36f608764b",
+          "name": "bg/feedback/error/subtle",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.9921568632125854,
+              "g": 0.8470588326454163,
+              "b": 0.8823529481887817,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55884",
+          "key": "adab4c29ceafa674c78203d85035b90f6f14bef8",
+          "name": "text/feedback/error/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.5333333611488342,
+              "g": 0.027450980618596077,
+              "b": 0.15294118225574493,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5:55797",
+          "key": "7385773e0e7846970635bbb5df4bf078aab34456",
+          "name": "bg/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55845",
+          "key": "caaa48abcdfae9be2e3e49aa4b6131285a0cd8da",
+          "name": "text/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55809",
+          "key": "90b86c34db3479def54db7a3cda2e9036435cd2d",
+          "name": "bg/feedback/info/subtle",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8392156958580017,
+              "g": 0.9019607901573181,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55878",
+          "key": "4c2caf4d92df01e3f9206e355cb9d11fb92b9bbf",
+          "name": "text/feedback/info/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.08235294371843338,
+              "g": 0.18039216101169586,
+              "b": 0.3294117748737335,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55791",
+          "key": "ab20310f94c47d236dc1545dbd4a7e4ffedc13e3",
+          "name": "bg/interaction/primary/active/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8313725590705872,
+              "g": 0.843137264251709,
+              "b": 0.8666666746139526,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55876",
+          "key": "1638f71fac2a25b1dd392b0b396823f97b2330f3",
+          "name": "text/feedback/neutral/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.16862745583057404,
+              "g": 0.1882352977991104,
+              "b": 0.23137255012989044,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:25",
+          "key": "1511a94c0e824fea3299ae982e468372cec6661e",
+          "name": "gap/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55775",
+          "key": "907b08475fb29f64e26a4004b4ba02ec0b745b42",
+          "name": "bg/badge/coral",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 0.6117647290229797,
+              "b": 0.3843137323856354,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55849",
+          "key": "7dbff26ba66024d20357b2dd2c4db85e57cbedc6",
+          "name": "text/badge/coral",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.239215686917305,
+              "g": 0.08627451211214066,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55776",
+          "key": "7364af073658b9acda62a45b913cbe271c18445c",
+          "name": "bg/badge/teal",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.05882352963089943,
+              "g": 0.4431372582912445,
+              "b": 0.49803921580314636,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55850",
+          "key": "78b93d00e032c30520a3ea80461cdf0073acf488",
+          "name": "text/badge/teal",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8588235378265381,
+              "g": 0.9686274528503418,
+              "b": 0.9843137264251709,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55780",
+          "key": "ddedc5c2ef272dbc4fe82856abe8250e33acb0b9",
+          "name": "bg/badge/grape",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3803921639919281,
+              "g": 0.30980393290519714,
+              "b": 0.9098039269447327,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55854",
+          "key": "bcecc98e2cab064810521c691e54ba772a6f7d63",
+          "name": "text/badge/grape",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8745098114013672,
+              "g": 0.8588235378265381,
+              "b": 0.9803921580314636,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55782",
+          "key": "ce1f7722caa69d3f6158f2f147206bd481b6a739",
+          "name": "bg/badge/sunshine",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55856",
+          "key": "a8cdda26ee09083d60b8acc91c034ea3d9f49671",
+          "name": "text/badge/sunshine",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.2980392277240753,
+              "g": 0.2705882489681244,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55777",
+          "key": "9ff92d64db0169ba3e139633923dbbee48657ccc",
+          "name": "bg/badge/leaf/green",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3450980484485626,
+              "g": 0.7764706015586853,
+              "b": 0.2705882489681244,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55851",
+          "key": "4f96ecc0c0441f0de49637ca004fc88e7fa94cf9",
+          "name": "text/badge/leaf/green",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.0235294122248888,
+              "g": 0.16078431904315948,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55778",
+          "key": "6dc4bdda6ab479b51a0682b33a6a01466eee1876",
+          "name": "bg/badge/cotton/candy",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 0.7058823704719543,
+              "b": 0.8078431487083435,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55852",
+          "key": "8caa1cacc4eef3d2d8790885b9f8b4cde00b904b",
+          "name": "text/badge/cotton/candy",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.2980392277240753,
+              "g": 0,
+              "b": 0.10588235408067703,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55779",
+          "key": "40fdced6fcdf95625b8c7269cf63e250e2f30288",
+          "name": "bg/badge/sky/blue",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.45490196347236633,
+              "g": 0.7411764860153198,
+              "b": 0.9098039269447327,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55853",
+          "key": "6a6e91856a93c4d17db36f4d92bd33dc03b148cf",
+          "name": "text/badge/sky/blue",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0.15294118225574493,
+              "b": 0.239215686917305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55781",
+          "key": "5a03d788e0638c58eef4ce680431c08340b7f05f",
+          "name": "bg/badge/mint/green",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.5058823823928833,
+              "g": 0.9333333373069763,
+              "b": 0.7333333492279053,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55855",
+          "key": "551fc45bd3e4abd3093e9b898eb53ecd202e9638",
+          "name": "text/badge/mint/green",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0.2980392277240753,
+              "b": 0.24313725531101227,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:23",
+          "key": "e5a37f78d732dcb34a9ba181190648b3c97da3d5",
+          "name": "gap/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:ce1b1b6f9b62a88a4cd431a213aea475abbe41b2/6:196",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "86:788",
+          "bindings": {
+            "VariableID:54:7": {
+              "count": 1,
+              "nodeIds": [
+                "86:788"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 14,
+              "nodeIds": [
+                "86:789",
+                "219:309",
+                "86:792"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 14,
+              "nodeIds": [
+                "86:789",
+                "86:792",
+                "86:795"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 28,
+              "nodeIds": [
+                "86:789",
+                "219:309",
+                "86:792"
+              ]
+            },
+            "VariableID:6:55817": {
+              "count": 2,
+              "nodeIds": [
+                "86:789",
+                "219:309"
+              ]
+            },
+            "VariableID:6:55882": {
+              "count": 2,
+              "nodeIds": [
+                "86:791",
+                "219:312"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 14,
+              "nodeIds": [
+                "86:791",
+                "86:794",
+                "86:797"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 28,
+              "nodeIds": [
+                "86:791",
+                "219:312",
+                "86:794"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 28,
+              "nodeIds": [
+                "86:791",
+                "219:312",
+                "86:794"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 14,
+              "nodeIds": [
+                "86:791",
+                "86:794",
+                "86:797"
+              ]
+            },
+            "VariableID:54:6": {
+              "count": 14,
+              "nodeIds": [
+                "219:309",
+                "219:313",
+                "219:317"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 14,
+              "nodeIds": [
+                "219:312",
+                "219:316",
+                "219:320"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 14,
+              "nodeIds": [
+                "219:312",
+                "219:316",
+                "219:320"
+              ]
+            },
+            "VariableID:6:55813": {
+              "count": 2,
+              "nodeIds": [
+                "86:792",
+                "219:313"
+              ]
+            },
+            "VariableID:6:55880": {
+              "count": 2,
+              "nodeIds": [
+                "86:794",
+                "219:316"
+              ]
+            },
+            "VariableID:6:55821": {
+              "count": 2,
+              "nodeIds": [
+                "86:795",
+                "219:317"
+              ]
+            },
+            "VariableID:6:55884": {
+              "count": 2,
+              "nodeIds": [
+                "86:797",
+                "219:320"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 2,
+              "nodeIds": [
+                "562:51",
+                "560:47"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 2,
+              "nodeIds": [
+                "562:54",
+                "560:50"
+              ]
+            },
+            "VariableID:6:55809": {
+              "count": 2,
+              "nodeIds": [
+                "86:798",
+                "219:321"
+              ]
+            },
+            "VariableID:6:55878": {
+              "count": 2,
+              "nodeIds": [
+                "86:800",
+                "219:324"
+              ]
+            },
+            "VariableID:4:55791": {
+              "count": 2,
+              "nodeIds": [
+                "1436:42",
+                "1436:46"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "1436:45"
+              ]
+            },
+            "VariableID:6:55876": {
+              "count": 1,
+              "nodeIds": [
+                "1436:49"
+              ]
+            },
+            "VariableID:58:25": {
+              "count": 14,
+              "nodeIds": [
+                "158:110",
+                "219:325",
+                "158:111"
+              ]
+            },
+            "VariableID:3:55775": {
+              "count": 2,
+              "nodeIds": [
+                "158:110",
+                "219:325"
+              ]
+            },
+            "VariableID:6:55849": {
+              "count": 2,
+              "nodeIds": [
+                "158:89",
+                "219:327"
+              ]
+            },
+            "VariableID:3:55776": {
+              "count": 2,
+              "nodeIds": [
+                "158:112",
+                "219:328"
+              ]
+            },
+            "VariableID:6:55850": {
+              "count": 2,
+              "nodeIds": [
+                "158:92",
+                "219:330"
+              ]
+            },
+            "VariableID:3:55780": {
+              "count": 2,
+              "nodeIds": [
+                "158:111",
+                "219:331"
+              ]
+            },
+            "VariableID:6:55854": {
+              "count": 2,
+              "nodeIds": [
+                "158:94",
+                "219:333"
+              ]
+            },
+            "VariableID:3:55782": {
+              "count": 2,
+              "nodeIds": [
+                "158:108",
+                "219:334"
+              ]
+            },
+            "VariableID:6:55856": {
+              "count": 2,
+              "nodeIds": [
+                "158:96",
+                "219:336"
+              ]
+            },
+            "VariableID:3:55777": {
+              "count": 2,
+              "nodeIds": [
+                "158:106",
+                "219:337"
+              ]
+            },
+            "VariableID:6:55851": {
+              "count": 2,
+              "nodeIds": [
+                "158:98",
+                "219:339"
+              ]
+            },
+            "VariableID:3:55778": {
+              "count": 2,
+              "nodeIds": [
+                "158:109",
+                "219:340"
+              ]
+            },
+            "VariableID:6:55852": {
+              "count": 2,
+              "nodeIds": [
+                "158:100",
+                "219:342"
+              ]
+            },
+            "VariableID:3:55779": {
+              "count": 2,
+              "nodeIds": [
+                "158:107",
+                "219:343"
+              ]
+            },
+            "VariableID:6:55853": {
+              "count": 2,
+              "nodeIds": [
+                "158:102",
+                "219:345"
+              ]
+            },
+            "VariableID:3:55781": {
+              "count": 2,
+              "nodeIds": [
+                "158:105",
+                "219:346"
+              ]
+            },
+            "VariableID:6:55855": {
+              "count": 2,
+              "nodeIds": [
+                "158:104",
+                "219:348"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "336:584",
+          "bindings": {
+            "VariableID:58:23": {
+              "count": 3,
+              "nodeIds": [
+                "336:585",
+                "336:587",
+                "336:589"
+              ]
+            },
+            "VariableID:ce1b1b6f9b62a88a4cd431a213aea475abbe41b2/6:196": {
+              "count": 2,
+              "nodeIds": [
+                "336:586",
+                "336:588"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 3,
+              "nodeIds": [
+                "336:586",
+                "336:588",
+                "336:590"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 3,
+              "nodeIds": [
+                "336:586",
+                "336:588",
+                "336:590"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 3,
+              "nodeIds": [
+                "336:586",
+                "336:588",
+                "336:590"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 3,
+              "nodeIds": [
+                "336:586",
+                "336:588",
+                "336:590"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 1,
+              "nodeIds": [
+                "336:590"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#badge"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "86:788",
+          "key": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+          "name": "badge",
+          "api": {
+            "Show icon#181:0": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "color": {
+              "type": "VARIANT",
+              "defaultValue": "feedback",
+              "variantOptions": [
+                "feedback",
+                "badge"
+              ]
+            },
+            "stage": {
+              "type": "VARIANT",
+              "defaultValue": "success",
+              "variantOptions": [
+                "success",
+                "warning",
+                "error",
+                "info",
+                "coral",
+                "mint",
+                "blue",
+                "candy",
+                "leaf",
+                "sunshine",
+                "grape",
+                "teal",
+                "error-solid",
+                "neutral"
+              ]
+            },
+            "size": {
+              "type": "VARIANT",
+              "defaultValue": "sm",
+              "variantOptions": [
+                "sm",
+                "md"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "86:789",
+              "name": "color=feedback, stage=success, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:309",
+              "name": "color=feedback, stage=success, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "86:792",
+              "name": "color=feedback, stage=warning, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:313",
+              "name": "color=feedback, stage=warning, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "86:795",
+              "name": "color=feedback, stage=error, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "562:51",
+              "name": "color=feedback, stage=error-solid, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:317",
+              "name": "color=feedback, stage=error, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "560:47",
+              "name": "color=feedback, stage=error-solid, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "86:798",
+              "name": "color=feedback, stage=info, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "1436:42",
+              "name": "color=feedback, stage=neutral, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:321",
+              "name": "color=feedback, stage=info, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "1436:46",
+              "name": "color=feedback, stage=neutral, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:110",
+              "name": "color=badge, stage=coral, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:325",
+              "name": "color=badge, stage=coral, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:112",
+              "name": "color=badge, stage=teal, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:328",
+              "name": "color=badge, stage=teal, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:111",
+              "name": "color=badge, stage=grape, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:331",
+              "name": "color=badge, stage=grape, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:108",
+              "name": "color=badge, stage=sunshine, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:334",
+              "name": "color=badge, stage=sunshine, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:106",
+              "name": "color=badge, stage=leaf, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:337",
+              "name": "color=badge, stage=leaf, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:109",
+              "name": "color=badge, stage=candy, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:340",
+              "name": "color=badge, stage=candy, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:107",
+              "name": "color=badge, stage=blue, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:343",
+              "name": "color=badge, stage=blue, size=md",
+              "width": 56,
+              "height": 24
+            },
+            {
+              "id": "158:105",
+              "name": "color=badge, stage=mint, size=sm",
+              "width": 44,
+              "height": 20
+            },
+            {
+              "id": "219:346",
+              "name": "color=badge, stage=mint, size=md",
+              "width": 56,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "nodeId": "336:584",
+          "key": "8383a48397d12f9f5c77334d4cfbbeec0e759849",
+          "name": "badge-tier",
+          "api": {
+            "level": {
+              "type": "VARIANT",
+              "defaultValue": "Platinum",
+              "variantOptions": [
+                "Gold",
+                "Silver",
+                "Platinum"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "336:585",
+              "name": "level=Silver",
+              "width": 40,
+              "height": 20
+            },
+            {
+              "id": "336:587",
+              "name": "level=Gold",
+              "width": 37,
+              "height": 20
+            },
+            {
+              "id": "336:589",
+              "name": "level=Platinum",
+              "width": 54,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "86:788",
+          "nodeId": "86:789",
+          "path": "assets/figma/badge-86-788.svg",
+          "width": 44,
+          "height": 20,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "336:584",
+          "nodeId": "336:589",
+          "path": "assets/figma/badge-336-584.svg",
+          "width": 54,
+          "height": 20,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#badge"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 28,
+          "usedByOwner": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

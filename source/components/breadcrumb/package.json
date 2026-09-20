@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "breadcrumb",
+  "name": "Breadcrumb",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "337:1149",
+    "pageName": "Breadcrumb"
+  },
+  "identity": {
+    "ownerCount": 1,
+    "componentKeys": [
+      "cf65b4e2b72b9b580e442b011225a9fcc8485787"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "337:1157",
+      "componentKey": "cf65b4e2b72b9b580e442b011225a9fcc8485787",
+      "figmaName": "breadcrumb",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/breadcrumb",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#breadcrumb"
+      ],
+      "owners": [
+        {
+          "nodeId": "337:1157",
+          "key": "cf65b4e2b72b9b580e442b011225a9fcc8485787",
+          "name": "breadcrumb",
+          "representativeId": "337:1157",
+          "layout": {
+            "width": 244,
+            "height": 30,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 4,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "337:1157",
+              "parentId": "337:1169",
+              "name": "breadcrumb",
+              "type": "COMPONENT",
+              "width": 244,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1158",
+              "parentId": "337:1157",
+              "name": "Frame 1984079541",
+              "type": "FRAME",
+              "width": 60,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1159",
+              "parentId": "337:1158",
+              "name": "Page 01",
+              "type": "TEXT",
+              "width": 50,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "337:1160",
+              "parentId": "337:1158",
+              "name": "/",
+              "type": "TEXT",
+              "width": 6,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1161",
+              "parentId": "337:1157",
+              "name": "Frame 1984079542",
+              "type": "FRAME",
+              "width": 60,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1162",
+              "parentId": "337:1161",
+              "name": "Page 02",
+              "type": "TEXT",
+              "width": 50,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "337:1163",
+              "parentId": "337:1161",
+              "name": "/",
+              "type": "TEXT",
+              "width": 6,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1164",
+              "parentId": "337:1157",
+              "name": "Frame 1984079543",
+              "type": "FRAME",
+              "width": 60,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1165",
+              "parentId": "337:1164",
+              "name": "Page 03",
+              "type": "TEXT",
+              "width": 50,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "337:1166",
+              "parentId": "337:1164",
+              "name": "/",
+              "type": "TEXT",
+              "width": 6,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "337:1167",
+              "parentId": "337:1157",
+              "name": "Page 02",
+              "type": "TEXT",
+              "width": 52,
+              "height": 28,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#breadcrumb"
+      ],
+      "items": [
+        "Represent ancestor locations, not a history of every visited page.",
+        "Use page02/page03 visibility properties only for the corresponding hierarchy levels."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/"
+      ],
+      "items": [
+        "Use a named navigation region and identify the current page.",
+        "Make ancestor destinations real links; exclude decorative separators from accessible names."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#breadcrumb"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:6:55843",
+          "key": "b14346c0a4e13818d3885090eafff37fe5ca3c76",
+          "name": "text/tertiary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:9:55855",
+          "key": "b1d1733179a2eb7d7fee770e01dff0cfc2ff7483",
+          "name": "font/size/xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 28
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55845",
+          "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+          "name": "font/weight/bold",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "75 Bd",
+            "Mobile": "75 Bd"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55794",
+          "key": "854299c7b4217aa9ba022a9b39afae091e19830c",
+          "name": "font/family/title",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:35",
+          "key": "92728990934fb86c17f9d09bf9f659f691864b4a",
+          "name": "font/line-height/2xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 30,
+            "Mobile": 36
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "337:1157",
+          "bindings": {
+            "VariableID:6:55843": {
+              "count": 6,
+              "nodeIds": [
+                "337:1159",
+                "337:1160",
+                "337:1162"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 4,
+              "nodeIds": [
+                "337:1159",
+                "337:1162",
+                "337:1165"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 3,
+              "nodeIds": [
+                "337:1159",
+                "337:1162",
+                "337:1165"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 4,
+              "nodeIds": [
+                "337:1159",
+                "337:1162",
+                "337:1165"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 4,
+              "nodeIds": [
+                "337:1159",
+                "337:1162",
+                "337:1165"
+              ]
+            },
+            "VariableID:9:55855": {
+              "count": 3,
+              "nodeIds": [
+                "337:1160",
+                "337:1163",
+                "337:1166"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 4,
+              "nodeIds": [
+                "337:1160",
+                "337:1163",
+                "337:1166"
+              ]
+            },
+            "VariableID:9:55794": {
+              "count": 3,
+              "nodeIds": [
+                "337:1160",
+                "337:1163",
+                "337:1166"
+              ]
+            },
+            "VariableID:51:35": {
+              "count": 3,
+              "nodeIds": [
+                "337:1160",
+                "337:1163",
+                "337:1166"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "337:1167"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#breadcrumb"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "337:1157",
+          "key": "cf65b4e2b72b9b580e442b011225a9fcc8485787",
+          "name": "breadcrumb",
+          "api": {
+            "page02#2212:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "page03#2212:1": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            }
+          },
+          "variants": [
+            {
+              "id": "337:1157",
+              "name": "breadcrumb",
+              "width": 244,
+              "height": 30
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [],
+      "missingOwnerIds": [
+        "337:1157"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#breadcrumb"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

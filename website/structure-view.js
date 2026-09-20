@@ -1,4 +1,5 @@
 import {escapeHTML as e, href} from './structure.js';
+import {componentContent, packageDirectory, packageReferences} from './component-view.js';
 const pending = (label='เนื้อหา') => `<div class="pending"><span lang="th">รอเติม${e(label)}</span><small>Content pending</small></div>`;
 const media = (label='ภาพประกอบ') => `<div class="media-slot">${pending(label)}</div>`;
 export function sidebar(items, active, expanded, depth=0) {
@@ -26,13 +27,16 @@ export function renderPage(id,structure) {
   const route=structure.pages.get(id), page=route.isTab?route.ancestors.at(-1):route;
   const tabs=structure.tabs(route), selected=route.isTab?route:tabs[0];
   const capture=structure.captures[route.id] || (!route.isTab || route===tabs[0]?structure.captures[page.id]:null);
-  const headings=capture?.headings || [];
+  let headings=capture?.headings || [];
   const children=page.children.filter(x=>!x.isTab);
   const breadcrumb=page.ancestors.filter(x=>x.source);
   const tabHTML=tabs.length?`<nav class="page-tabs" aria-label="${e(page.label)} sections">${tabs.map(t=>`<a href="${href(t.id)}" ${selected?.id===t.id?'aria-current="page"':''}>${e(t.label)}</a>`).join('')}</nav>`:'';
   let body='';
   if(headings.length) body=headings.map((h,i)=>`<section id="s-${i}" class="section-level-${h.level}"><h${h.level}>${e(h.label)}</h${h.level}>${pending()}</section>`).join('');
   else body=`<section id="s-0">${pending('เนื้อหา '+(selected?.label || page.label))}${media()}</section>`;
+  const pkg=(structure.componentPackages||[]).find(p=>p.id===page.packageId||packageReferences[p.id]===page.id);
+  if(pkg){const content=componentContent(pkg,page.packageId?'All':selected?.label||'All');headings=content.headings;body=content.body;}
+  if(page.id==='755aff-components'&&(structure.componentPackages||[]).length)body=packageDirectory(structure.componentPackages)+body;
   if(children.length && !route.isTab) body+=`<section class="category-links" aria-label="Pages in ${e(page.label)}">${cards(children.flatMap(n=>n.source?[n]:n.children))}</section>`;
   return `<article>${actions(headings)}${breadcrumb.length?`<nav class="breadcrumb" aria-label="Breadcrumb">${breadcrumb.map(n=>`<a href="${href(n.id)}">${e(n.label)}</a><span>/</span>`).join('')}<span>${e(page.label)}</span></nav>`:''}<header class="page-heading"><h1>${e(page.label)}</h1><p class="subtitle" lang="th">รอเติมคำอธิบาย</p></header>${tabHTML}<div class="page-body">${body}</div>${footer(page,structure)}</article>`;
 }

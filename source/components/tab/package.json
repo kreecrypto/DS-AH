@@ -1,0 +1,1878 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "tab",
+  "name": "Tab",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "165:489",
+    "pageName": "Tab"
+  },
+  "identity": {
+    "ownerCount": 4,
+    "componentKeys": [
+      "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+      "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+      "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+      "527e1da72069d565082f4c4df0e043462e9e0109"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "165:618",
+      "componentKey": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+      "figmaName": "tab/chip",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "active": [
+          "yes",
+          "no"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Active": [
+          "True",
+          "False"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "307:73",
+      "componentKey": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+      "figmaName": "Switch tab",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disabled"
+        ],
+        "active": [
+          "left",
+          "right"
+        ],
+        "size": [
+          "md",
+          "lg"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "ActiveSide": [
+          "Left",
+          "Right"
+        ],
+        "Size": [
+          "MD",
+          "LG"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "1257:1429",
+      "componentKey": "527e1da72069d565082f4c4df0e043462e9e0109",
+      "figmaName": "tab with divider",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "165:704",
+      "componentKey": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+      "figmaName": "tab",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      ".device canonicalizes to Device"
+    ]
+  },
+  "website": {
+    "route": "/components/tab",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tab"
+      ],
+      "owners": [
+        {
+          "nodeId": "165:618",
+          "key": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+          "name": "tab/chip",
+          "representativeId": "165:619",
+          "layout": {
+            "width": 111,
+            "height": 40,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              12,
+              4,
+              12
+            ],
+            "gap": 8,
+            "radius": 999
+          },
+          "nodes": [
+            {
+              "id": "165:619",
+              "parentId": "165:618",
+              "name": "active=yes, .device=desktop",
+              "type": "COMPONENT",
+              "width": 111,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "165:620",
+              "parentId": "165:619",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:620;70:65",
+              "parentId": "165:620",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:620;70:65;70:78",
+              "parentId": "I165:620;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "165:621",
+              "parentId": "165:619",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 63,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "744:1278",
+              "parentId": "165:619",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": false
+            }
+          ]
+        },
+        {
+          "nodeId": "307:73",
+          "key": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+          "name": "Switch tab",
+          "representativeId": "307:72",
+          "layout": {
+            "width": 88,
+            "height": 32,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "gap": 0,
+            "radius": 9999
+          },
+          "nodes": [
+            {
+              "id": "307:72",
+              "parentId": "307:73",
+              "name": "state=default, active=left, size=md",
+              "type": "COMPONENT",
+              "width": 88,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "307:64",
+              "parentId": "307:72",
+              "name": "Button",
+              "type": "FRAME",
+              "width": 40,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "546:793",
+              "parentId": "307:64",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": false
+            },
+            {
+              "id": "307:65",
+              "parentId": "307:64",
+              "name": "Button Label",
+              "type": "TEXT",
+              "width": 22,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "307:62",
+              "parentId": "307:72",
+              "name": "Button",
+              "type": "FRAME",
+              "width": 40,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "546:796",
+              "parentId": "307:62",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": false
+            },
+            {
+              "id": "307:63",
+              "parentId": "307:62",
+              "name": "Button Label",
+              "type": "TEXT",
+              "width": 21,
+              "height": 24,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "1257:1429",
+          "key": "527e1da72069d565082f4c4df0e043462e9e0109",
+          "name": "tab with divider",
+          "representativeId": "1257:1430",
+          "layout": {
+            "width": 44,
+            "height": 28,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "1257:1430",
+              "parentId": "1257:1429",
+              "name": "state=active",
+              "type": "COMPONENT",
+              "width": 44,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "1257:1431",
+              "parentId": "1257:1430",
+              "name": "Frame 1984080266",
+              "type": "FRAME",
+              "width": 44,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "1257:1432",
+              "parentId": "1257:1431",
+              "name": "Customer Info Text",
+              "type": "TEXT",
+              "width": 28,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "1257:1433",
+              "parentId": "1257:1430",
+              "name": "Line 56",
+              "type": "LINE",
+              "width": 44,
+              "height": 0,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "165:704",
+          "key": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+          "name": "tab",
+          "representativeId": "165:704",
+          "layout": {
+            "width": 575,
+            "height": 40,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 8,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "165:704",
+              "parentId": "165:616",
+              "name": "tab",
+              "type": "COMPONENT",
+              "width": 575,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "165:678",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 111,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I165:678;165:620",
+              "parentId": "165:678",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:678;165:620;70:65",
+              "parentId": "I165:678;165:620",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:678;165:620;70:65;70:78",
+              "parentId": "I165:678;165:620;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I165:678;165:621",
+              "parentId": "165:678",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 63,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "165:683",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I165:683;165:674",
+              "parentId": "165:683",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:683;165:674;70:65",
+              "parentId": "I165:683;165:674",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:683;165:674;70:65;70:78",
+              "parentId": "I165:683;165:674;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I165:683;165:675",
+              "parentId": "165:683",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 60,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "165:688",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I165:688;165:674",
+              "parentId": "165:688",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:688;165:674;70:65",
+              "parentId": "I165:688;165:674",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:688;165:674;70:65;70:78",
+              "parentId": "I165:688;165:674;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I165:688;165:675",
+              "parentId": "165:688",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 60,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "165:693",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I165:693;165:674",
+              "parentId": "165:693",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:693;165:674;70:65",
+              "parentId": "I165:693;165:674",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:693;165:674;70:65;70:78",
+              "parentId": "I165:693;165:674;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I165:693;165:675",
+              "parentId": "165:693",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 60,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "165:698",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I165:698;165:674",
+              "parentId": "165:698",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:698;165:674;70:65",
+              "parentId": "I165:698;165:674",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I165:698;165:674;70:65;70:78",
+              "parentId": "I165:698;165:674;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I165:698;165:675",
+              "parentId": "165:698",
+              "name": "Tab name",
+              "type": "TEXT",
+              "width": 60,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "575:75",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": false
+            },
+            {
+              "id": "575:81",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": false
+            },
+            {
+              "id": "575:87",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": false
+            },
+            {
+              "id": "575:93",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": false
+            },
+            {
+              "id": "575:99",
+              "parentId": "165:704",
+              "name": "tab/chip",
+              "type": "INSTANCE",
+              "width": 108,
+              "height": 40,
+              "visible": false
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#tab"
+      ],
+      "items": [
+        "Distinguish the tab/chip, Switch tab, divider-tab and composed tab owners.",
+        "Use tab semantics only for switching associated panels, not merely because a control resembles a tab."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+      ],
+      "items": [
+        "Associate tabs with panels and expose which tab is selected.",
+        "Test arrow navigation, Tab order, activation and the disabled state for the selected activation model."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tab"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:20",
+          "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+          "name": "padding/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:3:55783",
+          "key": "90b28880e6631b305862eb35e2435a614a47be50",
+          "name": "bg/interaction/primary/ghost",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55894",
+          "key": "d5c30d8775594431828f6fa632c1db4252b592d0",
+          "name": "stroke/Interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55845",
+          "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+          "name": "font/weight/bold",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "75 Bd",
+            "Mobile": "75 Bd"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:58:25",
+          "key": "1511a94c0e824fea3299ae982e468372cec6661e",
+          "name": "gap/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55950",
+          "key": "d6e72c813441fa592408b41a539a2f5bfb927564",
+          "name": "stroke/field/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.5490196347236633,
+              "g": 0.5764706134796143,
+              "b": 0.6313725709915161,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55959",
+          "key": "ed4ab01f9b8ee0e2fadc7225a11794b0b2c1eb7d",
+          "name": "icon/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:f94c28b557539d785f468c69d1aea96fcda3b76b/70:166",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:b790a2f71a2a0b29b27305256700859a18f01a26/78:1541",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:dca2602e99986a2f8e096ea366549e7664c6ce26/96:1653",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:8378418247300b077cf7b11af6ca822b188dbcb4/78:96",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:a0becf34b10cc604895004694038e03a2f0d787d/78:1447",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:a027a2ae0b7344842aa2e47f0687c5bf1e6b0591/78:919",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:a7b1041f7a3a8a659e2ac9e92f8f10bd19a35467/78:967",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:4c2ca437f2ee3f4cbb2855aa0fcd83816cb9b81c/78:264",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:2c805b905be6463bb9c93da4c0274af074cbbd02/78:356",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:05a047248c1c50269e2e4ed50d6a7db30af0941e/78:656",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:bba42c562252321679606283ed0f6e555aa975d0/216:59",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:61:9",
+          "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+          "name": "bg/base/disable",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15000000596046448
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55844",
+          "key": "097bb46feff3171601c0518fbc81ce7aca68be03",
+          "name": "text/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55952",
+          "key": "9ea8056b343b70a5235732188ed18eebbd6bc248",
+          "name": "stroke/field/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55888",
+          "key": "5f17cb9b69925d7e6e269ec699e9914c2b8d03eb",
+          "name": "stroke/strong",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.800000011920929,
+              "g": 0.800000011920929,
+              "b": 0.800000011920929,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "165:618",
+          "bindings": {
+            "VariableID:54:6": {
+              "count": 2,
+              "nodeIds": [
+                "165:619",
+                "165:673"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 4,
+              "nodeIds": [
+                "165:619",
+                "304:2127",
+                "165:673"
+              ]
+            },
+            "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357": {
+              "count": 4,
+              "nodeIds": [
+                "165:619",
+                "304:2127",
+                "165:673"
+              ]
+            },
+            "VariableID:3:55783": {
+              "count": 4,
+              "nodeIds": [
+                "165:619",
+                "304:2127",
+                "165:673"
+              ]
+            },
+            "VariableID:6:55894": {
+              "count": 2,
+              "nodeIds": [
+                "165:619",
+                "304:2127"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 2,
+              "nodeIds": [
+                "I165:620;70:65;70:78",
+                "I304:2128;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 2,
+              "nodeIds": [
+                "165:621",
+                "304:2129"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 2,
+              "nodeIds": [
+                "165:621",
+                "165:675"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 2,
+              "nodeIds": [
+                "165:621",
+                "304:2129"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 4,
+              "nodeIds": [
+                "165:621",
+                "304:2129",
+                "165:675"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 2,
+              "nodeIds": [
+                "165:621",
+                "165:675"
+              ]
+            },
+            "VariableID:58:25": {
+              "count": 2,
+              "nodeIds": [
+                "304:2127",
+                "304:2136"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 2,
+              "nodeIds": [
+                "304:2127",
+                "304:2136"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 2,
+              "nodeIds": [
+                "304:2129",
+                "304:2138"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 2,
+              "nodeIds": [
+                "304:2129",
+                "304:2138"
+              ]
+            },
+            "VariableID:6:55950": {
+              "count": 2,
+              "nodeIds": [
+                "165:673",
+                "304:2136"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 2,
+              "nodeIds": [
+                "I165:674;70:65;70:78",
+                "I304:2137;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 2,
+              "nodeIds": [
+                "165:675",
+                "304:2138"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "165:675",
+                "304:2138"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "307:73",
+          "bindings": {
+            "VariableID:58:20": {
+              "count": 24,
+              "nodeIds": [
+                "307:72",
+                "307:64",
+                "307:62"
+              ]
+            },
+            "VariableID:f94c28b557539d785f468c69d1aea96fcda3b76b/70:166": {
+              "count": 8,
+              "nodeIds": [
+                "307:72",
+                "1070:91",
+                "307:71"
+              ]
+            },
+            "VariableID:b790a2f71a2a0b29b27305256700859a18f01a26/78:1541": {
+              "count": 8,
+              "nodeIds": [
+                "307:72",
+                "1070:91",
+                "307:71"
+              ]
+            },
+            "VariableID:dca2602e99986a2f8e096ea366549e7664c6ce26/96:1653": {
+              "count": 8,
+              "nodeIds": [
+                "307:72",
+                "1070:91",
+                "307:71"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 16,
+              "nodeIds": [
+                "307:64",
+                "307:62",
+                "1070:92"
+              ]
+            },
+            "VariableID:8378418247300b077cf7b11af6ca822b188dbcb4/78:96": {
+              "count": 16,
+              "nodeIds": [
+                "307:64",
+                "307:62",
+                "1070:92"
+              ]
+            },
+            "VariableID:a0becf34b10cc604895004694038e03a2f0d787d/78:1447": {
+              "count": 12,
+              "nodeIds": [
+                "307:64",
+                "307:62",
+                "1070:92"
+              ]
+            },
+            "VariableID:a027a2ae0b7344842aa2e47f0687c5bf1e6b0591/78:919": {
+              "count": 4,
+              "nodeIds": [
+                "307:65",
+                "1070:94",
+                "307:70"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 4,
+              "nodeIds": [
+                "307:65",
+                "307:70",
+                "883:894"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 8,
+              "nodeIds": [
+                "307:65",
+                "1070:94",
+                "307:70"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 12,
+              "nodeIds": [
+                "307:65",
+                "1070:94",
+                "1070:97"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 4,
+              "nodeIds": [
+                "307:65",
+                "307:70",
+                "883:894"
+              ]
+            },
+            "VariableID:a7b1041f7a3a8a659e2ac9e92f8f10bd19a35467/78:967": {
+              "count": 4,
+              "nodeIds": [
+                "307:63",
+                "1070:97",
+                "307:68"
+              ]
+            },
+            "VariableID:4c2ca437f2ee3f4cbb2855aa0fcd83816cb9b81c/78:264": {
+              "count": 4,
+              "nodeIds": [
+                "307:63",
+                "307:68",
+                "883:897"
+              ]
+            },
+            "VariableID:2c805b905be6463bb9c93da4c0274af074cbbd02/78:356": {
+              "count": 4,
+              "nodeIds": [
+                "307:63",
+                "307:68",
+                "883:897"
+              ]
+            },
+            "VariableID:05a047248c1c50269e2e4ed50d6a7db30af0941e/78:656": {
+              "count": 4,
+              "nodeIds": [
+                "307:63",
+                "307:68",
+                "883:897"
+              ]
+            },
+            "VariableID:bba42c562252321679606283ed0f6e555aa975d0/216:59": {
+              "count": 4,
+              "nodeIds": [
+                "307:63",
+                "307:68",
+                "883:897"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 8,
+              "nodeIds": [
+                "1070:94",
+                "1070:97",
+                "1070:101"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 8,
+              "nodeIds": [
+                "1070:94",
+                "1070:97",
+                "1070:101"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 4,
+              "nodeIds": [
+                "1070:97",
+                "1070:101",
+                "1070:111"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 4,
+              "nodeIds": [
+                "883:892",
+                "1070:106",
+                "883:902"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 4,
+              "nodeIds": [
+                "883:894",
+                "1070:108",
+                "883:904"
+              ]
+            },
+            "VariableID:6:55844": {
+              "count": 4,
+              "nodeIds": [
+                "883:897",
+                "1070:111",
+                "883:901"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "1257:1429",
+          "bindings": {
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1432"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 2,
+              "nodeIds": [
+                "1257:1432",
+                "1257:1436"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1432"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "1257:1432",
+                "1257:1436"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 2,
+              "nodeIds": [
+                "1257:1432",
+                "1257:1436"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1433"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1436"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1436"
+              ]
+            },
+            "VariableID:6:55888": {
+              "count": 1,
+              "nodeIds": [
+                "1257:1437"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "165:704",
+          "bindings": {
+            "VariableID:58:21": {
+              "count": 1,
+              "nodeIds": [
+                "165:704"
+              ]
+            },
+            "VariableID:54:6": {
+              "count": 10,
+              "nodeIds": [
+                "165:678",
+                "165:683",
+                "165:688"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 10,
+              "nodeIds": [
+                "165:678",
+                "165:683",
+                "165:688"
+              ]
+            },
+            "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357": {
+              "count": 10,
+              "nodeIds": [
+                "165:678",
+                "165:683",
+                "165:688"
+              ]
+            },
+            "VariableID:3:55783": {
+              "count": 10,
+              "nodeIds": [
+                "165:678",
+                "165:683",
+                "165:688"
+              ]
+            },
+            "VariableID:6:55894": {
+              "count": 1,
+              "nodeIds": [
+                "165:678"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "I165:678;165:620;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "I165:678;165:621"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 5,
+              "nodeIds": [
+                "I165:678;165:621",
+                "I165:683;165:675",
+                "I165:688;165:675"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "I165:678;165:621"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 5,
+              "nodeIds": [
+                "I165:678;165:621",
+                "I165:683;165:675",
+                "I165:688;165:675"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 5,
+              "nodeIds": [
+                "I165:678;165:621",
+                "I165:683;165:675",
+                "I165:688;165:675"
+              ]
+            },
+            "VariableID:6:55950": {
+              "count": 9,
+              "nodeIds": [
+                "165:683",
+                "165:688",
+                "165:693"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 4,
+              "nodeIds": [
+                "I165:683;165:674;70:65;70:78",
+                "I165:688;165:674;70:65;70:78",
+                "I165:693;165:674;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 4,
+              "nodeIds": [
+                "I165:683;165:675",
+                "I165:688;165:675",
+                "I165:693;165:675"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 4,
+              "nodeIds": [
+                "I165:683;165:675",
+                "I165:688;165:675",
+                "I165:693;165:675"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tab"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "165:618",
+          "key": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+          "name": "tab/chip",
+          "api": {
+            "left-icon#165:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "right-icon#744:0": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "active": {
+              "type": "VARIANT",
+              "defaultValue": "yes",
+              "variantOptions": [
+                "yes",
+                "no"
+              ]
+            },
+            ".device": {
+              "type": "VARIANT",
+              "defaultValue": "desktop",
+              "variantOptions": [
+                "desktop",
+                "mobile"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "165:619",
+              "name": "active=yes, .device=desktop",
+              "width": 111,
+              "height": 40
+            },
+            {
+              "id": "304:2127",
+              "name": "active=yes, .device=mobile",
+              "width": 99,
+              "height": 28
+            },
+            {
+              "id": "165:673",
+              "name": "active=no, .device=desktop",
+              "width": 108,
+              "height": 40
+            },
+            {
+              "id": "304:2136",
+              "name": "active=no, .device=mobile",
+              "width": 96,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "nodeId": "307:73",
+          "key": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+          "name": "Switch tab",
+          "api": {
+            "leading icon#546:0": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "disabled",
+                "default"
+              ]
+            },
+            "active": {
+              "type": "VARIANT",
+              "defaultValue": "left",
+              "variantOptions": [
+                "left",
+                "right"
+              ]
+            },
+            "size": {
+              "type": "VARIANT",
+              "defaultValue": "md",
+              "variantOptions": [
+                "md",
+                "lg"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "307:72",
+              "name": "state=default, active=left, size=md",
+              "width": 88,
+              "height": 32
+            },
+            {
+              "id": "1070:91",
+              "name": "state=default, active=left, size=lg",
+              "width": 95,
+              "height": 36
+            },
+            {
+              "id": "307:71",
+              "name": "state=default, active=right, size=md",
+              "width": 88,
+              "height": 32
+            },
+            {
+              "id": "1070:98",
+              "name": "state=default, active=right, size=lg",
+              "width": 95,
+              "height": 36
+            },
+            {
+              "id": "883:891",
+              "name": "state=disabled, active=left, size=md",
+              "width": 88,
+              "height": 32
+            },
+            {
+              "id": "1070:105",
+              "name": "state=disabled, active=left, size=lg",
+              "width": 95,
+              "height": 36
+            },
+            {
+              "id": "883:898",
+              "name": "state=disabled, active=right, size=md",
+              "width": 88,
+              "height": 32
+            },
+            {
+              "id": "1070:112",
+              "name": "state=disabled, active=right, size=lg",
+              "width": 95,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "nodeId": "1257:1429",
+          "key": "527e1da72069d565082f4c4df0e043462e9e0109",
+          "name": "tab with divider",
+          "api": {
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "active",
+              "variantOptions": [
+                "active",
+                "inactive"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "1257:1430",
+              "name": "state=active",
+              "width": 44,
+              "height": 28
+            },
+            {
+              "id": "1257:1434",
+              "name": "state=inactive",
+              "width": 43,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "nodeId": "165:704",
+          "key": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+          "name": "tab",
+          "api": {},
+          "variants": [
+            {
+              "id": "165:704",
+              "name": "tab",
+              "width": 575,
+              "height": 40
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "307:73",
+          "nodeId": "307:72",
+          "path": "assets/figma/tab-307-73.svg",
+          "width": 88,
+          "height": 32,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "1257:1429",
+          "nodeId": "1257:1430",
+          "path": "assets/figma/tab-1257-1429.svg",
+          "width": 44,
+          "height": 28,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [
+        "165:618",
+        "165:704"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tab"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 16,
+          "usedByOwner": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+          "packageId": null
+        },
+        {
+          "key": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+          "nodeId": "165:618",
+          "name": "tab/chip",
+          "remote": false,
+          "count": 10,
+          "usedByOwner": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+          "packageId": "tab"
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 5,
+          "usedByOwner": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 5,
+          "usedByOwner": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

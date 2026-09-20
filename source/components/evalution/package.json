@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "evalution",
+  "name": "Evalution",
+  "status": "BLOCKED_EMPTY_FIGMA_SOURCE",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "305:10284",
+    "pageName": "Evalution"
+  },
+  "identity": {
+    "ownerCount": 0,
+    "componentKeys": [],
+    "preferredComponentKey": null
+  },
+  "components": [],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "legacy page spelling Evalution"
+    ]
+  },
+  "website": {
+    "route": "/components/evalution",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "BLOCKED_EMPTY_FIGMA_SOURCE"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "BLOCKED",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#evalution"
+      ],
+      "owners": []
+    },
+    "usage": {
+      "status": "BLOCKED",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#evalution"
+      ],
+      "items": [],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "BLOCKED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [],
+      "items": [],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "BLOCKED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#evalution"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [],
+      "ownerBindings": []
+    },
+    "examples": {
+      "status": "BLOCKED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#evalution"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": []
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "BLOCKED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#evalution"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "EMPTY_FIGMA_SOURCE",
+    "checkedAt": "2026-09-20"
+  }
+}

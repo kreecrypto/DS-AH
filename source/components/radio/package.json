@@ -1,0 +1,1103 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "radio",
+  "name": "Radio",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "218:125",
+    "pageName": "Radio"
+  },
+  "identity": {
+    "ownerCount": 3,
+    "componentKeys": [
+      "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+      "f90d2487d05573910316e182ac17e5bece4c856a",
+      "888654c1d9d03deffb3eef2ebc450568ed6e71e3"
+    ],
+    "preferredComponentKey": "f90d2487d05573910316e182ac17e5bece4c856a"
+  },
+  "components": [
+    {
+      "nodeId": "218:233",
+      "componentKey": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+      "figmaName": "radio",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "legacy_simple_duplicate"
+    },
+    {
+      "nodeId": "304:2149",
+      "componentKey": "f90d2487d05573910316e182ac17e5bece4c856a",
+      "figmaName": "radio",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disable",
+          "error"
+        ],
+        "check": [
+          "fasle",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "preferred_radio_candidate_with_typos"
+    },
+    {
+      "nodeId": "304:2197",
+      "componentKey": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+      "figmaName": "radio-list",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "type": [
+          "default",
+          "only-title"
+        ],
+        "state": [
+          "default",
+          "disable"
+        ],
+        "check": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Default",
+          "OnlyTitle"
+        ],
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "canonical_with_disable_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "disable→Disabled",
+      "fasle→False"
+    ]
+  },
+  "website": {
+    "route": "/components/radio",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#radio"
+      ],
+      "owners": [
+        {
+          "nodeId": "218:233",
+          "key": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+          "name": "radio",
+          "representativeId": "218:231",
+          "layout": {
+            "width": 91,
+            "height": 24,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 8,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "218:231",
+              "parentId": "218:233",
+              "name": "ischeck=true",
+              "type": "COMPONENT",
+              "width": 91,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "218:146",
+              "parentId": "218:231",
+              "name": "radio",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I218:146;882:73565",
+              "parentId": "218:146",
+              "name": "Bounding box",
+              "type": "RECTANGLE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I218:146;882:73566",
+              "parentId": "218:146",
+              "name": "radio_button_checked",
+              "type": "VECTOR",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "218:147",
+              "parentId": "218:231",
+              "name": "Status Text",
+              "type": "TEXT",
+              "width": 59,
+              "height": 18,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "304:2149",
+          "key": "f90d2487d05573910316e182ac17e5bece4c856a",
+          "name": "radio",
+          "representativeId": "304:2150",
+          "layout": {
+            "width": 24,
+            "height": 24,
+            "mode": "NONE",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "304:2150",
+              "parentId": "304:2149",
+              "name": "state=default, check=fasle",
+              "type": "COMPONENT",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "304:2151",
+              "parentId": "304:2150",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I304:2151;70:162",
+              "parentId": "304:2151",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "304:2197",
+          "key": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+          "name": "radio-list",
+          "representativeId": "304:2198",
+          "layout": {
+            "width": 300,
+            "height": 48,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 8,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "304:2198",
+              "parentId": "304:2197",
+              "name": "type=default,state=default,check=false",
+              "type": "COMPONENT",
+              "width": 300,
+              "height": 48,
+              "visible": true
+            },
+            {
+              "id": "304:2199",
+              "parentId": "304:2198",
+              "name": "radio",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I304:2199;304:2151",
+              "parentId": "304:2199",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I304:2199;304:2151;70:162",
+              "parentId": "I304:2199;304:2151",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "304:2200",
+              "parentId": "304:2198",
+              "name": "text",
+              "type": "FRAME",
+              "width": 268,
+              "height": 48,
+              "visible": true
+            },
+            {
+              "id": "304:2201",
+              "parentId": "304:2200",
+              "name": "text",
+              "type": "TEXT",
+              "width": 268,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "304:2202",
+              "parentId": "304:2200",
+              "name": "text-description",
+              "type": "TEXT",
+              "width": 268,
+              "height": 24,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#radio"
+      ],
+      "items": [
+        "Use for one selection within a named group.",
+        "Retain literal legacy values such as fasle at the source boundary; do not silently rename an existing instance."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+      ],
+      "items": [
+        "Give the group and each option accessible names.",
+        "Test Space and arrow-key selection, checked state and disabled behavior."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#radio"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4f7e360b9892f97ca5e4692fe3eed1945d190ade/78:1622",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:31",
+          "key": "b4ae1aad38627cd7e1f8705695bcef3ae4ea9292",
+          "name": "font/line-height/sm",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 18,
+            "Mobile": 18
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:c69f95fa64399dd9b122a52900465872ccc52c05/78:1628",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7:55763",
+          "key": "d1416185ca38b2aa9b0c2990f680e18f7a0eba5b",
+          "name": "icon/interaction/secondary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55961",
+          "key": "9de105cddf8fb7e742713981e7174dcec16adaae",
+          "name": "icon/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7:55769",
+          "key": "988106e7760741617f96a5a535419149ca4fca5c",
+          "name": "icon/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:4",
+          "key": "641b335f0df0aac0671e6406621ba96e4cf7935b",
+          "name": "text/primary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.10196078568696976,
+              "g": 0.11372549086809158,
+              "b": 0.12941177189350128,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6:55844",
+          "key": "097bb46feff3171601c0518fbc81ce7aca68be03",
+          "name": "text/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "218:233",
+          "bindings": {
+            "VariableID:58:21": {
+              "count": 2,
+              "nodeIds": [
+                "218:231",
+                "218:232"
+              ]
+            },
+            "VariableID:4f7e360b9892f97ca5e4692fe3eed1945d190ade/78:1622": {
+              "count": 1,
+              "nodeIds": [
+                "I218:146;882:73566"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "218:147"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 2,
+              "nodeIds": [
+                "218:147",
+                "218:150"
+              ]
+            },
+            "VariableID:c69f95fa64399dd9b122a52900465872ccc52c05/78:1628": {
+              "count": 1,
+              "nodeIds": [
+                "I218:149;882:73563"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "218:150"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "304:2149",
+          "bindings": {
+            "VariableID:7:55763": {
+              "count": 1,
+              "nodeIds": [
+                "I304:2151;70:162"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 2,
+              "nodeIds": [
+                "I304:2153;70:162",
+                "I304:2159;70:160"
+              ]
+            },
+            "VariableID:7:55769": {
+              "count": 1,
+              "nodeIds": [
+                "I304:2155;70:160"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "I304:2157;70:160"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "304:2197",
+          "bindings": {
+            "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332": {
+              "count": 6,
+              "nodeIds": [
+                "304:2198",
+                "304:2203",
+                "304:2207"
+              ]
+            },
+            "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330": {
+              "count": 6,
+              "nodeIds": [
+                "304:2198",
+                "304:2203",
+                "304:2207"
+              ]
+            },
+            "VariableID:7:55763": {
+              "count": 2,
+              "nodeIds": [
+                "I304:2199;304:2151;70:162",
+                "I304:2204;304:2151;70:162"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 4,
+              "nodeIds": [
+                "304:2200",
+                "304:2209",
+                "304:2218"
+              ]
+            },
+            "VariableID:62:4": {
+              "count": 4,
+              "nodeIds": [
+                "304:2201",
+                "304:2206",
+                "304:2210"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 8,
+              "nodeIds": [
+                "304:2201",
+                "304:2206",
+                "304:2210"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 12,
+              "nodeIds": [
+                "304:2201",
+                "304:2202",
+                "304:2206"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 12,
+              "nodeIds": [
+                "304:2201",
+                "304:2202",
+                "304:2206"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 8,
+              "nodeIds": [
+                "304:2201",
+                "304:2206",
+                "304:2210"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 2,
+              "nodeIds": [
+                "304:2202",
+                "304:2211"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 4,
+              "nodeIds": [
+                "304:2202",
+                "304:2211",
+                "304:2220"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 4,
+              "nodeIds": [
+                "304:2202",
+                "304:2211",
+                "304:2220"
+              ]
+            },
+            "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331": {
+              "count": 4,
+              "nodeIds": [
+                "304:2205",
+                "304:2214",
+                "304:2223"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 2,
+              "nodeIds": [
+                "I304:2208;304:2157;70:160",
+                "I304:2213;304:2157;70:160"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 4,
+              "nodeIds": [
+                "I304:2217;304:2159;70:160",
+                "I304:2222;304:2159;70:160",
+                "I304:2226;304:2153;70:162"
+              ]
+            },
+            "VariableID:6:55844": {
+              "count": 6,
+              "nodeIds": [
+                "304:2219",
+                "304:2220",
+                "304:2224"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#radio"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "218:233",
+          "key": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+          "name": "radio",
+          "api": {
+            "ischeck": {
+              "type": "VARIANT",
+              "defaultValue": "true",
+              "variantOptions": [
+                "false",
+                "true"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "218:231",
+              "name": "ischeck=true",
+              "width": 91,
+              "height": 24
+            },
+            {
+              "id": "218:232",
+              "name": "ischeck=false",
+              "width": 88,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "nodeId": "304:2149",
+          "key": "f90d2487d05573910316e182ac17e5bece4c856a",
+          "name": "radio",
+          "api": {
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "disable",
+                "error"
+              ]
+            },
+            "check": {
+              "type": "VARIANT",
+              "defaultValue": "fasle",
+              "variantOptions": [
+                "fasle",
+                "true"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "304:2150",
+              "name": "state=default, check=fasle",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "304:2152",
+              "name": "state=disable, check=fasle",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "304:2154",
+              "name": "state=error, check=fasle",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "304:2156",
+              "name": "state=default, check=true",
+              "width": 24,
+              "height": 24
+            },
+            {
+              "id": "304:2158",
+              "name": "state=disable, check=true",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "nodeId": "304:2197",
+          "key": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+          "name": "radio-list",
+          "api": {
+            "type": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "only-title"
+              ]
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "disable"
+              ]
+            },
+            "check": {
+              "type": "VARIANT",
+              "defaultValue": "false",
+              "variantOptions": [
+                "false",
+                "true"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "304:2198",
+              "name": "type=default,state=default,check=false",
+              "width": 300,
+              "height": 48
+            },
+            {
+              "id": "304:2203",
+              "name": "type=only-title, state=default, check=false",
+              "width": 300,
+              "height": 24
+            },
+            {
+              "id": "304:2207",
+              "name": "type=default, state=default, check=true",
+              "width": 300,
+              "height": 48
+            },
+            {
+              "id": "304:2212",
+              "name": "type=only-title, state=default, check=true",
+              "width": 300,
+              "height": 24
+            },
+            {
+              "id": "304:2216",
+              "name": "type=default, state=disable, check=true",
+              "width": 300,
+              "height": 48
+            },
+            {
+              "id": "304:2221",
+              "name": "type=only-title, state=disable, check=true",
+              "width": 300,
+              "height": 24
+            },
+            {
+              "id": "304:2225",
+              "name": "type=default, state=disable, check=false",
+              "width": 300,
+              "height": 48
+            },
+            {
+              "id": "304:2230",
+              "name": "type=only-title, state=disable, check=false",
+              "width": 300,
+              "height": 24
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "218:233",
+          "nodeId": "218:231",
+          "path": "assets/figma/radio-218-233.svg",
+          "width": 91,
+          "height": 24,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "304:2149",
+          "nodeId": "304:2150",
+          "path": "assets/figma/radio-304-2149.svg",
+          "width": 24,
+          "height": 24,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [
+        "304:2197"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#radio"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "a34c47f4f91cb9c55ffdb07d30ffdcc5d738250d",
+          "nodeId": "218:130",
+          "name": "radio",
+          "remote": true,
+          "count": 2,
+          "usedByOwner": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 5,
+          "usedByOwner": "f90d2487d05573910316e182ac17e5bece4c856a",
+          "packageId": null
+        },
+        {
+          "key": "f90d2487d05573910316e182ac17e5bece4c856a",
+          "nodeId": "304:2149",
+          "name": "radio",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+          "packageId": "radio"
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "avatar",
+  "name": "Avatar",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "144:439",
+    "pageName": "Avatar"
+  },
+  "identity": {
+    "ownerCount": 1,
+    "componentKeys": [
+      "78149762034307de859d934c10970de208ef2cee"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "144:435",
+      "componentKey": "78149762034307de859d934c10970de208ef2cee",
+      "figmaName": "avatar",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/avatar",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#avatar"
+      ],
+      "owners": [
+        {
+          "nodeId": "144:435",
+          "key": "78149762034307de859d934c10970de208ef2cee",
+          "name": "avatar",
+          "representativeId": "144:435",
+          "layout": {
+            "width": 32,
+            "height": 32,
+            "mode": "NONE",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "144:435",
+              "parentId": "144:439",
+              "name": "avatar",
+              "type": "COMPONENT",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "144:434",
+              "parentId": "144:435",
+              "name": "Ellipse 1",
+              "type": "ELLIPSE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#avatar"
+      ],
+      "items": [
+        "Use to identify a person beside a name; do not encode account status in the portrait.",
+        "Keep an explicit name or fallback when no portrait is available."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/tutorials/images/decision-tree/"
+      ],
+      "items": [
+        "Decide whether the portrait adds information beyond the adjacent name; review its text alternative.",
+        "If the avatar opens a profile, label and test the enclosing link rather than making the image an unnamed action."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#avatar"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [],
+      "ownerBindings": [
+        {
+          "nodeId": "144:435",
+          "bindings": {}
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#avatar"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "144:435",
+          "key": "78149762034307de859d934c10970de208ef2cee",
+          "name": "avatar",
+          "api": {},
+          "variants": [
+            {
+              "id": "144:435",
+              "name": "avatar",
+              "width": 32,
+              "height": 32
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "144:435",
+          "nodeId": "144:435",
+          "path": "assets/figma/avatar-144-435.svg",
+          "width": 32,
+          "height": 32,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#avatar"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ds-ah.local/schemas/component-source-package.schema.json",
+  "title": "AH Component Source Package",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "id",
+    "name",
+    "status",
+    "authority",
+    "identity",
+    "components",
+    "governance",
+    "website",
+    "evidence",
+    "enrichment",
+    "rule",
+    "webValidation",
+    "webReadiness"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "kind": {
+      "const": "component-source-package"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "SOURCE_READY",
+        "WEB_READY",
+        "BLOCKED_EMPTY_FIGMA_SOURCE"
+      ]
+    },
+    "authority": {
+      "type": "object"
+    },
+    "identity": {
+      "type": "object"
+    },
+    "components": {
+      "type": "array"
+    },
+    "governance": {
+      "type": "object"
+    },
+    "website": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "enrichment": {
+      "type": "object",
+      "required": ["anatomy", "usage", "accessibility", "tokenDependencySubset", "examples", "visualReference", "relatedComponents"],
+      "additionalProperties": {"$ref": "#/$defs/section"}
+    },
+    "webValidation": {
+      "type": "object",
+      "required": ["runtime", "responsive", "accessibility", "visualRegression"],
+      "additionalProperties": {"$ref": "#/$defs/section"}
+    },
+    "webReadiness": {
+      "type": "object",
+      "required": ["eligible"],
+      "properties": {"eligible": {"type": "boolean"}}
+    },
+    "rule": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": ["status", "evidence"],
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

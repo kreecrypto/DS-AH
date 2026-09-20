@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "container",
+  "name": "Container",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "129:420",
+    "pageName": "Container"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "878930169cd08b4b65acd09970260f1d3bf89e57",
+      "c08f699d2a2320780d6f9623f875940bed392fcf"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "129:413",
+      "componentKey": "878930169cd08b4b65acd09970260f1d3bf89e57",
+      "figmaName": "container",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "129:415",
+      "componentKey": "c08f699d2a2320780d6f9623f875940bed392fcf",
+      "figmaName": "swap-content",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/container",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#container"
+      ],
+      "owners": [
+        {
+          "nodeId": "129:413",
+          "key": "878930169cd08b4b65acd09970260f1d3bf89e57",
+          "name": "container",
+          "representativeId": "129:413",
+          "layout": {
+            "width": 345,
+            "height": 206,
+            "mode": "VERTICAL",
+            "padding": [
+              12,
+              12,
+              12,
+              12
+            ],
+            "gap": 12,
+            "radius": 16
+          },
+          "nodes": [
+            {
+              "id": "129:413",
+              "parentId": "129:1015",
+              "name": "container",
+              "type": "COMPONENT",
+              "width": 345,
+              "height": 206,
+              "visible": true
+            },
+            {
+              "id": "129:414",
+              "parentId": "129:413",
+              "name": "swap-content",
+              "type": "INSTANCE",
+              "width": 321,
+              "height": 182,
+              "visible": true
+            },
+            {
+              "id": "I129:414;129:416",
+              "parentId": "129:414",
+              "name": "swap content",
+              "type": "TEXT",
+              "width": 193,
+              "height": 54,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "129:415",
+          "key": "c08f699d2a2320780d6f9623f875940bed392fcf",
+          "name": "swap-content",
+          "representativeId": "129:415",
+          "layout": {
+            "width": 321,
+            "height": 182,
+            "mode": "HORIZONTAL",
+            "padding": [
+              64,
+              64,
+              64,
+              64
+            ],
+            "gap": 10,
+            "radius": 8
+          },
+          "nodes": [
+            {
+              "id": "129:415",
+              "parentId": "129:1015",
+              "name": "swap-content",
+              "type": "COMPONENT",
+              "width": 321,
+              "height": 182,
+              "visible": true
+            },
+            {
+              "id": "129:416",
+              "parentId": "129:415",
+              "name": "swap content",
+              "type": "TEXT",
+              "width": 193,
+              "height": 54,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#container"
+      ],
+      "items": [
+        "Use container as the Core composition surface; swap-content is a separate content owner.",
+        "Do not rename this primitive to a new Core Card API."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/"
+      ],
+      "items": [
+        "Choose semantics from the contained content, not from the visual box.",
+        "Keep a logical heading order and avoid unnecessary focus stops on static surfaces."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#container"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:34",
+          "key": "753edf11160dfb7d1d70d06945bd5455d35c5038",
+          "name": "radius/xl",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:61:6",
+          "key": "e13ff1c705e6c0be1c5ad2db999ac04ac8f09019",
+          "name": "bg/base/base",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:12",
+          "key": "9bcc8b1bb2b476689ca2436f52e3c390e57ba62f",
+          "name": "stroke/regular",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8980392217636108,
+              "g": 0.8980392217636108,
+              "b": 0.8980392217636108,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:14",
+          "key": "931bb0b4bf0085fe1b4bc512fb526684368172b0",
+          "name": "padding/8xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 64
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:32",
+          "key": "d4a0fadd71244c9169eedd88d9403a6fea073f0d",
+          "name": "radius/md",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55770",
+          "key": "15688fde1e669ec3e5d2edba364211de8cc12b2a",
+          "name": "bg/decorative/emphasis/expressive/low",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.886274516582489,
+              "g": 0.9372549057006836,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55861",
+          "key": "038c0fb7be615a595d85640d13fd8144c3edf0cf",
+          "name": "font/size/5xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 48,
+            "Mobile": 32
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55844",
+          "key": "bc7730b2b41fd8a6b99eb35d75ac920f87bb366e",
+          "name": "font/weight/light",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "45 Li",
+            "Mobile": "45 Li"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55793",
+          "key": "3e03fd3bad5d30edec2aefd9fe07ac48bc99a429",
+          "name": "font/family/heading",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:40",
+          "key": "c3d2bbb2420b410ec45dd44c3603205cacc88a85",
+          "name": "font/line-height/7xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 54,
+            "Mobile": 42
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "129:413",
+          "bindings": {
+            "VariableID:54:6": {
+              "count": 1,
+              "nodeIds": [
+                "129:413"
+              ]
+            },
+            "VariableID:70:34": {
+              "count": 1,
+              "nodeIds": [
+                "129:413"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "129:413"
+              ]
+            },
+            "VariableID:62:12": {
+              "count": 1,
+              "nodeIds": [
+                "129:413"
+              ]
+            },
+            "VariableID:54:14": {
+              "count": 1,
+              "nodeIds": [
+                "129:414"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 1,
+              "nodeIds": [
+                "129:414"
+              ]
+            },
+            "VariableID:3:55770": {
+              "count": 1,
+              "nodeIds": [
+                "129:414"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "I129:414;129:416"
+              ]
+            },
+            "VariableID:9:55861": {
+              "count": 1,
+              "nodeIds": [
+                "I129:414;129:416"
+              ]
+            },
+            "VariableID:9:55844": {
+              "count": 1,
+              "nodeIds": [
+                "I129:414;129:416"
+              ]
+            },
+            "VariableID:9:55793": {
+              "count": 1,
+              "nodeIds": [
+                "I129:414;129:416"
+              ]
+            },
+            "VariableID:51:40": {
+              "count": 1,
+              "nodeIds": [
+                "I129:414;129:416"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "129:415",
+          "bindings": {
+            "VariableID:54:14": {
+              "count": 1,
+              "nodeIds": [
+                "129:415"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 1,
+              "nodeIds": [
+                "129:415"
+              ]
+            },
+            "VariableID:3:55770": {
+              "count": 1,
+              "nodeIds": [
+                "129:415"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "129:416"
+              ]
+            },
+            "VariableID:9:55861": {
+              "count": 1,
+              "nodeIds": [
+                "129:416"
+              ]
+            },
+            "VariableID:9:55844": {
+              "count": 1,
+              "nodeIds": [
+                "129:416"
+              ]
+            },
+            "VariableID:9:55793": {
+              "count": 1,
+              "nodeIds": [
+                "129:416"
+              ]
+            },
+            "VariableID:51:40": {
+              "count": 1,
+              "nodeIds": [
+                "129:416"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#container"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "129:413",
+          "key": "878930169cd08b4b65acd09970260f1d3bf89e57",
+          "name": "container",
+          "api": {},
+          "variants": [
+            {
+              "id": "129:413",
+              "name": "container",
+              "width": 345,
+              "height": 206
+            }
+          ]
+        },
+        {
+          "nodeId": "129:415",
+          "key": "c08f699d2a2320780d6f9623f875940bed392fcf",
+          "name": "swap-content",
+          "api": {},
+          "variants": [
+            {
+              "id": "129:415",
+              "name": "swap-content",
+              "width": 321,
+              "height": 182
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [],
+      "missingOwnerIds": [
+        "129:413",
+        "129:415"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#container"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "c08f699d2a2320780d6f9623f875940bed392fcf",
+          "nodeId": "129:415",
+          "name": "swap-content",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "878930169cd08b4b65acd09970260f1d3bf89e57",
+          "packageId": "container"
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

@@ -1,0 +1,5790 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "navbar",
+  "name": "Navbar",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "105:910",
+    "pageName": "Navbar"
+  },
+  "identity": {
+    "ownerCount": 12,
+    "componentKeys": [
+      "27cffe58afdec2bef93250b55cfa11835276b823",
+      "c27fb78aa960961f5557379b41e0cb5356842c92",
+      "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+      "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+      "558b8d869443d0719a184f552bb0503b567f1203",
+      "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+      "8c565095086ab54369ac9016287135b196141358",
+      "640a0f70dae56e7abfc431e894673d240c15619b",
+      "99c9834309df6aa9f48301581c2bfe295610373e",
+      "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+      "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+      "01afd7cbdf324fb90cddcaf30327919310d773a1"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "105:1113",
+      "componentKey": "27cffe58afdec2bef93250b55cfa11835276b823",
+      "figmaName": "side-bar",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "size": [
+          "lg",
+          "md"
+        ],
+        "state": [
+          "default",
+          "sub-expand"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Size": [
+          "LG",
+          "MD"
+        ],
+        "State": [
+          "Default",
+          "SubExpanded"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "105:1223",
+      "componentKey": "c27fb78aa960961f5557379b41e0cb5356842c92",
+      "figmaName": "menu",
+      "variantCount": 16,
+      "figmaCurrentApi": {
+        ".device": [
+          "desktop",
+          "tablet"
+        ],
+        "status": [
+          "default",
+          "selected",
+          "sub",
+          "sub-selected"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet"
+        ],
+        "State": [
+          "Default",
+          "Selected",
+          "Sub",
+          "SubSelected"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "139:573",
+      "componentKey": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+      "figmaName": "mobile/menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "isFocus": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Focused": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "167:1485",
+      "componentKey": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+      "figmaName": "header",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "page": [
+          "home",
+          "web page",
+          "header",
+          "header with action"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Home",
+          "WebPage",
+          "Header",
+          "HeaderWithAction"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "285:995",
+      "componentKey": "640a0f70dae56e7abfc431e894673d240c15619b",
+      "figmaName": "primary-menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "stage": [
+          "default",
+          "selected"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "302:9576",
+      "componentKey": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+      "figmaName": "badge-filter",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ],
+        "device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "1294:1197",
+      "componentKey": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+      "figmaName": "tab/search",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "stage": [
+          "Default",
+          "selected",
+          "hover",
+          "disable"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected",
+          "Hover",
+          "Disabled"
+        ]
+      },
+      "registryStatus": "canonical_with_case_disable_debt"
+    },
+    {
+      "nodeId": "139:562",
+      "componentKey": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+      "figmaName": "mobile/bottom-nav-bar",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "144:406",
+      "componentKey": "558b8d869443d0719a184f552bb0503b567f1203",
+      "figmaName": "mobile/top-nav-bar",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "209:521",
+      "componentKey": "8c565095086ab54369ac9016287135b196141358",
+      "figmaName": "desktop/search",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "302:1391",
+      "componentKey": "99c9834309df6aa9f48301581c2bfe295610373e",
+      "figmaName": "search-filter",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "409:1192",
+      "componentKey": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+      "figmaName": "notification",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      ".device→Device",
+      "stage→State when interaction state"
+    ]
+  },
+  "website": {
+    "route": "/components/navbar",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#navbar"
+      ],
+      "owners": [
+        {
+          "nodeId": "105:1113",
+          "key": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "name": "side-bar",
+          "representativeId": "105:1114",
+          "layout": {
+            "width": 200,
+            "height": 821,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 24,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "105:1114",
+              "parentId": "105:1113",
+              "name": "size=md, state=default, expand=yes",
+              "type": "COMPONENT",
+              "width": 200,
+              "height": 821,
+              "visible": true
+            },
+            {
+              "id": "105:1115",
+              "parentId": "105:1114",
+              "name": "Frame 400",
+              "type": "FRAME",
+              "width": 200,
+              "height": 64,
+              "visible": true
+            },
+            {
+              "id": "105:1116",
+              "parentId": "105:1115",
+              "name": "image 471",
+              "type": "RECTANGLE",
+              "width": 67.01638793945312,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "105:1117",
+              "parentId": "105:1115",
+              "name": "Frame 1984079164",
+              "type": "FRAME",
+              "width": 156,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1118",
+              "parentId": "105:1117",
+              "name": "Frame 1984079053",
+              "type": "FRAME",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "318:1322",
+              "parentId": "105:1118",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I318:1322;70:65",
+              "parentId": "318:1322",
+              "name": "icon/arrow",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I318:1322;70:65;70:197",
+              "parentId": "I318:1322;70:65",
+              "name": "Bounding box",
+              "type": "RECTANGLE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I318:1322;70:65;70:198",
+              "parentId": "I318:1322;70:65",
+              "name": "dehaze",
+              "type": "VECTOR",
+              "width": 8.666666984558105,
+              "height": 6.809523582458496,
+              "visible": true
+            },
+            {
+              "id": "I318:1322;70:65;70:199",
+              "parentId": "I318:1322;70:65",
+              "name": "arrow_right",
+              "type": "VECTOR",
+              "width": 2.6666667461395264,
+              "height": 4,
+              "visible": true
+            },
+            {
+              "id": "105:1124",
+              "parentId": "105:1114",
+              "name": "Frame 393",
+              "type": "FRAME",
+              "width": 200,
+              "height": 480,
+              "visible": true
+            },
+            {
+              "id": "105:1125",
+              "parentId": "105:1124",
+              "name": "Frame 147",
+              "type": "FRAME",
+              "width": 200,
+              "height": 160,
+              "visible": true
+            },
+            {
+              "id": "105:1126",
+              "parentId": "105:1125",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:1225",
+              "parentId": "105:1126",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:1226",
+              "parentId": "I105:1126;105:1225",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:1226;139:688",
+              "parentId": "I105:1126;105:1226",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 10.666666984558105,
+              "height": 11.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:1227",
+              "parentId": "I105:1126;105:1225",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 108,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:3043",
+              "parentId": "I105:1126;105:1225",
+              "name": "icon/arrow",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1126;105:3043;70:187",
+              "parentId": "I105:1126;105:3043",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 7.450000762939453,
+              "height": 4.389999866485596,
+              "visible": true
+            },
+            {
+              "id": "105:1127",
+              "parentId": "105:1125",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1127;105:1233",
+              "parentId": "105:1127",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1127;105:1234",
+              "parentId": "I105:1127;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1127;105:1234;74:412",
+              "parentId": "I105:1127;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 12.666666984558105,
+              "height": 12,
+              "visible": true
+            },
+            {
+              "id": "I105:1127;105:1235",
+              "parentId": "I105:1127;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1128",
+              "parentId": "105:1125",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1128;105:1233",
+              "parentId": "105:1128",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1128;105:1234",
+              "parentId": "I105:1128;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1128;105:1234;74:418",
+              "parentId": "I105:1128;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 12.775641441345215,
+              "height": 13.116667747497559,
+              "visible": true
+            },
+            {
+              "id": "I105:1128;105:1235",
+              "parentId": "I105:1128;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1129",
+              "parentId": "105:1125",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1129;105:1233",
+              "parentId": "105:1129",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1129;105:1234",
+              "parentId": "I105:1129;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1129;105:1234;74:424",
+              "parentId": "I105:1129;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 12,
+              "height": 10.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I105:1129;105:1235",
+              "parentId": "I105:1129;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1130",
+              "parentId": "105:1125",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1130;105:1233",
+              "parentId": "105:1130",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1130;105:1234",
+              "parentId": "I105:1130;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1130;105:1234;74:430",
+              "parentId": "I105:1130;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.422222137451172,
+              "height": 12,
+              "visible": true
+            },
+            {
+              "id": "I105:1130;105:1235",
+              "parentId": "I105:1130;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1131",
+              "parentId": "105:1124",
+              "name": "Frame 148",
+              "type": "FRAME",
+              "width": 200,
+              "height": 128,
+              "visible": true
+            },
+            {
+              "id": "105:1132",
+              "parentId": "105:1131",
+              "name": "Frame 1984079311",
+              "type": "FRAME",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "105:1133",
+              "parentId": "105:1132",
+              "name": "เส้นทางการขาย",
+              "type": "TEXT",
+              "width": 168,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1134",
+              "parentId": "105:1131",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1134;105:1233",
+              "parentId": "105:1134",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1134;105:1234",
+              "parentId": "I105:1134;105:1233",
+              "name": "icon/quick-menu2",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1134;105:1234;988:1175",
+              "parentId": "I105:1134;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 21.870264053344727,
+              "height": 20.690412521362305,
+              "visible": true
+            },
+            {
+              "id": "I105:1134;105:1235",
+              "parentId": "I105:1134;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1135",
+              "parentId": "105:1131",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1135;105:1233",
+              "parentId": "105:1135",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1135;105:1234",
+              "parentId": "I105:1135;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1135;105:1234;74:442",
+              "parentId": "I105:1135;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.333333015441895,
+              "height": 13.333333015441895,
+              "visible": true
+            },
+            {
+              "id": "I105:1135;105:1235",
+              "parentId": "I105:1135;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1136",
+              "parentId": "105:1131",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1233",
+              "parentId": "105:1136",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1234",
+              "parentId": "I105:1136;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1234;74:448",
+              "parentId": "I105:1136;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.333333015441895,
+              "height": 10.144444465637207,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1235",
+              "parentId": "I105:1136;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 108,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1236",
+              "parentId": "I105:1136;105:1233",
+              "name": "icon/arrow",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1136;105:1236;70:187",
+              "parentId": "I105:1136;105:1236",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 7.450000762939453,
+              "height": 4.389999866485596,
+              "visible": true
+            },
+            {
+              "id": "105:1137",
+              "parentId": "105:1124",
+              "name": "Frame 149",
+              "type": "FRAME",
+              "width": 200,
+              "height": 160,
+              "visible": true
+            },
+            {
+              "id": "105:1138",
+              "parentId": "105:1137",
+              "name": "Frame 1984079311",
+              "type": "FRAME",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "105:1139",
+              "parentId": "105:1138",
+              "name": "ประสิทธิภาพ",
+              "type": "TEXT",
+              "width": 168,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1140",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1140;105:1233",
+              "parentId": "105:1140",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1140;105:1234",
+              "parentId": "I105:1140;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1140;105:1234;74:454",
+              "parentId": "I105:1140;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 14,
+              "height": 12.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I105:1140;105:1235",
+              "parentId": "I105:1140;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1141",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1141;105:1233",
+              "parentId": "105:1141",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1141;105:1234",
+              "parentId": "I105:1141;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1141;105:1234;74:460",
+              "parentId": "I105:1141;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 16,
+              "height": 8,
+              "visible": true
+            },
+            {
+              "id": "I105:1141;105:1235",
+              "parentId": "I105:1141;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1142",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1142;105:1233",
+              "parentId": "105:1142",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1142;105:1234",
+              "parentId": "I105:1142;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1142;105:1234;74:466",
+              "parentId": "I105:1142;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 12,
+              "height": 12,
+              "visible": true
+            },
+            {
+              "id": "I105:1142;105:1235",
+              "parentId": "I105:1142;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:1143",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1143;105:1233",
+              "parentId": "105:1143",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I105:1143;105:1234",
+              "parentId": "I105:1143;105:1233",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1143;105:1234;74:472",
+              "parentId": "I105:1143;105:1234",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 10,
+              "height": 11.333333015441895,
+              "visible": true
+            },
+            {
+              "id": "I105:1143;105:1235",
+              "parentId": "I105:1143;105:1233",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 132,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "109:1621",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            },
+            {
+              "id": "105:2699",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            },
+            {
+              "id": "105:2706",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            },
+            {
+              "id": "105:2713",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            },
+            {
+              "id": "105:2720",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            },
+            {
+              "id": "105:2727",
+              "parentId": "105:1137",
+              "name": "menu",
+              "type": "INSTANCE",
+              "width": 200,
+              "height": 32,
+              "visible": false
+            }
+          ]
+        },
+        {
+          "nodeId": "105:1223",
+          "key": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "name": "menu",
+          "representativeId": "105:1224",
+          "layout": {
+            "width": 200,
+            "height": 32,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              12,
+              0,
+              0
+            ],
+            "gap": 10,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "105:1224",
+              "parentId": "105:1223",
+              "name": ".device=tablet, status=selected, expand=yes",
+              "type": "COMPONENT",
+              "width": 200,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "105:1225",
+              "parentId": "105:1224",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 188,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "105:1226",
+              "parentId": "105:1225",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:1226;139:688",
+              "parentId": "105:1226",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 10.666666984558105,
+              "height": 11.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "105:1227",
+              "parentId": "105:1225",
+              "name": "หน้าแรก",
+              "type": "TEXT",
+              "width": 108,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "105:3043",
+              "parentId": "105:1225",
+              "name": "icon/arrow",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I105:3043;70:187",
+              "parentId": "105:3043",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 7.450000762939453,
+              "height": 4.389999866485596,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "139:573",
+          "key": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+          "name": "mobile/menu",
+          "representativeId": "139:574",
+          "layout": {
+            "width": 61,
+            "height": 36,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 4,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "139:574",
+              "parentId": "139:573",
+              "name": "isFocus=true",
+              "type": "COMPONENT",
+              "width": 61,
+              "height": 36,
+              "visible": true
+            },
+            {
+              "id": "139:575",
+              "parentId": "139:574",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:575;70:67",
+              "parentId": "139:575",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:575;70:67;139:688",
+              "parentId": "I139:575;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.333333015441895,
+              "height": 14.583333015441895,
+              "visible": true
+            },
+            {
+              "id": "139:576",
+              "parentId": "139:574",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 61,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "167:1485",
+          "key": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "name": "header",
+          "representativeId": "167:1486",
+          "layout": {
+            "width": 980,
+            "height": 64,
+            "mode": "HORIZONTAL",
+            "padding": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "gap": 24,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "167:1486",
+              "parentId": "167:1485",
+              "name": "page=home",
+              "type": "COMPONENT",
+              "width": 980,
+              "height": 64,
+              "visible": true
+            },
+            {
+              "id": "209:540",
+              "parentId": "167:1486",
+              "name": "desktop/search",
+              "type": "INSTANCE",
+              "width": 370,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484",
+              "parentId": "209:540",
+              "name": "dropdown",
+              "type": "INSTANCE",
+              "width": 270,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4319",
+              "parentId": "I209:540;209:484",
+              "name": "field",
+              "type": "FRAME",
+              "width": 270,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4320",
+              "parentId": "I209:540;209:484;198:4319",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4320;70:67",
+              "parentId": "I209:540;209:484;198:4320",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4320;70:67;70:86",
+              "parentId": "I209:540;209:484;198:4320;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 11.716667175292969,
+              "height": 11.716667175292969,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4321",
+              "parentId": "I209:540;209:484;198:4319",
+              "name": "input",
+              "type": "FRAME",
+              "width": 222,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:484;198:4322",
+              "parentId": "I209:540;209:484;198:4321",
+              "name": "text-placeholder",
+              "type": "TEXT",
+              "width": 222,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I209:540;209:485",
+              "parentId": "209:540",
+              "name": "Frame 1984079246",
+              "type": "FRAME",
+              "width": 80,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I209:540;409:1198",
+              "parentId": "I209:540;209:485",
+              "name": "notification",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I209:540;409:1198;409:548",
+              "parentId": "I209:540;409:1198",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I209:540;409:1198;409:548;409:627",
+              "parentId": "I209:540;409:1198;409:548",
+              "name": "notifications",
+              "type": "VECTOR",
+              "width": 16,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I209:540;409:1198;409:555",
+              "parentId": "I209:540;409:1198",
+              "name": "Frame 1984079312",
+              "type": "FRAME",
+              "width": 18,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "I209:540;409:1198;409:556",
+              "parentId": "I209:540;409:1198;409:555",
+              "name": "34",
+              "type": "TEXT",
+              "width": 10,
+              "height": 18,
+              "visible": true
+            },
+            {
+              "id": "I209:540;277:1305",
+              "parentId": "I209:540;209:485",
+              "name": "avatar",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I209:540;277:1305;144:434",
+              "parentId": "I209:540;277:1305",
+              "name": "Ellipse 1",
+              "type": "ELLIPSE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "285:995",
+          "key": "640a0f70dae56e7abfc431e894673d240c15619b",
+          "name": "primary-menu",
+          "representativeId": "285:994",
+          "layout": {
+            "width": 69,
+            "height": 44,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 4,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "285:994",
+              "parentId": "285:995",
+              "name": "stage=default",
+              "type": "COMPONENT",
+              "width": 69,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "id": "285:988",
+              "parentId": "285:994",
+              "name": "action-area",
+              "type": "FRAME",
+              "width": 69,
+              "height": 64,
+              "visible": true
+            },
+            {
+              "id": "285:1259",
+              "parentId": "285:988",
+              "name": "action",
+              "type": "FRAME",
+              "width": 40,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "285:1260",
+              "parentId": "285:1259",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I285:1260;70:69",
+              "parentId": "285:1260",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I285:1260;70:69;74:412",
+              "parentId": "I285:1260;70:69",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 19,
+              "height": 18,
+              "visible": true
+            },
+            {
+              "id": "285:991",
+              "parentId": "285:988",
+              "name": "ลูกค้า",
+              "type": "TEXT",
+              "width": 69,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "302:9576",
+          "key": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+          "name": "badge-filter",
+          "representativeId": "302:9549",
+          "layout": {
+            "width": 153,
+            "height": 36,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              12,
+              4,
+              12
+            ],
+            "gap": 8,
+            "radius": 999
+          },
+          "nodes": [
+            {
+              "id": "302:9549",
+              "parentId": "302:9576",
+              "name": "state=active, device=desktop",
+              "type": "COMPONENT",
+              "width": 153,
+              "height": 36,
+              "visible": true
+            },
+            {
+              "id": "302:9542",
+              "parentId": "302:9549",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:9542;70:65",
+              "parentId": "302:9542",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:9542;70:65;70:78",
+              "parentId": "I302:9542;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "302:9543",
+              "parentId": "302:9549",
+              "name": "Badge name",
+              "type": "TEXT",
+              "width": 81,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "302:9546",
+              "parentId": "302:9549",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:9546;70:65",
+              "parentId": "302:9546",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:9546;70:65;70:78",
+              "parentId": "I302:9546;70:65",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "1294:1197",
+          "key": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+          "name": "tab/search",
+          "representativeId": "1294:1195",
+          "layout": {
+            "width": 136,
+            "height": 32,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "1294:1195",
+              "parentId": "1294:1197",
+              "name": "stage=selected",
+              "type": "COMPONENT",
+              "width": 136,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "1294:1174",
+              "parentId": "1294:1195",
+              "name": "Frame 85",
+              "type": "FRAME",
+              "width": 136,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "1294:1175",
+              "parentId": "1294:1174",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I1294:1175;139:688",
+              "parentId": "1294:1175",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 10.666666984558105,
+              "height": 11.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "1294:1176",
+              "parentId": "1294:1174",
+              "name": "ทั้งหมด",
+              "type": "TEXT",
+              "width": 88,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "1294:1177",
+              "parentId": "1294:1174",
+              "name": "icon/arrow",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": false
+            },
+            {
+              "id": "1294:1180",
+              "parentId": "1294:1195",
+              "name": "Rectangle 1",
+              "type": "RECTANGLE",
+              "width": 2,
+              "height": 32,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "139:562",
+          "key": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "name": "mobile/bottom-nav-bar",
+          "representativeId": "139:562",
+          "layout": {
+            "width": 393,
+            "height": 92,
+            "mode": "VERTICAL",
+            "padding": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "gap": 10,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "139:562",
+              "parentId": "105:911",
+              "name": "mobile/bottom-nav-bar",
+              "type": "COMPONENT",
+              "width": 393,
+              "height": 92,
+              "visible": true
+            },
+            {
+              "id": "139:563",
+              "parentId": "139:562",
+              "name": "Frame 343",
+              "type": "FRAME",
+              "width": 361,
+              "height": 60,
+              "visible": true
+            },
+            {
+              "id": "139:564",
+              "parentId": "139:563",
+              "name": "mobile/menu",
+              "type": "INSTANCE",
+              "width": 61,
+              "height": 36,
+              "visible": true
+            },
+            {
+              "id": "I139:564;139:578",
+              "parentId": "139:564",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:564;139:578;70:67",
+              "parentId": "I139:564;139:578",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:564;139:578;70:67;74:406",
+              "parentId": "I139:564;139:578;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.333333015441895,
+              "height": 14.583333015441895,
+              "visible": true
+            },
+            {
+              "id": "I139:564;139:579",
+              "parentId": "139:564",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 61,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "139:565",
+              "parentId": "139:563",
+              "name": "mobile/menu",
+              "type": "INSTANCE",
+              "width": 61,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "id": "I139:565;139:578",
+              "parentId": "139:565",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:565;139:578;70:67",
+              "parentId": "I139:565;139:578",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:565;139:578;70:67;74:424",
+              "parentId": "I139:565;139:578;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 15,
+              "height": 13.333333015441895,
+              "visible": true
+            },
+            {
+              "id": "I139:565;139:579",
+              "parentId": "139:565",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 61,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "285:1271",
+              "parentId": "139:563",
+              "name": "primary-menu",
+              "type": "INSTANCE",
+              "width": 69,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:997",
+              "parentId": "285:1271",
+              "name": "action-area",
+              "type": "FRAME",
+              "width": 69,
+              "height": 64,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:998",
+              "parentId": "I285:1271;285:997",
+              "name": "action",
+              "type": "FRAME",
+              "width": 40,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:999",
+              "parentId": "I285:1271;285:998",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:999;70:69",
+              "parentId": "I285:1271;285:999",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:999;70:69;74:412",
+              "parentId": "I285:1271;285:999;70:69",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 19,
+              "height": 18,
+              "visible": true
+            },
+            {
+              "id": "I285:1271;285:1000",
+              "parentId": "I285:1271;285:997",
+              "name": "ลูกค้า",
+              "type": "TEXT",
+              "width": 69,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "139:571",
+              "parentId": "139:563",
+              "name": "mobile/menu",
+              "type": "INSTANCE",
+              "width": 61,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "id": "I139:571;139:578",
+              "parentId": "139:571",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:571;139:578;70:67",
+              "parentId": "I139:571;139:578",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:571;139:578;70:67;139:862",
+              "parentId": "I139:571;139:578;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 16.69367218017578,
+              "height": 16.68923568725586,
+              "visible": true
+            },
+            {
+              "id": "I139:571;139:579",
+              "parentId": "139:571",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 61,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "139:572",
+              "parentId": "139:563",
+              "name": "mobile/menu",
+              "type": "INSTANCE",
+              "width": 61,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "id": "I139:572;139:578",
+              "parentId": "139:572",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:572;139:578;70:67",
+              "parentId": "I139:572;139:578",
+              "name": "icon/navbar",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I139:572;139:578;70:67;139:882",
+              "parentId": "I139:572;139:578;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 15,
+              "height": 10,
+              "visible": true
+            },
+            {
+              "id": "I139:572;139:579",
+              "parentId": "139:572",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 61,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "144:406",
+          "key": "558b8d869443d0719a184f552bb0503b567f1203",
+          "name": "mobile/top-nav-bar",
+          "representativeId": "144:406",
+          "layout": {
+            "width": 393,
+            "height": 64,
+            "mode": "HORIZONTAL",
+            "padding": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "gap": 144,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "144:406",
+              "parentId": "105:911",
+              "name": "mobile/top-nav-bar",
+              "type": "COMPONENT",
+              "width": 393,
+              "height": 64,
+              "visible": true
+            },
+            {
+              "id": "144:407",
+              "parentId": "144:406",
+              "name": "image 471",
+              "type": "RECTANGLE",
+              "width": 67.01638793945312,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "144:408",
+              "parentId": "144:406",
+              "name": "icon",
+              "type": "FRAME",
+              "width": 120,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "413:715",
+              "parentId": "144:408",
+              "name": "button icon",
+              "type": "FRAME",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "413:716",
+              "parentId": "413:715",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24.000001907348633,
+              "height": 24.000001907348633,
+              "visible": true
+            },
+            {
+              "id": "I413:716;70:86",
+              "parentId": "413:716",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 17.575002670288086,
+              "height": 17.575002670288086,
+              "visible": true
+            },
+            {
+              "id": "413:709",
+              "parentId": "144:408",
+              "name": "notification",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I413:709;409:548",
+              "parentId": "413:709",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I413:709;409:548;409:627",
+              "parentId": "I413:709;409:548",
+              "name": "notifications",
+              "type": "VECTOR",
+              "width": 16,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I413:709;409:555",
+              "parentId": "413:709",
+              "name": "Frame 1984079312",
+              "type": "FRAME",
+              "width": 18,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "I413:709;409:556",
+              "parentId": "I413:709;409:555",
+              "name": "34",
+              "type": "TEXT",
+              "width": 10,
+              "height": 18,
+              "visible": true
+            },
+            {
+              "id": "144:436",
+              "parentId": "144:408",
+              "name": "avatar",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I144:436;144:434",
+              "parentId": "144:436",
+              "name": "Ellipse 1",
+              "type": "ELLIPSE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "209:521",
+          "key": "8c565095086ab54369ac9016287135b196141358",
+          "name": "desktop/search",
+          "representativeId": "209:521",
+          "layout": {
+            "width": 370,
+            "height": 40,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 20,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "209:521",
+              "parentId": "105:911",
+              "name": "desktop/search",
+              "type": "COMPONENT",
+              "width": 370,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "209:484",
+              "parentId": "209:521",
+              "name": "dropdown",
+              "type": "INSTANCE",
+              "width": 270,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4319",
+              "parentId": "209:484",
+              "name": "field",
+              "type": "FRAME",
+              "width": 270,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4320",
+              "parentId": "I209:484;198:4319",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4320;70:67",
+              "parentId": "I209:484;198:4320",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4320;70:67;70:86",
+              "parentId": "I209:484;198:4320;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 11.716667175292969,
+              "height": 11.716667175292969,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4321",
+              "parentId": "I209:484;198:4319",
+              "name": "input",
+              "type": "FRAME",
+              "width": 222,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I209:484;198:4322",
+              "parentId": "I209:484;198:4321",
+              "name": "text-placeholder",
+              "type": "TEXT",
+              "width": 222,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "209:485",
+              "parentId": "209:521",
+              "name": "Frame 1984079246",
+              "type": "FRAME",
+              "width": 80,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "409:1198",
+              "parentId": "209:485",
+              "name": "notification",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I409:1198;409:548",
+              "parentId": "409:1198",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I409:1198;409:548;409:627",
+              "parentId": "I409:1198;409:548",
+              "name": "notifications",
+              "type": "VECTOR",
+              "width": 16,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I409:1198;409:555",
+              "parentId": "409:1198",
+              "name": "Frame 1984079312",
+              "type": "FRAME",
+              "width": 18,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "I409:1198;409:556",
+              "parentId": "I409:1198;409:555",
+              "name": "34",
+              "type": "TEXT",
+              "width": 10,
+              "height": 18,
+              "visible": true
+            },
+            {
+              "id": "277:1305",
+              "parentId": "209:485",
+              "name": "avatar",
+              "type": "INSTANCE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "I277:1305;144:434",
+              "parentId": "277:1305",
+              "name": "Ellipse 1",
+              "type": "ELLIPSE",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "302:1391",
+          "key": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "name": "search-filter",
+          "representativeId": "302:1391",
+          "layout": {
+            "width": 344,
+            "height": 40,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 16,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "302:1391",
+              "parentId": "105:911",
+              "name": "search-filter",
+              "type": "COMPONENT",
+              "width": 344,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "302:1415",
+              "parentId": "302:1391",
+              "name": "input-text",
+              "type": "INSTANCE",
+              "width": 230,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1778",
+              "parentId": "302:1415",
+              "name": "field",
+              "type": "FRAME",
+              "width": 230,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1779",
+              "parentId": "I302:1415;167:1778",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1779;37:25",
+              "parentId": "I302:1415;167:1779",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1779;37:25;32:1592",
+              "parentId": "I302:1415;167:1779;37:25",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 11.716667175292969,
+              "height": 11.716667175292969,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1780",
+              "parentId": "I302:1415;167:1778",
+              "name": "input",
+              "type": "FRAME",
+              "width": 182,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I302:1415;167:1781",
+              "parentId": "I302:1415;167:1780",
+              "name": "text-placeholder",
+              "type": "TEXT",
+              "width": 182,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "302:1393",
+              "parentId": "302:1391",
+              "name": "button",
+              "type": "INSTANCE",
+              "width": 98,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I302:1393;107:358",
+              "parentId": "302:1393",
+              "name": "Text",
+              "type": "TEXT",
+              "width": 46,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I302:1393;128:3553",
+              "parentId": "302:1393",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I302:1393;128:3553;70:140",
+              "parentId": "I302:1393;128:3553",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 10.69411849975586,
+              "height": 10.666666984558105,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "409:1192",
+          "key": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "name": "notification",
+          "representativeId": "409:1192",
+          "layout": {
+            "width": 32,
+            "height": 32,
+            "mode": "HORIZONTAL",
+            "padding": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "gap": 10,
+            "radius": 10000
+          },
+          "nodes": [
+            {
+              "id": "409:1192",
+              "parentId": "105:911",
+              "name": "notification",
+              "type": "COMPONENT",
+              "width": 32,
+              "height": 32,
+              "visible": true
+            },
+            {
+              "id": "409:548",
+              "parentId": "409:1192",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 24,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "I409:548;409:627",
+              "parentId": "409:548",
+              "name": "notifications",
+              "type": "VECTOR",
+              "width": 16,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "409:555",
+              "parentId": "409:1192",
+              "name": "Frame 1984079312",
+              "type": "FRAME",
+              "width": 18,
+              "height": 14,
+              "visible": true
+            },
+            {
+              "id": "409:556",
+              "parentId": "409:555",
+              "name": "34",
+              "type": "TEXT",
+              "width": 10,
+              "height": 18,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#navbar"
+      ],
+      "items": [
+        "Choose the exact sidebar, header, mobile navigation or search owner by key.",
+        "Keep navigation destinations distinct from filter and notification actions."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/"
+      ],
+      "items": [
+        "Name navigation regions and expose the current destination.",
+        "Test expand/collapse state, focus order and all mobile controls; ordinary site links do not require menu roles."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#navbar"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:b06419a887597e3e778ac9b6c48082c4977e1fcf/27:25",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:4:55789",
+          "key": "670721c66dfb1278a992348df5454511536e37c3",
+          "name": "bg/interaction/primary/default/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:15",
+          "key": "83021536acf28a835411f4d24a8783751fd608d1",
+          "name": "icon/primary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.10196078568696976,
+              "g": 0.11372549086809158,
+              "b": 0.12941177189350128,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:23",
+          "key": "e5a37f78d732dcb34a9ba181190648b3c97da3d5",
+          "name": "gap/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55962",
+          "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
+          "name": "icon/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55845",
+          "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+          "name": "font/weight/bold",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "75 Bd",
+            "Mobile": "75 Bd"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:4",
+          "key": "641b335f0df0aac0671e6406621ba96e4cf7935b",
+          "name": "text/primary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.10196078568696976,
+              "g": 0.11372549086809158,
+              "b": 0.12941177189350128,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:7",
+          "key": "d088854dff72e30fdd6ace730e14ecaad87f6534",
+          "name": "padding/xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:20",
+          "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+          "name": "padding/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:29",
+          "key": "90be349c5a7aa6a3f19199ce54fa7a957cf401bd",
+          "name": "radius/none",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:32",
+          "key": "d4a0fadd71244c9169eedd88d9403a6fea073f0d",
+          "name": "radius/md",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55785",
+          "key": "5583a01c840d63e4ae1407717fe44061366fde20",
+          "name": "bg/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55847",
+          "key": "e4a72e44ff5e13e0243cbca420f9230eab53c6b6",
+          "name": "font/size/xs",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 12,
+            "Mobile": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:31",
+          "key": "b4ae1aad38627cd7e1f8705695bcef3ae4ea9292",
+          "name": "font/line-height/sm",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 18,
+            "Mobile": 18
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:11",
+          "key": "45fb3963fb054904594e92e6e31f99f7b39ba9e4",
+          "name": "padding/5xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 40
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55960",
+          "key": "39f8826ebe9c564c28bf499beb6eff191d2ef328",
+          "name": "icon/tertiary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55843",
+          "key": "b14346c0a4e13818d3885090eafff37fe5ca3c76",
+          "name": "text/tertiary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55887",
+          "key": "88d0fb4c7607ea8afd7e40cf0cacf938bff89ce9",
+          "name": "stroke/stroke/regular",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8980392217636108,
+              "g": 0.8980392217636108,
+              "b": 0.8980392217636108,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:9",
+          "key": "092d06d76330a0f26f8013a818e6f50c233b60c8",
+          "name": "padding/3xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:9:55848",
+          "key": "f6939bc399e19ff1662c32e6c9ed44e4c78e086e",
+          "name": "font/size/sm",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 14,
+            "Mobile": 14
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:32",
+          "key": "f659a1db048486cf1c6fe0a96d70585634cf8019",
+          "name": "font/line-height/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:11",
+          "key": "c394ff8c693e27f609adcd3cfcdfdcf97fd7172c",
+          "name": "stroke/subtle",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.9490196108818054,
+              "g": 0.9490196108818054,
+              "b": 0.9490196108818054,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55845",
+          "key": "caaa48abcdfae9be2e3e49aa4b6131285a0cd8da",
+          "name": "text/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:61:9",
+          "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+          "name": "bg/base/disable",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15000000596046448
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:8",
+          "key": "a59c0076bf5221cd99df6d620865e0b9184b9bb8",
+          "name": "padding/2xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6a8e762d3768b2e1a91f64e48fd21f0429d6b44a/907:1333",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:70:35",
+          "key": "f68cc3cb7b2bc174ed9b05f9c21184fde875ff01",
+          "name": "radius/full",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 9999
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:908c1d52b9d39033afe1f172d5b1001e1de3e731/907:1359",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:61:6",
+          "key": "e13ff1c705e6c0be1c5ad2db999ac04ac8f09019",
+          "name": "bg/base/base",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55888",
+          "key": "5f17cb9b69925d7e6e269ec699e9914c2b8d03eb",
+          "name": "stroke/strong",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.800000011920929,
+              "g": 0.800000011920929,
+              "b": 0.800000011920929,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55938",
+          "key": "bcc773863acadaedad94c1216511b8377f4f1152",
+          "name": "text/field/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55959",
+          "key": "ed4ab01f9b8ee0e2fadc7225a11794b0b2c1eb7d",
+          "name": "icon/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5:55797",
+          "key": "7385773e0e7846970635bbb5df4bf078aab34456",
+          "name": "bg/interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55856",
+          "key": "422a8d0c0d3406e3963a9b8f82f9137580268554",
+          "name": "font/size/3xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 32,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55794",
+          "key": "854299c7b4217aa9ba022a9b39afae091e19830c",
+          "name": "font/family/title",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:37",
+          "key": "957bd287d66630f04be19bd1216b76bd76851e5d",
+          "name": "font/line-height/4xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 42,
+            "Mobile": 42
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:27",
+          "key": "b92eb44e0bef20560a78c68e162019991096492e",
+          "name": "gap/xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55952",
+          "key": "9ea8056b343b70a5235732188ed18eebbd6bc248",
+          "name": "stroke/field/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6:55894",
+          "key": "d5c30d8775594431828f6fa632c1db4252b592d0",
+          "name": "stroke/Interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55950",
+          "key": "d6e72c813441fa592408b41a539a2f5bfb927564",
+          "name": "stroke/field/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.5490196347236633,
+              "g": 0.5764706134796143,
+              "b": 0.6313725709915161,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55961",
+          "key": "9de105cddf8fb7e742713981e7174dcec16adaae",
+          "name": "icon/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55844",
+          "key": "097bb46feff3171601c0518fbc81ce7aca68be03",
+          "name": "text/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55770",
+          "key": "15688fde1e669ec3e5d2edba364211de8cc12b2a",
+          "name": "bg/decorative/emphasis/expressive/low",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.886274516582489,
+              "g": 0.9372549057006836,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55771",
+          "key": "039c02b71142c02b4e5d6ecb2d9b3355b3426f55",
+          "name": "bg/decorative/emphasis/expressive/medium",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.27450981736183167,
+              "g": 0.3450980484485626,
+              "b": 0.9882352948188782,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:12",
+          "key": "9bcc8b1bb2b476689ca2436f52e3c390e57ba62f",
+          "name": "stroke/regular",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8980392217636108,
+              "g": 0.8980392217636108,
+              "b": 0.8980392217636108,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55935",
+          "key": "29b0b52e5ead95f5d0acf45b053de177f0c4e334",
+          "name": "text/field/placeholder",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.7490196228027344,
+              "g": 0.7647058963775635,
+              "b": 0.7882353067398071,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "105:1113",
+          "bindings": {
+            "VariableID:b06419a887597e3e778ac9b6c48082c4977e1fcf/27:25": {
+              "count": 6,
+              "nodeIds": [
+                "105:1114",
+                "105:1144",
+                "105:1190"
+              ]
+            },
+            "VariableID:4:55789": {
+              "count": 6,
+              "nodeIds": [
+                "105:1118",
+                "105:1148",
+                "105:1194"
+              ]
+            },
+            "VariableID:62:15": {
+              "count": 78,
+              "nodeIds": [
+                "I318:1322;70:65;70:198",
+                "I318:1322;70:65;70:199",
+                "I105:1127;105:1234;74:412"
+              ]
+            },
+            "VariableID:58:23": {
+              "count": 2,
+              "nodeIds": [
+                "105:1125",
+                "105:1201"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 8,
+              "nodeIds": [
+                "I105:1126;105:1226;139:688",
+                "I105:1126;105:3043;70:187",
+                "I105:1156;105:1230;139:688"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 30,
+              "nodeIds": [
+                "I105:1126;105:1227",
+                "I105:1127;105:1235",
+                "I105:1128;105:1235"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 15,
+              "nodeIds": [
+                "I105:1126;105:1227",
+                "105:1133",
+                "105:1139"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 49,
+              "nodeIds": [
+                "I105:1126;105:1227",
+                "I105:1127;105:1235",
+                "I105:1128;105:1235"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 30,
+              "nodeIds": [
+                "I105:1126;105:1227",
+                "I105:1127;105:1235",
+                "I105:1128;105:1235"
+              ]
+            },
+            "VariableID:62:4": {
+              "count": 31,
+              "nodeIds": [
+                "I105:1127;105:1235",
+                "I105:1128;105:1235",
+                "I105:1129;105:1235"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 34,
+              "nodeIds": [
+                "I105:1127;105:1235",
+                "I105:1128;105:1235",
+                "I105:1129;105:1235"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 6,
+              "nodeIds": [
+                "105:1132",
+                "105:1138",
+                "105:1208"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 6,
+              "nodeIds": [
+                "105:1132",
+                "105:1138",
+                "105:1208"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 12,
+              "nodeIds": [
+                "105:1133",
+                "105:1139",
+                "105:1163"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 44,
+              "nodeIds": [
+                "105:1137",
+                "105:1156",
+                "I105:1156;105:1229"
+              ]
+            },
+            "VariableID:70:29": {
+              "count": 3,
+              "nodeIds": [
+                "105:1156",
+                "105:3088",
+                "186:2695"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 3,
+              "nodeIds": [
+                "I105:1156;105:1229",
+                "I105:3088;105:1229",
+                "I186:2695;186:2585"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 3,
+              "nodeIds": [
+                "I105:1156;105:1229",
+                "I105:3088;105:1229",
+                "I186:2695;186:2585"
+              ]
+            },
+            "VariableID:9:55847": {
+              "count": 4,
+              "nodeIds": [
+                "105:1163",
+                "105:1169",
+                "105:3095"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 4,
+              "nodeIds": [
+                "105:1163",
+                "105:1169",
+                "105:3095"
+              ]
+            },
+            "VariableID:54:11": {
+              "count": 3,
+              "nodeIds": [
+                "I105:3011;105:2986",
+                "I105:3023;105:2986",
+                "I105:3029;105:2986"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 6,
+              "nodeIds": [
+                "I105:3011;105:2987;74:400",
+                "I105:3023;105:2987;74:400",
+                "I105:3029;105:2987;74:400"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 3,
+              "nodeIds": [
+                "I105:3011;105:2988",
+                "I105:3023;105:2988",
+                "I105:3029;105:2988"
+              ]
+            },
+            "VariableID:6:55887": {
+              "count": 3,
+              "nodeIds": [
+                "I105:3163;105:2984",
+                "I105:3169;105:2984",
+                "I105:3175;105:2984"
+              ]
+            },
+            "VariableID:54:9": {
+              "count": 1,
+              "nodeIds": [
+                "186:2454"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 6,
+              "nodeIds": [
+                "186:2455",
+                "186:2461",
+                "186:2467"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 13,
+              "nodeIds": [
+                "I186:2456;186:2563",
+                "I186:2457;186:2570",
+                "I186:2459;186:2570"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 13,
+              "nodeIds": [
+                "I186:2456;186:2563",
+                "I186:2457;186:2570",
+                "I186:2459;186:2570"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 2,
+              "nodeIds": [
+                "186:2702",
+                "186:2708"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 2,
+              "nodeIds": [
+                "186:2702",
+                "186:2708"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "105:1223",
+          "bindings": {
+            "VariableID:6:55962": {
+              "count": 10,
+              "nodeIds": [
+                "I105:1226;139:688",
+                "I105:3043;70:187",
+                "I186:2562;139:688"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 4,
+              "nodeIds": [
+                "105:1227",
+                "105:1235",
+                "105:2988"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 2,
+              "nodeIds": [
+                "105:1227",
+                "186:2563"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 8,
+              "nodeIds": [
+                "105:1227",
+                "186:2563",
+                "105:1235"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 4,
+              "nodeIds": [
+                "105:1227",
+                "105:1235",
+                "105:2988"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 4,
+              "nodeIds": [
+                "186:2563",
+                "186:2570",
+                "186:2577"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 4,
+              "nodeIds": [
+                "186:2563",
+                "186:2570",
+                "186:2577"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 10,
+              "nodeIds": [
+                "105:1228",
+                "105:1229",
+                "186:2584"
+              ]
+            },
+            "VariableID:70:29": {
+              "count": 2,
+              "nodeIds": [
+                "105:1228",
+                "186:2584"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 4,
+              "nodeIds": [
+                "105:1229",
+                "186:2585",
+                "105:3068"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 6,
+              "nodeIds": [
+                "105:1229",
+                "186:2585",
+                "105:3068"
+              ]
+            },
+            "VariableID:62:15": {
+              "count": 6,
+              "nodeIds": [
+                "I105:1234;74:406",
+                "I105:1236;70:187",
+                "I186:2569;74:406"
+              ]
+            },
+            "VariableID:62:4": {
+              "count": 2,
+              "nodeIds": [
+                "105:1235",
+                "186:2570"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 6,
+              "nodeIds": [
+                "105:1235",
+                "186:2570",
+                "105:2988"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 4,
+              "nodeIds": [
+                "I105:2981;74:406",
+                "I186:2602;74:406",
+                "I105:2987;74:400"
+              ]
+            },
+            "VariableID:6:55887": {
+              "count": 2,
+              "nodeIds": [
+                "105:2984",
+                "186:2603"
+              ]
+            },
+            "VariableID:62:11": {
+              "count": 2,
+              "nodeIds": [
+                "105:3071",
+                "186:2608"
+              ]
+            },
+            "VariableID:54:11": {
+              "count": 4,
+              "nodeIds": [
+                "105:2986",
+                "186:2575",
+                "105:3053"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 2,
+              "nodeIds": [
+                "105:2988",
+                "186:2577"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 2,
+              "nodeIds": [
+                "105:3055",
+                "186:2582"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "139:573",
+          "bindings": {
+            "VariableID:58:20": {
+              "count": 2,
+              "nodeIds": [
+                "139:574",
+                "139:577"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "I139:575;70:67;139:688"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "139:576"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 2,
+              "nodeIds": [
+                "139:576",
+                "139:579"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "139:576"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "139:576",
+                "139:579"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 2,
+              "nodeIds": [
+                "139:576",
+                "139:579"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 1,
+              "nodeIds": [
+                "I139:578;70:67;74:406"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 1,
+              "nodeIds": [
+                "139:579"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "139:579"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "167:1485",
+          "bindings": {
+            "VariableID:61:9": {
+              "count": 1,
+              "nodeIds": [
+                "167:1485"
+              ]
+            },
+            "VariableID:54:8": {
+              "count": 4,
+              "nodeIds": [
+                "209:540",
+                "209:578",
+                "625:509"
+              ]
+            },
+            "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484",
+                "I209:578;209:484",
+                "I625:509;209:484"
+              ]
+            },
+            "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484",
+                "I209:578;209:484",
+                "I625:509;209:484"
+              ]
+            },
+            "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:578;209:484;198:4319",
+                "I625:509;209:484;198:4319"
+              ]
+            },
+            "VariableID:6a8e762d3768b2e1a91f64e48fd21f0429d6b44a/907:1333": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:578;209:484;198:4319",
+                "I625:509;209:484;198:4319"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:578;209:484;198:4319",
+                "I625:509;209:484;198:4319"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 8,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:540;409:1198;409:555",
+                "I209:578;209:484;198:4319"
+              ]
+            },
+            "VariableID:908c1d52b9d39033afe1f172d5b1001e1de3e731/907:1359": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:578;209:484;198:4319",
+                "I625:509;209:484;198:4319"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 8,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:540;409:1198;409:556",
+                "I209:578;209:484;198:4319"
+              ]
+            },
+            "VariableID:6:55888": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4319",
+                "I209:578;209:484;198:4319",
+                "I625:509;209:484;198:4319"
+              ]
+            },
+            "VariableID:62:15": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4320;70:67;70:86",
+                "I209:578;209:484;198:4320;70:67;70:86",
+                "I625:509;209:484;198:4320;70:67;70:86"
+              ]
+            },
+            "VariableID:6:55938": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;209:484;198:4322",
+                "I209:578;209:484;198:4322",
+                "I625:509;209:484;198:4322"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 6,
+              "nodeIds": [
+                "I209:540;209:484;198:4322",
+                "I167:1502;107:367",
+                "I209:578;209:484;198:4322"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 10,
+              "nodeIds": [
+                "I209:540;209:484;198:4322",
+                "I209:540;409:1198;409:556",
+                "I167:1502;107:367"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 10,
+              "nodeIds": [
+                "I209:540;209:484;198:4322",
+                "I209:540;409:1198;409:556",
+                "I167:1502;107:367"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 6,
+              "nodeIds": [
+                "I209:540;209:484;198:4322",
+                "I167:1502;107:367",
+                "I209:578;209:484;198:4322"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;409:1198;409:548;409:627",
+                "I209:578;409:1198;409:548;409:627",
+                "I625:509;409:1198;409:548;409:627"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 6,
+              "nodeIds": [
+                "I209:540;409:1198;409:555",
+                "167:1502",
+                "I209:578;409:1198;409:555"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;409:1198;409:555",
+                "I209:578;409:1198;409:555",
+                "I625:509;409:1198;409:555"
+              ]
+            },
+            "VariableID:9:55847": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;409:1198;409:556",
+                "I209:578;409:1198;409:556",
+                "I625:509;409:1198;409:556"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 4,
+              "nodeIds": [
+                "I209:540;409:1198;409:556",
+                "I209:578;409:1198;409:556",
+                "I625:509;409:1198;409:556"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 1,
+              "nodeIds": [
+                "167:1502"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 2,
+              "nodeIds": [
+                "I167:1502;128:3669;70:177",
+                "I1315:694;128:3553;70:187"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 4,
+              "nodeIds": [
+                "I167:1502;107:367",
+                "625:506",
+                "1315:657"
+              ]
+            },
+            "VariableID:9:55856": {
+              "count": 2,
+              "nodeIds": [
+                "625:506",
+                "1315:657"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 2,
+              "nodeIds": [
+                "625:506",
+                "1315:657"
+              ]
+            },
+            "VariableID:9:55794": {
+              "count": 2,
+              "nodeIds": [
+                "625:506",
+                "1315:657"
+              ]
+            },
+            "VariableID:51:37": {
+              "count": 2,
+              "nodeIds": [
+                "625:506",
+                "1315:657"
+              ]
+            },
+            "VariableID:58:27": {
+              "count": 1,
+              "nodeIds": [
+                "1315:701"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 1,
+              "nodeIds": [
+                "1315:694"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 1,
+              "nodeIds": [
+                "1315:694"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "285:995",
+          "bindings": {
+            "VariableID:58:20": {
+              "count": 2,
+              "nodeIds": [
+                "285:994",
+                "285:996"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 2,
+              "nodeIds": [
+                "285:1259",
+                "285:998"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "285:1259"
+              ]
+            },
+            "VariableID:6:55887": {
+              "count": 1,
+              "nodeIds": [
+                "285:1259"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 1,
+              "nodeIds": [
+                "I285:1260;70:69;74:412"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 1,
+              "nodeIds": [
+                "285:991"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 2,
+              "nodeIds": [
+                "285:991",
+                "285:1000"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "285:991"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "285:991",
+                "285:1000"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 2,
+              "nodeIds": [
+                "285:991",
+                "285:1000"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 1,
+              "nodeIds": [
+                "285:998"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 1,
+              "nodeIds": [
+                "I285:999;70:69;74:412"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "285:1000"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "285:1000"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "302:9576",
+          "bindings": {
+            "VariableID:54:6": {
+              "count": 4,
+              "nodeIds": [
+                "302:9549",
+                "302:9577",
+                "302:9609"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 4,
+              "nodeIds": [
+                "302:9549",
+                "302:9577",
+                "302:9609"
+              ]
+            },
+            "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357": {
+              "count": 4,
+              "nodeIds": [
+                "302:9549",
+                "302:9577",
+                "302:9609"
+              ]
+            },
+            "VariableID:6:55894": {
+              "count": 2,
+              "nodeIds": [
+                "302:9549",
+                "302:9609"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 4,
+              "nodeIds": [
+                "I302:9542;70:65;70:78",
+                "I302:9546;70:65;70:78",
+                "I302:9610;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 2,
+              "nodeIds": [
+                "302:9543",
+                "302:9611"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 4,
+              "nodeIds": [
+                "302:9543",
+                "302:9579",
+                "302:9611"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 2,
+              "nodeIds": [
+                "302:9543",
+                "302:9611"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 4,
+              "nodeIds": [
+                "302:9543",
+                "302:9579",
+                "302:9611"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 4,
+              "nodeIds": [
+                "302:9543",
+                "302:9579",
+                "302:9611"
+              ]
+            },
+            "VariableID:6:55950": {
+              "count": 2,
+              "nodeIds": [
+                "302:9577",
+                "302:9613"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 4,
+              "nodeIds": [
+                "I302:9578;70:65;70:78",
+                "I302:9580;70:65;70:78",
+                "I302:9614;70:65;70:78"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 2,
+              "nodeIds": [
+                "302:9579",
+                "302:9615"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "302:9579",
+                "302:9615"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "1294:1197",
+          "bindings": {
+            "VariableID:62:15": {
+              "count": 3,
+              "nodeIds": [
+                "I1294:1168;74:406",
+                "I1294:1175;139:688",
+                "I1294:1184;139:688"
+              ]
+            },
+            "VariableID:62:4": {
+              "count": 3,
+              "nodeIds": [
+                "1294:1169",
+                "1294:1176",
+                "1294:1185"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 4,
+              "nodeIds": [
+                "1294:1169",
+                "1297:1215",
+                "1294:1176"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "1294:1169",
+                "1297:1215"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 4,
+              "nodeIds": [
+                "1294:1169",
+                "1297:1215",
+                "1294:1176"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 4,
+              "nodeIds": [
+                "1294:1169",
+                "1297:1215",
+                "1294:1176"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 1,
+              "nodeIds": [
+                "I1297:1214;74:406"
+              ]
+            },
+            "VariableID:6:55844": {
+              "count": 1,
+              "nodeIds": [
+                "1297:1215"
+              ]
+            },
+            "VariableID:3:55770": {
+              "count": 2,
+              "nodeIds": [
+                "1294:1174",
+                "1294:1183"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 2,
+              "nodeIds": [
+                "1294:1176",
+                "1294:1185"
+              ]
+            },
+            "VariableID:3:55771": {
+              "count": 1,
+              "nodeIds": [
+                "1294:1180"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "139:562",
+          "bindings": {
+            "VariableID:58:20": {
+              "count": 6,
+              "nodeIds": [
+                "139:563",
+                "139:564",
+                "139:565"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 1,
+              "nodeIds": [
+                "139:563"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 1,
+              "nodeIds": [
+                "139:563"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 2,
+              "nodeIds": [
+                "139:563",
+                "I285:1271;285:998"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "139:563"
+              ]
+            },
+            "VariableID:62:12": {
+              "count": 1,
+              "nodeIds": [
+                "139:563"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 4,
+              "nodeIds": [
+                "I139:564;139:578;70:67;74:406",
+                "I139:565;139:578;70:67;74:424",
+                "I139:571;139:578;70:67;139:862"
+              ]
+            },
+            "VariableID:6:55843": {
+              "count": 4,
+              "nodeIds": [
+                "I139:564;139:579",
+                "I139:565;139:579",
+                "I139:571;139:579"
+              ]
+            },
+            "VariableID:9:55848": {
+              "count": 5,
+              "nodeIds": [
+                "I139:564;139:579",
+                "I139:565;139:579",
+                "I285:1271;285:1000"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 4,
+              "nodeIds": [
+                "I139:564;139:579",
+                "I139:565;139:579",
+                "I139:571;139:579"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 5,
+              "nodeIds": [
+                "I139:564;139:579",
+                "I139:565;139:579",
+                "I285:1271;285:1000"
+              ]
+            },
+            "VariableID:51:32": {
+              "count": 5,
+              "nodeIds": [
+                "I139:564;139:579",
+                "I139:565;139:579",
+                "I285:1271;285:1000"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 1,
+              "nodeIds": [
+                "I285:1271;285:998"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 1,
+              "nodeIds": [
+                "I285:1271;285:999;70:69;74:412"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "I285:1271;285:1000"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "I285:1271;285:1000"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "144:406",
+          "bindings": {
+            "VariableID:54:7": {
+              "count": 1,
+              "nodeIds": [
+                "144:406"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 2,
+              "nodeIds": [
+                "144:406",
+                "I413:709;409:556"
+              ]
+            },
+            "VariableID:62:12": {
+              "count": 1,
+              "nodeIds": [
+                "144:406"
+              ]
+            },
+            "VariableID:54:6": {
+              "count": 1,
+              "nodeIds": [
+                "144:408"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 2,
+              "nodeIds": [
+                "144:408",
+                "413:715"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 2,
+              "nodeIds": [
+                "413:715",
+                "I413:709;409:555"
+              ]
+            },
+            "VariableID:6:55888": {
+              "count": 2,
+              "nodeIds": [
+                "413:715",
+                "413:709"
+              ]
+            },
+            "VariableID:6:55960": {
+              "count": 2,
+              "nodeIds": [
+                "I413:716;70:86",
+                "I413:709;409:548;409:627"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:555"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:555"
+              ]
+            },
+            "VariableID:9:55847": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:556"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:556"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:556"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 1,
+              "nodeIds": [
+                "I413:709;409:556"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "209:521",
+          "bindings": {
+            "VariableID:54:8": {
+              "count": 1,
+              "nodeIds": [
+                "209:521"
+              ]
+            },
+            "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331": {
+              "count": 1,
+              "nodeIds": [
+                "209:484"
+              ]
+            },
+            "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330": {
+              "count": 1,
+              "nodeIds": [
+                "209:484"
+              ]
+            },
+            "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4319"
+              ]
+            },
+            "VariableID:6a8e762d3768b2e1a91f64e48fd21f0429d6b44a/907:1333": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4319"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4319"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 2,
+              "nodeIds": [
+                "I209:484;198:4319",
+                "I409:1198;409:555"
+              ]
+            },
+            "VariableID:908c1d52b9d39033afe1f172d5b1001e1de3e731/907:1359": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4319"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 2,
+              "nodeIds": [
+                "I209:484;198:4319",
+                "I409:1198;409:556"
+              ]
+            },
+            "VariableID:6:55888": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4319"
+              ]
+            },
+            "VariableID:62:15": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4320;70:67;70:86"
+              ]
+            },
+            "VariableID:6:55938": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4322"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4322"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "I209:484;198:4322",
+                "I409:1198;409:556"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "I209:484;198:4322",
+                "I409:1198;409:556"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 1,
+              "nodeIds": [
+                "I209:484;198:4322"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 1,
+              "nodeIds": [
+                "I409:1198;409:548;409:627"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 1,
+              "nodeIds": [
+                "I409:1198;409:555"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 1,
+              "nodeIds": [
+                "I409:1198;409:555"
+              ]
+            },
+            "VariableID:9:55847": {
+              "count": 1,
+              "nodeIds": [
+                "I409:1198;409:556"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 1,
+              "nodeIds": [
+                "I409:1198;409:556"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "302:1391",
+          "bindings": {
+            "VariableID:54:7": {
+              "count": 2,
+              "nodeIds": [
+                "302:1391",
+                "302:1393"
+              ]
+            },
+            "VariableID:03e120408c8e592e9d2dab0f33f50dec87bec262/907:1331": {
+              "count": 1,
+              "nodeIds": [
+                "302:1415"
+              ]
+            },
+            "VariableID:7e70c28cc7a169849fd434502b137b3aa9d57271/907:1330": {
+              "count": 1,
+              "nodeIds": [
+                "302:1415"
+              ]
+            },
+            "VariableID:84b8e6f07e3420ba673b7f317a6c2c307e5b72b7/907:1332": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:6a8e762d3768b2e1a91f64e48fd21f0429d6b44a/907:1333": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:908c1d52b9d39033afe1f172d5b1001e1de3e731/907:1359": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:6:55888": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1778"
+              ]
+            },
+            "VariableID:62:15": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1779;37:25;32:1592"
+              ]
+            },
+            "VariableID:6:55935": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1415;167:1781"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 2,
+              "nodeIds": [
+                "I302:1415;167:1781",
+                "I302:1393;107:358"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "I302:1415;167:1781",
+                "I302:1393;107:358"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "I302:1415;167:1781",
+                "I302:1393;107:358"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 2,
+              "nodeIds": [
+                "I302:1415;167:1781",
+                "I302:1393;107:358"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 1,
+              "nodeIds": [
+                "302:1393"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 1,
+              "nodeIds": [
+                "302:1393"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1393;107:358"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "I302:1393;128:3553;70:140"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "409:1192",
+          "bindings": {
+            "VariableID:6:55959": {
+              "count": 1,
+              "nodeIds": [
+                "I409:548;409:627"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 1,
+              "nodeIds": [
+                "409:555"
+              ]
+            },
+            "VariableID:70:35": {
+              "count": 1,
+              "nodeIds": [
+                "409:555"
+              ]
+            },
+            "VariableID:5:55797": {
+              "count": 1,
+              "nodeIds": [
+                "409:555"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "409:556"
+              ]
+            },
+            "VariableID:9:55847": {
+              "count": 1,
+              "nodeIds": [
+                "409:556"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "409:556"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 1,
+              "nodeIds": [
+                "409:556"
+              ]
+            },
+            "VariableID:51:31": {
+              "count": 1,
+              "nodeIds": [
+                "409:556"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#navbar"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "105:1113",
+          "key": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "name": "side-bar",
+          "api": {
+            "menu#105:1": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "size": {
+              "type": "VARIANT",
+              "defaultValue": "md",
+              "variantOptions": [
+                "lg",
+                "md"
+              ]
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "sub-expand"
+              ]
+            },
+            "expand": {
+              "type": "VARIANT",
+              "defaultValue": "yes",
+              "variantOptions": [
+                "yes",
+                "no"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "105:1114",
+              "name": "size=md, state=default, expand=yes",
+              "width": 200,
+              "height": 821
+            },
+            {
+              "id": "105:1144",
+              "name": "size=md, state=default, expand=no",
+              "width": 80,
+              "height": 821
+            },
+            {
+              "id": "105:1190",
+              "name": "size=md, state=sub-expand, expand=yes",
+              "width": 200,
+              "height": 821
+            },
+            {
+              "id": "105:3076",
+              "name": "size=md, state=sub-expand, expand=no",
+              "width": 80,
+              "height": 821
+            },
+            {
+              "id": "186:2444",
+              "name": "size=lg, state=default, expand=yes",
+              "width": 200,
+              "height": 821
+            },
+            {
+              "id": "186:2683",
+              "name": "size=lg, state=default, expand=no",
+              "width": 80,
+              "height": 821
+            }
+          ]
+        },
+        {
+          "nodeId": "105:1223",
+          "key": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "name": "menu",
+          "api": {
+            "right-icon#907:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            ".device": {
+              "type": "VARIANT",
+              "defaultValue": "tablet",
+              "variantOptions": [
+                "desktop",
+                "tablet"
+              ]
+            },
+            "status": {
+              "type": "VARIANT",
+              "defaultValue": "selected",
+              "variantOptions": [
+                "default",
+                "selected",
+                "sub",
+                "sub-selected"
+              ]
+            },
+            "expand": {
+              "type": "VARIANT",
+              "defaultValue": "yes",
+              "variantOptions": [
+                "yes",
+                "no"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "105:1224",
+              "name": ".device=tablet, status=selected, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "186:2560",
+              "name": ".device=desktop, status=selected, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "105:1228",
+              "name": ".device=tablet, status=selected, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "186:2584",
+              "name": ".device=desktop, status=selected, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "105:1232",
+              "name": ".device=tablet, status=default, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "186:2567",
+              "name": ".device=desktop, status=default, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "105:1237",
+              "name": ".device=tablet, status=default, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "186:2596",
+              "name": ".device=desktop, status=default, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "105:2979",
+              "name": ".device=tablet, status=sub, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "186:2600",
+              "name": ".device=desktop, status=sub, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "105:3068",
+              "name": ".device=tablet, status=sub-selected, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "186:2605",
+              "name": ".device=desktop, status=sub-selected, expand=no",
+              "width": 56,
+              "height": 32
+            },
+            {
+              "id": "105:2995",
+              "name": ".device=tablet, status=sub, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "186:2574",
+              "name": ".device=desktop, status=sub, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "105:3052",
+              "name": ".device=tablet, status=sub-selected, expand=yes",
+              "width": 200,
+              "height": 32
+            },
+            {
+              "id": "186:2579",
+              "name": ".device=desktop, status=sub-selected, expand=yes",
+              "width": 200,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "nodeId": "139:573",
+          "key": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+          "name": "mobile/menu",
+          "api": {
+            "isFocus": {
+              "type": "VARIANT",
+              "defaultValue": "true",
+              "variantOptions": [
+                "true",
+                "false"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "139:574",
+              "name": "isFocus=true",
+              "width": 61,
+              "height": 36
+            },
+            {
+              "id": "139:577",
+              "name": "isFocus=false",
+              "width": 61,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "nodeId": "167:1485",
+          "key": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "name": "header",
+          "api": {
+            "page": {
+              "type": "VARIANT",
+              "defaultValue": "home",
+              "variantOptions": [
+                "home",
+                "web page",
+                "header with action",
+                "header"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "167:1486",
+              "name": "page=home",
+              "width": 980,
+              "height": 64
+            },
+            {
+              "id": "167:1501",
+              "name": "page=web page",
+              "width": 980,
+              "height": 64
+            },
+            {
+              "id": "625:508",
+              "name": "page=header",
+              "width": 980,
+              "height": 64
+            },
+            {
+              "id": "1315:656",
+              "name": "page=header with action",
+              "width": 980,
+              "height": 64
+            }
+          ]
+        },
+        {
+          "nodeId": "285:995",
+          "key": "640a0f70dae56e7abfc431e894673d240c15619b",
+          "name": "primary-menu",
+          "api": {
+            "stage": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "selected"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "285:994",
+              "name": "stage=default",
+              "width": 69,
+              "height": 44
+            },
+            {
+              "id": "285:996",
+              "name": "stage=selected",
+              "width": 69,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "nodeId": "302:9576",
+          "key": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+          "name": "badge-filter",
+          "api": {
+            "icon left#302:2": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "icon right#302:3": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "active",
+              "variantOptions": [
+                "active",
+                "inactive"
+              ]
+            },
+            "device": {
+              "type": "VARIANT",
+              "defaultValue": "desktop",
+              "variantOptions": [
+                "desktop",
+                "mobile"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "302:9549",
+              "name": "state=active, device=desktop",
+              "width": 153,
+              "height": 36
+            },
+            {
+              "id": "302:9577",
+              "name": "state=inactive, device=desktop",
+              "width": 149,
+              "height": 36
+            },
+            {
+              "id": "302:9609",
+              "name": "state=active, device=mobile",
+              "width": 153,
+              "height": 36
+            },
+            {
+              "id": "302:9613",
+              "name": "state=inactive, device=mobile",
+              "width": 149,
+              "height": 36
+            }
+          ]
+        },
+        {
+          "nodeId": "1294:1197",
+          "key": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+          "name": "tab/search",
+          "api": {
+            "left icon#1296:2": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "stage": {
+              "type": "VARIANT",
+              "defaultValue": "selected",
+              "variantOptions": [
+                "Default",
+                "selected",
+                "hover",
+                "disable"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "1294:1196",
+              "name": "stage=Default",
+              "width": 136,
+              "height": 32
+            },
+            {
+              "id": "1297:1212",
+              "name": "stage=disable",
+              "width": 136,
+              "height": 32
+            },
+            {
+              "id": "1294:1195",
+              "name": "stage=selected",
+              "width": 136,
+              "height": 32
+            },
+            {
+              "id": "1294:1194",
+              "name": "stage=hover",
+              "width": 136,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "nodeId": "139:562",
+          "key": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "name": "mobile/bottom-nav-bar",
+          "api": {},
+          "variants": [
+            {
+              "id": "139:562",
+              "name": "mobile/bottom-nav-bar",
+              "width": 393,
+              "height": 92
+            }
+          ]
+        },
+        {
+          "nodeId": "144:406",
+          "key": "558b8d869443d0719a184f552bb0503b567f1203",
+          "name": "mobile/top-nav-bar",
+          "api": {},
+          "variants": [
+            {
+              "id": "144:406",
+              "name": "mobile/top-nav-bar",
+              "width": 393,
+              "height": 64
+            }
+          ]
+        },
+        {
+          "nodeId": "209:521",
+          "key": "8c565095086ab54369ac9016287135b196141358",
+          "name": "desktop/search",
+          "api": {},
+          "variants": [
+            {
+              "id": "209:521",
+              "name": "desktop/search",
+              "width": 370,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "nodeId": "302:1391",
+          "key": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "name": "search-filter",
+          "api": {},
+          "variants": [
+            {
+              "id": "302:1391",
+              "name": "search-filter",
+              "width": 344,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "nodeId": "409:1192",
+          "key": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "name": "notification",
+          "api": {
+            "badge#412:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            }
+          },
+          "variants": [
+            {
+              "id": "409:1192",
+              "name": "notification",
+              "width": 32,
+              "height": 32
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "105:1223",
+          "nodeId": "105:1224",
+          "path": "assets/figma/navbar-105-1223.svg",
+          "width": 200,
+          "height": 32,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "139:573",
+          "nodeId": "139:574",
+          "path": "assets/figma/navbar-139-573.svg",
+          "width": 61,
+          "height": 36,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "285:995",
+          "nodeId": "285:994",
+          "path": "assets/figma/navbar-285-995.svg",
+          "width": 69,
+          "height": 44,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "1294:1197",
+          "nodeId": "1294:1195",
+          "path": "assets/figma/navbar-1294-1197.svg",
+          "width": 136,
+          "height": 32,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "409:1192",
+          "nodeId": "409:1192",
+          "path": "assets/figma/navbar-409-1192.svg",
+          "width": 32,
+          "height": 32,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [
+        "105:1113",
+        "167:1485",
+        "302:9576",
+        "139:562",
+        "144:406",
+        "209:521",
+        "302:1391"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#navbar"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 6,
+          "usedByOwner": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "packageId": null
+        },
+        {
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "nodeId": "70:173",
+          "name": "icon/arrow",
+          "remote": false,
+          "count": 11,
+          "usedByOwner": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "packageId": null
+        },
+        {
+          "key": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "nodeId": "105:1223",
+          "name": "menu",
+          "remote": false,
+          "count": 114,
+          "usedByOwner": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "packageId": "navbar"
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 69,
+          "usedByOwner": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "packageId": null
+        },
+        {
+          "key": "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
+          "nodeId": "138:4029",
+          "name": "icon/quick-menu2",
+          "remote": false,
+          "count": 6,
+          "usedByOwner": "27cffe58afdec2bef93250b55cfa11835276b823",
+          "packageId": null
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 16,
+          "usedByOwner": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "packageId": null
+        },
+        {
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "nodeId": "70:173",
+          "name": "icon/arrow",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "c27fb78aa960961f5557379b41e0cb5356842c92",
+          "packageId": null
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+          "packageId": null
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+          "packageId": null
+        },
+        {
+          "key": "8c565095086ab54369ac9016287135b196141358",
+          "nodeId": "209:521",
+          "name": "desktop/search",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": "navbar"
+        },
+        {
+          "key": "a6db9d0482c6446fd483f71f6a517f2cf3984345",
+          "nodeId": "198:4244",
+          "name": "dropdown",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": "input"
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": null
+        },
+        {
+          "key": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "nodeId": "409:1192",
+          "name": "notification",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": "navbar"
+        },
+        {
+          "key": "78149762034307de859d934c10970de208ef2cee",
+          "nodeId": "144:435",
+          "name": "avatar",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": "avatar"
+        },
+        {
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "nodeId": "107:161",
+          "name": "button",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": "button"
+        },
+        {
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "nodeId": "70:173",
+          "name": "icon/arrow",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+          "packageId": null
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "640a0f70dae56e7abfc431e894673d240c15619b",
+          "packageId": null
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "640a0f70dae56e7abfc431e894673d240c15619b",
+          "packageId": null
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+          "packageId": null
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+          "packageId": null
+        },
+        {
+          "key": "d7e8422114d8748388c3df41f0c0e68acfadd198",
+          "nodeId": "70:173",
+          "name": "icon/arrow",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+          "packageId": null
+        },
+        {
+          "key": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+          "nodeId": "139:573",
+          "name": "mobile/menu",
+          "remote": false,
+          "count": 4,
+          "usedByOwner": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "packageId": "navbar"
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 5,
+          "usedByOwner": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "packageId": null
+        },
+        {
+          "key": "10808ac2ac7ca97b98294236fad14ffd0904a549",
+          "nodeId": "74:398",
+          "name": "icon/navbar",
+          "remote": false,
+          "count": 5,
+          "usedByOwner": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "packageId": null
+        },
+        {
+          "key": "640a0f70dae56e7abfc431e894673d240c15619b",
+          "nodeId": "285:995",
+          "name": "primary-menu",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+          "packageId": "navbar"
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "558b8d869443d0719a184f552bb0503b567f1203",
+          "packageId": null
+        },
+        {
+          "key": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "nodeId": "409:1192",
+          "name": "notification",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "558b8d869443d0719a184f552bb0503b567f1203",
+          "packageId": "navbar"
+        },
+        {
+          "key": "78149762034307de859d934c10970de208ef2cee",
+          "nodeId": "144:435",
+          "name": "avatar",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "558b8d869443d0719a184f552bb0503b567f1203",
+          "packageId": "avatar"
+        },
+        {
+          "key": "a6db9d0482c6446fd483f71f6a517f2cf3984345",
+          "nodeId": "198:4244",
+          "name": "dropdown",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "8c565095086ab54369ac9016287135b196141358",
+          "packageId": "input"
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "8c565095086ab54369ac9016287135b196141358",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "8c565095086ab54369ac9016287135b196141358",
+          "packageId": null
+        },
+        {
+          "key": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "nodeId": "409:1192",
+          "name": "notification",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "8c565095086ab54369ac9016287135b196141358",
+          "packageId": "navbar"
+        },
+        {
+          "key": "78149762034307de859d934c10970de208ef2cee",
+          "nodeId": "144:435",
+          "name": "avatar",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "8c565095086ab54369ac9016287135b196141358",
+          "packageId": "avatar"
+        },
+        {
+          "key": "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+          "nodeId": "167:1772",
+          "name": "input-text",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "packageId": "input"
+        },
+        {
+          "key": "fd2d7b7d5f1984dbabed7acfd0c6f0f0730148f7",
+          "nodeId": "182:832",
+          "name": "base-icon",
+          "remote": true,
+          "count": 1,
+          "usedByOwner": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "packageId": null
+        },
+        {
+          "key": "29fc20450fd5baa93950ce9bf927f97e9a1597af",
+          "nodeId": "302:562",
+          "name": "icon/general",
+          "remote": true,
+          "count": 1,
+          "usedByOwner": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "packageId": null
+        },
+        {
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "nodeId": "107:161",
+          "name": "button",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "packageId": "button"
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "99c9834309df6aa9f48301581c2bfe295610373e",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

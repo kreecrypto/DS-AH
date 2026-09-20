@@ -2,7 +2,7 @@
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const routeID = source => source.replace(/^\/2e1ef8501\/p\//, '');
 export const href = id => '#/' + id;
-export function createStructure(reference, captures = {}) {
+export function createStructure(reference, captures = {}, componentPackages = []) {
   const nodes = [], pages = new Map();
   function visit(items, ancestors = []) {
     return items.map((item, index) => {
@@ -15,6 +15,11 @@ export function createStructure(reference, captures = {}) {
     });
   }
   const navigation = visit(reference.navigation);
+  const componentRoot = nodes.find(n=>n.id==='755aff-components');
+  for(const pkg of componentPackages) {
+    const id=pkg.website.route.replace(/^\//,'');
+    pages.set(id,{id,label:pkg.name,source:null,children:[],ancestors:[componentRoot],isTab:false,packageId:pkg.id});
+  }
   for (const [id, capture] of Object.entries(captures)) {
     const parent = pages.get(id);
     if (!parent || parent.isTab) continue;
@@ -37,5 +42,5 @@ export function createStructure(reference, captures = {}) {
     const recorded = captures[parent.id]?.tabs;
     return recorded?.length ? recorded.map(x=>pages.get(routeID(x.source))).filter(Boolean) : parent.children.filter(x=>x.isTab);
   }
-  return {navigation,nodes,pages,resolve,tabs,captures};
+  return {navigation,nodes,pages,resolve,tabs,captures,componentPackages};
 }

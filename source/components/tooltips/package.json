@@ -1,0 +1,610 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "tooltips",
+  "name": "Tooltips",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "82:608",
+    "pageName": "Tooltips"
+  },
+  "identity": {
+    "ownerCount": 1,
+    "componentKeys": [
+      "5a32687740711c43db34cefeb943e63aa6cfb34e"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "82:633",
+      "componentKey": "5a32687740711c43db34cefeb943e63aa6cfb34e",
+      "figmaName": "tooltips/basic",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "position": [
+          "right-top",
+          "left-top",
+          "buttom-right",
+          "bottom-left",
+          "top-left"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "RightTop",
+          "LeftTop",
+          "BottomRight",
+          "BottomLeft",
+          "TopLeft"
+        ]
+      },
+      "registryStatus": "canonical_with_typo_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "buttom-right canonicalizes to BottomRight"
+    ]
+  },
+  "website": {
+    "route": "/components/tooltips",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tooltips"
+      ],
+      "owners": [
+        {
+          "nodeId": "82:633",
+          "key": "5a32687740711c43db34cefeb943e63aa6cfb34e",
+          "name": "tooltips/basic",
+          "representativeId": "82:708",
+          "layout": {
+            "width": 284,
+            "height": 92,
+            "mode": "VERTICAL",
+            "padding": [
+              8,
+              12,
+              8,
+              12
+            ],
+            "gap": 10,
+            "radius": 8
+          },
+          "nodes": [
+            {
+              "id": "82:708",
+              "parentId": "82:633",
+              "name": "position=top-left",
+              "type": "COMPONENT",
+              "width": 284,
+              "height": 92,
+              "visible": true
+            },
+            {
+              "id": "82:709",
+              "parentId": "82:708",
+              "name": "content",
+              "type": "FRAME",
+              "width": 260,
+              "height": 76,
+              "visible": true
+            },
+            {
+              "id": "82:710",
+              "parentId": "82:709",
+              "name": "text-title",
+              "type": "TEXT",
+              "width": 260,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "82:711",
+              "parentId": "82:709",
+              "name": "row",
+              "type": "FRAME",
+              "width": 260,
+              "height": 48,
+              "visible": true
+            },
+            {
+              "id": "82:712",
+              "parentId": "82:711",
+              "name": "text",
+              "type": "TEXT",
+              "width": 260,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "82:713",
+              "parentId": "82:711",
+              "name": "text-link",
+              "type": "TEXT",
+              "width": 260,
+              "height": 24,
+              "visible": true
+            },
+            {
+              "id": "82:714",
+              "parentId": "82:708",
+              "name": "bg-arrow",
+              "type": "VECTOR",
+              "width": 12,
+              "height": 6,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#tooltips"
+      ],
+      "items": [
+        "Use for supplemental information, not the only copy of essential instructions.",
+        "The source includes an optional text-link; confirm whether this requires a popover rather than tooltip semantics."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/"
+      ],
+      "items": [
+        "A tooltip should work on focus as well as hover and dismiss with Escape.",
+        "Interactive content needs a different focus/interaction pattern; do not put a focusable link inside a standard tooltip."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tooltips"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:32",
+          "key": "d4a0fadd71244c9169eedd88d9403a6fea073f0d",
+          "name": "radius/md",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55765",
+          "key": "a0c92e0ab08389f247bf4360a79e105c9752483c",
+          "name": "bg/base/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.01568627543747425,
+              "g": 0.0235294122248888,
+              "b": 0.0470588244497776,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55845",
+          "key": "caaa48abcdfae9be2e3e49aa4b6131285a0cd8da",
+          "name": "text/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55845",
+          "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+          "name": "font/weight/bold",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "75 Bd",
+            "Mobile": "75 Bd"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:9:55849",
+          "key": "60c01b52e4c6ebad8ab7a9769e1d6dbbce5abd4c",
+          "name": "font/size/md",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 16,
+            "Mobile": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:33",
+          "key": "f52e894cb9a5fd510de46c4537a2622a7c3f24c6",
+          "name": "font/line-height/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 24
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55797",
+          "key": "625c1640b02321212f5790d561cad1f35f146c60",
+          "name": "font/family/links",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:c5f4bb3bada484211f8f219e741d8122d05d5eac/907:1336",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "82:633",
+          "bindings": {
+            "VariableID:54:6": {
+              "count": 5,
+              "nodeIds": [
+                "82:708",
+                "82:722",
+                "82:729"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 5,
+              "nodeIds": [
+                "82:708",
+                "82:722",
+                "82:729"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 5,
+              "nodeIds": [
+                "82:708",
+                "82:722",
+                "82:729"
+              ]
+            },
+            "VariableID:3:55765": {
+              "count": 10,
+              "nodeIds": [
+                "82:708",
+                "82:714",
+                "82:722"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 10,
+              "nodeIds": [
+                "82:709",
+                "82:711",
+                "82:723"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 15,
+              "nodeIds": [
+                "82:710",
+                "82:712",
+                "82:713"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 5,
+              "nodeIds": [
+                "82:710",
+                "82:724",
+                "82:731"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 10,
+              "nodeIds": [
+                "82:710",
+                "82:713",
+                "82:724"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 10,
+              "nodeIds": [
+                "82:710",
+                "82:712",
+                "82:724"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 5,
+              "nodeIds": [
+                "82:710",
+                "82:724",
+                "82:731"
+              ]
+            },
+            "VariableID:9:55849": {
+              "count": 10,
+              "nodeIds": [
+                "82:712",
+                "82:713",
+                "82:726"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 5,
+              "nodeIds": [
+                "82:712",
+                "82:726",
+                "82:733"
+              ]
+            },
+            "VariableID:51:33": {
+              "count": 10,
+              "nodeIds": [
+                "82:712",
+                "82:713",
+                "82:726"
+              ]
+            },
+            "VariableID:9:55797": {
+              "count": 5,
+              "nodeIds": [
+                "82:713",
+                "82:727",
+                "82:734"
+              ]
+            },
+            "VariableID:c5f4bb3bada484211f8f219e741d8122d05d5eac/907:1336": {
+              "count": 4,
+              "nodeIds": [
+                "82:722",
+                "82:729",
+                "82:736"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tooltips"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "82:633",
+          "key": "5a32687740711c43db34cefeb943e63aa6cfb34e",
+          "name": "tooltips/basic",
+          "api": {
+            "title#82:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "text-link#157:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "position": {
+              "type": "VARIANT",
+              "defaultValue": "top-left",
+              "variantOptions": [
+                "right-top",
+                "left-top",
+                "buttom-right",
+                "bottom-left",
+                "top-left"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "82:708",
+              "name": "position=top-left",
+              "width": 284,
+              "height": 92
+            },
+            {
+              "id": "82:722",
+              "name": "position=bottom-left",
+              "width": 284,
+              "height": 92
+            },
+            {
+              "id": "82:729",
+              "name": "position=buttom-right",
+              "width": 284,
+              "height": 92
+            },
+            {
+              "id": "82:736",
+              "name": "position=left-top",
+              "width": 284,
+              "height": 92
+            },
+            {
+              "id": "82:743",
+              "name": "position=right-top",
+              "width": 284,
+              "height": 92
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [],
+      "missingOwnerIds": [
+        "82:633"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#tooltips"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

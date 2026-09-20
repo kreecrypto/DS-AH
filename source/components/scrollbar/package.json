@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "scrollbar",
+  "name": "Scrollbar",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "145:4817",
+    "pageName": "Scrollbar"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "bfe31419935d2a234c5dc377ae4535d5033f50be",
+      "5813c2ec8dff7020997a974b70bd81079c681ec9"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "145:4844",
+      "componentKey": "bfe31419935d2a234c5dc377ae4535d5033f50be",
+      "figmaName": "scroll-bar vertical",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "position": [
+          "top",
+          "middle",
+          "bottom"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Top",
+          "Middle",
+          "Bottom"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "542:15",
+      "componentKey": "5813c2ec8dff7020997a974b70bd81079c681ec9",
+      "figmaName": "scroll-bar horizontal",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "left",
+          "center",
+          "right"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Left",
+          "Center",
+          "Right"
+        ]
+      },
+      "registryStatus": "canonical_with_property_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "Property 1 unresolved; semantic axis must be resolved before new work"
+    ]
+  },
+  "website": {
+    "route": "/components/scrollbar",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#scrollbar"
+      ],
+      "owners": [
+        {
+          "nodeId": "145:4844",
+          "key": "bfe31419935d2a234c5dc377ae4535d5033f50be",
+          "name": "scroll-bar vertical",
+          "representativeId": "145:4845",
+          "layout": {
+            "width": 8,
+            "height": 352,
+            "mode": "NONE",
+            "padding": [
+              8,
+              4,
+              8,
+              4
+            ],
+            "gap": 0,
+            "radius": 999
+          },
+          "nodes": [
+            {
+              "id": "145:4845",
+              "parentId": "145:4844",
+              "name": "position=top",
+              "type": "COMPONENT",
+              "width": 8,
+              "height": 352,
+              "visible": true
+            },
+            {
+              "id": "145:4846",
+              "parentId": "145:4845",
+              "name": "bullet",
+              "type": "RECTANGLE",
+              "width": 8,
+              "height": 112,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "542:15",
+          "key": "5813c2ec8dff7020997a974b70bd81079c681ec9",
+          "name": "scroll-bar horizontal",
+          "representativeId": "542:14",
+          "layout": {
+            "width": 435,
+            "height": 8,
+            "mode": "NONE",
+            "padding": [
+              8,
+              4,
+              8,
+              4
+            ],
+            "gap": 0,
+            "radius": 999
+          },
+          "nodes": [
+            {
+              "id": "542:14",
+              "parentId": "542:15",
+              "name": "Property 1=left",
+              "type": "COMPONENT",
+              "width": 435,
+              "height": 8,
+              "visible": true
+            },
+            {
+              "id": "542:7",
+              "parentId": "542:14",
+              "name": "Rectangle 1",
+              "type": "RECTANGLE",
+              "width": 160,
+              "height": 8,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#scrollbar"
+      ],
+      "items": [
+        "Document source positions without assigning new meaning to Property 1.",
+        "Prefer native scrolling unless an approved custom scrolling behavior is supplied."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/TR/wai-aria-1.2/#scrollbar"
+      ],
+      "items": [
+        "Verify keyboard access to overflowing content and visible focus.",
+        "Do not turn a decorative scroll indicator into an unimplemented scrollbar widget."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#scrollbar"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:0e1f959b187f56a1ac52149b989fcf29836b8ee8/2414:14",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:9c5f8bd5b70420291de09fb6694a2dd055c0ec32/2414:15",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:3:55768",
+          "key": "9a1f43447a6dc0ad5e382ef4124995f98c1292a7",
+          "name": "bg/decorative/emphasis/function/medium",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.9686274528503418,
+              "g": 0.9686274528503418,
+              "b": 0.9725490212440491,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7e4f45c76995a3888b4400c9537e43af5b2495f7/2414:31",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:61:9",
+          "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+          "name": "bg/base/disable",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15000000596046448
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "145:4844",
+          "bindings": {
+            "VariableID:0e1f959b187f56a1ac52149b989fcf29836b8ee8/2414:14": {
+              "count": 3,
+              "nodeIds": [
+                "145:4845",
+                "145:4847",
+                "145:4849"
+              ]
+            },
+            "VariableID:9c5f8bd5b70420291de09fb6694a2dd055c0ec32/2414:15": {
+              "count": 3,
+              "nodeIds": [
+                "145:4845",
+                "145:4847",
+                "145:4849"
+              ]
+            },
+            "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357": {
+              "count": 3,
+              "nodeIds": [
+                "145:4845",
+                "145:4847",
+                "145:4849"
+              ]
+            },
+            "VariableID:3:55768": {
+              "count": 3,
+              "nodeIds": [
+                "145:4845",
+                "145:4847",
+                "145:4849"
+              ]
+            },
+            "VariableID:7e4f45c76995a3888b4400c9537e43af5b2495f7/2414:31": {
+              "count": 3,
+              "nodeIds": [
+                "145:4846",
+                "145:4848",
+                "145:4850"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 3,
+              "nodeIds": [
+                "145:4846",
+                "145:4848",
+                "145:4850"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "542:15",
+          "bindings": {
+            "VariableID:0e1f959b187f56a1ac52149b989fcf29836b8ee8/2414:14": {
+              "count": 3,
+              "nodeIds": [
+                "542:14",
+                "542:13",
+                "542:12"
+              ]
+            },
+            "VariableID:9c5f8bd5b70420291de09fb6694a2dd055c0ec32/2414:15": {
+              "count": 3,
+              "nodeIds": [
+                "542:14",
+                "542:13",
+                "542:12"
+              ]
+            },
+            "VariableID:5723c5b69154d67ccea762a446607bb3e0ca123e/907:1357": {
+              "count": 3,
+              "nodeIds": [
+                "542:14",
+                "542:13",
+                "542:12"
+              ]
+            },
+            "VariableID:3:55768": {
+              "count": 3,
+              "nodeIds": [
+                "542:14",
+                "542:13",
+                "542:12"
+              ]
+            },
+            "VariableID:7e4f45c76995a3888b4400c9537e43af5b2495f7/2414:31": {
+              "count": 3,
+              "nodeIds": [
+                "542:7",
+                "542:9",
+                "542:11"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 3,
+              "nodeIds": [
+                "542:7",
+                "542:9",
+                "542:11"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#scrollbar"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "145:4844",
+          "key": "bfe31419935d2a234c5dc377ae4535d5033f50be",
+          "name": "scroll-bar vertical",
+          "api": {
+            "position": {
+              "type": "VARIANT",
+              "defaultValue": "top",
+              "variantOptions": [
+                "top",
+                "middle",
+                "bottom"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "145:4845",
+              "name": "position=top",
+              "width": 8,
+              "height": 352
+            },
+            {
+              "id": "145:4847",
+              "name": "position=middle",
+              "width": 8,
+              "height": 352
+            },
+            {
+              "id": "145:4849",
+              "name": "position=bottom",
+              "width": 8,
+              "height": 352
+            }
+          ]
+        },
+        {
+          "nodeId": "542:15",
+          "key": "5813c2ec8dff7020997a974b70bd81079c681ec9",
+          "name": "scroll-bar horizontal",
+          "api": {
+            "Property 1": {
+              "type": "VARIANT",
+              "defaultValue": "left",
+              "variantOptions": [
+                "left",
+                "center",
+                "right"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "542:14",
+              "name": "Property 1=left",
+              "width": 435,
+              "height": 8
+            },
+            {
+              "id": "542:13",
+              "name": "Property 1=center",
+              "width": 435,
+              "height": 8
+            },
+            {
+              "id": "542:12",
+              "name": "Property 1=right",
+              "width": 435,
+              "height": 8
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "145:4844",
+          "nodeId": "145:4845",
+          "path": "assets/figma/scrollbar-145-4844.svg",
+          "width": 8,
+          "height": 352,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "542:15",
+          "nodeId": "542:14",
+          "path": "assets/figma/scrollbar-542-15.svg",
+          "width": 435,
+          "height": 8,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#scrollbar"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

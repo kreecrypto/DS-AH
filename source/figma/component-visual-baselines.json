@@ -1,0 +1,259 @@
+{
+  "capturedAt": "2026-09-20",
+  "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+  "baselines": [
+    {
+      "packageId": "avatar",
+      "ownerId": "144:435",
+      "nodeId": "144:435",
+      "path": "website/assets/figma/avatar-144-435.svg",
+      "width": 32,
+      "height": 32,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "background",
+      "ownerId": "332:810",
+      "nodeId": "332:811",
+      "path": "website/assets/figma/background-332-810.svg",
+      "width": 1280,
+      "height": 768,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "background",
+      "ownerId": "129:417",
+      "nodeId": "129:417",
+      "path": "website/assets/figma/background-129-417.svg",
+      "width": 393,
+      "height": 788,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "badge",
+      "ownerId": "86:788",
+      "nodeId": "86:789",
+      "path": "website/assets/figma/badge-86-788.svg",
+      "width": 44,
+      "height": 20,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "badge",
+      "ownerId": "336:584",
+      "nodeId": "336:589",
+      "path": "website/assets/figma/badge-336-584.svg",
+      "width": 54,
+      "height": 20,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "bottom-sheet",
+      "ownerId": "183:325",
+      "nodeId": "183:324",
+      "path": "website/assets/figma/bottom-sheet-183-325.svg",
+      "width": 393,
+      "height": 88,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "button",
+      "ownerId": "107:161",
+      "nodeId": "107:619",
+      "path": "website/assets/figma/button-107-161.svg",
+      "width": 73,
+      "height": 28,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "button",
+      "ownerId": "131:229",
+      "nodeId": "131:213",
+      "path": "website/assets/figma/button-131-229.svg",
+      "width": 24,
+      "height": 24,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "check-box",
+      "ownerId": "189:238",
+      "nodeId": "189:236",
+      "path": "website/assets/figma/check-box-189-238.svg",
+      "width": 200,
+      "height": 28,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "check-box",
+      "ownerId": "198:4638",
+      "nodeId": "198:4639",
+      "path": "website/assets/figma/check-box-198-4638.svg",
+      "width": 20,
+      "height": 20,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "divider",
+      "ownerId": "134:4008",
+      "nodeId": "134:4009",
+      "path": "website/assets/figma/divider-134-4008.svg",
+      "width": 352,
+      "height": 0,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "list",
+      "ownerId": "306:876",
+      "nodeId": "306:877",
+      "path": "website/assets/figma/list-306-876.svg",
+      "width": 280,
+      "height": 52,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "navbar",
+      "ownerId": "105:1223",
+      "nodeId": "105:1224",
+      "path": "website/assets/figma/navbar-105-1223.svg",
+      "width": 200,
+      "height": 32,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "navbar",
+      "ownerId": "139:573",
+      "nodeId": "139:574",
+      "path": "website/assets/figma/navbar-139-573.svg",
+      "width": 61,
+      "height": 36,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "navbar",
+      "ownerId": "285:995",
+      "nodeId": "285:994",
+      "path": "website/assets/figma/navbar-285-995.svg",
+      "width": 69,
+      "height": 44,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "navbar",
+      "ownerId": "1294:1197",
+      "nodeId": "1294:1195",
+      "path": "website/assets/figma/navbar-1294-1197.svg",
+      "width": 136,
+      "height": 32,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "navbar",
+      "ownerId": "409:1192",
+      "nodeId": "409:1192",
+      "path": "website/assets/figma/navbar-409-1192.svg",
+      "width": 32,
+      "height": 32,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "radio",
+      "ownerId": "218:233",
+      "nodeId": "218:231",
+      "path": "website/assets/figma/radio-218-233.svg",
+      "width": 91,
+      "height": 24,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "radio",
+      "ownerId": "304:2149",
+      "nodeId": "304:2150",
+      "path": "website/assets/figma/radio-304-2149.svg",
+      "width": 24,
+      "height": 24,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "scrollbar",
+      "ownerId": "145:4844",
+      "nodeId": "145:4845",
+      "path": "website/assets/figma/scrollbar-145-4844.svg",
+      "width": 8,
+      "height": 352,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "scrollbar",
+      "ownerId": "542:15",
+      "nodeId": "542:14",
+      "path": "website/assets/figma/scrollbar-542-15.svg",
+      "width": 435,
+      "height": 8,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "tab",
+      "ownerId": "307:73",
+      "nodeId": "307:72",
+      "path": "website/assets/figma/tab-307-73.svg",
+      "width": 88,
+      "height": 32,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    },
+    {
+      "packageId": "tab",
+      "ownerId": "1257:1429",
+      "nodeId": "1257:1430",
+      "path": "website/assets/figma/tab-1257-1429.svg",
+      "width": 44,
+      "height": 28,
+      "format": "SVG",
+      "textOutlined": true,
+      "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+    }
+  ]
+}

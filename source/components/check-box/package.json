@@ -1,0 +1,998 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "check-box",
+  "name": "Check box",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "188:37",
+    "pageName": "Check box"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+      "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+    ],
+    "preferredComponentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+  },
+  "components": [
+    {
+      "nodeId": "189:238",
+      "componentKey": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+      "figmaName": "checkbox",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "legacy_simple_duplicate"
+    },
+    {
+      "nodeId": "198:4638",
+      "componentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+      "figmaName": "checkbox",
+      "variantCount": 14,
+      "figmaCurrentApi": {
+        "check": [
+          "true",
+          "false"
+        ],
+        "state": [
+          "default",
+          "disabled",
+          "error"
+        ],
+        "indeterminate": [
+          "true",
+          "false"
+        ],
+        "on-dark": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ],
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Indeterminate": [
+          "True",
+          "False"
+        ],
+        "OnDark": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "preferred_checkbox_candidate"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/check-box",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#check-box"
+      ],
+      "owners": [
+        {
+          "nodeId": "189:238",
+          "key": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "name": "checkbox",
+          "representativeId": "189:236",
+          "layout": {
+            "width": 200,
+            "height": 28,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 8,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "189:236",
+              "parentId": "189:238",
+              "name": "ischeck=false",
+              "type": "COMPONENT",
+              "width": 200,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "197:875",
+              "parentId": "189:236",
+              "name": "checkbox",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "189:150",
+              "parentId": "189:236",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 144,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "205:530",
+              "parentId": "189:236",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I205:530;70:67",
+              "parentId": "205:530",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I205:530;70:67;70:78",
+              "parentId": "I205:530;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 17.083332061767578,
+              "height": 17.083332061767578,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "198:4638",
+          "key": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+          "name": "checkbox",
+          "representativeId": "198:4639",
+          "layout": {
+            "width": 20,
+            "height": 20,
+            "mode": "HORIZONTAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 4
+          },
+          "nodes": [
+            {
+              "id": "198:4639",
+              "parentId": "198:4638",
+              "name": "check=false, state=default, indeterminate=false, on-dark=no",
+              "type": "COMPONENT",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#check-box"
+      ],
+      "items": [
+        "Use for independent selections; use a radio group for mutually exclusive choices.",
+        "Preserve legacy instances. The preferred candidate adds error, disabled, indeterminate and on-dark variants."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/"
+      ],
+      "items": [
+        "Associate each checkbox with its label and test Space toggling.",
+        "Expose mixed state correctly and name related checkbox groups."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#check-box"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:5b9aa18bb0058343bb149c1751a5a72824f7b3b5/907:1349",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:0eb8e94e06df285b7259a7a7d5c6f42222d9ea83/907:1360",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:61:6",
+          "key": "e13ff1c705e6c0be1c5ad2db999ac04ac8f09019",
+          "name": "bg/base/base",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:7:55763",
+          "key": "d1416185ca38b2aa9b0c2990f680e18f7a0eba5b",
+          "name": "icon/interaction/secondary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.3764705955982208,
+              "g": 0.40392157435417175,
+              "b": 0.4627451002597809,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:62:4",
+          "key": "641b335f0df0aac0671e6406621ba96e4cf7935b",
+          "name": "text/primary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.10196078568696976,
+              "g": 0.11372549086809158,
+              "b": 0.12941177189350128,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:62:13",
+          "key": "87a70b3e77ed5f94ac151b54de7bc91c5d9eb22b",
+          "name": "focus/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:fd00de1d5efcd18748baa21b287c995d10111ae4/907:1300",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:6:55962",
+          "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
+          "name": "icon/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55918",
+          "key": "13a1c536015f5af119d704dedaee1786b49b09f8",
+          "name": "stroke/Interaction/strong/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8901960849761963,
+              "g": 0,
+              "b": 0.03921568766236305,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:61:9",
+          "key": "747d171febc49e1b39698335f3b3de06dfbf526c",
+          "name": "bg/base/disable",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15000000596046448
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55959",
+          "key": "ed4ab01f9b8ee0e2fadc7225a11794b0b2c1eb7d",
+          "name": "icon/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55889",
+          "key": "fc2285006094be97cbf4d040c8183ae507099548",
+          "name": "stroke/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8509804010391235,
+              "g": 0.8509804010391235,
+              "b": 0.8509804010391235,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55961",
+          "key": "9de105cddf8fb7e742713981e7174dcec16adaae",
+          "name": "icon/disabled",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.6980392336845398,
+              "g": 0.6980392336845398,
+              "b": 0.6980392336845398,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "189:238",
+          "bindings": {
+            "VariableID:58:21": {
+              "count": 2,
+              "nodeIds": [
+                "189:236",
+                "189:237"
+              ]
+            },
+            "VariableID:5b9aa18bb0058343bb149c1751a5a72824f7b3b5/907:1349": {
+              "count": 2,
+              "nodeIds": [
+                "197:875",
+                "197:876"
+              ]
+            },
+            "VariableID:0eb8e94e06df285b7259a7a7d5c6f42222d9ea83/907:1360": {
+              "count": 2,
+              "nodeIds": [
+                "197:875",
+                "197:876"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "197:875"
+              ]
+            },
+            "VariableID:7:55763": {
+              "count": 1,
+              "nodeIds": [
+                "197:875"
+              ]
+            },
+            "VariableID:62:4": {
+              "count": 1,
+              "nodeIds": [
+                "189:150"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 2,
+              "nodeIds": [
+                "189:150",
+                "189:231"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 2,
+              "nodeIds": [
+                "189:150",
+                "189:231"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 2,
+              "nodeIds": [
+                "189:150",
+                "189:231"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 2,
+              "nodeIds": [
+                "189:150",
+                "189:231"
+              ]
+            },
+            "VariableID:62:13": {
+              "count": 2,
+              "nodeIds": [
+                "I205:530;70:67;70:78",
+                "I205:534;70:67;70:78"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "197:876"
+              ]
+            },
+            "VariableID:fd00de1d5efcd18748baa21b287c995d10111ae4/907:1300": {
+              "count": 1,
+              "nodeIds": [
+                "197:876"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 1,
+              "nodeIds": [
+                "I197:876;198:4643;70:67;32:1600"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "189:231"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "198:4638",
+          "bindings": {
+            "VariableID:5b9aa18bb0058343bb149c1751a5a72824f7b3b5/907:1349": {
+              "count": 14,
+              "nodeIds": [
+                "198:4639",
+                "198:4640",
+                "198:4642"
+              ]
+            },
+            "VariableID:0eb8e94e06df285b7259a7a7d5c6f42222d9ea83/907:1360": {
+              "count": 14,
+              "nodeIds": [
+                "198:4639",
+                "198:4640",
+                "198:4642"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 6,
+              "nodeIds": [
+                "198:4639",
+                "198:4644",
+                "198:4650"
+              ]
+            },
+            "VariableID:7:55763": {
+              "count": 1,
+              "nodeIds": [
+                "198:4639"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 4,
+              "nodeIds": [
+                "198:4640",
+                "198:4642",
+                "I198:4652;70:67;32:1632"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 2,
+              "nodeIds": [
+                "I198:4641;70:67;32:1632",
+                "I198:4643;70:67;32:1600"
+              ]
+            },
+            "VariableID:fd00de1d5efcd18748baa21b287c995d10111ae4/907:1300": {
+              "count": 1,
+              "nodeIds": [
+                "198:4642"
+              ]
+            },
+            "VariableID:6:55918": {
+              "count": 2,
+              "nodeIds": [
+                "198:4644",
+                "198:4655"
+              ]
+            },
+            "VariableID:61:9": {
+              "count": 6,
+              "nodeIds": [
+                "198:4645",
+                "198:4647",
+                "198:4649"
+              ]
+            },
+            "VariableID:6:55959": {
+              "count": 2,
+              "nodeIds": [
+                "I198:4646;70:67;32:1632",
+                "I198:4648;70:67;32:1600"
+              ]
+            },
+            "VariableID:6:55889": {
+              "count": 2,
+              "nodeIds": [
+                "198:4649",
+                "198:4660"
+              ]
+            },
+            "VariableID:6:55961": {
+              "count": 2,
+              "nodeIds": [
+                "I198:4657;70:67;32:1632",
+                "I198:4659;70:67;32:1600"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#check-box"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "189:238",
+          "key": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "name": "checkbox",
+          "api": {
+            "Show icon#205:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "ischeck": {
+              "type": "VARIANT",
+              "defaultValue": "false",
+              "variantOptions": [
+                "true",
+                "false"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "189:236",
+              "name": "ischeck=false",
+              "width": 200,
+              "height": 28
+            },
+            {
+              "id": "189:237",
+              "name": "ischeck=true",
+              "width": 200,
+              "height": 28
+            }
+          ]
+        },
+        {
+          "nodeId": "198:4638",
+          "key": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+          "name": "checkbox",
+          "api": {
+            "check": {
+              "type": "VARIANT",
+              "defaultValue": "false",
+              "variantOptions": [
+                "true",
+                "false"
+              ]
+            },
+            "state": {
+              "type": "VARIANT",
+              "defaultValue": "default",
+              "variantOptions": [
+                "default",
+                "disabled",
+                "error"
+              ]
+            },
+            "indeterminate": {
+              "type": "VARIANT",
+              "defaultValue": "false",
+              "variantOptions": [
+                "true",
+                "false"
+              ]
+            },
+            "on-dark": {
+              "type": "VARIANT",
+              "defaultValue": "no",
+              "variantOptions": [
+                "yes",
+                "no"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "198:4639",
+              "name": "check=false, state=default, indeterminate=false, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4640",
+              "name": "check=true, state=default, indeterminate=true, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4642",
+              "name": "check=true, state=default, indeterminate=false, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4644",
+              "name": "check=false, state=error, indeterminate=false, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4645",
+              "name": "check=true, state=disabled, indeterminate=true, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4647",
+              "name": "check=true, state=disabled, indeterminate=false, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4649",
+              "name": "check=false, state=disabled, indeterminate=false, on-dark=no",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4650",
+              "name": "check=false, state=default, indeterminate=false,on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4651",
+              "name": "check=true, state=default, indeterminate=true, on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4653",
+              "name": "check=true, state=default, indeterminate=false, on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4655",
+              "name": "check=false, state=error, indeterminate=false, on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4656",
+              "name": "check=true, state=disabled, indeterminate=true, on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4658",
+              "name": "check=true, state=disabled, indeterminate=false, on-dark=yes",
+              "width": 20,
+              "height": 20
+            },
+            {
+              "id": "198:4660",
+              "name": "check=false, state=disabled, indeterminate=false, on-dark=yes",
+              "width": 20,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "189:238",
+          "nodeId": "189:236",
+          "path": "assets/figma/check-box-189-238.svg",
+          "width": 200,
+          "height": 28,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        },
+        {
+          "ownerId": "198:4638",
+          "nodeId": "198:4639",
+          "path": "assets/figma/check-box-198-4638.svg",
+          "width": 20,
+          "height": 20,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#check-box"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+          "nodeId": "198:4638",
+          "name": "checkbox",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "packageId": "check-box"
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 3,
+          "usedByOwner": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 2,
+          "usedByOwner": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "packageId": null
+        },
+        {
+          "key": "29fc20450fd5baa93950ce9bf927f97e9a1597af",
+          "nodeId": "302:562",
+          "name": "icon/general",
+          "remote": true,
+          "count": 1,
+          "usedByOwner": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+          "packageId": null
+        },
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 8,
+          "usedByOwner": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+          "packageId": null
+        },
+        {
+          "key": "29fc20450fd5baa93950ce9bf927f97e9a1597af",
+          "nodeId": "302:562",
+          "name": "icon/general",
+          "remote": true,
+          "count": 8,
+          "usedByOwner": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

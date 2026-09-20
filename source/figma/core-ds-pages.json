@@ -1,0 +1,454 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedFrom": {
+    "figmaFileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "method": "live Figma Plugin API read-only deep extraction",
+    "date": "2026-09-20"
+  },
+  "authority": "Figma Core DS",
+  "summary": {
+    "pages": 32,
+    "contentPages": 25,
+    "structuralDividerPages": 7,
+    "foundationPages": 4,
+    "assetPages": 2,
+    "componentPages": 19
+  },
+  "pages": [
+    {
+      "i": 0,
+      "id": "0:1",
+      "name": "Cover",
+      "kind": "cover",
+      "nodes": 14,
+      "owners": 0,
+      "status": "EXTRACTED",
+      "website": "overview"
+    },
+    {
+      "i": 1,
+      "id": "1:3",
+      "name": "------",
+      "kind": "divider",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 2,
+      "id": "1:4",
+      "name": "FUNDAMENTALS",
+      "kind": "section_label",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 3,
+      "id": "1:5",
+      "name": "Typography",
+      "kind": "foundation",
+      "nodes": 786,
+      "owners": 0,
+      "status": "EXTRACTED",
+      "source": "registry/core-ds-tokens/text.json"
+    },
+    {
+      "i": 4,
+      "id": "300:3",
+      "name": "Color",
+      "kind": "foundation",
+      "nodes": 4473,
+      "owners": 0,
+      "status": "EXTRACTED",
+      "source": "registry/core-ds-tokens/index.json"
+    },
+    {
+      "i": 5,
+      "id": "1416:10422",
+      "name": "Shape (Radius / Stroke)",
+      "kind": "foundation",
+      "nodes": 229,
+      "owners": 0,
+      "status": "EXTRACTED",
+      "source": "registry/core-ds-tokens/shape.json"
+    },
+    {
+      "i": 6,
+      "id": "1416:10653",
+      "name": "Spacing",
+      "kind": "foundation",
+      "nodes": 424,
+      "owners": 0,
+      "status": "EXTRACTED",
+      "source": "registry/core-ds-tokens/spacing.json"
+    },
+    {
+      "i": 7,
+      "id": "70:17",
+      "name": "----------",
+      "kind": "divider",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 8,
+      "id": "69:16",
+      "name": "ASSET",
+      "kind": "section_label",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 9,
+      "id": "1096:30",
+      "name": "AXA Badge",
+      "kind": "asset",
+      "nodes": 345,
+      "owners": 0,
+      "status": "EXTRACTED_AS_RAW_ASSET",
+      "topLevel": 29,
+      "note": "Artwork frames; no local component owner."
+    },
+    {
+      "i": 10,
+      "id": "69:2",
+      "name": "Icon",
+      "kind": "asset_component_library",
+      "nodes": 960,
+      "owners": 12,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "aabe8a16625cef57762df4b0610a7610554f7a6f",
+        "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+        "10808ac2ac7ca97b98294236fad14ffd0904a549",
+        "88af22b13ed5149678796f5ba0eaafd3de29b4e3",
+        "6d811b22e9cd1a3e8daa1862dada754ff8c1cf5d",
+        "575aafd94b3fd4c8062f983a61e55910568c752c",
+        "d7e8422114d8748388c3df41f0c0e68acfadd198",
+        "5d7f3fd76abacb5753c63bfcd3e71bed89b1b76e",
+        "8b17f77d874f51d2886c7b74309c9c5291531230",
+        "eca89b8278cd5bb7c5dfb06c5f023966fb20a84a",
+        "9fdb719938cfd76964487506fa74bcfbf07d3334",
+        "d8d7dc1282787faf3899158237d5f498230e1cee"
+      ]
+    },
+    {
+      "i": 11,
+      "id": "70:18",
+      "name": "---------",
+      "kind": "divider",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 12,
+      "id": "70:19",
+      "name": "COMPONENT",
+      "kind": "section_label",
+      "nodes": 0,
+      "owners": 0,
+      "status": "STRUCTURAL_ONLY"
+    },
+    {
+      "i": 13,
+      "id": "144:439",
+      "name": "Avatar",
+      "kind": "component",
+      "nodes": 4,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "78149762034307de859d934c10970de208ef2cee"
+      ]
+    },
+    {
+      "i": 14,
+      "id": "70:20",
+      "name": "Button",
+      "kind": "component",
+      "nodes": 580,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+        "e3848fc5f2f88f4c117dad1d078f8188df529621"
+      ]
+    },
+    {
+      "i": 15,
+      "id": "86:767",
+      "name": "Badge",
+      "kind": "component",
+      "nodes": 2701,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "f2187fca79d95e1669dd417689535f0f83e9f1df",
+        "8383a48397d12f9f5c77334d4cfbbeec0e759849"
+      ]
+    },
+    {
+      "i": 16,
+      "id": "129:396",
+      "name": "Background",
+      "kind": "component",
+      "nodes": 7,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "5b8283247625acb9dfefe63ce4327d0e928c9906",
+        "ad602fda1c480e7532bf3661bf9208430c52e23b"
+      ]
+    },
+    {
+      "i": 17,
+      "id": "182:642",
+      "name": "Bottom sheet",
+      "kind": "component",
+      "nodes": 59,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "e9b5920c33dda114cfefad490d854d6a5bce8635",
+        "9391284ee3e2618096ea34f89adfbc10500a3a96"
+      ],
+      "debt": [
+        "bottom-shet legacy spelling",
+        "local nested button identity differs from Core button"
+      ]
+    },
+    {
+      "i": 18,
+      "id": "337:1149",
+      "name": "Breadcrumb",
+      "kind": "component",
+      "nodes": 14,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "cf65b4e2b72b9b580e442b011225a9fcc8485787"
+      ]
+    },
+    {
+      "i": 19,
+      "id": "129:420",
+      "name": "Container",
+      "kind": "component",
+      "nodes": 8,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "878930169cd08b4b65acd09970260f1d3bf89e57",
+        "c08f699d2a2320780d6f9623f875940bed392fcf"
+      ]
+    },
+    {
+      "i": 20,
+      "id": "188:37",
+      "name": "Check box",
+      "kind": "component",
+      "nodes": 122,
+      "owners": 2,
+      "status": "EXTRACTED_DUPLICATE",
+      "ownerKeys": [
+        "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+        "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+      ],
+      "preferred": "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+    },
+    {
+      "i": 21,
+      "id": "747:1355",
+      "name": "Date picker",
+      "kind": "component",
+      "nodes": 185,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "8c1fa657cb66280263b5184bce07cc1b4ccefe35"
+      ]
+    },
+    {
+      "i": 22,
+      "id": "134:4004",
+      "name": "Divider",
+      "kind": "component",
+      "nodes": 8,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "80aa0c0b116de48fd29f990e1ca2ba18386e8628"
+      ]
+    },
+    {
+      "i": 23,
+      "id": "167:1541",
+      "name": "Input",
+      "kind": "component",
+      "nodes": 743,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+        "a6db9d0482c6446fd483f71f6a517f2cf3984345"
+      ],
+      "debt": [
+        "dropdown state disable canonicalizes to Disabled"
+      ]
+    },
+    {
+      "i": 24,
+      "id": "305:10284",
+      "name": "Evalution",
+      "kind": "component_placeholder",
+      "nodes": 0,
+      "owners": 0,
+      "status": "EMPTY",
+      "debt": [
+        "legacy page spelling Evalution"
+      ]
+    },
+    {
+      "i": 25,
+      "id": "306:756",
+      "name": "List",
+      "kind": "component",
+      "nodes": 257,
+      "owners": 4,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "5e3d148737311590c7e0cd60c033aacf76fe298d",
+        "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+        "fc742e1df5ac448c447807b9e3b2de047462666e",
+        "2408a8085bd3e19bdd43f56b076f189eddf6defe"
+      ],
+      "debt": [
+        "checkbok canonicalizes to Checkbox"
+      ]
+    },
+    {
+      "i": 26,
+      "id": "165:489",
+      "name": "Tab",
+      "kind": "component",
+      "nodes": 125,
+      "owners": 4,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+        "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+        "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+        "527e1da72069d565082f4c4df0e043462e9e0109"
+      ],
+      "debt": [
+        ".device canonicalizes to Device"
+      ]
+    },
+    {
+      "i": 27,
+      "id": "1201:63",
+      "name": "Toggle",
+      "kind": "component",
+      "nodes": 10,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "effb8465ac23bf00aad5538adf7d83fa3a359032"
+      ]
+    },
+    {
+      "i": 28,
+      "id": "82:608",
+      "name": "Tooltips",
+      "kind": "component",
+      "nodes": 39,
+      "owners": 1,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "5a32687740711c43db34cefeb943e63aa6cfb34e"
+      ],
+      "debt": [
+        "buttom-right canonicalizes to BottomRight"
+      ]
+    },
+    {
+      "i": 29,
+      "id": "218:125",
+      "name": "Radio",
+      "kind": "component",
+      "nodes": 120,
+      "owners": 3,
+      "status": "EXTRACTED_DUPLICATE",
+      "ownerKeys": [
+        "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+        "f90d2487d05573910316e182ac17e5bece4c856a",
+        "888654c1d9d03deffb3eef2ebc450568ed6e71e3"
+      ],
+      "preferred": "f90d2487d05573910316e182ac17e5bece4c856a",
+      "debt": [
+        "disable→Disabled",
+        "fasle→False"
+      ]
+    },
+    {
+      "i": 30,
+      "id": "105:910",
+      "name": "Navbar",
+      "kind": "component",
+      "nodes": 943,
+      "owners": 12,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "27cffe58afdec2bef93250b55cfa11835276b823",
+        "c27fb78aa960961f5557379b41e0cb5356842c92",
+        "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+        "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+        "558b8d869443d0719a184f552bb0503b567f1203",
+        "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+        "8c565095086ab54369ac9016287135b196141358",
+        "640a0f70dae56e7abfc431e894673d240c15619b",
+        "99c9834309df6aa9f48301581c2bfe295610373e",
+        "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+        "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+        "01afd7cbdf324fb90cddcaf30327919310d773a1"
+      ],
+      "debt": [
+        ".device→Device",
+        "stage→State when interaction state"
+      ]
+    },
+    {
+      "i": 31,
+      "id": "145:4817",
+      "name": "Scrollbar",
+      "kind": "component",
+      "nodes": 32,
+      "owners": 2,
+      "status": "EXTRACTED",
+      "ownerKeys": [
+        "bfe31419935d2a234c5dc377ae4535d5033f50be",
+        "5813c2ec8dff7020997a974b70bd81079c681ec9"
+      ],
+      "debt": [
+        "Property 1 unresolved; semantic axis must be resolved before new work"
+      ]
+    }
+  ],
+  "websitePipeline": {
+    "order": [
+      "foundations",
+      "assets",
+      "components",
+      "patterns",
+      "templates",
+      "figma-mapping",
+      "agent",
+      "qa"
+    ],
+    "rule": "Website consumes canonical GitHub source derived from Figma; it must not infer missing design semantics."
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "divider",
+  "name": "Divider",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "134:4004",
+    "pageName": "Divider"
+  },
+  "identity": {
+    "ownerCount": 1,
+    "componentKeys": [
+      "80aa0c0b116de48fd29f990e1ca2ba18386e8628"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "134:4008",
+      "componentKey": "80aa0c0b116de48fd29f990e1ca2ba18386e8628",
+      "figmaName": "divider",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "style": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      "canonicalApi": {
+        "Orientation": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/divider",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#divider"
+      ],
+      "owners": [
+        {
+          "nodeId": "134:4008",
+          "key": "80aa0c0b116de48fd29f990e1ca2ba18386e8628",
+          "name": "divider",
+          "representativeId": "134:4009",
+          "layout": {
+            "width": 352,
+            "height": 0,
+            "mode": "NONE",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "134:4009",
+              "parentId": "134:4008",
+              "name": "style=horizontal",
+              "type": "COMPONENT",
+              "width": 352,
+              "height": 0,
+              "visible": true
+            },
+            {
+              "id": "134:4010",
+              "parentId": "134:4009",
+              "name": "line",
+              "type": "LINE",
+              "width": 352,
+              "height": 0,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#divider"
+      ],
+      "items": [
+        "Use horizontal or vertical variants to separate content groups.",
+        "Do not use a divider instead of a meaningful heading or label."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/TR/wai-aria-1.2/#separator"
+      ],
+      "items": [
+        "Decide whether separation is semantic or purely decorative.",
+        "Do not make a static divider keyboard-focusable or imply it is a draggable splitter."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#divider"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:c5f4bb3bada484211f8f219e741d8122d05d5eac/907:1336",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:62:12",
+          "key": "9bcc8b1bb2b476689ca2436f52e3c390e57ba62f",
+          "name": "stroke/regular",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.8980392217636108,
+              "g": 0.8980392217636108,
+              "b": 0.8980392217636108,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "134:4008",
+          "bindings": {
+            "VariableID:c5f4bb3bada484211f8f219e741d8122d05d5eac/907:1336": {
+              "count": 1,
+              "nodeIds": [
+                "134:4008"
+              ]
+            },
+            "VariableID:62:12": {
+              "count": 2,
+              "nodeIds": [
+                "134:4010",
+                "134:4012"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#divider"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "134:4008",
+          "key": "80aa0c0b116de48fd29f990e1ca2ba18386e8628",
+          "name": "divider",
+          "api": {
+            "style": {
+              "type": "VARIANT",
+              "defaultValue": "horizontal",
+              "variantOptions": [
+                "horizontal",
+                "vertical"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "134:4009",
+              "name": "style=horizontal",
+              "width": 352,
+              "height": 0
+            },
+            {
+              "id": "134:4011",
+              "name": "style=vertical",
+              "width": 0.00001748455542838201,
+              "height": 400
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "CAPTURED_NOT_VERIFIED",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "134:4008",
+          "nodeId": "134:4009",
+          "path": "assets/figma/divider-134-4008.svg",
+          "width": 352,
+          "height": 0,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#divider"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": []
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

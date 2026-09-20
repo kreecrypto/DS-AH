@@ -1,0 +1,1294 @@
+{
+  "schemaVersion": "2.0.0",
+  "kind": "component-source-package",
+  "id": "bottom-sheet",
+  "name": "Bottom sheet",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "182:642",
+    "pageName": "Bottom sheet"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "9391284ee3e2618096ea34f89adfbc10500a3a96"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "182:872",
+      "componentKey": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "figmaName": "bottom-shet",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {
+        "Name": "Bottom Sheet"
+      },
+      "registryStatus": "rename_candidate"
+    },
+    {
+      "nodeId": "183:325",
+      "componentKey": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+      "figmaName": "button",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "stack": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "canonicalApi": {
+        "ActionCount": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "registryStatus": "contextual_not_core_button"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "bottom-shet legacy spelling",
+      "local nested button identity differs from Core button"
+    ]
+  },
+  "website": {
+    "route": "/components/bottom-sheet",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": {
+      "status": "PARTIAL",
+      "coverage": "Representative/default variant anatomy for every owner; other variant anatomy is not yet inspected.",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#bottom-sheet"
+      ],
+      "owners": [
+        {
+          "nodeId": "182:872",
+          "key": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "name": "bottom-shet",
+          "representativeId": "182:872",
+          "layout": {
+            "width": 393,
+            "height": 336,
+            "mode": "VERTICAL",
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "gap": 0,
+            "radius": "MIXED"
+          },
+          "nodes": [
+            {
+              "id": "182:872",
+              "parentId": "182:642",
+              "name": "bottom-shet",
+              "type": "COMPONENT",
+              "width": 393,
+              "height": 336,
+              "visible": true
+            },
+            {
+              "id": "182:711",
+              "parentId": "182:872",
+              "name": "header",
+              "type": "FRAME",
+              "width": 393,
+              "height": 54,
+              "visible": true
+            },
+            {
+              "id": "183:278",
+              "parentId": "182:711",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I183:278;70:67",
+              "parentId": "183:278",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I183:278;70:67;70:78",
+              "parentId": "I183:278;70:67",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 17.083332061767578,
+              "height": 17.083332061767578,
+              "visible": true
+            },
+            {
+              "id": "183:279",
+              "parentId": "182:711",
+              "name": "ข้อความ",
+              "type": "TEXT",
+              "width": 313,
+              "height": 30,
+              "visible": true
+            },
+            {
+              "id": "182:845",
+              "parentId": "182:711",
+              "name": "base-icon",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I182:845;37:25",
+              "parentId": "182:845",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 20,
+              "height": 20,
+              "visible": true
+            },
+            {
+              "id": "I182:845;37:25;32:1630",
+              "parentId": "I182:845;37:25",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 17.083332061767578,
+              "height": 17.083332061767578,
+              "visible": true
+            },
+            {
+              "id": "182:857",
+              "parentId": "182:872",
+              "name": "container",
+              "type": "INSTANCE",
+              "width": 393,
+              "height": 194,
+              "visible": true
+            },
+            {
+              "id": "I182:857;129:414",
+              "parentId": "182:857",
+              "name": "swap-content",
+              "type": "INSTANCE",
+              "width": 369,
+              "height": 170,
+              "visible": true
+            },
+            {
+              "id": "I182:857;129:414;129:416",
+              "parentId": "I182:857;129:414",
+              "name": "swap content",
+              "type": "TEXT",
+              "width": 129,
+              "height": 42,
+              "visible": true
+            },
+            {
+              "id": "183:326",
+              "parentId": "182:872",
+              "name": "button",
+              "type": "INSTANCE",
+              "width": 393,
+              "height": 88,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296",
+              "parentId": "183:326",
+              "name": "button",
+              "type": "INSTANCE",
+              "width": 361,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296;128:3541",
+              "parentId": "I183:326;183:296",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296;128:3541;70:78",
+              "parentId": "I183:326;183:296;128:3541",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296;107:403",
+              "parentId": "I183:326;183:296",
+              "name": "Text",
+              "type": "TEXT",
+              "width": 27,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296;128:3538",
+              "parentId": "I183:326;183:296",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I183:326;183:296;128:3538;70:78",
+              "parentId": "I183:326;183:296;128:3538",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "nodeId": "183:325",
+          "key": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+          "name": "button",
+          "representativeId": "183:324",
+          "layout": {
+            "width": 393,
+            "height": 88,
+            "mode": "VERTICAL",
+            "padding": [
+              16,
+              16,
+              32,
+              16
+            ],
+            "gap": 0,
+            "radius": 0
+          },
+          "nodes": [
+            {
+              "id": "183:324",
+              "parentId": "183:325",
+              "name": "stack=1",
+              "type": "COMPONENT",
+              "width": 393,
+              "height": 88,
+              "visible": true
+            },
+            {
+              "id": "183:296",
+              "parentId": "183:324",
+              "name": "button",
+              "type": "INSTANCE",
+              "width": 361,
+              "height": 40,
+              "visible": true
+            },
+            {
+              "id": "I183:296;128:3541",
+              "parentId": "183:296",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I183:296;128:3541;70:78",
+              "parentId": "I183:296;128:3541",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            },
+            {
+              "id": "I183:296;107:403",
+              "parentId": "183:296",
+              "name": "Text",
+              "type": "TEXT",
+              "width": 27,
+              "height": 28,
+              "visible": true
+            },
+            {
+              "id": "I183:296;128:3538",
+              "parentId": "183:296",
+              "name": "icon/general",
+              "type": "INSTANCE",
+              "width": 16,
+              "height": 16,
+              "visible": true
+            },
+            {
+              "id": "I183:296;128:3538;70:78",
+              "parentId": "I183:296;128:3538",
+              "name": "vector",
+              "type": "VECTOR",
+              "width": 13.666666984558105,
+              "height": 13.666666984558105,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    "usage": {
+      "status": "DRAFT_NEEDS_REVIEW",
+      "provenance": "Authored implementation guidance; not extracted Figma policy and not yet approved by the DS owner.",
+      "evidence": [
+        "source/components/web-guidance.json",
+        "source/figma/component-enrichment-2026-09-20.json#bottom-sheet"
+      ],
+      "items": [
+        "Use the bottom-shet owner for the sheet and its contextual button owner for the action stack.",
+        "Do not replace the contextual button identity with the Core Button simply because its name matches."
+      ],
+      "sourceDescription": "No usage specification found in owner descriptions or page documentation."
+    },
+    "accessibility": {
+      "status": "DRAFT_NOT_TESTED",
+      "provenance": "Web recommendations, not Figma extraction or conformance evidence.",
+      "evidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ],
+      "items": [
+        "If modal, provide a name, move focus inside, contain Tab navigation, support Escape and restore focus.",
+        "Do not mark a non-modal sheet aria-modal; confirm the intended interaction before implementation."
+      ],
+      "testStatus": "NOT_RUN"
+    },
+    "tokenDependencySubset": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#bottom-sheet"
+      ],
+      "coverage": "Bindings found on all owner descendants, across all source variants; includes fill/stroke bindings.",
+      "tokens": [
+        {
+          "id": "VariableID:58:21",
+          "key": "0ca76e6a3f9cd34e91fa8420fe0dba04141c392b",
+          "name": "padding/md",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:6",
+          "key": "c191a22f075f7473b7c86340332176656622d05f",
+          "name": "padding/lg",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 12
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55966",
+          "key": "2e0a0346fada1ea929659cd07378578ff43f00b7",
+          "name": "icon/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55857",
+          "key": "6cbb8776b6493bb75c278e75646be4c0036597a7",
+          "name": "text/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55850",
+          "key": "e3237c3d2f47ad19ceb596beeebe44cbcdd9413c",
+          "name": "font/size/lg",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 20,
+            "Mobile": 20
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55845",
+          "key": "26068353565b433eecede5a2a0175d6bc6f8d31e",
+          "name": "font/weight/bold",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "75 Bd",
+            "Mobile": "75 Bd"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55794",
+          "key": "854299c7b4217aa9ba022a9b39afae091e19830c",
+          "name": "font/family/title",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:43",
+          "key": "cebd971901f6c71b1f43dfe41283a8d8c971b260",
+          "name": "font/line-height/xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 24,
+            "Mobile": 30
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:79371501f1ddef2b80cacf2c06cbc1538bc8d9dd/131:23",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        },
+        {
+          "id": "VariableID:70:34",
+          "key": "753edf11160dfb7d1d70d06945bd5455d35c5038",
+          "name": "radius/xl",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:61:6",
+          "key": "e13ff1c705e6c0be1c5ad2db999ac04ac8f09019",
+          "name": "bg/base/base",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:14",
+          "key": "931bb0b4bf0085fe1b4bc512fb526684368172b0",
+          "name": "padding/8xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 64
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:70:32",
+          "key": "d4a0fadd71244c9169eedd88d9403a6fea073f0d",
+          "name": "radius/md",
+          "type": "FLOAT",
+          "collection": "shape",
+          "values": {
+            "Mode 1": 8
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:3:55770",
+          "key": "15688fde1e669ec3e5d2edba364211de8cc12b2a",
+          "name": "bg/decorative/emphasis/expressive/low",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.886274516582489,
+              "g": 0.9372549057006836,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55842",
+          "key": "11a42c1731c1a220d86f113f7fc035e5c7c31a25",
+          "name": "text/secondary",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0.26274511218070984,
+              "g": 0.2862745225429535,
+              "b": 0.33725491166114807,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55861",
+          "key": "038c0fb7be615a595d85640d13fd8144c3edf0cf",
+          "name": "font/size/5xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 48,
+            "Mobile": 32
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55844",
+          "key": "bc7730b2b41fd8a6b99eb35d75ac920f87bb366e",
+          "name": "font/weight/light",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "45 Li",
+            "Mobile": "45 Li"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55793",
+          "key": "3e03fd3bad5d30edec2aefd9fe07ac48bc99a429",
+          "name": "font/family/heading",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:40",
+          "key": "c3d2bbb2420b410ec45dd44c3603205cacc88a85",
+          "name": "font/line-height/7xl",
+          "type": "FLOAT",
+          "collection": "text",
+          "values": {
+            "Desktop": 54,
+            "Mobile": 42
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:3",
+          "key": "6daf58ffec769b8b2eb914bf481bb399acf407e3",
+          "name": "padding/none",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 0
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:7",
+          "key": "d088854dff72e30fdd6ace730e14ecaad87f6534",
+          "name": "padding/xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 16
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:54:10",
+          "key": "1b7e2c0a4e20d908fb443879daad5e45969df49d",
+          "name": "padding/4xl",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 32
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:58:20",
+          "key": "a4d838d0992fd971c4c983001f638e445001d29a",
+          "name": "padding/sm",
+          "type": "FLOAT",
+          "collection": "spacing",
+          "values": {
+            "Mode 1": 4
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:4:55785",
+          "key": "5583a01c840d63e4ae1407717fe44061366fde20",
+          "name": "bg/interaction/primary/default",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55952",
+          "key": "9ea8056b343b70a5235732188ed18eebbd6bc248",
+          "name": "stroke/field/active",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 0,
+              "g": 0,
+              "b": 0.5607843399047852,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55962",
+          "key": "9e50fa1d87516e94561dd52b137aa71f16e1b668",
+          "name": "icon/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:6:55845",
+          "key": "caaa48abcdfae9be2e3e49aa4b6131285a0cd8da",
+          "name": "text/primary/inverse",
+          "type": "COLOR",
+          "collection": "color",
+          "values": {
+            "Mode 1": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55838",
+          "key": "8f2186c408ab94d40b30be5fca1155870b15303c",
+          "name": "font/weight/regular",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "55 Regular",
+            "Mobile": "55 Regular"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:9:55796",
+          "key": "99603591dc2decb1fec1f840130ef535967e2fca",
+          "name": "font/family/body",
+          "type": "STRING",
+          "collection": "text",
+          "values": {
+            "Desktop": "DB Helvethaica X",
+            "Mobile": "DB Helvethaica X"
+          },
+          "status": "VERIFIED_LIVE_FIGMA"
+        },
+        {
+          "id": "VariableID:51:34",
+          "status": "UNRESOLVED_EXTERNAL_OR_STALE"
+        }
+      ],
+      "ownerBindings": [
+        {
+          "nodeId": "182:872",
+          "bindings": {
+            "VariableID:58:21": {
+              "count": 1,
+              "nodeIds": [
+                "182:711"
+              ]
+            },
+            "VariableID:54:6": {
+              "count": 2,
+              "nodeIds": [
+                "182:711",
+                "182:857"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 1,
+              "nodeIds": [
+                "I183:278;70:67;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 1,
+              "nodeIds": [
+                "183:279"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 2,
+              "nodeIds": [
+                "183:279",
+                "I183:326;183:296;107:403"
+              ]
+            },
+            "VariableID:9:55845": {
+              "count": 1,
+              "nodeIds": [
+                "183:279"
+              ]
+            },
+            "VariableID:9:55794": {
+              "count": 1,
+              "nodeIds": [
+                "183:279"
+              ]
+            },
+            "VariableID:51:43": {
+              "count": 1,
+              "nodeIds": [
+                "183:279"
+              ]
+            },
+            "VariableID:79371501f1ddef2b80cacf2c06cbc1538bc8d9dd/131:23": {
+              "count": 1,
+              "nodeIds": [
+                "I182:845;37:25;32:1630"
+              ]
+            },
+            "VariableID:70:34": {
+              "count": 1,
+              "nodeIds": [
+                "182:857"
+              ]
+            },
+            "VariableID:61:6": {
+              "count": 1,
+              "nodeIds": [
+                "182:857"
+              ]
+            },
+            "VariableID:54:14": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414"
+              ]
+            },
+            "VariableID:70:32": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414"
+              ]
+            },
+            "VariableID:3:55770": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414"
+              ]
+            },
+            "VariableID:6:55842": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414;129:416"
+              ]
+            },
+            "VariableID:9:55861": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414;129:416"
+              ]
+            },
+            "VariableID:9:55844": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414;129:416"
+              ]
+            },
+            "VariableID:9:55793": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414;129:416"
+              ]
+            },
+            "VariableID:51:40": {
+              "count": 1,
+              "nodeIds": [
+                "I182:857;129:414;129:416"
+              ]
+            },
+            "VariableID:54:3": {
+              "count": 1,
+              "nodeIds": [
+                "183:326"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 2,
+              "nodeIds": [
+                "183:326",
+                "I183:326;183:296"
+              ]
+            },
+            "VariableID:54:10": {
+              "count": 1,
+              "nodeIds": [
+                "183:326"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 2,
+              "nodeIds": [
+                "I183:326;183:296;128:3541;70:78",
+                "I183:326;183:296;128:3538;70:78"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296;107:403"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296;107:403"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296;107:403"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 1,
+              "nodeIds": [
+                "I183:326;183:296;107:403"
+              ]
+            }
+          }
+        },
+        {
+          "nodeId": "183:325",
+          "bindings": {
+            "VariableID:54:3": {
+              "count": 2,
+              "nodeIds": [
+                "183:324",
+                "745:1340"
+              ]
+            },
+            "VariableID:54:7": {
+              "count": 8,
+              "nodeIds": [
+                "183:324",
+                "183:296",
+                "183:323"
+              ]
+            },
+            "VariableID:54:10": {
+              "count": 3,
+              "nodeIds": [
+                "183:324",
+                "183:323",
+                "745:1327"
+              ]
+            },
+            "VariableID:58:20": {
+              "count": 6,
+              "nodeIds": [
+                "183:296",
+                "183:303",
+                "183:309"
+              ]
+            },
+            "VariableID:4:55785": {
+              "count": 3,
+              "nodeIds": [
+                "183:296",
+                "183:309",
+                "745:1329"
+              ]
+            },
+            "VariableID:6:55952": {
+              "count": 5,
+              "nodeIds": [
+                "183:296",
+                "183:303",
+                "183:309"
+              ]
+            },
+            "VariableID:6:55962": {
+              "count": 6,
+              "nodeIds": [
+                "I183:296;128:3541;70:78",
+                "I183:296;128:3538;70:78",
+                "I183:309;128:3541;70:78"
+              ]
+            },
+            "VariableID:6:55845": {
+              "count": 3,
+              "nodeIds": [
+                "I183:296;107:403",
+                "I183:309;107:403",
+                "I745:1329;107:403"
+              ]
+            },
+            "VariableID:9:55850": {
+              "count": 6,
+              "nodeIds": [
+                "I183:296;107:403",
+                "I183:303;107:358",
+                "I183:309;107:403"
+              ]
+            },
+            "VariableID:9:55838": {
+              "count": 6,
+              "nodeIds": [
+                "I183:296;107:403",
+                "I183:303;107:358",
+                "I183:309;107:403"
+              ]
+            },
+            "VariableID:9:55796": {
+              "count": 6,
+              "nodeIds": [
+                "I183:296;107:403",
+                "I183:303;107:358",
+                "I183:309;107:403"
+              ]
+            },
+            "VariableID:51:34": {
+              "count": 6,
+              "nodeIds": [
+                "I183:296;107:403",
+                "I183:303;107:358",
+                "I183:309;107:403"
+              ]
+            },
+            "VariableID:58:21": {
+              "count": 2,
+              "nodeIds": [
+                "183:323",
+                "745:1327"
+              ]
+            },
+            "VariableID:6:55966": {
+              "count": 6,
+              "nodeIds": [
+                "I183:303;128:3556;70:78",
+                "I183:303;128:3553;70:78",
+                "I745:1340;128:3568;70:78"
+              ]
+            },
+            "VariableID:6:55857": {
+              "count": 3,
+              "nodeIds": [
+                "I183:303;107:358",
+                "I745:1340;107:362",
+                "I745:1328;107:358"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "examples": {
+      "status": "SOURCE_RECIPES_ONLY",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#bottom-sheet"
+      ],
+      "provenance": "Exact source variant IDs and property defaults; not executable production component examples.",
+      "owners": [
+        {
+          "nodeId": "182:872",
+          "key": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "name": "bottom-shet",
+          "api": {},
+          "variants": [
+            {
+              "id": "182:872",
+              "name": "bottom-shet",
+              "width": 393,
+              "height": 336
+            }
+          ]
+        },
+        {
+          "nodeId": "183:325",
+          "key": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+          "name": "button",
+          "api": {
+            "stack": {
+              "type": "VARIANT",
+              "defaultValue": "1",
+              "variantOptions": [
+                "1",
+                "2",
+                "3"
+              ]
+            }
+          },
+          "variants": [
+            {
+              "id": "183:324",
+              "name": "stack=1",
+              "width": 393,
+              "height": 88
+            },
+            {
+              "id": "183:323",
+              "name": "stack=2",
+              "width": 393,
+              "height": 88
+            },
+            {
+              "id": "745:1327",
+              "name": "stack=3",
+              "width": 393,
+              "height": 88
+            }
+          ]
+        }
+      ]
+    },
+    "visualReference": {
+      "status": "PARTIAL",
+      "evidence": [
+        "source/figma/component-visual-baselines.json"
+      ],
+      "artifacts": [
+        {
+          "ownerId": "183:325",
+          "nodeId": "183:324",
+          "path": "assets/figma/bottom-sheet-183-325.svg",
+          "width": 393,
+          "height": 88,
+          "status": "EXPORTED_NOT_VISUALLY_VERIFIED"
+        }
+      ],
+      "missingOwnerIds": [
+        "182:872"
+      ],
+      "coverage": "One default variant per exported owner. Not all states; no source-to-browser comparison."
+    },
+    "relatedComponents": {
+      "status": "VERIFIED",
+      "evidence": [
+        "source/figma/component-enrichment-2026-09-20.json#bottom-sheet"
+      ],
+      "provenance": "Nested instance main-component identities from live Figma. Not inferred by display name.",
+      "items": [
+        {
+          "key": "aabe8a16625cef57762df4b0610a7610554f7a6f",
+          "nodeId": "70:63",
+          "name": "base-icon",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": null
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 3,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": null
+        },
+        {
+          "key": "fd2d7b7d5f1984dbabed7acfd0c6f0f0730148f7",
+          "nodeId": "182:832",
+          "name": "base-icon",
+          "remote": true,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": null
+        },
+        {
+          "key": "29fc20450fd5baa93950ce9bf927f97e9a1597af",
+          "nodeId": "182:737",
+          "name": "icon/general",
+          "remote": true,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": null
+        },
+        {
+          "key": "878930169cd08b4b65acd09970260f1d3bf89e57",
+          "nodeId": "129:413",
+          "name": "container",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": "container"
+        },
+        {
+          "key": "c08f699d2a2320780d6f9623f875940bed392fcf",
+          "nodeId": "129:415",
+          "name": "swap-content",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": "container"
+        },
+        {
+          "key": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+          "nodeId": "183:325",
+          "name": "button",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": "bottom-sheet"
+        },
+        {
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "nodeId": "107:161",
+          "name": "button",
+          "remote": false,
+          "count": 1,
+          "usedByOwner": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+          "packageId": "button"
+        },
+        {
+          "key": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+          "nodeId": "107:161",
+          "name": "button",
+          "remote": false,
+          "count": 6,
+          "usedByOwner": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+          "packageId": "button"
+        },
+        {
+          "key": "7e81e1a051342ff12482ec11c087688a5ed9fe62",
+          "nodeId": "70:76",
+          "name": "icon/general",
+          "remote": false,
+          "count": 12,
+          "usedByOwner": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+          "packageId": null
+        }
+      ]
+    }
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics.",
+  "webValidation": {
+    "runtime": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "responsive": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "accessibility": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visualRegression": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "webReadiness": {
+    "eligible": false,
+    "reason": "ENRICHMENT_AND_WEB_QA_PENDING",
+    "checkedAt": "2026-09-20"
+  }
+}

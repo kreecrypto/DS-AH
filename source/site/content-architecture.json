@@ -1,0 +1,476 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-20",
+  "system": "AH Design System Documentation Content Architecture",
+  "authorityOrder": [
+    "Figma Core DS",
+    "Approved domain/master Figma evidence",
+    "GitHub canonical registry/source package",
+    "Documentation website"
+  ],
+  "invariant": "Website is a consumer/presentation layer. It must not reinterpret or override Figma token values, component identity, APIs, or approved pattern semantics.",
+  "pipeline": [
+    "Figma Raw Evidence",
+    "Deep Extract",
+    "GitHub Registry",
+    "GitHub Source Package",
+    "Normalize / Resolve Authority",
+    "Coverage & Quality Gates",
+    "Website Content Model",
+    "Website Route Renderer",
+    "Runtime / Visual / Accessibility QA"
+  ],
+  "contentGroups": [
+    {
+      "id": "overview",
+      "order": 1,
+      "label": "Overview",
+      "authority": "GitHub composed from Figma/GitHub evidence",
+      "sources": [
+        "source/figma/core-ds-pages.json",
+        "registry/documentation-site.json"
+      ],
+      "routes": [
+        "/",
+        "/getting-started",
+        "/source-of-truth"
+      ],
+      "packageType": "site-composition",
+      "sections": [
+        "Design System overview",
+        "Source hierarchy",
+        "How to use",
+        "Status / coverage"
+      ],
+      "status": "STRUCTURE_READY"
+    },
+    {
+      "id": "foundations",
+      "order": 2,
+      "label": "Foundations",
+      "authority": "Figma Core DS",
+      "figmaPages": [
+        "Typography",
+        "Color",
+        "Shape (Radius / Stroke)",
+        "Spacing"
+      ],
+      "sources": [
+        "registry/core-ds-tokens/index.json",
+        "registry/core-ds-tokens/text.json",
+        "registry/core-ds-tokens/shape.json",
+        "registry/core-ds-tokens/spacing.json",
+        "registry/core-ds-responsive-decision.json"
+      ],
+      "routes": [
+        "/foundations",
+        "/foundations/color",
+        "/foundations/typography",
+        "/foundations/spacing",
+        "/foundations/shape",
+        "/foundations/focus",
+        "/foundations/responsive"
+      ],
+      "packageType": "foundation-package",
+      "sections": [
+        "Overview",
+        "Tokens",
+        "Modes",
+        "Scopes",
+        "Semantic roles",
+        "Usage",
+        "Accessibility",
+        "Examples",
+        "Figma reference",
+        "QA"
+      ],
+      "rules": [
+        "Responsive/typography/screensize remains deprecated-unused unless governance changes.",
+        "Focus documentation may reference verified focus tokens but must not invent a new Figma foundation page."
+      ],
+      "status": "SOURCE_EXISTS_DOC_ENRICHMENT_REQUIRED"
+    },
+    {
+      "id": "styling-hooks",
+      "order": 3,
+      "label": "Styling Hooks",
+      "authority": "GitHub normalized mapping over Figma foundations",
+      "sources": [
+        "registry/core-ds-tokens/index.json",
+        "registry/foundations.json"
+      ],
+      "routes": [
+        "/styling-hooks",
+        "/styling-hooks/color",
+        "/styling-hooks/typography",
+        "/styling-hooks/spacing",
+        "/styling-hooks/shape"
+      ],
+      "packageType": "website-documentation-composition",
+      "sections": [
+        "Semantic hook",
+        "Figma token",
+        "Web variable mapping",
+        "Usage boundary",
+        "Do / Don't"
+      ],
+      "rules": [
+        "No independent token values.",
+        "A hook may alias a Figma semantic token; it may not create a competing design token source."
+      ],
+      "status": "STRUCTURE_READY_CONTENT_MAPPING_REQUIRED"
+    },
+    {
+      "id": "assets",
+      "order": 4,
+      "label": "Assets",
+      "authority": "Figma Core DS",
+      "figmaPages": [
+        "AXA Badge",
+        "Icon"
+      ],
+      "sources": [
+        "source/figma/core-ds-pages.json",
+        "registry/core-ds-components.json"
+      ],
+      "routes": [
+        "/assets",
+        "/assets/icons",
+        "/assets/axa-badges"
+      ],
+      "packageType": "asset-package",
+      "sections": [
+        "Overview",
+        "Inventory",
+        "Variants",
+        "Usage",
+        "Accessibility",
+        "Provenance",
+        "Figma reference",
+        "QA"
+      ],
+      "rules": [
+        "AXA Badge is raw artwork evidence, not a component API.",
+        "Icon componentKey identity must be preserved."
+      ],
+      "status": "SOURCE_EXISTS_ASSET_PACKAGING_REQUIRED"
+    },
+    {
+      "id": "components",
+      "order": 5,
+      "label": "Components",
+      "authority": "Figma Core DS",
+      "sources": [
+        "source/components/index.json",
+        "source/components/*/package.json",
+        "registry/core-ds-components.json",
+        "registry/core-ds-preferred.json",
+        "registry/core-ds-component-dependencies.json",
+        "registry/visual-baselines.json"
+      ],
+      "routes": [
+        "/components",
+        "/components/avatar",
+        "/components/button",
+        "/components/badge",
+        "/components/background",
+        "/components/bottom-sheet",
+        "/components/breadcrumb",
+        "/components/container",
+        "/components/check-box",
+        "/components/date-picker",
+        "/components/divider",
+        "/components/input",
+        "/components/evalution",
+        "/components/list",
+        "/components/tab",
+        "/components/toggle",
+        "/components/tooltips",
+        "/components/radio",
+        "/components/navbar",
+        "/components/scrollbar"
+      ],
+      "packageType": "component-source-package",
+      "sections": [
+        "Overview",
+        "When to use",
+        "Anatomy",
+        "API / properties",
+        "Variants",
+        "States",
+        "Tokens",
+        "Dependencies",
+        "Usage",
+        "Do / Don't",
+        "Accessibility",
+        "Examples",
+        "Figma reference",
+        "Visual baseline",
+        "Related components",
+        "QA / status"
+      ],
+      "rules": [
+        "componentKey beats display name.",
+        "Legacy Figma API names remain lookup evidence; canonical names are for new documentation/work.",
+        "No auto-migration of legacy Checkbox/Radio instances.",
+        "Use Container before inventing Card."
+      ],
+      "status": "18_SOURCE_READY_1_BLOCKED"
+    },
+    {
+      "id": "patterns",
+      "order": 6,
+      "label": "Patterns",
+      "authority": "Approved domain/master Figma evidence after Core DS",
+      "sources": [
+        "registry/domain-patterns.json",
+        "registry/state-flows.json",
+        "registry/core-ds-component-dependencies.json"
+      ],
+      "routes": [
+        "/patterns",
+        "/patterns/search-filter",
+        "/patterns/forms",
+        "/patterns/navigation",
+        "/patterns/list-table",
+        "/patterns/feedback-states",
+        "/patterns/overlay-sheet"
+      ],
+      "packageType": "pattern-package",
+      "sections": [
+        "Problem",
+        "When to use",
+        "Composition",
+        "Core components",
+        "Domain components",
+        "States",
+        "Responsive behavior",
+        "Interaction flow",
+        "Accessibility",
+        "Examples",
+        "Figma evidence",
+        "QA"
+      ],
+      "rules": [
+        "Patterns are not Core components.",
+        "Derived patterns require approved evidence; unresolved transitions stay unresolved."
+      ],
+      "status": "REGISTRY_EXISTS_PACKAGE_ENRICHMENT_REQUIRED"
+    },
+    {
+      "id": "templates",
+      "order": 7,
+      "label": "Templates",
+      "authority": "GitHub registry derived from approved master-screen evidence",
+      "sources": [
+        "registry/templates.json"
+      ],
+      "routes": [
+        "/templates",
+        "/templates/list",
+        "/templates/detail",
+        "/templates/create-edit-form",
+        "/templates/dashboard",
+        "/templates/search-filter",
+        "/templates/overlay-drawer"
+      ],
+      "packageType": "template-package",
+      "sections": [
+        "Purpose",
+        "Layout anatomy",
+        "Required regions",
+        "Optional regions",
+        "Component composition",
+        "Responsive behavior",
+        "States",
+        "Example screens",
+        "Figma evidence",
+        "QA"
+      ],
+      "rules": [
+        "Templates are composition guidance, not confirmed Figma component sets."
+      ],
+      "status": "COMPOSITION_CANDIDATES"
+    },
+    {
+      "id": "master-screens",
+      "order": 8,
+      "label": "Master Screens",
+      "authority": "Approved Master/Admin Figma sources",
+      "sources": [
+        "registry/admin-portal-source.json",
+        "registry/admin-portal-scenarios.json",
+        "registry/admin-portal-components.json",
+        "registry/admin-portal-dependencies.json"
+      ],
+      "routes": [
+        "/master-screens",
+        "/master-screens/agency",
+        "/master-screens/admin"
+      ],
+      "packageType": "screen-evidence-package",
+      "sections": [
+        "Screen metadata",
+        "Domain / use case",
+        "Figma node",
+        "Flow / scenario",
+        "Composition",
+        "States",
+        "Responsive evidence",
+        "Dependencies",
+        "Source status"
+      ],
+      "rules": [
+        "Master screens demonstrate approved composition; they do not override Core component APIs."
+      ],
+      "status": "SOURCE_REGISTRY_EXISTS"
+    },
+    {
+      "id": "interactions",
+      "order": 9,
+      "label": "Interactions & States",
+      "authority": "Figma evidence normalized in GitHub",
+      "sources": [
+        "registry/state-flows.json",
+        "source/components/*/package.json"
+      ],
+      "routes": [
+        "/interactions",
+        "/interactions/states",
+        "/interactions/validation",
+        "/interactions/loading-empty-error",
+        "/interactions/responsive-behavior"
+      ],
+      "packageType": "interaction-package",
+      "sections": [
+        "State model",
+        "Trigger",
+        "Transition evidence",
+        "Resulting UI",
+        "Keyboard / focus behavior",
+        "Responsive behavior",
+        "Accessibility",
+        "Source evidence"
+      ],
+      "rules": [
+        "Do not invent transition edges not proven by Figma/scenario evidence."
+      ],
+      "status": "STATE_GROUPS_EXIST_TRANSITION_ENRICHMENT_REQUIRED"
+    },
+    {
+      "id": "figma-mapping",
+      "order": 10,
+      "label": "Figma Mapping",
+      "authority": "GitHub canonical mapping of live Figma identity",
+      "sources": [
+        "source/figma/core-ds-pages.json",
+        "registry/core-ds-components.json",
+        "registry/core-ds-component-dependencies.json",
+        "registry/core-ds-preferred.json",
+        "registry/aliases.json"
+      ],
+      "routes": [
+        "/figma-mapping",
+        "/figma-mapping/pages",
+        "/figma-mapping/components",
+        "/figma-mapping/tokens",
+        "/figma-mapping/dependencies",
+        "/figma-mapping/aliases"
+      ],
+      "packageType": "mapping-package",
+      "sections": [
+        "File",
+        "Page",
+        "Node",
+        "componentKey",
+        "Current Figma API",
+        "Canonical API",
+        "Dependencies",
+        "Aliases",
+        "Preferred / legacy",
+        "Status"
+      ],
+      "status": "SOURCE_READY"
+    },
+    {
+      "id": "agent",
+      "order": 11,
+      "label": "Agent",
+      "authority": "GitHub operating contract",
+      "sources": [
+        "AGENTS.md",
+        "agent/manifest.json",
+        "agent/workflows/*",
+        "skills/*",
+        "policies/*"
+      ],
+      "routes": [
+        "/agent",
+        "/agent/architecture",
+        "/agent/workflows",
+        "/agent/skills",
+        "/agent/policies",
+        "/agent/evidence"
+      ],
+      "packageType": "operating-contract-doc",
+      "sections": [
+        "Architecture",
+        "Authority",
+        "Workflow",
+        "Skills",
+        "Permission / scope",
+        "Evidence",
+        "Completion states"
+      ],
+      "status": "SOURCE_READY"
+    },
+    {
+      "id": "qa",
+      "order": 12,
+      "label": "QA",
+      "authority": "GitHub quality/evidence registries plus live runtime evidence",
+      "sources": [
+        "agent/gates/quality-gates.json",
+        "agent/gates/website-quality-gates.json",
+        "registry/visual-baselines.json",
+        "registry/core-ds-coverage.json",
+        "registry/code-connect-status.json"
+      ],
+      "routes": [
+        "/qa",
+        "/qa/coverage",
+        "/qa/visual-baselines",
+        "/qa/accessibility",
+        "/qa/design-system-compliance",
+        "/qa/code-connect"
+      ],
+      "packageType": "qa-package",
+      "sections": [
+        "Coverage",
+        "Source completeness",
+        "Visual regression",
+        "Accessibility",
+        "DS compliance",
+        "Runtime verification",
+        "Known gaps",
+        "PASS / FAIL / BLOCKED"
+      ],
+      "rules": [
+        "Code Connect status must be shown as BLOCKED_EXTERNAL until prerequisites are satisfied.",
+        "No PASS without applicable evidence."
+      ],
+      "status": "SOURCE_READY_WITH_KNOWN_GAPS"
+    }
+  ],
+  "packageLifecycle": [
+    "RAW_EVIDENCE",
+    "EXTRACTED",
+    "SOURCE_READY",
+    "DOC_READY",
+    "VISUAL_READY",
+    "WEB_READY",
+    "PUBLISHED"
+  ],
+  "readinessRule": "WEB_READY requires resolved authority, route metadata, required content sections, source references, applicable accessibility, applicable visual evidence, and no blocking unresolved semantics.",
+  "missingContentRule": "Missing authoritative content is an explicit UNRESOLVED/BLOCKED field or placeholder; it is never invented by the website."
+}

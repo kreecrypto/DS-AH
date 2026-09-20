@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "background",
+  "name": "Background",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "129:396",
+    "pageName": "Background"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "5b8283247625acb9dfefe63ce4327d0e928c9906",
+      "ad602fda1c480e7532bf3661bf9208430c52e23b"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "332:810",
+      "componentKey": "ad602fda1c480e7532bf3661bf9208430c52e23b",
+      "figmaName": "overlay",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        ".device": [
+          "mobile",
+          "desktop"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "129:417",
+      "componentKey": "5b8283247625acb9dfefe63ce4327d0e928c9906",
+      "figmaName": "bg",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical_background_primitive"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/background",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

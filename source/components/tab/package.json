@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "tab",
+  "name": "Tab",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "165:489",
+    "pageName": "Tab"
+  },
+  "identity": {
+    "ownerCount": 4,
+    "componentKeys": [
+      "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+      "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+      "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+      "527e1da72069d565082f4c4df0e043462e9e0109"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "165:618",
+      "componentKey": "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+      "figmaName": "tab/chip",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "active": [
+          "yes",
+          "no"
+        ],
+        ".device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "Active": [
+          "True",
+          "False"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "307:73",
+      "componentKey": "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+      "figmaName": "Switch tab",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disabled"
+        ],
+        "active": [
+          "left",
+          "right"
+        ],
+        "size": [
+          "md",
+          "lg"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "ActiveSide": [
+          "Left",
+          "Right"
+        ],
+        "Size": [
+          "MD",
+          "LG"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "1257:1429",
+      "componentKey": "527e1da72069d565082f4c4df0e043462e9e0109",
+      "figmaName": "tab with divider",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "165:704",
+      "componentKey": "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+      "figmaName": "tab",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      ".device canonicalizes to Device"
+    ]
+  },
+  "website": {
+    "route": "/components/tab",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

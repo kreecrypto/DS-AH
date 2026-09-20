@@ -4,6 +4,8 @@ import path from 'node:path';
 const root = process.cwd();
 const requiredJson = [
   'agent/manifest.json',
+  'agent/gates/website-quality-gates.json',
+  'agent/web/website-implementation-brief.schema.json',
   'registry/figma-sources.json',
   'registry/libraries.json',
   'registry/core-components.json',

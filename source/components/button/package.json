@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "button",
+  "name": "Button",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "70:20",
+    "pageName": "Button"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+      "e3848fc5f2f88f4c117dad1d078f8188df529621"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "107:161",
+      "componentKey": "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+      "figmaName": "button",
+      "variantCount": 75,
+      "figmaCurrentApi": {
+        "type": [
+          "primary",
+          "outline",
+          "ghost"
+        ],
+        "state": [
+          "default",
+          "active",
+          "hover",
+          "disabled",
+          "error"
+        ],
+        "size": [
+          "xss",
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "booleans": [
+          "left-icon",
+          "right-icon"
+        ]
+      },
+      "canonicalApi": {
+        "Style": [
+          "Primary",
+          "Outline",
+          "Ghost"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Active",
+          "Disabled",
+          "Error"
+        ],
+        "Size": [
+          "XXS",
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "131:229",
+      "componentKey": "e3848fc5f2f88f4c117dad1d078f8188df529621",
+      "figmaName": "button icon",
+      "variantCount": 32,
+      "figmaCurrentApi": {
+        "state": [
+          "Default",
+          "hover",
+          "disabled",
+          "active"
+        ],
+        "size": [
+          "xs",
+          "sm",
+          "md",
+          "lg"
+        ],
+        "type": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Disabled",
+          "Active"
+        ],
+        "Size": [
+          "XS",
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Style": [
+          "Primary",
+          "Secondary"
+        ]
+      },
+      "registryStatus": "canonical_with_case_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/button",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

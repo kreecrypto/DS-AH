@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditDate": "2026-09-20",
+  "site": {
+    "name": "AH Design System",
+    "url": "https://ah-design-system.kreetaphon-game.chatgpt.site",
+    "role": "documentation_surface",
+    "authority": "non_authoritative_presentation_layer",
+    "sourceOfTruth": {
+      "coreDesignSystem": "Figma 5ZFIRJWtmEIvuq95Rhyo6I",
+      "knowledgeBase": "GitHub kreecrypto/DS-AH"
+    }
+  },
+  "inspection": {
+    "runtimeMethod": "web crawler plus live Figma/GitHub cross-check",
+    "runtimeLimitation": "The public page is a JavaScript SPA. The crawler can verify the rendered shell but cannot enumerate client-side navigation routes. Route-level content must not be invented.",
+    "verifiedRuntimeShell": [
+      "AH DESIGN SYSTEM brand",
+      "Search trigger",
+      "Menu trigger",
+      "Desktop search field with Search... placeholder",
+      "Command shortcut indicator (⌘ K)",
+      "Search dialog title: Search AH Design System",
+      "Search pages… input",
+      "Esc close action"
+    ]
+  },
+  "targetInformationArchitecture": [
+    "Website Shell",
+    "Navigation / Search",
+    "Foundations",
+    "Styling Hooks",
+    "Component Template",
+    "Core Component Docs: Button",
+    "Core Component Docs: Input",
+    "Core Component Docs: Card / Container decision",
+    "Pattern Template",
+    "Figma Mapping",
+    "Agent",
+    "QA"
+  ],
+  "figmaCore": {
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "liveInventory": {
+      "pages": 32,
+      "variableCollections": 5,
+      "variables": 352,
+      "textStyles": 41,
+      "paintStyles": 7,
+      "effectStyles": 0
+    },
+    "collections": [
+      "color",
+      "text",
+      "spacing",
+      "Responsive",
+      "shape"
+    ]
+  },
+  "websiteToFigmaMapping": [
+    {
+      "websiteRole": "Primary action / icon action",
+      "figmaAsset": "button / button icon",
+      "componentKeys": [
+        "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+        "e3848fc5f2f88f4c117dad1d078f8188df529621"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Search field",
+      "figmaAsset": "desktop/search",
+      "componentKeys": [
+        "8c565095086ab54369ac9016287135b196141358"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Generic text/search input",
+      "figmaAsset": "input-text",
+      "componentKeys": [
+        "87427036c09f6d4a3283ae068bc36e4d6351a7e7"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Navigation item",
+      "figmaAsset": "menu",
+      "componentKeys": [
+        "c27fb78aa960961f5557379b41e0cb5356842c92"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Navigation rail / sidebar",
+      "figmaAsset": "side-bar",
+      "componentKeys": [
+        "27cffe58afdec2bef93250b55cfa11835276b823"
+      ],
+      "decision": "reuse_or_adapt_as_docs_shell"
+    },
+    {
+      "websiteRole": "Mobile menu",
+      "figmaAsset": "mobile/menu",
+      "componentKeys": [
+        "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Page header",
+      "figmaAsset": "header",
+      "componentKeys": [
+        "769388ee68f7ed865ff4aea3e402bd99df89a78e"
+      ],
+      "decision": "reuse_or_adapt"
+    },
+    {
+      "websiteRole": "Breadcrumb",
+      "figmaAsset": "breadcrumb",
+      "componentKeys": [
+        "cf65b4e2b72b9b580e442b011225a9fcc8485787"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Section tab / chip",
+      "figmaAsset": "tab / tab/chip",
+      "componentKeys": [
+        "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+        "a5b3b9493a4813b83ac2acaa3753db830d26eacb"
+      ],
+      "decision": "reuse"
+    },
+    {
+      "websiteRole": "Documentation content container / card",
+      "figmaAsset": "container",
+      "componentKeys": [
+        "878930169cd08b4b65acd09970260f1d3bf89e57"
+      ],
+      "decision": "use_container_first",
+      "gap": "No canonical Core component named Card was found in the live design-system search. Do not create Card until a reusable need is proven."
+    }
+  ],
+  "governance": {
+    "sourceOrder": [
+      "Figma Core DS source",
+      "approved domain pattern / Master",
+      "GitHub canonical mapping",
+      "documentation website composition"
+    ],
+    "rules": [
+      "Website presentation must not override Figma component APIs or token values.",
+      "Reuse Figma componentKey identity before creating any replacement.",
+      "Treat client-side routes not verified by runtime inspection as unverified, not missing.",
+      "Use Container for documentation cards until a distinct reusable Card API is justified.",
+      "Record website-only composition patterns separately from Core DS components."
+    ]
+  },
+  "openGaps": [
+    {
+      "id": "SITE-001",
+      "severity": "medium",
+      "gap": "Client-side route inventory could not be enumerated through the current crawler.",
+      "resolution": "Capture with an interactive browser/Playwright when available; until then keep route status unverified."
+    },
+    {
+      "id": "SITE-002",
+      "severity": "medium",
+      "gap": "No canonical Card component exists in the audited Core DS search.",
+      "resolution": "Use Container for docs composition; create a Card only after design/API evidence proves a separate reusable primitive."
+    },
+    {
+      "id": "SITE-003",
+      "severity": "low",
+      "gap": "Responsive collection remains review-required/deprecated-unused evidence in the Core registry.",
+      "resolution": "Use explicit Desktop/Tablet/Mobile composition rules rather than inventing new responsive token semantics."
+    }
+  ]
+}

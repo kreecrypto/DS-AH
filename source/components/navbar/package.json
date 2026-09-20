@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "navbar",
+  "name": "Navbar",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "105:910",
+    "pageName": "Navbar"
+  },
+  "identity": {
+    "ownerCount": 12,
+    "componentKeys": [
+      "27cffe58afdec2bef93250b55cfa11835276b823",
+      "c27fb78aa960961f5557379b41e0cb5356842c92",
+      "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+      "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+      "558b8d869443d0719a184f552bb0503b567f1203",
+      "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+      "8c565095086ab54369ac9016287135b196141358",
+      "640a0f70dae56e7abfc431e894673d240c15619b",
+      "99c9834309df6aa9f48301581c2bfe295610373e",
+      "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+      "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+      "01afd7cbdf324fb90cddcaf30327919310d773a1"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "105:1113",
+      "componentKey": "27cffe58afdec2bef93250b55cfa11835276b823",
+      "figmaName": "side-bar",
+      "variantCount": 6,
+      "figmaCurrentApi": {
+        "size": [
+          "lg",
+          "md"
+        ],
+        "state": [
+          "default",
+          "sub-expand"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Size": [
+          "LG",
+          "MD"
+        ],
+        "State": [
+          "Default",
+          "SubExpanded"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "105:1223",
+      "componentKey": "c27fb78aa960961f5557379b41e0cb5356842c92",
+      "figmaName": "menu",
+      "variantCount": 16,
+      "figmaCurrentApi": {
+        ".device": [
+          "desktop",
+          "tablet"
+        ],
+        "status": [
+          "default",
+          "selected",
+          "sub",
+          "sub-selected"
+        ],
+        "expand": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Device": [
+          "Desktop",
+          "Tablet"
+        ],
+        "State": [
+          "Default",
+          "Selected",
+          "Sub",
+          "SubSelected"
+        ],
+        "Expanded": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "139:573",
+      "componentKey": "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+      "figmaName": "mobile/menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "isFocus": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Focused": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "167:1485",
+      "componentKey": "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+      "figmaName": "header",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "page": [
+          "home",
+          "web page",
+          "header",
+          "header with action"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Home",
+          "WebPage",
+          "Header",
+          "HeaderWithAction"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "285:995",
+      "componentKey": "640a0f70dae56e7abfc431e894673d240c15619b",
+      "figmaName": "primary-menu",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "stage": [
+          "default",
+          "selected"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "302:9576",
+      "componentKey": "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+      "figmaName": "badge-filter",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "active",
+          "inactive"
+        ],
+        "device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Active",
+          "Inactive"
+        ],
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "1294:1197",
+      "componentKey": "01afd7cbdf324fb90cddcaf30327919310d773a1",
+      "figmaName": "tab/search",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "stage": [
+          "Default",
+          "selected",
+          "hover",
+          "disable"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Selected",
+          "Hover",
+          "Disabled"
+        ]
+      },
+      "registryStatus": "canonical_with_case_disable_debt"
+    },
+    {
+      "nodeId": "139:562",
+      "componentKey": "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+      "figmaName": "mobile/bottom-nav-bar",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "144:406",
+      "componentKey": "558b8d869443d0719a184f552bb0503b567f1203",
+      "figmaName": "mobile/top-nav-bar",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "209:521",
+      "componentKey": "8c565095086ab54369ac9016287135b196141358",
+      "figmaName": "desktop/search",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "302:1391",
+      "componentKey": "99c9834309df6aa9f48301581c2bfe295610373e",
+      "figmaName": "search-filter",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    },
+    {
+      "nodeId": "409:1192",
+      "componentKey": "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+      "figmaName": "notification",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "standalone"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      ".device→Device",
+      "stage→State when interaction state"
+    ]
+  },
+  "website": {
+    "route": "/components/navbar",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics."
+}

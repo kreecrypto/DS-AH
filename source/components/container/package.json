@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "container",
+  "name": "Container",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "129:420",
+    "pageName": "Container"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "878930169cd08b4b65acd09970260f1d3bf89e57",
+      "c08f699d2a2320780d6f9623f875940bed392fcf"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "129:413",
+      "componentKey": "878930169cd08b4b65acd09970260f1d3bf89e57",
+      "figmaName": "container",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "129:415",
+      "componentKey": "c08f699d2a2320780d6f9623f875940bed392fcf",
+      "figmaName": "swap-content",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/container",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

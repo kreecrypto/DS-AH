@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "bottom-sheet",
+  "name": "Bottom sheet",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "182:642",
+    "pageName": "Bottom sheet"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "9391284ee3e2618096ea34f89adfbc10500a3a96"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "182:872",
+      "componentKey": "e9b5920c33dda114cfefad490d854d6a5bce8635",
+      "figmaName": "bottom-shet",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {
+        "Name": "Bottom Sheet"
+      },
+      "registryStatus": "rename_candidate"
+    },
+    {
+      "nodeId": "183:325",
+      "componentKey": "9391284ee3e2618096ea34f89adfbc10500a3a96",
+      "figmaName": "button",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "stack": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "canonicalApi": {
+        "ActionCount": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "registryStatus": "contextual_not_core_button"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "bottom-shet legacy spelling",
+      "local nested button identity differs from Core button"
+    ]
+  },
+  "website": {
+    "route": "/components/bottom-sheet",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

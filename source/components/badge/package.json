@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "badge",
+  "name": "Badge",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "86:767",
+    "pageName": "Badge"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "f2187fca79d95e1669dd417689535f0f83e9f1df",
+      "8383a48397d12f9f5c77334d4cfbbeec0e759849"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "86:788",
+      "componentKey": "f2187fca79d95e1669dd417689535f0f83e9f1df",
+      "figmaName": "badge",
+      "variantCount": 28,
+      "figmaCurrentApi": {
+        "color": [
+          "feedback",
+          "badge"
+        ],
+        "stage": [
+          "success",
+          "warning",
+          "error",
+          "error-solid",
+          "info",
+          "neutral",
+          "coral",
+          "teal",
+          "grape",
+          "sunshine",
+          "leaf",
+          "candy",
+          "blue",
+          "mint"
+        ],
+        "size": [
+          "sm",
+          "md"
+        ]
+      },
+      "canonicalApi": {
+        "Family": [
+          "Feedback",
+          "Badge"
+        ],
+        "State": "semantic mapping of stage",
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "registryStatus": "canonical_with_axis_debt"
+    },
+    {
+      "nodeId": "336:584",
+      "componentKey": "8383a48397d12f9f5c77334d4cfbbeec0e759849",
+      "figmaName": "badge-tier",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "level": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "canonicalApi": {
+        "Tier": [
+          "Gold",
+          "Silver",
+          "Platinum"
+        ]
+      },
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/badge",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

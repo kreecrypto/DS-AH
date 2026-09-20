@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "radio",
+  "name": "Radio",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "218:125",
+    "pageName": "Radio"
+  },
+  "identity": {
+    "ownerCount": 3,
+    "componentKeys": [
+      "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+      "f90d2487d05573910316e182ac17e5bece4c856a",
+      "888654c1d9d03deffb3eef2ebc450568ed6e71e3"
+    ],
+    "preferredComponentKey": "f90d2487d05573910316e182ac17e5bece4c856a"
+  },
+  "components": [
+    {
+      "nodeId": "218:233",
+      "componentKey": "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+      "figmaName": "radio",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "legacy_simple_duplicate"
+    },
+    {
+      "nodeId": "304:2149",
+      "componentKey": "f90d2487d05573910316e182ac17e5bece4c856a",
+      "figmaName": "radio",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "disable",
+          "error"
+        ],
+        "check": [
+          "fasle",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "preferred_radio_candidate_with_typos"
+    },
+    {
+      "nodeId": "304:2197",
+      "componentKey": "888654c1d9d03deffb3eef2ebc450568ed6e71e3",
+      "figmaName": "radio-list",
+      "variantCount": 8,
+      "figmaCurrentApi": {
+        "type": [
+          "default",
+          "only-title"
+        ],
+        "state": [
+          "default",
+          "disable"
+        ],
+        "check": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Default",
+          "OnlyTitle"
+        ],
+        "State": [
+          "Default",
+          "Disabled"
+        ],
+        "Checked": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "canonical_with_disable_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "disable→Disabled",
+      "fasle→False"
+    ]
+  },
+  "website": {
+    "route": "/components/radio",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics."
+}

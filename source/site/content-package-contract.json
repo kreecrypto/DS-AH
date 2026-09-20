@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Defines the minimum content contract each website content type must satisfy before WEB_READY.",
+  "commonRequired": [
+    "id",
+    "name",
+    "authority",
+    "sourceReferences",
+    "status",
+    "website.route",
+    "website.sections",
+    "qa"
+  ],
+  "statusEnum": [
+    "RAW_EVIDENCE",
+    "EXTRACTED",
+    "SOURCE_READY",
+    "DOC_READY",
+    "VISUAL_READY",
+    "WEB_READY",
+    "PUBLISHED",
+    "BLOCKED",
+    "UNRESOLVED"
+  ],
+  "packages": {
+    "foundation": [
+      "meta",
+      "tokens",
+      "modes",
+      "scopes",
+      "semanticRoles",
+      "usage",
+      "accessibility",
+      "examples",
+      "figma",
+      "qa"
+    ],
+    "asset": [
+      "meta",
+      "inventory",
+      "variants",
+      "usage",
+      "accessibility",
+      "provenance",
+      "figma",
+      "qa"
+    ],
+    "component": [
+      "meta",
+      "identity",
+      "api",
+      "states",
+      "anatomy",
+      "tokens",
+      "dependencies",
+      "usage",
+      "doDont",
+      "accessibility",
+      "examples",
+      "figma",
+      "visual",
+      "related",
+      "qa"
+    ],
+    "pattern": [
+      "meta",
+      "problem",
+      "composition",
+      "components",
+      "states",
+      "responsive",
+      "interaction",
+      "accessibility",
+      "examples",
+      "figma",
+      "qa"
+    ],
+    "template": [
+      "meta",
+      "purpose",
+      "layoutAnatomy",
+      "requiredRegions",
+      "optionalRegions",
+      "composition",
+      "responsive",
+      "states",
+      "examples",
+      "figma",
+      "qa"
+    ],
+    "masterScreen": [
+      "meta",
+      "domain",
+      "useCase",
+      "figma",
+      "flow",
+      "composition",
+      "states",
+      "responsive",
+      "dependencies",
+      "qa"
+    ],
+    "interaction": [
+      "meta",
+      "stateModel",
+      "triggers",
+      "transitionEvidence",
+      "uiResult",
+      "keyboardFocus",
+      "responsive",
+      "accessibility",
+      "figma",
+      "qa"
+    ],
+    "mapping": [
+      "figmaFile",
+      "page",
+      "node",
+      "componentKey",
+      "figmaCurrentApi",
+      "canonicalApi",
+      "dependencies",
+      "aliases",
+      "preferredLegacy",
+      "status"
+    ],
+    "qa": [
+      "coverage",
+      "sourceCompleteness",
+      "visualRegression",
+      "accessibility",
+      "dsCompliance",
+      "runtime",
+      "knownGaps",
+      "result"
+    ]
+  },
+  "noGuessRule": "Any required field without authority is UNRESOLVED/BLOCKED. Website renderer must never fill it heuristically."
+}

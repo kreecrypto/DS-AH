@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "evalution",
+  "name": "Evalution",
+  "status": "BLOCKED_EMPTY_FIGMA_SOURCE",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "305:10284",
+    "pageName": "Evalution"
+  },
+  "identity": {
+    "ownerCount": 0,
+    "componentKeys": [],
+    "preferredComponentKey": null
+  },
+  "components": [],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "legacy page spelling Evalution"
+    ]
+  },
+  "website": {
+    "route": "/components/evalution",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "BLOCKED"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

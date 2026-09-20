@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "input",
+  "name": "Input",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "167:1541",
+    "pageName": "Input"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+      "a6db9d0482c6446fd483f71f6a517f2cf3984345"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "167:1772",
+      "componentKey": "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+      "figmaName": "input-text",
+      "variantCount": 17,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "focused",
+          "error",
+          "disabled",
+          "read-only",
+          "warning",
+          "chip input",
+          "chip typing",
+          "chip input max",
+          "chip typing max",
+          "view"
+        ],
+        "filled": [
+          "false",
+          "true"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Focused",
+          "Error",
+          "Disabled",
+          "ReadOnly",
+          "Warning",
+          "ChipInput",
+          "ChipTyping",
+          "ChipInputMax",
+          "ChipTypingMax",
+          "View"
+        ],
+        "Filled": [
+          "False",
+          "True"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "198:4244",
+      "componentKey": "a6db9d0482c6446fd483f71f6a517f2cf3984345",
+      "figmaName": "dropdown",
+      "variantCount": 9,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "focused",
+          "error",
+          "disable",
+          "read-only"
+        ],
+        "filled": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Focused",
+          "Error",
+          "Disabled",
+          "ReadOnly"
+        ],
+        "Filled": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "canonical_with_disable_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "dropdown state disable canonicalizes to Disabled"
+    ]
+  },
+  "website": {
+    "route": "/components/input",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

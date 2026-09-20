@@ -15,7 +15,8 @@
     "resumePolicy": "agent/flow/reentry-resume.json",
     "specializedSubflows": "agent/flow/specialized-subflows.json",
     "referenceLockPolicy": "agent/reference/reference-lock.json",
-    "referenceReproduce": "agent/flow/reference-reproduce.json"
+    "referenceReproduce": "agent/flow/reference-reproduce.json",
+    "websiteQualityGates": "agent/gates/website-quality-gates.json"
   },
   "figma": {
     "coreDesignSystem": {
@@ -81,7 +82,8 @@
     "handoff": "agent/workflows/handoff.md",
     "deepFlow": "docs/design-agent-flow.md",
     "specializedSubflows": "docs/figma-specialized-subflows.md",
-    "referenceFidelityHardening": "docs/reference-fidelity-hardening.md"
+    "referenceFidelityHardening": "docs/reference-fidelity-hardening.md",
+    "websiteImplementation": "agent/workflows/website-implementation.md"
   },
   "policies": [
     "policies/source-priority.md",
@@ -103,7 +105,8 @@
     "resumeCheckpoint": "agent/output/resume-checkpoint.schema.json",
     "referenceLock": "agent/reference/reference-lock.schema.json",
     "visualGrammar": "agent/planner/visual-grammar.schema.json",
-    "designSystemMapping": "agent/planner/design-system-mapping.schema.json"
+    "designSystemMapping": "agent/planner/design-system-mapping.schema.json",
+    "websiteImplementationBrief": "agent/web/website-implementation-brief.schema.json"
   },
   "evals": {
     "routing": "agent/evals/cases.json",
@@ -142,7 +145,12 @@
     "resume_checkpoint_when_blocked_and_resumable",
     "evidence_matrix",
     "final_result",
-    "open_gaps"
+    "open_gaps",
+    "website_routes_when_applicable",
+    "website_component_key_mapping_when_applicable",
+    "website_static_validation_when_applicable",
+    "website_runtime_verification_when_applicable",
+    "website_responsive_a11y_visual_evidence_when_applicable"
   ],
   "agent": {
     "name": "Design Control Agent",
@@ -170,6 +178,18 @@
     "githubMcpConfiguration": false,
     "rule": "GitHub stores control contracts, state, permissions, skills, policies, registries, workflows, schemas, tests and audit history. ChatGPT orchestrates and performs live Figma MCP execution.",
     "documentationSurface": "https://ah-design-system.kreetaphon-game.chatgpt.site",
-    "documentationRule": "Documentation website is a non-authoritative presentation layer consuming Figma Core DS through GitHub canonical mapping."
+    "documentationRule": "Documentation website is a non-authoritative presentation layer consuming Figma Core DS through GitHub canonical mapping.",
+    "websiteImplementation": {
+      "role": "implementation_consumer_of_figma_and_github_knowledge",
+      "workflow": "agent/workflows/website-implementation.md",
+      "qualityGates": "agent/gates/website-quality-gates.json",
+      "prChecklist": "docs/website-implementation-pr-checklist.md",
+      "authorityOrder": [
+        "Figma Core DS",
+        "approved domain pattern / Master",
+        "GitHub canonical mapping",
+        "website implementation"
+      ]
+    }
   }
 }

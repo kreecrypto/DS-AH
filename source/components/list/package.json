@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "list",
+  "name": "List",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "306:756",
+    "pageName": "List"
+  },
+  "identity": {
+    "ownerCount": 4,
+    "componentKeys": [
+      "5e3d148737311590c7e0cd60c033aacf76fe298d",
+      "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+      "fc742e1df5ac448c447807b9e3b2de047462666e",
+      "2408a8085bd3e19bdd43f56b076f189eddf6defe"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "306:759",
+      "componentKey": "5e3d148737311590c7e0cd60c033aacf76fe298d",
+      "figmaName": "list",
+      "variantCount": 1,
+      "figmaCurrentApi": {},
+      "canonicalApi": {},
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "306:785",
+      "componentKey": "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+      "figmaName": "base-list-item",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "type": [
+          "basic",
+          "checkbok",
+          "no-result"
+        ]
+      },
+      "canonicalApi": {
+        "Type": [
+          "Basic",
+          "Checkbox",
+          "NoResult"
+        ]
+      },
+      "registryStatus": "canonical_with_typo_debt"
+    },
+    {
+      "nodeId": "306:829",
+      "componentKey": "fc742e1df5ac448c447807b9e3b2de047462666e",
+      "figmaName": "base-list-basic",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "hover",
+          "selected",
+          "disabled",
+          "alert"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Disabled",
+          "Alert"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "306:876",
+      "componentKey": "2408a8085bd3e19bdd43f56b076f189eddf6defe",
+      "figmaName": "base-list-checkbox",
+      "variantCount": 4,
+      "figmaCurrentApi": {
+        "state": [
+          "default",
+          "hover",
+          "selected",
+          "disabled"
+        ]
+      },
+      "canonicalApi": {
+        "State": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Disabled"
+        ]
+      },
+      "registryStatus": "canonical"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": [
+      "checkbok canonicalizes to Checkbox"
+    ]
+  },
+  "website": {
+    "route": "/components/list",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

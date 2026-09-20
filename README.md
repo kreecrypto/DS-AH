@@ -157,3 +157,24 @@ Runtime flow:
 **User → ChatGPT → read DS-AH KB → resolve Master/reference → Figma MCP → visual QA → evidence/update KB when needed**
 
 This separation keeps GitHub deterministic and auditable while keeping live external actions inside the ChatGPT session.
+
+
+## Website Implementation Workflow
+
+Website implementation is governed separately from live Figma mutation work.
+
+Start with:
+- `agent/workflows/website-implementation.md`
+- `agent/gates/website-quality-gates.json`
+- `agent/web/website-implementation-brief.schema.json`
+- `docs/website-implementation-pr-checklist.md`
+
+Canonical website flow:
+
+**Request → inspect code/runtime → resolve Figma authority → map componentKey/tokens → define route scope → implement → static validation → runtime → responsive/a11y → visual regression → evidence → PR → merge → post-merge check**
+
+Authority remains:
+
+**Figma Core DS → approved domain pattern / Master → GitHub canonical mapping → website implementation**
+
+The website must not create a parallel token system or redefine Core component APIs.

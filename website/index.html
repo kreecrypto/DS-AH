@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="AH Design System documentation. Reference-aligned navigation with reserved content slots."><meta name="theme-color" content="#00008f"><title>AH Design System</title><link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="global-header"><a href="#/overview">AH DESIGN SYSTEM</a><div class="mobile-controls"><button id="mobileSearch" data-search-button disabled aria-label="Search">⌕</button><button id="mobileMenu" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false">☰</button></div></header>
+<button id="navBackdrop" class="nav-backdrop" tabindex="-1" aria-label="Close navigation"></button>
+<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview" aria-label="AH Design System home"><span class="brand-mark" aria-hidden="true">AH</span><span>DESIGN<br>SYSTEM</span></a><button class="search-trigger" id="searchTrigger" data-search-button disabled aria-haspopup="dialog"><span>⌕ &nbsp; Search...</span><kbd>⌘ K</kbd></button><nav id="primaryNav" aria-label="Design system"></nav></aside>
+<main id="main" tabindex="-1"><div class="loading" role="status">Loading design system…</div></main><div id="announcement" role="status" class="announcement" aria-live="polite"></div>
+<dialog id="searchDialog" class="search-dialog"><form method="dialog"><label for="searchInput">Search AH Design System</label><div class="search-input-row"><input id="searchInput" type="search" autocomplete="off" placeholder="Search pages…"><button aria-label="Close search">Esc</button></div></form><div id="searchResults" class="search-results" aria-live="polite"></div></dialog>
+<noscript>This website needs JavaScript to show its navigation.</noscript><script type="module" src="./app.js"></script>
+</body></html>

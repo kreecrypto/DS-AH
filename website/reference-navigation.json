@@ -1,0 +1,2406 @@
+{
+  "inspectedAt": "2026-09-20",
+  "source": "https://www.lightningdesignsystem.com/2e1ef8501/p/85bd85-lightning-design-system-2",
+  "navigation": [
+    {
+      "children": [
+        {
+          "children": [],
+          "label": "Transition to SLDS 2",
+          "source": "/2e1ef8501/p/8184ad-transition-to-slds-2"
+        },
+        {
+          "children": [],
+          "label": "Admins",
+          "source": "/2e1ef8501/p/771012-admins"
+        },
+        {
+          "children": [],
+          "label": "Design",
+          "source": "/2e1ef8501/p/874349-design"
+        },
+        {
+          "children": [],
+          "label": "Develop",
+          "source": "/2e1ef8501/p/547b38-develop"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Glossary",
+              "source": "/2e1ef8501/p/81aa72-glossary"
+            },
+            {
+              "children": [],
+              "label": "FAQs",
+              "source": "/2e1ef8501/p/313db3-faqs"
+            }
+          ],
+          "label": "Resources",
+          "source": "/2e1ef8501/p/63cfc2-resources"
+        }
+      ],
+      "label": "Get Started",
+      "source": "/2e1ef8501/p/76969d-get-started"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/63cc01-usage/b/232bc6"
+            },
+            {
+              "children": [],
+              "label": "Utility Icons",
+              "source": "/2e1ef8501/p/63cc01-usage/b/2297f4"
+            },
+            {
+              "children": [],
+              "label": "Object Icons",
+              "source": "/2e1ef8501/p/63cc01-usage/b/892104"
+            },
+            {
+              "children": [],
+              "label": "Action Icons",
+              "source": "/2e1ef8501/p/63cc01-usage/b/217a50"
+            },
+            {
+              "children": [],
+              "label": "DocType Icons",
+              "source": "/2e1ef8501/p/63cc01-usage/b/441de2"
+            },
+            {
+              "children": [],
+              "label": "Product Icons",
+              "source": "/2e1ef8501/p/63cc01-usage/b/841cfc"
+            }
+          ],
+          "label": "Usage",
+          "source": "/2e1ef8501/p/63cc01-usage"
+        }
+      ],
+      "label": "Icons",
+      "source": "/2e1ef8501/p/96f44b-icons"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "label": "AI Tools",
+          "source": "/2e1ef8501/p/2337c1-ai-tools"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds/b/91991d"
+            },
+            {
+              "children": [],
+              "label": "Workflow",
+              "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds/b/238267"
+            },
+            {
+              "children": [],
+              "label": "Prerequisites",
+              "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds/b/568f95"
+            },
+            {
+              "children": [],
+              "label": "Salesforce Sandbox + Vibes",
+              "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds/b/62916b"
+            },
+            {
+              "children": [],
+              "label": "VS Code + Vibes",
+              "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds/b/094c33"
+            }
+          ],
+          "label": "Vibe Coding and SLDS",
+          "source": "/2e1ef8501/p/75a154-vibe-coding-and-slds"
+        },
+        {
+          "children": [],
+          "label": "Interaction Models",
+          "source": "/2e1ef8501/p/897980-interaction-models"
+        },
+        {
+          "children": [],
+          "label": "Agentic Patterns",
+          "source": "/2e1ef8501/p/03c548-agentic-patterns"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Design Phase",
+              "source": "/2e1ef8501/p/571eea-design-phase"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Context Setting",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/95fe5f"
+                },
+                {
+                  "children": [],
+                  "label": "Instructions",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/78f9eb"
+                },
+                {
+                  "children": [],
+                  "label": "Data for Grounding",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/89ef01"
+                },
+                {
+                  "children": [],
+                  "label": "Model Containment Guardrails",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/90ab06"
+                },
+                {
+                  "children": [],
+                  "label": "Supplemental Elements",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/90d3a2"
+                },
+                {
+                  "children": [],
+                  "label": "Prompt Template Examples",
+                  "source": "/2e1ef8501/p/59dd9a-prompt-elements/b/980c11"
+                }
+              ],
+              "label": "Prompt Elements",
+              "source": "/2e1ef8501/p/59dd9a-prompt-elements"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Basic",
+                  "source": "/2e1ef8501/p/682769-prompting-techniques/b/667078"
+                },
+                {
+                  "children": [],
+                  "label": "Reasoning",
+                  "source": "/2e1ef8501/p/682769-prompting-techniques/b/622d5e"
+                },
+                {
+                  "children": [],
+                  "label": "Advanced",
+                  "source": "/2e1ef8501/p/682769-prompting-techniques/b/49d782"
+                },
+                {
+                  "children": [],
+                  "label": "Combined Engineering",
+                  "source": "/2e1ef8501/p/682769-prompting-techniques/b/975a38"
+                }
+              ],
+              "label": "Prompting Techniques",
+              "source": "/2e1ef8501/p/682769-prompting-techniques"
+            },
+            {
+              "children": [],
+              "label": "Testing and Evaluation Phase",
+              "source": "/2e1ef8501/p/50a88b-testing-and-evaluation-phase"
+            },
+            {
+              "children": [],
+              "label": "Refinement Phase",
+              "source": "/2e1ef8501/p/2082c6-refinement-phase"
+            }
+          ],
+          "label": "Prompt Design Guide",
+          "source": "/2e1ef8501/p/0364a5-prompt-design-guide"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/3955cb"
+            },
+            {
+              "children": [],
+              "label": "Language and Style",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/953d32"
+            },
+            {
+              "children": [],
+              "label": "Best Practices",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/47cfa8"
+            },
+            {
+              "children": [],
+              "label": "Bot Personality",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/90464c"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/30856a"
+            },
+            {
+              "children": [],
+              "label": "Resources",
+              "source": "/2e1ef8501/p/33c7b6-conversation-design-/b/15e60b"
+            }
+          ],
+          "label": "Conversation Design",
+          "source": "/2e1ef8501/p/33c7b6-conversation-design-"
+        },
+        {
+          "children": [],
+          "label": "Glossary",
+          "source": "/2e1ef8501/p/52d596-glossary"
+        }
+      ],
+      "label": "AI and SLDS 2",
+      "source": "/2e1ef8501/p/52a7c7-ai-and-slds-2"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Text and Color Contrast",
+              "source": "/2e1ef8501/p/99d436-text-and-color-contrast"
+            },
+            {
+              "children": [],
+              "label": "Global Focus",
+              "source": "/2e1ef8501/p/92a50f-global-focus"
+            },
+            {
+              "children": [],
+              "label": "Keyboard Interaction",
+              "source": "/2e1ef8501/p/3491fd-keyboard-interaction"
+            },
+            {
+              "children": [],
+              "label": "Mobile Design",
+              "source": "/2e1ef8501/p/391e54-mobile-design"
+            },
+            {
+              "children": [],
+              "label": "Global Accessibility Standards",
+              "source": "/2e1ef8501/p/23a1dd-global-accessibility-standards"
+            }
+          ],
+          "label": "Accessibility",
+          "source": "/2e1ef8501/p/641741-accessibility"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/7770b4-borders-and-radius/b/68b3fd"
+            },
+            {
+              "children": [],
+              "label": "Color",
+              "source": "/2e1ef8501/p/7770b4-borders-and-radius/b/458c08"
+            },
+            {
+              "children": [],
+              "label": "Width",
+              "source": "/2e1ef8501/p/7770b4-borders-and-radius/b/436102"
+            },
+            {
+              "children": [],
+              "label": "Radius",
+              "source": "/2e1ef8501/p/7770b4-borders-and-radius/b/514f2c"
+            }
+          ],
+          "label": "Borders and Radius",
+          "source": "/2e1ef8501/p/7770b4-borders-and-radius"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/655b28-color/b/76ba78"
+            },
+            {
+              "children": [],
+              "label": "SLDS Color System",
+              "source": "/2e1ef8501/p/655b28-color/b/25b51f"
+            }
+          ],
+          "label": "Color",
+          "source": "/2e1ef8501/p/655b28-color"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/805bbe-display-density/b/93586c"
+            },
+            {
+              "children": [],
+              "label": "Custom Configurations",
+              "source": "/2e1ef8501/p/805bbe-display-density/b/897aad"
+            },
+            {
+              "children": [],
+              "label": "Density Implementation",
+              "source": "/2e1ef8501/p/805bbe-display-density/b/532c00"
+            }
+          ],
+          "label": "Display Density",
+          "source": "/2e1ef8501/p/805bbe-display-density"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/759a28-illustrations/b/34526a"
+            }
+          ],
+          "label": "Illustrations",
+          "source": "/2e1ef8501/p/759a28-illustrations"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/64b580-shadows/b/1948b3"
+            },
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/64b580-shadows/b/404e68"
+            },
+            {
+              "children": [],
+              "label": "Styling Hooks",
+              "source": "/2e1ef8501/p/64b580-shadows/b/181008"
+            }
+          ],
+          "label": "Shadows",
+          "source": "/2e1ef8501/p/64b580-shadows"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/03d6b0-spacing-and-sizing/b/95cf0b"
+            },
+            {
+              "children": [],
+              "label": "Spacing",
+              "source": "/2e1ef8501/p/03d6b0-spacing-and-sizing/b/8315b7"
+            },
+            {
+              "children": [],
+              "label": "Sizing",
+              "source": "/2e1ef8501/p/03d6b0-spacing-and-sizing/b/25a2cc"
+            }
+          ],
+          "label": "Spacing and Sizing",
+          "source": "/2e1ef8501/p/03d6b0-spacing-and-sizing"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/93288f-typography/b/18cacd"
+            },
+            {
+              "children": [],
+              "label": "Type Styles",
+              "source": "/2e1ef8501/p/93288f-typography/b/995dcd"
+            },
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/93288f-typography/b/94d751"
+            }
+          ],
+          "label": "Typography",
+          "source": "/2e1ef8501/p/93288f-typography"
+        }
+      ],
+      "label": "Visual Language",
+      "source": "/2e1ef8501/p/67a7b2-visual-language"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "label": "Styling Hook Index",
+          "source": "/2e1ef8501/p/98b493-styling-hook-index"
+        },
+        {
+          "children": [],
+          "label": "Global Styling Hooks",
+          "source": "/2e1ef8501/p/777f5a-global-styling-hooks"
+        },
+        {
+          "children": [],
+          "label": "Component-Level Styling Hooks",
+          "source": "/2e1ef8501/p/0213f9-component-level-styling-hooks"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/670c3f-alignment/b/879e0a"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/670c3f-alignment/b/0742d9"
+                }
+              ],
+              "label": "Alignment",
+              "source": "/2e1ef8501/p/670c3f-alignment"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/75f0aa-border/b/3994db"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/75f0aa-border/b/4373cb"
+                }
+              ],
+              "label": "Border",
+              "source": "/2e1ef8501/p/75f0aa-border"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/674e1b-box/b/30f4f9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/674e1b-box/b/05e89c"
+                }
+              ],
+              "label": "Box",
+              "source": "/2e1ef8501/p/674e1b-box"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/62faac-description-list/b/51d413"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/62faac-description-list/b/845599"
+                }
+              ],
+              "label": "Description List",
+              "source": "/2e1ef8501/p/62faac-description-list"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/340325-float/b/5209bc"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/340325-float/b/69a00c"
+                }
+              ],
+              "label": "Float",
+              "source": "/2e1ef8501/p/340325-float"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/61d07d-grid/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/61d07d-grid/b/85154d"
+                }
+              ],
+              "label": "Grid",
+              "source": "/2e1ef8501/p/61d07d-grid"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/24ab86-horizontal-list/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/24ab86-horizontal-list/b/85154d"
+                }
+              ],
+              "label": "Horizontal List",
+              "source": "/2e1ef8501/p/24ab86-horizontal-list"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/28a4d2-hyphenation/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/28a4d2-hyphenation/b/85154d"
+                }
+              ],
+              "label": "Hyphenation",
+              "source": "/2e1ef8501/p/28a4d2-hyphenation"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/91e7b1-interactions/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/91e7b1-interactions/b/85154d"
+                }
+              ],
+              "label": "Interactions",
+              "source": "/2e1ef8501/p/91e7b1-interactions"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/711aca-layout/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/711aca-layout/b/85154d"
+                }
+              ],
+              "label": "Layout",
+              "source": "/2e1ef8501/p/711aca-layout"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/39c0a2-line-clamp/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/39c0a2-line-clamp/b/85154d"
+                }
+              ],
+              "label": "Line Clamp",
+              "source": "/2e1ef8501/p/39c0a2-line-clamp"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/51dd56-margin/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/51dd56-margin/b/85154d"
+                }
+              ],
+              "label": "Margin",
+              "source": "/2e1ef8501/p/51dd56-margin"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/87b07a-media-object/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/87b07a-media-object/b/85154d"
+                }
+              ],
+              "label": "Media Object",
+              "source": "/2e1ef8501/p/87b07a-media-object"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/253f7e-name-value-list/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/253f7e-name-value-list/b/85154d"
+                }
+              ],
+              "label": "Name Value List",
+              "source": "/2e1ef8501/p/253f7e-name-value-list"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/93a8e1-padding/b/82e52c"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/93a8e1-padding/b/8818d9"
+                }
+              ],
+              "label": "Padding",
+              "source": "/2e1ef8501/p/93a8e1-padding"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/95944e-position/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/95944e-position/b/85154d"
+                }
+              ],
+              "label": "Position",
+              "source": "/2e1ef8501/p/95944e-position"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/25078f-print/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/25078f-print/b/85154d"
+                }
+              ],
+              "label": "Print",
+              "source": "/2e1ef8501/p/25078f-print"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/746954-scrollable/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/746954-scrollable/b/85154d"
+                }
+              ],
+              "label": "Scrollable",
+              "source": "/2e1ef8501/p/746954-scrollable"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/927990-sizing/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/927990-sizing/b/85154d"
+                }
+              ],
+              "label": "Sizing",
+              "source": "/2e1ef8501/p/927990-sizing"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/61daff-text/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/61daff-text/b/85154d"
+                }
+              ],
+              "label": "Text",
+              "source": "/2e1ef8501/p/61daff-text"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/51c13d-truncation/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/51c13d-truncation/b/85154d"
+                }
+              ],
+              "label": "Truncation",
+              "source": "/2e1ef8501/p/51c13d-truncation"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/2131a9-vertical-list/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/2131a9-vertical-list/b/85154d"
+                }
+              ],
+              "label": "Vertical List",
+              "source": "/2e1ef8501/p/2131a9-vertical-list"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Examples",
+                  "source": "/2e1ef8501/p/7671f9-visibility/b/788fe9"
+                },
+                {
+                  "children": [],
+                  "label": "CSS Classes",
+                  "source": "/2e1ef8501/p/7671f9-visibility/b/85154d"
+                }
+              ],
+              "label": "Visibility",
+              "source": "/2e1ef8501/p/7671f9-visibility"
+            }
+          ],
+          "label": "Utility Classes",
+          "source": "/2e1ef8501/p/05098e-utility-classes"
+        },
+        {
+          "children": [],
+          "label": "Themes",
+          "source": "/2e1ef8501/p/11979d-themes"
+        },
+        {
+          "children": [],
+          "label": "Color Modes",
+          "source": "/2e1ef8501/p/5826e4-color-modes"
+        }
+      ],
+      "label": "Styling API",
+      "source": "/2e1ef8501/p/7708aa-styling-api"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/8488c4-accordion/b/0577f6"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/8488c4-accordion/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/8488c4-accordion/b/0676fe"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/8488c4-accordion/b/74d5d4"
+            }
+          ],
+          "label": "Accordion",
+          "source": "/2e1ef8501/p/8488c4-accordion"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/94085e-avatar/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/94085e-avatar/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/94085e-avatar/b/01bb37"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/94085e-avatar/b/74d5d4"
+            }
+          ],
+          "label": "Avatar",
+          "source": "/2e1ef8501/p/94085e-avatar"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/78871c-badge/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/78871c-badge/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/78871c-badge/b/622aca"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/78871c-badge/b/74d5d4"
+            }
+          ],
+          "label": "Badge",
+          "source": "/2e1ef8501/p/78871c-badge"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/13cc12-breadcrumbs/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/13cc12-breadcrumbs/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/13cc12-breadcrumbs/b/45704b"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/13cc12-breadcrumbs/b/74d5d4"
+            }
+          ],
+          "label": "Breadcrumbs",
+          "source": "/2e1ef8501/p/13cc12-breadcrumbs"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/7733f8-button/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/7733f8-button/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/7733f8-button/b/02ad1e"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/7733f8-button/b/74d5d4"
+            }
+          ],
+          "label": "Button",
+          "source": "/2e1ef8501/p/7733f8-button"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/30363d-button-groups/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/30363d-button-groups/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/30363d-button-groups/b/091a7b"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/30363d-button-groups/b/74d5d4"
+            }
+          ],
+          "label": "Button Groups",
+          "source": "/2e1ef8501/p/30363d-button-groups"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/769b52-button-icons/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/769b52-button-icons/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/769b52-button-icons/b/224c82"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/769b52-button-icons/b/74d5d4"
+            }
+          ],
+          "label": "Button Icons",
+          "source": "/2e1ef8501/p/769b52-button-icons"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/33cd77-cards/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/33cd77-cards/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/33cd77-cards/b/52449b"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/33cd77-cards/b/74d5d4"
+            }
+          ],
+          "label": "Cards",
+          "source": "/2e1ef8501/p/33cd77-cards"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/99642e-carousel/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/99642e-carousel/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/99642e-carousel/b/6404fa"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/99642e-carousel/b/74d5d4"
+            }
+          ],
+          "label": "Carousel",
+          "source": "/2e1ef8501/p/99642e-carousel"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/980561-checkbox/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/980561-checkbox/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/980561-checkbox/b/57f366"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/980561-checkbox/b/74d5d4"
+            }
+          ],
+          "label": "Checkbox",
+          "source": "/2e1ef8501/p/980561-checkbox"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/70ca9d-checkbox-button/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/70ca9d-checkbox-button/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/70ca9d-checkbox-button/b/460cb4"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/70ca9d-checkbox-button/b/74d5d4"
+            }
+          ],
+          "label": "Checkbox Button",
+          "source": "/2e1ef8501/p/70ca9d-checkbox-button"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/00c862-checkbox-toggle/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/00c862-checkbox-toggle/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/00c862-checkbox-toggle/b/246722"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/00c862-checkbox-toggle/b/74d5d4"
+            }
+          ],
+          "label": "Checkbox Toggle",
+          "source": "/2e1ef8501/p/00c862-checkbox-toggle"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/67c0e9-color-picker/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/67c0e9-color-picker/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/67c0e9-color-picker/b/46a466"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/67c0e9-color-picker/b/74d5d4"
+            }
+          ],
+          "label": "Color Picker",
+          "source": "/2e1ef8501/p/67c0e9-color-picker"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/31c42a-combobox/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/31c42a-combobox/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/31c42a-combobox/b/8144d3"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/31c42a-combobox/b/74d5d4"
+            }
+          ],
+          "label": "Combobox",
+          "source": "/2e1ef8501/p/31c42a-combobox"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/86f13a-data-table/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/86f13a-data-table/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/86f13a-data-table/b/1998b7"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/86f13a-data-table/b/74d5d4"
+            }
+          ],
+          "label": "Data Table",
+          "source": "/2e1ef8501/p/86f13a-data-table"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/531362-datepicker/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/531362-datepicker/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/531362-datepicker/b/4734fd"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/531362-datepicker/b/74d5d4"
+            }
+          ],
+          "label": "Datepicker",
+          "source": "/2e1ef8501/p/531362-datepicker"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/653453-datetime-picker/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/653453-datetime-picker/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/653453-datetime-picker/b/632642"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/653453-datetime-picker/b/74d5d4"
+            }
+          ],
+          "label": "Datetime Picker",
+          "source": "/2e1ef8501/p/653453-datetime-picker"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/26424b-dynamic-icons/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/26424b-dynamic-icons/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/26424b-dynamic-icons/b/25f698"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/26424b-dynamic-icons/b/74d5d4"
+            }
+          ],
+          "label": "Dynamic Icons",
+          "source": "/2e1ef8501/p/26424b-dynamic-icons"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/763763-dual-listbox/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/763763-dual-listbox/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/763763-dual-listbox/b/495bf5"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/763763-dual-listbox/b/74d5d4"
+            }
+          ],
+          "label": "Dual Listbox",
+          "source": "/2e1ef8501/p/763763-dual-listbox"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/09f001-empty-state/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/09f001-empty-state/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/09f001-empty-state/b/74d5d4"
+            }
+          ],
+          "label": "Empty State",
+          "source": "/2e1ef8501/p/09f001-empty-state"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/77d584-file-selector/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/77d584-file-selector/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/77d584-file-selector/b/516284"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/77d584-file-selector/b/74d5d4"
+            }
+          ],
+          "label": "File Selector",
+          "source": "/2e1ef8501/p/77d584-file-selector"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/96252b-form-element/b/76ea32"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/96252b-form-element/b/94306d"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/96252b-form-element/b/1964e0"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/96252b-form-element/b/450cfc"
+            }
+          ],
+          "label": "Form Element",
+          "source": "/2e1ef8501/p/96252b-form-element"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/19e451-icons/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/19e451-icons/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/19e451-icons/b/78a0e7"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/19e451-icons/b/74d5d4"
+            }
+          ],
+          "label": "Icons",
+          "source": "/2e1ef8501/p/19e451-icons"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/8268ee-input/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/8268ee-input/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/8268ee-input/b/963484"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/8268ee-input/b/74d5d4"
+            }
+          ],
+          "label": "Input",
+          "source": "/2e1ef8501/p/8268ee-input"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/160625-map/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/160625-map/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/160625-map/b/0614c5"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/160625-map/b/74d5d4"
+            }
+          ],
+          "label": "Map",
+          "source": "/2e1ef8501/p/160625-map"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/40f658-menu/b/01187d"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/40f658-menu/b/60023c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/40f658-menu/b/53ad7d"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/40f658-menu/b/40c9ae"
+            }
+          ],
+          "label": "Menu",
+          "source": "/2e1ef8501/p/40f658-menu"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/01c12a-modals/b/43b01d"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/01c12a-modals/b/343793"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/01c12a-modals/b/9940b8"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/01c12a-modals/b/464754"
+            }
+          ],
+          "label": "Modals",
+          "source": "/2e1ef8501/p/01c12a-modals"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/108a86-pills/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/108a86-pills/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/108a86-pills/b/641c4b"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/108a86-pills/b/74d5d4"
+            }
+          ],
+          "label": "Pills",
+          "source": "/2e1ef8501/p/108a86-pills"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/64d280-progress-indicator/b/65af2a"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/64d280-progress-indicator/b/772221"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/64d280-progress-indicator/b/697a6a"
+            }
+          ],
+          "label": "Progress Indicator",
+          "source": "/2e1ef8501/p/64d280-progress-indicator"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/70ad36-progress-bar/b/9986f1"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/70ad36-progress-bar/b/806b51"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/70ad36-progress-bar/b/65ec72"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/70ad36-progress-bar/b/90c8bb"
+            }
+          ],
+          "label": "Progress Bar",
+          "source": "/2e1ef8501/p/70ad36-progress-bar"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/050982-progress-ring/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/050982-progress-ring/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/050982-progress-ring/b/260326"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/050982-progress-ring/b/74d5d4"
+            }
+          ],
+          "label": "Progress Ring",
+          "source": "/2e1ef8501/p/050982-progress-ring"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/925906-prompt/b/59e6cd"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/925906-prompt/b/30df6b"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/925906-prompt/b/3389e1"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/925906-prompt/b/84fd89"
+            }
+          ],
+          "label": "Prompt",
+          "source": "/2e1ef8501/p/925906-prompt"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/2052d7-radio-button-group/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/2052d7-radio-button-group/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/2052d7-radio-button-group/b/90c681"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/2052d7-radio-button-group/b/74d5d4"
+            }
+          ],
+          "label": "Radio Button Group",
+          "source": "/2e1ef8501/p/2052d7-radio-button-group"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/19c76a-radio-group/b/06300d"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/19c76a-radio-group/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/19c76a-radio-group/b/259b98"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/19c76a-radio-group/b/74d5d4"
+            }
+          ],
+          "label": "Radio Group",
+          "source": "/2e1ef8501/p/19c76a-radio-group"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/35614c-rich-text-editor/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/35614c-rich-text-editor/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/35614c-rich-text-editor/b/90a252"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/35614c-rich-text-editor/b/74d5d4"
+            }
+          ],
+          "label": "Rich Text Editor",
+          "source": "/2e1ef8501/p/35614c-rich-text-editor"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/318c20-scoped-tabs/b/04ed90"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/318c20-scoped-tabs/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/318c20-scoped-tabs/b/672ec3"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/318c20-scoped-tabs/b/74d5d4"
+            }
+          ],
+          "label": "Scoped Tabs",
+          "source": "/2e1ef8501/p/318c20-scoped-tabs"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/60fa86-select/b/70905d"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/60fa86-select/b/12242d"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/60fa86-select/b/725421"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/60fa86-select/b/62ec79"
+            }
+          ],
+          "label": "Select",
+          "source": "/2e1ef8501/p/60fa86-select"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/0176bc-slider/b/021cb6"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/0176bc-slider/b/1288fa"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/0176bc-slider/b/73790f"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/0176bc-slider/b/13dd46"
+            }
+          ],
+          "label": "Slider",
+          "source": "/2e1ef8501/p/0176bc-slider"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/959d6d-spinners/b/225b69"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/959d6d-spinners/b/36f937"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/959d6d-spinners/b/95fdbf"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/959d6d-spinners/b/938300"
+            }
+          ],
+          "label": "Spinners",
+          "source": "/2e1ef8501/p/959d6d-spinners"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/1152cf-tabs/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/1152cf-tabs/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/1152cf-tabs/b/748def"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/1152cf-tabs/b/74d5d4"
+            }
+          ],
+          "label": "Tabs",
+          "source": "/2e1ef8501/p/1152cf-tabs"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/11f590-textarea/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/11f590-textarea/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/11f590-textarea/b/80603b"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/11f590-textarea/b/74d5d4"
+            }
+          ],
+          "label": "Textarea",
+          "source": "/2e1ef8501/p/11f590-textarea"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/87b648-tiles/b/658fad"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/87b648-tiles/b/04c821"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/87b648-tiles/b/99618f"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/87b648-tiles/b/358856"
+            }
+          ],
+          "label": "Tiles",
+          "source": "/2e1ef8501/p/87b648-tiles"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/82218a-timepicker/b/35b09c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/82218a-timepicker/b/786965"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/82218a-timepicker/b/3518bc"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/82218a-timepicker/b/303931"
+            }
+          ],
+          "label": "Timepicker",
+          "source": "/2e1ef8501/p/82218a-timepicker"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/216f79-toast/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/216f79-toast/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/216f79-toast/b/143824"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/216f79-toast/b/74d5d4"
+            }
+          ],
+          "label": "Toast",
+          "source": "/2e1ef8501/p/216f79-toast"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/532fc5-tooltip/b/39205c"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/532fc5-tooltip/b/09e06c"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/532fc5-tooltip/b/09794f"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/532fc5-tooltip/b/74d5d4"
+            }
+          ],
+          "label": "Tooltip",
+          "source": "/2e1ef8501/p/532fc5-tooltip"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/1234e1-tree-grid/b/451e1e"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/1234e1-tree-grid/b/739388"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/1234e1-tree-grid/b/166c39"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/1234e1-tree-grid/b/28817c"
+            }
+          ],
+          "label": "Tree Grid",
+          "source": "/2e1ef8501/p/1234e1-tree-grid"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/950b57-tree/b/887cfc"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/950b57-tree/b/79db77"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/950b57-tree/b/438087"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/950b57-tree/b/65bc39"
+            }
+          ],
+          "label": "Tree",
+          "source": "/2e1ef8501/p/950b57-tree"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Usage",
+              "source": "/2e1ef8501/p/60977d-vertical-navigation/b/7978cc"
+            },
+            {
+              "children": [],
+              "label": "Develop",
+              "source": "/2e1ef8501/p/60977d-vertical-navigation/b/193abc"
+            },
+            {
+              "children": [],
+              "label": "Specifications",
+              "source": "/2e1ef8501/p/60977d-vertical-navigation/b/1398de"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/60977d-vertical-navigation/b/136aff"
+            }
+          ],
+          "label": "Vertical Navigation",
+          "source": "/2e1ef8501/p/60977d-vertical-navigation"
+        }
+      ],
+      "label": "Components",
+      "source": "/2e1ef8501/p/755aff-components"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/204931-builder/b/095166"
+            },
+            {
+              "children": [],
+              "label": "Header",
+              "source": "/2e1ef8501/p/204931-builder/b/168ca5"
+            },
+            {
+              "children": [],
+              "label": "Canvas",
+              "source": "/2e1ef8501/p/204931-builder/b/14ed6a"
+            },
+            {
+              "children": [],
+              "label": "Panels",
+              "source": "/2e1ef8501/p/204931-builder/b/025051"
+            },
+            {
+              "children": [],
+              "label": "Validation",
+              "source": "/2e1ef8501/p/204931-builder/b/818fd8"
+            }
+          ],
+          "label": "Builder",
+          "source": "/2e1ef8501/p/204931-builder"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Foundations",
+              "source": "/2e1ef8501/p/5033fb-currency/b/745647"
+            },
+            {
+              "children": [],
+              "label": "Use Cases",
+              "source": "/2e1ef8501/p/5033fb-currency/b/63fc1f"
+            },
+            {
+              "children": [],
+              "label": "Strategy and Reference",
+              "source": "/2e1ef8501/p/5033fb-currency/b/59a2ea"
+            }
+          ],
+          "label": "Currency",
+          "source": "/2e1ef8501/p/5033fb-currency"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Charts",
+              "source": "/2e1ef8501/p/7139a1-charts"
+            },
+            {
+              "children": [],
+              "label": "Metric Display",
+              "source": "/2e1ef8501/p/594f67-metric-display"
+            }
+          ],
+          "label": "Data Visualization",
+          "source": null
+        },
+        {
+          "children": [],
+          "label": "Data Entry",
+          "source": "/2e1ef8501/p/33f0d7-data-entry"
+        },
+        {
+          "children": [],
+          "label": "Displaying Data",
+          "source": "/2e1ef8501/p/7540d0-displaying-data"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/67b473-in-app-feedback/b/51c812"
+            },
+            {
+              "children": [],
+              "label": "Scenarios",
+              "source": "/2e1ef8501/p/67b473-in-app-feedback/b/324fc5"
+            },
+            {
+              "children": [],
+              "label": "Research Strategy",
+              "source": "/2e1ef8501/p/67b473-in-app-feedback/b/08a8f1"
+            },
+            {
+              "children": [],
+              "label": "In App Feedback Patterns",
+              "source": "/2e1ef8501/p/67b473-in-app-feedback/b/53e813"
+            }
+          ],
+          "label": "In App Feedback",
+          "source": "/2e1ef8501/p/67b473-in-app-feedback"
+        },
+        {
+          "children": [],
+          "label": "Layout",
+          "source": "/2e1ef8501/p/33e9af-layout"
+        },
+        {
+          "children": [],
+          "label": "Loading",
+          "source": "/2e1ef8501/p/7473e0-loading"
+        },
+        {
+          "children": [],
+          "label": "Localization",
+          "source": "/2e1ef8501/p/962e74-localization"
+        },
+        {
+          "children": [],
+          "label": "Markup and Style",
+          "source": "/2e1ef8501/p/88f917-markup-and-style"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/77c8da"
+            },
+            {
+              "children": [],
+              "label": "Conversation Publishers",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/900d44"
+            },
+            {
+              "children": [],
+              "label": "Message Entries",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/744035"
+            },
+            {
+              "children": [],
+              "label": "A Conversation",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/548d03"
+            },
+            {
+              "children": [],
+              "label": "Messaging UI Styling",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/2888ce"
+            },
+            {
+              "children": [],
+              "label": "Accessibility",
+              "source": "/2e1ef8501/p/48e48d-messaging-ui/b/39ed89"
+            }
+          ],
+          "label": "Messaging UI",
+          "source": "/2e1ef8501/p/48e48d-messaging-ui"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Global Search",
+              "source": "/2e1ef8501/p/727af5-global-search"
+            },
+            {
+              "children": [],
+              "label": "In-Context Search",
+              "source": "/2e1ef8501/p/892489-in-context-search"
+            }
+          ],
+          "label": "Search",
+          "source": null
+        },
+        {
+          "children": [],
+          "label": "Navigation",
+          "source": "/2e1ef8501/p/47ae1f-navigation"
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Overview",
+                  "source": "/2e1ef8501/p/70cff7-notifications/b/044c53"
+                },
+                {
+                  "children": [],
+                  "label": "Notification Priority",
+                  "source": "/2e1ef8501/p/70cff7-notifications/b/89186a"
+                },
+                {
+                  "children": [],
+                  "label": "Delivery Channels",
+                  "source": "/2e1ef8501/p/70cff7-notifications/b/52e5ae"
+                }
+              ],
+              "label": "Notifications",
+              "source": "/2e1ef8501/p/70cff7-notifications"
+            },
+            {
+              "children": [
+                {
+                  "children": [],
+                  "label": "Overview",
+                  "source": "/2e1ef8501/p/12db58-interface-feedback/b/701ce0"
+                },
+                {
+                  "children": [],
+                  "label": "Feedback Priority",
+                  "source": "/2e1ef8501/p/12db58-interface-feedback/b/20f0bd"
+                },
+                {
+                  "children": [],
+                  "label": "Feedback States",
+                  "source": "/2e1ef8501/p/12db58-interface-feedback/b/314366"
+                }
+              ],
+              "label": "Interface Feedback",
+              "source": "/2e1ef8501/p/12db58-interface-feedback"
+            }
+          ],
+          "label": "System Messaging",
+          "source": null
+        },
+        {
+          "children": [],
+          "label": "Rules, Filters, and Logic",
+          "source": "/2e1ef8501/p/58ff5f-rules-filters-and-logic"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "label": "Overview",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/4365b2"
+            },
+            {
+              "children": [],
+              "label": "Onboarding",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/1627ca"
+            },
+            {
+              "children": [],
+              "label": "Feature Discovery",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/78c775"
+            },
+            {
+              "children": [],
+              "label": "Troubleshooting",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/259e90"
+            },
+            {
+              "children": [],
+              "label": "Deeper Learning",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/9621e2"
+            },
+            {
+              "children": [],
+              "label": "Engagement Patterns",
+              "source": "/2e1ef8501/p/25d63d-user-engagement/b/83e1b1"
+            }
+          ],
+          "label": "User Engagement",
+          "source": "/2e1ef8501/p/25d63d-user-engagement"
+        }
+      ],
+      "label": "Patterns",
+      "source": "/2e1ef8501/p/355656-patterns"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "label": "AI Development Skills",
+          "source": "/2e1ef8501/p/8225d4-ai-development-skills"
+        },
+        {
+          "children": [],
+          "label": "Figma Kits",
+          "source": "/2e1ef8501/p/2963ba-figma-kits"
+        },
+        {
+          "children": [],
+          "label": "SLDS 2 AI Starter Kit",
+          "source": "/2e1ef8501/p/057d3b-slds-2-ai-starter-kit"
+        },
+        {
+          "children": [],
+          "label": "SLDS Linter",
+          "source": "/2e1ef8501/p/012d73-slds-linter"
+        },
+        {
+          "children": [],
+          "label": "SLDS Scope Customizer",
+          "source": "/2e1ef8501/p/014cb2-slds-scope-customizer"
+        },
+        {
+          "children": [],
+          "label": "SLDS Validator",
+          "source": "/2e1ef8501/p/952cae-slds-validator"
+        }
+      ],
+      "label": "Tools",
+      "source": "/2e1ef8501/p/05b46d-tools"
+    },
+    {
+      "children": [],
+      "label": "SLDS 1 ↗︎",
+      "source": "/2e1ef8501/p/274843-slds-1-"
+    }
+  ]
+}

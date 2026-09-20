@@ -14,6 +14,20 @@ It does **not** replace the existing Figma Core Design System library. It tells 
 6. `policies/` — system rules
 7. `agent/workflows/` — execution procedures
 
+## AH Design System website
+
+The repository includes an SFDS-inspired documentation portal generated from the
+same registry and agent contracts used by the Design Control Agent.
+
+- Source: `website/`
+- Build pipeline: `scripts/build-website.mjs`
+- Build command: `npm run build`
+- Hosted output: `dist/`
+
+The portal covers Overview, Principles, Foundations, Styling Hooks, Components,
+Patterns, Figma Mapping, Agent runtime, and QA governance. Search, responsive
+navigation, component filtering, and deep-link routes are included.
+
 ## Figma target
 
 - File key: `cipkv7yTxyE29VCfMphE0W`

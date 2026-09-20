@@ -1,0 +1,435 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-20",
+  "source": "source/site/content-architecture.json",
+  "renderContract": {
+    "navigation": "Generated from groups/routes plus package indexes.",
+    "pageRenderer": "Select template by packageType.",
+    "statusBadges": [
+      "SOURCE_READY",
+      "DOC_READY",
+      "VISUAL_READY",
+      "WEB_READY",
+      "BLOCKED",
+      "UNRESOLVED"
+    ],
+    "unresolvedBehavior": "Render explicit unavailable/unresolved state; do not synthesize content."
+  },
+  "groups": [
+    {
+      "id": "overview",
+      "label": "Overview",
+      "order": 1,
+      "authority": "GitHub composed from Figma/GitHub evidence",
+      "packageType": "site-composition",
+      "status": "STRUCTURE_READY",
+      "routes": [
+        "/",
+        "/getting-started",
+        "/source-of-truth"
+      ]
+    },
+    {
+      "id": "foundations",
+      "label": "Foundations",
+      "order": 2,
+      "authority": "Figma Core DS",
+      "packageType": "foundation-package",
+      "status": "SOURCE_EXISTS_DOC_ENRICHMENT_REQUIRED",
+      "routes": [
+        "/foundations",
+        "/foundations/color",
+        "/foundations/typography",
+        "/foundations/spacing",
+        "/foundations/shape",
+        "/foundations/focus",
+        "/foundations/responsive"
+      ]
+    },
+    {
+      "id": "styling-hooks",
+      "label": "Styling Hooks",
+      "order": 3,
+      "authority": "GitHub normalized mapping over Figma foundations",
+      "packageType": "website-documentation-composition",
+      "status": "STRUCTURE_READY_CONTENT_MAPPING_REQUIRED",
+      "routes": [
+        "/styling-hooks",
+        "/styling-hooks/color",
+        "/styling-hooks/typography",
+        "/styling-hooks/spacing",
+        "/styling-hooks/shape"
+      ]
+    },
+    {
+      "id": "assets",
+      "label": "Assets",
+      "order": 4,
+      "authority": "Figma Core DS",
+      "packageType": "asset-package",
+      "status": "SOURCE_EXISTS_ASSET_PACKAGING_REQUIRED",
+      "routes": [
+        "/assets",
+        "/assets/icons",
+        "/assets/axa-badges"
+      ]
+    },
+    {
+      "id": "components",
+      "label": "Components",
+      "order": 5,
+      "authority": "Figma Core DS",
+      "packageType": "component-source-package",
+      "status": "18_SOURCE_READY_1_BLOCKED",
+      "routes": [
+        "/components",
+        "/components/avatar",
+        "/components/button",
+        "/components/badge",
+        "/components/background",
+        "/components/bottom-sheet",
+        "/components/breadcrumb",
+        "/components/container",
+        "/components/check-box",
+        "/components/date-picker",
+        "/components/divider",
+        "/components/input",
+        "/components/evalution",
+        "/components/list",
+        "/components/tab",
+        "/components/toggle",
+        "/components/tooltips",
+        "/components/radio",
+        "/components/navbar",
+        "/components/scrollbar"
+      ]
+    },
+    {
+      "id": "patterns",
+      "label": "Patterns",
+      "order": 6,
+      "authority": "Approved domain/master Figma evidence after Core DS",
+      "packageType": "pattern-package",
+      "status": "REGISTRY_EXISTS_PACKAGE_ENRICHMENT_REQUIRED",
+      "routes": [
+        "/patterns",
+        "/patterns/search-filter",
+        "/patterns/forms",
+        "/patterns/navigation",
+        "/patterns/list-table",
+        "/patterns/feedback-states",
+        "/patterns/overlay-sheet"
+      ]
+    },
+    {
+      "id": "templates",
+      "label": "Templates",
+      "order": 7,
+      "authority": "GitHub registry derived from approved master-screen evidence",
+      "packageType": "template-package",
+      "status": "COMPOSITION_CANDIDATES",
+      "routes": [
+        "/templates",
+        "/templates/list",
+        "/templates/detail",
+        "/templates/create-edit-form",
+        "/templates/dashboard",
+        "/templates/search-filter",
+        "/templates/overlay-drawer"
+      ]
+    },
+    {
+      "id": "master-screens",
+      "label": "Master Screens",
+      "order": 8,
+      "authority": "Approved Master/Admin Figma sources",
+      "packageType": "screen-evidence-package",
+      "status": "SOURCE_REGISTRY_EXISTS",
+      "routes": [
+        "/master-screens",
+        "/master-screens/agency",
+        "/master-screens/admin"
+      ]
+    },
+    {
+      "id": "interactions",
+      "label": "Interactions & States",
+      "order": 9,
+      "authority": "Figma evidence normalized in GitHub",
+      "packageType": "interaction-package",
+      "status": "STATE_GROUPS_EXIST_TRANSITION_ENRICHMENT_REQUIRED",
+      "routes": [
+        "/interactions",
+        "/interactions/states",
+        "/interactions/validation",
+        "/interactions/loading-empty-error",
+        "/interactions/responsive-behavior"
+      ]
+    },
+    {
+      "id": "figma-mapping",
+      "label": "Figma Mapping",
+      "order": 10,
+      "authority": "GitHub canonical mapping of live Figma identity",
+      "packageType": "mapping-package",
+      "status": "SOURCE_READY",
+      "routes": [
+        "/figma-mapping",
+        "/figma-mapping/pages",
+        "/figma-mapping/components",
+        "/figma-mapping/tokens",
+        "/figma-mapping/dependencies",
+        "/figma-mapping/aliases"
+      ]
+    },
+    {
+      "id": "agent",
+      "label": "Agent",
+      "order": 11,
+      "authority": "GitHub operating contract",
+      "packageType": "operating-contract-doc",
+      "status": "SOURCE_READY",
+      "routes": [
+        "/agent",
+        "/agent/architecture",
+        "/agent/workflows",
+        "/agent/skills",
+        "/agent/policies",
+        "/agent/evidence"
+      ]
+    },
+    {
+      "id": "qa",
+      "label": "QA",
+      "order": 12,
+      "authority": "GitHub quality/evidence registries plus live runtime evidence",
+      "packageType": "qa-package",
+      "status": "SOURCE_READY_WITH_KNOWN_GAPS",
+      "routes": [
+        "/qa",
+        "/qa/coverage",
+        "/qa/visual-baselines",
+        "/qa/accessibility",
+        "/qa/design-system-compliance",
+        "/qa/code-connect"
+      ]
+    }
+  ],
+  "componentRoutes": [
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "route": "/components/avatar",
+      "source": "source/components/avatar/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "78149762034307de859d934c10970de208ef2cee"
+      ]
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "route": "/components/button",
+      "source": "source/components/button/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "a3123145d019de0e96f393c6c92c2d5d2d7236e3",
+        "e3848fc5f2f88f4c117dad1d078f8188df529621"
+      ]
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "route": "/components/badge",
+      "source": "source/components/badge/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "f2187fca79d95e1669dd417689535f0f83e9f1df",
+        "8383a48397d12f9f5c77334d4cfbbeec0e759849"
+      ]
+    },
+    {
+      "id": "background",
+      "name": "Background",
+      "route": "/components/background",
+      "source": "source/components/background/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "5b8283247625acb9dfefe63ce4327d0e928c9906",
+        "ad602fda1c480e7532bf3661bf9208430c52e23b"
+      ]
+    },
+    {
+      "id": "bottom-sheet",
+      "name": "Bottom sheet",
+      "route": "/components/bottom-sheet",
+      "source": "source/components/bottom-sheet/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "e9b5920c33dda114cfefad490d854d6a5bce8635",
+        "9391284ee3e2618096ea34f89adfbc10500a3a96"
+      ]
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "route": "/components/breadcrumb",
+      "source": "source/components/breadcrumb/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "cf65b4e2b72b9b580e442b011225a9fcc8485787"
+      ]
+    },
+    {
+      "id": "container",
+      "name": "Container",
+      "route": "/components/container",
+      "source": "source/components/container/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "878930169cd08b4b65acd09970260f1d3bf89e57",
+        "c08f699d2a2320780d6f9623f875940bed392fcf"
+      ]
+    },
+    {
+      "id": "check-box",
+      "name": "Check box",
+      "route": "/components/check-box",
+      "source": "source/components/check-box/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+        "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+      ]
+    },
+    {
+      "id": "date-picker",
+      "name": "Date picker",
+      "route": "/components/date-picker",
+      "source": "source/components/date-picker/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "8c1fa657cb66280263b5184bce07cc1b4ccefe35"
+      ]
+    },
+    {
+      "id": "divider",
+      "name": "Divider",
+      "route": "/components/divider",
+      "source": "source/components/divider/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "80aa0c0b116de48fd29f990e1ca2ba18386e8628"
+      ]
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "route": "/components/input",
+      "source": "source/components/input/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "87427036c09f6d4a3283ae068bc36e4d6351a7e7",
+        "a6db9d0482c6446fd483f71f6a517f2cf3984345"
+      ]
+    },
+    {
+      "id": "evalution",
+      "name": "Evalution",
+      "route": "/components/evalution",
+      "source": "source/components/evalution/package.json",
+      "status": "BLOCKED_EMPTY_FIGMA_SOURCE",
+      "componentKeys": []
+    },
+    {
+      "id": "list",
+      "name": "List",
+      "route": "/components/list",
+      "source": "source/components/list/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "5e3d148737311590c7e0cd60c033aacf76fe298d",
+        "9f2a5ed83a698219c7f9379a17d01edd36909c3d",
+        "fc742e1df5ac448c447807b9e3b2de047462666e",
+        "2408a8085bd3e19bdd43f56b076f189eddf6defe"
+      ]
+    },
+    {
+      "id": "tab",
+      "name": "Tab",
+      "route": "/components/tab",
+      "source": "source/components/tab/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "a5b3b9493a4813b83ac2acaa3753db830d26eacb",
+        "8240f9b4f5278a2e2ce7b7191535b718c9574127",
+        "680c8a81fa8ebf185c84a3bfb5f32a3d0b5baa54",
+        "527e1da72069d565082f4c4df0e043462e9e0109"
+      ]
+    },
+    {
+      "id": "toggle",
+      "name": "Toggle",
+      "route": "/components/toggle",
+      "source": "source/components/toggle/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "effb8465ac23bf00aad5538adf7d83fa3a359032"
+      ]
+    },
+    {
+      "id": "tooltips",
+      "name": "Tooltips",
+      "route": "/components/tooltips",
+      "source": "source/components/tooltips/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "5a32687740711c43db34cefeb943e63aa6cfb34e"
+      ]
+    },
+    {
+      "id": "radio",
+      "name": "Radio",
+      "route": "/components/radio",
+      "source": "source/components/radio/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "9db7a4d39e312a56a86d0038ca30d190b532df2d",
+        "f90d2487d05573910316e182ac17e5bece4c856a",
+        "888654c1d9d03deffb3eef2ebc450568ed6e71e3"
+      ]
+    },
+    {
+      "id": "navbar",
+      "name": "Navbar",
+      "route": "/components/navbar",
+      "source": "source/components/navbar/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "27cffe58afdec2bef93250b55cfa11835276b823",
+        "c27fb78aa960961f5557379b41e0cb5356842c92",
+        "f8444c3ab4ad71c54c867fe7b30eed1dfe3b79de",
+        "cdd9362ffedd880e842b5d28107aa9f5fc8ff1e5",
+        "558b8d869443d0719a184f552bb0503b567f1203",
+        "769388ee68f7ed865ff4aea3e402bd99df89a78e",
+        "8c565095086ab54369ac9016287135b196141358",
+        "640a0f70dae56e7abfc431e894673d240c15619b",
+        "99c9834309df6aa9f48301581c2bfe295610373e",
+        "9a960b19bf185bf7dfa976ae49e85d2209b96e48",
+        "3c5bee7a653efcad1cd5f385b9b19c0131251a60",
+        "01afd7cbdf324fb90cddcaf30327919310d773a1"
+      ]
+    },
+    {
+      "id": "scrollbar",
+      "name": "Scrollbar",
+      "route": "/components/scrollbar",
+      "source": "source/components/scrollbar/package.json",
+      "status": "SOURCE_READY",
+      "componentKeys": [
+        "bfe31419935d2a234c5dc377ae4535d5033f50be",
+        "5813c2ec8dff7020997a974b70bd81079c681ec9"
+      ]
+    }
+  ]
+}

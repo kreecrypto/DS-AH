@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "check-box",
+  "name": "Check box",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "188:37",
+    "pageName": "Check box"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+      "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+    ],
+    "preferredComponentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb"
+  },
+  "components": [
+    {
+      "nodeId": "189:238",
+      "componentKey": "8ff0ada0e22b7dc72eb9071d70d5ef9c1a8a35b2",
+      "figmaName": "checkbox",
+      "variantCount": 2,
+      "figmaCurrentApi": {
+        "ischeck": [
+          "true",
+          "false"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "legacy_simple_duplicate"
+    },
+    {
+      "nodeId": "198:4638",
+      "componentKey": "e56e5a45c607793bcc1bbd38971d90a1337273fb",
+      "figmaName": "checkbox",
+      "variantCount": 14,
+      "figmaCurrentApi": {
+        "check": [
+          "true",
+          "false"
+        ],
+        "state": [
+          "default",
+          "disabled",
+          "error"
+        ],
+        "indeterminate": [
+          "true",
+          "false"
+        ],
+        "on-dark": [
+          "yes",
+          "no"
+        ]
+      },
+      "canonicalApi": {
+        "Checked": [
+          "True",
+          "False"
+        ],
+        "State": [
+          "Default",
+          "Disabled",
+          "Error"
+        ],
+        "Indeterminate": [
+          "True",
+          "False"
+        ],
+        "OnDark": [
+          "True",
+          "False"
+        ]
+      },
+      "registryStatus": "preferred_checkbox_candidate"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "canonicalizeOnlyForNewDocumentation": true,
+    "debt": []
+  },
+  "website": {
+    "route": "/components/check-box",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields must remain explicit; website must not invent semantics."
+}

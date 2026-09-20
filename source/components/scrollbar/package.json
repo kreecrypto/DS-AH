@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "scrollbar",
+  "name": "Scrollbar",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "145:4817",
+    "pageName": "Scrollbar"
+  },
+  "identity": {
+    "ownerCount": 2,
+    "componentKeys": [
+      "bfe31419935d2a234c5dc377ae4535d5033f50be",
+      "5813c2ec8dff7020997a974b70bd81079c681ec9"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "145:4844",
+      "componentKey": "bfe31419935d2a234c5dc377ae4535d5033f50be",
+      "figmaName": "scroll-bar vertical",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "position": [
+          "top",
+          "middle",
+          "bottom"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Top",
+          "Middle",
+          "Bottom"
+        ]
+      },
+      "registryStatus": "canonical"
+    },
+    {
+      "nodeId": "542:15",
+      "componentKey": "5813c2ec8dff7020997a974b70bd81079c681ec9",
+      "figmaName": "scroll-bar horizontal",
+      "variantCount": 3,
+      "figmaCurrentApi": {
+        "Property 1": [
+          "left",
+          "center",
+          "right"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "Left",
+          "Center",
+          "Right"
+        ]
+      },
+      "registryStatus": "canonical_with_property_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "Property 1 unresolved; semantic axis must be resolved before new work"
+    ]
+  },
+  "website": {
+    "route": "/components/scrollbar",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics."
+}

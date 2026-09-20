@@ -63,7 +63,8 @@
     "visualBaselines": "registry/visual-baselines.json",
     "stateFlows": "registry/state-flows.json",
     "codeConnectStatus": "registry/code-connect-status.json",
-    "documentationSite": "registry/documentation-site.json"
+    "documentationSite": "registry/documentation-site.json",
+    "documentationContentArchitecture": "source/site/content-architecture.json"
   },
   "routing": "agent/COMMANDS.md",
   "skillSystem": {
@@ -83,7 +84,8 @@
     "deepFlow": "docs/design-agent-flow.md",
     "specializedSubflows": "docs/figma-specialized-subflows.md",
     "referenceFidelityHardening": "docs/reference-fidelity-hardening.md",
-    "websiteImplementation": "agent/workflows/website-implementation.md"
+    "websiteImplementation": "agent/workflows/website-implementation.md",
+    "websiteContentPublishing": "agent/workflows/figma-github-website-content.md"
   },
   "policies": [
     "policies/source-priority.md",
@@ -190,6 +192,19 @@
         "GitHub canonical mapping",
         "website implementation"
       ]
+    },
+    "websiteContentPipeline": {
+      "authorityOrder": [
+        "Figma Core DS",
+        "Approved domain/master Figma evidence",
+        "GitHub canonical registry/source package",
+        "Documentation website"
+      ],
+      "architecture": "source/site/content-architecture.json",
+      "routes": "source/site/routes.json",
+      "packageContract": "source/site/content-package-contract.json",
+      "componentIndex": "source/components/index.json",
+      "rule": "Figma evidence is normalized in GitHub and rendered by the website; the website must not infer missing design-system facts."
     }
   }
 }

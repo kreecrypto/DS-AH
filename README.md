@@ -14,6 +14,14 @@ It does **not** replace the existing Figma Core Design System library. It tells 
 6. `policies/` — system rules
 7. `agent/workflows/` — execution procedures
 
+## Documentation website
+
+- Runtime: `https://ah-design-system.kreetaphon-game.chatgpt.site`
+- Role: documentation/presentation surface only; it does not override Figma Core DS authority.
+- Registry: `registry/documentation-site.json`
+- Audit: `docs/audit/ah-design-system-site-inspection-2026-09-20.md`
+- Consumption rule: **Figma Core DS → approved domain pattern/Master → GitHub canonical mapping → website composition**.
+
 ## Figma target
 
 - File key: `cipkv7yTxyE29VCfMphE0W`

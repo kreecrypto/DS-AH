@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Website Implementation Quality Gates",
+  "finalStates": ["PASS","FAIL","BLOCKED"],
+  "gates": [
+    {"id":"WEB-QA-01","name":"Authority and Reference","blocking":true},
+    {"id":"WEB-QA-02","name":"Design System Mapping","blocking":true},
+    {"id":"WEB-QA-03","name":"Static Validation","blocking":true},
+    {"id":"WEB-QA-04","name":"Runtime and Routing","blocking":true},
+    {"id":"WEB-QA-05","name":"Responsive","blocking":true},
+    {"id":"WEB-QA-06","name":"Accessibility","blocking":true},
+    {"id":"WEB-QA-07","name":"Visual Fidelity","blocking":true},
+    {"id":"WEB-QA-08","name":"Content and States","blocking":true},
+    {"id":"WEB-QA-09","name":"Scope Integrity","blocking":true},
+    {"id":"WEB-QA-10","name":"Regression","blocking":true},
+    {"id":"WEB-QA-11","name":"Evidence and PR Readiness","blocking":true}
+  ],
+  "hardRules": [
+    "Figma Core DS is system authority; website cannot redefine tokens or component APIs.",
+    "componentKey identity is required when a Figma Core component is mapped.",
+    "No new Core Card solely for documentation composition; use container first.",
+    "Responsive/typography/screensize is deprecated for Agent use.",
+    "P0 or P1 DS compliance findings block merge.",
+    "Reference-based work cannot pass visual fidelity without comparable visual evidence.",
+    "A changed route must pass direct-load and client-navigation runtime checks.",
+    "Accessibility blocking issues prevent PASS.",
+    "No PASS without evidence."
+  ]
+}

@@ -26,15 +26,15 @@
     ]
   },
   "targetInformationArchitecture": [
-    "Website Shell",
-    "Navigation / Search",
+    "Overview",
     "Foundations",
     "Styling Hooks",
-    "Component Template",
-    "Core Component Docs: Button",
-    "Core Component Docs: Input",
-    "Core Component Docs: Card / Container decision",
-    "Pattern Template",
+    "Assets",
+    "Components",
+    "Patterns",
+    "Templates",
+    "Master Screens",
+    "Interactions & States",
     "Figma Mapping",
     "Agent",
     "QA"
@@ -154,7 +154,10 @@
       "Reuse Figma componentKey identity before creating any replacement.",
       "Treat client-side routes not verified by runtime inspection as unverified, not missing.",
       "Use Container for documentation cards until a distinct reusable Card API is justified.",
-      "Record website-only composition patterns separately from Core DS components."
+      "Record website-only composition patterns separately from Core DS components.",
+      "Website navigation and page rendering must consume GitHub source packages rather than inspect Figma live.",
+      "Missing authoritative content must render as UNRESOLVED/BLOCKED instead of synthesized documentation.",
+      "registry/ stores machine truth; source/ stores website-consumable packages; the website remains a renderer/consumer."
     ]
   },
   "openGaps": [
@@ -176,5 +179,12 @@
       "gap": "Responsive collection remains review-required/deprecated-unused evidence in the Core registry.",
       "resolution": "Use explicit Desktop/Tablet/Mobile composition rules rather than inventing new responsive token semantics."
     }
-  ]
+  ],
+  "contentArchitecture": {
+    "architecture": "source/site/content-architecture.json",
+    "routes": "source/site/routes.json",
+    "packageContract": "source/site/content-package-contract.json",
+    "documentation": "docs/figma-github-website-content-architecture.md",
+    "publishingWorkflow": "agent/workflows/figma-github-website-content.md"
+  }
 }

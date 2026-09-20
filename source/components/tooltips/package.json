@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "component-source-package",
+  "id": "tooltips",
+  "name": "Tooltips",
+  "status": "SOURCE_READY",
+  "authority": {
+    "type": "Figma Core DS",
+    "fileKey": "5ZFIRJWtmEIvuq95Rhyo6I",
+    "pageId": "82:608",
+    "pageName": "Tooltips"
+  },
+  "identity": {
+    "ownerCount": 1,
+    "componentKeys": [
+      "5a32687740711c43db34cefeb943e63aa6cfb34e"
+    ],
+    "preferredComponentKey": null
+  },
+  "components": [
+    {
+      "nodeId": "82:633",
+      "componentKey": "5a32687740711c43db34cefeb943e63aa6cfb34e",
+      "figmaName": "tooltips/basic",
+      "variantCount": 5,
+      "figmaCurrentApi": {
+        "position": [
+          "right-top",
+          "left-top",
+          "buttom-right",
+          "bottom-left",
+          "top-left"
+        ]
+      },
+      "canonicalApi": {
+        "Position": [
+          "RightTop",
+          "LeftTop",
+          "BottomRight",
+          "BottomLeft",
+          "TopLeft"
+        ]
+      },
+      "registryStatus": "canonical_with_typo_debt"
+    }
+  ],
+  "governance": {
+    "preserveExistingIdentity": true,
+    "doNotSubstituteByName": true,
+    "debt": [
+      "buttom-right canonicalizes to BottomRight"
+    ]
+  },
+  "website": {
+    "route": "/components/tooltips",
+    "sections": [
+      "Overview",
+      "Figma",
+      "API",
+      "Variants & States",
+      "Anatomy",
+      "Usage",
+      "Accessibility",
+      "Examples",
+      "Related",
+      "QA"
+    ],
+    "publishState": "SOURCE_READY"
+  },
+  "evidence": {
+    "pageDeepExtract": "source/figma/core-ds-pages.json",
+    "componentRegistry": "registry/core-ds-components.json",
+    "preferredRegistry": "registry/core-ds-preferred.json",
+    "dependencyRegistry": "registry/core-ds-component-dependencies.json"
+  },
+  "enrichment": {
+    "anatomy": "UNRESOLVED",
+    "usage": "UNRESOLVED",
+    "accessibility": "UNRESOLVED",
+    "examples": "UNRESOLVED",
+    "tokenDependencySubset": "RESOLVE_FROM_DEPENDENCY_REGISTRY",
+    "visualReference": "RESOLVE_FROM_VISUAL_BASELINES",
+    "relatedComponents": "RESOLVE_FROM_DEPENDENCY_REGISTRY"
+  },
+  "rule": "UNRESOLVED fields stay explicit; website must not invent semantics."
+}

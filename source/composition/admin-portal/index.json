@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "admin-portal-composition-index",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22"
+  },
+  "rule": "Composition Knowledge is reusable layout/pattern evidence. It does not override an exact current-task user reference, Design System component identity, or verified business content.",
+  "records": [
+    {
+      "id": "admin-portal.desktop-application-shell.v1",
+      "path": "source/composition/admin-portal/application-shell.json",
+      "kind": "SHELL",
+      "archetypes": [
+        "MASTER_LIST",
+        "FORM",
+        "DETAIL"
+      ],
+      "aliases": [
+        "admin shell",
+        "desktop shell",
+        "agency admin shell",
+        "sidebar header shell"
+      ],
+      "signals": [
+        "admin portal",
+        "master screen",
+        "desktop"
+      ]
+    },
+    {
+      "id": "admin-portal.master-list.desktop.v1",
+      "path": "source/composition/admin-portal/master-list.json",
+      "kind": "SCREEN_COMPOSITION",
+      "archetypes": [
+        "MASTER_LIST"
+      ],
+      "aliases": [
+        "master list",
+        "management list",
+        "role master",
+        "user master",
+        "permission list",
+        "master data list",
+        "table landing"
+      ],
+      "signals": [
+        "list",
+        "management",
+        "master",
+        "table",
+        "search",
+        "filter",
+        "create"
+      ]
+    },
+    {
+      "id": "admin-portal.filter-drawer.desktop.v1",
+      "path": "source/composition/admin-portal/filter-drawer.json",
+      "kind": "NESTED_PATTERN",
+      "archetypes": [
+        "MASTER_LIST"
+      ],
+      "aliases": [
+        "filter drawer",
+        "advanced filter",
+        "list filter"
+      ],
+      "signals": [
+        "filter",
+        "ตัวกรอง",
+        "drawer"
+      ]
+    },
+    {
+      "id": "admin-portal.create-edit-form.desktop.v1",
+      "path": "source/composition/admin-portal/create-edit-form.json",
+      "kind": "SCREEN_COMPOSITION",
+      "archetypes": [
+        "FORM"
+      ],
+      "aliases": [
+        "create form",
+        "edit form",
+        "create/edit",
+        "master create",
+        "master edit"
+      ],
+      "signals": [
+        "create",
+        "edit",
+        "สร้างใหม่",
+        "แก้ไขข้อมูล",
+        "form"
+      ]
+    },
+    {
+      "id": "admin-portal.detail-view.desktop.v1",
+      "path": "source/composition/admin-portal/detail-view.json",
+      "kind": "SCREEN_COMPOSITION",
+      "archetypes": [
+        "DETAIL"
+      ],
+      "aliases": [
+        "detail",
+        "view",
+        "master detail",
+        "read only detail"
+      ],
+      "signals": [
+        "view",
+        "detail",
+        "ดูรายละเอียด"
+      ]
+    }
+  ],
+  "retrievalRules": [
+    "Resolve exact user reference before this index.",
+    "Use SHARED_SHELL together with the selected screen-composition record.",
+    "For unspecified Admin Portal management/list requests, MASTER_LIST is a composition candidate; it is not permission to invent business columns.",
+    "For filter requests inside a list, load FILTER_DRAWER in addition to MASTER_LIST.",
+    "Create and Edit share one FORM composition; choose mode via component variants/properties before structural changes.",
+    "Detail/View reuses the same shell and information grouping as the form family while remaining read-only.",
+    "Always live-inspect the exact target/reference before mutation because Figma may have changed after extraction."
+  ],
+  "knownGaps": [
+    "No tablet/mobile composition baseline was established in this phase.",
+    "No explicit Role Master screen was found on the inspected Master screen page; Role/User/Permission business content must come from an exact product source when available.",
+    "Several External Links list feedback states were discovered from component-set metadata but were not each deep-inspected in this phase.",
+    "Exact API mapping for every domain field/action remains live-inspect-before-write."
+  ]
+}

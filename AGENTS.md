@@ -25,7 +25,7 @@ Figma = Workspace
 13. Extract Visual Grammar.
 14. Map DS assets to visual roles.
 15. Resolve Screen Archetype from `agent/archetypes/screen-archetypes.json`.
-16. Resolve Composition Knowledge and existing product examples.
+16. Resolve Composition Knowledge from `registry/composition-knowledge.json` and its product index (Admin Portal: `source/composition/admin-portal/index.json`), then inspect the selected live Figma evidence.
 17. Build a Reuse Map: Instance → Variant → Override → Existing Pattern → Existing Layout → Create only if approved.
 18. Create Design Decision and Change Scope.
 19. Apply Mutation Budget from `policies/mutation-budget.md`.
@@ -57,6 +57,7 @@ Figma = Workspace
 - Reference Lock before Design Decision.
 - DS mapping cannot replace locked composition.
 - Resolve Screen Archetype before composing a new screen unless the user explicitly requests EXPLORE.
+- Composition Knowledge supplies layout/assembly evidence only; never use it to invent domain columns, permissions, labels or business behavior.
 - Do not create a custom node when an approved Instance/Variant/Override/Pattern can satisfy the role.
 - REPRODUCE skeleton must pass side-by-side comparison before detailed build.
 - Structure-first: layout and region geometry before content polish.

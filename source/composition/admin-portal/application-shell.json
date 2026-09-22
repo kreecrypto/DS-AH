@@ -1,0 +1,145 @@
+{
+  "id": "admin-portal.desktop-application-shell.v1",
+  "scope": "admin-portal/master-screen/shared-desktop-shell",
+  "screenArchetype": "SHARED_SHELL",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22",
+    "status": "LIVE_FIGMA_VERIFIED"
+  },
+  "regions": [
+    {
+      "role": "sidebar_navigation",
+      "order": 1,
+      "purpose": "Persistent Admin Portal navigation",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "44:1721",
+        "184:69411",
+        "184:70168",
+        "184:70277",
+        "817:198545"
+      ],
+      "componentFamilies": [
+        "side bar"
+      ],
+      "alignmentAnchors": [
+        "left canvas edge",
+        "full screen height"
+      ],
+      "spacingRhythm": [
+        20,
+        8
+      ],
+      "stateExpectations": [
+        "desktop navigation",
+        "selected/sub-selected where applicable"
+      ],
+      "responsiveBehavior": "Desktop evidence only; do not infer tablet/mobile behavior from this record.",
+      "allowedVariability": [
+        "screen height follows content",
+        "selected menu item follows domain"
+      ]
+    },
+    {
+      "role": "main_region",
+      "order": 2,
+      "purpose": "Primary screen workspace beside the sidebar",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "44:1722",
+        "149:39364",
+        "152:41671",
+        "162:10268",
+        "817:220299"
+      ],
+      "componentFamilies": [
+        "main container"
+      ],
+      "alignmentAnchors": [
+        "starts immediately after 240px sidebar",
+        "top aligned with sidebar"
+      ],
+      "spacingRhythm": [
+        16
+      ],
+      "stateExpectations": [
+        "content-specific"
+      ],
+      "responsiveBehavior": "Observed main width is 1040 or 1048 depending on screen family; preserve target/reference rather than forcing one width.",
+      "allowedVariability": [
+        "1040–1048 observed desktop main width",
+        "vertical height follows content"
+      ]
+    },
+    {
+      "role": "top_header",
+      "order": 3,
+      "purpose": "Global/local page header with profile and optional back action",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "44:1723",
+        "149:39366",
+        "152:41673",
+        "162:10270",
+        "817:220288"
+      ],
+      "componentFamilies": [
+        "header"
+      ],
+      "alignmentAnchors": [
+        "top of main region"
+      ],
+      "spacingRhythm": [
+        16
+      ],
+      "stateExpectations": [
+        "back=false for list landing",
+        "back=true for create/edit/view"
+      ],
+      "responsiveBehavior": "Desktop evidence: 64px high.",
+      "allowedVariability": [
+        "back property",
+        "header content by route"
+      ]
+    }
+  ],
+  "visualInvariants": [
+    "Desktop shell is a horizontal split: sidebar then main workspace.",
+    "Sidebar width is 240px in all inspected representatives.",
+    "Top header height is 64px in all inspected representatives.",
+    "Main workspace commonly uses a 16px major vertical rhythm.",
+    "Do not copy screen height across families; height is content-driven.",
+    "Do not force 1280 versus 1288 root width without the locked visual reference because both are observed."
+  ],
+  "examples": [
+    {
+      "name": "External Links table shell",
+      "sourceId": "44:1720",
+      "role": "SECONDARY"
+    },
+    {
+      "name": "Unique Link create shell",
+      "sourceId": "152:40756",
+      "role": "PRIMARY"
+    },
+    {
+      "name": "Terms landing shell",
+      "sourceId": "821:220320",
+      "role": "SECONDARY"
+    }
+  ],
+  "evidence": [
+    "figma://rEJCvUGUfzzQ3jegheRhnr/80:71254",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/44:1720",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/152:40756",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/154:42853",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10938",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/821:220320"
+  ],
+  "unknowns": [
+    "Tablet/mobile shell behavior is not established by this extraction."
+  ]
+}

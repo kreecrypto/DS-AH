@@ -1,0 +1,235 @@
+{
+  "id": "admin-portal.master-list.desktop.v1",
+  "scope": "admin-portal/master-screen/list-table",
+  "screenArchetype": "MASTER_LIST",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22",
+    "status": "LIVE_FIGMA_VERIFIED"
+  },
+  "regions": [
+    {
+      "role": "application_shell",
+      "order": 1,
+      "purpose": "Use shared Admin Portal sidebar/main/header shell",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "44:1720",
+        "821:220320"
+      ],
+      "componentFamilies": [
+        "side bar",
+        "header"
+      ],
+      "alignmentAnchors": [
+        "sidebar 240px",
+        "header 64px"
+      ],
+      "spacingRhythm": [
+        16
+      ],
+      "stateExpectations": [
+        "landing/list"
+      ],
+      "responsiveBehavior": "Desktop only; inherit exact target/reference width.",
+      "allowedVariability": [
+        "screen height",
+        "main width 1040–1048 observed"
+      ]
+    },
+    {
+      "role": "title_and_query_toolbar",
+      "order": 2,
+      "purpose": "Expose list title/count plus search, filter and create actions before results",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "44:1727",
+        "817:219542"
+      ],
+      "componentFamilies": [
+        "search",
+        "filter",
+        "button"
+      ],
+      "alignmentAnchors": [
+        "single 44px toolbar row",
+        "left context and right actions",
+        "space-between alignment"
+      ],
+      "spacingRhythm": [
+        8,
+        16
+      ],
+      "stateExpectations": [
+        "default",
+        "search query",
+        "filter applied"
+      ],
+      "responsiveBehavior": "Terms baseline: inner content 1008px with 16px horizontal padding; toolbar content 976px. External Links baseline uses a 984px inner row.",
+      "allowedVariability": [
+        "title/count width",
+        "search/filter width",
+        "whether count sits with title"
+      ]
+    },
+    {
+      "role": "result_table",
+      "order": 3,
+      "purpose": "Display sortable structured records below toolbar",
+      "reuseStrategy": "DOMAIN_PATTERN",
+      "sourceIds": [
+        "44:1739",
+        "817:220055",
+        "817:219931",
+        "817:220218"
+      ],
+      "componentFamilies": [
+        "table",
+        "table row",
+        "sorting",
+        "badge/status"
+      ],
+      "alignmentAnchors": [
+        "full inner content width",
+        "column alignment persists across header and rows"
+      ],
+      "spacingRhythm": [
+        0,
+        16
+      ],
+      "stateExpectations": [
+        "default",
+        "scroll",
+        "search-found",
+        "search-not-found",
+        "reload",
+        "empty"
+      ],
+      "responsiveBehavior": "Terms evidence: table header 44px; row 68px; 16px horizontal row padding. External Links dimensions vary by domain.",
+      "allowedVariability": [
+        "columns",
+        "row content",
+        "domain actions",
+        "row height when content requires"
+      ]
+    },
+    {
+      "role": "pagination",
+      "order": 4,
+      "purpose": "Navigate list pages and show total record count",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "817:220272"
+      ],
+      "componentFamilies": [
+        "Pagination"
+      ],
+      "alignmentAnchors": [
+        "after result table",
+        "same inner content width"
+      ],
+      "spacingRhythm": [
+        12,
+        16
+      ],
+      "stateExpectations": [
+        "page selection",
+        "total list visible"
+      ],
+      "responsiveBehavior": "Terms baseline: 976x28.",
+      "allowedVariability": [
+        "total count",
+        "page count"
+      ]
+    },
+    {
+      "role": "feedback_states",
+      "order": 5,
+      "purpose": "Preserve list geometry while representing search/empty/retry conditions",
+      "reuseStrategy": "VARIANT",
+      "sourceIds": [
+        "71:40166",
+        "663:132923",
+        "667:33702",
+        "4213:137530",
+        "5841:404374",
+        "1537:308114"
+      ],
+      "componentFamilies": [
+        "list/table state family"
+      ],
+      "alignmentAnchors": [
+        "inside results context"
+      ],
+      "spacingRhythm": [
+        12
+      ],
+      "stateExpectations": [
+        "scroll",
+        "search found",
+        "search not found",
+        "reload",
+        "empty",
+        "search"
+      ],
+      "responsiveBehavior": "State nodes discovered on the same Master screen page; live-inspect selected state before write.",
+      "allowedVariability": [
+        "message",
+        "available recovery action"
+      ],
+      "evidenceStrength": "metadata + family inspection"
+    }
+  ],
+  "visualInvariants": [
+    "List title/query controls appear before result table.",
+    "Search/filter/create actions are grouped in the list header context rather than floating elsewhere.",
+    "Table precedes pagination.",
+    "Toolbar and table share the same inner-content alignment.",
+    "Use approved table/row/button/search/filter assets; do not recreate primitives.",
+    "State changes should preserve the shell and list context unless the locked reference proves otherwise."
+  ],
+  "examples": [
+    {
+      "name": "Terms and condition landing",
+      "sourceId": "821:220320",
+      "role": "PRIMARY"
+    },
+    {
+      "name": "External Links & Tools Management default",
+      "sourceId": "44:1720",
+      "role": "SECONDARY"
+    }
+  ],
+  "evidence": [
+    "figma://rEJCvUGUfzzQ3jegheRhnr/821:220320",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/817:220287",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/44:1720",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/44:1725",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/71:40165"
+  ],
+  "visualBaseline": {
+    "verified": true,
+    "representatives": [
+      {
+        "nodeId": "821:220320",
+        "size": [
+          1280,
+          943
+        ]
+      },
+      {
+        "nodeId": "44:1720",
+        "size": [
+          1288,
+          1017
+        ]
+      }
+    ]
+  },
+  "unknowns": [
+    "Mobile/tablet list composition is not proven in this phase.",
+    "Role/User/Permission business-specific columns are not inferred from this generic composition record."
+  ]
+}

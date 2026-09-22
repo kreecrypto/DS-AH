@@ -1,0 +1,243 @@
+{
+  "id": "admin-portal.filter-drawer.desktop.v1",
+  "scope": "admin-portal/master-screen/list-filter-drawer",
+  "screenArchetype": "MASTER_LIST",
+  "patternRole": "FILTER_DRAWER",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22",
+    "status": "LIVE_FIGMA_VERIFIED"
+  },
+  "regions": [
+    {
+      "role": "background_list_context",
+      "order": 1,
+      "purpose": "Keep originating list visible beneath modal treatment",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "184:73466"
+      ],
+      "componentFamilies": [
+        "Unique Link - table"
+      ],
+      "alignmentAnchors": [
+        "fills 1280x720 baseline"
+      ],
+      "spacingRhythm": [
+        0
+      ],
+      "stateExpectations": [
+        "current list state"
+      ],
+      "responsiveBehavior": "Desktop baseline only.",
+      "allowedVariability": [
+        "originating list content"
+      ]
+    },
+    {
+      "role": "overlay",
+      "order": 2,
+      "purpose": "Visually/modal-interaction separate drawer from background",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "184:74685"
+      ],
+      "componentFamilies": [
+        "overlay"
+      ],
+      "alignmentAnchors": [
+        "covers full screen"
+      ],
+      "spacingRhythm": [
+        0
+      ],
+      "stateExpectations": [
+        "open"
+      ],
+      "responsiveBehavior": "Covers 1280x720 baseline.",
+      "allowedVariability": []
+    },
+    {
+      "role": "drawer_shell",
+      "order": 3,
+      "purpose": "Right-side filter workspace",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "184:74687"
+      ],
+      "componentFamilies": [
+        "drawer"
+      ],
+      "alignmentAnchors": [
+        "right edge",
+        "x=860 in 1280 baseline"
+      ],
+      "spacingRhythm": [
+        12,
+        16
+      ],
+      "stateExpectations": [
+        "open"
+      ],
+      "responsiveBehavior": "Observed width 420px, height 720px, padding 16px all sides.",
+      "allowedVariability": [
+        "height may follow viewport"
+      ]
+    },
+    {
+      "role": "drawer_header",
+      "order": 4,
+      "purpose": "Label the filter and provide close action",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "184:74689",
+        "184:74693"
+      ],
+      "componentFamilies": [
+        "icon=close, style=outline"
+      ],
+      "alignmentAnchors": [
+        "space-between",
+        "vertically centered"
+      ],
+      "spacingRhythm": [
+        8
+      ],
+      "stateExpectations": [
+        "open"
+      ],
+      "responsiveBehavior": "Observed inner width 388px and header height 30px.",
+      "allowedVariability": [
+        "title copy"
+      ]
+    },
+    {
+      "role": "criteria_stack",
+      "order": 5,
+      "purpose": "Stack filter criteria with consistent field anatomy",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "184:74694",
+        "184:74695",
+        "9808:100882",
+        "184:74696",
+        "9808:100959"
+      ],
+      "componentFamilies": [
+        "Input field",
+        "state=Large Default, badge=no"
+      ],
+      "alignmentAnchors": [
+        "388px inner column"
+      ],
+      "spacingRhythm": [
+        8,
+        4
+      ],
+      "stateExpectations": [
+        "default",
+        "selected/filled via input component API"
+      ],
+      "responsiveBehavior": "Observed full-width field 388x82.",
+      "allowedVariability": [
+        "criterion count",
+        "field label",
+        "control type"
+      ]
+    },
+    {
+      "role": "paired_date_fields",
+      "order": 6,
+      "purpose": "Place start/end date criteria in paired rows when semantics are coupled",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "779:150290",
+        "779:150333"
+      ],
+      "componentFamilies": [
+        "Input field",
+        "calendar/date input"
+      ],
+      "alignmentAnchors": [
+        "single horizontal row"
+      ],
+      "spacingRhythm": [
+        12
+      ],
+      "stateExpectations": [
+        "empty",
+        "filled"
+      ],
+      "responsiveBehavior": "Observed row 388x82 with 12px gap.",
+      "allowedVariability": [
+        "date label"
+      ]
+    },
+    {
+      "role": "drawer_actions",
+      "order": 7,
+      "purpose": "Apply/reset/close filter actions in bounded footer",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "184:74767"
+      ],
+      "componentFamilies": [
+        "button"
+      ],
+      "alignmentAnchors": [
+        "drawer bottom action context"
+      ],
+      "spacingRhythm": [
+        8,
+        12
+      ],
+      "stateExpectations": [
+        "default",
+        "disabled/active as component APIs allow"
+      ],
+      "responsiveBehavior": "Observed footer frame 388x44; exact button variants require live inspect before mutation.",
+      "allowedVariability": [
+        "action labels"
+      ],
+      "evidenceStrength": "metadata"
+    }
+  ],
+  "visualInvariants": [
+    "Drawer is right aligned over an overlay, not a replacement full page.",
+    "Desktop drawer width is 420px with 16px padding, producing a 388px inner column.",
+    "Header uses title + close control with space-between alignment.",
+    "Criteria stack uses 8px vertical rhythm; individual large fields expose their own internal 4px rhythm.",
+    "Paired date fields use a horizontal row with 12px gap.",
+    "Background list remains Preservation Authority while drawer is open."
+  ],
+  "examples": [
+    {
+      "name": "Unique Link filter drawer",
+      "sourceId": "184:75335",
+      "role": "PRIMARY"
+    }
+  ],
+  "evidence": [
+    "figma://rEJCvUGUfzzQ3jegheRhnr/184:75335",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/184:74687",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/184:74688"
+  ],
+  "visualBaseline": {
+    "verified": true,
+    "representatives": [
+      {
+        "nodeId": "184:75335",
+        "size": [
+          1280,
+          720
+        ]
+      }
+    ]
+  },
+  "unknowns": [
+    "Exact footer button variant mapping should be live-inspected before write.",
+    "Mobile filter behavior is not inferred from this desktop pattern."
+  ]
+}

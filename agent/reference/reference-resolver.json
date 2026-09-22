@@ -40,7 +40,9 @@
     "Secondary references may fill content/system/state gaps but cannot silently alter composition.",
     "If top candidates are compositionally different and evidence cannot disambiguate, block.",
     "Never average two conflicting masters into a hybrid screen.",
-    "Existing same-product screen outranks generic best-practice knowledge."
+    "Existing same-product screen outranks generic best-practice knowledge.",
+    "Composition Knowledge may support the composition lane after screen-archetype resolution, but it cannot supply unverified business content.",
+    "For Admin Portal list/form/detail requests without an exact same-domain screen, load the matching Admin Portal composition package as supporting composition evidence and keep Content Authority unresolved until verified."
   ],
   "requiredCandidateEvidence": [
     "sourceType",
@@ -55,5 +57,12 @@
     "BLOCKED_REFERENCE_MISSING",
     "BLOCKED_REFERENCE_AMBIGUOUS",
     "BLOCKED_AUTHORITY_CONFLICT"
-  ]
+  ],
+  "knowledgeSources": {
+    "compositionKnowledgeRegistry": "registry/composition-knowledge.json",
+    "adminPortalCompositionIndex": "source/composition/admin-portal/index.json",
+    "screenArchetypes": "agent/archetypes/screen-archetypes.json",
+    "templates": "registry/templates.json",
+    "domainPatterns": "registry/domain-patterns.json"
+  }
 }

@@ -123,6 +123,9 @@
     "writePlanSchema": "agent/write/write-plan.schema.json",
     "visualDeltaPolicy": "agent/qa/visual-delta-policy.json",
     "mutationBudgetPolicy": "policies/mutation-budget.md",
-    "reusePolicy": "policies/reuse-first-write.md"
+    "reusePolicy": "policies/reuse-first-write.md",
+    "compositionKnowledgeRegistry": "registry/composition-knowledge.json",
+    "compositionKnowledgeIndex": "source/composition/admin-portal/index.json",
+    "compositionRetrievalRule": "Load exact product composition when available; otherwise load archetype-compatible composition as composition-lane evidence only. Never infer business content from composition."
   }
 }

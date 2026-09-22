@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "SOURCE_READY",
+  "name": "Composition Knowledge Registry",
+  "canonicalIndex": "source/composition/admin-portal/index.json",
+  "schema": "agent/composition/composition-knowledge.schema.json",
+  "sources": [
+    {
+      "product": "admin-portal",
+      "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+      "pageId": "80:71254",
+      "pageName": "Master screen",
+      "role": "approved_master_screen_composition_evidence",
+      "extractedAt": "2026-09-22"
+    }
+  ],
+  "records": [
+    {
+      "id": "admin-portal.desktop-application-shell.v1",
+      "path": "source/composition/admin-portal/application-shell.json",
+      "status": "LIVE_FIGMA_VERIFIED"
+    },
+    {
+      "id": "admin-portal.master-list.desktop.v1",
+      "path": "source/composition/admin-portal/master-list.json",
+      "status": "LIVE_FIGMA_VERIFIED"
+    },
+    {
+      "id": "admin-portal.filter-drawer.desktop.v1",
+      "path": "source/composition/admin-portal/filter-drawer.json",
+      "status": "LIVE_FIGMA_VERIFIED"
+    },
+    {
+      "id": "admin-portal.create-edit-form.desktop.v1",
+      "path": "source/composition/admin-portal/create-edit-form.json",
+      "status": "LIVE_FIGMA_VERIFIED"
+    },
+    {
+      "id": "admin-portal.detail-view.desktop.v1",
+      "path": "source/composition/admin-portal/detail-view.json",
+      "status": "LIVE_FIGMA_VERIFIED"
+    }
+  ],
+  "authorityRules": [
+    "Exact current-task user visual/Figma reference remains higher visual authority.",
+    "Composition record may own composition lane only when reference resolution selects it.",
+    "Core DS remains System Authority for component identity, tokens and APIs.",
+    "Business labels/columns/permissions are Content Authority and must not be inferred from a generic composition record.",
+    "Live Figma revalidation is required before write."
+  ]
+}

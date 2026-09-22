@@ -1,0 +1,279 @@
+{
+  "id": "admin-portal.create-edit-form.desktop.v1",
+  "scope": "admin-portal/master-screen/create-edit-form",
+  "screenArchetype": "FORM",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22",
+    "status": "LIVE_FIGMA_VERIFIED"
+  },
+  "regions": [
+    {
+      "role": "application_shell",
+      "order": 1,
+      "purpose": "Reuse shared Admin Portal desktop shell",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "152:40756",
+        "154:42853"
+      ],
+      "componentFamilies": [
+        "side bar",
+        "header"
+      ],
+      "alignmentAnchors": [
+        "240px sidebar",
+        "main workspace"
+      ],
+      "spacingRhythm": [
+        16
+      ],
+      "stateExpectations": [
+        "create",
+        "edit"
+      ],
+      "responsiveBehavior": "Desktop baseline only.",
+      "allowedVariability": [
+        "screen height follows form length"
+      ]
+    },
+    {
+      "role": "back_header",
+      "order": 2,
+      "purpose": "Provide back navigation while preserving the standard top header",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "149:39366",
+        "152:41673"
+      ],
+      "componentFamilies": [
+        "header",
+        "type=ghost, state=default, size=xss"
+      ],
+      "alignmentAnchors": [
+        "top of 1040px main region"
+      ],
+      "spacingRhythm": [
+        16,
+        4
+      ],
+      "stateExpectations": [
+        "back=true"
+      ],
+      "responsiveBehavior": "Observed height 64px and 16px padding.",
+      "allowedVariability": [
+        "route label"
+      ]
+    },
+    {
+      "role": "context_header",
+      "order": 3,
+      "purpose": "Expose route title, current mode/status and mode-specific actions",
+      "reuseStrategy": "VARIANT",
+      "sourceIds": [
+        "154:42542",
+        "154:42607"
+      ],
+      "componentFamilies": [
+        "header text"
+      ],
+      "alignmentAnchors": [
+        "full main width",
+        "16px horizontal content alignment"
+      ],
+      "spacingRhythm": [
+        8,
+        16
+      ],
+      "stateExpectations": [
+        "mode=create",
+        "mode=edit"
+      ],
+      "responsiveBehavior": "Observed 1040x44.",
+      "allowedVariability": [
+        "title",
+        "status",
+        "action visibility"
+      ]
+    },
+    {
+      "role": "mode_actions",
+      "order": 4,
+      "purpose": "Use mode-specific action set without rebuilding page structure",
+      "reuseStrategy": "VARIANT",
+      "sourceIds": [
+        "154:42542",
+        "154:42607"
+      ],
+      "componentFamilies": [
+        "button",
+        "header text"
+      ],
+      "alignmentAnchors": [
+        "context header action area"
+      ],
+      "spacingRhythm": [
+        8
+      ],
+      "stateExpectations": [
+        "create: clear/save-draft/save",
+        "edit: clear/cancel/save"
+      ],
+      "responsiveBehavior": "Action arrangement belongs to header-text variant family; live-inspect exact child properties before write.",
+      "allowedVariability": [
+        "save draft availability",
+        "cancel availability"
+      ]
+    },
+    {
+      "role": "form_body",
+      "order": 5,
+      "purpose": "Contain domain form sections within a stable aligned body",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "149:39379",
+        "152:41686"
+      ],
+      "componentFamilies": [
+        "form sections",
+        "Input field",
+        "radio",
+        "date input",
+        "upload",
+        "preview"
+      ],
+      "alignmentAnchors": [
+        "16px horizontal inset",
+        "top below context header"
+      ],
+      "spacingRhythm": [
+        16,
+        12,
+        8,
+        4
+      ],
+      "stateExpectations": [
+        "empty/default",
+        "filled",
+        "validation",
+        "disabled/read-only where domain requires"
+      ],
+      "responsiveBehavior": "Observed body uses horizontal layout with 16px gap and padding [0,16,16,16].",
+      "allowedVariability": [
+        "number of sections",
+        "field count",
+        "preview panels"
+      ]
+    },
+    {
+      "role": "domain_field_groups",
+      "order": 6,
+      "purpose": "Group fields by business meaning rather than presenting one undifferentiated form",
+      "reuseStrategy": "DOMAIN_PATTERN",
+      "sourceIds": [
+        "149:39379",
+        "152:41686"
+      ],
+      "componentFamilies": [
+        "Input field",
+        "radio",
+        "date/time",
+        "upload"
+      ],
+      "alignmentAnchors": [
+        "consistent section column"
+      ],
+      "spacingRhythm": [
+        8,
+        12,
+        16
+      ],
+      "stateExpectations": [
+        "create empty",
+        "edit filled",
+        "required",
+        "selected"
+      ],
+      "responsiveBehavior": "Current evidence includes bilingual title/detail, type/source, URL/UTM, date range, participants/roles and media upload groups.",
+      "allowedVariability": [
+        "business-specific groups"
+      ],
+      "evidenceStrength": "live text/component inventory; deeper per-field API remains live-inspect-before-write"
+    }
+  ],
+  "visualInvariants": [
+    "Create and Edit share the same application shell and page geometry.",
+    "Use the same top header component with back=true rather than rebuilding a custom back header.",
+    "Use the header-text component family and switch mode=create or mode=edit.",
+    "Create/Edit body begins below a 44px context header and uses 16px horizontal inset.",
+    "Mode changes should be expressed through component variants/properties and content overrides before structural mutation.",
+    "Form sections are grouped by business meaning and preserve consistent spacing rhythm."
+  ],
+  "stateMapping": {
+    "create": {
+      "rootNode": "152:40756",
+      "headerTextNode": "154:42542",
+      "headerTextMainComponent": "mode=create, row=1 row",
+      "labels": [
+        "ล้างข้อมูลทั้งหมด",
+        "บันทึกร่าง",
+        "บันทึก"
+      ]
+    },
+    "edit": {
+      "rootNode": "154:42853",
+      "headerTextNode": "154:42607",
+      "headerTextMainComponent": "mode=edit, row=1 row",
+      "labels": [
+        "ล้างข้อมูลทั้งหมด",
+        "ยกเลิก",
+        "บันทึก"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": "Unique Link create",
+      "sourceId": "152:40756",
+      "role": "PRIMARY"
+    },
+    {
+      "name": "Unique Link edit",
+      "sourceId": "154:42853",
+      "role": "SECONDARY"
+    }
+  ],
+  "evidence": [
+    "figma://rEJCvUGUfzzQ3jegheRhnr/152:40756",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/149:39365",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/154:42542",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/154:42853",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/152:41672",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/154:42607"
+  ],
+  "visualBaseline": {
+    "verified": true,
+    "representatives": [
+      {
+        "nodeId": "152:40756",
+        "size": [
+          1280,
+          2330
+        ]
+      },
+      {
+        "nodeId": "154:42853",
+        "size": [
+          1280,
+          2252
+        ]
+      }
+    ]
+  },
+  "unknowns": [
+    "Responsive form transformation is not proven.",
+    "Exact component-property mapping for every field group requires targeted live inspection for the requested domain."
+  ]
+}

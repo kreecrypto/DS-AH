@@ -69,7 +69,9 @@
     "codeConnectStatus": "registry/code-connect-status.json",
     "documentationSite": "registry/documentation-site.json",
     "documentationContentArchitecture": "source/site/content-architecture.json",
-    "compositionKnowledgeSchema": "agent/composition/composition-knowledge.schema.json"
+    "compositionKnowledgeSchema": "agent/composition/composition-knowledge.schema.json",
+    "compositionKnowledge": "registry/composition-knowledge.json",
+    "adminPortalCompositionIndex": "source/composition/admin-portal/index.json"
   },
   "routing": "agent/COMMANDS.md",
   "skillSystem": {
@@ -232,7 +234,9 @@
       "referenceResolver": "agent/reference/reference-resolver.json",
       "screenArchetypes": "agent/archetypes/screen-archetypes.json",
       "writePlanSchema": "agent/write/write-plan.schema.json",
-      "visualDeltaSchema": "agent/qa/visual-delta.schema.json"
+      "visualDeltaSchema": "agent/qa/visual-delta.schema.json",
+      "compositionKnowledgeRegistry": "registry/composition-knowledge.json",
+      "compositionIndex": "source/composition/admin-portal/index.json"
     }
   }
 }

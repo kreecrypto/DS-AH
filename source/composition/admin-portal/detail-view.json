@@ -1,0 +1,207 @@
+{
+  "id": "admin-portal.detail-view.desktop.v1",
+  "scope": "admin-portal/master-screen/detail-view",
+  "screenArchetype": "DETAIL",
+  "source": {
+    "fileKey": "rEJCvUGUfzzQ3jegheRhnr",
+    "pageId": "80:71254",
+    "pageName": "Master screen",
+    "extractedAt": "2026-09-22",
+    "status": "LIVE_FIGMA_VERIFIED"
+  },
+  "regions": [
+    {
+      "role": "application_shell",
+      "order": 1,
+      "purpose": "Reuse shared Admin Portal shell",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "162:10938"
+      ],
+      "componentFamilies": [
+        "side bar",
+        "header"
+      ],
+      "alignmentAnchors": [
+        "240px sidebar",
+        "1040px main baseline"
+      ],
+      "spacingRhythm": [
+        16
+      ],
+      "stateExpectations": [
+        "view"
+      ],
+      "responsiveBehavior": "Desktop baseline only.",
+      "allowedVariability": [
+        "screen height follows detail length"
+      ]
+    },
+    {
+      "role": "back_header",
+      "order": 2,
+      "purpose": "Back navigation in standard header",
+      "reuseStrategy": "INSTANCE",
+      "sourceIds": [
+        "162:10270"
+      ],
+      "componentFamilies": [
+        "header",
+        "type=ghost, state=default, size=xss"
+      ],
+      "alignmentAnchors": [
+        "top of main"
+      ],
+      "spacingRhythm": [
+        16,
+        4
+      ],
+      "stateExpectations": [
+        "back=true"
+      ],
+      "responsiveBehavior": "Observed 1040x64.",
+      "allowedVariability": [
+        "route label"
+      ]
+    },
+    {
+      "role": "context_header",
+      "order": 3,
+      "purpose": "Identify detail view, surface status and primary contextual actions",
+      "reuseStrategy": "VARIANT",
+      "sourceIds": [
+        "162:10272"
+      ],
+      "componentFamilies": [
+        "header text"
+      ],
+      "alignmentAnchors": [
+        "full main width",
+        "16px horizontal inset"
+      ],
+      "spacingRhythm": [
+        8,
+        16
+      ],
+      "stateExpectations": [
+        "mode=view",
+        "show status=true"
+      ],
+      "responsiveBehavior": "Observed 1040x44.",
+      "allowedVariability": [
+        "status",
+        "title",
+        "available actions"
+      ]
+    },
+    {
+      "role": "detail_actions",
+      "order": 4,
+      "purpose": "Expose view-specific commands without converting the page into edit mode",
+      "reuseStrategy": "DOMAIN_PATTERN",
+      "sourceIds": [
+        "162:10272"
+      ],
+      "componentFamilies": [
+        "button",
+        "status"
+      ],
+      "alignmentAnchors": [
+        "context header action region"
+      ],
+      "spacingRhythm": [
+        8
+      ],
+      "stateExpectations": [
+        "duplicate",
+        "delete",
+        "edit"
+      ],
+      "responsiveBehavior": "Observed labels include duplicate/delete/edit; destructive action styling must come from DS.",
+      "allowedVariability": [
+        "domain action availability"
+      ]
+    },
+    {
+      "role": "read_only_detail_body",
+      "order": 5,
+      "purpose": "Present grouped read-only information using the same field hierarchy as create/edit",
+      "reuseStrategy": "TEMPLATE_LAYOUT",
+      "sourceIds": [
+        "162:10273"
+      ],
+      "componentFamilies": [
+        "view-filled field",
+        "section",
+        "status",
+        "media preview"
+      ],
+      "alignmentAnchors": [
+        "16px horizontal inset",
+        "aligned with form family"
+      ],
+      "spacingRhythm": [
+        16,
+        12,
+        8
+      ],
+      "stateExpectations": [
+        "filled/read-only"
+      ],
+      "responsiveBehavior": "Observed horizontal body layout with 16px gap and padding [0,16,16,16].",
+      "allowedVariability": [
+        "field groups",
+        "content length",
+        "media/file sections"
+      ]
+    }
+  ],
+  "visualInvariants": [
+    "View reuses the same shell/back-header/body alignment as Create/Edit.",
+    "Use header-text mode=view with show status=true rather than a custom title/action region.",
+    "Read-only values preserve the same information grouping as their editable counterpart.",
+    "Edit is an explicit action/state transition; do not make view fields appear editable by default.",
+    "Destructive/duplicate/edit actions remain contextual and visually distinct according to the DS."
+  ],
+  "stateMapping": {
+    "view": {
+      "rootNode": "162:10938",
+      "headerTextNode": "162:10272",
+      "headerTextMainComponent": "mode=view, row=1 row",
+      "properties": {
+        "show status": true,
+        "mode": "view"
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "Unique Link view",
+      "sourceId": "162:10938",
+      "role": "PRIMARY"
+    }
+  ],
+  "evidence": [
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10938",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10269",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10270",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10272",
+    "figma://rEJCvUGUfzzQ3jegheRhnr/162:10273"
+  ],
+  "visualBaseline": {
+    "verified": true,
+    "representatives": [
+      {
+        "nodeId": "162:10938",
+        "size": [
+          1280,
+          2038
+        ]
+      }
+    ]
+  },
+  "unknowns": [
+    "Responsive detail transformation is not proven.",
+    "Domain-specific action authorization is content/business authority, not inferred from this composition record."
+  ]
+}

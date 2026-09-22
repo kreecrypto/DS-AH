@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/qa/visual-delta.schema.json",
+  "title": "Visual Delta Record",
+  "type": "object",
+  "required": [
+    "comparisonId",
+    "reference",
+    "result",
+    "deltas",
+    "overallStatus"
+  ],
+  "properties": {
+    "comparisonId": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "deltas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "severity",
+          "expected",
+          "actual",
+          "rootCause",
+          "patchTarget",
+          "scopeAllowed"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "GEOMETRY",
+              "ALIGNMENT",
+              "SPACING",
+              "TYPOGRAPHY",
+              "COLOR_SURFACE",
+              "COMPONENT_IDENTITY",
+              "VARIANT_STATE",
+              "CONTENT",
+              "DENSITY",
+              "RESPONSIVE",
+              "SCOPE"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2"
+            ]
+          },
+          "expected": {
+            "type": "string"
+          },
+          "actual": {
+            "type": "string"
+          },
+          "rootCause": {
+            "type": "string"
+          },
+          "patchTarget": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scopeAllowed": {
+            "type": "boolean"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "PATCHED",
+              "VERIFIED",
+              "ACCEPTED_DIFFERENCE",
+              "BLOCKED"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "overallStatus": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "remainingBlockingDeltaIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

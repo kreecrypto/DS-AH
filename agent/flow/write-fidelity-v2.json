@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1.0.0",
+  "agentVersion": "2.4.0",
+  "name": "Write Fidelity Subflow",
+  "principle": [
+    "RETRIEVE_BEFORE_DESIGN",
+    "REUSE_BEFORE_CREATE",
+    "COMPOSE_BEFORE_DRAW",
+    "VERIFY_BEFORE_COMPLETE"
+  ],
+  "entryFrom": [
+    "RESOLVE_REFERENCE",
+    "DESIGN_SYSTEM_MAPPING",
+    "FIGMA_EXECUTION_PLAN",
+    "FIX_LOOP"
+  ],
+  "stages": [
+    {
+      "id": "REFERENCE_CANDIDATE_RETRIEVAL",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "candidateSet"
+      ],
+      "rules": [
+        "include exact current user reference first",
+        "include same-product approved screens",
+        "include approved domain patterns/templates",
+        "do not use general knowledge as visual authority"
+      ]
+    },
+    {
+      "id": "REFERENCE_SCORING",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "rankedCandidates",
+        "similarityRationale"
+      ],
+      "rules": [
+        "skip competitive scoring when exact user reference is already explicit",
+        "semantic similarity cannot override explicit authority"
+      ]
+    },
+    {
+      "id": "ARCHETYPE_RESOLUTION",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "screenArchetype",
+        "requiredRegions",
+        "stateExpectations"
+      ]
+    },
+    {
+      "id": "COMPOSITION_KNOWLEDGE_RESOLUTION",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "compositionKnowledge",
+        "regionPatterns",
+        "visualInvariants"
+      ]
+    },
+    {
+      "id": "REUSE_MAP",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "reuseMap",
+        "newAssetGaps"
+      ],
+      "decisionOrder": [
+        "INSTANCE",
+        "VARIANT",
+        "OVERRIDE",
+        "DOMAIN_PATTERN",
+        "TEMPLATE_LAYOUT",
+        "LOCAL_STRUCTURE",
+        "NEW_REUSABLE_ASSET"
+      ]
+    },
+    {
+      "id": "MUTATION_BUDGET",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "mutationBudget",
+        "protectedAreas"
+      ]
+    },
+    {
+      "id": "WRITE_PLAN",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "writePlan"
+      ],
+      "requires": [
+        "referenceLock",
+        "visualGrammar",
+        "designSystemMapping",
+        "screenArchetype",
+        "reuseMap",
+        "mutationBudget"
+      ]
+    },
+    {
+      "id": "STRUCTURE_PASS",
+      "mode": "WRITE_ALLOWED",
+      "outputs": [
+        "structureNodes",
+        "structureVerification"
+      ],
+      "rules": [
+        "major geometry first",
+        "no decorative polish"
+      ]
+    },
+    {
+      "id": "SKELETON_CHECKPOINT",
+      "mode": "READ_ONLY",
+      "conditional": "REPRODUCE",
+      "outputs": [
+        "skeletonComparison"
+      ],
+      "blockOn": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "id": "COMPONENT_COMPOSITION_PASS",
+      "mode": "WRITE_ALLOWED",
+      "outputs": [
+        "componentInstances",
+        "variantMappings"
+      ]
+    },
+    {
+      "id": "CONTENT_STATE_PASS",
+      "mode": "WRITE_ALLOWED",
+      "outputs": [
+        "contentStateMutations",
+        "stateCoverage"
+      ]
+    },
+    {
+      "id": "VISUAL_POLISH_PASS",
+      "mode": "WRITE_ALLOWED",
+      "outputs": [
+        "polishMutations"
+      ],
+      "rules": [
+        "no scope expansion",
+        "no replacement of locked composition"
+      ]
+    },
+    {
+      "id": "VERIFY_AND_DELTA",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "verification",
+        "visualDeltaRecords"
+      ]
+    },
+    {
+      "id": "PATCH_PLAN",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "patchPlan"
+      ],
+      "rules": [
+        "root-cause grouped",
+        "smallest patch",
+        "within mutation budget"
+      ]
+    },
+    {
+      "id": "PATCH",
+      "mode": "WRITE_ALLOWED",
+      "conditional": "authorized blocking deltas exist",
+      "outputs": [
+        "patchedNodes"
+      ]
+    },
+    {
+      "id": "REVERIFY",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "remainingDeltas",
+        "affectedQa"
+      ]
+    },
+    {
+      "id": "EXIT",
+      "mode": "READ_ONLY",
+      "outputs": [
+        "writeFidelityResult"
+      ],
+      "states": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    }
+  ],
+  "hardRules": [
+    "an explicit locked user reference is never displaced by scoring",
+    "screen archetype cannot override locked visual composition",
+    "approved instance/variant/override precedes custom creation",
+    "structure pass precedes detail passes",
+    "delta patches cannot exceed mutation budget",
+    "tool success is not visual verification"
+  ]
+}

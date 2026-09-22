@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/write/write-plan.schema.json",
+  "title": "Figma Reuse-First Write Plan",
+  "type": "object",
+  "required": [
+    "target",
+    "buildMode",
+    "referenceLock",
+    "screenArchetype",
+    "mutationBudget",
+    "passes",
+    "verificationPlan"
+  ],
+  "properties": {
+    "target": {
+      "type": "string"
+    },
+    "buildMode": {
+      "enum": [
+        "REPRODUCE",
+        "ADAPT",
+        "EXPLORE"
+      ]
+    },
+    "referenceLock": {
+      "type": "string"
+    },
+    "screenArchetype": {
+      "type": "string"
+    },
+    "mutationBudget": {
+      "type": "object",
+      "required": [
+        "class",
+        "allowedRegions",
+        "protectedRegions"
+      ],
+      "properties": {
+        "class": {
+          "enum": [
+            "MICRO",
+            "LOCAL",
+            "REGIONAL",
+            "STRUCTURAL",
+            "FULL"
+          ]
+        },
+        "allowedRegions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "protectedRegions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependencyExpansionRule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "passes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "pass",
+          "operations"
+        ],
+        "properties": {
+          "pass": {
+            "enum": [
+              "STRUCTURE",
+              "COMPONENT_COMPOSITION",
+              "CONTENT_STATE",
+              "VISUAL_POLISH",
+              "DELTA_PATCH"
+            ]
+          },
+          "operations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "region",
+                "role",
+                "operationType",
+                "verificationTarget"
+              ],
+              "properties": {
+                "region": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "operationType": {
+                  "enum": [
+                    "INSTANTIATE",
+                    "SET_VARIANT",
+                    "OVERRIDE",
+                    "COMPOSE_PATTERN",
+                    "REUSE_LAYOUT",
+                    "CREATE_LOCAL_STRUCTURE",
+                    "CREATE_APPROVED_NEW_ASSET",
+                    "MOVE_RESIZE",
+                    "BIND_VARIABLE",
+                    "SET_CONSTRAINT",
+                    "PATCH"
+                  ]
+                },
+                "sourceId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "expectedProperties": {
+                  "type": "object"
+                },
+                "tokenDependencies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "protectedSiblings": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "verificationTarget": {
+                  "type": "string"
+                },
+                "recoveryHint": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        }
+      }
+    },
+    "verificationPlan": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knownUnknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

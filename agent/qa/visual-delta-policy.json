@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Visual Delta Patch Policy",
+  "severityOrder": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "categories": [
+    "GEOMETRY",
+    "ALIGNMENT",
+    "SPACING",
+    "TYPOGRAPHY",
+    "COLOR_SURFACE",
+    "COMPONENT_IDENTITY",
+    "VARIANT_STATE",
+    "CONTENT",
+    "DENSITY",
+    "RESPONSIVE",
+    "SCOPE"
+  ],
+  "patchRules": [
+    "group defects by root cause before mutation",
+    "patch the smallest node set that fixes the root cause",
+    "reject patches outside the active Mutation Budget",
+    "verify protected siblings after every patch batch",
+    "recompute deltas after mutation",
+    "P0/P1 remain blocking until VERIFIED or explicitly BLOCKED",
+    "P2 may remain only when final policy allows polish gaps; current final state still follows parent QA rules"
+  ],
+  "forbidden": [
+    "full redraft for a local delta without structural root-cause evidence",
+    "silent scope expansion",
+    "treating screenshot similarity as component-identity proof"
+  ]
+}

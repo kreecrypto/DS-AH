@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent/composition/composition-knowledge.schema.json",
+  "title": "Composition Knowledge Record",
+  "type": "object",
+  "required": [
+    "id",
+    "scope",
+    "screenArchetype",
+    "regions",
+    "visualInvariants",
+    "examples",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "screenArchetype": {
+      "type": "string"
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "order",
+          "reuseStrategy"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "reuseStrategy": {
+            "enum": [
+              "INSTANCE",
+              "VARIANT",
+              "OVERRIDE",
+              "DOMAIN_PATTERN",
+              "TEMPLATE_LAYOUT",
+              "LOCAL_STRUCTURE"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "componentFamilies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alignmentAnchors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "spacingRhythm": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "number"
+              ]
+            }
+          },
+          "stateExpectations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "responsiveBehavior": {
+            "type": [
+              "string",
+              "object"
+            ]
+          },
+          "allowedVariability": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "visualInvariants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "PRIMARY",
+              "SECONDARY",
+              "SUPPORTING"
+            ]
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

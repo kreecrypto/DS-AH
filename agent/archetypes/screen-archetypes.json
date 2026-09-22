@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "composition_contract",
+  "rule": "Archetypes provide expected regions and flow. They do not override a locked visual reference.",
+  "archetypes": [
+    {
+      "id": "MASTER_LIST",
+      "signals": [
+        "master",
+        "management",
+        "list",
+        "role master",
+        "user master"
+      ],
+      "requiredRegions": [
+        "page_header",
+        "primary_action",
+        "search_filter_or_query_controls",
+        "data_collection",
+        "feedback_states"
+      ],
+      "optionalRegions": [
+        "tabs",
+        "bulk_actions",
+        "pagination",
+        "saved_filters"
+      ],
+      "compositionRules": [
+        "primary action remains discoverable",
+        "query controls precede result collection",
+        "result state and pagination belong to result context"
+      ]
+    },
+    {
+      "id": "DETAIL",
+      "signals": [
+        "detail",
+        "profile",
+        "view"
+      ],
+      "requiredRegions": [
+        "context_header",
+        "summary",
+        "section_content",
+        "actions"
+      ],
+      "optionalRegions": [
+        "history",
+        "related_items",
+        "sticky_actions"
+      ],
+      "compositionRules": [
+        "summary precedes deep sections",
+        "primary actions align with task priority"
+      ]
+    },
+    {
+      "id": "FORM",
+      "signals": [
+        "create",
+        "edit",
+        "form"
+      ],
+      "requiredRegions": [
+        "context_header",
+        "form_sections",
+        "validation",
+        "primary_secondary_actions"
+      ],
+      "optionalRegions": [
+        "stepper",
+        "sticky_action_bar",
+        "summary"
+      ],
+      "compositionRules": [
+        "group related fields",
+        "validation stays near affected control",
+        "destructive/secondary actions are visually separated"
+      ]
+    },
+    {
+      "id": "DASHBOARD",
+      "signals": [
+        "dashboard",
+        "overview",
+        "performance"
+      ],
+      "requiredRegions": [
+        "context_header",
+        "scope_filter_or_period",
+        "summary_kpis",
+        "insight_regions"
+      ],
+      "optionalRegions": [
+        "charts",
+        "tables",
+        "leaderboards",
+        "export"
+      ],
+      "compositionRules": [
+        "summary precedes detail",
+        "repeated insight cards share anatomy",
+        "filter scope clearly controls dependent data"
+      ]
+    },
+    {
+      "id": "CONFIGURATION",
+      "signals": [
+        "config",
+        "settings",
+        "permission",
+        "configuration"
+      ],
+      "requiredRegions": [
+        "context_header",
+        "setting_navigation_or_grouping",
+        "editable_settings",
+        "save_or_apply"
+      ],
+      "optionalRegions": [
+        "preview",
+        "audit_info"
+      ],
+      "compositionRules": [
+        "group by mental model",
+        "persist/save state is unambiguous"
+      ]
+    },
+    {
+      "id": "WIZARD",
+      "signals": [
+        "wizard",
+        "step",
+        "multi-step"
+      ],
+      "requiredRegions": [
+        "progress_or_stepper",
+        "current_step_content",
+        "back_next_actions"
+      ],
+      "optionalRegions": [
+        "summary",
+        "save_draft"
+      ],
+      "compositionRules": [
+        "one primary progression action",
+        "current step and completion state visible"
+      ]
+    },
+    {
+      "id": "REVIEW_CONFIRMATION",
+      "signals": [
+        "review",
+        "confirm",
+        "confirmation"
+      ],
+      "requiredRegions": [
+        "context_header",
+        "review_summary",
+        "change_or_back_path",
+        "confirm_action"
+      ],
+      "optionalRegions": [
+        "warnings",
+        "terms"
+      ],
+      "compositionRules": [
+        "show what will happen before confirmation",
+        "high-risk changes are explicit"
+      ]
+    },
+    {
+      "id": "EMPTY_FEEDBACK",
+      "signals": [
+        "empty",
+        "error",
+        "retry",
+        "no data"
+      ],
+      "requiredRegions": [
+        "context",
+        "status_message",
+        "recovery_or_next_action"
+      ],
+      "optionalRegions": [
+        "illustration",
+        "supporting_detail"
+      ],
+      "compositionRules": [
+        "state is actionable when recovery exists",
+        "message hierarchy matches severity"
+      ]
+    }
+  ]
+}

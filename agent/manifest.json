@@ -16,7 +16,11 @@
     "specializedSubflows": "agent/flow/specialized-subflows.json",
     "referenceLockPolicy": "agent/reference/reference-lock.json",
     "referenceReproduce": "agent/flow/reference-reproduce.json",
-    "websiteQualityGates": "agent/gates/website-quality-gates.json"
+    "websiteQualityGates": "agent/gates/website-quality-gates.json",
+    "writeFidelity": "agent/flow/write-fidelity-v2.json",
+    "referenceResolver": "agent/reference/reference-resolver.json",
+    "screenArchetypes": "agent/archetypes/screen-archetypes.json",
+    "visualDeltaPolicy": "agent/qa/visual-delta-policy.json"
   },
   "figma": {
     "coreDesignSystem": {
@@ -64,7 +68,8 @@
     "stateFlows": "registry/state-flows.json",
     "codeConnectStatus": "registry/code-connect-status.json",
     "documentationSite": "registry/documentation-site.json",
-    "documentationContentArchitecture": "source/site/content-architecture.json"
+    "documentationContentArchitecture": "source/site/content-architecture.json",
+    "compositionKnowledgeSchema": "agent/composition/composition-knowledge.schema.json"
   },
   "routing": "agent/COMMANDS.md",
   "skillSystem": {
@@ -85,7 +90,9 @@
     "specializedSubflows": "docs/figma-specialized-subflows.md",
     "referenceFidelityHardening": "docs/reference-fidelity-hardening.md",
     "websiteImplementation": "agent/workflows/website-implementation.md",
-    "websiteContentPublishing": "agent/workflows/figma-github-website-content.md"
+    "websiteContentPublishing": "agent/workflows/figma-github-website-content.md",
+    "writeFidelity": "docs/design-agent-write-fidelity-v2.5.md",
+    "visualDeltaFixLoop": "agent/workflows/visual-delta-fix-loop.md"
   },
   "policies": [
     "policies/source-priority.md",
@@ -93,7 +100,9 @@
     "policies/responsive.md",
     "policies/component-ownership.md",
     "policies/write-permission.md",
-    "policies/scope-control.md"
+    "policies/scope-control.md",
+    "policies/reuse-first-write.md",
+    "policies/mutation-budget.md"
   ],
   "outputSchemas": {
     "execution": "agent/output/execution.schema.json",
@@ -108,7 +117,9 @@
     "referenceLock": "agent/reference/reference-lock.schema.json",
     "visualGrammar": "agent/planner/visual-grammar.schema.json",
     "designSystemMapping": "agent/planner/design-system-mapping.schema.json",
-    "websiteImplementationBrief": "agent/web/website-implementation-brief.schema.json"
+    "websiteImplementationBrief": "agent/web/website-implementation-brief.schema.json",
+    "writePlan": "agent/write/write-plan.schema.json",
+    "visualDelta": "agent/qa/visual-delta.schema.json"
   },
   "evals": {
     "routing": "agent/evals/cases.json",
@@ -152,7 +163,16 @@
     "website_component_key_mapping_when_applicable",
     "website_static_validation_when_applicable",
     "website_runtime_verification_when_applicable",
-    "website_responsive_a11y_visual_evidence_when_applicable"
+    "website_responsive_a11y_visual_evidence_when_applicable",
+    "reference_candidate_set",
+    "reference_similarity_ranking",
+    "screen_archetype",
+    "composition_knowledge",
+    "reuse_map",
+    "mutation_budget",
+    "write_plan",
+    "visual_delta_records",
+    "delta_patch_iterations_when_used"
   ],
   "agent": {
     "name": "Design Control Agent",
@@ -205,6 +225,14 @@
       "packageContract": "source/site/content-package-contract.json",
       "componentIndex": "source/components/index.json",
       "rule": "Figma evidence is normalized in GitHub and rendered by the website; the website must not infer missing design-system facts."
+    },
+    "writeFidelity": {
+      "rule": "Retrieve before design; reuse before create; compose before draw; verify before complete.",
+      "flow": "agent/flow/write-fidelity-v2.json",
+      "referenceResolver": "agent/reference/reference-resolver.json",
+      "screenArchetypes": "agent/archetypes/screen-archetypes.json",
+      "writePlanSchema": "agent/write/write-plan.schema.json",
+      "visualDeltaSchema": "agent/qa/visual-delta.schema.json"
     }
   }
 }

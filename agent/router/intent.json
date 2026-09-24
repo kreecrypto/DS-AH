@@ -1,16 +1,160 @@
 {
-  "schemaVersion":"2.0.0",
-  "precedence":["INSPECT","REVIEW","QA","HANDOFF","COMPONENT","CREATE_SCREEN","MODIFY_SCREEN"],
-  "commands":{
-    "INSPECT":{"aliases":["DS:INSPECT"],"workflow":"agent/workflows/inspect.md","defaultPermission":"INSPECT_ALLOWED","signals":["inspect","inventory","ดูโครงสร้าง","ตรวจ figma","ตรวจโครงสร้าง"]},
-    "REVIEW":{"aliases":["DS:REVIEW"],"workflow":"agent/workflows/review.md","defaultPermission":"READ_ONLY","signals":["review","ux/ui review","รีวิว","audit ux","critique"]},
-    "QA":{"aliases":["DS:QA"],"workflow":"agent/workflows/qa.md","defaultPermission":"READ_ONLY","signals":["qa","check design","ตรวจ design","visual regression","compare master"]},
-    "HANDOFF":{"aliases":["DS:HANDOFF"],"workflow":"agent/workflows/handoff.md","defaultPermission":"READ_ONLY","signals":["handoff","developer handoff","dev handoff","spec for developer"]},
-    "COMPONENT":{"aliases":["DS:COMPONENT"],"workflow":"agent/workflows/component.md","defaultPermission":"READ_ONLY","signals":["component","variant","normalize component","merge component","component api"]},
-    "CREATE_SCREEN":{"aliases":["DS:CREATE","DS:CREATE-SCREEN"],"workflow":"agent/workflows/create-screen.md","defaultPermission":"WRITE_PENDING","signals":["create screen","build screen","สร้างหน้า","ออกแบบหน้าใหม่","ทำหน้าใหม่"]},
-    "MODIFY_SCREEN":{"aliases":["DS:MODIFY","DS:MODIFY-SCREEN","DS:FIX"],"workflow":"agent/workflows/modify-screen.md","defaultPermission":"WRITE_PENDING","signals":["modify screen","fix screen","แก้หน้า","ปรับ screen","แก้ไข screen","apply fix"]}
+  "schemaVersion": "2.5.0",
+  "precedence": [
+    "INSPECT",
+    "REVIEW",
+    "QA",
+    "HANDOFF",
+    "COMPONENT",
+    "CREATE_SCREEN",
+    "MODIFY_SCREEN"
+  ],
+  "commands": {
+    "INSPECT": {
+      "aliases": [
+        "DS:INSPECT",
+        "/inspect",
+        "/understand"
+      ],
+      "workflow": "agent/workflows/inspect.md",
+      "defaultPermission": "INSPECT_ALLOWED",
+      "signals": [
+        "inspect",
+        "inventory",
+        "ดูโครงสร้าง",
+        "ตรวจ figma",
+        "ตรวจโครงสร้าง",
+        "understand screen",
+        "understand flow"
+      ]
+    },
+    "REVIEW": {
+      "aliases": [
+        "DS:REVIEW",
+        "/ux-review",
+        "/ui-review",
+        "/explore-3",
+        "/simplify",
+        "/flow",
+        "/journey",
+        "/edge-cases",
+        "/ux-writing",
+        "/accessibility",
+        "/responsive"
+      ],
+      "workflow": "agent/workflows/review.md",
+      "defaultPermission": "READ_ONLY",
+      "signals": [
+        "review",
+        "ux/ui review",
+        "รีวิว",
+        "audit ux",
+        "critique",
+        "explore solutions",
+        "user flow",
+        "user journey",
+        "edge cases",
+        "ux writing",
+        "accessibility",
+        "responsive review"
+      ]
+    },
+    "QA": {
+      "aliases": [
+        "DS:QA",
+        "/design-qa",
+        "/visual-regression",
+        "/finalize"
+      ],
+      "workflow": "agent/workflows/qa.md",
+      "defaultPermission": "READ_ONLY",
+      "signals": [
+        "qa",
+        "check design",
+        "ตรวจ design",
+        "visual regression",
+        "compare master",
+        "finalize design"
+      ]
+    },
+    "HANDOFF": {
+      "aliases": [
+        "DS:HANDOFF",
+        "/handoff"
+      ],
+      "workflow": "agent/workflows/handoff.md",
+      "defaultPermission": "READ_ONLY",
+      "signals": [
+        "handoff",
+        "developer handoff",
+        "dev handoff",
+        "spec for developer"
+      ]
+    },
+    "COMPONENT": {
+      "aliases": [
+        "DS:COMPONENT",
+        "/design-system",
+        "/states",
+        "/componentize"
+      ],
+      "workflow": "agent/workflows/component.md",
+      "defaultPermission": "READ_ONLY",
+      "signals": [
+        "component",
+        "variant",
+        "normalize component",
+        "merge component",
+        "component api",
+        "design system",
+        "interaction states",
+        "componentize"
+      ]
+    },
+    "CREATE_SCREEN": {
+      "aliases": [
+        "DS:CREATE",
+        "DS:CREATE-SCREEN",
+        "/design-screen"
+      ],
+      "workflow": "agent/workflows/create-screen.md",
+      "defaultPermission": "WRITE_PENDING",
+      "signals": [
+        "create screen",
+        "build screen",
+        "สร้างหน้า",
+        "ออกแบบหน้าใหม่",
+        "ทำหน้าใหม่",
+        "design screen"
+      ]
+    },
+    "MODIFY_SCREEN": {
+      "aliases": [
+        "DS:MODIFY",
+        "DS:MODIFY-SCREEN",
+        "DS:FIX",
+        "/match-reference",
+        "/improve",
+        "/prototype",
+        "/fix-all"
+      ],
+      "workflow": "agent/workflows/modify-screen.md",
+      "defaultPermission": "WRITE_PENDING",
+      "signals": [
+        "modify screen",
+        "fix screen",
+        "แก้หน้า",
+        "ปรับ screen",
+        "แก้ไข screen",
+        "apply fix",
+        "match reference",
+        "improve screen",
+        "prototype flow",
+        "fix all"
+      ]
+    }
   },
-  "explicitWriteSignals":[
+  "explicitWriteSignals": [
     "สร้างใน figma",
     "แก้ใน figma",
     "ทำใน figma",
@@ -21,5 +165,7 @@
     "@figma ทำเลย",
     "@figma แก้เลย"
   ],
-  "writePolicy":"Intent alone never authorizes mutation. Explicit current-task Figma write language is one required guard among target, scope, reference gate and capability."
+  "writePolicy": "Intent or slash command alone never authorizes mutation. Explicit current-task Figma write language is one required guard among target, scope, reference gate and capability.",
+  "commandLibrary": "docs/ux-ui-ai-command-library.md",
+  "aliasRegistry": "agent/command-aliases.json"
 }

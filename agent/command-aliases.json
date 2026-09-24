@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Human-friendly UX/UI slash command aliases mapped onto existing DS-AH canonical intents and production skills.",
+  "invariants": [
+    "aliases_never_bypass_write_permission",
+    "aliases_never_override_reference_lock",
+    "aliases_never_expand_change_scope",
+    "aliases_do_not_duplicate_production_skills"
+  ],
+  "commands": {
+    "/inspect": {
+      "intent": "INSPECT",
+      "skills": [
+        "figma-inspect"
+      ],
+      "write": false
+    },
+    "/understand": {
+      "intent": "INSPECT",
+      "skills": [
+        "figma-inspect"
+      ],
+      "write": false
+    },
+    "/ux-review": {
+      "intent": "REVIEW",
+      "skills": [
+        "ux-review",
+        "information-architecture",
+        "interaction-design",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/ui-review": {
+      "intent": "REVIEW",
+      "skills": [
+        "visual-quality",
+        "design-system-compliance",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/design-system": {
+      "intent": "COMPONENT",
+      "skills": [
+        "design-system-compliance",
+        "figma-inspect"
+      ],
+      "write": false
+    },
+    "/explore-3": {
+      "intent": "REVIEW",
+      "skills": [
+        "ux-review",
+        "information-architecture",
+        "interaction-design",
+        "visual-quality"
+      ],
+      "write": false
+    },
+    "/design-screen": {
+      "intent": "CREATE_SCREEN",
+      "skills": [
+        "figma-execution",
+        "design-qa",
+        "evidence"
+      ],
+      "write": "pending"
+    },
+    "/match-reference": {
+      "intent": "MODIFY_SCREEN",
+      "skills": [
+        "reference-source-resolution",
+        "reference-fidelity",
+        "figma-execution",
+        "visual-regression",
+        "evidence"
+      ],
+      "write": "pending"
+    },
+    "/improve": {
+      "intent": "MODIFY_SCREEN",
+      "skills": [
+        "figma-inspect",
+        "visual-quality",
+        "figma-execution",
+        "design-qa",
+        "evidence"
+      ],
+      "write": "pending"
+    },
+    "/simplify": {
+      "intent": "REVIEW",
+      "skills": [
+        "information-architecture",
+        "ux-review",
+        "interaction-design"
+      ],
+      "write": false
+    },
+    "/flow": {
+      "intent": "REVIEW",
+      "skills": [
+        "interaction-design",
+        "information-architecture"
+      ],
+      "write": false
+    },
+    "/journey": {
+      "intent": "REVIEW",
+      "skills": [
+        "ux-review",
+        "information-architecture"
+      ],
+      "write": false
+    },
+    "/edge-cases": {
+      "intent": "REVIEW",
+      "skills": [
+        "interaction-design",
+        "responsive-accessibility"
+      ],
+      "write": false
+    },
+    "/states": {
+      "intent": "COMPONENT",
+      "skills": [
+        "interaction-design",
+        "design-system-compliance"
+      ],
+      "write": false
+    },
+    "/prototype": {
+      "intent": "MODIFY_SCREEN",
+      "skills": [
+        "interaction-design",
+        "figma-execution",
+        "design-qa",
+        "evidence"
+      ],
+      "write": "pending"
+    },
+    "/ux-writing": {
+      "intent": "REVIEW",
+      "skills": [
+        "ux-writing-content",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/accessibility": {
+      "intent": "REVIEW",
+      "skills": [
+        "responsive-accessibility",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/componentize": {
+      "intent": "COMPONENT",
+      "skills": [
+        "design-system-compliance",
+        "interaction-design",
+        "design-qa"
+      ],
+      "write": false
+    },
+    "/responsive": {
+      "intent": "REVIEW",
+      "skills": [
+        "responsive-accessibility",
+        "interaction-design"
+      ],
+      "write": false
+    },
+    "/design-qa": {
+      "intent": "QA",
+      "skills": [
+        "design-qa",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/visual-regression": {
+      "intent": "QA",
+      "skills": [
+        "reference-fidelity",
+        "visual-regression",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/fix-all": {
+      "intent": "MODIFY_SCREEN",
+      "skills": [
+        "fix-loop",
+        "design-qa",
+        "visual-regression",
+        "evidence"
+      ],
+      "write": "pending"
+    },
+    "/handoff": {
+      "intent": "HANDOFF",
+      "skills": [
+        "developer-handoff",
+        "evidence"
+      ],
+      "write": false
+    },
+    "/finalize": {
+      "intent": "QA",
+      "skills": [
+        "design-qa",
+        "visual-regression",
+        "evidence"
+      ],
+      "write": false
+    }
+  }
+}

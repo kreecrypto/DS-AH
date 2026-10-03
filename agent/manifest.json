@@ -242,7 +242,7 @@
   },
   "bankSop": {
     "status": "active",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "index": "knowledge/ux/sop-bank/README.md",
     "router": "agent/bank-sop-router.json",
     "modules": [
@@ -253,17 +253,37 @@
       "knowledge/ux/sop-bank/05-prototype-and-states.md",
       "knowledge/ux/sop-bank/06-design-qa-and-handoff.md",
       "knowledge/ux/sop-bank/07-templates-and-checklists.md",
-      "knowledge/ux/sop-bank/08-command-playbook.md"
+      "knowledge/ux/sop-bank/08-command-playbook.md",
+      "knowledge/ux/sop-bank/09-motion-graphic.md"
     ],
     "templates": [
       "templates/bank-ux-audit.md",
       "templates/bank-design-decision.md",
       "templates/bank-old-new-compare.md",
       "templates/bank-state-matrix.md",
-      "templates/bank-design-handoff.md"
+      "templates/bank-design-handoff.md",
+      "templates/bank-motion-storyboard.md"
     ],
     "rule": "Execution layer only. DS-AH reference authority, write permission, scope control, QA, regression, and evidence rules remain authoritative.",
     "workflow": "agent/workflows/bank-sop.md",
-    "schema": "schemas/bank-sop-task.schema.json"
+    "schema": "schemas/bank-sop-task.schema.json",
+    "motion": {
+      "module": "knowledge/ux/sop-bank/09-motion-graphic.md",
+      "storyboardTemplate": "templates/bank-motion-storyboard.md",
+      "flow": [
+        "approved_ui_flow",
+        "motion_objective",
+        "story_arc",
+        "storyboard",
+        "scene_to_figma_mapping",
+        "motion_system",
+        "asset_preparation",
+        "composition",
+        "preview_render",
+        "motion_qa",
+        "fix_loop",
+        "final_render"
+      ]
+    }
   }
 }

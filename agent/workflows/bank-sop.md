@@ -24,6 +24,7 @@ REQUEST
 → WRITE PERMISSION
 → IMPLEMENT WHEN AUTHORIZED
 → PROTOTYPE / STATE COVERAGE
+→ MOTION GRAPHIC WHEN REQUESTED
 → VERIFY
 → DESIGN QA
 → VISUAL REGRESSION WHEN APPLICABLE
@@ -44,6 +45,7 @@ Classify request as:
 - FIX
 - QA
 - HANDOFF
+- MOTION
 
 Natural language may be Thai or English.
 
@@ -82,6 +84,12 @@ Load only relevant modules.
 - 04 Figma Implementation
 - 06 Design QA & Handoff
 - 08 Command Playbook
+
+### Motion Graphic / UI Storytelling
+- 03 Design & Improve
+- 05 Prototype, States & Edge Cases
+- 09 Motion Graphic / UI Storytelling Video
+- Motion Storyboard template
 
 ## Stage 3 — Context gate
 
@@ -198,7 +206,36 @@ Cover, when applicable:
 
 Use `templates/bank-state-matrix.md`.
 
-## Stage 10 — QA
+## Stage 10 — Motion graphic branch
+
+Run this branch only when motion/video is requested.
+
+```text
+Approved UI / Flow
+→ Motion objective
+→ Story arc
+→ Storyboard
+→ Scene-to-Figma mapping
+→ Motion system
+→ Asset preparation
+→ JavaScript / timeline / 3D composition as appropriate
+→ Preview render
+→ Motion QA
+→ Fix loop
+→ Final MP4 / required output
+```
+
+Rules:
+
+- Motion must not silently redesign approved UI.
+- Use the approved Figma/source as visual authority.
+- Explain user meaning, not only animate screens.
+- For Old vs New, keep task context comparable.
+- Prefer motion-graphic storytelling over raw screen recording when explanation is the goal.
+- Use `templates/bank-motion-storyboard.md`.
+- Follow `knowledge/ux/sop-bank/09-motion-graphic.md`.
+
+## Stage 11 — QA
 
 Run:
 
@@ -218,7 +255,7 @@ Run:
 
 No PASS from metadata alone when visual claims are involved.
 
-## Stage 11 — Fix loop
+## Stage 12 — Fix loop
 
 ```text
 Finding
@@ -232,7 +269,7 @@ Finding
 
 P0/P1 unresolved → no PASS.
 
-## Stage 12 — Handoff
+## Stage 13 — Handoff
 
 Include:
 

@@ -65,3 +65,20 @@ Figma = Workspace
 - Visual Delta findings authorize targeted patches, not a full redraft.
 - Metadata-only evidence cannot PASS visual fidelity.
 - No PASS without evidence.
+
+
+## Bank SOP execution layer
+
+For recurring Bank UX/UI working language, load `agent/bank-sop-router.json` and the matching files under `knowledge/ux/sop-bank/`.
+
+Examples:
+- Inspect / ตรวจ Figma → Intake + Inspect & Audit
+- Audit UX/UI → Inspect & Audit + Templates
+- Improve / Final Direction → Design & Improve + Figma Implementation + QA
+- Compare Old vs New → Audit + Design & Improve
+- Search & Filter → Audit + Design & Improve
+- Prototype / States / Edge Cases → Prototype, States & Edge Cases
+- Fix All → Audit → scoped implementation → QA → regression → evidence
+- Handoff → Design QA & Dev Handoff
+
+SOP Bank is an execution layer, not a new authority layer. It never bypasses Reference Lock, Change Scope, WRITE_ALLOWED, Design QA, Visual Regression, or Evidence requirements.

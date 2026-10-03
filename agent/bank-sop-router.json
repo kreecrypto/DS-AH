@@ -188,5 +188,14 @@
     "PASS",
     "FAIL",
     "BLOCKED"
-  ]
+  ],
+  "workflow": "agent/workflows/bank-sop.md",
+  "taskSchema": "schemas/bank-sop-task.schema.json",
+  "templates": {
+    "audit": "templates/bank-ux-audit.md",
+    "designDecision": "templates/bank-design-decision.md",
+    "compare": "templates/bank-old-new-compare.md",
+    "states": "templates/bank-state-matrix.md",
+    "handoff": "templates/bank-design-handoff.md"
+  }
 }

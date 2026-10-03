@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/bank-sop-task.schema.json",
+  "title": "Bank UX/UI SOP Task",
+  "type": "object",
+  "required": ["mode", "status"],
+  "properties": {
+    "mode": {
+      "enum": ["INSPECT", "REVIEW", "EXPLORE", "CREATE", "MODIFY", "FIX", "QA", "HANDOFF"]
+    },
+    "status": {
+      "enum": ["IN_PROGRESS", "PASS", "FAIL", "BLOCKED"]
+    },
+    "userGoal": {
+      "type": "string"
+    },
+    "businessGoal": {
+      "type": "string"
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "product": {"type": "string"},
+        "feature": {"type": "string"},
+        "figmaFileKey": {"type": "string"},
+        "nodeId": {"type": "string"},
+        "url": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "inScope": {"type": "array", "items": {"type": "string"}},
+        "dependentChanges": {"type": "array", "items": {"type": "string"}},
+        "protected": {"type": "array", "items": {"type": "string"}},
+        "outOfScope": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "severity", "problem"],
+        "properties": {
+          "title": {"type": "string"},
+          "severity": {"enum": ["P0", "P1", "P2", "P3"]},
+          "problem": {"type": "string"},
+          "evidence": {"type": "string"},
+          "userImpact": {"type": "string"},
+          "recommendation": {"type": "string"},
+          "acceptanceCriteria": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "requiredStates": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "default",
+          "hover",
+          "focus",
+          "active",
+          "selected",
+          "disabled",
+          "loading",
+          "empty",
+          "no_result",
+          "success",
+          "validation_error",
+          "system_error",
+          "permission",
+          "timeout",
+          "conflict",
+          "cancel",
+          "back",
+          "retry",
+          "partial"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "designDecision": {
+      "type": "string"
+    },
+    "acceptanceCriteria": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "evidence": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "openGaps": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": true
+}

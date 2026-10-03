@@ -1,6 +1,6 @@
 {
   "id": "bank-sop-router",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "active",
   "purpose": "Route recurring Bank UX/UI working language to the Bank SOP execution layer while preserving DS-AH authority, permission, QA, and evidence rules.",
   "base": "knowledge/ux/sop-bank/README.md",
@@ -182,6 +182,27 @@
         "03-design-and-improve.md",
         "08-command-playbook.md"
       ]
+    },
+    {
+      "phrases": [
+        "motion graphic",
+        "ทำ motion graphic",
+        "ui motion",
+        "ui storytelling video",
+        "ทำ vdo compare",
+        "ทำ video compare",
+        "motion old vs new",
+        "figma to video",
+        "javascript video",
+        "ทำวิดีโอจาก figma"
+      ],
+      "intent": "MOTION",
+      "mode": "OUTPUT_PENDING",
+      "load": [
+        "03-design-and-improve.md",
+        "05-prototype-and-states.md",
+        "09-motion-graphic.md"
+      ]
     }
   ],
   "completion": [
@@ -196,6 +217,7 @@
     "designDecision": "templates/bank-design-decision.md",
     "compare": "templates/bank-old-new-compare.md",
     "states": "templates/bank-state-matrix.md",
-    "handoff": "templates/bank-design-handoff.md"
+    "handoff": "templates/bank-design-handoff.md",
+    "motionStoryboard": "templates/bank-motion-storyboard.md"
   }
 }

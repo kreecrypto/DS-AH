@@ -206,3 +206,37 @@ Use one final status:
 - **BLOCKED** — required evidence, authority, dependency, permission, or decision is unavailable.
 
 Do not use visual confidence alone as completion evidence.
+
+
+## 11. Agent integration
+
+The SOP is registered as an executable DS-AH layer:
+
+- Workflow: `agent/workflows/bank-sop.md`
+- Router: `agent/bank-sop-router.json`
+- Task schema: `schemas/bank-sop-task.schema.json`
+
+Reusable templates:
+
+- `templates/bank-ux-audit.md`
+- `templates/bank-design-decision.md`
+- `templates/bank-old-new-compare.md`
+- `templates/bank-state-matrix.md`
+- `templates/bank-design-handoff.md`
+
+Use these templates to keep findings, decisions, comparisons, states, QA, and handoff consistent across projects.
+
+## 12. Relationship to DS-AH
+
+```text
+Bank working language
+→ Bank SOP Router
+→ Bank SOP Workflow
+→ UX Knowledge
+→ DS-AH Control / Reference / Scope
+→ Figma capability when authorized
+→ QA / Regression
+→ Evidence
+```
+
+The Bank SOP never creates an alternate source of truth. Existing DS-AH authority and Figma controls remain mandatory.

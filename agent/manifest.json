@@ -94,7 +94,8 @@
     "websiteImplementation": "agent/workflows/website-implementation.md",
     "websiteContentPublishing": "agent/workflows/figma-github-website-content.md",
     "writeFidelity": "docs/design-agent-write-fidelity-v2.5.md",
-    "visualDeltaFixLoop": "agent/workflows/visual-delta-fix-loop.md"
+    "visualDeltaFixLoop": "agent/workflows/visual-delta-fix-loop.md",
+    "bankSop": "agent/workflows/bank-sop.md"
   },
   "policies": [
     "policies/source-priority.md",
@@ -256,8 +257,13 @@
     ],
     "templates": [
       "templates/bank-ux-audit.md",
+      "templates/bank-design-decision.md",
+      "templates/bank-old-new-compare.md",
+      "templates/bank-state-matrix.md",
       "templates/bank-design-handoff.md"
     ],
-    "rule": "Execution layer only. DS-AH reference authority, write permission, scope control, QA, regression, and evidence rules remain authoritative."
+    "rule": "Execution layer only. DS-AH reference authority, write permission, scope control, QA, regression, and evidence rules remain authoritative.",
+    "workflow": "agent/workflows/bank-sop.md",
+    "schema": "schemas/bank-sop-task.schema.json"
   }
 }

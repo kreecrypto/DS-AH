@@ -238,5 +238,26 @@
       "compositionKnowledgeRegistry": "registry/composition-knowledge.json",
       "compositionIndex": "source/composition/admin-portal/index.json"
     }
+  },
+  "bankSop": {
+    "status": "active",
+    "version": "1.0.0",
+    "index": "knowledge/ux/sop-bank/README.md",
+    "router": "agent/bank-sop-router.json",
+    "modules": [
+      "knowledge/ux/sop-bank/01-intake-and-context.md",
+      "knowledge/ux/sop-bank/02-inspect-and-audit.md",
+      "knowledge/ux/sop-bank/03-design-and-improve.md",
+      "knowledge/ux/sop-bank/04-figma-implementation.md",
+      "knowledge/ux/sop-bank/05-prototype-and-states.md",
+      "knowledge/ux/sop-bank/06-design-qa-and-handoff.md",
+      "knowledge/ux/sop-bank/07-templates-and-checklists.md",
+      "knowledge/ux/sop-bank/08-command-playbook.md"
+    ],
+    "templates": [
+      "templates/bank-ux-audit.md",
+      "templates/bank-design-handoff.md"
+    ],
+    "rule": "Execution layer only. DS-AH reference authority, write permission, scope control, QA, regression, and evidence rules remain authoritative."
   }
 }

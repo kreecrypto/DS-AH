@@ -80,5 +80,6 @@ Examples:
 - Prototype / States / Edge Cases → Prototype, States & Edge Cases
 - Fix All → Audit → scoped implementation → QA → regression → evidence
 - Handoff → Design QA & Dev Handoff
+- Motion Graphic / UI Storytelling → approved UI/flow → storyboard → motion system → render → motion QA
 
 SOP Bank is an execution layer, not a new authority layer. It never bypasses Reference Lock, Change Scope, WRITE_ALLOWED, Design QA, Visual Regression, or Evidence requirements.

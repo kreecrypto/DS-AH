@@ -178,3 +178,19 @@ Authority remains:
 **Figma Core DS → approved domain pattern / Master → GitHub canonical mapping → website implementation**
 
 The website must not create a parallel token system or redefine Core component APIs.
+
+
+## Bank UX/UI SOP
+
+A reusable end-to-end operating procedure for Bank's UX/UI workflow is available at:
+
+- `knowledge/ux/sop-bank/README.md`
+- `agent/bank-sop-router.json`
+- `templates/bank-ux-audit.md`
+- `templates/bank-design-handoff.md`
+
+Canonical Bank workflow:
+
+**Request → Context → Inspect → Audit → Define Problem → Prioritize → Design Direction → Implement → Prototype/States → Verify → Design QA → Fix Loop → Handoff/Evidence → Complete**
+
+This layer complements the existing Design Control Agent. It does not replace Figma, reference, permission, scope, or QA controls.

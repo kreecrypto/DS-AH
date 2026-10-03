@@ -24,6 +24,9 @@ It is designed for work such as:
 - developer handoff
 - old vs new comparison
 - evidence-based review
+- motion graphic / UI storytelling video
+- Old vs New motion comparison
+- Figma UI to video / JavaScript motion
 
 The objective is not to produce more screens. The objective is to make the user journey clearer, the interaction safer, the UI more consistent, and the final implementation verifiable.
 
@@ -58,6 +61,7 @@ REQUEST
 → DESIGN DIRECTION
 → IMPLEMENT
 → PROTOTYPE / STATES
+→ MOTION GRAPHIC WHEN NEEDED
 → VERIFY
 → DESIGN QA
 → FIX LOOP
@@ -118,6 +122,17 @@ Evaluate a proposed design without mutating it unless explicitly authorized.
 
 ### QA
 Check whether implementation satisfies design intent, system rules, states, accessibility, and acceptance criteria.
+
+### MOTION
+Turn approved UX/UI into a storyboarded motion graphic or UI storytelling video.
+
+Output:
+- motion brief
+- storyboard
+- scene-to-Figma mapping
+- motion system
+- render
+- motion QA evidence
 
 ## 5. UX reasoning stack
 
@@ -196,6 +211,7 @@ A design task is complete only when:
 6. [Design QA & Dev Handoff](./06-design-qa-and-handoff.md)
 7. [Templates & Checklists](./07-templates-and-checklists.md)
 8. [Command Playbook](./08-command-playbook.md)
+9. [Motion Graphic / UI Storytelling Video](./09-motion-graphic.md)
 
 ## 10. Standard completion result
 
@@ -223,6 +239,7 @@ Reusable templates:
 - `templates/bank-old-new-compare.md`
 - `templates/bank-state-matrix.md`
 - `templates/bank-design-handoff.md`
+- `templates/bank-motion-storyboard.md`
 
 Use these templates to keep findings, decisions, comparisons, states, QA, and handoff consistent across projects.
 

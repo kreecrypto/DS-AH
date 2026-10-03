@@ -105,3 +105,27 @@ A passed reference never grants write permission by itself.
 - Tool success is not verification.
 - P0/P1 blocks completion.
 - No PASS without evidence.
+
+
+## Bank SOP routing
+
+Bank's recurring shorthand and Thai/English working phrases are normalized through:
+
+- `agent/bank-sop-router.json`
+- `knowledge/ux/sop-bank/README.md`
+- `knowledge/ux/sop-bank/08-command-playbook.md`
+
+Typical routes:
+
+| User phrase | Canonical intent | SOP |
+|---|---|---|
+| Inspect / ตรวจ Figma | INSPECT | Intake + Inspect & Audit |
+| Audit UX/UI | REVIEW | Inspect & Audit |
+| Improve / Final Direction | MODIFY_SCREEN | Design & Improve → Figma Implementation → QA |
+| Compare Old vs New | REVIEW | Audit → Old/New comparison |
+| Search & Filter | REVIEW | Search/Filter audit and improvement |
+| Prototype | MODIFY_SCREEN | Prototype, States & Edge Cases |
+| Fix All | MODIFY_SCREEN | Prioritize P0→P3 → scoped fix → QA |
+| Handoff | HANDOFF | Design QA & Dev Handoff |
+
+Bank SOP aliases never grant write permission. Existing DS-AH control, reference, scope, QA, and evidence rules remain authoritative.

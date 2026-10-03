@@ -1,0 +1,192 @@
+{
+  "id": "bank-sop-router",
+  "version": "1.0.0",
+  "status": "active",
+  "purpose": "Route recurring Bank UX/UI working language to the Bank SOP execution layer while preserving DS-AH authority, permission, QA, and evidence rules.",
+  "base": "knowledge/ux/sop-bank/README.md",
+  "authority": [
+    "AGENTS.md",
+    "agent/SYSTEM.md",
+    "docs/figma-sop.md",
+    "knowledge/ux/README.md"
+  ],
+  "rules": [
+    "SOP Bank guides execution but never overrides repository hard rules.",
+    "READ_ONLY review commands never imply write permission.",
+    "CREATE/MODIFY/FIX still require WRITE_ALLOWED.",
+    "No PASS without evidence.",
+    "P0/P1 findings must be resolved or explicitly blocked before completion."
+  ],
+  "routes": [
+    {
+      "phrases": [
+        "inspect",
+        "inspect figma",
+        "ตรวจ figma",
+        "ดูโครงสร้าง"
+      ],
+      "intent": "INSPECT",
+      "mode": "INSPECT_ALLOWED",
+      "load": [
+        "01-intake-and-context.md",
+        "02-inspect-and-audit.md"
+      ]
+    },
+    {
+      "phrases": [
+        "audit uxui",
+        "audit ux/ui",
+        "ux review",
+        "ui review",
+        "review uxui"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "01-intake-and-context.md",
+        "02-inspect-and-audit.md",
+        "07-templates-and-checklists.md"
+      ]
+    },
+    {
+      "phrases": [
+        "improve",
+        "improvement",
+        "ปรับปรุง",
+        "final direction"
+      ],
+      "intent": "MODIFY_SCREEN",
+      "mode": "WRITE_PENDING",
+      "load": [
+        "02-inspect-and-audit.md",
+        "03-design-and-improve.md",
+        "04-figma-implementation.md",
+        "06-design-qa-and-handoff.md"
+      ]
+    },
+    {
+      "phrases": [
+        "compare old vs new",
+        "old new compare",
+        "ui compare"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "02-inspect-and-audit.md",
+        "03-design-and-improve.md",
+        "07-templates-and-checklists.md"
+      ]
+    },
+    {
+      "phrases": [
+        "search filter",
+        "search & filter",
+        "dropdown filter"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "02-inspect-and-audit.md",
+        "03-design-and-improve.md"
+      ]
+    },
+    {
+      "phrases": [
+        "make prototype",
+        "prototype",
+        "เชื่อม prototype"
+      ],
+      "intent": "MODIFY_SCREEN",
+      "mode": "WRITE_PENDING",
+      "load": [
+        "05-prototype-and-states.md",
+        "04-figma-implementation.md",
+        "06-design-qa-and-handoff.md"
+      ]
+    },
+    {
+      "phrases": [
+        "edge cases",
+        "states",
+        "exception path",
+        "happy path"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "05-prototype-and-states.md",
+        "07-templates-and-checklists.md"
+      ]
+    },
+    {
+      "phrases": [
+        "review ux writing",
+        "ux writing"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "02-inspect-and-audit.md",
+        "03-design-and-improve.md"
+      ]
+    },
+    {
+      "phrases": [
+        "fix all",
+        "แก้ทั้งหมด"
+      ],
+      "intent": "MODIFY_SCREEN",
+      "mode": "WRITE_PENDING",
+      "load": [
+        "02-inspect-and-audit.md",
+        "04-figma-implementation.md",
+        "06-design-qa-and-handoff.md",
+        "08-command-playbook.md"
+      ]
+    },
+    {
+      "phrases": [
+        "design qa",
+        "qa figma",
+        "ตรวจ design"
+      ],
+      "intent": "QA",
+      "mode": "READ_ONLY",
+      "load": [
+        "06-design-qa-and-handoff.md",
+        "07-templates-and-checklists.md"
+      ]
+    },
+    {
+      "phrases": [
+        "handoff",
+        "dev handoff"
+      ],
+      "intent": "HANDOFF",
+      "mode": "READ_ONLY",
+      "load": [
+        "06-design-qa-and-handoff.md",
+        "07-templates-and-checklists.md"
+      ]
+    },
+    {
+      "phrases": [
+        "make 3 solutions",
+        "3 solution",
+        "explore 3"
+      ],
+      "intent": "REVIEW",
+      "mode": "READ_ONLY",
+      "load": [
+        "03-design-and-improve.md",
+        "08-command-playbook.md"
+      ]
+    }
+  ],
+  "completion": [
+    "PASS",
+    "FAIL",
+    "BLOCKED"
+  ]
+}

@@ -44,6 +44,9 @@ These are human-friendly interfaces over the canonical DS-AH intents and Product
 | `/visual-regression` | QA | READ_ONLY |
 | `/fix-all` | MODIFY_SCREEN | WRITE_PENDING |
 | `/handoff` | HANDOFF | READ_ONLY |
+| `/motion` | MOTION | OUTPUT_PENDING |
+| `/ui-video` | MOTION | OUTPUT_PENDING |
+| `/video-compare` | MOTION | OUTPUT_PENDING |
 | `/finalize` | QA | READ_ONLY |
 
 Full prompt bodies and recommended usage:
@@ -73,6 +76,7 @@ USER REQUEST
 → /design-screen or /improve
 → /states + /responsive + /ux-writing
 → /prototype when required
+→ /motion when a storytelling/demo video is requested
 → /accessibility
 → /design-qa
 → /visual-regression
@@ -127,5 +131,6 @@ Typical routes:
 | Prototype | MODIFY_SCREEN | Prototype, States & Edge Cases |
 | Fix All | MODIFY_SCREEN | Prioritize P0→P3 → scoped fix → QA |
 | Handoff | HANDOFF | Design QA & Dev Handoff |
+| Motion Graphic / UI Video | MOTION | Storyboard → UI source map → Animate → Render → Motion QA |
 
 Bank SOP aliases never grant write permission. Existing DS-AH control, reference, scope, QA, and evidence rules remain authoritative.
